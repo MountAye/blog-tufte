@@ -1,25 +1,52 @@
-<!-- _includes/base.html -->
+﻿<DOCTYPE! html>
 
-
-
-<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-  </head>
-  <body>
-    <nav>
-  
-    <a href="/" class="current">./Home</a>
-  
-    <a href="/about.html" >./About</a>
-  
-    <a href="/blog.html" >./Blog</a>
-  
-</nav>
-    <h1>hello world!</h1>
+    <head>
+        <title>阿掖山：一个博客</title>
+        <base href="https://mountaye.github.io/blog/" target="_blank">
+        <style></style>
+        <link></link>
+        <meta charset="UTF-8">
+        <meta name="description" content="阿掖山，一个博客">
+        <meta name="keywords" content="阿掖山, 博客, 摄影, 随笔, Github Pages">
+        <meta name="author" content="MountAye">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script></script>
+        <noscript></noscript>
+    </head>
 
-  </body>
+    <body>
+        <header>
+            <h1>阿掖山：一个博客</h1>
+            <section id="homeSentence">
+                <p id="homeSentenceContent">人活在世上，有的活成了面子，有的活成了里子，都是时势使然。</p>
+                <p id="homeSentenceAuthor">——《一代宗师》</p>
+            </section>
+        </header>
+        <article id="homepage">
+            <div id="homePhoto">
+                <h2>一张照片</h2>
+                <!--FUTURE: add link to the album with the selected photo.-->
+                <picture>
+                    <source media="(min-width: 600px)" srcset="../photo/luwei.png" />
+                    <img src="../photo/luwei.png" alt="" style="width:auto;" />
+                </picture>
+            </div>
+            <div id="homeHeadline">
+                <p>一篇文章</p>
+                <h2>我们三代人</h2>
+                <p>这篇文章是一个彩蛋，并没有收入文章的列表中。之所以把这篇文章放在这里，主要是为了设计主页的布局，以及测试一般文章页面的CSS排版。在网站建成之后想要看到这篇文章，需要在开启JavaScript的情况下用鼠标在网页右上角找到一个隐藏的“彩蛋”按钮。</p>
+            </div>
+            <div id="homeArticleStack">
+                <h2>最近文章</h2>
+                <ul id="homeArticleList"></ul>
+            </div>
+        </article>
+
+        <footer>
+            <p>&copy 阿掖山：一个博客</p>
+            <p>作者保留版权</p>
+            <p>All Rights Reserved.</p>
+        </footer>
+    </body>
 </html>
