@@ -1,0 +1,28 @@
+﻿/*use this comment style. Double backslash does not work.*/
+
+/*cancel the color of hyperlinks*/ 
+a:link {
+    text-decoration: none!important;
+}
+a:active {
+    text-decoration: none!important;
+}
+a:hover {
+    text-decoration: underline!important;
+    color: #2196F3;
+}
+a:visited {
+    text-decoration: none!important;
+}
+
+/*decorate the common elements on each page.*/
+header{
+
+}
+footer{
+
+}
+
+.rounded{
+    border-radius:20px;
+}
