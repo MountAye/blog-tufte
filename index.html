@@ -23,25 +23,27 @@
             </section>
         </header>
         <article id="homepage" class="my-container homeCentered">
-            <div id="homeLeftPanel" class="my-container my-cell my-mobile shadowed">
+            <div id="homeLeftPanel" class="my-container my-cell my-mobile">
                 <h3>一张照片：</h3>
                 <!--FUTURE: add link to the album with the selected photo.-->
-                <figure>
-                    <img src="./photo/luwei.jpg" alt="luwei" style="width:600px;" />
-                    <imgcaption>湖边的芦苇</imgcaption>
+                <figure class="shadowed blanked">
+                    <img src="./photo/luwei.jpg" alt="湖边的芦苇" style="width:100%;" />
+                    <imgcaption class="my-">湖边的芦苇</imgcaption>
                 </figure>
             </div>
             <div id="homeRightPanel" class="my-container my-cell my-mobile">
-                <a href="./article/caidan.html">
-                    <div id="homeHeadline" class="shadowed">
-                        <h3>一篇文章：</h3>
+                
+                <div id="homeHeadline">
+                    <h3>一篇文章：</h3>
+                    <a href="./article/caidan.html" class="shadowed blanked">
                         <h1>我们三代人</h1>
                         <p>这篇文章是一个彩蛋，并没有收入文章的列表中。之所以把这篇文章放在这里，主要是为了设计主页的布局，以及测试一般文章页面的CSS排版。当然，自己对这篇文章比较满意也是部分原因。在网站建成之后想要看到这篇文章，需要在开启 JavaScript 的情况下用鼠标在网页右上角找到一个隐藏的“彩蛋”按钮。</p>
-                    </div>
-                </a>
-                <div id="homeArticleStack" class="shadowed">
+                    </a>
+                </div>
+                
+                <div id="homeArticleStack">
                     <h3>最近文章：</h3>
-                    <ul id="homeArticleList">
+                    <ul id="homeArticleList" class="shadowed blanked">
                         <li>暂时没有更多文章。</li>
                     </ul>
                 </div>
