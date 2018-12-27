@@ -1,14 +1,9 @@
-﻿article {
-    border-style: solid;
-    border-color: darkgrey;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
+﻿
 p{
+    text-size-adjust:150%;
     letter-spacing:0.05em;
     line-height:1.5em;
     text-indent:2em;
-    
 }
 
 .articleCentered {
