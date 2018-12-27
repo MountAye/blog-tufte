@@ -1,4 +1,4 @@
 .homeCentered {
     margin: auto;
-    width: 80%;
+    max-width: 80%;
 }
