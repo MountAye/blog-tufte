@@ -16,21 +16,19 @@ a:visited {
 }
 
 /*decorate the common elements on each page.*/
-header{
+header {
     border-bottom-style: solid;
-    border-color: darkgrey;
-    margin-bottom: 50%;
+    border-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 5em;
 }
-footer{
+footer {
     border-top-style: solid;
-    border-color: darkgrey;
-    margin-top: 50%;
+    border-color: rgba(0, 0, 0, 0.2);
+    margin-top: 5em;
 }
 .rounded{
     border-radius: 20px;
 }
 .shadowed {
-    border-style: solid;
-    border-color: darkgrey;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
