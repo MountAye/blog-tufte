@@ -16,7 +16,16 @@ a:visited {
 }
 
 /*decorate the common elements on each page.*/
-
+header{
+    border-bottom-style: solid;
+    border-color: darkgrey;
+    margin-bottom: 50%;
+}
+footer{
+    border-top-style: solid;
+    border-color: darkgrey;
+    margin-top: 50%;
+}
 .rounded{
-    border-radius:20px;
+    border-radius: 20px;
 }
