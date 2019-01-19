@@ -1,0 +1,14 @@
+---
+layout: default
+title: 文章目录 | 阿掖山：一个博客
+---
+<h2> 文章目录 </h2>
+
+<ul>
+    {% for post in site.posts %}
+        <li>
+	    <h3> <a href="{{ post.url }}"> {{post.title}} </a> </h3>
+	    <p> {{post.excerpt}} </p>
+        </li>
+    {% endfor %}
+</ul>

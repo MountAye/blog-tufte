@@ -1,0 +1,12 @@
+﻿
+p{
+    font-size:125%;
+    letter-spacing:0.05em;
+    line-height:1.5em;
+    text-indent:2em;
+}
+
+.articleCentered {
+    margin: auto;
+    max-width: 750px;
+}
