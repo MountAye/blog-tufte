@@ -1,30 +1,17 @@
-﻿---
-layout: default
-title: "Home | 阿掖山：一个博客"
+---
+layout: full-width
+title: blog
+# Note that this index page uses a full-width layout!
 ---
 
-<div id="homeLeftPanel" class="my-container my-cell my-mobile">
-    <h3>一张照片：</h3>
-    <!--FUTURE: add link to the album with the selected photo.-->
-    <figure class="shadowed blanked">
-        <img src="./photo/luwei.jpg" alt="湖边的芦苇" style="width:100%;" />
-        <imgcaption class="my-">湖边的芦苇</imgcaption>
-    </figure>
-</div>
-<div id="homeRightPanel" class="my-container my-cell my-mobile">
-    
-    <div id="homeHeadline">
-        <h3>一篇文章：</h3>
-        <a href="./article/bazinga.html" class="shadowed blanked">
-            <h1>我们三代人</h1>
-            <p>这篇文章是一个彩蛋，并没有收入文章的列表中。之所以把这篇文章放在这里，主要是为了设计主页的布局，以及测试一般文章页面的CSS排版。当然，自己对这篇文章比较满意也是部分原因。在网站建成之后想要看到这篇文章，需要在开启 JavaScript 的情况下用鼠标在网页右上角找到一个隐藏的“彩蛋”按钮。</p>
-        </a>
-    </div>
-    
-    <div id="homeArticleStack">
-        <h3>最近文章：</h3>
-        <ul id="homeArticleList" class="shadowed blanked">
-            <li>暂时没有更多文章。</li>
-        </ul>
-    </div>
-</div>
+  <h1 class="content-listing-header sans">Articles</h1>
+  <ul class="content-listing ">
+    {% for post in site.posts %}      
+        <li class="listing">
+          <hr class="slender">
+          <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="contrast" style="font-style:normal">{{ post.title }}</h3></a>
+          <br><span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
+          <div>{{ post.excerpt }}</div> 
+        </li>
+    {% endfor %}
+  </ul>

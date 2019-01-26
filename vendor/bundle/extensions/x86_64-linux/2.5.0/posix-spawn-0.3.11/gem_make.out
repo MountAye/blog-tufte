@@ -1,0 +1,15 @@
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/posix-spawn-0.3.11/ext
+/usr/bin/ruby2.5 -r ./siteconf20190125-27-jesiiy.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/posix-spawn-0.3.11/ext
+make "DESTDIR=" clean
+
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/posix-spawn-0.3.11/ext
+make "DESTDIR="
+compiling posix-spawn.c
+linking shared-object posix_spawn_ext.so
+
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/posix-spawn-0.3.11/ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 posix_spawn_ext.so ./.gem.20190125-27-kwthse

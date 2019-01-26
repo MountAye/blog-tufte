@@ -1,0 +1,16 @@
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/fast-stemmer-1.0.2/ext
+/usr/bin/ruby2.5 -r ./siteconf20190125-27-tgoo1g.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/fast-stemmer-1.0.2/ext
+make "DESTDIR=" clean
+
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/fast-stemmer-1.0.2/ext
+make "DESTDIR="
+compiling porter.c
+compiling porter_wrap.c
+linking shared-object stemmer.so
+
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/fast-stemmer-1.0.2/ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 stemmer.so ./.gem.20190125-27-mgvk4a

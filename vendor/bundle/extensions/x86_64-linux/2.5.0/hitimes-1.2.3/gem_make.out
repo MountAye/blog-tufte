@@ -1,0 +1,21 @@
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/hitimes-1.2.3/ext/hitimes/c
+/usr/bin/ruby2.5 -r ./siteconf20190125-27-2yi5n4.rb extconf.rb
+checking for clock_gettime() in -lrt... yes
+creating Makefile
+
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/hitimes-1.2.3/ext/hitimes/c
+make "DESTDIR=" clean
+
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/hitimes-1.2.3/ext/hitimes/c
+make "DESTDIR="
+compiling hitimes.c
+compiling hitimes_instant_clock_gettime.c
+compiling hitimes_instant_osx.c
+compiling hitimes_instant_windows.c
+compiling hitimes_interval.c
+compiling hitimes_stats.c
+linking shared-object hitimes/2.5/hitimes.so
+
+current directory: /mnt/d/Documents/GitHub/MountAye/tufte-jekyll/vendor/bundle/gems/hitimes-1.2.3/ext/hitimes/c
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 hitimes.so ./.gem.20190125-27-z7cixt/hitimes/2.5
