@@ -1,10 +1,10 @@
----
+﻿---
 
 layout: full-width
 
 title: blog
-
 ---
 
-# 阿掖山：一个博客
+## 一篇文章
 
+{% assign post1 = site.posts[1] %}
