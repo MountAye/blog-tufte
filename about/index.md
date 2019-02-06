@@ -3,12 +3,14 @@ layout: full-width
 title: About
 ---
 
-The *Tufte-Jekyll* theme is a natural extension of the work done by [Edward Tufte](https://github.com/edwardtufte/tufte-css) and his collaborators on Github who created a CSS file that allows web writers to use the same simple and elegant style employed in his published materials.
+# 阿掖山：一个博客
 
-To incorporate these styles into a Jekyll theme, I have made some very slight modifications that attempt to maintain the feel of the CSS styles in his Github repo.
+<hr class="slender">
 
-Note that this is a full-width layout. This was accomplished by including ```layout: full-width``` in the YAML front matter for this page. Keep in mind that all the Tufte-Jekyll sidenote and marginnote goodness will not work on full-width layouts! 
+这是一个中文博客，作者希望保持匿名。
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll).
+本博客在本地使用 Jekyll 生成静态网站之后，部署到 GitHub Pages 之上。网站模板修改自 [clayh53/tufte-jekyll](https://github.com/clayh53/tufte-jekyll)。
 
+博客原创文章保留版权，部分文章同步于豆瓣、微信公众号、BiliBili专栏。转载请通过以上平台，或 GitHub [issues/General Comments](https://github.com/MountAye/blog/milestone/1) 联系。
 
+博客转载文章版权属于原作者，如不同意转载请[联系删除](https://github.com/MountAye/blog/milestone/1)。
