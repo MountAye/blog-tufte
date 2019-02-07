@@ -3,8 +3,10 @@
 <header>
 
     <nav class="group">
-	
-        <a href="{{site.baseurl}}/"><img class="badge" src="{{site.baseurl}}/assets/img/badgeMountAye.png" alt="阿掖山"></a>
+
+        <a href="{{site.baseurl}}/">
+	    <img class="badge" src="{{site.baseurl}}/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
 
 	{% for node in site.data.navigation %}
 
@@ -29,7 +31,16 @@
   	{% endfor %}
 
     </nav>
-    <h4>阿掖山：一个博客</h4>
+
+    <div>
+	<h3 class="sans">阿掖山：一个博客</h3>
+    </div>
+
+    <p style="font-size:100%">
+        <span id="quoteLine">人活在世上，有的活成了面子，有的活成了里子，都是时势使然。</span><br>
+        ——<span id="quoteAuthor">《一代宗师》</span><br>
+        <span id="quoteLink"></span>
+    </p>
     <hr class="slender">
  
 

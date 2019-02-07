@@ -6,5 +6,5 @@
   icon: icon-github
 # - link: //www.flickr.com/photos/FlickrUserID 
 #   icon: icon-flickr
-- link: //github.com/MountAye/blog/feed.xml
+- link: /blog/feed.xml
   icon: icon-feed
