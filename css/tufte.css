@@ -233,23 +233,23 @@ body {
   counter-reset: sidenote-counter; }
 
 h1 {
-  font-weight: 400;
+  font-weight: bold;
   margin-top: 1.568rem;
   margin-bottom: 1.568rem;
   font-size: 2.5rem;
   line-height: 0.784; }
 
 h2 {
-  font-style: italic;
-  font-weight: 400;
+  font-style: bold;
+  font-weight: bold;
   margin-top: 1.866666666666667rem;
   margin-bottom: 0;
   font-size: 2.1rem;
   line-height: 0.933333333333333; }
 
 h3 {
-  font-style: italic;
-  font-weight: 400;
+  font-style: bold;
+  font-weight: bold;
   font-size: 1.8rem;
   margin-top: 2.1777777777777778rem;
   margin-bottom: 0;
@@ -597,13 +597,13 @@ ul.footer-links li {
   .credits a {
     color: #1560bd; }
 
-body.full-width, .content-listing, ul.content-listing li.listing {
+article.full-width, .content-listing, ul.content-listing li.listing {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   padding: 0% 5%; }
 
-.full-width article p {
+.full-width p {
   width: 90%; }
 
 h1.content-listing-header {
