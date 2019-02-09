@@ -1,40 +1,312 @@
-﻿---
+<!DOCTYPE html>
 
-layout: default
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-title: Home
----
+  <title>blog | 阿掖山：一个博客</title>
+  <meta name="description" content="A Chinese Blog about Science">
 
-<h1>
-    一篇文章
-</h1>
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
 
-{% marginnote "recent" "近期文章：" %}
-{% assign list5 = [0,1,2,3,4] %}
-{% for i in list5 %}
-    {% marginnote "recent{{i}}" "<a href={{ site.post[i].url | prepend site.baseurl}}>《{{ post[i].title }}》</a>" %}
-{% endfor %}
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print"> -->
 
-{% assign post0 = site.posts[0] %}
+  <link rel="canonical" href="/blog/">
 
-<li class="listing">
-          
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+
+</head>
+
+  
+    <body>
+
+        <!--- Header and nav template site-wide -->
+
+<header>
+
+    <nav class="group">
+
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+
+	
+
+	    
+
+                
+
+		    <a class="active" href="/blog/" class="active">
+                        home
+                    </a>
+		    
+                
+
+	    
+
+  	
+
+	    
+
+                
+
+		      <a href="/blog/History/">
+                          history
+                      </a>
+
+                
+
+	    
+
+  	
+
+	    
+
+                
+
+		      <a href="/blog/Topics/">
+                          topics
+                      </a>
+
+                
+
+	    
+
+  	
+
+	    
+
+                
+
+		      <a href="/blog/Links/">
+                          links
+                      </a>
+
+                
+
+	    
+
+  	
+
+	    
+
+                
+
+		      <a href="/blog/Comments/">
+                          comments
+                      </a>
+
+                
+
+	    
+
+  	
+
+	    
+
+                
+
+		      <a href="/blog/About/">
+                          about
+                      </a>
+
+                
+
+	    
+
+  	
+
+    </nav>
+
+    <div>
+	<h3 class="sans">阿掖山：一个博客</h3>
+    </div>
+
+    <p style="font-size:100%">
+        <span id="quoteLine">人活在世上，有的活成了面子，有的活成了里子，都是时势使然。</span><br>
+        ——<span id="quoteAuthor">《一代宗师》</span><br>
+        <span id="quoteLink"></span>
+    </p>
     <hr class="slender">
-          	
-    <a href="{{ post0.url | prepend: site.baseurl }}">
-        <h3 class="contrast" style="font-style:normal">
-	    {{ post0.title }}
-        </h3>
-    </a><br>
-    <span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
+ 
 
-    <div>{{ post.excerpt }}</div> 
+
+</header>
+
+    
+        <article class="full-width">
+
+            <h1 class="content-listing">历史文章</h1>
+  
+
+<ul class="content-listing">
+    
+	      
         
-</li>
+		<li class="listing">
+          
+		<hr class="slender">
+          
+		<a href="/blog/articles/RP-why-choose-python-5-tool">
+			<h3 class="contrast" style="font-style:normal">
+				转载 | 为什么俺推荐 Python[5]：作为瑞士军刀的 Python</h3>
+		</a>
+          <br>
+		<span class="smaller">February 7, 2019</span>  <br/>
 
-<h1>
-    一张照片
-</h1>
+          	<div>拿“瑞士军刀”来比喻 Python 就是想说明：Python 不但短小精悍，而且功能强大。今天就来介绍一下 Python 的这两个特点（尤其是后者）。</div> 
+        
+		</li>
+    
+	      
+        
+		<li class="listing">
+          
+		<hr class="slender">
+          
+		<a href="/blog/articles/RP-why-choose-python-4-fp">
+			<h3 class="contrast" style="font-style:normal">
+				转载|为什么俺推荐 Python[4]：作为函数式编程语言的 Python</h3>
+		</a>
+          <br>
+		<span class="smaller">February 7, 2019</span>  <br/>
 
+          	<div>聊一聊 Python 作为“函数式编程”（以下简称 FP）语言的特点。考虑到本系列面向的是 Python 的门外汉或刚入门的新手，故本文仅介绍若干浅显的 FP 特性。</div> 
+        
+		</li>
+    
+	      
+        
+		<li class="listing">
+          
+		<hr class="slender">
+          
+		<a href="/blog/articles/RP-why-choose-python-3-oop">
+			<h3 class="contrast" style="font-style:normal">
+				转载|为什么俺推荐 Python[3]：作为面向对象语言的 Python</h3>
+		</a>
+          <br>
+		<span class="smaller">February 7, 2019</span>  <br/>
 
-{% fullwidth "assets/photo/sunset.jpg" "sunset" %}
+          	<div>前一个帖子介绍了作为动态语言的 Python，今天来聊一聊 Python 在面向对象编程（OOP）方面的特色。</div> 
+        
+		</li>
+    
+	      
+        
+		<li class="listing">
+          
+		<hr class="slender">
+          
+		<a href="/blog/articles/RP-why-choose-python-2-dynamic">
+			<h3 class="contrast" style="font-style:normal">
+				转载|为什么俺推荐 Python[2]：作为动态语言的 Python</h3>
+		</a>
+          <br>
+		<span class="smaller">February 7, 2019</span>  <br/>
+
+          	<div>今天主要是忽悠一下动态语言，捎带忽悠一下 Python。如果你看完本贴，觉得动态语言不错，那俺建议你从 Python 开始入手。</div> 
+        
+		</li>
+    
+	      
+        
+		<li class="listing">
+          
+		<hr class="slender">
+          
+		<a href="/blog/articles/RP-why-choose-python-1-script">
+			<h3 class="contrast" style="font-style:normal">
+				转载|为什么俺推荐 Python[1]：作为脚本语言的 Python</h3>
+		</a>
+          <br>
+		<span class="smaller">February 7, 2019</span>  <br/>
+
+          	<div>俺窃以为，Python 的所有特征中，作为脚本语言是它的首要特征。因此，在本系列帖子中，俺首先来忽悠一下 Python 作为脚本语言，有些啥好处</div> 
+        
+		</li>
+    
+	      
+        
+		<li class="listing">
+          
+		<hr class="slender">
+          
+		<a href="/blog/articles/RP-why-choose-python-0-overview">
+			<h3 class="contrast" style="font-style:normal">
+				转载 | 为什么俺推荐 Python[0]：概述</h3>
+		</a>
+          <br>
+		<span class="smaller">February 7, 2019</span>  <br/>
+
+          	<div>从几个不同的角度来鼓吹一下 Python。</div> 
+        
+		</li>
+    
+	      
+        
+		<li class="listing">
+          
+		<hr class="slender">
+          
+		<a href="/blog/articles/test-post">
+			<h3 class="contrast" style="font-style:normal">
+				测试文章</h3>
+		</a>
+          <br>
+		<span class="smaller">January 25, 2019</span>  <br/>
+
+          	<div>一个测试文档。</div> 
+        
+		</li>
+    
+	
+  
+</ul>
+
+    
+        </article>
+    
+    <span class="print-footer">
+    blog - MountAye
+    
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+	  <!--<li><a href="mailto:hate@spam.net"><span class="icon-mail"></span></a></li>    -->
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-feed"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2019 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted by <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>

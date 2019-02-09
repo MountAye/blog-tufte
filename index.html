@@ -1,40 +1,37 @@
-﻿---
-
-layout: default
-
-title: Home
 ---
 
-<h1>
-    一篇文章
-</h1>
+layout: full-width
 
-{% marginnote "recent" "近期文章：" %}
-{% assign list5 = [0,1,2,3,4] %}
-{% for i in list5 %}
-    {% marginnote "recent{{i}}" "<a href={{ site.post[i].url | prepend site.baseurl}}>《{{ post[i].title }}》</a>" %}
-{% endfor %}
+title: blog
 
-{% assign post0 = site.posts[0] %}
+# Note that this index page uses a full-width layout!
 
-<li class="listing">
-          
-    <hr class="slender">
-          	
-    <a href="{{ post0.url | prepend: site.baseurl }}">
-        <h3 class="contrast" style="font-style:normal">
-	    {{ post0.title }}
-        </h3>
-    </a><br>
-    <span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
+---
 
-    <div>{{ post.excerpt }}</div> 
+  
+
+<h1 class="content-listing">历史文章</h1>
+  
+
+<ul class="content-listing">
+    
+	{% for post in site.posts %}      
         
-</li>
+		<li class="listing">
+          
+		<hr class="slender">
+          
+		<a href="{{ post.url | prepend: site.baseurl }}">
+			<h3 class="contrast" style="font-style:normal">
+				{{ post.title }}</h3>
+		</a>
+          <br>
+		<span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
 
-<h1>
-    一张照片
-</h1>
-
-
-{% fullwidth "assets/photo/sunset.jpg" "sunset" %}
+          	<div>{{ post.excerpt }}</div> 
+        
+		</li>
+    
+	{% endfor %}
+  
+</ul>

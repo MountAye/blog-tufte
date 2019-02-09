@@ -10,6 +10,10 @@ nav_exclude: true
 /*
 /* The README.md will show you how to set up your site along with other goodies
 /*****************************************************************************/
+// MountAye's addition:
+blockquote {
+    background-color: #fffff8;
+}
 
 // Imports to create final
 
@@ -130,7 +134,7 @@ blockquote p {  font-size: 1.1rem;
                 line-height: 1.78181818;
                 margin-top: 1.78181818rem;
                 margin-bottom: 1.78181818rem;
-                width: 45%;
+                width: inherit;
                 padding-left: 2.5%;
                 padding-right: 2.5%; }
 
@@ -209,7 +213,7 @@ section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
 
-ul,ol { width: 45%;
+ul,ol { width: 100%;
      -webkit-padding-start: 5%;
      -webkit-padding-end: 5%;
      list-style-type: none; }
@@ -285,7 +289,7 @@ div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' 
 
 .marginnote code, .sidenote code { font-size: 1rem; } //more .code class removal
 
-pre, pre code, p pre code { width: 52.5%;
+pre, pre code, p pre code { width: inherit;
            padding-left: 2.5%;
            overflow-x: auto; }
 
