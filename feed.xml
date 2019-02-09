@@ -5,8 +5,8 @@
     <description>A Chinese Blog about Science</description>
     <link>/blog/</link>
     <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Feb 2019 15:17:39 -0600</pubDate>
-    <lastBuildDate>Thu, 07 Feb 2019 15:17:39 -0600</lastBuildDate>
+    <pubDate>Fri, 08 Feb 2019 23:43:35 -0600</pubDate>
+    <lastBuildDate>Fri, 08 Feb 2019 23:43:35 -0600</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -504,52 +504,44 @@ FP 的写法（无控制流）：&lt;/p&gt;
         <description>&lt;h3 id=&quot;文章目录&quot;&gt;文章目录&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;#abstract&quot;&gt;抽象（Abstraction）&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;#encap&quot;&gt;封装（Encapsulation）&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;#inherit&quot;&gt;继承（Inheritance）&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;#poly&quot;&gt;多态（Polymorphism）&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;#summary&quot;&gt;结尾&lt;/a&gt;
-　　
-本系列已经中断了很长时间 :( 直到最近一个读者来信问俺，为啥不继续写，俺才突然想起这个被遗忘的系列，实在是抱歉！前一个帖子介绍了作为动态语言的 Python，今天来聊一聊 Python 在面向对象编程（OOP）方面的特色。
-　　
-本文主要针对那些熟悉 OOP，但还不熟悉 Python 的同学。为了让大伙儿有一个直观的认识，俺会拿 C++/Java 来进行语法上的对比。（这俩语言的名气够大，且号称支持 OO，也算有些可比性）
-　　
-强调一下：本文虽然拿了某些语言来作对比，但丝毫没有贬低这些语言的意思，请这些语言的粉丝们，不要对号入座 :)&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#abstract&quot;&gt;抽象（Abstraction）&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#encap&quot;&gt;封装（Encapsulation）&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inherit&quot;&gt;继承（Inheritance）&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#poly&quot;&gt;多态（Polymorphism）&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#summary&quot;&gt;结尾&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;本系列已经中断了很长时间 :( 直到最近一个读者来信问俺，为啥不继续写，俺才突然想起这个被遗忘的系列，实在是抱歉！前一个帖子介绍了作为动态语言的 Python，今天来聊一聊 Python 在面向对象编程（OOP）方面的特色。&lt;/p&gt;
+
+&lt;p&gt;本文主要针对那些熟悉 OOP，但还不熟悉 Python 的同学。为了让大伙儿有一个直观的认识，俺会拿 C++/Java 来进行语法上的对比。（这俩语言的名气够大，且号称支持 OO，也算有些可比性）&lt;/p&gt;
+
+&lt;p&gt;强调一下：本文虽然拿了某些语言来作对比，但丝毫没有贬低这些语言的意思，请这些语言的粉丝们，不要对号入座 :)&lt;/p&gt;
+
 &lt;h2 id=&quot;抽象abstraction&quot;&gt;抽象（Abstraction）&lt;a name=&quot;abstract&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;　　
-但凡介绍 OOP，自然会提到抽象。因为抽象，是 OO 的第一要素，也是其它要素的基础。而提到抽象，又不免提到对象（Object）。所以，俺首先来聊一下，Python 语言是如何体现“对象”这个思想的。&lt;/p&gt;
+
+&lt;p&gt;但凡介绍 OOP，自然会提到抽象。因为抽象，是 OO 的第一要素，也是其它要素的基础。而提到抽象，又不免提到对象（Object）。所以，俺首先来聊一下，Python 语言是如何体现“对象”这个思想的。&lt;/p&gt;
 
 &lt;h3 id=&quot;python的对象&quot;&gt;Python的对象&lt;/h3&gt;
-&lt;p&gt;　　
-如果要问俺，什么是 Python 中的对象，还真不好下一个严密又通俗易懂的定义。为了敷衍大伙儿，俺只好用一句话来概括，那就是 Python 语言中，【一切皆对象】。这句话该如何理解捏？简单来说，就是你在 Python 语言中涉及到的各种东东，都是“对象”。比如，函数是对象、各种数值（比如整数值、浮点数值、布尔值）是对象、模块（类似于 Java 的 package）是对象、None（类似于 Java 的空引用 null、C++ 的空指针 NULL）也是对象、甚至连类（class）也是对象……
-　　
-对比一下 C++ 和 Java 的语法：只有【类的实例】才能算得上是对象。这2个语言的基本类型（比如“int、char、float”等）不是对象，至于函数，就更算不上了。
-　　
-既然是一切皆对象，俺有必要稍微总结一下，Python 对象的共性，否则初学 Python 的同学还是会一头雾水。&lt;/p&gt;
+
+&lt;p&gt;如果要问俺，什么是 Python 中的对象，还真不好下一个严密又通俗易懂的定义。为了敷衍大伙儿，俺只好用一句话来概括，那就是 Python 语言中，【一切皆对象】。这句话该如何理解捏？简单来说，就是你在 Python 语言中涉及到的各种东东，都是“对象”。比如，函数是对象、各种数值（比如整数值、浮点数值、布尔值）是对象、模块（类似于 Java 的 package）是对象、None（类似于 Java 的空引用 null、C++ 的空指针 NULL）也是对象、甚至连类（class）也是对象……&lt;/p&gt;
+
+&lt;p&gt;对比一下 C++ 和 Java 的语法：只有【类的实例】才能算得上是对象。这2个语言的基本类型（比如“int、char、float”等）不是对象，至于函数，就更算不上了。&lt;/p&gt;
+
+&lt;p&gt;既然是一切皆对象，俺有必要稍微总结一下，Python 对象的共性，否则初学 Python 的同学还是会一头雾水。&lt;/p&gt;
 
 &lt;h3 id=&quot;对象的属性&quot;&gt;对象的属性&lt;/h3&gt;
-&lt;p&gt;　　
-首先，所有的 Python 的对象，都具有若干个属性。你可以通过内置的 dir() 函数进行反射，从而了解到某个对象分别都包含哪些属性。熟悉 Java 的同学，应该明白啥是“反射”。光懂 C/C++ 的同学，如果理解上有困难，可以先参考“维基百科的解释”。
-　　
-另外，Python 还提供了若干内置的函数，用于在【运行时】操作指定对象的属性。具体如下：&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;hasattr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#判断obj对象是否具有名为name的属性
+&lt;p&gt;首先，所有的 Python 的对象，都具有若干个属性。你可以通过内置的 dir() 函数进行反射，从而了解到某个对象分别都包含哪些属性。熟悉 Java 的同学，应该明白啥是“反射”。光懂 C/C++ 的同学，如果理解上有困难，可以先参考“维基百科的解释”。&lt;/p&gt;
+
+&lt;p&gt;另外，Python 还提供了若干内置的函数，用于在【运行时】操作指定对象的属性。具体如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nb&quot;&gt;hasattr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#判断obj对象是否具有名为name的属性
 &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;setattr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#设置obj对象的名为name的属性值为value
 &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;getattr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#获取obj对象的名为name的属性值
 &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;delattr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#删除obj对象的名为name的属性
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;对象的类型&quot;&gt;对象的类型&lt;/h3&gt;
 
@@ -562,32 +554,34 @@ FP 的写法（无控制流）：&lt;/p&gt;
 &lt;p&gt;Python 对象还有其它一些共性，考虑到本文的扫盲性质，就不再费口水了。有兴趣的同学，可以自己找些入门书研读一番。&lt;/p&gt;
 
 &lt;h3 id=&quot;一切皆对象的好处&quot;&gt;【一切皆对象】的好处？&lt;/h3&gt;
-&lt;p&gt;　　
-可能有同学会问，“一切皆对象”有啥好处捏？俺窃以为：当一切皆为对象，就可以把很多概念、操作、惯用手法统一起来，在语法层面体现出美感。&lt;/p&gt;
 
-&lt;p&gt;下面俺举几个例子，并拿 Java 来对比一下。
-　　
-在 Java 里面，由于基本类型不是继承自 Object 类，引出不少麻烦。当初 Java 它爹刚开始设计容器类（比如 Vector、ArrayList …）的时候，颇费了一番功夫。因为容器里面放置的东东必须是 Object，为了让容器能适应基本类型，只好给每一种基本类型分别对应一个派生自 Object 的包装类（Integer 类对应 int、Float 类对应 float …）；后来又平添了自动装箱/拆箱的概念；搞来稿去，产生了 N 多复杂性。
-　　
-而 Python 就没有这方面的困扰。
-　　
-再拿刚才提及的“反射”来说事儿。虽然 Java 语言支持对象的反射，但是 Java 的 package 不是 Object，所以也就无法对 package 进行反射。反观 Python，任何一个 module（相当于 Java 的 package）import 之后，都可以直接通过前面提到的 dir() 函数进行反射，得知该 module 包含了哪些东东。仅仅需要2行代码：&lt;/p&gt;
+&lt;p&gt;可能有同学会问，“一切皆对象”有啥好处捏？俺窃以为：当一切皆为对象，就可以把很多概念、操作、惯用手法统一起来，在语法层面体现出美感。&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;xxx&lt;/span&gt;
+&lt;p&gt;下面俺举几个例子，并拿 Java 来对比一下。&lt;/p&gt;
+
+&lt;p&gt;在 Java 里面，由于基本类型不是继承自 Object 类，引出不少麻烦。当初 Java 它爹刚开始设计容器类（比如 Vector、ArrayList …）的时候，颇费了一番功夫。因为容器里面放置的东东必须是 Object，为了让容器能适应基本类型，只好给每一种基本类型分别对应一个派生自 Object 的包装类（Integer 类对应 int、Float 类对应 float …）；后来又平添了自动装箱/拆箱的概念；搞来稿去，产生了 N 多复杂性。&lt;/p&gt;
+
+&lt;p&gt;而 Python 就没有这方面的困扰。&lt;/p&gt;
+
+&lt;p&gt;再拿刚才提及的“反射”来说事儿。虽然 Java 语言支持对象的反射，但是 Java 的 package 不是 Object，所以也就无法对 package 进行反射。反观 Python，任何一个 module（相当于 Java 的 package）import 之后，都可以直接通过前面提到的 dir() 函数进行反射，得知该 module 包含了哪些东东。仅仅需要2行代码：&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;xxx&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xxx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;封装encapsulation&quot;&gt;封装（Encapsulation）&lt;a name=&quot;encap&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;　　
-为了避免歧义，首先要明确一下：什么是“封装”？为了叙述方便，俺把【OOP 的封装】，分为“狭义”和“广义”两种。（关于“封装”的深入讨论，可以参见“另一篇博文”）&lt;/p&gt;
+
+&lt;p&gt;为了避免歧义，首先要明确一下：什么是“封装”？为了叙述方便，俺把【OOP 的封装】，分为“狭义”和“广义”两种。（关于“封装”的深入讨论，可以参见“另一篇博文”）&lt;/p&gt;
 
 &lt;h3 id=&quot;广义封装&quot;&gt;广义封装&lt;/h3&gt;
-&lt;p&gt;　　
-OOP 很强调以数据为中心。所以 OOP 的广义封装，就是把数据和操作数据的行为，打包到一起。比如 C++/Java 里的 class，可以同时包含数据成员和函数成员，就算是满足“广义的封装”了。对于 Python 而言，其 class 关键字类似于 C++ 和 Java，也已经具有“广义的封装性”了。&lt;/p&gt;
+
+&lt;p&gt;OOP 很强调以数据为中心。所以 OOP 的广义封装，就是把数据和操作数据的行为，打包到一起。比如 C++/Java 里的 class，可以同时包含数据成员和函数成员，就算是满足“广义的封装”了。对于 Python 而言，其 class 关键字类似于 C++ 和 Java，也已经具有“广义的封装性”了。&lt;/p&gt;
 
 &lt;h3 id=&quot;狭义封装&quot;&gt;狭义封装&lt;/h3&gt;
-&lt;p&gt;　　
-而 OOP 的狭义封装，则更进一步，增加了信息隐藏（Information Hiding）。比如 C++ 和 Java 的“public、protected、private”等关键字，就是通过访问控制来达到信息隐藏的效果。Python 虽然没有针对访问控制的关键字来修饰类成员，但是 Python 采用了另外一套机制——根据命名来约定。在 Python 的对象中，如果某个属性以双下划线开头来命名（比如 __name），就能起到类似于 C++/Java 的 private 关键字的效果。&lt;/p&gt;
+
+&lt;p&gt;而 OOP 的狭义封装，则更进一步，增加了信息隐藏（Information Hiding）。比如 C++ 和 Java 的“public、protected、private”等关键字，就是通过访问控制来达到信息隐藏的效果。Python 虽然没有针对访问控制的关键字来修饰类成员，但是 Python 采用了另外一套机制——根据命名来约定。在 Python 的对象中，如果某个属性以双下划线开头来命名（比如 __name），就能起到类似于 C++/Java 的 private 关键字的效果。&lt;/p&gt;
 
 &lt;h3 id=&quot;对访问控制的偏见&quot;&gt;对访问控制的偏见&lt;/h3&gt;
 
@@ -607,23 +601,28 @@ OOP 很强调以数据为中心。所以 OOP 的广义封装，就是把数据�
 
 &lt;p&gt;Python 的继承语法，相比 C++/Java 而言，更加简洁。比如子类 Child 需要继承父类 Parent，代码只需如下：&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;# xxxx
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;如果是多继承，代码大同小异：&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parent1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parent2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parent3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parent1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parent2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parent3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;# xxxx
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;假如你想知道某个类有哪些父类（基类），只需要通过 Child.&lt;strong&gt;bases&lt;/strong&gt; 便可知晓。&lt;/p&gt;
 
 &lt;h3 id=&quot;继承的动态性&quot;&gt;继承的动态性&lt;/h3&gt;
-&lt;p&gt;　　
-其实上一个帖子已经介绍了动态改变继承关系的例子。但是考虑到上一个帖子年代久远（距本文将近1年），想必很多同学没看过或者看过又忘了。俺不妨再啰嗦一下：作为一种动态语言，Python 可以在【运行时】修改类的继承关系。这个特性比较酷，是 C++/Java 所望尘莫及滴。请看下面的例子：&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Parent1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;p&gt;其实上一个帖子已经介绍了动态改变继承关系的例子。但是考虑到上一个帖子年代久远（距本文将近1年），想必很多同学没看过或者看过又忘了。俺不妨再啰嗦一下：作为一种动态语言，Python 可以在【运行时】修改类的继承关系。这个特性比较酷，是 C++/Java 所望尘莫及滴。请看下面的例子：&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Parent1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dump&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
@@ -638,23 +637,28 @@ OOP 很强调以数据为中心。所以 OOP 的广义封装，就是把数据�
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__bases__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__bases__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parent1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parent2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 动态追加了2个父类
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__bases__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 此处打印出的父类信息中，已经包含 Parent1、Parent2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;多态polymorphism&quot;&gt;多态（Polymorphism）&lt;a name=&quot;poly&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;　　
-至于 Python 的多态，和传统的 OO 语言差不多，似乎没有太多值得说道的地方。俺简单举个代码作例子。为了省打字，直接复用上述的3个类，并增加一个 test() 函数如下：&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;p&gt;至于 Python 的多态，和传统的 OO 语言差不多，似乎没有太多值得说道的地方。俺简单举个代码作例子。为了省打字，直接复用上述的3个类，并增加一个 test() 函数如下：&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dump&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;然后对 test() 函数分别传入不同的类型的对象，输出结果俺就无需多说了吧？&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 打印出 child
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parent1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 打印出 parent1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;结尾&quot;&gt;结尾&lt;a name=&quot;summary&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
 
@@ -663,8 +667,8 @@ OOP 很强调以数据为中心。所以 OOP 的广义封装，就是把数据�
 &lt;p&gt;&lt;a href=&quot;&quot;&gt;回到本系列的目录&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;版权声明
-本博客所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：
+  &lt;p&gt;&lt;strong&gt;版权声明&lt;/strong&gt; &lt;br /&gt;
+本文转载自编程随想的博客，原作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址: &lt;br /&gt;
 &lt;a href=&quot;https://program-think.blogspot.com/2010/08/why-choose-python-3-oop.html&quot;&gt;https://program-think.blogspot.com/2010/08/why-choose-python-3-oop.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
@@ -946,8 +950,9 @@ A.&lt;strong&gt;bases&lt;/strong&gt; += (B,)
 
 &lt;p&gt;其实俺接触 Python 的时间，也不算太早（大概是2003年那会儿）。当时看到 Eric Raymond 关于几大编程语言的评价（原文在“这里”，翻译在“这里”），之后又看了他写的《Why Python?》。感觉这位大牛蛮器重 Python 滴，于是俺也就跟风学习了一番。从此一发不可收拾——现在 Python 已然成为俺最常使用的脚本语言了。&lt;/p&gt;
 
-&lt;p&gt;接下来，俺就从几个不同的角度来鼓吹一下 Python。假如你从来没有听说过或者从来没用过此语言，听了俺的忽悠之后，或许会有所心动 :-) 假如你觉得俺只不过是 Python 阵营的枪手，发发广告帖，那你就不用再浪费宝贵的时间去看后续的帖子了。
-　　
+&lt;p&gt;接下来，俺就从几个不同的角度来鼓吹一下 Python。假如你从来没有听说过或者从来没用过此语言，听了俺的忽悠之后，或许会有所心动 :-) 假如你觉得俺只不过是 Python 阵营的枪手，发发广告帖，那你就不用再浪费宝贵的时间去看后续的帖子了。&lt;/p&gt;
+
+&lt;p&gt;　　
 按照俺先前的习惯，会把接下来的内容拆成几个帖子来写……&lt;/p&gt;
 
 &lt;p&gt;为了方便阅读，把本系列帖子的目录整理如下（需翻墙）：&lt;/p&gt;

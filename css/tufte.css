@@ -6,6 +6,9 @@
 /*
 /* The README.md will show you how to set up your site along with other goodies
 /*****************************************************************************/
+blockquote {
+  background-color: #fffff8; }
+
 @font-face {
   font-family: ETbook;
   src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
@@ -277,7 +280,7 @@ blockquote p {
   line-height: 1.78181818;
   margin-top: 1.78181818rem;
   margin-bottom: 1.78181818rem;
-  width: 45%;
+  width: inherit;
   padding-left: 2.5%;
   padding-right: 2.5%; }
 
@@ -370,7 +373,7 @@ section {
   padding-bottom: 1rem; }
 
 ul, ol {
-  width: 45%;
+  width: 100%;
   -webkit-padding-start: 5%;
   -webkit-padding-end: 5%;
   list-style-type: none; }
@@ -471,7 +474,7 @@ div.table-wrapper {
   font-size: 1rem; }
 
 pre, pre code, p pre code {
-  width: 52.5%;
+  width: inherit;
   padding-left: 2.5%;
   overflow-x: auto; }
 
