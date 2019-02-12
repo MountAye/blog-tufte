@@ -13,6 +13,7 @@ nav_exclude: true
 // MountAye's addition:
 blockquote {
     background-color: #fffff8;
+    width:65%;
 }
 
 // Imports to create final
@@ -134,11 +135,11 @@ blockquote p {  font-size: 1.1rem;
                 line-height: 1.78181818;
                 margin-top: 1.78181818rem;
                 margin-bottom: 1.78181818rem;
-                width: inherit;
+                width: 95%;  // modified by MountAye
                 padding-left: 2.5%;
                 padding-right: 2.5%; }
 
-blockquote footer { width: 45%;
+blockquote footer { width: 65%;
                     text-align: right; }
 
 
@@ -253,7 +254,7 @@ img { max-width: 100%; }
 
 li .sidenote, li .marginnote{ margin-right: -80%; } //added to allow for the fact that lists are indented and marginnotes and sidenotes push to right
 
-blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
+blockquote .sidenote, blockquote .marginnote { margin-right: -60% } // modified by MountAye
 
 .sidenote-number { counter-increment: sidenote-counter; }
 
@@ -272,7 +273,7 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
                    color: $contrast-color;
                    top: 0rem; } //removed superscripting for numerical reference in sidenote
 
-p, footer, div.table-wrapper, div.mathblock{ width: 55%; }
+p, footer, div.table-wrapper, div.mathblock{ width: 65%; }
 
 div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
