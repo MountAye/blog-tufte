@@ -7,7 +7,8 @@
 /* The README.md will show you how to set up your site along with other goodies
 /*****************************************************************************/
 blockquote {
-  background-color: #fffff8; }
+  background-color: #fffff8;
+  width: 65%; }
 
 @font-face {
   font-family: ETbook;
@@ -280,12 +281,12 @@ blockquote p {
   line-height: 1.78181818;
   margin-top: 1.78181818rem;
   margin-bottom: 1.78181818rem;
-  width: inherit;
+  width: 95%;
   padding-left: 2.5%;
   padding-right: 2.5%; }
 
 blockquote footer {
-  width: 45%;
+  width: 65%;
   text-align: right; }
 
 .sans {
@@ -420,7 +421,7 @@ li .sidenote, li .marginnote {
   margin-right: -80%; }
 
 blockquote .sidenote, blockquote .marginnote {
-  margin-right: -79%; }
+  margin-right: -60%; }
 
 .sidenote-number {
   counter-increment: sidenote-counter; }
@@ -444,7 +445,7 @@ blockquote .sidenote, blockquote .marginnote {
   top: 0rem; }
 
 p, footer, div.table-wrapper, div.mathblock {
-  width: 55%; }
+  width: 65%; }
 
 div.table-wrapper {
   overflow-x: auto; }

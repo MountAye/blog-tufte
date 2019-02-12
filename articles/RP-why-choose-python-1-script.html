@@ -163,14 +163,14 @@
   <li><a href="#pros">脚本语言好在哪？</a></li>
   <li><a href="#cons">脚本语言有啥缺点？</a></li>
   <li><a href="#compare">Python 和其它脚本语言的比较</a></li>
-  <li><a href="#summary">总结</a>
-　　
-俺窃以为，Python 的所有特征中，作为脚本语言（“脚本语言”的定义参见“<a href="https://en.wikipedia.org/wiki/Scripting_language">这里</a>”）是它的首要特征。因此，在本系列帖子中，俺首先来忽悠一下 Python 作为脚本语言，有些啥好处？</li>
+  <li><a href="#summary">总结</a></li>
 </ul>
+
+<p>俺窃以为，Python 的所有特征中，作为脚本语言（“脚本语言”的定义参见“<a href="https://en.wikipedia.org/wiki/Scripting_language">这里</a>”）是它的首要特征。因此，在本系列帖子中，俺首先来忽悠一下 Python 作为脚本语言，有些啥好处？</p>
 
 <h2 id="脚本语言好在哪">脚本语言好在哪？<a name="pros"></a></h2>
 
-<p>　　要聊 Python 作为脚本语言的好处，首先得说说脚本语言自身有哪些优点。一般来说，当我们提及“脚本语言”，都是强调其解释执行的特性（虽然有些脚本语言也支持编译）。所以，后面陈述的这些优点，大都是拿编译型语言来进行对比。</p>
+<p>要聊 Python 作为脚本语言的好处，首先得说说脚本语言自身有哪些优点。一般来说，当我们提及“脚本语言”，都是强调其解释执行的特性（虽然有些脚本语言也支持编译）。所以，后面陈述的这些优点，大都是拿编译型语言来进行对比。</p>
 
 <h3 id="更高层次的抽象和封装">更高层次的抽象和封装</h3>
 
@@ -178,12 +178,16 @@
 
 <p>有了这些高层次的封装，你写起代码来，就特别滴简单、特别滴爽。比如，在 Python 中要把一个 List 翻倍，只需这么写：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1,2,3] * 2
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+
 </code></pre></div></div>
 
 <p>就得到</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1,2,3,1,2,3]
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
 </code></pre></div></div>
 
 <h3 id="更少的代码量">更少的代码量</h3>
@@ -224,9 +228,9 @@
 
 <p>为了回答这个问题，下面俺拿 Python 和一些常见的脚本语言作一些【肤浅的】比较。</p>
 
-<p>鉴于后面的内容极易引发语言的口水战，俺特此声明：虽然接下来会提及某些语言相对于 python 的缺点，但俺绝无贬低这些语言的企图，也无意证明 python 比这些语言优秀！俺只是陈述一下：当年是如何在几种脚本语言中进行取舍的？
-　　
-除了 Python 之外，常见的脚本语言还有很多，比如：PHP、JavaScript（以下简称 JS）、Perl、VBScript（以下简称 VBS）、Ruby、Bash、Lua、Tcl（可别误以为是某家电厂商）……Python 是如何从这些脚本语言中脱颖而出的捏？俺挑选的时候，主要考虑了如下几点：</p>
+<p>鉴于后面的内容极易引发语言的口水战，俺特此声明：虽然接下来会提及某些语言相对于 python 的缺点，但俺绝无贬低这些语言的企图，也无意证明 python 比这些语言优秀！俺只是陈述一下：当年是如何在几种脚本语言中进行取舍的？</p>
+
+<p>除了 Python 之外，常见的脚本语言还有很多，比如：PHP、JavaScript（以下简称 JS）、Perl、VBScript（以下简称 VBS）、Ruby、Bash、Lua、Tcl（可别误以为是某家电厂商）……Python 是如何从这些脚本语言中脱颖而出的捏？俺挑选的时候，主要考虑了如下几点：</p>
 
 <h3 id="通用性跨领域">通用性（跨领域）</h3>
 
@@ -236,37 +240,37 @@
 
 <h3 id="人气够旺">人气够旺</h3>
 
-<p>关于“人气”的重要性，俺在《如何选择开源项目》一文中，有介绍过。人气越高、越流行，就意味着更多的资源（包括文档、相关软件），当你碰到问题需要解决，也有更多的人可以咨询。
-　　
-关于编程语言的流行程度，可以大致参考 TIOBE 的排名（虽然 TIOBE 不能全面反映流行程度，但至少可作为某种参考）。
-　　
-像 Tcl、PowerShell、Groovy、JavaFX 等都排在３０名之外（截至写本文的2009年8月），感觉用的人太少了，俺暂时不予考虑。而 Python 最近几年的排名则一路上升（请看“这里”），截止到2009年8月，已经高踞排行榜第６位。Perl 虽然也身居高位，但是最近几年的排名一路下滑（请看“<a href="http://www.tiobe.com/content/paperinfo/tpci/Perl.html">这里</a>”）。俺个人认为，其人气不容乐观。</p>
+<p>关于“人气”的重要性，俺在《如何选择开源项目》一文中，有介绍过。人气越高、越流行，就意味着更多的资源（包括文档、相关软件），当你碰到问题需要解决，也有更多的人可以咨询。</p>
+
+<p>关于编程语言的流行程度，可以大致参考 TIOBE 的排名（虽然 TIOBE 不能全面反映流行程度，但至少可作为某种参考）。</p>
+
+<p>像 Tcl、PowerShell、Groovy、JavaFX 等都排在３０名之外（截至写本文的2009年8月），感觉用的人太少了，俺暂时不予考虑。而 Python 最近几年的排名则一路上升（请看“这里”），截止到2009年8月，已经高踞排行榜第６位。Perl 虽然也身居高位，但是最近几年的排名一路下滑（请看“<a href="http://www.tiobe.com/content/paperinfo/tpci/Perl.html">这里</a>”）。俺个人认为，其人气不容乐观。</p>
 
 <h3 id="功能够强库够丰富">功能够强、库够丰富</h3>
-<p>　　
-另一个俺很看重的地方是功能是否够强大。在这点上，Python 和 Perl 都算是比较强悍的。关于 Python 如何强悍，俺会在本系列的第5篇帖子《作为瑞士军刀的 Python》中加以介绍。
-　　
-反观 JS、Ruby、Tcl 等语言，则稍显不足（当然，也有可能俺孤陋寡闻）。</p>
+
+<p>另一个俺很看重的地方是功能是否够强大。在这点上，Python 和 Perl 都算是比较强悍的。关于 Python 如何强悍，俺会在本系列的第5篇帖子《作为瑞士军刀的 Python》中加以介绍。</p>
+
+<p>反观 JS、Ruby、Tcl 等语言，则稍显不足（当然，也有可能俺孤陋寡闻）。</p>
 
 <h3 id="跨平台">跨平台</h3>
-<p>　　
-由于俺平时会使用不同的操作系统，再加上俺负责的产品也是跨平台的。所以，俺对脚本语言有跨平台的要求。说到跨平台，诸如VBS、Bash之流就不予考虑了。
-　　
-其实，很多脚本语言都支持跨平台。而 Python 在这方面，更为出众。不光支持主流的操作系统，还支持一些冷门的（比如古老的 DOS），还支持手持设备（比如智能手机和平板）。</p>
+
+<p>由于俺平时会使用不同的操作系统，再加上俺负责的产品也是跨平台的。所以，俺对脚本语言有跨平台的要求。说到跨平台，诸如VBS、Bash之流就不予考虑了。</p>
+
+<p>其实，很多脚本语言都支持跨平台。而 Python 在这方面，更为出众。不光支持主流的操作系统，还支持一些冷门的（比如古老的 DOS），还支持手持设备（比如智能手机和平板）。</p>
 
 <h3 id="和其它语言的整合交互">和其它语言的整合、交互</h3>
-<p>　　
-最后这一点，估计大多数同学不会太关心。俺因为要在公司的产品中引入脚本技术，所以俺还得考虑该脚本语言和其它语言的整合能力。整合能力强的脚本语言，可以作为复杂系统中的胶水，用来把不同模块粘合在一起（关于 Glue Language，可以参见“<a href="https://en.wikipedia.org/wiki/Glue_language">这里</a>”）。
-　　
-在这方面，Python 和 Ruby 的表现都不错：</p>
+
+<p>最后这一点，估计大多数同学不会太关心。俺因为要在公司的产品中引入脚本技术，所以俺还得考虑该脚本语言和其它语言的整合能力。整合能力强的脚本语言，可以作为复杂系统中的胶水，用来把不同模块粘合在一起（关于 Glue Language，可以参见“<a href="https://en.wikipedia.org/wiki/Glue_language">这里</a>”）。</p>
+
+<p>在这方面，Python 和 Ruby 的表现都不错：</p>
 
 <p>它们和 Java 的整合有Jython、JRuby；</p>
 
 <p>和 dotNet 平台的整合有IronPython、IronRuby。</p>
 
-<p>至于俺常用的 C++，Python 整合得比 Ruby 好。比如 C++ 社区大名鼎鼎的 Boost 库里面，就内置了一个 Boost.Python 的子库（参见“这里”）。
-　　
-关于 Python 如何用作胶水，俺会在后续的帖子“作为胶合语言的 Python”中会详细介绍。</p>
+<p>至于俺常用的 C++，Python 整合得比 Ruby 好。比如 C++ 社区大名鼎鼎的 Boost 库里面，就内置了一个 Boost.Python 的子库（参见“这里”）。</p>
+
+<p>关于 Python 如何用作胶水，俺会在后续的帖子“作为胶合语言的 Python”中会详细介绍。</p>
 
 <h2 id="总结">总结<a name="summary"></a></h2>
 
@@ -274,12 +278,12 @@
 
 <p>啰嗦完Python作为脚本语言的方方面面，下一个帖子，咱来聊一下它作为动态语言的那些事儿。</p>
 
-<p><a href="">回到本系列的目录</a></p>
+<p><a href="/blog/articles/RP-why-choose-python-0-overview">回到本系列的目录</a></p>
 
 <blockquote>
-  <p><em>版权声明</em>
-本博客所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：
-(https://program-think.blogspot.com/2009/08/why-choose-python-1-script.html)[https://program-think.blogspot.com/2009/08/why-choose-python-1-script.html]</p>
+  <p><em>版权声明</em><br />
+本博客<label for="reference" class="margin-toggle sidenote-number"></label><input type="checkbox" id="reference" class="margin-toggle" /><span class="sidenote">指编程随想的博客 </span>所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：<br />
+<a href="https://program-think.blogspot.com/2009/08/why-choose-python-1-script.html">https://program-think.blogspot.com/2009/08/why-choose-python-1-script.html</a></p>
 </blockquote>
 
 
