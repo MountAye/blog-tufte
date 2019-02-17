@@ -215,8 +215,8 @@ section { padding-top: 1rem;
 
 
 ul,ol { width: 100%;
-     -webkit-padding-start: 5%;
-     -webkit-padding-end: 5%;
+     -webkit-padding-start: 0%;
+     -webkit-padding-end: 0%;
      list-style-type: none; }
 
 //li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
@@ -401,7 +401,7 @@ ul.footer-links li{
 //Full width page styling stuff
 
 article.full-width, .content-listing, ul.content-listing li.listing {
-    width: 90%;
+    width: 90%; 
     margin-left: auto;
     margin-right: auto;
     padding: 0% 5%;
