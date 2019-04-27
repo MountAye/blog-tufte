@@ -375,8 +375,8 @@ section {
 
 ul, ol {
   width: 100%;
-  -webkit-padding-start: 5%;
-  -webkit-padding-end: 5%;
+  -webkit-padding-start: 0%;
+  -webkit-padding-end: 0%;
   list-style-type: none; }
 
 figure, figure img.maincolumn {

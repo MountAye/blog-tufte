@@ -5,8 +5,8 @@
     <description>A Chinese Blog about Science</description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 Feb 2019 23:56:39 -0600</pubDate>
-    <lastBuildDate>Sat, 09 Feb 2019 23:56:39 -0600</lastBuildDate>
+    <pubDate>Sat, 27 Apr 2019 00:07:02 -0500</pubDate>
+    <lastBuildDate>Sat, 27 Apr 2019 00:07:02 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -986,38 +986,6 @@ A.&lt;strong&gt;bases&lt;/strong&gt; += (B,)&lt;/p&gt;
         <pubDate>Thu, 07 Feb 2019 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/blog/articles/RP-why-choose-python-0-overview</link>
         <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-0-overview</guid>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>测试文章</title>
-        <description>&lt;p&gt;This is a test of the post function.&lt;/p&gt;
-
-&lt;p&gt;This file is generated in the Windows 10 OS and use English only at the first time.&lt;/p&gt;
-
-&lt;p&gt;Successful!&lt;/p&gt;
-
-&lt;p&gt;Then I tried editting with vim in WSL.&lt;/p&gt;
-
-&lt;p&gt;Successful!!&lt;/p&gt;
-
-&lt;p&gt;Then I tried using Chinese in the text.&lt;/p&gt;
-
-&lt;p&gt;无标点符号中文测试&lt;/p&gt;
-
-&lt;p&gt;Successful!!!&lt;/p&gt;
-
-&lt;p&gt;Here is the exciting part: changing the title in the front matter into Chinese!&lt;/p&gt;
-
-&lt;p&gt;Successful!!!! The front matter variable changes not only the title in the post page, but also the title shown on the homepage.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 25 Jan 2019 15:12:01 -0600</pubDate>
-        <link>http://localhost:4000/blog/articles/test-post</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/test-post</guid>
         
         
         <category>post</category>
