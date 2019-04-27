@@ -1,20 +1,15 @@
 ---
-layout: default
 title: Home
-# Note that this index page uses a full-width layout!
+layout: default
 ---
 
-<h1 class="content-listing">一篇文章</h1>
-
+<article class="">
 {% marginnote "more" "更多文章" %}
-
+<h1 class="content-listing">一篇文章</h1>
 <ul class="content-listing">
     {% assign post0 = site.posts[0] %}
- 
     <li class="listing">
-
         <hr class="slender">
-
         <a href="{{ post0.url | prepend: site.baseurl }}">
             <h3 class="contrast" style="font-style:normal">
                 {{ post0.title }}
@@ -22,9 +17,19 @@ title: Home
         </a>
         <br>
         <span class="smaller">{{ post0.date | date: "%B %-d, %Y" }}</span>  <br />
-
         <div>{{ post0.excerpt }}</div>
-
     </li>
-
 </ul>
+
+<h3 class="content-listing">更多文章</h3>
+<ul class="content-listing">    
+    {% for i in (1..4) %}
+        {% assign iPost = site.posts[i] %}
+        <li class="listing"> 
+            <a href="{{ iPost.url | prepend: site.baseurl }}">
+                {{ iPost.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+</article>
