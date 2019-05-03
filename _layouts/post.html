@@ -1,15 +1,16 @@
 ---
 layout: default
 ---
+<!-- For Comments Loading -->
+
 
 <article class="group post">
-
-<h1>{{ page.title}}</h1>
-
-<p class="subtitle">
-    {{ page.date | date: "%B %-d, %Y" }}
-</p>
-
-{{ content }}
-
+    <h1>{{ page.title}}</h1>
+        <p class="subtitle">
+            {{ page.date | date: "%B %-d, %Y" }}
+        </p>
+    {{ content }}
+    <hr class="slender">
 </article>
+
+{% include comments.html %}

@@ -1,6 +1,7 @@
 ---
 layout: full-width
 title: Comments
+milestoneID: 3
 ---
 
 # 留言和评论
@@ -12,3 +13,5 @@ title: Comments
 对于博客的一般性问题，请在 [General Comments](https://github.com/MountAye/blog/milestone/1) 区提交 issue。
 
 对于博文的评论，请点击博文结尾处提供的链接，在 [issue 区的 Milestones](https://github.com/MountAye/blog/milestones) 中寻找和博文同名的条目，新建 issue，或评论他人的 issues。
+
+{% include comments.html %}

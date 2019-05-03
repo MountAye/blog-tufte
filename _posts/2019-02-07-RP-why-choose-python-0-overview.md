@@ -1,9 +1,10 @@
 ﻿---
 layout:  post
-title:   转载 | 为什么俺推荐 Python[0]：概述
+title:   转载|为什么俺推荐 Python[0]：概述
 excerpt: 从几个不同的角度来鼓吹一下 Python。
 date:    2019-02-07
 categories: post
+milestoneID: 2
 ---
 
 当初博客开张的时候，原计划在编程语言方面聊聊 C++、Java 和 Python。谁曾想半年多过去了，尚未写过 Python 的帖子。实在是说不过去啊！所以今天赶紧写一篇来凑数。

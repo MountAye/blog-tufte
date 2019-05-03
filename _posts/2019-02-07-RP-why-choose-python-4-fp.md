@@ -3,6 +3,7 @@ layout:  post
 title:   转载|为什么俺推荐 Python[4]：作为函数式编程语言的 Python
 excerpt: 聊一聊 Python 作为“函数式编程”（以下简称 FP）语言的特点。考虑到本系列面向的是 Python 的门外汉或刚入门的新手，故本文仅介绍若干浅显的 FP 特性。
 categories: post
+milestoneID: 2
 ---
 
 ### 文章目录
@@ -318,4 +319,4 @@ f2 = d(f1)
 
 > **版权声明**<br>
 > 本博客{% sidenote "reference" "指编程随想的博客" %}所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：<br>
-> <a href="https://program-think.blogspot.com/2012/02/why-choose-python-4-fp.html>https://program-think.blogspot.com/2012/02/why-choose-python-4-fp.html</a>
+> <a href="https://program-think.blogspot.com/2012/02/why-choose-python-4-fp.html">https://program-think.blogspot.com/2012/02/why-choose-python-4-fp.html</a>

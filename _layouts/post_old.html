@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<!-- For Comments Loading -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="http://datejs.googlecode.com/svn/trunk/build/date-en-US.js"></script>
+
+<article class="group post">
+    <h1>{{ page.title}}</h1>
+        <p class="subtitle">
+            {{ page.date | date: "%B %-d, %Y" }}
+        </p>
+    {{ content }}
+    <hr class="slender">
+</article>
+
+<section id="commentsGithub">
+    <h2>读者评论</h2>
+    <!-- This <script> block is modified from 'farseerfc', by changing variable names, defining `loadIssues` -->
+        <script type="text/javascript">            
+          function loadComments(event) {
+              var reaction_fa = {
+                "+1": "thumbs-o-up",
+                "-1": "thumbs-o-down",
+                "laugh": "smile-o",
+                "hooray": "gift",
+                "confused": "frown-o",
+                "heart": "heart-o"
+              };
+            
+              function loadComments(data) {
+                for (var i=0; i<data.length; i++) {
+                  var cuser = data[i].user.login;
+                  var cuserlink = "https://github.com/" + data[i].user.login;
+                  var clink = "https://github.com/farseerfc/farseerfc.github.io/issues/11#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
+                  var cbody = data[i].body_html || data[i].body;
+                  var cavatarlink = data[i].user.avatar_url;
+                  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+                  var cdate = new Date(data[i].created_at).toLocaleString("zh-Hans", options);
+                  var reactions = data[i].reactions;
+                  var creactions = "";
+                  if(reactions){
+                    for(reactionkey in reaction_fa){
+                      if(reactions[reactionkey] > 0) {
+                          creactions += '<i class="fa fa-'+ reaction_fa[reactionkey]+'"></i>' + reactions[reactionkey] + "&nbsp;";
+                      }
+                    }
+                  }
+                  $("#githubissue_comments").append("<div class='media'><div class='media-left'><a href=\""+ cuserlink +'\"><img src="' + cavatarlink + '" width="48" class="media-object">' + "</a></div><div class='media-body'><h4 class='media-heading'><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><small>&nbsp; 留言於 &nbsp;<a class='commentdate' href=\"" + clink + "\">" + cdate + "</a></small>&nbsp;"+ creactions + "</h4><div class='commentbody markdown-body'>" + cbody + "</div></div>");
+                  $(".email-hidden-toggle > a").on("click", function (e){
+                    e.preventDefault();
+                    $(".email-hidden-reply", this.parent).toggle();
+                  });
+                }
+              }
+              $.ajax("https://api.github.com/repos/farseerfc/farseerfc.github.io/issues/11/comments", {
+                headers: {Accept: "application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){
+                  loadComments(msg);
+               }
+              });
+            };
+            document.addEventListener("DOMContentLoaded", loadComments)
+        </script>
+    <noscript><p>欲查看留言，请启用 JavaScript 。</p></noscript>
+    <div id="header">
+        <p>GitHub 用户可前往<a href="https://github.com/MountAye/blog/milestone/{{page.milestoneID}}">这个页面</a>进行评论。</p>
+    </div>
+</section>
+
+<!-- 
+$("#commentsGithub").append("<div class=''><div class=''><a href=\""+ cUserLink +'\"><img src="' + cAvatarLink + '" width="48" class="media-object">' + "</a></div><div class='media-body'><h4 class='media-heading'><a class='commentuser' href=\""+ cUserLink + "\">" + cUser + "</a><small>&nbsp; 留言於 &nbsp;<a class='commentdate' href=\"" + cLink + "\">" + cDate + "</a></small>&nbsp;"+ cReactions + "</h4><div class='commentbody markdown-body'>" + cBody + "</div></div>");
+$(".email-hidden-toggle > a").on("click", function (e){
+    e.preventDefault();
+    $(".email-hidden-reply", this.parent).toggle();
+ -->
