@@ -17,7 +17,7 @@
   
   <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
   
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?..."></script>
   
 
   <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
@@ -38,6 +38,17 @@
 
 <header>
 
+    <div>
+        <h3 class="sans">阿掖山：一个博客</h3>
+    </div>
+            
+    <p style="font-size:100%">
+        <span id="quoteLine">人活在世上，有的活成了面子，有的活成了里子，都是时势使然。</span><br>
+        ——<span id="quoteAuthor">《一代宗师》</span><br>
+        <span id="quoteLink"></span>
+    </p>
+            
+
     <nav class="group">
 
         <a href="/blog/">
@@ -50,7 +61,7 @@
 
                 
 
-		    <a class="active" href="/blog/" class="active">
+		    <a href="/blog/" class="active">
                         home
                     </a>
 		    
@@ -132,15 +143,6 @@
 
     </nav>
 
-    <div>
-	<h3 class="sans">阿掖山：一个博客</h3>
-    </div>
-
-    <p style="font-size:100%">
-        <span id="quoteLine">人活在世上，有的活成了面子，有的活成了里子，都是时势使然。</span><br>
-        ——<span id="quoteAuthor">《一代宗师》</span><br>
-        <span id="quoteLink"></span>
-    </p>
     <hr class="slender">
  
 
@@ -149,12 +151,9 @@
 
     
         <article class="">
-<label for='more' class='margin-toggle'> &#8853;</label><input type='checkbox' id='more' class='margin-toggle'/><span class='marginnote'>更多文章 </span>
-<h1 class="content-listing">一篇文章</h1>
 <ul class="content-listing">
     
     <li class="listing">
-        <hr class="slender">
         <a href="/blog/articles/RP-why-choose-python-5-tool">
             <h3 class="contrast" style="font-style:normal">
                 转载 | 为什么俺推荐 Python[5]：作为瑞士军刀的 Python
@@ -163,11 +162,14 @@
         <br>
         <span class="smaller">February 7, 2019</span>  <br />
         <div>拿“瑞士军刀”来比喻 Python 就是想说明：Python 不但短小精悍，而且功能强大。今天就来介绍一下 Python 的这两个特点（尤其是后者）。</div>
+        <hr class="slender">
     </li>
+    
 </ul>
 
 <h3 class="content-listing">更多文章</h3>
 <ul class="content-listing">    
+    <hr class="slender">
     
         
         <li class="listing"> 
@@ -194,6 +196,13 @@
         <li class="listing"> 
             <a href="/blog/articles/RP-why-choose-python-1-script">
                 转载|为什么俺推荐 Python[1]：作为脚本语言的 Python
+            </a>
+        </li>
+    
+        
+        <li class="listing"> 
+            <a href="/blog/articles/RP-why-choose-python-0-overview">
+                转载|为什么俺推荐 Python[0]：概述
             </a>
         </li>
     
