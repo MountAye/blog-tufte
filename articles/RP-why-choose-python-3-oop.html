@@ -319,7 +319,7 @@
     <!-- JavaScript objects are not JSON :-) -->
     <script type="text/javascript">
         // Global Variables
-        var html; // STRING, get changed by side effects of functions
+        var html = "<div class='ghReaderZone'><hr class='slender'>"; // STRING, get changed by side effects of functions
         var json; // OBJECT, get changed by side effects
         var jsComment; // LIST of OBJECT
         var iIssue = 0; // INTEGER
@@ -343,7 +343,6 @@
             return reactions
         };
         function printJson(){
-            html = "<div class='ghReaderZone'><hr class='slender'>";
             for (var i = 0; i < json.length; i++){
                 var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
                 var issueBody = json[i].body_html || json[i].body;
@@ -351,7 +350,6 @@
                 if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
                 // Other variables easy to get from the json are hard-coded inside the string manipulation.
                 html += "<div class='ghIssue'><div class='ghIssueLogo'><a href='" + json[i].user.url + "'><img src='" + json[i].user.avatar_url + "' width='48' class='ghIssueObject'></a></div><div class='ghIssueBox'><h4 class='ghIssueHeading'><a class='ghIssueUser' href="+json[i].user.url+"> "+ json[i].user.login +" </a><small><a class='ghIssueDate' href=" + json[i].html_url + ">" + issueDate + "</a></small>&nbsp;"+ issueReact + "<span class='ghIssueTitle'>" + json[i].title + "</span></h4><div class='ghIssueBody markdown-body'>" + issueBody + "</div></div></div>";
-                // if ( json[i].hasOwnProperty('commentsMountaye') ){alert("yes")}else{alert("no")};
                 if ( json[i].hasOwnProperty("commentsMountaye") ){
                     for (var j = 0; j < json[i].commentsMountaye.length; j++){
                         var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
@@ -395,13 +393,13 @@
         };
         function issuesFetched(msg){
             json = msg;
-            if (json==undefined){
-                html = "<p>目前尚无评论。</p>";
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
                 $("#comment").trigger("jsonReady");
             }
             else { $("#comment").trigger("hasIssues"); };
         };
-        function errorIssues(){ html = "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("printComments"); };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
         function loadIssues(){
             $.ajax({ 
                 url: apiIssues,
@@ -428,7 +426,6 @@
     </div>
     <div id="commentContent"></div>
 </section>
-<div id="test"></div>
 
 
 </article>
