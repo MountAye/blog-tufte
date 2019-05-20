@@ -21,7 +21,11 @@
   
 
   <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
-  <!-- <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print"> -->
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">
+  
 
   <link rel="canonical" href="/blog/Comments/">
 
@@ -57,65 +61,47 @@
 
 	
 
-	    
-
-                
+        
 
 		      <a href="/blog/">
                           home
                       </a>
 
-                
-
-	    
+        
 
   	
 
-	    
-
-                
+        
 
 		      <a href="/blog/History/">
                           history
                       </a>
 
-                
-
-	    
+        
 
   	
 
-	    
-
-                
+        
 
 		      <a href="/blog/Topics/">
                           topics
                       </a>
 
-                
-
-	    
+        
 
   	
 
-	    
-
-                
+        
 
 		      <a href="/blog/Links/">
                           links
                       </a>
 
-                
-
-	    
+        
 
   	
 
-	    
-
-                
+        
 
 		    <a href="/blog/Comments/" class="active">
                         comments
@@ -123,21 +109,15 @@
 		    
                 
 
-	    
-
   	
 
-	    
-
-                
+        
 
 		      <a href="/blog/About/">
                           about
                       </a>
 
-                
-
-	    
+        
 
   	
 
@@ -154,8 +134,6 @@
 
         <h1 id="留言和评论">留言和评论</h1>
 
-<hr class="slender" />
-
 <p>本博客是一个静态网站，没有可以处理留言和评论的服务端。作为替代，本博客使用 GitHub 仓库的 issue 区作为评论区。</p>
 
 <p>对于博客的一般性问题，请在 <a href="https://github.com/MountAye/blog/milestone/1">General Comments</a> 区提交 issue。</p>
@@ -166,11 +144,15 @@
 
 <script type="text/javascript" src="/blog/assets/js/date.js"></script>
 
-<section id="commentsGithub">
+<section id="comment">
     <h2>读者评论</h2>
     <!-- JavaScript objects are not JSON :-) -->
     <script type="text/javascript">
         // Global Variables
+        var html; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var jsComment; // LIST of OBJECT
+        var iIssue = 0; // INTEGER
         var milestoneID = 3;
         var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
         var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
@@ -180,7 +162,7 @@
                             "hooray": "gift",
                             "confused": "frown-o",
                             "heart": "heart-o"};
-        // Helping Functions 
+        // Functions 
         function getReactionsStr(json){
             var reactions="";
             for (iReact in reaction_fa){
@@ -190,63 +172,91 @@
             };
             return reactions
         };
-        function printAll(json){ 
-            var htmlString = "<div class='ghReaderZone'><hr class='slender'>";
+        function printJson(){
+            html = "<div class='ghReaderZone'><hr class='slender'>";
             for (var i = 0; i < json.length; i++){
-                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", options);
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
                 var issueReact = "";
                 if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
                 // Other variables easy to get from the json are hard-coded inside the string manipulation.
-                htmlString += "<div class='ghIssue'><div class='ghIssueLogo'><a href='" + json[i].user.url + "'><img src='" + json[i].user.avatar_url + "' width='48' class='ghIssueObject'></a></div><div class='ghIssueBox'><h4 class='ghIssueHeading'><a class='ghIssueUser' href="+json[i].user.url+"> "+ json[i].user.login +" </a><small><a class='ghIssueDate' href=" + json[i].html_url + ">" + issueDate + "</a></small>&nbsp;"+ issueReact + "<span class='ghIssueTitle'>" + json[i].title + "</span></h4><div class='ghIssueBody markdown-body'>" + json[i].body + "</div></div></div>";
-                for (var j = 0; j < json[i].commentsMountaye.length; j++){
-                    var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", options);
-                    var commentReact = "";
-                    if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
-                    htmlString += "<div class='ghComment'><div class='ghCommentLogo'><a href='" + json[i].commentsMountaye[j].user.url + "'><img src='" + json[i].commentsMountaye[j].user.url + "' width='48' class='ghIssueObject'></a></div><div class='ghCommentBox'><h4 class='ghCommentHeading'><a class='ghCommentUser' href='" + json[i].commentsMountaye[j].user.url + "'>" + json[i].commentsMountaye[j].user.login + "</a><small>&nbsp; 留言於 &nbsp;<a class='ghCommentDate' href=' json[i].commentsMountaye[j].user.url '>" + commentDate + "</a></small>&nbsp;"+ commentReact + "</h4><div class='commentGithubFloorsBody markdown-body'>" + json[i].commentsMountaye[j].body + "</div></div></div>";
+                html += "<div class='ghIssue'><div class='ghIssueLogo'><a href='" + json[i].user.url + "'><img src='" + json[i].user.avatar_url + "' width='48' class='ghIssueObject'></a></div><div class='ghIssueBox'><h4 class='ghIssueHeading'><a class='ghIssueUser' href="+json[i].user.url+"> "+ json[i].user.login +" </a><small><a class='ghIssueDate' href=" + json[i].html_url + ">" + issueDate + "</a></small>&nbsp;"+ issueReact + "<span class='ghIssueTitle'>" + json[i].title + "</span></h4><div class='ghIssueBody markdown-body'>" + issueBody + "</div></div></div>";
+                // if ( json[i].hasOwnProperty('commentsMountaye') ){alert("yes")}else{alert("no")};
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += "<div class='ghComment'><div class='ghCommentLogo'><a href='" + json[i].commentsMountaye[j].user.url + "'><img src='" + json[i].commentsMountaye[j].user.avatar_url + "' width='48' class='ghIssueObject'></a></div><div class='ghCommentBox'><h4 class='ghCommentHeading'><a class='ghCommentUser' href='" + json[i].commentsMountaye[j].user.url + "'>" + json[i].commentsMountaye[j].user.login + "</a><small>&nbsp; 留言於 &nbsp;<a class='ghCommentDate' href=' json[i].commentsMountaye[j].user.url '>" + commentDate + "</a></small>&nbsp;"+ commentReact + "</h4><div class='commentGithubFloorsBody markdown-body'>" + commentBody + "</div></div></div>";
+                    };
                 };
             };
-            htmlString += "</div>";
-            return htmlString
-        };
-        // Main Function
-        function loadComments(){
-            var jsonIssues;
-            $.ajax(apiIssues,
-                  { type: "GET",
-                    // data:     { "milestone": milestoneID },
-                    headers:  {Accept:"application/vnd.github.v3.html+json"},
-                    dataType: "json",
-                    success:  function(msg){ jsonIssues = msg; }, 
-                    error:    function(){alert("获取留言失败")} } )
-            alert(jsonIssues);
-            if (jsonIssues==undefined) { $("#githubissue_comments").append("<p>目前尚无评论。</p>"); return false };
-            for (var j=0; j>jsonIssues.length; j++){
-                if (jsonIssues[j].comments > 0){
-                    var jsonComments;
-                    $.ajax( jsonIssues.comments_url,
-                            { type:"GET",
-                              headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
-                              dataType: "json",
-                              success:  function(msg){jsonComments = msg;} });
-                    jsonIssues[j].commentsMountaye = jsonComments;    
-                };
-            };
-            var html = printAll(jsonIssues);
-            $("#githubissue_comments").append(html);
+            html += "</div>";
+            $("#commentContent").append(html);
             $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
-                                                                    $(".email-hidden-reply", this.parent).toggle(); } ); 
-            return true
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
         };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if (json==undefined){
+                html = "<p>目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html = "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("printComments"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
         // Real Working Code :-) 
-        document.addEventListener("DOMContentLoaded", loadComments)
-        
+        document.addEventListener("DOMContentLoaded", loadIssues);
     </script>
     <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
     
-    <div id="commentHeader">
-        <p>GitHub 用户可前往<a href="https://github.com/MountAye/blog/milestone/3">Issue 页面</a>进行评论。</p>
+    <div id="commentIntro">
+        <p>GitHub 用户可前往<a href="https://github.com/MountAye/blog/milestone/3">本文对应的 Milestone 页面</a>进行评论。</p>
     </div>
-    <div id="githubissue_comments"></div>
+    <div id="commentContent"></div>
 </section>
 <div id="test"></div>
 

@@ -6,10 +6,6 @@
 /*
 /* The README.md will show you how to set up your site along with other goodies
 /*****************************************************************************/
-blockquote {
-  background-color: #fffff8;
-  width: 65%; }
-
 @font-face {
   font-family: ETbook;
   src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
@@ -177,6 +173,56 @@ blockquote {
   .highlight .il {
     color: #099; }
 
+.important, article p a {
+  color: #a00000; }
+
+article p {
+  text-indent: 2em; }
+
+blockquote, .highlighter-rouge {
+  width: 65%; }
+
+blockquote {
+  background-color: #fffff8;
+  border-left: solid thick #1560bd; }
+
+.highlighter-rouge {
+  background-color: #aaaaaa; }
+
+#commentContent, .ghIssueBody, .ghCommentBody {
+  margin-left: 2.5em; }
+
+#commentContent h1 {
+  font-size: 1.5em; }
+
+#commentContent h2 {
+  font-size: 1.2em; }
+
+#commentContent h3 {
+  font-size: 1em; }
+
+#commentContent p {
+  font-size: 0.9em; }
+
+#commentContent ul {
+  font-size: 0.9em; }
+
+#commentContent ol {
+  font-size: 0.9em; }
+
+#commentContent table {
+  font-size: 0.9em;
+  padding-left: 2em; }
+
+#commentContent h1::before {
+  content: "\00023"; }
+
+#commentContent h2::before {
+  content: "\00023\00023"; }
+
+#commentContent h3::before {
+  content: "\00023\00023\00023"; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -217,10 +263,10 @@ p > a {
   text-decoration: none; }
 
 body {
-  width: 87.5%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 12.5%;
+  padding-left: 10%;
   font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   background-color: #f8f8f8;
   color: #111;
@@ -358,17 +404,20 @@ th, td {
 /* Basic Layout stuff --*/
 article {
   position: relative;
-  padding: 1 rem 0rem 2.5rem 0rem; }
+  padding: 1rem 0rem 2.5rem 0rem; }
 
 section {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
+ul {
+  list-style-type: circle; }
+
 ul, ol {
   width: 100%;
   -webkit-padding-start: 0%;
   -webkit-padding-end: 0%;
-  list-style-type: none; }
+  list-style-position: inside; }
 
 figure, figure img.maincolumn {
   max-width: 55%;
