@@ -1,0 +1,60 @@
+<!-- NEW -->
+
+
+
+<!-- Formatted -->
+<!-- Before All Loops -->
+<div class='ghReaderZone'>
+    <hr class='slender'>
+<!-- Outer Loops for Issues -->
+"<div class='ghIssue'>
+    <div class='ghIssueLogo'>
+        <a href='" + json[i].user.url + "'>
+            <img src='" + json[i].user.avatar_url + "' width='48' class='ghIssueObject'>
+        </a>
+    </div>
+    <div class='ghIssueBox'>
+        <h4 class='ghIssueHeading'>
+            <a class='ghIssueUser' href="+json[i].user.url+"> "+ json[i].user.login +" </a>
+            <small>
+                <a class='ghIssueDate' href=" + json[i].html_url + ">" + issueDate + "</a>
+            </small>
+            &nbsp;"+ issueReact + 
+            "<span class='ghIssueTitle'>" + json[i].title + "</span>
+        </h4>
+        <div class='ghIssueBody markdown-body'>" + json[i].body + "</div>
+    </div>
+</div>"    
+
+<!-- Inner Loops for Comments -->
+"<div class='ghComment'>
+    <div class='ghCommentLogo'>
+        <a href='" + json[i].commentsMountaye[j].user.url + "'>
+            <img src='" + json[i].commentsMountaye[j].user.url + "' width='48' class='ghIssueObject'>
+        </a>
+    </div>
+    <div class='ghCommentBox'>
+        <h4 class='ghCommentHeading'>
+            <a class='ghCommentUser' href='" + json[i].commentsMountaye[j].user.url + "'>" + json[i].commentsMountaye[j].user.login + "</a>
+            <small>
+                &nbsp; 留言於 &nbsp;
+                <a class='ghCommentDate' href=' json[i].commentsMountaye[j].user.url '>" + commentDate + "</a>
+            </small>
+            &nbsp;"+ commentReact + "
+        </h4>
+        <div class='commentGithubFloorsBody markdown-body'>
+            " + json[i].commentsMountaye[j].body + "
+        </div>
+    </div>
+</div>"
+
+
+<!-- Strings -->
+<!-- Before All Loops -->
+"<div class='ghReaderZone'><hr class='slender'>"
+<!-- Outer Loops for Issues -->
+"<div class='ghIssue'><div class='ghIssueLogo'><a href='" + json[i].user.url + "'><img src='" + json[i].user.avatar_url + "' width='48' class='ghIssueObject'></a></div><div class='ghIssueBox'><h4 class='ghIssueHeading'><a class='ghIssueUser' href="+json[i].user.url+"> "+ json[i].user.login +" </a><small><a class='ghIssueDate' href=" + json[i].html_url + ">" + issueDate + "</a></small>&nbsp;"+ issueReact + "<span class='ghIssueTitle'>" + json[i].title + "</span></h4><div class='ghIssueBody markdown-body'>" + json[i].body + "</div></div></div>"    
+<!-- Inner Loops for Comments -->
+"<div class='ghComment'><div class='ghCommentLogo'><a href='" + json[i].commentsMountaye[j].user.url + "'><img src='" + json[i].commentsMountaye[j].user.url + "' width='48' class='ghIssueObject'></a></div><div class='ghCommentBox'><h4 class='ghCommentHeading'><a class='ghCommentUser' href='" + json[i].commentsMountaye[j].user.url + "'>" + json[i].commentsMountaye[j].user.login + "</a><small>&nbsp; 留言於 &nbsp;<a class='ghCommentDate' href=' json[i].commentsMountaye[j].user.url '>" + commentDate + "</a></small>&nbsp;"+ commentReact + "</h4><div class='commentGithubFloorsBody markdown-body'>" + json[i].commentsMountaye[j].body + "</div></div></div>"
+<!-- After All Loops -->
+"</div>"

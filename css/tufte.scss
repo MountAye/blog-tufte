@@ -10,17 +10,42 @@ nav_exclude: true
 /*
 /* The README.md will show you how to set up your site along with other goodies
 /*****************************************************************************/
-// MountAye's addition:
-blockquote {
-    background-color: #fffff8;
-    width:65%;
-}
 
 // Imports to create final
 
 @import "../_sass/fonts";
 @import "../_sass/settings";
 @import "../_sass/syntax-highlighting";
+
+// START MountAye's addition:
+.important, article p a {color: $important-color;} // !important
+
+article p {text-indent: 2em;}
+
+blockquote, .highlighter-rouge { width:65%; }
+blockquote {
+  background-color: #fffff8;
+  border-left: solid thick $contrast-color;
+}
+.highlighter-rouge {
+  background-color: #aaaaaa;
+}
+
+#commentContent,.ghIssueBody,.ghCommentBody {margin-left: 2.5em;}
+
+#commentContent h1 {font-size:1.5em;}
+#commentContent h2 {font-size:1.2em;}
+#commentContent h3 {font-size:1em;}
+#commentContent p  {font-size:0.9em;}
+#commentContent ul {font-size:0.9em;}
+#commentContent ol {font-size: 0.9em;}
+#commentContent table {font-size:0.9em;
+                       padding-left: 2em;}
+#commentContent h1::before {content:"\00023";}
+#commentContent h2::before {content:"\00023\00023";}
+#commentContent h3::before {content:"\00023\00023\00023";}
+
+// END MountAye's addition
 
 // Global Resets
 
@@ -81,10 +106,10 @@ p > a { @if $link-style == underline
     }
   }
 
-body { width: 87.5%;
+body { width: 90%;
        margin-left: auto;
        margin-right: auto;
-       padding-left: 12.5%;
+       padding-left: 10%;
        font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
        background-color: $bg-color;
        color: $text-color;
@@ -206,18 +231,20 @@ th, td{ font-size: 1.2rem;
 /* Basic Layout stuff --*/
 
 article { position: relative;
-          padding: 1
-
-          rem 0rem 2.5rem 0rem; } // reduced top and bottom padding by 50%
+          padding: 1rem 0rem 2.5rem 0rem; } // reduced top and bottom padding by 50%
 
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
+ul {
+  list-style-type: circle;
+}
 
 ul,ol { width: 100%;
      -webkit-padding-start: 0%;
      -webkit-padding-end: 0%;
-     list-style-type: none; }
+     list-style-position: inside;
+     } //list-style-type: none; 
 
 //li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 

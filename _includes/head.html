@@ -16,13 +16,17 @@
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?..."></script>
   {% endif %}
 
-  <link rel="stylesheet" type="text/css" href="{{ "/css/tufte.css" | prepend: site.baseurl }}">
-  <!-- <link rel="stylesheet" type="text/css" href="{{ "/css/print.css" | prepend: site.baseurl }}" media="print"> -->
+  <link rel="stylesheet" type="text/css" href="{{ '/css/tufte.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/css/print.css' | prepend: site.baseurl }}" media="print">
+  {% if page.milestoneID %}
+    <link rel="stylesheet" type="text/css" href="{{ '/css/github-markdown.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/css/font-awesome.css' | prepend: site.baseurl }}">
+  {% endif %}
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
 
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl }}" />
 
-  <link rel="shortcut icon" href="{{"/assets/img/favicon.ico" | prepend: site.baseurl }}" >
+  <link rel="shortcut icon" href="{{'/assets/img/favicon.ico' | prepend: site.baseurl }}" >
 
 </head>

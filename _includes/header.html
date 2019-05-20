@@ -21,9 +21,7 @@
 
 	{% for node in site.data.navigation %}
 
-	    {% unless node.nav_exclude %}
-
-                {% if page.url == node.url %}
+        {% if page.url == node.url %}
 
 		    <a href="{{node.url | prepend: site.baseurl}}" class="active">
                         {{node.title}}
@@ -35,9 +33,7 @@
                           {{node.title}}
                       </a>
 
-                {% endif %}
-
-	    {% endunless %}
+        {% endif %}
 
   	{% endfor %}
 

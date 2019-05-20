@@ -6,8 +6,6 @@ milestoneID: 3
 
 # 留言和评论
 
-<hr class="slender">
-
 本博客是一个静态网站，没有可以处理留言和评论的服务端。作为替代，本博客使用 GitHub 仓库的 issue 区作为评论区。
 
 对于博客的一般性问题，请在 [General Comments](https://github.com/MountAye/blog/milestone/1) 区提交 issue。
