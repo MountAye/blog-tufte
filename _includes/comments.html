@@ -6,11 +6,10 @@
     <!-- JavaScript objects are not JSON :-) -->
     <script type="text/javascript">
         // Global Variables
+        var milestoneID = {{ page.milestoneID }};
         var html = "<div class='ghReaderZone'><hr class='slender'>"; // STRING, get changed by side effects of functions
         var json; // OBJECT, get changed by side effects
-        var jsComment; // LIST of OBJECT
         var iIssue = 0; // INTEGER
-        var milestoneID = {{ page.milestoneID }};
         var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
         var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
         var reaction_fa = { "+1": "thumbs-o-up",
@@ -30,22 +29,32 @@
             return reactions
         };
         function printJson(){
-            for (var i = 0; i < json.length; i++){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueTitle = json[i].title;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
                 var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
                 var issueBody = json[i].body_html || json[i].body;
                 var issueReact = "";
                 if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
-                // Other variables easy to get from the json are hard-coded inside the string manipulation.
-                html += "<div class='ghIssue'><div class='ghIssueLogo'><a href='" + json[i].user.url + "'><img src='" + json[i].user.avatar_url + "' width='48' class='ghIssueObject'></a></div><div class='ghIssueBox'><h4 class='ghIssueHeading'><a class='ghIssueUser' href="+json[i].user.url+"> "+ json[i].user.login +" </a><small><a class='ghIssueDate' href=" + json[i].html_url + ">" + issueDate + "</a></small>&nbsp;"+ issueReact + "<span class='ghIssueTitle'>" + json[i].title + "</span></h4><div class='ghIssueBody markdown-body'>" + issueBody + "</div></div></div>";
+                html += '<div class="ghIssue"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghBoth"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="48"></a></div><div class="ghText"><div class="ghIssueAuthorInfo"><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a><small class="ghIssueDate">' + issueDate + '</small></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote>' + issueReact + '<hr class="slender"></div></div>';
                 if ( json[i].hasOwnProperty("commentsMountaye") ){
-                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                    for (var j = json[i].commentsMountaye.length - 1; j >= 0 ; j--){
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
                         var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
                         var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
                         var commentReact = ""; 
                         if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
-                        html += "<div class='ghComment'><div class='ghCommentLogo'><a href='" + json[i].commentsMountaye[j].user.url + "'><img src='" + json[i].commentsMountaye[j].user.avatar_url + "' width='48' class='ghIssueObject'></a></div><div class='ghCommentBox'><h4 class='ghCommentHeading'><a class='ghCommentUser' href='" + json[i].commentsMountaye[j].user.url + "'>" + json[i].commentsMountaye[j].user.login + "</a><small>&nbsp; 留言於 &nbsp;<a class='ghCommentDate' href=' json[i].commentsMountaye[j].user.url '>" + commentDate + "</a></small>&nbsp;"+ commentReact + "</h4><div class='commentGithubFloorsBody markdown-body'>" + commentBody + "</div></div></div>";
+                        html += '<div class="ghComment"><div class="ghBoth"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="48"></a></div><div class="ghText"><div class="ghCommentAuthorInfo"><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a><small class="ghCommentDate">' + commentDate + '</small></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote>' + commentReact + '</div></div>';
+                        if (j!=0){
+                            html += '<hr class="slender"></div>';
+                        };
                     };
                 };
+                html += '<hr class="slender"></div>';
             };
             html += "</div>";
             $("#commentContent").append(html);

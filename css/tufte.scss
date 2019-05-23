@@ -18,7 +18,7 @@ nav_exclude: true
 @import "../_sass/syntax-highlighting";
 
 // START MountAye's addition:
-.important, article p a {color: $important-color;} // !important
+.important {color: $important-color;} // !important
 
 article p {text-indent: 2em;}
 
@@ -31,19 +31,27 @@ blockquote {
   background-color: #aaaaaa;
 }
 
-#commentContent,.ghIssueBody,.ghCommentBody {margin-left: 2.5em;}
 
-#commentContent h1 {font-size:1.5em;}
-#commentContent h2 {font-size:1.2em;}
-#commentContent h3 {font-size:1em;}
-#commentContent p  {font-size:0.9em;}
-#commentContent ul {font-size:0.9em;}
-#commentContent ol {font-size: 0.9em;}
-#commentContent table {font-size:0.9em;
+.ghBoth { display: table;
+          width: 100%; }
+.ghText { display: table-cell;
+          vertical-align: top;}
+.ghLogo { display: table-cell;
+          vertical-align: top;}
+.ghBody { width: inherit; }
+
+.ghBody {padding-left:1.5em;}
+.ghBody h1 {font-size:1.5em;}
+.ghBody h2 {font-size:1.2em;}
+.ghBody h3 {font-size:1em;}
+.ghBody p  {font-size:0.9em;}
+.ghBody ul {font-size:0.9em;}
+.ghBody ol {font-size: 0.9em;}
+.ghBody table {font-size:0.9em;
                        padding-left: 2em;}
-#commentContent h1::before {content:"\00023";}
-#commentContent h2::before {content:"\00023\00023";}
-#commentContent h3::before {content:"\00023\00023\00023";}
+.ghBody h1::before {content:"\00023\00a0";}
+.ghBody h2::before {content:"\00023\00023\00a0";}
+.ghBody h3::before {content:"\00023\00023\00023\00a0";}
 
 // END MountAye's addition
 
