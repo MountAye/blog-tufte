@@ -173,11 +173,33 @@
   .highlight .il {
     color: #099; }
 
-.important, article p a {
+* {
+  margin: 0;
+  padding: 0; }
+
+.postContent .important, .postContent strong {
   color: #a00000; }
 
-article p {
+.postContent p {
   text-indent: 2em; }
+
+.postContent h1,
+.postContent h2,
+.postContent h3 {
+  color: #1560bd; }
+
+.postContent h1::before {
+  content: "\00023\00a0"; }
+
+.postContent h2::before {
+  content: "\00023\00023\00a0"; }
+
+.postContent h3::before {
+  content: "\00023\00023\00023\00a0"; }
+
+.postContent blockquote p {
+  text-indent: 0em;
+  margin: 0.5em 0em; }
 
 blockquote, .highlighter-rouge {
   width: 65%; }
@@ -189,43 +211,75 @@ blockquote {
 .highlighter-rouge {
   background-color: #aaaaaa; }
 
-#commentContent, .ghIssueBody, .ghCommentBody {
-  margin-left: 2.5em; }
+.ghComment {
+  margin-left: 65px; }
 
-#commentContent h1 {
+.ghIssueTitle {
+  margin-bottom: 0.2em; }
+
+.ghIssueTitle::before {
+  content: "\00023\00a0"; }
+
+.ghHeader {
+  display: table;
+  width: 100%; }
+
+.ghIssue .ghHeader {
+  border-left: solid thick #1560bd; }
+
+.ghComment .ghHeader {
+  border-left: solid thick #a00000; }
+
+.ghLogo {
+  display: table-cell;
+  vertical-align: top;
+  width: 60px;
+  padding-left: 5px; }
+
+.ghAuthor {
+  display: table-cell;
+  vertical-align: top; }
+
+.ghAuthor p {
+  margin: 0;
+  text-indent: 0; }
+
+.ghBody {
+  width: inherit;
+  margin-left: 65px;
+  padding-left: 1em;
+  border-left: solid thick gray; }
+
+.ghBody h1 {
   font-size: 1.5em; }
 
-#commentContent h2 {
+.ghBody h2 {
   font-size: 1.2em; }
 
-#commentContent h3 {
+.ghBody h3 {
   font-size: 1em; }
 
-#commentContent p {
-  font-size: 0.9em; }
+.ghBody p {
+  font-size: 1em; }
 
-#commentContent ul {
-  font-size: 0.9em; }
+.ghBody ul {
+  font-size: 1em; }
 
-#commentContent ol {
-  font-size: 0.9em; }
+.ghBody ol {
+  font-size: 1em; }
 
-#commentContent table {
-  font-size: 0.9em;
+.ghBody table {
+  font-size: 1em;
   padding-left: 2em; }
 
-#commentContent h1::before {
-  content: "\00023"; }
+.ghBody h1::before {
+  content: "\00023\00a0"; }
 
-#commentContent h2::before {
-  content: "\00023\00023"; }
+.ghBody h2::before {
+  content: "\00023\00023\00a0"; }
 
-#commentContent h3::before {
-  content: "\00023\00023\00023"; }
-
-* {
-  margin: 0;
-  padding: 0; }
+.ghBody h3::before {
+  content: "\00023\00023\00023\00a0"; }
 
 /* clearfix hack after Cederholm (group class name) */
 .group:after {
@@ -309,13 +363,13 @@ p, ol, ul {
 
 p, li {
   line-height: 2rem;
-  margin-top: 1.4rem;
+  margin-top: 1.1rem;
   padding-right: 2rem;
   vertical-align: baseline; }
 
 blockquote p {
   font-size: 1.1rem;
-  line-height: 1.78181818;
+  line-height: 1.78181818rem;
   margin-top: 1.78181818rem;
   margin-bottom: 1.78181818rem;
   width: 95%;

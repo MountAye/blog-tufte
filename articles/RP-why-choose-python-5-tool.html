@@ -138,22 +138,25 @@
         <p class="subtitle">
             February 7, 2019
         </p>
-    <h3 id="文章目录">文章目录</h3>
+    <div class="postContent">
+        <blockquote>
+  <p><strong>文章目录</strong></p>
 
-<ul>
-  <li>短小精悍</li>
-  <li>功能强大之1——跟非常多的语言整合</li>
-  <li>功能强大之2——既可以跨平台，又可以跟操作系统深度整合</li>
-  <li>功能强大之3——具有很丰富的第三方模块</li>
-</ul>
+  <ul>
+    <li>短小精悍</li>
+    <li>功能强大之1——跟非常多的语言整合</li>
+    <li>功能强大之2——既可以跨平台，又可以跟操作系统深度整合</li>
+    <li>功能强大之3——具有很丰富的第三方模块</li>
+  </ul>
+</blockquote>
 
 <p>本系列几乎变成年度系列了——上一篇帖子是去年元宵节发的。这几天正值春节假期，赶紧抽空补上本系列新的一篇，免得大伙儿以为本系列“烂尾”了。</p>
 
 <p>“瑞士军刀”，大伙儿应该很熟悉，俺就不解释了。拿“瑞士军刀”来比喻 Python 就是想说明：Python 不但短小精悍，而且功能强大。今天就来介绍一下 Python 的这两个特点（尤其是后者）。</p>
 
-<h2 id="短小精悍">短小精悍</h2>
+<h1 id="短小精悍">短小精悍</h1>
 
-<h3 id="轻量级的的代码">轻量级的的代码</h3>
+<h2 id="轻量级的的代码">轻量级的的代码</h2>
 
 <p>要吹嘘 Python 的轻量级，首先要吹嘘的，自然是它简洁的代码。为了让大伙儿有个初步的印象，举几个例子。</p>
 
@@ -187,15 +190,15 @@
 
 </code></pre></div></div>
 
-<h3 id="轻量级的安装环境">轻量级的安装环境</h3>
+<h2 id="轻量级的安装环境">轻量级的安装环境</h2>
 
 <p>比如 Python 的安装包只有十几兆，而 Java 的 JDK 安装包动辄接近100兆。</p>
 
-<h3 id="轻量级的运行环境">轻量级的运行环境</h3>
+<h2 id="轻量级的运行环境">轻量级的运行环境</h2>
 
 <p>同样是运行一个“Hello World”，用 Python 写的进程，占用的内存会更小（相比大多数其它编程语言）。而且 Python 的运行环境（Python 虚拟机）可以很方便地嵌入到 C/C++ 程序中，只需额外带一个动态库即可。</p>
 
-<h2 id="功能强大之1跟非常多的语言整合">功能强大之1——跟非常多的语言整合</h2>
+<h1 id="功能强大之1跟非常多的语言整合">功能强大之1——跟非常多的语言整合</h1>
 
 <p>很多程序员喜欢“在一棵树上吊死”——始终只用一种编程语言。俺非常反对这种倾向。要想成为一个优秀的程序员，有必要掌握【不同风格/不同范式】的编程语言。编程语言多样化的好处在于，你可以利用不同语言的特色，以取长补短。</p>
 
@@ -203,7 +206,7 @@
 
 <p>下面简单举几个例子：</p>
 
-<h3 id="跟-cc-整合">跟 C/C++ 整合</h3>
+<h2 id="跟-cc-整合">跟 C/C++ 整合</h2>
 
 <p>咱们常用的 Python 运行环境也称为 CPython，是用 C 语言写的。所以 Python 天生就具有跟 C/C++ 整合的能力。而且这种整合是双向的——也就是说，既可以在 Python 模块调用 C/C++ 模块，也可以在 C/C++ 模块调用 Python 模块。</p>
 
@@ -237,19 +240,19 @@
 
 <p>地球上的操作系统，只要是有点名气的，内核都是 C 语言写的；除了操作系统内核，大部分操作系统的运行库也都是 C/C++ 编写的。所以，Python 跟 C/C++ 整合，可以带来第三个好处——跟操作系统的整合。关于这点，待会儿俺还会专门聊。</p>
 
-<h3 id="跟-jvmjava-整合">跟 JVM（Java） 整合</h3>
+<h2 id="跟-jvmjava-整合">跟 JVM（Java） 整合</h2>
 
 <p>通过 Jython 这个开源项目，Python 可以无缝整合到 JVM 环境中。如此一来，Python 能直接调用所有 JVM 标准库（比如 JDBC）和第三方库（比如 Lucene），还可以跟各种 JVM 语言（比如“Java、Scale、Groovy”等）进行互操作。</p>
 
-<h3 id="跟-dotnet-整合">跟 dotNet 整合</h3>
+<h2 id="跟-dotnet-整合">跟 dotNet 整合</h2>
 
 <p>通过 IronPython 这个开源项目，Python 可以无缝整合到 dotNet 环境中。如此一来，Python 能直接调用所有 dotNet 的标准库（比如 ADO.NET）和第三方库，还可以跟各种 dotNet 语言（比如“C#、F#”等）进行互操作。</p>
 
 <p>顺便说一下：Jython 跟 IronPython 貌似同一个作者，牛人啊！</p>
 
-<h2 id="功能强大之2既可以跨平台又可以跟操作系统深度整合">功能强大之2——既可以跨平台，又可以跟操作系统深度整合</h2>
+<h1 id="功能强大之2既可以跨平台又可以跟操作系统深度整合">功能强大之2——既可以跨平台，又可以跟操作系统深度整合</h1>
 
-<h3 id="python-语言如何体现跨平台性">Python 语言如何体现“跨平台性”？</h3>
+<h2 id="python-语言如何体现跨平台性">Python 语言如何体现“跨平台性”？</h2>
 
 <p>说到跨平台这个话题，俺给编程语言分一下类：</p>
 
@@ -273,7 +276,7 @@
 
 <p>显然俺喜欢第三类编程语言，因为这类语言给了程序猿自由。</p>
 
-<h3 id="python-语言如何与操作系统深度整合">Python 语言如何“与操作系统深度整合”？</h3>
+<h2 id="python-语言如何与操作系统深度整合">Python 语言如何“与操作系统深度整合”？</h2>
 
 <p>Python 的跨平台特性，懂 Python 的同学估计都晓得了。所以俺单独说一下 Python 如何跟操作系统深度整合。为了照顾到大多数人，俺拿 Windows 来说事儿。</p>
 
@@ -289,7 +292,7 @@
 
 <p>……</p>
 
-<h2 id="功能强大之3具有很丰富的第三方模块">功能强大之3——具有很丰富的第三方模块</h2>
+<h1 id="功能强大之3具有很丰富的第三方模块">功能强大之3——具有很丰富的第三方模块</h1>
 
 <p>最后一个方面，也是最重要的一个方面，就是 Python 社区具有非常非常丰富的资源（第三方库），而且几乎都是开源的。形形色色的编程领域几乎都可以看到 Python 的身影。</p>
 
@@ -304,13 +307,15 @@
 <p><a href="/blog/articles/RP-why-choose-python-0-overview">回到本系列的目录</a></p>
 
 <blockquote>
-  <p><strong>版权声明</strong><br />
-本博客<label for="reference" class="margin-toggle sidenote-number"></label><input type="checkbox" id="reference" class="margin-toggle" /><span class="sidenote">指编程随想的博客 </span>所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：<br />
-<a href="https://program-think.blogspot.com/2013/02/why-choose-python-5-tools.html">https://program-think.blogspot.com/2013/02/why-choose-python-5-tools.html</a></p>
+  <p><strong>版权声明</strong></p>
+
+  <p>本博客<label for="reference" class="margin-toggle sidenote-number"></label><input type="checkbox" id="reference" class="margin-toggle" /><span class="sidenote">指编程随想的博客 </span>所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：<br /></p>
+
+  <p><a href="https://program-think.blogspot.com/2013/02/why-choose-python-5-tools.html">https://program-think.blogspot.com/2013/02/why-choose-python-5-tools.html</a></p>
 </blockquote>
 
+    </div>
     <hr class="slender">
-    
     
 <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="/blog/assets/js/date.js"></script>
@@ -319,11 +324,10 @@
     <!-- JavaScript objects are not JSON :-) -->
     <script type="text/javascript">
         // Global Variables
-        var html = "<div class='ghReaderZone'><hr class='slender'>"; // STRING, get changed by side effects of functions
-        var json; // OBJECT, get changed by side effects
-        var jsComment; // LIST of OBJECT
-        var iIssue = 0; // INTEGER
         var milestoneID = 2;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
         var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
         var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
         var reaction_fa = { "+1": "thumbs-o-up",
@@ -340,25 +344,32 @@
                     reactions += '<i class="fa fa-'+ reaction_fa[reactionkey]+'"></i>' + reactions[reactionkey] + "&nbsp;";
                 };
             };
-            return reactions
+            return reactions // seems wrong
         };
         function printJson(){
-            for (var i = 0; i < json.length; i++){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueTitle = json[i].title;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
                 var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
                 var issueBody = json[i].body_html || json[i].body;
                 var issueReact = "";
                 if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
-                // Other variables easy to get from the json are hard-coded inside the string manipulation.
-                html += "<div class='ghIssue'><div class='ghIssueLogo'><a href='" + json[i].user.url + "'><img src='" + json[i].user.avatar_url + "' width='48' class='ghIssueObject'></a></div><div class='ghIssueBox'><h4 class='ghIssueHeading'><a class='ghIssueUser' href="+json[i].user.url+"> "+ json[i].user.login +" </a><small><a class='ghIssueDate' href=" + json[i].html_url + ">" + issueDate + "</a></small>&nbsp;"+ issueReact + "<span class='ghIssueTitle'>" + json[i].title + "</span></h4><div class='ghIssueBody markdown-body'>" + issueBody + "</div></div></div>";
+                html += '<div class="ghIssue"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><a></a></div>';
                 if ( json[i].hasOwnProperty("commentsMountaye") ){
-                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                    for (var j = json[i].commentsMountaye.length - 1; j >= 0 ; j--){
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
                         var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
                         var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
                         var commentReact = ""; 
                         if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
-                        html += "<div class='ghComment'><div class='ghCommentLogo'><a href='" + json[i].commentsMountaye[j].user.url + "'><img src='" + json[i].commentsMountaye[j].user.avatar_url + "' width='48' class='ghIssueObject'></a></div><div class='ghCommentBox'><h4 class='ghCommentHeading'><a class='ghCommentUser' href='" + json[i].commentsMountaye[j].user.url + "'>" + json[i].commentsMountaye[j].user.login + "</a><small>&nbsp; 留言於 &nbsp;<a class='ghCommentDate' href=' json[i].commentsMountaye[j].user.url '>" + commentDate + "</a></small>&nbsp;"+ commentReact + "</h4><div class='commentGithubFloorsBody markdown-body'>" + commentBody + "</div></div></div>";
+                        html += '<div class="ghComment"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><a></a></div></div>';
                     };
                 };
+                html += '<hr class="slender"></div>';
             };
             html += "</div>";
             $("#commentContent").append(html);
@@ -422,11 +433,10 @@
     <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
     
     <div id="commentIntro">
-        <p>GitHub 用户可前往<a href="https://github.com/MountAye/blog/milestone/2">本文对应的 Milestone 页面</a>进行评论。</p>
+        <p>GitHub 用户可前往本文对应的 Milestone 页面<a href="https://github.com/MountAye/blog/milestone/2">进行评论</a>。</p>
     </div>
     <div id="commentContent"></div>
 </section>
-
 
 </article>
 
