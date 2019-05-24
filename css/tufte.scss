@@ -17,10 +17,23 @@ nav_exclude: true
 @import "../_sass/settings";
 @import "../_sass/syntax-highlighting";
 
-// START MountAye's addition:
-.important {color: $important-color;} // !important
 
-article p {text-indent: 2em;}
+// Global Resets
+
+* { margin: 0; padding: 0; }
+
+// START MountAye's addition:
+
+.postContent .important, .postContent strong {color: $important-color;} // !important
+.postContent p {text-indent: 2em;}
+.postContent h1,
+.postContent h2,
+.postContent h3 { color: $contrast-color; }
+.postContent h1::before { content:"\00023\00a0"; }
+.postContent h2::before { content:"\00023\00023\00a0"; }
+.postContent h3::before { content:"\00023\00023\00023\00a0"; }
+.postContent blockquote p { text-indent: 0em;
+                            margin: 0.5em 0em; }
 
 blockquote, .highlighter-rouge { width:65%; }
 blockquote {
@@ -31,33 +44,41 @@ blockquote {
   background-color: #aaaaaa;
 }
 
-
-.ghBoth { display: table;
-          width: 100%; }
-.ghText { display: table-cell;
-          vertical-align: top;}
+.ghComment { margin-left: 65px;
+              }
+.ghIssueTitle { margin-bottom: 0.2em; }
+.ghIssueTitle::before { content:"\00023\00a0"; }
+.ghHeader { display: table;
+            width: 100%; }
+.ghIssue .ghHeader { border-left: solid thick $contrast-color; }
+.ghComment .ghHeader { border-left: solid thick $important-color; }
 .ghLogo { display: table-cell;
-          vertical-align: top;}
-.ghBody { width: inherit; }
+          vertical-align: top;
+          width: 60px;
+          padding-left: 5px;}
+// .ghLogo img { border: solid thin gray; }
+.ghAuthor { display: table-cell;
+            vertical-align: top;}
+.ghAuthor p { margin:0;
+              text-indent: 0; }
 
-.ghBody {padding-left:1.5em;}
+.ghBody { width: inherit;
+          margin-left: 65px;
+          padding-left:1em; 
+          border-left: solid thick gray;}
 .ghBody h1 {font-size:1.5em;}
 .ghBody h2 {font-size:1.2em;}
 .ghBody h3 {font-size:1em;}
-.ghBody p  {font-size:0.9em;}
-.ghBody ul {font-size:0.9em;}
-.ghBody ol {font-size: 0.9em;}
-.ghBody table {font-size:0.9em;
+.ghBody p  {font-size:1em;}
+.ghBody ul {font-size:1em;}
+.ghBody ol {font-size: 1em;}
+.ghBody table {font-size:1em;
                        padding-left: 2em;}
 .ghBody h1::before {content:"\00023\00a0";}
 .ghBody h2::before {content:"\00023\00023\00a0";}
 .ghBody h3::before {content:"\00023\00023\00023\00a0";}
 
 // END MountAye's addition
-
-// Global Resets
-
-* { margin: 0; padding: 0; }
 
 /* clearfix hack after Cederholm (group class name) */
 .group:after {
@@ -160,12 +181,12 @@ p .subtitle { font-style: italic;
 p, ol, ul { font-size: 1.4rem; }
 
 p, li { line-height: 2rem;
-        margin-top: 1.4rem;
+        margin-top: 1.1rem; //modified by MountAye
         padding-right: 2rem; //removed because,  why?
         vertical-align: baseline; }
 
 blockquote p {  font-size: 1.1rem;
-                line-height: 1.78181818;
+                line-height: 1.78181818rem;
                 margin-top: 1.78181818rem;
                 margin-bottom: 1.78181818rem;
                 width: 95%;  // modified by MountAye

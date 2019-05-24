@@ -9,10 +9,10 @@ layout: default
         <p class="subtitle">
             {{ page.date | date: "%B %-d, %Y" }}
         </p>
-    {{ content }}
+    <div class="postContent">
+        {{ content }}
+    </div>
     <hr class="slender">
-    
     {% include comments.html %}
-
 </article>
 

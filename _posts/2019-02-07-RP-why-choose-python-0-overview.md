@@ -25,6 +25,8 @@ milestoneID: 2
 6. （未完待续）
 
 
-> **版权声明**<br>
+> **版权声明**
+>
 > 本博客{% sidenote "blog" "指编程随想的博客" %}所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：<br>
+>
 > <a href="https://program-think.blogspot.com/2009/08/why-choose-python-0-overview.html">https://program-think.blogspot.com/2009/08/why-choose-python-0-overview.html</a>
