@@ -1,6 +1,7 @@
 ﻿---
 layout:  post
-title:   转载|为什么俺推荐 Python[3]：作为面向对象语言的 Python
+title:   转载：为什么俺推荐 Python[3]·作为面向对象语言的 Python
+keywords: "转载, 编程随想, IT, 编程, python, 面向对象, 抽象, 封装, 继承, 多态"
 excerpt: 前一个帖子介绍了作为动态语言的 Python，今天来聊一聊 Python 在面向对象编程（OOP）方面的特色。
 categories: post
 milestoneID: 2

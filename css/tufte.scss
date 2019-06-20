@@ -24,7 +24,7 @@ nav_exclude: true
 
 // START MountAye's addition:
 
-.postContent .important, .postContent strong {color: $important-color;} // !important
+.important, strong {color: $important-color;} // !important
 .postContent p {text-indent: 2em;}
 .postContent h1,
 .postContent h2,
@@ -32,20 +32,22 @@ nav_exclude: true
 .postContent h1::before { content:"\00023\00a0"; }
 .postContent h2::before { content:"\00023\00023\00a0"; }
 .postContent h3::before { content:"\00023\00023\00023\00a0"; }
-.postContent blockquote p { text-indent: 0em;
+.postContent ul,
+.postContent ol {padding-left: 2em;}
+.postContent blockquote p { text-indent: 2em;
                             margin: 0.5em 0em; }
 
 blockquote, .highlighter-rouge { width:65%; }
 blockquote {
   background-color: #fffff8;
   border-left: solid thick $contrast-color;
+  padding: 1em 0em; 
 }
 .highlighter-rouge {
   background-color: #aaaaaa;
 }
 
-.ghComment { margin-left: 65px;
-              }
+.ghComment { margin-left: 65px; }
 .ghIssueTitle { margin-bottom: 0.2em; }
 .ghIssueTitle::before { content:"\00023\00a0"; }
 .ghHeader { display: table;
@@ -53,27 +55,32 @@ blockquote {
 .ghIssue .ghHeader { border-left: solid thick $contrast-color; }
 .ghComment .ghHeader { border-left: solid thick $important-color; }
 .ghLogo { display: table-cell;
-          vertical-align: top;
+          vertical-align: middle;
           width: 60px;
           padding-left: 5px;}
-// .ghLogo img { border: solid thin gray; }
+.ghLogo a { vertical-align: middle; }
 .ghAuthor { display: table-cell;
-            vertical-align: top;}
+            vertical-align: middle;}
 .ghAuthor p { margin:0;
               text-indent: 0; }
-
-.ghBody { width: inherit;
-          margin-left: 65px;
-          padding-left:1em; 
-          border-left: solid thick gray;}
-.ghBody h1 {font-size:1.5em;}
-.ghBody h2 {font-size:1.2em;}
-.ghBody h3 {font-size:1em;}
-.ghBody p  {font-size:1em;}
-.ghBody ul {font-size:1em;}
-.ghBody ol {font-size: 1em;}
-.ghBody table {font-size:1em;
-                       padding-left: 2em;}
+.ghBody {border-left: solid thick gray;}
+.ghBody .highlight { margin-right: 1em; }
+.ghFooter { background-color: #f8f8f8;
+            border-left: solid thick $contrast-color;
+            padding: 0.5em 0em; }
+.ghFooterBottomRight { margin-right: 0.5em;
+                       float: right; }
+.ghBody, .ghFooter { width: inherit;
+                     margin-left: 65px; 
+                     padding-left:1em; }
+.ghBody h1 { font-size:1.5em; }
+.ghBody h2 { font-size:1.3em; }
+.ghBody h3 { font-size:1.1em; }
+.ghBody p  { font-size:1em; }
+.ghBody ul { font-size:1em; }
+.ghBody ol { font-size: 1em; }
+.ghBody table { font-size:1em;
+                padding-left: 2em; }
 .ghBody h1::before {content:"\00023\00a0";}
 .ghBody h2::before {content:"\00023\00023\00a0";}
 .ghBody h3::before {content:"\00023\00023\00023\00a0";}
@@ -112,6 +119,7 @@ html{
 
 // @media screen and (min-width: 1300px){ html{ font-size: 17px; } }
 
+
 // sets link style according to values in _settings.scss
 .mathblock{
   font-size: 1.3rem;
@@ -149,44 +157,46 @@ body { width: 90%;
 // added rational line height and margins ala http://webtypography.net/intro/
 
 h1 { font-weight: bold;
-     margin-top: 1.568rem;
-     margin-bottom: 1.568rem;
-     font-size: 2.5rem;
-     line-height: 0.784; }
+     margin-top: 0.8em;
+     margin-bottom: 0.3em;
+     font-size: 2.0em;
+     line-height: 1.0em; }
 
 h2 { font-style: bold;
      font-weight: bold;
-     margin-top: 1.866666666666667rem;
+     margin-top: 0.5em;
      margin-bottom: 0;
-     font-size: 2.1rem;
+     font-size: 1.8em;
      line-height: 0.933333333333333; }
 
 h3 { font-style: bold;
      font-weight: bold;
-     font-size: 1.8rem;
-     margin-top: 2.1777777777777778rem;
+     font-size: 1.5em;
+     margin-top: 0.3em;
      margin-bottom: 0;
      line-height: 1.08888888888889; }
 
 // ET says a need for more than 3 levels of headings is the sign of a diseased mind
 
-p .subtitle { font-style: italic;
-             margin-top: 2.1777777777777778rem;
-             margin-bottom: 2.1777777777777778rem;
-             font-size: 1.8rem;
+p.subtitle { font-style: italic;
+             margin-top: 0.6em;
+             margin-bottom: 1.2em;
+             font-size: 1.4em;
              display: block;
              line-height: 1.08888888888889; }
 
 
 p, ol, ul { font-size: 1.4rem; }
 
-p, li { line-height: 2rem;
+p, li { line-height: 1.5em;
         margin-top: 1.1rem; //modified by MountAye
         padding-right: 2rem; //removed because,  why?
         vertical-align: baseline; }
 
-blockquote p {  font-size: 1.1rem;
-                line-height: 1.78181818rem;
+blockquote p,
+blockquote ol,
+blockquote ul {  font-size: 1.5em;
+                line-height: 1.5em;
                 margin-top: 1.78181818rem;
                 margin-bottom: 1.78181818rem;
                 width: 95%;  // modified by MountAye
@@ -333,16 +343,45 @@ p, footer, div.table-wrapper, div.mathblock{ width: 65%; }
 
 div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
-@media screen and (max-width: 760px) { p, footer,div.mathblock { width: 90%; }
+@media screen and (max-width: 760px) { p, footer, div.mathblock, blockquote { width: 90%; }
                                        pre code { width: 87.5%; }
                                        ul { width: 85%; }
                                        figure { max-width: 90%; }
                                        figcaption, figure.fullwidth figcaption { margin-right: 0%;
                                                                                  max-width: none; }
-                                       blockquote p, blockquote footer {  width: 80%;
+                                       blockquote p, blockquote footer {  width: 90%;
                                                                           padding-left: 5%;
                                                                           padding-right: 5%;
-                                                                        }}
+                                                                        }
+                                       .ghComment, .ghBody, .ghFooter { margin-left: 0; } }
+
+@media (max-width: 760px) { label.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
+                            .sidenote, .marginnote { display: none; }
+                            .margin-toggle:checked + .sidenote,
+                            .margin-toggle:checked + .marginnote { display: block;
+                                                                   float: left;
+                                                                   left: 1rem;
+                                                                   clear: both;
+                                                                   width: 95%;
+                                                                   margin: 1rem 2.5%;
+                                                                   vertical-align: baseline;
+                                                                   position: relative; }
+                            label { cursor: pointer; }
+                            pre, pre code, p code, p pre code { width: 90%;
+                                                                padding: 0; }
+                            .table-caption { display: block;
+                                             float: right;
+                                             clear: both;
+                                             width: 98%;
+                                             margin-top: 1rem;
+                                             margin-bottom: 0.5rem;
+                                             margin-left: 1%;
+                                             margin-right: 1%;
+                                             vertical-align: baseline;
+                                             position: relative; }
+                            div.table-wrapper, table, table.booktabs { width: 85%; }
+                            div.table-wrapper { border-right: 1px solid #efefef; }
+                            img { max-width: 100%; } }
 
 .marginnote code, .sidenote code { font-size: 1rem; } //more .code class removal
 
@@ -364,33 +403,6 @@ label.sidenote-number { display: inline; }
 
 label.margin-toggle:not(.sidenote-number) { display: none; }
 
-@media (max-width: 760px) { label.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
-                            .sidenote, .marginnote { display: none; }
-                            .margin-toggle:checked + .sidenote,
-                            .margin-toggle:checked + .marginnote { display: block;
-                                                                   float: left;
-                                                                   left: 1rem;
-                                                                   clear: both;
-                                                                   width: 95%;
-                                                                   margin: 1rem 2.5%;
-                                                                   vertical-align: baseline;
-                                                                   position: relative; }
-                            label { cursor: pointer; }
-                            pre, pre code, p code, p pre code { width: 90%;
-                                       padding: 0; }
-                            .table-caption { display: block;
-                                             float: right;
-                                             clear: both;
-                                             width: 98%;
-                                             margin-top: 1rem;
-                                             margin-bottom: 0.5rem;
-                                             margin-left: 1%;
-                                             margin-right: 1%;
-                                             vertical-align: baseline;
-                                             position: relative; }
-                            div.table-wrapper, table, table.booktabs { width: 85%; }
-                            div.table-wrapper { border-right: 1px solid #efefef; }
-                            img { max-width: 100%; } }
 /*--- End of Basic Layout stuff from tufte.css ---*/
 
 /* -- Jekyll specific styling --*/

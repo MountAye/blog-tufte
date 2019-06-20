@@ -1,46 +1,49 @@
 ﻿<!--- Header and nav template site-wide -->
-
 <header>
-
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "{{site.baseurl}}";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
     <div>
-        <h3 class="sans">阿掖山：一个博客</h3>
+        <h1 class="sans">阿掖山：一个博客</h1>
     </div>
-            
     <p style="font-size:100%">
         <span id="quoteLine">人活在世上，有的活成了面子，有的活成了里子，都是时势使然。</span><br>
         ——<span id="quoteAuthor">《一代宗师》</span><br>
         <span id="quoteLink"></span>
     </p>
-            
-
     <nav class="group">
-
         <a href="{{site.baseurl}}/">
 	    <img class="badge" src="{{site.baseurl}}/assets/img/badgeMountAye.png" alt="阿掖山">
         </a>
-
 	{% for node in site.data.navigation %}
-
         {% if page.url == node.url %}
-
-		    <a href="{{node.url | prepend: site.baseurl}}" class="active">
-                        {{node.title}}
-                    </a>
-		    
-                {% else %}
-
-		      <a href="{{node.url | prepend: site.baseurl}}">
-                          {{node.title}}
-                      </a>
-
+		    <a href="{{node.url | prepend: site.baseurl}}" class="active">{{node.title}}</a>
+        {% else %}
+            <a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
         {% endif %}
-
   	{% endfor %}
-
     </nav>
-
     <hr class="slender">
- 
-
-
 </header>

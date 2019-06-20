@@ -3,12 +3,12 @@ title: 阿掖山：一个博客
 subtitle: MountAye | A Blog
 author: MountAye
 simple_search: http://google.com/search
-description: A Chinese Blog about Science
+description: "阿掖山：一个博客"
 name: MountAye
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 permalink: /articles/:title
-timezone: America/Chicago
+timezone: Asia/Beijing
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'UploadToGithub.Rakefile', 'README.md', 'vendor']
 post:
@@ -24,4 +24,4 @@ transfer:
   command: rsync
   settings: -av
   source: _site/
-  destination: 
+  destination: ../tentative
