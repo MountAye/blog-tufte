@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>翻译：为什么说物理不是一门学科 | 阿掖山：一个博客</title>
+  <meta name="keywords" content="MountAye, Chinese, blog, 阿掖山, 博客, 中文, 翻译, 科普, 物理, 生物">
+  <meta name="description" content="一篇稍微硬核的科普文章，讨论物理在生物学当中的可用性。">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?..."></script>
+  
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/TR-why-physics-is-not-a-discipline">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">人活在世上，有的活成了面子，有的活成了里子，都是时势使然。</span><br>
+        ——<span id="quoteAuthor">《一代宗师》</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">home</a>
+        
+  	
+        
+            <a href="/blog/History/">history</a>
+        
+  	
+        
+            <a href="/blog/Topics/">topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">comments</a>
+        
+  	
+        
+            <a href="/blog/About/">about</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>翻译：为什么说物理不是一门学科</h1>
+        <p class="subtitle">
+            June 19, 2019
+        </p>
+    <div class="postContent">
+        <blockquote>
+  <p>作者：菲利普·鲍尔 (Philip Ball)</p>
+
+  <p>来源：《Nautilus》</p>
+</blockquote>
+
+<p> </p>
+
+<blockquote>
+  <p>大约是上学期期中的时候，我们老板给我们分享了这篇文章的链接。当时觉得不错，但是没有读完。如今开始写博客了，又想起了这篇文章。结果翻译的过程中渐渐发现，此文篇幅过长，和学术沾边的英语直译过来也不适合阅读，并不适合作为一篇博文，更不用说手机端的微信公众号了。但我还是坚持把这篇文章译完了，主要原因，我这个专业有时需要些这样的鸡汤以自勉。至于读者们，我只能说句抱歉。</p>
+
+  <p>以及，这篇翻译已经过原文作者的许可。数次联系最初发表的网站，均无人回复。在此附上原文链接：<a href="http://nautil.us/issue/35/boundaries/why-physics-is-not-a-discipline">http://nautil.us/issue/35/boundaries/why-physics-is-not-a-discipline</a>。对原文的转载和改编，请联系原作者；对这篇翻译的转载、修改和改编，请联系我本人。</p>
+</blockquote>
+
+<p>你听过那个关于生物学家、物理学家和数学家的段子吗？他们坐在一个咖啡馆里看着人们从街对面的一个房子里进进出出。两个人进去了，然后一会三个人出来了。物理学家说：“测量不准确。”生物学家说：“他们繁殖了。”数学家说：“若现在恰有一人进入此屋，则屋子再次为空。”</p>
+
+<p>好笑吧，不好笑？这种笑话你能找到很多——很多都提到了球形的奶牛——但是我还从来没找到过能让我笑得出来的。然而，这不是这些段子的目的。他们被用来向我们展示，这些学科用非常不同，甚至可能互不相容的方式来看待这个世界。</p>
+
+<p>这么说有些道理。比如说，很多物理学家都会讲段子，编排生物学家在他们领域内的努力是多么平庸，把他们看成是不着边际和理解力成问题的人。并不只有物理学家会被认为事情做得不对，生物学家经常认为（完善但是范围被严格限定的生物物理可能除外）生物学里就没有物理的位置。</p>
+
+<p>但是这种反对（和段子）是把学术的标签和科学的标签混为一谈了。物理，被恰当理解的情况下，并不是一个在中学和大学讲授的学科，而是关于世界上的种种过程如何发生的一种特定的理解方式。当亚里士多德在公元前4世纪写下他的《物理》的时候，他描述的并非是学术界的一个领域，而是哲学上的一种模式：一种思考自然的方式。你可能会觉得那只是一种古代的用法，但不对。当今天的物理学家谈（他们也经常谈）一个问题的“物理”的时候，他们的意思很接近亚里士多德：既不是纯粹的数学形式也不只是陈述，而是一种从基本原理出发，推导出过程的方法。</p>
+
+<p>这就是为什么，存在着生物的物理，就像化学的、地质学和社会学的物理存在一样。但在职业的意义上，发现这些物理的并不一定是“物理学家”。</p>
+
+<p>在20世纪中叶，物理和生物学之间的界限不如今天严格分明。20世纪分子生物学的几位先驱，包括马克思·德尔布吕克 (Max Delbrück)，塞默·本泽 (Seymour Benzer) 和弗朗西斯·克里克 (Francis Crick)，最初都被训练为物理学家。而且从詹姆斯·沃森 (James Watson) 和弗朗西斯·克里克1953年对DNA中基因编码的发现中找到证据的，基因和进化的“信息论”视角的开创，通常被归功于物理学奖厄温·薛定谔 (Erwin Schrödinger) 1944年的《什么是生命？》一书。（然而，他的一些观点被生物学家赫尔曼·穆勒预见到了。）</p>
+
+<blockquote>
+  <p>刚才这段里面薛定谔的这句太绕了，我把原文放出来吧：And the beginnings of the “information” perspective on genes and evolution that found substance in James Watson and Francis Crick’s 1953 discovery of genetic coding in DNA is usually attributed to physicist Erwin Schrödinger’s 1944 book What Is Life?</p>
+</blockquote>
+
+<blockquote>
+  <p>来一个张佳玮风格的翻译：而且，基因和进化的“信息论”视角——从詹姆斯·沃森 (James Watson) 和弗朗西斯·克里克1953年对DNA中基因编码的发现中找到了证据——的开创，通常被归功于物理学奖厄温·薛定谔 (Erwin Schrödinger) 1944年的《什么是生命？》一书。</p>
+</blockquote>
+
+<p>20世纪中期，物理与生物的合流受到了很多优秀生物学家的欢迎，包括康莱德·豪·瓦丁顿 (Conrad Hal Waddington)、哈代 (J. B. S. Haldane) 和约瑟夫·尼德海姆 (Joseph Needham)，也就是成立了剑桥大学理论生物学俱乐部的人。而且对于DNA的“数字编码”的理解和应用数学家诺伯特·维尔纳 (Norbert Wiener) 对控制论框架的勾勒大致同时，后者致力于解释，从机器到细胞这样的复杂系统，如何被反馈过程组成的网络所调控。在1955年，物理学家乔治·伽莫夫 (George Gamow) 在《科学美国人》上发表了一篇有先见之明的文章，名为“活体细胞中的信息传递”，而且控制论赋予了生物学家雅各斯·蒙诺德 (Jacques Monod) 和弗兰西奥斯·雅各布 (François Jacob) 一种语言，来明确描述他们在1960年代提出的基因调控网络的初步理论。</p>
+
+<p>但是随后，这一“生物之理”项目停滞了。尽管有物理学家转向研究生物相关的问题，但是他们的努力和分子和细胞生物学中，主流的基因组数据收集，以及基因和生化机制的细致分析之间，仍存在着将之区分开来的空白。究竟发生了什么？</p>
+
+<p>这一分离中的一些关键原因被恩斯特·迈耶 (Ernst Mayr) 总结在了他2004年的著作《什么让生物学独一无二》之中。迈耶是当代最著名的演化生物学家之一，而且单是这一标题本身就反映出了长久以来生命科学界持有的例外论观点。在迈耶看来，对于物理能提供的那种一般性理论来说，生物学太过混乱和复杂——魔鬼总在细节处。</p>
+
+<h2 id="一个领域内的科学想法可能最终关联另一领域">一个领域内的科学想法可能最终关联另一领域</h2>
+
+<p>迈耶可能做出了任何生物学家所能做出的最精致的努力，来给他们的学科周围画上一圈清晰的边界，很聪明地将其和科学的其他领域区隔开来。通过这么做，他对这种努力的愚蠢进行了了最清晰的展示。</p>
+
+<p>他找出了将物理区分于生物的四大基本特征。它们分别是本质主义（将世界划分为精细刻画而且不变的诸范畴，比如电子和质子）、决定论（本质主义几乎必然会导致这一点）、还原论（通过将一个系统约化为它的各个组成部分来理解整个系统）、定律的普适性，而生物学中的规律是由偶然、随机性和历史不确定性所决定的。任何物理学家都会告诉你这种对物理学特征的刻画是彻底错误的，正像对于量子力学、混沌、复杂性的熟悉所揭示的那样。</p>
+
+<p>但是迈耶的论点变得更有趣——如果不是更有理了——当他说真正让生物学独一无二的，是它与目的有关：通过盲目的突变和进化过程中的选择构造出来的巧妙设计。在随机游走过程中互相碰撞的粒子们可什么都不必做。但是基因网络和蛋白质分子以及细胞的复杂架构是通过适者生存的残酷性来塑造的：它们有一个目标。而物理并不研究目的，对吧？正如纽约城市大学的从演化生物学家改行的哲学家马斯莫·皮格留奇 (Massimo Pigliucci) 最近表示的那样：“去问一个电子、一个分子、一个行星或山脉的意义或者目标是什么，是没有意义的。”</p>
+
+<p>目的或者说目的论是生物学中的困难词汇：它们很容易让人以为，进化的“盲人制表师”存在一种确定的目标，导致这些词被神创论者滥用。但是在生物学中讨论功能的时候是没办法摆脱这种内疚的：他的组成成分和结构在生物体的生存和基因的传播过程中的确发挥着作用。</p>
+
+<p>问题是，物理学家也没因为这个词而退却。当诺伯特·维尔纳把他1943年的论文命名为“行为、目的和目的论”的时候，他是故意挑衅的。两年后，维尔纳和匈牙利数学物理家约翰·冯·诺伊曼 (John von Neumann) 成立的目的论学会，宣布其任务是理解“目的是如何在人类和动物的行为中实现的”。冯·诺伊曼对于作为一种计算过程的繁殖——进化中的“生物功能”中最重要的一项——方面长期不渝的兴趣，奠定了元胞自动机的理论基础，元胞自动机如今广泛用于研究复杂的适应性过程，包括达尔文进化论（甚至理查德·道金斯 (Richard Dawkins) 都用过它们）。</p>
+
+<blockquote>
+  <p>诺伊曼一句的原文：Von Neumann’s abiding interest in replication—an essential ingredient for evolving “biological function”—as a computational process laid the foundations of the theory of cellular automata…</p>
+</blockquote>
+
+<p>达尔文主义中对环境的适应产生了显式的目的。那么不引入任何关于适应的“物理”，通过达尔文的随机突变和自然选择，我们不是很好地理解了这种目的吗？</p>
+
+<p>其实，没有。一方面，繁殖的生物体间随机可遗传的突变，以及来自环境的选择压力，这两者一定会导致适应性、多样性和创新性，这一论断并不显然。这一结果如何依赖于像是繁殖速率、复制过程中的保真度、系统中的随机噪声水平、选择压力的强度、遗传信息及其决定的特性（基因型和表现型），以及等等等等的因素？演化生物学家有用于探究这些事情的数学模型，但是没有一个通用的框架将之联系起来，计算并没有办法告诉你太多。</p>
+
+<p>这个通用的框架就是进化的物理。它可能被映射为，比如说存在阈值的某些变量，一旦超过这个阈值，一种在性质上不同的全局行为就会显现出来：物理学家管这个叫相图。理论化学家彼得·舒斯特 (Peter Schuster) 和他的同事已经在基因复制的错误率当中发现了这样一个阈值，只要低于这个值，基因组复制过程中保留的信息就将保持稳定。换句话说，超过这个错误率，就不存在像这样可识别的物种：他们的基因身份“融化”了。舒斯特的同事，诺奖得主化学家曼弗雷德·艾根 (Manfred Eigen)，表示这种切换是一种相变现象，和物理学家传统上研究的融化完全相似。</p>
+
+<p>与此同时，演化生物学家安德里亚斯·瓦格纳 (Andreas Wagner) 用计算机模型说明了达尔文进化论有能力产生性质上全新的形式和结构，而不只是在那些自然选择无法自动推论得到的论题上进行微小的修正。实际上，这依赖于描述功能（比如一种蛋白质的化学效用）如何依赖于编码功能的信息（比如分子链上氨基酸的序列）的概率的组合空间有一种特殊的“形状”。此处又是“物理”为进化多样性提供了基础。</p>
+
+<p>而且麻省理工学院的物理学家杰瑞米·英格兰 (Jeremy England) 还表明，适应性本身并不一定要依赖于达尔文的自然选择和基因的遗传，而是有可能根植于更深层次的，复杂系统中的热力学。关于适合程度 (fitness) 和适应性 (adaptation) 概念一直以来都十分困难，无法深究——很容易听起来就像是循环推理。但是英格兰说它们可以看作更基本的形式，也就是一个特定的系统，在面对恒定的能量流动时，通过抑制能量的波动和耗散，从而维持自身的能力：也可以说，就是“保持冷静，继续前进”(keep calm and carry on) 的能力。</p>
+
+<p>“我们的初始假设是基于物理的，而这些假设推导出了一个非平衡态演化的一般特征的命题，在这个命题之下，达尔文的学说变成了系统中存在自我增殖之物的一种特殊情况”，英格兰说，“（适应性的）概念变成了存在热涨落的物体自发地被塑造成善于从环境中接受外场做功的状态。”他表示，其中振奋人心之处在于，“当我们从物理方面考虑某些看起来些具有“适应”性的结构的起源的时候，这些结构不必拥有生物意义上的父母。”已经有些研究人员表示英格兰的观点为达尔文的学说提供了物理基础。</p>
+
+<p>注意，我们其实没法预言这些生物学现象的物理将会从哪里冒出来——来自于化学家和生物学家的可能性和来自“物理学家”的可能性差不多。从学科的意义上讲，把这些基础的观点和理论叫做一个问题的物理，完全不是物理沙文主义的意思。我们只是需要将这个词从教条的定义，以及伴随这种定义的学界鄙视链之战中解救出来。</p>
+
+<p>在物理学内部，你可能很熟悉这种对生物学中的概念的入侵，这只不过是一个领域内发展出的科学观点关联到另一领域的又一个例子。</p>
+
+<p>但是问题其实还要更深刻一些，而且将其称作不同学科之间的跨界（或者说越界）并没有刻画出问题的全貌。我们需要超越像迈耶那样划定并维护学科边界的努力。</p>
+
+<p>物理学家们对同行们洞察“问题的物理”能力的吹捧可能听起来有些古怪。除了思考“问题的物理”，物理学家还有别的可做吗？这其中包含了一个误解。此处描述的是，放过数学描述和各种相互作用的细节，直接去处理其中隐含的概念——通常能够用非数学的，乃至口头语言进行简要描述的一般性概念。在这种意义上所说的物理并不是一套固定的解题流程，也不必落实在某一类具体的题目之上。这是一种思考世界的方式：一套在因果之间建立联系的构想。</p>
+
+<h2 id="我们还不太知道生物中的物理应当包含什么但没有它我们理解不了生命">我们还不太知道生物中的物理应当包含什么，但没有它我们理解不了生命</h2>
+
+<p>这种思考可能来自于任何一位科学家，不论他/她的学术目标是什么。物理是雅各布和蒙诺德在观察反馈过程时所展示的，基因调控的关键，基因调控也因之和控制论之间建立了联系。物理是发展生物学家汉斯·曼因哈特 (Hans Meinhardt) 在1970年代的成果，那时他和同事阿尔弗雷德·吉雷尔 (Alfred Gierer) 解锁了图灵结构的物理。图灵结构是一种描述化学扩散过程的数学模型中自发产生的图案，由数学家阿兰·图灵 (Alan Turing) 在1952年提出，用于解释胚胎中形态 (form) 和秩序 (order) 的形成。曼因哈特和吉雷尔识别出了隐藏在图灵的数学之下的物理：一种自我生成的化学试剂（“启动子”）和一种抑制其行为的成分之间的相互作用。</p>
+
+<p>一旦我们放弃基于院系的对于物理的定义，其他学科周围的高墙也就不再是铁板一块了，从而会产生积极的结果。迈耶认为的生物收到目标的激励而非生物不然的想法，与萌发于一切始于DNA这一观点的对生物信息的粗浅解释密切相关。正如迈耶所说：“生物世界中的单一现象或过程，没有一个不是由基因组中的基因程序所控制的。”</p>
+
+<p>这种现在被称为“DNA沙文主义”的观点，会导致迈耶错误地归咎于物理的那种还原主义，这也正是生物的物理所反对的。即便我们承认（我们也必须承认） DNA 和基因的确在生物演化和生存的机制的种种细节中占据中心地位，我们仍需要一种更宽广的视野，维持生物运转的细心并不止来自于 DNA 数据库。此处的一个关键问题在于因果性：信息朝着什么方向流动？现在将这些因果性问题定量化正变得可能，而且这揭示出了那种普适的自下而上的视角的不足。</p>
+
+<p>威斯康星麦迪逊大学的神经科学家吉欧里奥·托诺尼 (Giulio Tononi) 和他的同事们用一种各部分之间相互作用的的复杂系统构建了一个通用模型，每一部分可以是神经元或者基因，他们发现有时系统的行为并不由自下而上的方式决定，而是由各部分之间更高层次的组织。</p>
+
+<p>这一图景也出现在了萨拉·沃克尔 (Sara Walker)、保罗·戴维斯 (Paul Davies) 以及亚利桑那州立大学的同事们对酵母基因网络的分析之中。这项研究表明，这一案例中确实涉及到了“自上而下”的因果性。戴维斯和同事们相信自上而下的因果性可能是生命物理中的一个广泛特征，可能在进化中的一些重大进步中发挥了关键性作用，比如说基因编码的出现、有复杂细胞器的细胞（真核生物）的出现、多细胞有机体的演化，甚至是生命的出现本身。他们说，在这些关键节点上，信息可能改变了流动的方向，使得高层次的组织影响和改变了低层次上的组织，而非一切都由基因水平上的突变来“驱动”。</p>
+
+<p>这一工作，和瓦格纳、舒斯特以及艾根的成果共同揭示的一件事是，DNA 和基因网络关联于生物系统的维持和演化的方式可能只有在我们更好地理解了信息本身的物理之后才能彻底理解。</p>
+
+<p>需要考虑到的一点在于这样一种发现：生物系统往往运行在物理学家称为临界相变或者说临界点附近：一种在两种组织模式之间切换的边缘疯狂试探的状态，其中一种模式有序，另一种无序。临界点在像磁性、液相混合物以及超流这样的物理系统中广为人知。2010年，普林斯顿大学研究生物问题的物理学家威廉·拜亚勒克 (William Bialek) 和巴黎高师 (École Normale Supérieure in Paris) 的同事蒂埃里·莫拉 (Thierry Mora) 认为很多生物系统，从鸟群到大脑神经网络再到蛋白质的氨基酸序列，也有可能接近临界状态。</p>
+
+<p>拜亚勒克和同事们说，通过在临界点运行，一个系统会经历巨大的波动，从而使它的各组成部分能够处于众多不同的构象。所以，莫拉说：“处于临界状态可以获得应付复杂而不可预知的环境所必须的灵活性。”除此之外，接近临界的状态对于环境的扰动十分敏感，可以向整个系统传递涟漪效应。那可以帮厨生物系统很迅速地适应变化：比如说，一群鸟或鱼可以很快地对接近的捕食者作出反应。</p>
+
+<p>临界性也可以提供信息收集的机制。意大利帕多瓦大学 (University of Padova) 的物理学家阿莫斯·迈瑞坦 (Amos Maritan) 和同事们在一群“认知媒介”——可能是例如单个生物体、神经元等——组成的复杂系统中，临界状态允许系统“感知”周围正在发生什么：通过编码一种关于周边环境的“内部地图”，就像是编码了周边地形的河流网一样。“在临界状态附近保持稳定为系统提供了优良的灵活性，以及应对和适应高度可变且复杂的环境的演化优势，”迈瑞坦说。越来越多的证据表明，大脑、基因网络和动物群都确实是用这种方式组织的。临界性可能无处不在。</p>
+
+<p>这样的例子让我们有信心认为，生物之中确实存在物理。拜亚勒克对于生物太过于杂乱的说法没有耐心——正如他自己所说：“说我们永远无法彻底理解，这有点草率。”他有信心认为存在“一套像其他领域一样达到具有预测能力的水平的生物理论物理”。没有这个，生物就存在成为传奇和偶然事件的可能。我们可以比较肯定的一点就是生物并不是那样的，因为那样根本不合理。</p>
+
+<p>我们还不太知道生物的物理需要包含哪些东西。但是没有它我们就理解不了生物学。它肯定会涉及基因网络如何在面对变化的环境时既有鲁棒性又有灵活性——比如说，为什么一个失效的基因不一定致命，为什么细胞可以在不改变基因组的情况下用稳定可依赖的方式改变他们的特性。它应当能揭示为什么进化本身既可行，又有创新型。</p>
+
+<p>说物理学包罗万象不等同于说物理学家可以解决一切问题。他们也是在一个领域内接受培养，离开自己的领域时就像我们一样不舒服。关键不在于谁“拥有”科学中的某个问题，而是关于为思考事情的运行原理而开发出有用的工具——也就是两千多年以前亚里士多德想干的事情。物理不是物理系里的事情。世界并不在乎标签，如果我们想要理解它的话，我们也不该在乎。</p>
+
+<p><em>菲利普·鲍尔是科学于艺术类书籍的作者，著有《看不见的诱惑》(Invisible: The Dangerous Allure of the Unseen) 一书</em></p>
+
+<h2 id="参考资料">参考资料</h2>
+
+<ol>
+  <li>Pigliucci, M. Biology vs. Physics: Two ways of doing science? www.ThePhilosophersMag.com (2015).</li>
+  <li>Perunov, N., Marsland, R., &amp; England, J. Statistical physics of adaptation. arXiv:1412.1875 (2014).</li>
+  <li>Hoel, E.P., Albantakis, L., &amp; Tononi, G. Quantifying causal emergence shows that macro can beat micro. Proceedings of the National Academy of Sciences 110, 19790-19795 (2013).</li>
+  <li>Walker, S.I., Kim, H., &amp; Davies, P.C.W. The informational architecture of the cell. Philosophical Transactions of the Royal Society A 374 (2016). Retrieved from: DOI: 10.1098/rsta.2015.0057</li>
+  <li>Walker, S.I., Cisneros, L., &amp; Davies, P.C.W. Evolutionary transitions and top-down causation. arXiv:1207.4808 (2012).</li>
+  <li>Walker, S.I. &amp; Davies, P.C.W. The algorithmic origins of life. Journal of the Royal Society Interface 10 (2012). Retrieved from: DOI: 10.1098/rsif.2012.0869</li>
+  <li>“DNA as Information” Theme issue compiled and edited by Cartwright, J.H.E., Giannerini, S., &amp; Gonzalez, D.L. Philosophical Transactions of the Royal Society A 374 (2016).</li>
+  <li>Mora, T. &amp; Bialek, W. Are biological systems poised at criticality? Journal of Statistical Physics 144, 268-302 (2011).</li>
+  <li>Hildalgo, J., et al. Information-based fitness and the emergence of criticality in living systems. Proceedings of the National Academy of Sciences 111, 10095-10100 (2014).</li>
+  <li>Bialek, W. Perspectives on theory at the interface of physics and biology. arXiv:1512.08954 (2015).</li>
+</ol>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <!-- JavaScript objects are not JSON :-) -->
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = 5;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "大笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/5">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        翻译：为什么说物理不是一门学科 - June 19, 2019 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-feed"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2019 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted by <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>

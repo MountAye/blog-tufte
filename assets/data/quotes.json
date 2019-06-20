@@ -10,11 +10,15 @@
   {
     "text":   "Life is short. You need Python.",
     "author": "Bruce Eckel",
-    "link":   "/articles/why-choose-python-0"
+    "link":   "/articles/RP-why-choose-python-0-overview"
   },
   {
     "text": "情报支持的是行动，信息仅支持理解。",
     "author": "iYouPort，《“情报不是简单的信息”：iYouPort 答读者问：关于我们为什么而存在？（下）》"
+  },
+  {
+    "text": "You cannot answer a question you cannot ask, and you cannot ask a question you have no words for.",
+    "author": "Judea Pearl, Dana Mackenzie, 《The Book of Why》"
   },
   {
     "text":   "Bran Stark: Can a man still be brave if he's afraid? <br>Ned Stark: That is the only time a man can be brave.",
@@ -27,6 +31,14 @@
   {
     "text": "There is nothing in the world more powerful than a good story.",
     "author": "TV episodes 《Game of Thrones》"
+  },
+  {
+    "text": "成功不必在我，功成其中有我",
+    "author": "编程随想"
+  },
+  {
+    "text": "比起你喜欢谁，更重要的是你喜欢跟谁在一起时的自己。",
+    "author": "苍井优"
   },
   {
     "text":   "只要太空能够忍受，<br>只要生命依然存在，<br>瀑布的青春永不凋谢，<br>青春的瀑布更不会消逝，<br>一支火炬闪现如明月露脸，<br>失败过但没有眼泪。",
@@ -57,6 +69,10 @@
     "author": "兰晓龙，《士兵突击》"
   },
   {
+    "text": "我所受的社会学训练有一个规矩：社会学只关注两件事，一是是什么，二是为什么，绝对不可对研究对象做道德评判。我这“一辈子”谨遵此训，从未越雷池一步。无论研究对象是中国还是美国，从未做过道德评判，“一辈子吹捧”更不知从何说起。",
+    "author": "李银河，《周小平文章点评》"
+  },
+  {
     "text": "让所有人都认同的文字称不上表达，表达需要勇气。",
     "author": "铃木光司"
   },
@@ -67,6 +83,10 @@
   {
     "text": "有时，有些学科，经常让人成为四流科学家而得意洋洋。",
     "author": "饶毅，译自 Peyton Rous"
+  },
+  {
+    "text": "一个普通智力的人会说那个命题是显而易见无需证明的，一个好点的数学家会意识到证明的必要并试图证明它，只有非凡的天才才会意识到证明是需要却办不到的。",
+    "author": "乔治·萨顿 (George Sarton)，科学史学家，评价平行公设"
   },
   {
     "text": "人活在世上，有的活成了面子，有的活成了里子，都是时势使然。",
