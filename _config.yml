@@ -1,4 +1,5 @@
-﻿baseurl: /blog
+﻿url: mountaye.github.io
+baseurl: /blog
 title: 阿掖山：一个博客
 subtitle: MountAye | A Blog
 author: MountAye
@@ -25,3 +26,5 @@ transfer:
   settings: -av
   source: _site/
   destination: ../tentative
+plugins:
+  - jekyll-seo-tag
