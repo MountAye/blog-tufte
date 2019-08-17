@@ -3,11 +3,57 @@
   <channel>
     <title>阿掖山：一个博客</title>
     <description>阿掖山：一个博客</description>
-    <link>http://localhost:4000/blog/</link>
-    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Aug 2019 04:08:44 +0000</pubDate>
-    <lastBuildDate>Thu, 15 Aug 2019 04:08:44 +0000</lastBuildDate>
+    <link>mountaye.github.io/blog/</link>
+    <atom:link href="mountaye.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 17 Aug 2019 03:50:47 +0000</pubDate>
+    <lastBuildDate>Sat, 17 Aug 2019 03:50:47 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>浏览器A到Z</title>
+        <description>&lt;p&gt;首先萌狼看&lt;a href=&quot;https://blog.phoenixlzx.com/2014/03/10/browser-from-a-to-z/&quot;&gt;phoenixlzx&lt;/a&gt;那有一篇这样的文章，貌似很好玩的样子。&lt;/p&gt;
+
+&lt;p&gt;咱看&lt;a href=&quot;https://blog.yoitsu.moe/a2z.html&quot;&gt;约伊兹的萌狼乡手札&lt;/a&gt;那有一篇这样的文章，貌似很好玩的样子。&lt;/p&gt;
+
+&lt;p&gt;咱也试试看？&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;A&lt;/strong&gt; &lt;a href=&quot;https://www.amazon.com&quot;&gt;amazon.com&lt;/a&gt;: 美帝的JD&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;B&lt;/strong&gt; &lt;a href=&quot;https://www.bilibili.com&quot;&gt;bilibili.com&lt;/a&gt;: 比利比利♂干杯&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;C&lt;/strong&gt; &lt;a href=&quot;https://www.changhai.org&quot;&gt;changhai.org&lt;/a&gt;: 卢昌海的个人主页，科普作家的自留地，互联网的名胜古迹&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;D&lt;/strong&gt; &lt;a href=&quot;https://www.douban.com&quot;&gt;douban.com&lt;/a&gt;: 人均大文豪&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;E&lt;/strong&gt; &lt;a href=&quot;&quot;&gt;email.——.edu&lt;/a&gt;: 学校邮箱&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;F&lt;/strong&gt; &lt;a href=&quot;https://farseerfc.me&quot;&gt;farseerfc.me&lt;/a&gt;: farseerfc 的博客，本人博客的留言区代码就是根据&lt;a href=&quot;https://farseerfc.me/github-issues-as-comments.html&quot;&gt;他(她？)的教程&lt;/a&gt;改写成的&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;G&lt;/strong&gt; &lt;a href=&quot;https://github.com&quot;&gt;github.com&lt;/a&gt;: 同性交友网站&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;H&lt;/strong&gt; &lt;a href=&quot;https://hacker-tools.github.io&quot;&gt;hacker-tools.github.io&lt;/a&gt;: 标题党，你以为我是黑客教程，其实我是 Linux 入门哒&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;I&lt;/strong&gt; &lt;a href=&quot;&quot;&gt;idope.se&lt;/a&gt;: 好像已经失效的p2p搜索网站&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;J&lt;/strong&gt; 没有 :-(&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;K&lt;/strong&gt; &lt;a href=&quot;https://kenengba.com&quot;&gt;kenengba.com&lt;/a&gt;: 可能吧，Jason Ng 的博客，号称“互联网的‘新鲜事’”，更新周期以年为单位&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;L&lt;/strong&gt; &lt;a href=&quot;&quot;&gt;localhost:4000/blog/&lt;/a&gt;: 个人博客的本地调试端口&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;M&lt;/strong&gt; &lt;a href=&quot;https://mountaye.github.io/blog/&quot;&gt;mountaye.github.io/blog/&lt;/a&gt;: 个人博客，不要忘记反斜线&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;N&lt;/strong&gt; 没有 :-(&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;O&lt;/strong&gt; &lt;a href=&quot;http://www.ozdic.com/&quot;&gt;ozdic.com&lt;/a&gt;: 一个搜索英语固定搭配的在线词典&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;P&lt;/strong&gt; &lt;a href=&quot;https://program-think.blogspot.com&quot;&gt;program-think.blogspot.com&lt;/a&gt;: 咱也不知道，咱也不敢问&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Q&lt;/strong&gt; &lt;a href=&quot;https://www.quantopian.com/home&quot;&gt;quantopian.com&lt;/a&gt;: 一个提供量化金融数据接口的平台，数据与主流财经门户的数据有出入&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;R&lt;/strong&gt; &lt;a href=&quot;https://www.ruanyifeng.com/home.html&quot;&gt;ruanyifeng.com&lt;/a&gt;: 阮一峰的个人网站&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;S&lt;/strong&gt; &lt;a href=&quot;https://stackoverflow.com&quot;&gt;stackoverflow.com&lt;/a&gt;: 编程相关的问答网站 &lt;del&gt;（抄代码就完事了）&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;T&lt;/strong&gt;  &lt;del&gt;（谁能给个邀请码）&lt;/del&gt; 没有 :-(&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;U&lt;/strong&gt; 没有 :-(&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;V&lt;/strong&gt; &lt;a href=&quot;http://linux.vbird.org/&quot;&gt;linux.vbird.org&lt;/a&gt;: 鸟哥的 Linux 私房菜&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;W&lt;/strong&gt; &lt;a href=&quot;http://wolfram.com/&quot;&gt;wolfram.com&lt;/a&gt;: &lt;del&gt;世界上第二好的编程语言&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;X&lt;/strong&gt; 没有 :-(&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Y&lt;/strong&gt; &lt;a href=&quot;https://blog.yoitsu.moe&quot;&gt;yoitsu.moe&lt;/a&gt;: 约伊兹的萌狼乡手札&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Z&lt;/strong&gt; &lt;a href=&quot;https://zh.moegirl.org/Mainpage&quot;&gt;zh.moegirl.org&lt;/a&gt;: 中文萌娘百科，90后中老年人了解00后的窗口&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+        <link>mountaye.github.io/blog/articles/web-brower-A-to-Z</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/web-brower-A-to-Z</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
     
       <item>
         <title>摄记：春天已经走远</title>
@@ -15,7 +61,7 @@
   &lt;p&gt;惊觉已经有将近两个月没有更新了。手头的确有好几个想写的题目，但是都没有写完；直接发一张图片的话又显得敷衍。于是想到了这么一个主意，选一张照片，附上拍摄时相机的配置和参数，简单介绍一下修图的思路，凑不够微信要求的 200 字的话就扯点闲篇，修剪成一篇散文。总共也就两三张照片（成片、原图和成片的对比，偶尔插一两张不太满意的调色方案），不会对用流量的读者构成大规模杀伤。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;这次的照片拍是樱花，恰是在一片粉红和满树新绿之间，两种色彩分庭抗礼的时候，摄于四月的第一个周末。这里今年的春天来得晚很多，往年三月中上旬的时候就有如此景象了。&lt;/p&gt;
+&lt;p&gt;这次的照片拍的是樱花，恰是在一片粉红和满树新绿之间，两种色彩分庭抗礼的时候，摄于四月的第一个周末。这里今年的春天来得晚很多，往年三月中上旬的时候就有如此景象了。&lt;/p&gt;
 
 &lt;figure&gt;&lt;figcaption&gt;绿肥红瘦&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/img/190811spring_final.png&quot; /&gt;&lt;/figure&gt;
 
@@ -47,8 +93,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/articles/spring-is-over</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/spring-is-over</guid>
+        <link>mountaye.github.io/blog/articles/spring-is-over</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/spring-is-over</guid>
         
         
         <category>post</category>
@@ -177,8 +223,8 @@
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/articles/TR-why-physics-is-not-a-discipline</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/TR-why-physics-is-not-a-discipline</guid>
+        <link>mountaye.github.io/blog/articles/TR-why-physics-is-not-a-discipline</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/TR-why-physics-is-not-a-discipline</guid>
         
         
         <category>post</category>
@@ -875,8 +921,8 @@
 &lt;p&gt;方俊扬，你现在在哪里？&lt;/p&gt;
 </description>
         <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/articles/RP-naive-lover</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-naive-lover</guid>
+        <link>mountaye.github.io/blog/articles/RP-naive-lover</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-naive-lover</guid>
         
         
         <category>post</category>
@@ -1061,8 +1107,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/articles/RP-why-choose-python-5-tool</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-5-tool</guid>
+        <link>mountaye.github.io/blog/articles/RP-why-choose-python-5-tool</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-5-tool</guid>
         
         
         <category>post</category>
@@ -1375,8 +1421,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/articles/RP-why-choose-python-4-fp</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-4-fp</guid>
+        <link>mountaye.github.io/blog/articles/RP-why-choose-python-4-fp</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-4-fp</guid>
         
         
         <category>post</category>
@@ -1557,8 +1603,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/articles/RP-why-choose-python-3-oop</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-3-oop</guid>
+        <link>mountaye.github.io/blog/articles/RP-why-choose-python-3-oop</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-3-oop</guid>
         
         
         <category>post</category>
@@ -1686,8 +1732,8 @@ A.&lt;strong&gt;bases&lt;/strong&gt; += (B,)&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/articles/RP-why-choose-python-2-dynamic</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-2-dynamic</guid>
+        <link>mountaye.github.io/blog/articles/RP-why-choose-python-2-dynamic</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-2-dynamic</guid>
         
         
         <category>post</category>
@@ -1826,8 +1872,8 @@ A.&lt;strong&gt;bases&lt;/strong&gt; += (B,)&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/articles/RP-why-choose-python-1-script</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-1-script</guid>
+        <link>mountaye.github.io/blog/articles/RP-why-choose-python-1-script</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-1-script</guid>
         
         
         <category>post</category>
@@ -1864,8 +1910,8 @@ A.&lt;strong&gt;bases&lt;/strong&gt; += (B,)&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/blog/articles/RP-why-choose-python-0-overview</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-0-overview</guid>
+        <link>mountaye.github.io/blog/articles/RP-why-choose-python-0-overview</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-0-overview</guid>
         
         
         <category>post</category>
