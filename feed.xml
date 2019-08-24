@@ -3,10 +3,10 @@
   <channel>
     <title>阿掖山：一个博客</title>
     <description>阿掖山：一个博客</description>
-    <link>mountaye.github.io/blog/</link>
-    <atom:link href="mountaye.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Aug 2019 14:42:47 +0000</pubDate>
-    <lastBuildDate>Sat, 24 Aug 2019 14:42:47 +0000</lastBuildDate>
+    <link>http://localhost:4000/blog/</link>
+    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 24 Aug 2019 15:11:05 +0000</pubDate>
+    <lastBuildDate>Sat, 24 Aug 2019 15:11:05 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -109,8 +109,8 @@
   &lt;p&gt;作者的主要论点似乎是 X。正如他说的：&lt;/p&gt;
 
   &lt;blockquote&gt;
-    &lt;引用的内容&gt;
-&lt;/引用的内容&gt;
+    &lt;p&gt;&lt;引用的内容&gt;
+&lt;/引用的内容&gt;&lt;/p&gt;
   &lt;/blockquote&gt;
 
   &lt;p&gt;但这是错的，原因如下……&lt;/p&gt;
@@ -136,8 +136,8 @@
 
 </description>
         <pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree</guid>
+        <link>http://localhost:4000/blog/articles/TL-Paul-Graham-How-to-Disagree</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/TL-Paul-Graham-How-to-Disagree</guid>
         
         
         <category>post</category>
@@ -182,8 +182,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/web-brower-A-to-Z</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/web-brower-A-to-Z</guid>
+        <link>http://localhost:4000/blog/articles/web-brower-A-to-Z</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/web-brower-A-to-Z</guid>
         
         
         <category>post</category>
@@ -228,8 +228,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/spring-is-over</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/spring-is-over</guid>
+        <link>http://localhost:4000/blog/articles/spring-is-over</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/spring-is-over</guid>
         
         
         <category>post</category>
@@ -358,8 +358,8 @@
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/TL-why-physics-is-not-a-discipline</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/TL-why-physics-is-not-a-discipline</guid>
+        <link>http://localhost:4000/blog/articles/TL-why-physics-is-not-a-discipline</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/TL-why-physics-is-not-a-discipline</guid>
         
         
         <category>post</category>
@@ -1056,8 +1056,8 @@
 &lt;p&gt;方俊扬，你现在在哪里？&lt;/p&gt;
 </description>
         <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/RP-naive-lover</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-naive-lover</guid>
+        <link>http://localhost:4000/blog/articles/RP-naive-lover</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-naive-lover</guid>
         
         
         <category>post</category>
@@ -1242,8 +1242,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/RP-why-choose-python-5-tool</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-5-tool</guid>
+        <link>http://localhost:4000/blog/articles/RP-why-choose-python-5-tool</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-5-tool</guid>
         
         
         <category>post</category>
@@ -1556,8 +1556,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/RP-why-choose-python-4-fp</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-4-fp</guid>
+        <link>http://localhost:4000/blog/articles/RP-why-choose-python-4-fp</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-4-fp</guid>
         
         
         <category>post</category>
@@ -1738,8 +1738,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/RP-why-choose-python-3-oop</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-3-oop</guid>
+        <link>http://localhost:4000/blog/articles/RP-why-choose-python-3-oop</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-3-oop</guid>
         
         
         <category>post</category>
@@ -1867,8 +1867,8 @@ A.&lt;strong&gt;bases&lt;/strong&gt; += (B,)&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/RP-why-choose-python-2-dynamic</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-2-dynamic</guid>
+        <link>http://localhost:4000/blog/articles/RP-why-choose-python-2-dynamic</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-2-dynamic</guid>
         
         
         <category>post</category>
@@ -2007,8 +2007,8 @@ A.&lt;strong&gt;bases&lt;/strong&gt; += (B,)&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/RP-why-choose-python-1-script</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-1-script</guid>
+        <link>http://localhost:4000/blog/articles/RP-why-choose-python-1-script</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/RP-why-choose-python-1-script</guid>
         
         
         <category>post</category>
