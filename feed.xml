@@ -5,9 +5,144 @@
     <description>阿掖山：一个博客</description>
     <link>mountaye.github.io/blog/</link>
     <atom:link href="mountaye.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Aug 2019 03:50:47 +0000</pubDate>
-    <lastBuildDate>Sat, 17 Aug 2019 03:50:47 +0000</lastBuildDate>
+    <pubDate>Sat, 24 Aug 2019 14:42:47 +0000</pubDate>
+    <lastBuildDate>Sat, 24 Aug 2019 14:42:47 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>翻译：保罗·格雷厄姆谈如何反对</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;本文的作者保罗·格雷厄姆是一位程序员、画家兼投资人。他曾在哈佛大学获得计算机方向的博士学位，也在罗德岛设计学院和佛罗伦萨绘画艺术学院学习过绘画。作为两种身份的结合，他创作了《Hackers &amp;amp; Painters》一书。作为投资人，他最为出名的成就是参与创办了创业孵化公司 Y Combinator.&lt;/p&gt;
+
+  &lt;p&gt;保罗在互联网上最有名的文章，当属这篇《How to Disagree》，他的个人维基百科词条上专门用一个小节介绍了这篇文章。网络上也有根据这篇文章制作的“反驳金字塔”图片。虽说一图胜千言，但是从文字转化为示意图的过程中，很多信息被省略，一些常见的话术和对这些话术的反驳，以及本文文末，对反对的不同层次，其意义的讨论和澄清，都没有出现在图中。在争论中直接扔给对方一张反驳金字塔的图，看起来反而很接近于最低层次的扣帽子。&lt;/p&gt;
+
+  &lt;p&gt;以下是全文翻译。原文链接：&lt;a href=&quot;http://paulgraham.com/disagree.html&quot;&gt;http://paulgraham.com/disagree.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;作于 2008 年 3 月&lt;/p&gt;
+
+&lt;p&gt;网络正把写作变成对话。二十年前，作者只用写而读者只能读。网络让读者可以回应，而且这些回应越来越多——评论区里、论坛里，和他们自己的博客文章里。&lt;/p&gt;
+
+&lt;p&gt;这些回应的人中有很多是反对原文的。这是可以预见的。同意不如反对激励人们（发表看法）。当你同意的时候可说的也更少。你也许可以就作者说过的东西进行拓展，但是他可能已经把最有趣的推论都说完了。当你反对的时候，你所踏足的领域是他可能还没涉及到的。&lt;/p&gt;
+
+&lt;p&gt;结果就是，反对的声音要多得多，尤其是以字数来衡量。这并不意味着人们的戾气愈发严重。我们交流方式的结构性改变就足以解释这一现象了。但是尽管驱动着反对声音增多的并非愤怒，人们因为反对增多而变得更加生气的危险却真实存在。尤其是在网上，在你不用和对方面对面的地方发言是容易的。&lt;/p&gt;
+
+&lt;p&gt;如果我们都在越来越多地进行反对，那我们就需要把这件事小心做好。什么叫好好反对？绝大多数读者可以区分单纯的&lt;strong&gt;扣帽子&lt;/strong&gt;和通过细致推理进行的反驳，但我认为把中间状态也逐个列举一下是很有帮助的。所以下面就是对反对的不同层次进行列举的一个尝试：&lt;/p&gt;
+
+&lt;h2 id=&quot;第-0-层扣帽子-name-calling&quot;&gt;第 0 层：扣帽子 (Name-calling)&lt;/h2&gt;
+
+&lt;p&gt;这是反对的最低层次，可能也是最常见的形式。我们都见过这样的评论：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;你个娘炮！！！！！！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;但是重要的是意识到，更加高大上的&lt;strong&gt;扣帽子&lt;/strong&gt;同样没什么效力。一个像这样的评论：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;作者是个自以为是的外行。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;不过就是一个高配版的“你个娘炮”。&lt;/p&gt;
+
+&lt;h2 id=&quot;第-1-层诉诸身份-ad-hominem&quot;&gt;第 1 层：诉诸身份 (Ad Hominem)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;诉诸身份&lt;/strong&gt;的攻击不像单纯的&lt;strong&gt;扣帽子&lt;/strong&gt;那么无力。它其实可能有些威力。比如说，如果一个参议院写文章说参议员们的工资需要提高，有人可能会回应道：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;他当然会这么说了，他是个参议员。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这并不会反驳作者的论证，但是这至少和主题有关。然而，这仍然是一种很无力的反对。如果这位参议院的论证里有什么错误，你应该说明错在哪里；如果没错，他是一个参议员又有什么区别？&lt;/p&gt;
+
+&lt;p&gt;说作者不具备写作某一话题文章的权威性是&lt;strong&gt;诉诸身份&lt;/strong&gt;的一个变种，而且是特别没用的一种，因为好的想法经常来自于旁观者。问题是作者对还是不对。如果他缺乏的权威性导致他犯了错误，请把这些错误指出来。如果没有，那（缺乏权威性）就不是一个问题。&lt;/p&gt;
+
+&lt;h2 id=&quot;第-2-层诉诸语气-responding-to-tone&quot;&gt;第 2 层：诉诸语气 (Responding to Tone)&lt;/h2&gt;
+
+&lt;p&gt;接下来这个层次我们开始看到针对内容而非作者的回应。这些回应中最低级的一种形式就是反对作者的语气。例如：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;无法相信作者竟然用如此傲慢的方式贬低智能设计。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;尽管强于攻击作者，这仍是一种无力的反对。作者是对还是错，比他的语气重要得多。尤其是鉴于语气是多么难以评判。一个挂着某种观点的粉丝牌子的人可能被一些其他人觉得正常的语气所激怒。&lt;/p&gt;
+
+&lt;p&gt;所以如果你对于一篇文章所能说的最坏的事情就是&lt;strong&gt;诉诸语气&lt;/strong&gt;，那你实在是没说出什么东西来。作者是不是轻佻但是正确？那总好过持重但是错误。如果作者有哪里错了，那就指出到底是哪儿。&lt;/p&gt;
+
+&lt;h2 id=&quot;第-3-层声明异见-contradiction&quot;&gt;第 3 层：声明异见 (Contradiction)&lt;/h2&gt;
+
+&lt;p&gt;这一层次我们终于来到了对说过的内容进行的回应，而不是怎么说的和谁说的。对一个论证的最低层次的回应就是简单陈述相反的论点，没有或只提供很少的支持性证据。&lt;/p&gt;
+
+&lt;p&gt;这一方法经常和第2层结合起来使用，正如：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;无法相信作者竟然用如此傲慢的方式贬低智能设计。智能设计是合理的科学理论。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;声明异见&lt;/strong&gt;有时可能有些威力，有时仅仅让人看见明确声明的反方命题就足以看到反方是正确的。但是通常来说，证据是有帮助的。&lt;/p&gt;
+
+&lt;h2 id=&quot;第-4-层证明异见-counterargument&quot;&gt;第 4 层：证明异见 (Counterargument)&lt;/h2&gt;
+
+&lt;p&gt;到了第4层上，我们终于见到了第一种有说服力的反对形式：&lt;strong&gt;证明异见&lt;/strong&gt;。之前的几种形式通常可以因为啥也没论证而被忽略。&lt;strong&gt;证明异见&lt;/strong&gt;可能会证明某些观点。问题在于，很难说证明的究竟是啥。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;证明异见&lt;/strong&gt;就是在&lt;strong&gt;声明异见&lt;/strong&gt;之外，再加上论证和/或论据。当其针对的是原论点时，这种方式是令人信服的。但是不幸的是，通常情况下&lt;strong&gt;证明异见&lt;/strong&gt;针对的是和原论点稍微有些区别的东西。多数情况下，争论得热火朝天的俩人其实争论的是两件不同的事情。有时他们甚至互相同意对方，但是陷于斗嘴的程度如此之深，以至于没有意识到这一点。&lt;/p&gt;
+
+&lt;p&gt;反对和作者原文有轻微不同的论点也是可能有合理原因的：当你感觉他们没有把握问题的中心的时候就可以这么做。但是当你这么做的时候，应该明确说明你在论证不同的论点。&lt;/p&gt;
+
+&lt;h2 id=&quot;第-5-层驳斥对方-refutation&quot;&gt;第 5 层：驳斥对方 (Refutation)&lt;/h2&gt;
+
+&lt;p&gt;最有说服力的反对形式是&lt;strong&gt;驳斥对方&lt;/strong&gt;。它同样是最罕见的，因为需要最多的工作量。其实，反对的不同层次构成了一种金字塔，层次越高，你能找到的实例就越少。&lt;/p&gt;
+
+&lt;p&gt;要&lt;strong&gt;驳斥&lt;/strong&gt;一个人，你可能得引用他们说过的话。你可能必须找到一件“还热乎着的凶器 (smoking gun)”，一个在你反对的内容中你认为搞错了的东西，然后解释它为什么错了。如果你找不到可以用来反对的实际引用，那么你可能在犯 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E7%A8%BB%E8%8D%89%E4%BA%BA%E8%AB%96%E8%AD%89&quot;&gt;“稻草人谬误”&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;尽管&lt;strong&gt;驳斥对方&lt;/strong&gt;一般包含引用，引用并不必然意味着&lt;strong&gt;驳斥对方&lt;/strong&gt;。有些作者引用部分他们反对的文章的内容，做出合理&lt;strong&gt;驳斥对方&lt;/strong&gt;的样子，然后用第 3 层甚至第 0 层的形式进行回应。&lt;/p&gt;
+
+&lt;h2 id=&quot;第-6-层驳斥对方中心论点&quot;&gt;第 6 层：驳斥对方中心论点&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;驳斥&lt;/strong&gt;的力度取决于你驳斥对方的是什么。最强有力的反对形式就是&lt;strong&gt;驳斥对方的中心论点&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;即便到了第5层，我们偶尔仍能看见故意的智力不诚实 (interlectual dishonesty)&lt;label for=&quot;intellectual-dishoesty&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;intellectual-dishoesty&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;相对于 intellectual honesty, 故意在辩论和推理中使用谬误被称作 intellectual dishonesty, 译作“智力不诚实”。详见维基百科 inteleectual honesty 词条。 &lt;/span&gt;，比如有人挑出一个论证中不重要的点然后把它们&lt;strong&gt;驳斥&lt;/strong&gt;一番。有时这么做的精神让这种反对更像是一种处心积虑的&lt;strong&gt;诉诸身份&lt;/strong&gt;的攻击，而非真正的&lt;strong&gt;驳斥对方&lt;/strong&gt;。比如，纠正某人的语法，或者揪住名字或数字中的小错不放。除非反对的论证实际上依赖于这些错误，否则纠正它们的唯一目的就是损害对手的名誉。&lt;/p&gt;
+
+&lt;p&gt;真正意义上的&lt;strong&gt;驳斥对方&lt;/strong&gt;要求一个人反驳其中心论点，或者至少是其中之一。那意味着一个人必须明确地指出中心论点是什么。所以一个真正有效的&lt;strong&gt;驳斥对方&lt;/strong&gt;看起来就像：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;作者的主要论点似乎是 X。正如他说的：&lt;/p&gt;
+
+  &lt;blockquote&gt;
+    &lt;引用的内容&gt;
+&lt;/引用的内容&gt;
+  &lt;/blockquote&gt;
+
+  &lt;p&gt;但这是错的，原因如下……&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;你引用并指出错误的内容不一定是原作者主要论点的原样陈述，只要批判的是中心论点所依赖的东西就足够了。&lt;/p&gt;
+
+&lt;h2 id=&quot;这样做的意义&quot;&gt;这样做的意义&lt;/h2&gt;
+
+&lt;p&gt;现在我们有了给不同形式的反对进行分类的方法。这有什么好处？这种反对的分级所&lt;strong&gt;不能&lt;/strong&gt;带给我们的，就是判断输赢的方法。反对的不同层次描述的只是一个反对的形式，而不是反对是否正确。一个第 6 层的回应可能仍然是完全错误的。&lt;/p&gt;
+
+&lt;p&gt;但是尽管反对的不同层次没有给一个回复的可信度设定一个下限，但它的确设定了一个上限。一个第 6 层的回应不一定有说服力，但是一个第 2 层的回应一定没有说服力。&lt;/p&gt;
+
+&lt;p&gt;区分不同形式反对的最明显的好处就是帮助人们评估他们所阅读的东西。特别是，这将帮助他们看清的议论。一个雄辩的演讲者或者作家可以给人一种碾压对手的印象，仅仅通过使用强有力的词汇。实际上这可能是一个煽动者的决定性特质。通过辨别不同形式的反对，我们给了批判性阅读者一个图钉，让他们能戳破这种气球。&lt;/p&gt;
+
+&lt;p&gt;这种标签同样能帮助写作者。大多数的智力不诚实是无意的。有些人用&lt;strong&gt;诉诸语气&lt;/strong&gt;的方法批评他反对的观点，可能真的觉得自己言之有物。放大并看清他当时在反对分级上的位置，有可能会启发他尝试进步到&lt;strong&gt;证明异见&lt;/strong&gt;和&lt;strong&gt;驳斥对方&lt;/strong&gt;的层次上去。&lt;/p&gt;
+
+&lt;p&gt;但是好好反对的最大好处并不只是让对话变得更好，而是让被反对的人开心一点。如果你研究对话，会发现第 1 层比第 6 层更加刻薄。当你真的言之有物的时候，大可不必刻薄。实际上，你也不会想这么做。当你真的有观点要表达时，刻薄只能起阻碍作用。&lt;/p&gt;
+
+&lt;p&gt;如果沿着反对的不同层次向上攀登可以让人们不那么刻薄，那将会让大多数人更快乐。多数人并不乐于刻薄，他们这么做只是因为控制不当。&lt;/p&gt;
+
+&lt;p&gt;感谢 Trevor Blackwell 和 Jessica Livingston 阅读这篇文章的草稿。&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate>
+        <link>mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
     
       <item>
         <title>浏览器A到Z</title>
@@ -223,8 +358,8 @@
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/TR-why-physics-is-not-a-discipline</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/TR-why-physics-is-not-a-discipline</guid>
+        <link>mountaye.github.io/blog/articles/TL-why-physics-is-not-a-discipline</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/TL-why-physics-is-not-a-discipline</guid>
         
         
         <category>post</category>
@@ -1874,44 +2009,6 @@ A.&lt;strong&gt;bases&lt;/strong&gt; += (B,)&lt;/p&gt;
         <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
         <link>mountaye.github.io/blog/articles/RP-why-choose-python-1-script</link>
         <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-1-script</guid>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>转载：为什么俺推荐 Python[0]·概述</title>
-        <description>&lt;p&gt;当初博客开张的时候，原计划在编程语言方面聊聊 C++、Java 和 Python。谁曾想半年多过去了，尚未写过 Python 的帖子。实在是说不过去啊！所以今天赶紧写一篇来凑数。&lt;/p&gt;
-
-&lt;p&gt;其实俺接触 Python 的时间，也不算太早（大概是2003年那会儿）。当时看到 Eric Raymond 关于几大编程语言的评价（原文在“这里”，翻译在“这里”），之后又看了他写的《Why Python?》。感觉这位大牛蛮器重 Python 滴，于是俺也就跟风学习了一番。从此一发不可收拾——现在 Python 已然成为俺最常使用的脚本语言了。&lt;/p&gt;
-
-&lt;p&gt;接下来，俺就从几个不同的角度来鼓吹一下 Python。假如你从来没有听说过或者从来没用过此语言，听了俺的忽悠之后，或许会有所心动 :-) 假如你觉得俺只不过是 Python 阵营的枪手，发发广告帖，那你就不用再浪费宝贵的时间去看后续的帖子了。&lt;/p&gt;
-
-&lt;p&gt;按照俺先前的习惯，会把接下来的内容拆成几个帖子来写……&lt;/p&gt;
-
-&lt;p&gt;为了方便阅读，把本系列帖子的目录整理如下（需翻墙）：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/articles/RP-why-choose-python-1-script&quot;&gt;作为脚本语言的 Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/articles/RP-why-choose-python-2-dynamic&quot;&gt;作为动态语言的 Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/articles/RP-why-choose-python-3-oop&quot;&gt;作为面向对象语言的 Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/articles/RP-why-choose-python-4-fp&quot;&gt;作为函数式编程语言的 Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/articles/RP-why-choose-python-5-tool&quot;&gt;作为瑞士军刀的 Python&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;（未完待续）&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;版权声明&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;本博客&lt;label for=&quot;blog&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;blog&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;指编程随想的博客 &lt;/span&gt;所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：&lt;br /&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://program-think.blogspot.com/2009/08/why-choose-python-0-overview.html&quot;&gt;https://program-think.blogspot.com/2009/08/why-choose-python-0-overview.html&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/RP-why-choose-python-0-overview</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/RP-why-choose-python-0-overview</guid>
         
         
         <category>post</category>

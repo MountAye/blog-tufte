@@ -201,6 +201,10 @@
 .postContent ol {
   padding-left: 2em; }
 
+.postContent blockquote {
+  margin-left: 2em;
+  margin-top: 2em; }
+
 .postContent blockquote p {
   text-indent: 2em;
   margin: 0.5em 0em; }
@@ -351,7 +355,7 @@ body {
 
 h1 {
   font-weight: bold;
-  margin-top: 0.8em;
+  margin-top: 1.5em;
   margin-bottom: 0.3em;
   font-size: 2.0em;
   line-height: 1.0em; }
@@ -359,7 +363,7 @@ h1 {
 h2 {
   font-style: bold;
   font-weight: bold;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   margin-bottom: 0;
   font-size: 1.8em;
   line-height: 0.933333333333333; }
@@ -368,7 +372,7 @@ h3 {
   font-style: bold;
   font-weight: bold;
   font-size: 1.5em;
-  margin-top: 0.3em;
+  margin-top: 1em;
   margin-bottom: 0;
   line-height: 1.08888888888889; }
 
@@ -388,9 +392,6 @@ p, li {
   margin-top: 1.1rem;
   padding-right: 2rem;
   vertical-align: baseline; }
-
-blockquote {
-  margin-top: 2em; }
 
 blockquote p,
 blockquote ol,
