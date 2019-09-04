@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>速记：在 VirutalBox 中安装 Arch Linux | 阿掖山：一个博客</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="速记：在 VirutalBox 中安装 Arch Linux" />
+<meta name="author" content="MountAye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="脑子一热买了一台树莓派，只用原装的操作系统有点咸鱼了，决定挑战一下 Arch Linux。既然是 Arch，那么先在虚拟机里试试水就很有必要了。" />
+<meta property="og:description" content="脑子一热买了一台树莓派，只用原装的操作系统有点咸鱼了，决定挑战一下 Arch Linux。既然是 Arch，那么先在虚拟机里试试水就很有必要了。" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/Arch-Linux-in-VirtualBox" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/Arch-Linux-in-VirtualBox" />
+<meta property="og:site_name" content="阿掖山：一个博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-03T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"脑子一热买了一台树莓派，只用原装的操作系统有点咸鱼了，决定挑战一下 Arch Linux。既然是 Arch，那么先在虚拟机里试试水就很有必要了。","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/Arch-Linux-in-VirtualBox"},"@type":"BlogPosting","url":"mountaye.github.io/blog/articles/Arch-Linux-in-VirtualBox","headline":"速记：在 VirutalBox 中安装 Arch Linux","dateModified":"2019-09-03T00:00:00+00:00","datePublished":"2019-09-03T00:00:00+00:00","author":{"@type":"Person","name":"MountAye"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?..."></script>
+  
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">    
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/Arch-Linux-in-VirtualBox">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">人活在世上，有的活成了面子，有的活成了里子，都是时势使然。</span><br>
+        ——<span id="quoteAuthor">《一代宗师》</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">home</a>
+        
+  	
+        
+            <a href="/blog/History/">history</a>
+        
+  	
+        
+            <a href="/blog/Topics/">topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">comments</a>
+        
+  	
+        
+            <a href="/blog/About/">about</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>速记：在 VirutalBox 中安装 Arch Linux</h1>
+        <p class="subtitle">
+            September 3, 2019
+        </p>
+    <div class="postContent">
+        <blockquote>
+  <p>这是一篇速记，相当于实验的原始记录。日后有可能根据这些记录，整理出一些心得体会，或者全流程的教程。</p>
+</blockquote>
+
+<p>第四代树莓派（<a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pi 4</a>）刚刚推出的时候，脑子一热买了一台。作为一台计算机，只用原装的操作系统有点咸鱼了，所以打算安装 Linux 的一款发行版。既然要追求刺激，那就贯彻到底咯，于是就决定挑战一下 Arch Linux。 <del>（反正早晚也要吃灰）</del></p>
+
+<p>既然要挑战一个很有挑战性的操作系统，那么先在虚拟机里试试水就很有必要了。（后来才发现用这个虚拟机往树莓派里写操作系统，也是官方比较推荐的一种安装方式。）于是就开始了这篇速记中的一系列折腾。</p>
+
+<h2 id="我的硬件和软件配置">我的硬件和软件配置</h2>
+
+<ul>
+  <li><strong>硬件</strong>：蓝厂 CPU、绿厂显卡、2*8 GiB 内存、小 SSD + 大 HDD 硬盘、iTX 主板，机龄不到两年，日常可以流畅使用。</li>
+  <li><strong>物理机操作系统</strong>：Windows 10 Pro</li>
+  <li><strong>虚拟机控制软件</strong>：VirtualBox 6.10，短暂用过 5.12 版本</li>
+  <li><strong>虚拟机镜像文件</strong>：Arch Linux 2019.08.01, Windows 10, Fedora 30 Workstation</li>
+</ul>
+
+<h2 id="虚拟机托管软件-virtualbox">虚拟机托管软件 VirtualBox</h2>
+
+<p>可以看一下编程随想的博客里的 <a href="https://program-think.blogspot.com/2012/10/system-vm-0.html">系列文章</a>。</p>
+
+<p>我的手头一直有虚拟机托管软件，但是没有编程随想那样的需求，平时几乎用不到。（用虚拟机学 Linux？你可拉倒吧）不过之前很轻松地装过一些 Linux 的发行版，主要是 Fedora，所以没觉得这部分会有什么问题，直接开始了主线任务：下载 Arch Linux 的安装 ISO 镜像、检查校验和（FCIV，教程可以看 <a href="https://program-think.blogspot.com/2013/02/file-integrity-check.html">这里</a>）、按照官网 <a href="https://wiki.archlinux.org/index.php/Installation_guide">安装指南</a>（<a href="https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">中文</a>）操作，然后发现虚拟机连不上网 :-(</p>
+
+<h3 id="问题虚拟机无法通过-nat-或-nat-network-模式联网">问题：虚拟机无法通过 NAT 或 NAT Network 模式联网</h3>
+
+<p>具体表现为 <code class="highlighter-rouge">ping www.google.com</code> 报错：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> ping archlinux.org
+<span class="c"># Temporary failure in name resolution</span>
+</code></pre></div></div>
+
+<p>此时的网络设置没有修改过，就是几乎没有可选参数的 NAT 模式。</p>
+
+<p>第一反应当然是把报错的信息直接复制粘贴到 Google 里，然后看到了 <a href="https://bbs.archlinux.org/viewtopic.php?id=237461">这个帖子</a>。</p>
+
+<p>回答用一种很有礼貌的方式表述了 RTFM，并给出了官方的 <a href="https://wiki.archlinux.org/index.php/Network_configuration">Network Configuration 页面</a>。</p>
+
+<p>按照这个页面的步骤，因为我的 ISP 给的是动态的 IP，需要用DHCP，DHCP 是啥我都不知道，搞得我跪着下载了编程随想书单里的《Richard Stevens TCP-IP 详解》，解压后看着 3 卷一百多个 PDF 文件，默默关上了资源管理器……</p>
+
+<p>继续变换关键词搜索解决方案，在这期间改动过防火墙设置，又重置了一次；重装了两次旧版本 VirtualBox，因为第一次重装忘记删除配置信息（Windows 10 Pro 在 <code class="highlighter-rouge">%userprofile%\.virtualbox</code>，见<a href="https://superuser.com/a/1429931">这个帖子</a>）；另外装了 Windows 10 和 Fedora 30 两个虚拟机；找来一个玩过 VirtualBox 而且打包票能解决问题的同学。确定了和虚拟机中的操作系统无关，VirtualBox 的 Bridge 桥接模式是可以联网的，但是总不能放任虚拟机的重要联网功能残废着啊 <del>（何况 NAT 模式在多重代理中不可或缺）</del>，还是一筹莫展。</p>
+
+<p>就在折腾了这么几天之后，Windows 推送了一次更新，神奇的一幕发生了！更新之后，不论是 NAT 还是 NAT Network 模式，虚拟机都能正常上网，所以，可能真的是“天下本无事，庸人自扰之”吧……</p>
+
+<p><strong>解决方法：<del>吃饭睡觉打豆豆</del></strong></p>
+
+<h2 id="安装-arch-linux">安装 Arch Linux</h2>
+
+<p>继续按照官方指南进行安装，不得不说这份指南写的真的不好，至少对于新手是不友好的。一个典型的例子就是下面这句：</p>
+
+<blockquote>
+  <p>你需要安装 Linux 引导程序以在安装后启动系统，你可以使用的的引导程序在 <a href="">启动加载器</a> 中，请选择一个并且安装并配置它，比如 <a href="">GRUB</a>。</p>
+</blockquote>
+
+<p>你该怎么办？公布一下正确答案：点击 <code class="highlighter-rouge">GRUB</code> 那个链接，在一众分类中找到适用于你的计算机配置的那一节，目力忽略各种介绍，找到那一两行有用的命令。ε=( o｀ω′)ノ</p>
+
+<p>反正单看这一句，以我的理解能力，我是没办法正常通关，于是就有了下面硬盘格式化的问题。</p>
+
+<h3 id="问题硬盘格式化不正确">问题：硬盘格式化不正确</h3>
+
+<p>我是用 fdisk 进行的硬盘分区，在正常模式之下似乎找不到选择分区类型的选项，所以我的 EFI 分区也被当作了 Linux 文件系统，所以在很多个步骤之后报错，具体的报错信息已经不记得了。</p>
+
+<p>还好在编程随想的博客的评论区里见到过萌狼，一个 Arch Linux 用户，顺手去他家的博客逛了逛，知道他写过一系列关于 Arch 的博客。所以找到了《给 GNU/Linux 萌新的 Arch Linux 安装指南》，于是直接重建了一个空白虚拟机，按照新教程的流程走了一遍。</p>
+
+<p><strong>解决方法：看<a href="https://blog.yoitsu.moe/arch-linux/installing_arch_linux_for_complete_newbies.html">萌狼的安装教程</a>，用 cgdisk 分区</strong></p>
+
+<h3 id="问题开机后显示-uefi-interactive-shell">问题：开机后显示 UEFI interactive shell</h3>
+
+<p>本以为万事大吉，结果卸载掉安装 ISO 之后开机，总是会进入 UEFI interactive shell。输入 <code class="highlighter-rouge">exit</code> 之后重新开始倒计时，然后再次进入这个 shell……</p>
+
+<p>就在写这篇速记的时候，我找到了官方 wiki 的 <a href="https://wiki.archlinux.org/index.php/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%90%AF%E5%8A%A8%E6%97%B6%E8%BF%9B%E5%85%A5%E4%BA%86%E6%95%91%E6%80%A5%E6%8E%A7%E5%88%B6%E5%8F%B0">这个条目</a>，理论上应该是针对这个问题的，但是看一下就知道，并没有提供可操作的解决方案。</p>
+
+<p>通过 STFW，找到了这篇文章：《<a href="https://cli.ee/archlinux-virtualbox">如何在 VirtualBox 内安装 Arch Linux</a>》，里面提到这个问题是由 VirtualBox 的 UEFI 引起的，同时提供了解决方法：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shell&gt; bcfg boot dump <span class="nt">-v</span>              <span class="c"># 查看启动的菜单</span>
+Shell&gt; bcfg boot <span class="nb">rm </span>0                 <span class="c"># 删除光驱启动目录</span>
+Shell&gt; fs0:                           <span class="c"># 进入 EFI 分区</span>
+FS0:<span class="se">\&gt;</span> <span class="nb">ls</span>                             <span class="c"># 查看目录，可以看到 EFI 目录</span>
+FS0:<span class="se">\&gt;</span> <span class="nb">mkdir </span>EFI<span class="se">\b</span>oot                 <span class="c"># 在 EFI 目录下创建子目录</span>
+FS0:<span class="se">\&gt;</span> <span class="nb">ls </span>EFI                         <span class="c"># 查看 EFI 目录，确认是否已创建子目录 boot</span>
+FS0:<span class="se">\&gt;</span> <span class="nb">cp </span>EFI<span class="se">\g</span>rub<span class="se">\g</span>rubx64.efi EFI<span class="se">\b</span>oot<span class="se">\b</span>ootx64.efi <span class="c"># 复制 efi 文件并重命名</span>
+FS0:<span class="se">\&gt;</span> <span class="nb">exit</span>                           <span class="c"># 退出</span>
+</code></pre></div></div>
+
+<p>执行完这一步，开机之后就可以看到 GRUB 的选择操作系统的界面了，因为只安装了 Arch Linux，我们只能看到两个选项，一个 <code class="highlighter-rouge">Arch Linux</code> 正常启动，一个 <code class="highlighter-rouge">Advanced Options for Arch Linux</code>。</p>
+
+<h3 id="问题开机后无法进入图形界面">问题：开机后无法进入图形界面</h3>
+
+<p>本以为万事大吉，结果开机之后选择 <code class="highlighter-rouge">*Arch Linux</code> 选项，屏幕上只剩下两行字，然后没有其他反应。</p>
+
+<p>同样是上网搜了一下，发现如果按下 <code class="highlighter-rouge">Ctrl + Atl + F2</code> 是可以进入命令行模式的，随便执行了几个命令，发现系统工作正常。用 <code class="highlighter-rouge">journalctl</code> 看一下系统日志，发现在最后一段里经常出现高亮的几行里面，都有 <code class="highlighter-rouge">drm</code> 这个关键词，再次搜索，发现是和显卡相关的。因为是在虚拟机里，所以就去 VirtualBox 里康康有啥可能会导致问题的选项。</p>
+
+<p><strong>解决方法：在 VirtualBox 的虚拟机显示设置界面，禁用3D加速</strong></p>
+
+<hr class="slender" />
+
+<p>至此，所有的坑都已经踩完了，开机之后可以看到正常的登录界面，Duang~Duang~~~</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/arch.png" /></figure>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <!-- JavaScript objects are not JSON :-) -->
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = 9;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "大笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/9">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        速记：在 VirutalBox 中安装 Arch Linux - September 3, 2019 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-Popular_GitHub"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/About"><span class="icon-CN_tencent_wechat"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.douban.com/people/Gravitus/"><span class="icon-CN_douban_B"></span></a>
+      </li>
+    
+      <li>
+        <a href="//space.bilibili.com/29132299"><span class="icon-CN_bilibili"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-Popular_RSS"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2019 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted by <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>
