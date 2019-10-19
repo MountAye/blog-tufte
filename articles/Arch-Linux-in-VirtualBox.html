@@ -77,8 +77,8 @@
         <h1 class="sans">阿掖山：一个博客</h1>
     </div>
     <p style="font-size:100%">
-        <span id="quoteLine">人活在世上，有的活成了面子，有的活成了里子，都是时势使然。</span><br>
-        ——<span id="quoteAuthor">《一代宗师》</span><br>
+        <span id="quoteLine">I would be happy if this blog helps you; if it doesn't, I wouldn't be disappointed.</span><br>
+        ——<span id="quoteAuthor">Welcome to this blog</span><br>
         <span id="quoteLink"></span>
     </p>
     <nav class="group">
@@ -197,7 +197,8 @@
 
 <p>通过 STFW，找到了这篇文章：《<a href="https://cli.ee/archlinux-virtualbox">如何在 VirtualBox 内安装 Arch Linux</a>》，里面提到这个问题是由 VirtualBox 的 UEFI 引起的，同时提供了解决方法：</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shell&gt; bcfg boot dump <span class="nt">-v</span>              <span class="c"># 查看启动的菜单</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Shell&gt; bcfg boot dump <span class="nt">-v</span>              <span class="c"># 查看启动的菜单</span>
 Shell&gt; bcfg boot <span class="nb">rm </span>0                 <span class="c"># 删除光驱启动目录</span>
 Shell&gt; fs0:                           <span class="c"># 进入 EFI 分区</span>
 FS0:<span class="se">\&gt;</span> <span class="nb">ls</span>                             <span class="c"># 查看目录，可以看到 EFI 目录</span>

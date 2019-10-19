@@ -212,19 +212,20 @@
   font-weight: bold; }
 
 .postContent a:hover {
-  font-weight: normal;
   text-decoration: underline; }
 
-blockquote, .highlighter-rouge {
+.postContent > blockquote, .postContent .highlighter-rouge, .postContent > p, .postContent > footer, .postContent > div.table-wrapper, .postContent > div.mathblock {
   width: 65%; }
 
 blockquote {
-  background-color: #fffff8;
+  background-color: #fffff0;
   border-left: solid thick #1560bd;
   padding: 1em 0em; }
 
 .highlighter-rouge {
-  background-color: #aaaaaa; }
+  color: #a00000;
+  background-color: #fffff0;
+  padding: 0em 0.5em; }
 
 .ghComment {
   margin-left: 65px; }
@@ -356,7 +357,6 @@ body {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10%;
   font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   background-color: #f8f8f8;
   color: #111;
@@ -506,7 +506,7 @@ ul {
   list-style-type: circle; }
 
 ul, ol {
-  width: 100%;
+  width: inherit;
   -webkit-padding-start: 0%;
   -webkit-padding-end: 0%;
   list-style-position: inside; }
@@ -575,9 +575,6 @@ blockquote .sidenote, blockquote .marginnote {
   content: counter(sidenote-counter) ". ";
   color: #1560bd;
   top: 0rem; }
-
-p, footer, div.table-wrapper, div.mathblock {
-  width: 65%; }
 
 div.table-wrapper {
   overflow-x: auto; }
