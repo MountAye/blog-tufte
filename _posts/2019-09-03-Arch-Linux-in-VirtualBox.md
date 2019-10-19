@@ -76,7 +76,8 @@ milestoneID: 9
 
 通过 STFW，找到了这篇文章：《[如何在 VirtualBox 内安装 Arch Linux](https://cli.ee/archlinux-virtualbox)》，里面提到这个问题是由 VirtualBox 的 UEFI 引起的，同时提供了解决方法：
 
-``` bash
+```bash
+
 Shell> bcfg boot dump -v              # 查看启动的菜单
 Shell> bcfg boot rm 0                 # 删除光驱启动目录
 Shell> fs0:                           # 进入 EFI 分区

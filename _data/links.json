@@ -1,0 +1,58 @@
+[
+  {
+    "id": "yoitsu",
+    "name": "ホロ",
+    "avatar": "https://blog.yoitsu.moe/theme/images/wiki.png",
+    "url": "https://blog.yoitsu.moe",
+    "signature": "「虽然咱长久以来被尊为神，且被束缚在这块土地上，但咱根本不是什么伟大的神。咱就是咱。咱是赫萝。」",
+    "introduction": "Arch Linux 用户，赞同自由软件精神。多亏了他(?)的博文<a href='https://blog.yoitsu.moe/arch-linux/installing_arch_linux_for_complete_newbies.html'>《给 GNU/Linux 萌新的 Arch Linux 安装指南》</a>，我才能在虚拟机中成功安装 Arch Linux. 特在此链接，以示感谢。",
+    "category": ["技术"]
+  },
+  {
+    "id": "farseerfc",
+    "name":"Farseerfc",
+    "avatar":"https://farseerfc.me/../images/avatar.jpg",
+    "url":"https://farseerfc.me",
+    "introduction":"Arch Linux 受信任用户。多亏了他(?)的博文<a href='https://farseerfc.me/github-issues-as-comments.html'>《啓用 GitHub Issue 作爲博客留言系統 》</a>，本博客才能使用 GitHub Issue 作为留言系统。特在此链接，以示感谢。",
+    "category": ["技术"]
+  },
+  {
+    "id":"luchanghai",
+    "name": "卢昌海个人主页",
+    "avatar": "https://www.changhai.org/favicon.ico",
+    "url": "https://www.changhai.org/",
+    "introduction": "科普作家卢昌海先生的个人主页，内容包括科学与技术相关的科普文章、科学史故事、以图集搭配少量解说为特色的游记、少量的翻译作品、其本人新浪微博的定期汇总等。卢先生之才华，国内物理学界闻名。本科就读于复旦大学物理系，据说通过了四大力学的免修考试，后在CUSPA考试中以惊人优异的成绩被哥伦比亚大学物理系博士录取。然毕业后未就职于学界，遂有志愿和精力从事科学相关的写作。其专业背景保证了作品的正确性和科学含量，其文笔准确严谨而不失美感与幽默，思路合于逻辑而不落死板之窠臼，修辞立乎诚，颇有可读性。其中众多文章或应商业杂志约稿，或已结集出版，但仍可于个人主页免费阅读全文。",
+    "category": ["科学","历史"]
+  },
+  {
+    "id":"ruanyifeng",
+    "name": "阮一峰的网络日志",
+    "avatar": "https://www.ruanyifeng.com/blog/images/person_shot.jpg",
+    "url": "https://www.ruanyifeng.com/blog/",
+    "introduction": "阮一峰先生的个人网站，其网络日志部分人气颇高，早期内容包括翻译、时事评论等，目前内容侧重于 IT 方面的入门级教程，每周更新一篇汇总科技新闻的《科技爱好者周刊》。",
+    "category": ["技术","文艺","时事"]    
+  },
+  {
+    "id":"coolshell",
+    "name": "酷 壳 - CoolShell",
+    "avatar": "https://coolshell.cn/coolshell_logo.png",
+    "url": "https://coolshell.cn/",
+    "introduction": "软件工程师陈皓的博客",
+    "category":["技术"]
+  },
+  {
+    "name": "当然我在扯淡",
+    "url": "http://www.yinwang.org/",
+    "introduction": "王垠的博客",
+    "category": ["技术"]
+  },
+  {
+    "id": "programthink",
+    "name": "编程随想的博客",
+    "avatar": "https://lh4.googleusercontent.com/-Wxl9HaDj1-I/SYPJWMNM65I/AAAAAAAAAcc/FjINutqB9_I/ThinkerSmall.jpg",
+    "url": "https://program-think.blogspot.com/",
+    "signature": "提升思维能力、普及政治常识、各种翻墙姿势、党国的阴暗面、网络安全知识、软件开发技术",
+    "introduction": "建立在 BlogSpot 上的一个博客，作者是一名匿名黑客。早期文章以 IT 为主要侧重点，随着中国网络防火墙的从无到有，从弱到强，写作内容的重点转移到政治类话题，IT 类文章也更侧重于信息安全领域。博客的评论区允许匿名发言。",
+    "category": ["政治","技术","时事"]
+  }
+]

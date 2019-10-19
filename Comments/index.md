@@ -20,7 +20,9 @@ milestoneID: 3
 除此之外，建议阅读以下三篇文章：
 
 1. 关于提问：[https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)
-2. 关于反驳：[http://www.paulgraham.com/disagree.html](http://www.paulgraham.com/disagree.html) <br>中文版：[https://mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree](https://mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree)
+2. 关于反驳：
+    - 英文版：[http://www.paulgraham.com/disagree.html](http://www.paulgraham.com/disagree.html)
+    - 中文版：[https://mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree](https://mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree)
 3. 关于言论自由：[https://program-think.blogspot.com/2014/02/freedom-of-speech.html](https://program-think.blogspot.com/2014/02/freedom-of-speech.html)
 
 {% include comments.html %}

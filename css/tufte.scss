@@ -42,17 +42,19 @@ nav_exclude: true
 .postContent blockquote p { text-indent: 2em;
                             margin: 0.5em 0em;}
 .postContent a { font-weight: bold }
-.postContent a:hover {  font-weight: normal;
-                        text-decoration: underline }
+.postContent a:hover { text-decoration: underline }
 
-blockquote, .highlighter-rouge { width:65%; }
+.postContent > blockquote, .postContent .highlighter-rouge, .postContent > p, .postContent > footer, .postContent > div.table-wrapper, .postContent > div.mathblock{ width: 65%; }
+
 blockquote {
-  background-color: #fffff8;
+  background-color: #fffff0;
   border-left: solid thick $contrast-color;
   padding: 1em 0em; 
 }
 .highlighter-rouge {
-  background-color: #aaaaaa;
+  color: $important-color;
+  background-color: #fffff0;
+  padding: 0em 0.5em
 }
 
 .ghComment { margin-left: 65px; }
@@ -158,7 +160,6 @@ p > a { @if $link-style == underline
 body { width: 90%;
        margin-left: auto;
        margin-right: auto;
-       padding-left: 10%;
        font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
        background-color: $bg-color;
        color: $text-color;
@@ -202,7 +203,7 @@ p, ol, ul { font-size: 1.4rem; }
 
 p, li { line-height: 1.5em;
         margin-top: 1.1rem; //modified by MountAye
-        padding-right: 2rem; //removed because,  why?
+        padding-right: 2rem; //removed because, why?
         vertical-align: baseline; }
 
 
@@ -292,7 +293,7 @@ ul {
   list-style-type: circle;
 }
 
-ul,ol { width: 100%;
+ul,ol { width: inherit;
      -webkit-padding-start: 0%;
      -webkit-padding-end: 0%;
      list-style-position: inside;
@@ -351,8 +352,6 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -60% } // modified 
 .sidenote:before { content: counter(sidenote-counter) ".\000a0"; // this is unicode for a non-breaking space
                    color: $contrast-color;
                    top: 0rem; } //removed superscripting for numerical reference in sidenote
-
-p, footer, div.table-wrapper, div.mathblock{ width: 65%; }
 
 div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
