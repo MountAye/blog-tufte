@@ -41,7 +41,9 @@
     "category":["技术"]
   },
   {
+    "id":"yinwang",
     "name": "当然我在扯淡",
+    "avatar":"https://www.yinwang.org/images/Yc.jpg",
     "url": "http://www.yinwang.org/",
     "introduction": "王垠的博客",
     "category": ["技术"]

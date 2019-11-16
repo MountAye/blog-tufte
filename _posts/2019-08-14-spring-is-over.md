@@ -12,7 +12,7 @@ milestoneID: X
 
 这次的照片拍的是樱花，恰是在一片粉红和满树新绿之间，两种色彩分庭抗礼的时候，摄于四月的第一个周末。这里今年的春天来得晚很多，往年三月中上旬的时候就有如此景象了。
 
-{% maincolumn "assets/photos/190811spring_final.png" "绿肥红瘦" %}
+{% maincolumn "assets/photos/2019-08-11_spring-final.png" "绿肥红瘦" %}
 
 ```
 
@@ -28,7 +28,7 @@ milestoneID: X
 
 不过也有例外，图中的樱花树顺着路往西站到了化学系楼前一小片草地上。这里到校园边缘有一段海拔上的落差，为轮椅铺设的坡道蜿蜒而下，从坡下仰视樱花树，别有一番气势。身后的树木高大且尚未发芽，既可以填补背景，不至于过分空旷，又不会喧宾夺主。本来打算用 a7iii 来拍，但是 35 定和套头的感觉都不太对，所以用了手机。
 
-{% maincolumn "assets/photos/190811spring_compare.png" "前后对比" %}
+{% maincolumn "assets/photos/2019-08-11_spring-compare.png" "前后对比" %}
 ```
 上图为原图直出，下图为调色后的效果
 ```
