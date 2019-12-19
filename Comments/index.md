@@ -25,4 +25,12 @@ milestoneID: 1
     - 中文版：[https://mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree](https://mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree)
 3. 关于言论自由：[https://program-think.blogspot.com/2014/02/freedom-of-speech.html](https://program-think.blogspot.com/2014/02/freedom-of-speech.html)
 
+<hr class="slender">
+
+刚刚发现了一个问题，只有 repo 的所有者才能给一个 issue 添加 milestone 的分类。也就是说对于一般读者，即便跳转到对应的 milestone 页面去留言，新产生的 issue 也依然是没有 milestone 的，需要由我手动分类。<br>
+ε=( o｀ω′)ノ
+
+作为临时的权宜之计，希望大家在 issue 的开头写明评论的对象，谢谢。<br>
+(●'◡'●)
+
 {% include comments.html %}
