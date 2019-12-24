@@ -4,6 +4,7 @@ layout: default
 ---
 
 <article class="">
+    
 <ul class="content-listing">
     {% assign post0 = site.posts[0] %}
     <li class="listing">
@@ -15,12 +16,9 @@ layout: default
         <br>
         <span class="smaller">{{ post0.date | date: "%B %-d, %Y" }}</span>  <br />
         <div>{{ post0.excerpt }}</div>
-        <hr class="slender">
     </li>
-    
 </ul>
 
-<h3 class="content-listing">更多文章</h3>
 <ul class="content-listing">    
     <hr class="slender">
     {% for i in (1..5) %}
@@ -32,4 +30,12 @@ layout: default
         </li>
     {% endfor %}
 </ul>
+
+<ul class="content-listing">
+    <hr class="slender">
+    {% assign msg0 = site.data.messages[0] %}
+    <p>{{ msg0.text }}</p>
+    <p>——{{ msg0.date }}</p>
+</ul>
+
 </article>
