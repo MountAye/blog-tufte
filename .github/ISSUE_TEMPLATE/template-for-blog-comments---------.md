@@ -10,7 +10,7 @@ assignees: ''
 
 > 因为只有 repo 的所有者才能给一个 `issue` 添加 `milestone` 的分类，所以一般读者即便跳转到对应的 milestone 页面去留言，新产生的 issue 也依然是没有 milestone 的，需要由我手动分类。
 >
-> Since users other than the owner of this repository cannot label the `milestone` of an `issue`,
+> Since users other than the owner of this repository cannot assign an `issue` to a `milestone`,
 >
 > 作为临时的权宜之计，希望大家：
 >
