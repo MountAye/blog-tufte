@@ -19,18 +19,18 @@ milestoneID: 1
 
 除此之外，建议阅读以下三篇文章：
 
-1. 关于提问：[https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)
-2. 关于反驳：
+1. 关于言论自由：[https://program-think.blogspot.com/2014/02/freedom-of-speech.html](https://program-think.blogspot.com/2014/02/freedom-of-speech.html)
+2. 关于提问：[https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)
+3. 关于反驳：
     - 英文版：[http://www.paulgraham.com/disagree.html](http://www.paulgraham.com/disagree.html)
     - 中文版：[https://mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree](https://mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree)
-3. 关于言论自由：[https://program-think.blogspot.com/2014/02/freedom-of-speech.html](https://program-think.blogspot.com/2014/02/freedom-of-speech.html)
 
 <hr class="slender">
 
-刚刚发现了一个问题，只有 repo 的所有者才能给一个 issue 添加 milestone 的分类。也就是说对于一般读者，即便跳转到对应的 milestone 页面去留言，新产生的 issue 也依然是没有 milestone 的，需要由我手动分类。<br>
+GitHub 有一个设定，只有 repo 的所有者才能给一个 issue 添加 milestone 的分类。也就是说对于一般读者，即便跳转到对应的 milestone 页面去留言，新产生的 issue 也依然是没有 milestone 的，需要由我手动分类。<br>
 ε=( o｀ω′)ノ
 
-作为临时的权宜之计，希望大家在 issue 的开头写明评论的对象，谢谢。<br>
+作为临时的权宜之计，希望大家在 `issue` 的标题的方括号【】内写明文章对应的 `Milestone` 编号，谢谢。<br>
 (●'◡'●)
 
 {% include comments.html %}

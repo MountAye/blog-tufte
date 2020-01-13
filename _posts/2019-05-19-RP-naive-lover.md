@@ -1,6 +1,6 @@
 ---
 layout:  post
-title:   转载：青涩的爱人
+title:   转载 | 青涩的爱人
 keywords: "转载, 草榴, 青涩, 爱情, 爱人"
 excerpt: 一篇情色文章，转自草榴社区。
 date:    2019-05-20

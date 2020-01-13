@@ -1,6 +1,6 @@
 ﻿---
 layout:  post
-title:   转载：为什么俺推荐 Python[1]·作为脚本语言的 Python
+title:   转载 | 为什么俺推荐 Python[1]·作为脚本语言的 Python
 keywords: "转载, 编程随想, IT, 编程, python, 脚本"
 excerpt: 俺窃以为，Python 的所有特征中，作为脚本语言是它的首要特征。因此，在本系列帖子中，俺首先来忽悠一下 Python 作为脚本语言，有些啥好处
 categories: post

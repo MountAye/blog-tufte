@@ -1,6 +1,6 @@
 ---
 layout:  post
-title:   浏览器A到Z
+title:   有趣 | 浏览器A到Z
 keywords: "游记,图集"
 excerpt: 人类的本质就是复读机。
 date:    2019-08-16

@@ -1,6 +1,6 @@
 ﻿---
 layout:  post
-title:   转载：为什么俺推荐 Python[0]·概述
+title:   转载 | 为什么俺推荐 Python[0]·概述
 keywords: "转载, 编程随想, IT, 编程, python"
 excerpt: 从几个不同的角度来鼓吹一下 Python。
 date:    2019-02-07

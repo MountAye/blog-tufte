@@ -1,6 +1,6 @@
 ﻿---
 layout:  post
-title:   转载：为什么俺推荐 Python[5]·作为瑞士军刀的 Python
+title:   转载 | 为什么俺推荐 Python[5]·作为瑞士军刀的 Python
 keywords: "转载, 编程随想, IT, 编程, python, 瑞士军刀, 语言整合, 跨平台, 第三方"
 excerpt: 拿“瑞士军刀”来比喻 Python 就是想说明：Python 不但短小精悍，而且功能强大。今天就来介绍一下 Python 的这两个特点（尤其是后者）。
 date:    2019-02-07
