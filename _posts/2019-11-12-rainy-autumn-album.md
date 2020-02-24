@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:      "图集 | 清秋须兼细雨"
+title:      ".png | 清秋须兼细雨"
 keywords:   "album, autumn, rain"
 excerpt:    "掐指一算，“摄记”系列已经有快三个月没有更新了……"
 date:        2019-11-14

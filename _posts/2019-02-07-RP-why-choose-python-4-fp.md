@@ -1,6 +1,6 @@
 ﻿---
 layout:  post
-title:   转载 | 为什么俺推荐 Python[4]·作为函数式编程语言的 Python
+title:   .html | 转载：为什么俺推荐 Python[4]·作为函数式编程语言的 Python
 keywords: "转载, 编程随想, IT, 编程, python, 函数式编程, 控制流, 闭包"
 excerpt: 聊一聊 Python 作为“函数式编程”（以下简称 FP）语言的特点。考虑到本系列面向的是 Python 的门外汉或刚入门的新手，故本文仅介绍若干浅显的 FP 特性。
 categories: post

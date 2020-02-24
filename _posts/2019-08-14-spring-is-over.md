@@ -1,6 +1,6 @@
 ---
 layout:  post
-title:   摄记 | 春天已经走远
+title:   .png | 春天已经走远
 keywords: "摄影"
 excerpt: 这次的照片拍是樱花，恰是在一片粉红和满树新绿之间，两种色彩分庭抗礼的时候
 date:    2019-08-14

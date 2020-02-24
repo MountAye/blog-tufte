@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:      "读方孝孺《豫让论》"
+title:      ".pdf | 读方孝孺《豫让论》"
 keywords:   "读书、历史"
 excerpt:    "本文包含关于令人不适的描写以及明史，阅读请慎重。"
 date:        2020-01-13
