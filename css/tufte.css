@@ -357,7 +357,7 @@ body {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, NSimSun, STSong, serif;
   background-color: #f8f8f8;
   color: #111;
   max-width: 1400px;
