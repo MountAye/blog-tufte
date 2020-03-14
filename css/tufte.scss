@@ -160,7 +160,7 @@ p > a { @if $link-style == underline
 body { width: 90%;
        margin-left: auto;
        margin-right: auto;
-       font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+       font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, NSimSun, STSong, serif;
        background-color: $bg-color;
        color: $text-color;
        max-width: 1400px;
