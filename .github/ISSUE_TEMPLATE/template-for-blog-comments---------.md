@@ -2,7 +2,7 @@
 name: Template for Blog Comments | 博客评论模板
 about: 请阅读模板正文中的内容
 title: "【##】XXXX"
-labels: 新留言
+labels: new
 assignees: ''
 
 ---
