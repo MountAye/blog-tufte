@@ -1,0 +1,10 @@
+name: Label Issues with Milestones
+on: 
+  issues:
+    type: [opened, reopened, edited]
+jobs:
+  milstone:
+    runs-on: ubuntu-latest
+    steps:
+      - name: milestone
+        uses: MountAye/action-milestone
