@@ -1,0 +1,79 @@
+[
+  {
+    "name":"",
+    "link":"",
+    "introduction":"",
+    "category":""
+  },
+  {
+    "name": "卢昌海个人主页",
+    "link": "https://www.changhai.org/",
+    "introduction": "科普作家卢昌海先生的个人主页，内容包括科学与技术相关的科普文章、科学史故事、以图集搭配少量解说为特色的游记、少量的翻译作品、其本人新浪微博的定期汇总等。卢先生之才华，国内物理学界闻名。本科就读于复旦大学物理系，据说通过了四大力学的免修考试，后在CUSPA考试中以惊人优异的成绩被哥伦比亚大学物理系博士录取。然毕业后未就职于学界，遂有志愿和精力从事科学相关的写作。其专业背景保证了作品的正确性和科学含量，其文笔准确严谨而不失美感与幽默，思路合于逻辑而不落死板之窠臼，修辞立乎诚，颇有可读性。其中众多文章或应商业杂志约稿，或已结集出版，但仍能于个人主页免费阅读全文，值得感谢。",
+    "category": ["科学","历史"]
+  },
+  {
+    "name": "编程随想的博客",
+    "link": "https://program-think.blogspot.com/",
+    "introduction": "",
+    "category": ["政治","技术","时事"]
+  },
+  {
+    "name": "阮一峰的网络日志",
+    "link": "https://www.ruanyifeng.com/blog/",
+    "introduction": "",
+    "category": ["技术","文艺","时事"]    
+  },
+  {
+    "name": "酷 壳 - CoolShell",
+    "link": "https://coolshell.cn/",
+    "introduction": "软件工程师陈皓的博客",
+    "category":["技术"]
+  },
+  {
+    "name": "可能吧",
+    "link": "https://kenengba.com/",
+    "introduction": "",
+    "category": ["时事"]
+  },
+  {
+    "name": "当然我在扯淡",
+    "link": "http://www.yinwang.org/",
+    "introduction": "王垠的博客",
+    "category": ["技术"]
+  },
+  {
+    "name": "中科院物理所",
+    "link": "QRcode",
+    "QRcode": "",
+    "introduction":"",
+    "category":["科学"]
+  },
+  {
+    "name": "知识分子",
+    "link": "QRcode",
+    "QRcode": "",
+    "introduction":"",
+    "category":["科学"]
+  },
+  {
+    "name": "环球科学",
+    "link": "QRcode",
+    "QRcode": "",
+    "introduction":"",
+    "category":["科学"]
+  },
+  {
+    "name": "返朴",
+    "link": "QRcode",
+    "QRcode": "",
+    "introduction":"",
+    "category":["科学"]
+  },
+  {
+    "name": "",
+    "link": "QRcode",
+    "QRcode": "",
+    "introduction":"",
+    "category":["科学"]
+  }
+]

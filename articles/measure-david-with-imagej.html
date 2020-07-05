@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>.ijm 用 ImageJ 给大卫量尺寸 | 阿掖山：一个博客</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content=".ijm 用 ImageJ 给大卫量尺寸" />
+<meta name="author" content="MountAye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="用 ImageJ 测量大卫雕像的丁丁长度" />
+<meta property="og:description" content="用 ImageJ 测量大卫雕像的丁丁长度" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/measure-david-with-imagej" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/measure-david-with-imagej" />
+<meta property="og:site_name" content="阿掖山：一个博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-28T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"用 ImageJ 测量大卫雕像的丁丁长度","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/measure-david-with-imagej"},"@type":"BlogPosting","url":"mountaye.github.io/blog/articles/measure-david-with-imagej","headline":".ijm 用 ImageJ 给大卫量尺寸","dateModified":"2020-04-28T00:00:00+00:00","datePublished":"2020-04-28T00:00:00+00:00","author":{"@type":"Person","name":"MountAye"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?..."></script>
+  
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">    
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/measure-david-with-imagej">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">I would be happy if this blog helps you; if it doesn't, I wouldn't be disappointed.</span><br>
+        ——<span id="quoteAuthor">Welcome to this blog</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">home</a>
+        
+  	
+        
+            <a href="/blog/History/">history</a>
+        
+  	
+        
+            <a href="/blog/Topics/">topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">comments</a>
+        
+  	
+        
+            <a href="/blog/About/">about</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>.ijm | 用 ImageJ 给大卫量尺寸</h1>
+        <p class="subtitle">
+            April 28, 2020
+        </p>
+    <div class="postContent">
+        <p>前两天看果壳，推送的头条是《古代雕塑的丁丁真的都（像大卫）那么小吗？》，为了立论，作者根据图片测量了大卫像的丁丁长度，虽不十分精确，但是好歹有个定量的结果——“4厘米不到”，还给出了使用的工具——ImageJ。</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25_guokr-quote.png" /></figure>
+
+<p>怎么做到的，咱也来试试？</p>
+
+<h2 id="imagej-是啥"><code class="highlighter-rouge">ImageJ</code> 是啥？</h2>
+
+<p>上一篇文章（<a href="/blog/articles/raw-image-or-not">《“你这是不是原图直出啊？”》</a>）我们提到了，专业相机可以记录 RAW 格式的图片，这类图片包含的信息比平时常见的图片更多，也需要专门的软件进行处理。不只是消费者水平的相机，实验室里的显微镜、CT机都可以看作是特殊的照相机，它们产生的图像自然也需要专业的软件来读取和处理。</p>
+
+<p>ImageJ 就是这样一款软件。相比于直接使用编程语言（比如 MATLAB，python 的 scikit-image 模块），它提供的方框、多边形、椭圆选区工具，直接用编程语言来替代的话要麻烦许多；而且各种操作的结果都可以几乎实时地反馈在画面上，不需要一遍又一遍地 <code class="highlighter-rouge">imshow()</code>。</p>
+
+<p>ImageJ 用 Java 写成，所以跨平台的表现一致，<del>用户界面有一股浓郁的 Windows 95 风味，而且在 MacOS 上也一样，Windows 用户幸灾乐祸中</del>。代码开源在 GitHub，免费，能让用户知道自己的每个操作究竟在干啥，而且可以自己开发拓展功能，打包成第三方的发行版。我们今天要用的 Fiji，就是一个集成了很多常见拓展功能的 ImageJ 发行版。</p>
+
+<h2 id="具体怎么量">具体怎么量？</h2>
+
+<p>先简单列举一下步骤，详细介绍在后面：</p>
+
+<ul>
+  <li>下载大卫像的正面照。</li>
+  <li>运行 <code class="highlighter-rouge">ImageJ</code>，打开图片。</li>
+  <li>复制图片，防止我们的操作改变原始数据。</li>
+  <li>用矩形选择框选定大卫像从头到脚的区域，记录选择框的高度。</li>
+  <li>用 <code class="highlighter-rouge">Analyze -&gt; Set Scale</code> 工具确定像素和厘米的换算关系。</li>
+  <li>用直线工具画出要测量的距离，从主面板读取长度。</li>
+  <li>用 <code class="highlighter-rouge">Analyze -&gt; Tools -&gt; Scale Bar...</code> 绘制比例尺。</li>
+</ul>
+
+<p>如果你看到这么简略的介绍就能脑补出如何操作，那么就可以 <del>（关掉这篇文章）</del> 跳过下面的详细介绍了。</p>
+
+<p>我们使用的照片来自维基百科的“大卫像”汉语词条，图片作者是 Jörg Bittner Unna，根据 CC-BY-3.0 协议共享。我们下载的是中等尺寸（480×720）的图片：</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25-david.jpg" /></figure>
+
+<p>鼠标右键单击画中的任意一点，在弹出的菜单中选择 <code class="highlighter-rouge">Duplicate</code>，在对话框中选确定，这样我们就得到一张原图的副本。之后的所有操作都在这个副本上进行，这样即便有任何操作失误，对副本做出了不可逆转的伤害，都不会影响到我们的原始数据。如果数据的安全和完整得不到保证，无意之失叫做学术错误，有意为之叫做学术造假。</p>
+
+<p>选择工具栏中的矩形选择框（图中主面板左一的阴影按钮），在图中画出一个矩形，上下边分别是大卫像的头顶和脚底，<strong>画完后鼠标不要乱动</strong>，然后在主面板的底部读出高度 <code class="highlighter-rouge">h=595</code>，此处的单位是像素：</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25_find-height.png" /></figure>
+
+<p>点击主面板的 <code class="highlighter-rouge">Analyze</code> 按钮，在下拉菜单中找到 <code class="highlighter-rouge">Set Scale</code>，在弹出的对话框中，<code class="highlighter-rouge">Distance in pixels</code> 填入我们读出的 595 像素，<code class="highlighter-rouge">Known distance</code> 和 <code class="highlighter-rouge">Unit of length</code> 填入作者假设的 150 cm：</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25_set-scale.png" /></figure>
+
+<p>然后就可以开始正式的测量了。再次使用矩形选择工具，<strong>画完后鼠标不要乱动</strong>，主面板底端的 <code class="highlighter-rouge">length=20.93</code> 就是以 cm 为单位的距离了：</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25_measure-head.png" /></figure>
+
+<p>丁丁可以选中直线工具（左起第五个），用鼠标拖拽的方法画线，主面版的底端也会显示结果。</p>
+
+<p>量完之后，要想方便他人，可以在图上画出比例尺。再次点击主面板的 <code class="highlighter-rouge">Analyze</code> 按钮，在下拉菜单中找到 <code class="highlighter-rouge">Tools</code>，然后找到 <code class="highlighter-rouge">Set Scale</code>，在弹出的对话框里选择合适的选项，然后点击确定，就可以在画面中添加一个比例尺：</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25_menu-scale-bar.png" /></figure>
+
+<p>如果对操作满意的话，就可以保存图片了。<del>（我对这个结果不满意，所以直接没有保存就退出了。）</del> 原图没有改动，可以直接关闭，软件应该也不会发表反对 <del>（通知书）</del> 对话框。</p>
+
+<h2 id="量出来个几">量出来个几？</h2>
+
+<p>我们的截图显示，按照 150 厘米的身高，大卫的头颅对应的长度是 20.92 厘米。</p>
+
+<p>对于丁丁，由于图片中的阴影部分对起止点的认定有很大的干扰作用，几次测量的结果都不相同，最小值是 3.91 厘米，最大值是 4.45 厘米。</p>
+
+<h2 id="这么量对吗">这么量对吗？</h2>
+
+<p>我们的结果和原文有一定不同，但处于同一数量级 <del>（废话）</del>。由于原文并没有介绍自己使用的数据来源，原文中的图片本身并不适合测量这个数据（下面会讨论），而且还给关键区域加了遮挡，所以我们无从比较两个结果的差异。</p>
+
+<p>对于我们自己的测量，我们可以对如下几个误差来源进行讨论：</p>
+
+<ul>
+  <li>相机视差</li>
+  <li>深度误差</li>
+  <li>关于大卫身高的假设</li>
+</ul>
+
+<h3 id="相机视差">相机视差</h3>
+
+<p>我们在几何光学里学的相机成的是倒立的实像，物高和像高之间的关系按照牛顿公式取决于物距、像距、透镜的焦距等等知识，都用到了“傍轴条件”这一假设。换句话说，考虑的都是理想状态，要想满足这种理想状态，基本相当于要求镜片的直径无限大，厚度无限小，焦距还可以是任意值。</p>
+
+<p>我们的相机显然不满足这种理想状态（简单证明，理想状态下大卫像和后面的墙壁显然不可能同时被同一个透镜组严格地在同一个平面上成像）。景深范围内，不同深度的物体都可以在图中成像，但是存在着透视关系。同样长度的物体，在不同的深度下，在图片上的成像的长度不同；在画面中央的长度，和在画面边缘时的成像长度也不同。B 站里的摄影师们拍小姐姐的时候，脸尽量靠近画面中间，腿一般出现在画面边缘，就是利用广角镜头的透视效应。</p>
+
+<p>我们的照片目测是用中长焦镜头拍摄的，透视变形不是很明显，但是在测量雕像身高的时候还是遇到了困难，我们用的是脚尖到头顶的距离，如果取脚的中间的话结果就会短一些。</p>
+
+<h3 id="深度误差">深度误差</h3>
+
+<p>我们的照片是二维的，所以之前的测量，相当于假设被测距离的起点和终点在同一深度上。如果两点之间有一个深度差，那么测量线、深度差、实际距离三条线会构成一个直角三角形，实际距离需要按照勾股定理进行计算。我们这里得不到深度差，所以这一误差就成了一个系统误差，而且是有偏 (biased) 的，真实结果不小于测量值。</p>
+
+<p>我们选取的照片几乎平视着整座雕像，尤其是我们比较关注的部位，所以深度差几乎可以忽略；果壳提供的图片是仰视的，所以如果这就是测量所用的照片的话，误差应该比我们更大。当然了，还是由于作者没有公布数据和方法，以及原文中图片有马赛克，这种比较没有意义。</p>
+
+<h3 id="关于大卫身高的假设">关于大卫身高的假设</h3>
+
+<p>开头的文章截图已经给出了将大卫像对应的身高定为 150 cm 的理由，我们来看一下，这个理由成立吗？</p>
+
+<p>文中说“这相当于现代12岁男童的平均身高”，但是米开朗基罗真的是以 12 岁的人体为原型来创作的吗？我们为什么量了一下大卫的头高呢？是为了算头身比。大卫像头身比是 1:7.5，这已经几乎是一个成年人的比例了。艺术作品为了凸显对象的某些特点和气质，某些特点不符合原型的设定，这在艺术上是完全可能而且可以接受的。《红楼梦》书中的绣像，后来的电视剧中演员的服化道，几乎都比原书的年龄设定更成熟。</p>
+
+<p>像是某一器官的大小，其衡量标准应该是相对于某个基准的（比如体长）的比值，也就是一个无量纲的量。像是4厘米这种带有长度量纲的量，虽然的确是能比一个比例更容易让人有直观的感受，但是结论很容易因为对身高的质疑而动摇。</p>
+
+<p>最后，我觉得最致命的一个问题是，大卫像其实是文艺复兴时期的作品，和罗马仿希腊的艺术品一样，是一个其他文明模仿希腊的产物，而且模仿的过程中融入了很多近代人文主义的精神。这一题材也并非来自于希腊文化，大卫击杀歌利亚是犹太教-基督教文化中的故事。在这种情况下，作者应该额外论证文艺复兴对丁丁的描写照搬了希腊文化的习俗。既然如此，为什么不直接找一个古希腊时期的古希腊作品呢？</p>
+
+<p>而且原文中有“你也许会说大卫像也许只是一个个例，万一只是米开朗基罗的恶趣味呢？一个例子不能说明古希腊雕塑里的小丁丁都很小”字样，不好意思，米开朗琪罗的作品不是古希腊雕塑的“一个例子”。</p>
+
+<h2 id="课后作业">课后作业</h2>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25_horseman.jpg" /></figure>
+
+<p>上图是法国画家雅克-路易·大卫的作品《跨越阿尔卑斯山圣伯纳隘道的拿破仑》，请根据该作品完成下列题目：</p>
+
+<ol>
+  <li>请寻找资料估测马的体长，并据此估测拿破仑的身高。</li>
+  <li>请寻找拿破仑身高相关的史料，并据此估测马的体长。</li>
+  <li>比较前两题的结果。</li>
+</ol>
+
+<p>啥？你说拿破仑当时骑的是一头驴？哦，那没事了，下课！</p>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = 15;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/15">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        .ijm | 用 ImageJ 给大卫量尺寸 - April 28, 2020 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-Popular_GitHub"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/About"><span class="icon-CN_tencent_wechat"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.douban.com/people/Gravitus/"><span class="icon-CN_douban_B"></span></a>
+      </li>
+    
+      <li>
+        <a href="//space.bilibili.com/29132299"><span class="icon-CN_bilibili"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-Popular_RSS"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2020 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted on <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>
