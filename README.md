@@ -10,4 +10,3 @@
 
 博客转载文章版权属于原作者，如不同意转载请[联系删除](https://github.com/MountAye/blog/milestone/1)。
 
-A test for https git push.
