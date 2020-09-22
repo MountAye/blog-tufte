@@ -5,9 +5,140 @@
     <description>阿掖山：一个博客</description>
     <link>mountaye.github.io/blog/</link>
     <atom:link href="mountaye.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 05 Jun 2020 05:18:14 +0000</pubDate>
-    <lastBuildDate>Fri, 05 Jun 2020 05:18:14 +0000</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>Tue, 22 Sep 2020 04:09:23 +0000</pubDate>
+    <lastBuildDate>Tue, 22 Sep 2020 04:09:23 +0000</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>.tex | 整理一些关于实验记录的文章</title>
+        <description>&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sciencemag.org/careers/2019/09/how-keep-lab-notebook&quot;&gt;微信公众号“BioArt植物”，原作者 Elisabeth Pain ，《实验记录到底怎么记？》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://files.eric.ed.gov/fulltext/ED344734.pdf&quot;&gt;Howard Kannare, 《Writing the Laboratory Notebook》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://web.mit.edu/me-ugoffice/communication/labnotebooks.pdf&quot;&gt;MIT Department of Mechanical Engineering, 《Instructions for Using Your Laboratory Notebook》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://xw.qq.com/partner/vivoscreen/20200820A00HZI00?vivoRcdMark=1&quot;&gt;微信公众号“生物学霸”，《颜宁：讲讲如何记实验记录》&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;微信平台不允许添加指向微信之外的超链接，资源的获取方式见正文。作为报复，以上四条资源中有两条最早是在公众号里看到的，但是博文给出的链接都来自微信之外 :-)&lt;/p&gt;
+
+&lt;hr class=&quot;slender&quot; /&gt;
+
+&lt;h2 id=&quot;0&quot;&gt;0&lt;/h2&gt;
+
+&lt;p&gt;疫情依旧，摸鱼依旧。摸鱼的方式有很多种，其中比较高级的一种是打着完美主义的旗号，对着一个还没完成，或者根本不存在完成时的东西，疯狂输出时间和精力。琢磨如何完美地进行实验记录就是个挺不错的由头。&lt;/p&gt;
+
+&lt;p&gt;说实话，学界对研究记录的要求实际上并不算严格，这一点在《Writing the Laboratory Notebook》里也有佐证。商业机构研发部门的研究记录会成为将来知识产权争端的主要证据，稍有不慎就是真金白银的经济损失，甚至关乎企业的生死存亡。而学界的工作在“科技”中偏重于”科“（即便是工程学科），在”研发“中偏重于”研“。（四者有什么联系和区别？科学认识世界，技术改造世界，研究把钱变成知识，开发把知识变成钱。）自由比起规范显然更有利于在未知领域的探索。&lt;/p&gt;
+
+&lt;p&gt;所以，我们实验室对于实验记录并没有成文的规则，大家自己找本子自己记，格式和内容都跟随自己的喜好来，同实验室的同学也很少交流这个问题，仿佛说了就是承认自己的科研能力有问题。&lt;/p&gt;
+
+&lt;h2 id=&quot;1&quot;&gt;1&lt;/h2&gt;
+
+&lt;p&gt;越不谈越是心虚，于是在看到了《实验记录到底怎么记？》这篇文章之后，下决心要处理掉这个问题。这篇文章的作者访谈了几个科研人员，然后将他们的对话打碎，分到四个问题之下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;为什么还要花时间精力去做实验记录？&lt;/li&gt;
+  &lt;li&gt;用传统纸质的记录本，还是电子版，还是都有？&lt;/li&gt;
+  &lt;li&gt;采取什么策略来保证实验记录有条理、完整并且实用？&lt;/li&gt;
+  &lt;li&gt;其他……&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;并不推荐这篇文章，原因从这四个问题就能看出来：第一条属于幸存者偏见，一个觉得记录不重要的人压根不会认真记录，从而很难成为访谈对象；第二条属于典型的”有的人……有的人……“英式废话文套路；第三个问题太笼统，本应该细分为更明确的子问题；最后一个“其他”说明作者都不知道该怎么总结这些对话。明明是一篇文章，硬生生写出了微博一般的碎片感。&lt;/p&gt;
+
+&lt;h2 id=&quot;2&quot;&gt;2&lt;/h2&gt;
+
+&lt;p&gt;于是在网上继续找资源，机缘巧合之下，在一个知乎问题之下看到了一个还不错的答案，里面提到了 Howard Kannare 的《Writing the Laboratory Notebook》这本书。真的是“机缘巧合”，因为现在的我已经找不到原来的那个问题和答案了，哪怕专门为了这篇文章搜索了半天……这说明了网络资源的收藏和管理也是一个技术活（又可以水一篇文章了）。&lt;/p&gt;
+
+&lt;p&gt;这本书在网上有英文的完整影印版，很容易就能搜到，实在不行的话在微信后台留言”HowardKannare”可以收到下载网址（注意回复的关键词没有空格）。&lt;/p&gt;
+
+&lt;p&gt;本书各章的标题如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The Reasons for Note keeping - An Overview&lt;/li&gt;
+  &lt;li&gt;The Hardware of Note keeping - Books, Pens, and Paper&lt;/li&gt;
+  &lt;li&gt;Legal and Ethical Aspects - Ownership, Rights, and Obligations&lt;/li&gt;
+  &lt;li&gt;Management of Notekeeping - Practices for Issuance, Use, and Storage of Notebooks&lt;/li&gt;
+  &lt;li&gt;Organizing and Writing the Notebook - Be Flexible&lt;/li&gt;
+  &lt;li&gt;Examples of Notebook Entries&lt;/li&gt;
+  &lt;li&gt;Patents and Invention Protection&lt;/li&gt;
+  &lt;li&gt;The Electronic Notebook&lt;/li&gt;
+  &lt;li&gt;Appendix A: Some Suggestions for Teaching Laboratory Notekeeping&lt;/li&gt;
+  &lt;li&gt;Appendix B: Photographs from the Historical Laboratory Notebooks of Famous Scientists&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;书很长，有 150 多页，这导致内容涉及方方面面，包括了那些我们可能不是那么急需的方面；还有很多我们今天可能并不十分需要的冷知识，比如几十年前美国出产的纸张由于某种工艺导致保存期限比较短等等。好在多数章节最后都有总结，可以帮人省下不少时间。&lt;/p&gt;
+
+&lt;p&gt;另一方面，这本书出版于1985年，那是一个什么年代呢？苹果在前一年才刚刚推出了 Macintosh 电脑，C++ 在当年才刚刚出版。所以对于电子实验记录，书中只在第8章和纸本笔记进行了一个简单的对比，而且有比较明显的时代局限性。&lt;/p&gt;
+
+&lt;p&gt;总之，如果真要读这本书的话，抱着练习英语阅读的目标，要远比学记笔记要少些失望。&lt;/p&gt;
+
+&lt;h2 id=&quot;3&quot;&gt;3&lt;/h2&gt;
+
+&lt;p&gt;干了半天之后开始怀疑这件事从一开始是否有必要，这可是 PhD 的保留节目了。&lt;/p&gt;
+
+&lt;p&gt;尤其是在读过《Writing the Laboratory Notebook》的第5章之后，读到单篇实验报告应该包括 introduction, experimental plan, observations and data, discussion of results 的时候，恍然发现，这不就是本科实验课要交的实验记录的写法吗，之所以没有老师教过我们怎么记实验记录，是不是因为他们觉得这个事情已经教过了？&lt;/p&gt;
+
+&lt;p&gt;既然如此，那么第三份材料就是 MIT 机械系给本科生的实验报告要求，不长，只有 6 页，还包括了超过两页的模板笔记，可以当作《Writing the Laboratory Notebook》关于笔记内容部分的精华集锦来看。微信后台回复 “MITlab” 可以收到 PDF 下载地址。&lt;/p&gt;
+
+&lt;p&gt;但这反而说明了，PI们散养研究生，不对实验记录进行更进一步的要求和培训是不对的。因为“实验记录本”≠“实验记录们”，研究生的工作不同于本科实验课，本科生做实验就只有在固定时间和固定时长的实验课上，一切超出规定范围内的动作大概率都是无用功甚至错误，每个实验要做什么，有哪些步骤，会观察到什么现象，都是事先设计好的，实验记录的各个部分会有哪些内容，大体上没跑。研究生的工作则不然，大到整个博士期间的所有工作都可以算作是一个项目（毕竟会写成一篇毕业论文），小到显微镜从开机到观测到关机的几个小时也可以整出一篇报告来，如何划分研究的基本单元？一个人可能同时在做相对独立的多项工作，是连续记录还是分开平行记录？以纸本为主，电子版主要用于备份，还是主要用电子设备，随手记在纸上的拍照作为附件？&lt;/p&gt;
+
+&lt;h2 id=&quot;4&quot;&gt;4&lt;/h2&gt;
+
+&lt;p&gt;对于这篇文章没有太多可说的，覆盖范围和《实验记录到底怎么记？》类似，感觉就相当于颜宁女士自己一个人对那篇文章中的问题的回答，由于是一个人的回答，所以不会有前一篇文章中不同观点混在一起的分裂感。看过了《Writing the Laboratory Notebook》之后，会发现文中的每一个点都在书中可以找到。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+        <link>mountaye.github.io/blog/articles/lab-note</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/lab-note</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
+    
+      <item>
+        <title>.doc | 人生是马尔科夫过程吗？</title>
+        <description>&lt;p&gt;最近报名了一个写作班，老师留了作业，命题作文——“我想怎样地度过余生”。&lt;/p&gt;
+
+&lt;p&gt;我在电脑上敲下了一句“我想随遇而安地度过余生”，然后抓耳挠腮地度过了三天当时的我的余生，什么也没写下来。&lt;/p&gt;
+
+&lt;p&gt;然后，疫情嘛，研究上的事，能在家里做的已经做得差不多了。闲来无事翻翻邮件订阅的论文摘要合辑，看到了一篇讲量子态马尔科夫演化的论文，于是想到了一个很有趣的问题：人生是一个马尔科夫过程吗？&lt;/p&gt;
+
+&lt;p&gt;先等一下，马尔科夫过程是什么？&lt;/p&gt;
+
+&lt;p&gt;用一个生活中的例子来解释吧。假设我们有一个感兴趣的对象（比如说我现在使用的牙膏的牌子）；这个对象有几种不同的可能性（我去的超市里有两种牌子，我可以但也只能选择其中的一种）；每过一段时间，这个对象有可能变化（每管牙膏用完之后，去超市再买一管，要么换牌子，要么不换）。&lt;/p&gt;
+
+&lt;p&gt;重点来了：如果当我在货架面前考虑要买哪个牌子牙膏的时候，只考虑我现在用的是什么牌子，而不考虑上次买牙膏之前那管是什么牌子，不考虑之前任何一段时间用的是什么牌子，那么我使用的牙膏的牌子随时间的变化，就是一个马尔科夫过程。&lt;/p&gt;
+
+&lt;p&gt;也就是维基百科上所说的：“未来的状态与任何历史的状态无关，仅与当前状态相关”。&lt;/p&gt;
+
+&lt;p&gt;这么一说的话，人生还真的挺像是马尔科夫过程的。&lt;/p&gt;
+
+&lt;p&gt;今天认识我的朋友可能想象不出来，我小学的时候还是个很听话的乖孩子。坐我后桌的小豪也很听话，班主任很信任我们几个孩子，经常让我们帮忙干点活儿，平时考试之后改改卷子啊，上面下来检查之前收拾收拾同学们的作业之类的。六年级下学期的某一天，老师放学后又把我们几个人留了下来，给了我们一叠材料，仔细一看，有一摞表格，上面是全班同学姓名和家庭住址的表格，前几天发给每个人回家填了，第二天连同房产证一起交上，房产证很快发回来了，表格在这；还有一张本市本区的地图，道路标的还挺详细的，道路围成的方块上标着不同的数字。我们的任务就是根据家庭住址，把大家的名字和地图上的数字对应起来，填到一张新表上。我和小豪的家有点距离，在地图上的数字也不一样。等我们拿到了不同初中的录取通知书，才后知后觉，当初那些数字代表的就是所谓的学区。高中之后骑车上学，有天早晨，在到校之前的最后一个路口等红灯的时候，眼睛余光觉得旁边等灯的人老是看我，我也看过去，端详许久，是小豪！我们都长出了一口气，不知道是舒气还是叹气。&lt;/p&gt;
+
+&lt;p&gt;因为一个学区号，原本要好的朋友再相见，就只能努力注视然后努力回忆，再报以礼貌的微笑了；因为一场中考，因为一场高考，因为考研或是考公务员或是招聘面试，三年、四年、几十年的时间里，我们能做的事情就大体定下来了。至于在这决定未来的考试之前的每一个平凡一天里，我们的生活充实吗，枯燥吗，快乐吗，累吗，见到许久未见的老朋友了吗，不好意思，不太重要。&lt;/p&gt;
+
+&lt;p&gt;所以说，把人生当成一个马尔科夫过程的话，一个很自然的推论就是，我只要在这些时间节点上，让自己拥有这些节点所考察的那些成绩，就可以在人生这条长河里一路顺风顺水，幸福美满了。&lt;/p&gt;
+
+&lt;p&gt;大一结束的暑假，我们班的导师老史带我们去北京参观几个科研院所，用他的原话说，“见见世面”。从正负电子对撞机里出来的时候是下午，还有点时间，我们就去了北大。北大接待我们的老师是我们热学课本的作者，那是我第一次亲眼见到写教材的人，一种“我也见到大人物了”的自豪感油然而生。这样的参观活动本来也有为将来的保研做广告的意思，作者老师把我们引入一间教室，拿出了准备好的幻灯片。北大嘛，客观地指点指点江山就足以作为广告了。江山指点得差不多了，还没有看到我们学校的名字，老师大约也注意到了：“你们学校啊，还是差了一点。”老史也和我们坐在一起，除了点头也说不出话来。又有同学问，既然已经有这么大的差距了，那该怎么弥补呢？老师面带微笑地说：“人生啊还是很长的，你们现在虽然落后很多，但是一直努力的话，比别人晚个几年十几年，也是有希望达到同样高度的嘛。”我当时自然心里一百个不服，拳头在桌子后面攥得紧紧的。临走的时候，作者老师还问了一句：“我那本课本是写给非专业的课程用的，你们专业用这个，是不是浅了一点啊？”我很幸运，没看到史老师脸上的表情。&lt;/p&gt;
+
+&lt;p&gt;反过来说，只要在某一个时间节点上没有做好，之后的人生就可以洗洗睡了。&lt;/p&gt;
+
+&lt;p&gt;但是，人生也并不总是能简化成马尔科夫过程的。&lt;/p&gt;
+
+&lt;p&gt;乔布斯在斯坦福大学的毕业典礼上做过一个演讲，讲过他读书时候的故事。领养乔布斯的夫妻当初答应了他的生母，一定要让孩子上大学。乔布斯年轻时也不知道父母的艰难，选了里德学院这样一所学费高昂的私立学校，很快就把父母给的钱花光了，只能退学。退学之后没有了学分要求，他得以选一些轻松有趣的课程，比如字体设计。等到后来兜兜转转，他被苹果公司开除，成功建立了 Pixel 动画公司和 NeXT 电脑公司，之后回到了经营不善来到破产边缘的苹果。这时候，之前的字体课派上了用场，苹果的新电脑取得了巨大的成功，优雅的字体居功至伟。&lt;/p&gt;
+
+&lt;p&gt;人生并不是一个预先设计好的程序，也不是一台严丝合缝的机器，我们经历过的故事，有的深藏在记忆里，在不经意的时候闪现，击中我们；有的成为心中高悬的苦胆，时时提醒激励着人，去做一些可能徒劳但又不甘心的事情。&lt;/p&gt;
+
+&lt;p&gt;北大的故事其实没有结束。当初提问该如何奋起直追的同学转到了数学专业，而一直志在生物的我反而留在了物理圈里。大四的时候，听说北大一个物理和生物的交叉学科项目还有一次补充录取的机会，申请美国学校结果不太满意的我就报了名。面试的一个环节是读一段英文学术论文的节选，然后根据材料回答几个问题。我抽到的文章是关于 microbiome （微生物组）的，老师们知道我的专业背景，本来没打算我回答得出什么问题，没想到我平时读过一些科普文章，对这个话题有些了解，老师的问题都很顺利地回答了出来。他们很意外，问我是怎么积累这些知识的，我很想给他们讲讲三年前那个下午，隔壁系教室里的故事。&lt;/p&gt;
+
+&lt;p&gt;又觉得什么也不必讲，于是微笑着谦虚了两句。&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+        <link>mountaye.github.io/blog/articles/how-to-spend-life</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/how-to-spend-life</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
     
       <item>
         <title>.doc | 接机</title>
@@ -46,11 +177,11 @@
 
 &lt;p&gt;怎么做到的，咱也来试试？&lt;/p&gt;
 
-&lt;h2 id=&quot;imagej-是啥&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ImageJ&lt;/code&gt; 是啥？&lt;/h2&gt;
+&lt;h2 id=&quot;imagej-是啥&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageJ&lt;/code&gt; 是啥？&lt;/h2&gt;
 
-&lt;p&gt;上一篇文章（&lt;a href=&quot;/blog/articles/raw-image-or-not&quot;&gt;《“你这是不是原图直出啊？”》&lt;/a&gt;）我们提到了，专业相机可以记录 RAW 格式的图片，这类图片包含的信息比平时常见的图片更多，也需要专门的软件进行处理。不只是消费者水平的相机，实验室里的显微镜、CT机都可以看作是特殊的照相机，它们产生的图像自然也需要专业的软件来读取和处理。&lt;/p&gt;
+&lt;p&gt;上一篇文章（&lt;a href=&quot;/blog/blog/articles/raw-image-or-not&quot;&gt;《“你这是不是原图直出啊？”》&lt;/a&gt;）我们提到了，专业相机可以记录 RAW 格式的图片，这类图片包含的信息比平时常见的图片更多，也需要专门的软件进行处理。不只是消费者水平的相机，实验室里的显微镜、CT机都可以看作是特殊的照相机，它们产生的图像自然也需要专业的软件来读取和处理。&lt;/p&gt;
 
-&lt;p&gt;ImageJ 就是这样一款软件。相比于直接使用编程语言（比如 MATLAB，python 的 scikit-image 模块），它提供的方框、多边形、椭圆选区工具，直接用编程语言来替代的话要麻烦许多；而且各种操作的结果都可以几乎实时地反馈在画面上，不需要一遍又一遍地 &lt;code class=&quot;highlighter-rouge&quot;&gt;imshow()&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;ImageJ 就是这样一款软件。相比于直接使用编程语言（比如 MATLAB，python 的 scikit-image 模块），它提供的方框、多边形、椭圆选区工具，直接用编程语言来替代的话要麻烦许多；而且各种操作的结果都可以几乎实时地反馈在画面上，不需要一遍又一遍地 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;imshow()&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;ImageJ 用 Java 写成，所以跨平台的表现一致，&lt;del&gt;用户界面有一股浓郁的 Windows 95 风味，而且在 MacOS 上也一样，Windows 用户幸灾乐祸中&lt;/del&gt;。代码开源在 GitHub，免费，能让用户知道自己的每个操作究竟在干啥，而且可以自己开发拓展功能，打包成第三方的发行版。我们今天要用的 Fiji，就是一个集成了很多常见拓展功能的 ImageJ 发行版。&lt;/p&gt;
 
@@ -60,12 +191,12 @@
 
 &lt;ul&gt;
   &lt;li&gt;下载大卫像的正面照。&lt;/li&gt;
-  &lt;li&gt;运行 &lt;code class=&quot;highlighter-rouge&quot;&gt;ImageJ&lt;/code&gt;，打开图片。&lt;/li&gt;
+  &lt;li&gt;运行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageJ&lt;/code&gt;，打开图片。&lt;/li&gt;
   &lt;li&gt;复制图片，防止我们的操作改变原始数据。&lt;/li&gt;
   &lt;li&gt;用矩形选择框选定大卫像从头到脚的区域，记录选择框的高度。&lt;/li&gt;
-  &lt;li&gt;用 &lt;code class=&quot;highlighter-rouge&quot;&gt;Analyze -&amp;gt; Set Scale&lt;/code&gt; 工具确定像素和厘米的换算关系。&lt;/li&gt;
+  &lt;li&gt;用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Analyze -&amp;gt; Set Scale&lt;/code&gt; 工具确定像素和厘米的换算关系。&lt;/li&gt;
   &lt;li&gt;用直线工具画出要测量的距离，从主面板读取长度。&lt;/li&gt;
-  &lt;li&gt;用 &lt;code class=&quot;highlighter-rouge&quot;&gt;Analyze -&amp;gt; Tools -&amp;gt; Scale Bar...&lt;/code&gt; 绘制比例尺。&lt;/li&gt;
+  &lt;li&gt;用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Analyze -&amp;gt; Tools -&amp;gt; Scale Bar...&lt;/code&gt; 绘制比例尺。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;如果你看到这么简略的介绍就能脑补出如何操作，那么就可以 &lt;del&gt;（关掉这篇文章）&lt;/del&gt; 跳过下面的详细介绍了。&lt;/p&gt;
@@ -74,23 +205,23 @@
 
 &lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25-david.jpg&quot; /&gt;&lt;/figure&gt;
 
-&lt;p&gt;鼠标右键单击画中的任意一点，在弹出的菜单中选择 &lt;code class=&quot;highlighter-rouge&quot;&gt;Duplicate&lt;/code&gt;，在对话框中选确定，这样我们就得到一张原图的副本。之后的所有操作都在这个副本上进行，这样即便有任何操作失误，对副本做出了不可逆转的伤害，都不会影响到我们的原始数据。如果数据的安全和完整得不到保证，无意之失叫做学术错误，有意为之叫做学术造假。&lt;/p&gt;
+&lt;p&gt;鼠标右键单击画中的任意一点，在弹出的菜单中选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Duplicate&lt;/code&gt;，在对话框中选确定，这样我们就得到一张原图的副本。之后的所有操作都在这个副本上进行，这样即便有任何操作失误，对副本做出了不可逆转的伤害，都不会影响到我们的原始数据。如果数据的安全和完整得不到保证，无意之失叫做学术错误，有意为之叫做学术造假。&lt;/p&gt;
 
-&lt;p&gt;选择工具栏中的矩形选择框（图中主面板左一的阴影按钮），在图中画出一个矩形，上下边分别是大卫像的头顶和脚底，&lt;strong&gt;画完后鼠标不要乱动&lt;/strong&gt;，然后在主面板的底部读出高度 &lt;code class=&quot;highlighter-rouge&quot;&gt;h=595&lt;/code&gt;，此处的单位是像素：&lt;/p&gt;
+&lt;p&gt;选择工具栏中的矩形选择框（图中主面板左一的阴影按钮），在图中画出一个矩形，上下边分别是大卫像的头顶和脚底，&lt;strong&gt;画完后鼠标不要乱动&lt;/strong&gt;，然后在主面板的底部读出高度 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h=595&lt;/code&gt;，此处的单位是像素：&lt;/p&gt;
 
 &lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25_find-height.png&quot; /&gt;&lt;/figure&gt;
 
-&lt;p&gt;点击主面板的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Analyze&lt;/code&gt; 按钮，在下拉菜单中找到 &lt;code class=&quot;highlighter-rouge&quot;&gt;Set Scale&lt;/code&gt;，在弹出的对话框中，&lt;code class=&quot;highlighter-rouge&quot;&gt;Distance in pixels&lt;/code&gt; 填入我们读出的 595 像素，&lt;code class=&quot;highlighter-rouge&quot;&gt;Known distance&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;Unit of length&lt;/code&gt; 填入作者假设的 150 cm：&lt;/p&gt;
+&lt;p&gt;点击主面板的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Analyze&lt;/code&gt; 按钮，在下拉菜单中找到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set Scale&lt;/code&gt;，在弹出的对话框中，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Distance in pixels&lt;/code&gt; 填入我们读出的 595 像素，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Known distance&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Unit of length&lt;/code&gt; 填入作者假设的 150 cm：&lt;/p&gt;
 
 &lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25_set-scale.png&quot; /&gt;&lt;/figure&gt;
 
-&lt;p&gt;然后就可以开始正式的测量了。再次使用矩形选择工具，&lt;strong&gt;画完后鼠标不要乱动&lt;/strong&gt;，主面板底端的 &lt;code class=&quot;highlighter-rouge&quot;&gt;length=20.93&lt;/code&gt; 就是以 cm 为单位的距离了：&lt;/p&gt;
+&lt;p&gt;然后就可以开始正式的测量了。再次使用矩形选择工具，&lt;strong&gt;画完后鼠标不要乱动&lt;/strong&gt;，主面板底端的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;length=20.93&lt;/code&gt; 就是以 cm 为单位的距离了：&lt;/p&gt;
 
 &lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25_measure-head.png&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;丁丁可以选中直线工具（左起第五个），用鼠标拖拽的方法画线，主面版的底端也会显示结果。&lt;/p&gt;
 
-&lt;p&gt;量完之后，要想方便他人，可以在图上画出比例尺。再次点击主面板的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Analyze&lt;/code&gt; 按钮，在下拉菜单中找到 &lt;code class=&quot;highlighter-rouge&quot;&gt;Tools&lt;/code&gt;，然后找到 &lt;code class=&quot;highlighter-rouge&quot;&gt;Set Scale&lt;/code&gt;，在弹出的对话框里选择合适的选项，然后点击确定，就可以在画面中添加一个比例尺：&lt;/p&gt;
+&lt;p&gt;量完之后，要想方便他人，可以在图上画出比例尺。再次点击主面板的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Analyze&lt;/code&gt; 按钮，在下拉菜单中找到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Tools&lt;/code&gt;，然后找到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set Scale&lt;/code&gt;，在弹出的对话框里选择合适的选项，然后点击确定，就可以在画面中添加一个比例尺：&lt;/p&gt;
 
 &lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25_menu-scale-bar.png&quot; /&gt;&lt;/figure&gt;
 
@@ -173,11 +304,11 @@
 
 &lt;p&gt;想回应这样的质疑，首先需要解释，什么叫“原片直出”。&lt;/p&gt;
 
-&lt;p&gt;我们生活在数码时代，所谓的照片，其实都是可以被电脑读取的一个个文件，这些文件的底层，都是一串串0和1组成的二进制数据。但即便有这种共性，不同的组织依然提出了不同的技术标准来表示图片，也就是告诉电脑如何将这串0和1解释成“给我在屏幕上画出一块方形空间，这里涂成黄色，那里涂成浅绿色……”。这直观地体现在，不同的照片可能有不同的拓展名，比如 &lt;code class=&quot;highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;.png&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;.tif&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;.arw&lt;/code&gt; 等等。&lt;/p&gt;
+&lt;p&gt;我们生活在数码时代，所谓的照片，其实都是可以被电脑读取的一个个文件，这些文件的底层，都是一串串0和1组成的二进制数据。但即便有这种共性，不同的组织依然提出了不同的技术标准来表示图片，也就是告诉电脑如何将这串0和1解释成“给我在屏幕上画出一块方形空间，这里涂成黄色，那里涂成浅绿色……”。这直观地体现在，不同的照片可能有不同的拓展名，比如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.png&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.tif&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.arw&lt;/code&gt; 等等。&lt;/p&gt;
 
-&lt;p&gt;我们日常的文档和网页中，常用的图片格式一般是 &lt;code class=&quot;highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; 等等，这些格式的图片占用的空间小，读取速度快，但是包含的信息量少。专业相机能够捕捉到的信息量要大很多，只往存储卡里写入&lt;code class=&quot;highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;的图片实在是太浪费相机的性能了，所以不同的厂家会根据自己的相机设计特定的图片格式，这类图片格式统称为 &lt;a href=&quot;https://zh.wikipedia.org/wiki/RAW&quot;&gt;RAW (原始图像文件)&lt;/a&gt;。比如我现在使用的索尼相机，它的 RAW 图片的拓展名就是 &lt;code class=&quot;highlighter-rouge&quot;&gt;.arw&lt;/code&gt;。专业相机一般允许拍摄时同时保存 &lt;code class=&quot;highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; 图片和 RAW 图片。这类相机写入存储卡的图像，就是上面所说的“原片”。&lt;/p&gt;
+&lt;p&gt;我们日常的文档和网页中，常用的图片格式一般是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; 等等，这些格式的图片占用的空间小，读取速度快，但是包含的信息量少。专业相机能够捕捉到的信息量要大很多，只往存储卡里写入&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;的图片实在是太浪费相机的性能了，所以不同的厂家会根据自己的相机设计特定的图片格式，这类图片格式统称为 &lt;a href=&quot;https://zh.wikipedia.org/wiki/RAW&quot;&gt;RAW (原始图像文件)&lt;/a&gt;。比如我现在使用的索尼相机，它的 RAW 图片的拓展名就是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.arw&lt;/code&gt;。专业相机一般允许拍摄时同时保存 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; 图片和 RAW 图片。这类相机写入存储卡的图像，就是上面所说的“原片”。&lt;/p&gt;
 
-&lt;p&gt;RAW 格式的图片，一般电脑上的图片查看软件是打不开的，所以要导入到（以 PhotoShop 为代表的）专业的图片处理软件中，再导出成日常可用的格式。那么“直出”也就有两种理解：直接把相机保存的&lt;code class=&quot;highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;格式的图片拿来用，此其一；RAW 格式导入图片处理软件之后不做任何处理，直接导出成&lt;code class=&quot;highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;，此其二。&lt;/p&gt;
+&lt;p&gt;RAW 格式的图片，一般电脑上的图片查看软件是打不开的，所以要导入到（以 PhotoShop 为代表的）专业的图片处理软件中，再导出成日常可用的格式。那么“直出”也就有两种理解：直接把相机保存的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;格式的图片拿来用，此其一；RAW 格式导入图片处理软件之后不做任何处理，直接导出成&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt;，此其二。&lt;/p&gt;
 
 &lt;p&gt;这么解释下来，我们大约可以回来看看“只要用过图片处理软件就是作假”这种观点了。&lt;/p&gt;
 
@@ -185,7 +316,7 @@
 
 &lt;p&gt;相机为了捕捉并存储更多的信息，会对自己的 RAW 图片格式进行特殊设计，摄影师在拍摄时也会尽量让画面中最暗和最亮的部分不至于超过相机所能记录的数据范围，这都导致相机的原始数据的目标本就是以存储更多信息，而不是让这些信息不加处理就能被人正确理解。从这个角度上来说，越是原片直出，才几乎可以肯定与你亲临现场看到的景象相去甚远。越是要追求真实，才越应该对图片进行处理。&lt;/p&gt;
 
-&lt;p&gt;更进一步，就连询问对方是不是原片直出这一事实也没有什么意义。按照原片直出的第一种定义，&lt;code class=&quot;highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; 格式的照片包含的信息量就比 RAW 图像少很多，在明明有能力获得更多信息的情况下选择主动丢弃这些信息，对于一个创作者来说实在是很不明智，一般只在多款机型的横向测评中作为对照参考；按照第二种定义，使用 RAW 格式中更丰富的信息生成 &lt;code class=&quot;highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; 格式的图片，这个过程需要图像处理软件的参与，而不同软件的算法不同，导出结果是不一样的。比如下图，分别给出了 RawTherapy 不加任何操作导出、DarkTable 手动移除软件自动调整然后导出、DarkTable 使用软件自动调整导出3种不同的结果，差别非常明显。在这种情况下，哪一种算是原片直出呢，原片直出又如何呢？&lt;/p&gt;
+&lt;p&gt;更进一步，就连询问对方是不是原片直出这一事实也没有什么意义。按照原片直出的第一种定义，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; 格式的照片包含的信息量就比 RAW 图像少很多，在明明有能力获得更多信息的情况下选择主动丢弃这些信息，对于一个创作者来说实在是很不明智，一般只在多款机型的横向测评中作为对照参考；按照第二种定义，使用 RAW 格式中更丰富的信息生成 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jpg&lt;/code&gt; 格式的图片，这个过程需要图像处理软件的参与，而不同软件的算法不同，导出结果是不一样的。比如下图，分别给出了 RawTherapy 不加任何操作导出、DarkTable 手动移除软件自动调整然后导出、DarkTable 使用软件自动调整导出3种不同的结果，差别非常明显。在这种情况下，哪一种算是原片直出呢，原片直出又如何呢？&lt;/p&gt;
 
 &lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-03-14_compare-softwares.jpg&quot; /&gt;&lt;/figure&gt;
 
@@ -197,13 +328,13 @@
 
 &lt;h2 id=&quot;adobe-lightroomrawtherapy-和-darktable&quot;&gt;Adobe LightRoom、RawTherapy 和 DarkTable&lt;/h2&gt;
 
-&lt;p&gt;我的手机上一直常备有 Adobe LightRoom 的移动版，免费版的功能够用，可以直接用软件控制相机的光圈快门等参数，拍摄 RAW 图像（&lt;code class=&quot;highlighter-rouge&quot;&gt;.dng&lt;/code&gt; 格式）。&lt;/p&gt;
+&lt;p&gt;我的手机上一直常备有 Adobe LightRoom 的移动版，免费版的功能够用，可以直接用软件控制相机的光圈快门等参数，拍摄 RAW 图像（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dng&lt;/code&gt; 格式）。&lt;/p&gt;
 
 &lt;p&gt;但是 Adobe 家的 PC 软件是要收费的，而且现在不是一锤子买卖，而是按月交保护费，让人感觉随时在接受剥削。前年圣诞节的时候有优惠，一口气交了一年的钱。但是过了一段时间之后，我忘了究竟交了多少钱，也就不知道是不是还在每月扣款，而且受到了开源自由软件精神的 &lt;del&gt;(洗脑)&lt;/del&gt; 感召，于是毅然退订了 Adobe 的服务 &lt;del&gt;(然后发现钱已经交过了，退订意味着少了接近半年的服务，外加损失一个月的月费)&lt;/del&gt;。没了张屠夫，咱也不能吃带毛的猪啊，于是一番搜索，找到了 RawTherapy 和 DarkTable 两个替代产品。&lt;/p&gt;
 
 &lt;p&gt;在&lt;a href=&quot;https://linux.cn/article-10912-1.html&quot;&gt;这篇文章&lt;/a&gt;的忽悠之下，我决定使用 RawTherapy，因为据文章说 DarkTable 对 Windows 版本的维护不如 Linux 上心。但是用了 RawTherapy 之后总觉得哪里不对，每次导入图片的时候都感觉“咦，怎么当时很漂亮的照片在电脑里看这么丑”，我又不是没见过 RAW 图片，这种反差实在是超出预期，而且使得修图的工作量大了很多。去年夏天，有个学妹来我们实验室访学，临走的时候我带她去动物园和博物馆逛了一天，回来之后看着成吨的废片，欲哭无泪……&lt;/p&gt;
 
-&lt;p&gt;今年冬天的第二场雪，我和新认识的老乡一起去城东边远郊的一个小村子拍雪景。回来之后不久，老乡就在微信公众号发了一篇游记，我则看了一眼图片文件夹就再也不想修图了，以至于拖延到现在。抱着死马当活马医的想法，下载了 DarkTable，然后发现几乎不怎么用调整就可以得到还算令人满意的效果（见上面的对比图）。对于 LightRoom，我最念念不忘的就是它 &lt;code class=&quot;highlighter-rouge&quot;&gt;Color Mix&lt;/code&gt; 的功能，在 DarkTable 中，&lt;code class=&quot;highlighter-rouge&quot;&gt;Color Zone&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;Color Look Up Table&lt;/code&gt; 两个功能基本上可以取代。情况没有什么变化的话，我应该会在将来一直使用 DarkTable 了。&lt;/p&gt;
+&lt;p&gt;今年冬天的第二场雪，我和新认识的老乡一起去城东边远郊的一个小村子拍雪景。回来之后不久，老乡就在微信公众号发了一篇游记，我则看了一眼图片文件夹就再也不想修图了，以至于拖延到现在。抱着死马当活马医的想法，下载了 DarkTable，然后发现几乎不怎么用调整就可以得到还算令人满意的效果（见上面的对比图）。对于 LightRoom，我最念念不忘的就是它 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Color Mix&lt;/code&gt; 的功能，在 DarkTable 中，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Color Zone&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Color Look Up Table&lt;/code&gt; 两个功能基本上可以取代。情况没有什么变化的话，我应该会在将来一直使用 DarkTable 了。&lt;/p&gt;
 
 &lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-03-14_lightroom-darktable.jpg&quot; /&gt;&lt;/figure&gt;
 
@@ -480,7 +611,7 @@
 
 &lt;h3 id=&quot;问题虚拟机无法通过-nat-或-nat-network-模式联网&quot;&gt;问题：虚拟机无法通过 NAT 或 NAT Network 模式联网&lt;/h3&gt;
 
-&lt;p&gt;具体表现为 &lt;code class=&quot;highlighter-rouge&quot;&gt;ping www.google.com&lt;/code&gt; 报错：&lt;/p&gt;
+&lt;p&gt;具体表现为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ping www.google.com&lt;/code&gt; 报错：&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ping archlinux.org
 &lt;span class=&quot;c&quot;&gt;# Temporary failure in name resolution&lt;/span&gt;
@@ -494,7 +625,7 @@
 
 &lt;p&gt;按照这个页面的步骤，因为我的 ISP 给的是动态的 IP，需要用DHCP，DHCP 是啥我都不知道，搞得我跪着下载了编程随想书单里的《Richard Stevens TCP-IP 详解》，解压后看着 3 卷一百多个 PDF 文件，默默关上了资源管理器……&lt;/p&gt;
 
-&lt;p&gt;继续变换关键词搜索解决方案，在这期间改动过防火墙设置，又重置了一次；重装了两次旧版本 VirtualBox，因为第一次重装忘记删除配置信息（Windows 10 Pro 在 &lt;code class=&quot;highlighter-rouge&quot;&gt;%userprofile%\.virtualbox&lt;/code&gt;，见&lt;a href=&quot;https://superuser.com/a/1429931&quot;&gt;这个帖子&lt;/a&gt;）；另外装了 Windows 10 和 Fedora 30 两个虚拟机；找来一个玩过 VirtualBox 而且打包票能解决问题的同学。确定了和虚拟机中的操作系统无关，VirtualBox 的 Bridge 桥接模式是可以联网的，但是总不能放任虚拟机的重要联网功能残废着啊 &lt;del&gt;（何况 NAT 模式在多重代理中不可或缺）&lt;/del&gt;，还是一筹莫展。&lt;/p&gt;
+&lt;p&gt;继续变换关键词搜索解决方案，在这期间改动过防火墙设置，又重置了一次；重装了两次旧版本 VirtualBox，因为第一次重装忘记删除配置信息（Windows 10 Pro 在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%userprofile%\.virtualbox&lt;/code&gt;，见&lt;a href=&quot;https://superuser.com/a/1429931&quot;&gt;这个帖子&lt;/a&gt;）；另外装了 Windows 10 和 Fedora 30 两个虚拟机；找来一个玩过 VirtualBox 而且打包票能解决问题的同学。确定了和虚拟机中的操作系统无关，VirtualBox 的 Bridge 桥接模式是可以联网的，但是总不能放任虚拟机的重要联网功能残废着啊 &lt;del&gt;（何况 NAT 模式在多重代理中不可或缺）&lt;/del&gt;，还是一筹莫展。&lt;/p&gt;
 
 &lt;p&gt;就在折腾了这么几天之后，Windows 推送了一次更新，神奇的一幕发生了！更新之后，不论是 NAT 还是 NAT Network 模式，虚拟机都能正常上网，所以，可能真的是“天下本无事，庸人自扰之”吧……&lt;/p&gt;
 
@@ -508,7 +639,7 @@
   &lt;p&gt;你需要安装 Linux 引导程序以在安装后启动系统，你可以使用的的引导程序在 &lt;a href=&quot;&quot;&gt;启动加载器&lt;/a&gt; 中，请选择一个并且安装并配置它，比如 &lt;a href=&quot;&quot;&gt;GRUB&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;你该怎么办？公布一下正确答案：点击 &lt;code class=&quot;highlighter-rouge&quot;&gt;GRUB&lt;/code&gt; 那个链接，在一众分类中找到适用于你的计算机配置的那一节，目力忽略各种介绍，找到那一两行有用的命令。ε=( o｀ω′)ノ&lt;/p&gt;
+&lt;p&gt;你该怎么办？公布一下正确答案：点击 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GRUB&lt;/code&gt; 那个链接，在一众分类中找到适用于你的计算机配置的那一节，目力忽略各种介绍，找到那一两行有用的命令。ε=( o｀ω′)ノ&lt;/p&gt;
 
 &lt;p&gt;反正单看这一句，以我的理解能力，我是没办法正常通关，于是就有了下面硬盘格式化的问题。&lt;/p&gt;
 
@@ -522,7 +653,7 @@
 
 &lt;h3 id=&quot;问题开机后显示-uefi-interactive-shell&quot;&gt;问题：开机后显示 UEFI interactive shell&lt;/h3&gt;
 
-&lt;p&gt;本以为万事大吉，结果卸载掉安装 ISO 之后开机，总是会进入 UEFI interactive shell。输入 &lt;code class=&quot;highlighter-rouge&quot;&gt;exit&lt;/code&gt; 之后重新开始倒计时，然后再次进入这个 shell……&lt;/p&gt;
+&lt;p&gt;本以为万事大吉，结果卸载掉安装 ISO 之后开机，总是会进入 UEFI interactive shell。输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exit&lt;/code&gt; 之后重新开始倒计时，然后再次进入这个 shell……&lt;/p&gt;
 
 &lt;p&gt;就在写这篇速记的时候，我找到了官方 wiki 的 &lt;a href=&quot;https://wiki.archlinux.org/index.php/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%90%AF%E5%8A%A8%E6%97%B6%E8%BF%9B%E5%85%A5%E4%BA%86%E6%95%91%E6%80%A5%E6%8E%A7%E5%88%B6%E5%8F%B0&quot;&gt;这个条目&lt;/a&gt;，理论上应该是针对这个问题的，但是看一下就知道，并没有提供可操作的解决方案。&lt;/p&gt;
 
@@ -539,13 +670,13 @@ FS0:&lt;span class=&quot;se&quot;&gt;\&amp;gt;&lt;/span&gt; &lt;span class=&quot
 FS0:&lt;span class=&quot;se&quot;&gt;\&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;                           &lt;span class=&quot;c&quot;&gt;# 退出&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;执行完这一步，开机之后就可以看到 GRUB 的选择操作系统的界面了，因为只安装了 Arch Linux，我们只能看到两个选项，一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Arch Linux&lt;/code&gt; 正常启动，一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced Options for Arch Linux&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;执行完这一步，开机之后就可以看到 GRUB 的选择操作系统的界面了，因为只安装了 Arch Linux，我们只能看到两个选项，一个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Arch Linux&lt;/code&gt; 正常启动，一个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Advanced Options for Arch Linux&lt;/code&gt;。&lt;/p&gt;
 
 &lt;h3 id=&quot;问题开机后无法进入图形界面&quot;&gt;问题：开机后无法进入图形界面&lt;/h3&gt;
 
-&lt;p&gt;本以为万事大吉，结果开机之后选择 &lt;code class=&quot;highlighter-rouge&quot;&gt;*Arch Linux&lt;/code&gt; 选项，屏幕上只剩下两行字，然后没有其他反应。&lt;/p&gt;
+&lt;p&gt;本以为万事大吉，结果开机之后选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*Arch Linux&lt;/code&gt; 选项，屏幕上只剩下两行字，然后没有其他反应。&lt;/p&gt;
 
-&lt;p&gt;同样是上网搜了一下，发现如果按下 &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Atl + F2&lt;/code&gt; 是可以进入命令行模式的，随便执行了几个命令，发现系统工作正常。用 &lt;code class=&quot;highlighter-rouge&quot;&gt;journalctl&lt;/code&gt; 看一下系统日志，发现在最后一段里经常出现高亮的几行里面，都有 &lt;code class=&quot;highlighter-rouge&quot;&gt;drm&lt;/code&gt; 这个关键词，再次搜索，发现是和显卡相关的。因为是在虚拟机里，所以就去 VirtualBox 里康康有啥可能会导致问题的选项。&lt;/p&gt;
+&lt;p&gt;同样是上网搜了一下，发现如果按下 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Atl + F2&lt;/code&gt; 是可以进入命令行模式的，随便执行了几个命令，发现系统工作正常。用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;journalctl&lt;/code&gt; 看一下系统日志，发现在最后一段里经常出现高亮的几行里面，都有 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drm&lt;/code&gt; 这个关键词，再次搜索，发现是和显卡相关的。因为是在虚拟机里，所以就去 VirtualBox 里康康有啥可能会导致问题的选项。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;解决方法：在 VirtualBox 的虚拟机显示设置界面，禁用3D加速&lt;/strong&gt;&lt;/p&gt;
 
@@ -693,98 +824,6 @@ FS0:&lt;span class=&quot;se&quot;&gt;\&amp;gt;&lt;/span&gt; &lt;span class=&quot
         <pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate>
         <link>mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree</link>
         <guid isPermaLink="true">mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree</guid>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>.html | 浏览器A到Z</title>
-        <description>&lt;p&gt;首先萌狼看&lt;a href=&quot;https://blog.phoenixlzx.com/2014/03/10/browser-from-a-to-z/&quot;&gt;phoenixlzx&lt;/a&gt;那有一篇这样的文章，貌似很好玩的样子。&lt;/p&gt;
-
-&lt;p&gt;咱看&lt;a href=&quot;https://blog.yoitsu.moe/a2z.html&quot;&gt;约伊兹的萌狼乡手札&lt;/a&gt;那有一篇这样的文章，貌似很好玩的样子。&lt;/p&gt;
-
-&lt;p&gt;咱也试试看？&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;A&lt;/strong&gt; &lt;a href=&quot;https://www.amazon.com&quot;&gt;amazon.com&lt;/a&gt;: 美帝的JD&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;B&lt;/strong&gt; &lt;a href=&quot;https://www.bilibili.com&quot;&gt;bilibili.com&lt;/a&gt;: 比利比利♂干杯&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;C&lt;/strong&gt; &lt;a href=&quot;https://www.changhai.org&quot;&gt;changhai.org&lt;/a&gt;: 卢昌海的个人主页，科普作家的自留地，互联网的名胜古迹&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;D&lt;/strong&gt; &lt;a href=&quot;https://www.douban.com&quot;&gt;douban.com&lt;/a&gt;: 人均大文豪&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;E&lt;/strong&gt; &lt;a href=&quot;&quot;&gt;email.——.edu&lt;/a&gt;: 学校邮箱&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;F&lt;/strong&gt; &lt;a href=&quot;https://farseerfc.me&quot;&gt;farseerfc.me&lt;/a&gt;: farseerfc 的博客，本人博客的留言区代码就是根据&lt;a href=&quot;https://farseerfc.me/github-issues-as-comments.html&quot;&gt;他(她？)的教程&lt;/a&gt;改写成的&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;G&lt;/strong&gt; &lt;a href=&quot;https://github.com&quot;&gt;github.com&lt;/a&gt;: 同性交友网站&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;H&lt;/strong&gt; &lt;a href=&quot;https://hacker-tools.github.io&quot;&gt;hacker-tools.github.io&lt;/a&gt;: 标题党，你以为我是黑客教程，其实我是 Linux 入门哒&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;I&lt;/strong&gt; &lt;a href=&quot;&quot;&gt;idope.se&lt;/a&gt;: 好像已经失效的p2p搜索网站&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;J&lt;/strong&gt; 没有 :-(&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;K&lt;/strong&gt; &lt;a href=&quot;https://kenengba.com&quot;&gt;kenengba.com&lt;/a&gt;: 可能吧，Jason Ng 的博客，号称“互联网的‘新鲜事’”，更新周期以年为单位&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;L&lt;/strong&gt; &lt;a href=&quot;&quot;&gt;localhost:4000/blog/&lt;/a&gt;: 个人博客的本地调试端口&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;M&lt;/strong&gt; &lt;a href=&quot;https://mountaye.github.io/blog/&quot;&gt;mountaye.github.io/blog/&lt;/a&gt;: 个人博客，不要忘记反斜线&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;N&lt;/strong&gt; 没有 :-(&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;O&lt;/strong&gt; &lt;a href=&quot;http://www.ozdic.com/&quot;&gt;ozdic.com&lt;/a&gt;: 一个搜索英语固定搭配的在线词典&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;P&lt;/strong&gt; &lt;a href=&quot;https://program-think.blogspot.com&quot;&gt;program-think.blogspot.com&lt;/a&gt;: 咱也不知道，咱也不敢问&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Q&lt;/strong&gt; &lt;a href=&quot;https://www.quantopian.com/home&quot;&gt;quantopian.com&lt;/a&gt;: 一个提供量化金融数据接口的平台，数据与主流财经门户的数据有出入&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;R&lt;/strong&gt; &lt;a href=&quot;https://www.ruanyifeng.com/home.html&quot;&gt;ruanyifeng.com&lt;/a&gt;: 阮一峰的个人网站&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;S&lt;/strong&gt; &lt;a href=&quot;https://stackoverflow.com&quot;&gt;stackoverflow.com&lt;/a&gt;: 编程相关的问答网站 &lt;del&gt;（抄代码就完事了）&lt;/del&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;T&lt;/strong&gt;  &lt;del&gt;（谁能给个邀请码）&lt;/del&gt; 没有 :-(&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;U&lt;/strong&gt; 没有 :-(&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;V&lt;/strong&gt; &lt;a href=&quot;http://linux.vbird.org/&quot;&gt;linux.vbird.org&lt;/a&gt;: 鸟哥的 Linux 私房菜&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;W&lt;/strong&gt; &lt;a href=&quot;http://wolfram.com/&quot;&gt;wolfram.com&lt;/a&gt;: &lt;del&gt;世界上第二好的编程语言&lt;/del&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;X&lt;/strong&gt; 没有 :-(&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Y&lt;/strong&gt; &lt;a href=&quot;https://blog.yoitsu.moe&quot;&gt;yoitsu.moe&lt;/a&gt;: 约伊兹的萌狼乡手札&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Z&lt;/strong&gt; &lt;a href=&quot;https://zh.moegirl.org/Mainpage&quot;&gt;zh.moegirl.org&lt;/a&gt;: 中文萌娘百科，90后中老年人了解00后的窗口&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/web-brower-A-to-Z</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/web-brower-A-to-Z</guid>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>.png | 春天已经走远</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;惊觉已经有将近两个月没有更新了。手头的确有好几个想写的题目，但是都没有写完；直接发一张图片的话又显得敷衍。于是想到了这么一个主意，选一张照片，附上拍摄时相机的配置和参数，简单介绍一下修图的思路，凑不够微信要求的 200 字的话就扯点闲篇，修剪成一篇散文。总共也就两三张照片（成片、原图和成片的对比，偶尔插一两张不太满意的调色方案），不会对用流量的读者构成大规模杀伤。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;这次的照片拍的是樱花，恰是在一片粉红和满树新绿之间，两种色彩分庭抗礼的时候，摄于四月的第一个周末。这里今年的春天来得晚很多，往年三月中上旬的时候就有如此景象了。&lt;/p&gt;
-
-&lt;figure&gt;&lt;figcaption&gt;绿肥红瘦&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2019-08-11_spring-final.png&quot; /&gt;&lt;/figure&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-器材：iPhone8, 后置摄像头, Lightroom
-参数：3.99mm, f/1.8, 1/1400s, ISO20, 0EV
-后期：Lightroom iOS版
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;去年找新室友的时候，一个刚刚被录取的女生来看房子，我们约在学校碰头。见面之后她就讲，听说这里的樱花很有名。我听了却是一愣，石老师第一次上课的时候在 PPT 开头插了几张他在布朗时拍的樱花，告诉我们布朗的樱花很有名。难不成除了以石楠花见长（读二声）的交大，每个学校的樱花都很有名？&lt;/p&gt;
-
-&lt;p&gt;不过应该是我多虑了，人家估计也就是随便找个话题客套一下。本校的樱花树都在我们系南面的路旁，路平直无奇，树也直挺挺地站着，着实有些无聊。樱花全盛的时候颜色过于浓烈，反射的阳光能把我们经常上课的教室映成满屋粉红，就像是过年时几乎不认识却又过分热情的亲戚一样。当然我知道，这些树倘若有知，一定就像汪曾祺笔下的栀子花一样，一句“去你妈的”喷我一脸。&lt;/p&gt;
-
-&lt;p&gt;不过也有例外，图中的樱花树顺着路往西站到了化学系楼前一小片草地上。这里到校园边缘有一段海拔上的落差，为轮椅铺设的坡道蜿蜒而下，从坡下仰视樱花树，别有一番气势。身后的树木高大且尚未发芽，既可以填补背景，不至于过分空旷，又不会喧宾夺主。本来打算用 a7iii 来拍，但是 35 定和套头的感觉都不太对，所以用了手机。&lt;/p&gt;
-
-&lt;figure&gt;&lt;figcaption&gt;前后对比&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2019-08-11_spring-compare.png&quot; /&gt;&lt;/figure&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;上图为原图直出，下图为调色后的效果
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;观察原图，可以发现似乎有一点偏色，光比很大，阴影处非常暗，天空有点不干净，樱花树上的嫩叶和花瓣的颜色都不是很鲜明。对应地，后期同时提亮了黑场和暗部；提高了蓝色的饱和度和明度；同时提高了绿色的饱和度，并且把色相往黄颜色的方向稍微拉了拉；提高了红色、橙色的饱和度。&lt;/p&gt;
-
-&lt;p&gt;转眼已经来到学校两年了，第一个春天初见坡上的樱花盛开，一瞬间略微想象得出了王阳明所说的“你来看此花时，则此花颜色一时明白起来”的境界。当时手头没有相机，没想到第二天风雨突降，一树花瓣雨打风吹去。今年有幸拍下这张照片，不过一周之后，无风无雨，樱花照样凋谢，只留嫩叶茁壮生长，泯然春色里。&lt;/p&gt;
-
-&lt;p&gt;人生不满百，二十五岁就过了四分之一，算是人生之春的远去。我见过很漂亮的蜂与蝶，也邀请过春燕来筑巢。燕子停留在枝头的时候，心里开出过花，飞走的时候凋谢过。我能结出果实吗？果子会酸吗？我不知道答案，只能把问题交给时间。时间好像也不知道答案，只是自顾自地往前走。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;把照片转到电脑上之后，才发现颜色和手机上看到的效果很不一样，看来需要补习一下色彩相关的知识，租台校色仪做一下色彩管理。&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/spring-is-over</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/spring-is-over</guid>
         
         
         <category>post</category>

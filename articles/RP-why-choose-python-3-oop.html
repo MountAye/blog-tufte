@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Begin Jekyll SEO tag v2.5.0 -->
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>.html 转载：为什么俺推荐 Python[3]·作为面向对象语言的 Python | 阿掖山：一个博客</title>
-<meta name="generator" content="Jekyll v3.8.5" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content=".html 转载：为什么俺推荐 Python[3]·作为面向对象语言的 Python" />
 <meta name="author" content="MountAye" />
 <meta property="og:locale" content="en_US" />
@@ -20,7 +20,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-02-07T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"前一个帖子介绍了作为动态语言的 Python，今天来聊一聊 Python 在面向对象编程（OOP）方面的特色。","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/RP-why-choose-python-3-oop"},"@type":"BlogPosting","url":"mountaye.github.io/blog/articles/RP-why-choose-python-3-oop","headline":".html 转载：为什么俺推荐 Python[3]·作为面向对象语言的 Python","dateModified":"2019-02-07T00:00:00+00:00","datePublished":"2019-02-07T00:00:00+00:00","author":{"@type":"Person","name":"MountAye"},"@context":"http://schema.org"}</script>
+{"description":"前一个帖子介绍了作为动态语言的 Python，今天来聊一聊 Python 在面向对象编程（OOP）方面的特色。","@type":"BlogPosting","url":"mountaye.github.io/blog/articles/RP-why-choose-python-3-oop","headline":".html 转载：为什么俺推荐 Python[3]·作为面向对象语言的 Python","dateModified":"2019-02-07T00:00:00+00:00","datePublished":"2019-02-07T00:00:00+00:00","author":{"@type":"Person","name":"MountAye"},"mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/RP-why-choose-python-3-oop"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
@@ -257,9 +257,9 @@
     <span class="k">def</span> <span class="nf">dump</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s">"child"</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">Child</span><span class="o">.</span><span class="n">__bases__</span><span class="p">)</span>
-<span class="n">Child</span><span class="o">.</span><span class="n">__bases__</span> <span class="o">+=</span> <span class="p">(</span><span class="n">Parent1</span><span class="p">,</span> <span class="n">Parent2</span><span class="p">)</span>  <span class="c1"># 动态追加了2个父类
-</span><span class="k">print</span><span class="p">(</span><span class="n">Child</span><span class="o">.</span><span class="n">__bases__</span><span class="p">)</span>  <span class="c1"># 此处打印出的父类信息中，已经包含 Parent1、Parent2
+<span class="k">print</span><span class="p">(</span><span class="n">Child</span><span class="p">.</span><span class="n">__bases__</span><span class="p">)</span>
+<span class="n">Child</span><span class="p">.</span><span class="n">__bases__</span> <span class="o">+=</span> <span class="p">(</span><span class="n">Parent1</span><span class="p">,</span> <span class="n">Parent2</span><span class="p">)</span>  <span class="c1"># 动态追加了2个父类
+</span><span class="k">print</span><span class="p">(</span><span class="n">Child</span><span class="p">.</span><span class="n">__bases__</span><span class="p">)</span>  <span class="c1"># 此处打印出的父类信息中，已经包含 Parent1、Parent2
 </span>
 </code></pre></div></div>
 
@@ -269,7 +269,7 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="p">:</span>
-    <span class="n">obj</span><span class="o">.</span><span class="n">dump</span><span class="p">()</span>
+    <span class="n">obj</span><span class="p">.</span><span class="n">dump</span><span class="p">()</span>
 
 </code></pre></div></div>
 
@@ -287,7 +287,7 @@
 
 <p>今天的话题，主要是让不熟悉 Python 的网友，对 Python 在面向对象方面的特性，有一个粗浅、感性的认识。聊完了 OOP，下一个帖子会聊一下关于 FP（函数式编程）的话题。</p>
 
-<p><a href="/blog/articles/RP-why-choose-python-0-overview">回到本系列的目录</a></p>
+<p><a href="/blog/blog/articles/RP-why-choose-python-0-overview">回到本系列的目录</a></p>
 
 <blockquote>
   <p><strong>版权声明</strong> <br />

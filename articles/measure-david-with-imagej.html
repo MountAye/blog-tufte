@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Begin Jekyll SEO tag v2.5.0 -->
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>.ijm 用 ImageJ 给大卫量尺寸 | 阿掖山：一个博客</title>
-<meta name="generator" content="Jekyll v3.8.5" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content=".ijm 用 ImageJ 给大卫量尺寸" />
 <meta name="author" content="MountAye" />
 <meta property="og:locale" content="en_US" />
@@ -20,7 +20,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-28T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"用 ImageJ 测量大卫雕像的丁丁长度","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/measure-david-with-imagej"},"@type":"BlogPosting","url":"mountaye.github.io/blog/articles/measure-david-with-imagej","headline":".ijm 用 ImageJ 给大卫量尺寸","dateModified":"2020-04-28T00:00:00+00:00","datePublished":"2020-04-28T00:00:00+00:00","author":{"@type":"Person","name":"MountAye"},"@context":"http://schema.org"}</script>
+{"description":"用 ImageJ 测量大卫雕像的丁丁长度","@type":"BlogPosting","url":"mountaye.github.io/blog/articles/measure-david-with-imagej","headline":".ijm 用 ImageJ 给大卫量尺寸","dateModified":"2020-04-28T00:00:00+00:00","datePublished":"2020-04-28T00:00:00+00:00","author":{"@type":"Person","name":"MountAye"},"mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/measure-david-with-imagej"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
@@ -130,11 +130,11 @@
 
 <p>怎么做到的，咱也来试试？</p>
 
-<h2 id="imagej-是啥"><code class="highlighter-rouge">ImageJ</code> 是啥？</h2>
+<h2 id="imagej-是啥"><code class="language-plaintext highlighter-rouge">ImageJ</code> 是啥？</h2>
 
-<p>上一篇文章（<a href="/blog/articles/raw-image-or-not">《“你这是不是原图直出啊？”》</a>）我们提到了，专业相机可以记录 RAW 格式的图片，这类图片包含的信息比平时常见的图片更多，也需要专门的软件进行处理。不只是消费者水平的相机，实验室里的显微镜、CT机都可以看作是特殊的照相机，它们产生的图像自然也需要专业的软件来读取和处理。</p>
+<p>上一篇文章（<a href="/blog/blog/articles/raw-image-or-not">《“你这是不是原图直出啊？”》</a>）我们提到了，专业相机可以记录 RAW 格式的图片，这类图片包含的信息比平时常见的图片更多，也需要专门的软件进行处理。不只是消费者水平的相机，实验室里的显微镜、CT机都可以看作是特殊的照相机，它们产生的图像自然也需要专业的软件来读取和处理。</p>
 
-<p>ImageJ 就是这样一款软件。相比于直接使用编程语言（比如 MATLAB，python 的 scikit-image 模块），它提供的方框、多边形、椭圆选区工具，直接用编程语言来替代的话要麻烦许多；而且各种操作的结果都可以几乎实时地反馈在画面上，不需要一遍又一遍地 <code class="highlighter-rouge">imshow()</code>。</p>
+<p>ImageJ 就是这样一款软件。相比于直接使用编程语言（比如 MATLAB，python 的 scikit-image 模块），它提供的方框、多边形、椭圆选区工具，直接用编程语言来替代的话要麻烦许多；而且各种操作的结果都可以几乎实时地反馈在画面上，不需要一遍又一遍地 <code class="language-plaintext highlighter-rouge">imshow()</code>。</p>
 
 <p>ImageJ 用 Java 写成，所以跨平台的表现一致，<del>用户界面有一股浓郁的 Windows 95 风味，而且在 MacOS 上也一样，Windows 用户幸灾乐祸中</del>。代码开源在 GitHub，免费，能让用户知道自己的每个操作究竟在干啥，而且可以自己开发拓展功能，打包成第三方的发行版。我们今天要用的 Fiji，就是一个集成了很多常见拓展功能的 ImageJ 发行版。</p>
 
@@ -144,12 +144,12 @@
 
 <ul>
   <li>下载大卫像的正面照。</li>
-  <li>运行 <code class="highlighter-rouge">ImageJ</code>，打开图片。</li>
+  <li>运行 <code class="language-plaintext highlighter-rouge">ImageJ</code>，打开图片。</li>
   <li>复制图片，防止我们的操作改变原始数据。</li>
   <li>用矩形选择框选定大卫像从头到脚的区域，记录选择框的高度。</li>
-  <li>用 <code class="highlighter-rouge">Analyze -&gt; Set Scale</code> 工具确定像素和厘米的换算关系。</li>
+  <li>用 <code class="language-plaintext highlighter-rouge">Analyze -&gt; Set Scale</code> 工具确定像素和厘米的换算关系。</li>
   <li>用直线工具画出要测量的距离，从主面板读取长度。</li>
-  <li>用 <code class="highlighter-rouge">Analyze -&gt; Tools -&gt; Scale Bar...</code> 绘制比例尺。</li>
+  <li>用 <code class="language-plaintext highlighter-rouge">Analyze -&gt; Tools -&gt; Scale Bar...</code> 绘制比例尺。</li>
 </ul>
 
 <p>如果你看到这么简略的介绍就能脑补出如何操作，那么就可以 <del>（关掉这篇文章）</del> 跳过下面的详细介绍了。</p>
@@ -158,23 +158,23 @@
 
 <figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25-david.jpg" /></figure>
 
-<p>鼠标右键单击画中的任意一点，在弹出的菜单中选择 <code class="highlighter-rouge">Duplicate</code>，在对话框中选确定，这样我们就得到一张原图的副本。之后的所有操作都在这个副本上进行，这样即便有任何操作失误，对副本做出了不可逆转的伤害，都不会影响到我们的原始数据。如果数据的安全和完整得不到保证，无意之失叫做学术错误，有意为之叫做学术造假。</p>
+<p>鼠标右键单击画中的任意一点，在弹出的菜单中选择 <code class="language-plaintext highlighter-rouge">Duplicate</code>，在对话框中选确定，这样我们就得到一张原图的副本。之后的所有操作都在这个副本上进行，这样即便有任何操作失误，对副本做出了不可逆转的伤害，都不会影响到我们的原始数据。如果数据的安全和完整得不到保证，无意之失叫做学术错误，有意为之叫做学术造假。</p>
 
-<p>选择工具栏中的矩形选择框（图中主面板左一的阴影按钮），在图中画出一个矩形，上下边分别是大卫像的头顶和脚底，<strong>画完后鼠标不要乱动</strong>，然后在主面板的底部读出高度 <code class="highlighter-rouge">h=595</code>，此处的单位是像素：</p>
+<p>选择工具栏中的矩形选择框（图中主面板左一的阴影按钮），在图中画出一个矩形，上下边分别是大卫像的头顶和脚底，<strong>画完后鼠标不要乱动</strong>，然后在主面板的底部读出高度 <code class="language-plaintext highlighter-rouge">h=595</code>，此处的单位是像素：</p>
 
 <figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25_find-height.png" /></figure>
 
-<p>点击主面板的 <code class="highlighter-rouge">Analyze</code> 按钮，在下拉菜单中找到 <code class="highlighter-rouge">Set Scale</code>，在弹出的对话框中，<code class="highlighter-rouge">Distance in pixels</code> 填入我们读出的 595 像素，<code class="highlighter-rouge">Known distance</code> 和 <code class="highlighter-rouge">Unit of length</code> 填入作者假设的 150 cm：</p>
+<p>点击主面板的 <code class="language-plaintext highlighter-rouge">Analyze</code> 按钮，在下拉菜单中找到 <code class="language-plaintext highlighter-rouge">Set Scale</code>，在弹出的对话框中，<code class="language-plaintext highlighter-rouge">Distance in pixels</code> 填入我们读出的 595 像素，<code class="language-plaintext highlighter-rouge">Known distance</code> 和 <code class="language-plaintext highlighter-rouge">Unit of length</code> 填入作者假设的 150 cm：</p>
 
 <figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25_set-scale.png" /></figure>
 
-<p>然后就可以开始正式的测量了。再次使用矩形选择工具，<strong>画完后鼠标不要乱动</strong>，主面板底端的 <code class="highlighter-rouge">length=20.93</code> 就是以 cm 为单位的距离了：</p>
+<p>然后就可以开始正式的测量了。再次使用矩形选择工具，<strong>画完后鼠标不要乱动</strong>，主面板底端的 <code class="language-plaintext highlighter-rouge">length=20.93</code> 就是以 cm 为单位的距离了：</p>
 
 <figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25_measure-head.png" /></figure>
 
 <p>丁丁可以选中直线工具（左起第五个），用鼠标拖拽的方法画线，主面版的底端也会显示结果。</p>
 
-<p>量完之后，要想方便他人，可以在图上画出比例尺。再次点击主面板的 <code class="highlighter-rouge">Analyze</code> 按钮，在下拉菜单中找到 <code class="highlighter-rouge">Tools</code>，然后找到 <code class="highlighter-rouge">Set Scale</code>，在弹出的对话框里选择合适的选项，然后点击确定，就可以在画面中添加一个比例尺：</p>
+<p>量完之后，要想方便他人，可以在图上画出比例尺。再次点击主面板的 <code class="language-plaintext highlighter-rouge">Analyze</code> 按钮，在下拉菜单中找到 <code class="language-plaintext highlighter-rouge">Tools</code>，然后找到 <code class="language-plaintext highlighter-rouge">Set Scale</code>，在弹出的对话框里选择合适的选项，然后点击确定，就可以在画面中添加一个比例尺：</p>
 
 <figure><figcaption></figcaption><img src="/blog/assets/photos/2020-04-25_menu-scale-bar.png" /></figure>
 

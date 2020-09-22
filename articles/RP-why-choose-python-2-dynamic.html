@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Begin Jekyll SEO tag v2.5.0 -->
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>.html 转载：为什么俺推荐 Python[2]·作为动态语言的 Python | 阿掖山：一个博客</title>
-<meta name="generator" content="Jekyll v3.8.5" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content=".html 转载：为什么俺推荐 Python[2]·作为动态语言的 Python" />
 <meta name="author" content="MountAye" />
 <meta property="og:locale" content="en_US" />
@@ -20,7 +20,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-02-07T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"今天主要是忽悠一下动态语言，捎带忽悠一下 Python。如果你看完本贴，觉得动态语言不错，那俺建议你从 Python 开始入手。","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/RP-why-choose-python-2-dynamic"},"@type":"BlogPosting","url":"mountaye.github.io/blog/articles/RP-why-choose-python-2-dynamic","headline":".html 转载：为什么俺推荐 Python[2]·作为动态语言的 Python","dateModified":"2019-02-07T00:00:00+00:00","datePublished":"2019-02-07T00:00:00+00:00","author":{"@type":"Person","name":"MountAye"},"@context":"http://schema.org"}</script>
+{"description":"今天主要是忽悠一下动态语言，捎带忽悠一下 Python。如果你看完本贴，觉得动态语言不错，那俺建议你从 Python 开始入手。","@type":"BlogPosting","url":"mountaye.github.io/blog/articles/RP-why-choose-python-2-dynamic","headline":".html 转载：为什么俺推荐 Python[2]·作为动态语言的 Python","dateModified":"2019-02-07T00:00:00+00:00","datePublished":"2019-02-07T00:00:00+00:00","author":{"@type":"Person","name":"MountAye"},"mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/RP-why-choose-python-2-dynamic"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
@@ -201,7 +201,7 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="k">def</span> <span class="nf">Foo</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span> <span class="p">:</span>
-    <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span> <span class="s">"</span><span class="si">%</span><span class="s">d </span><span class="si">%</span><span class="s">s </span><span class="si">%</span><span class="s">d"</span> <span class="o">%</span> <span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span> <span class="s">"%d %s %d"</span> <span class="o">%</span> <span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span> <span class="p">)</span>
 
 </code></pre></div></div>
 
@@ -234,7 +234,7 @@ A.<strong>bases</strong> += (B,)</p>
 
 <p>好了，今天就聊到这里。下一个帖子，咱们来讲讲 Python 作为一个纯粹的面向对象语言，有些啥特色。</p>
 
-<p><a href="/blog/articles/RP-why-choose-python-0-overview">回到本系列的目录</a></p>
+<p><a href="/blog/blog/articles/RP-why-choose-python-0-overview">回到本系列的目录</a></p>
 
 <blockquote>
   <p><strong>版权声明</strong><br />
