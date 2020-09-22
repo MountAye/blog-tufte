@@ -4,3 +4,4 @@ _site/
 config.codekit
 
 .jekyll-cache/
+vendor/
