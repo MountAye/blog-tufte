@@ -5,9 +5,144 @@
     <description>阿掖山：一个博客</description>
     <link>mountaye.github.io/blog/</link>
     <atom:link href="mountaye.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Sep 2020 04:09:23 +0000</pubDate>
-    <lastBuildDate>Tue, 22 Sep 2020 04:09:23 +0000</lastBuildDate>
+    <pubDate>Mon, 05 Oct 2020 03:51:50 +0000</pubDate>
+    <lastBuildDate>Mon, 05 Oct 2020 03:51:50 +0000</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>.py | matplotlib笔记：两种API</title>
+        <description>&lt;p&gt;“图”这个字在英语中可以对应好几个词，picture, image, figure, plot… 其中的 plot，意思是展示两组或两组以上的数据之间关系的图像。用时髦一点的话说，就是数据可视化的产物。&lt;/p&gt;
+
+&lt;p&gt;所谓&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt;，顾名思义，&lt;del&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mat&lt;/code&gt; 表示山寨 MATLAB&lt;/del&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plot&lt;/code&gt; 的含义如上所述，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lib&lt;/code&gt; 表示这是 python 的&lt;a href=&quot;http://www.yinwang.org/blog-cn/2017/05/25/dsl&quot;&gt;一个第三方库 (library)，而不是某种领域专用的编程语言 (domain specific languange, DSL)&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;所谓 API，全称是 application programming interface, 应用程序接口，约等于在你有了自己的数据，想调用 matplotlib 来画图的时候，那些需要写在你自己代码里的语句的语法规则。&lt;/p&gt;
+
+&lt;p&gt;因为是代码库，所以在一切开始之前，需要在你的 python 代码开头声明引入&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt&lt;/code&gt; 可以换成你喜欢并且不和其他代码冲突的名字，但是这三个字母是大家的约定俗成的，网上的绝大多数示例代码都这么写，&lt;del&gt;照抄就完事了。&lt;/del&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;matplotlib-的两种-api&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt; 的两种 API&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt; 有两种 API，（其实还有第 3 种 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pylab&lt;/code&gt;，但它没能经得起时间的检验，已经处于官方极不推荐的状态），分别是：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;基于状态的 (state-based)&lt;/li&gt;
+  &lt;li&gt;面向对象的 (object-oriented)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;两种风格混用的话大概率没法玩得转，会产生各种出人意料的输出结果，新手 debug 的能力又比较差，所以最好先选边站队，有时间再学剩下的一个。&lt;/p&gt;
+
+&lt;p&gt;对于有 MATLAB 基础的朋友，基于状态的 API 语法和 MATLAB 几乎一模一样，几乎可以直接上手，当年 python 算是后起之秀，这一招当初就是为了从 MATLAB 那里吸引用户， &lt;del&gt;相当歹毒。&lt;/del&gt; 这套接口本身也比较简单，适合在调试程序的时候快速看一下结果，检查错误。&lt;/p&gt;
+
+&lt;p&gt;对于一般的初学者，matplotlib 的代码本身就是用面向对象的编程范式写成的，学习这套 API 可以更好的理解代码，知道自己究竟在干什么，顺便还可以熟悉一下面向对象的编程范式。现在学 python 之前就会 MATLAB 的人越来越少，网上 &lt;del&gt;可供复制粘贴&lt;/del&gt; 的示例代码越来越多地使用面向对象的语法，学习面向对象的接口也更加实用。&lt;/p&gt;
+
+&lt;h2 id=&quot;两种-api-的相同任务&quot;&gt;两种 API 的相同任务&lt;/h2&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-10-04_figure-and-axes.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;上图来自网上随便找的一篇论文，可以看到，一般我们会把信息相关的几幅小图放在一起，在文章排版的时候，这张组合在一起的图片算作一个单位。在 matplotlib 里面，这样一个基本单位叫做 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt;，而每一幅小图叫做 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;axis&lt;/code&gt; （变量名常简写作 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax&lt;/code&gt;）。平时的单图可以看作只有一个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;axis&lt;/code&gt; 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt;，多图的时候往往用一个 tuple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;axes&lt;/code&gt; 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__getitem__()&lt;/code&gt; 方法来控制每个子图。&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-10-04_anatomy-of-figure.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;上图&lt;a href=&quot;https://matplotlib.org/gallery/showcase/anatomy.html#anatomy-of-a-figure&quot;&gt;来自官网&lt;/a&gt;，图中的蓝字就是 matplotlib 认为的一张只有一个 axis 的 figure 所包含的元素。&lt;/p&gt;
+
+&lt;p&gt;两种 API 要做的事情，就是建立 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;axis&lt;/code&gt;，然后提供函数/方法来生成或者改变各个元素。&lt;/p&gt;
+
+&lt;h2 id=&quot;基于状态-state-based&quot;&gt;基于状态 (state-based)&lt;/h2&gt;
+
+&lt;p&gt;所谓基于状态的 API，不太好解释，前面已经说过，在每个函数前面加上 plt，剩下的就和写 MATLAB 几乎完全一样。&lt;/p&gt;
+
+&lt;p&gt;看&lt;a href=&quot;https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py&quot;&gt;官网给出的教程&lt;/a&gt;，可以观察到两个有趣的现象：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;几乎没有赋值运算符 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;几乎所有的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt; 前面都是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;也就是说，与 matplotlib 相关的命令都是函数，而且不需要将返回值赋给任何变量。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;axis&lt;/code&gt; 的概念被隐藏起来了，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.figure()&lt;/code&gt; 建立一个 figure；&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.subplot()&lt;/code&gt;建立多个 axes，并且将程序的注意力放到函数参数指定的子图上；紧跟着的设定各种元素的函数都会作用到之前最新一个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.subplot()&lt;/code&gt; 所指定的子图上。&lt;/p&gt;
+
+&lt;p&gt;没有赋值说明函数的返回值并不重要，这些函数都会作用在后台维护的 figure 和 axis 的状态机上面，也就是说这些函数都有副作用，不是纯函数。&lt;/p&gt;
+
+&lt;h2 id=&quot;面向对象-object-oriented&quot;&gt;面向对象 (object-oriented)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://matplotlib.org/gallery/showcase/anatomy.html#anatomy-of-a-figure&quot;&gt;作为对比&lt;/a&gt;：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;头几句会有赋值运算符 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=&lt;/code&gt;，被赋值的变量名一般就是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fig&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt; 前面都是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fig&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax&lt;/code&gt;，其中 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax&lt;/code&gt; 居多。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fig&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax&lt;/code&gt; 分别是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;matplotlib.figure.Figure&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;matplotlib.axes.Axes&lt;/code&gt; 两种对象的实例，画图和调整都是在调用两种对象的方法，主要是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax&lt;/code&gt; 的方法。&lt;/p&gt;
+
+&lt;h2 id=&quot;不同之处-cheat-sheet&quot;&gt;不同之处 Cheat Sheet&lt;/h2&gt;
+
+&lt;p&gt;绝大多数命令，在两种 API 之下的名字都一样，差别就在于开头究竟是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.&lt;/code&gt; 还是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax.&lt;/code&gt;，但是少数命令不同，下面做了一个表格，进行一个不完全的列举：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;State-Based&lt;/th&gt;
+      &lt;th&gt;任务&lt;/th&gt;
+      &lt;th&gt;Object-Oriented&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.figure(**args)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;新建 figure&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fig = plt.figure(**args)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.subplot(**args)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;新建 axis&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax = fig.add_subplot(**args)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;好像没有&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;同时新建 figure 和复数 axes&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fig,axes = plt.subplots(**args)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.title(**args)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;设置 figrue 标题&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax.set_title(**args)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.xlabel(**args)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;设置 x 轴名称&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax.set_xlabel(**args)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.ylabel(**args)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;设置 y 轴名称&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax.set_ylabel(**args)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.xlim(**args)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;设置 x 轴范围&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax.set_xlim(**args)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plt.ylim(**args)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;设置 y 轴范围&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ax.set_ylim(**args)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;其他不同的命令，以后用到的时候会随手更新。&lt;/p&gt;
+</description>
+        <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
+        <link>mountaye.github.io/blog/articles/py-matplotlib-two-api</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/py-matplotlib-two-api</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
     
       <item>
         <title>.tex | 整理一些关于实验记录的文章</title>
@@ -689,141 +824,6 @@ FS0:&lt;span class=&quot;se&quot;&gt;\&amp;gt;&lt;/span&gt; &lt;span class=&quot
         <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
         <link>mountaye.github.io/blog/articles/Arch-Linux-in-VirtualBox</link>
         <guid isPermaLink="true">mountaye.github.io/blog/articles/Arch-Linux-in-VirtualBox</guid>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>.html | 翻译：保罗·格雷厄姆谈如何反对</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;本文的作者保罗·格雷厄姆是一位程序员、画家兼投资人。他曾在哈佛大学获得计算机方向的博士学位，也在罗德岛设计学院和佛罗伦萨绘画艺术学院学习过绘画。作为两种身份的结合，他创作了《Hackers &amp;amp; Painters》一书。作为投资人，他最为出名的成就是参与创办了创业孵化公司 Y Combinator.&lt;/p&gt;
-
-  &lt;p&gt;保罗在互联网上最有名的文章，当属这篇《How to Disagree》，他的个人维基百科词条上专门用一个小节介绍了这篇文章。网络上也有根据这篇文章制作的“反驳金字塔”图片。虽说一图胜千言，但是从文字转化为示意图的过程中，很多信息被省略，一些常见的话术和对这些话术的反驳，以及本文文末，对反对的不同层次，其意义的讨论和澄清，都没有出现在图中。在争论中直接扔给对方一张反驳金字塔的图，看起来反而很接近于最低层次的扣帽子。&lt;/p&gt;
-
-  &lt;p&gt;以下是全文翻译。原文链接：&lt;a href=&quot;http://paulgraham.com/disagree.html&quot;&gt;http://paulgraham.com/disagree.html&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;作于 2008 年 3 月&lt;/p&gt;
-
-&lt;p&gt;网络正把写作变成对话。二十年前，作者只用写而读者只能读。网络让读者可以回应，而且这些回应越来越多——评论区里、论坛里，和他们自己的博客文章里。&lt;/p&gt;
-
-&lt;p&gt;这些回应的人中有很多是反对原文的。这是可以预见的。同意不如反对激励人们（发表看法）。当你同意的时候可说的也更少。你也许可以就作者说过的东西进行拓展，但是他可能已经把最有趣的推论都说完了。当你反对的时候，你所踏足的领域是他可能还没涉及到的。&lt;/p&gt;
-
-&lt;p&gt;结果就是，反对的声音要多得多，尤其是以字数来衡量。这并不意味着人们的戾气愈发严重。我们交流方式的结构性改变就足以解释这一现象了。但是尽管驱动着反对声音增多的并非愤怒，人们因为反对增多而变得更加生气的危险却真实存在。尤其是在网上，在你不用和对方面对面的地方发言是容易的。&lt;/p&gt;
-
-&lt;p&gt;如果我们都在越来越多地进行反对，那我们就需要把这件事小心做好。什么叫好好反对？绝大多数读者可以区分单纯的&lt;strong&gt;扣帽子&lt;/strong&gt;和通过细致推理进行的反驳，但我认为把中间状态也逐个列举一下是很有帮助的。所以下面就是对反对的不同层次进行列举的一个尝试：&lt;/p&gt;
-
-&lt;h2 id=&quot;第-0-层扣帽子-name-calling&quot;&gt;第 0 层：扣帽子 (Name-calling)&lt;/h2&gt;
-
-&lt;p&gt;这是反对的最低层次，可能也是最常见的形式。我们都见过这样的评论：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;你个娘炮！！！！！！&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;但是重要的是意识到，更加高大上的&lt;strong&gt;扣帽子&lt;/strong&gt;同样没什么效力。一个像这样的评论：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;作者是个自以为是的外行。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;不过就是一个高配版的“你个娘炮”。&lt;/p&gt;
-
-&lt;h2 id=&quot;第-1-层诉诸身份-ad-hominem&quot;&gt;第 1 层：诉诸身份 (Ad Hominem)&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;诉诸身份&lt;/strong&gt;的攻击不像单纯的&lt;strong&gt;扣帽子&lt;/strong&gt;那么无力。它其实可能有些威力。比如说，如果一个参议院写文章说参议员们的工资需要提高，有人可能会回应道：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;他当然会这么说了，他是个参议员。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;这并不会反驳作者的论证，但是这至少和主题有关。然而，这仍然是一种很无力的反对。如果这位参议院的论证里有什么错误，你应该说明错在哪里；如果没错，他是一个参议员又有什么区别？&lt;/p&gt;
-
-&lt;p&gt;说作者不具备写作某一话题文章的权威性是&lt;strong&gt;诉诸身份&lt;/strong&gt;的一个变种，而且是特别没用的一种，因为好的想法经常来自于旁观者。问题是作者对还是不对。如果他缺乏的权威性导致他犯了错误，请把这些错误指出来。如果没有，那（缺乏权威性）就不是一个问题。&lt;/p&gt;
-
-&lt;h2 id=&quot;第-2-层诉诸语气-responding-to-tone&quot;&gt;第 2 层：诉诸语气 (Responding to Tone)&lt;/h2&gt;
-
-&lt;p&gt;接下来这个层次我们开始看到针对内容而非作者的回应。这些回应中最低级的一种形式就是反对作者的语气。例如：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;无法相信作者竟然用如此傲慢的方式贬低智能设计。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;尽管强于攻击作者，这仍是一种无力的反对。作者是对还是错，比他的语气重要得多。尤其是鉴于语气是多么难以评判。一个挂着某种观点的粉丝牌子的人可能被一些其他人觉得正常的语气所激怒。&lt;/p&gt;
-
-&lt;p&gt;所以如果你对于一篇文章所能说的最坏的事情就是&lt;strong&gt;诉诸语气&lt;/strong&gt;，那你实在是没说出什么东西来。作者是不是轻佻但是正确？那总好过持重但是错误。如果作者有哪里错了，那就指出到底是哪儿。&lt;/p&gt;
-
-&lt;h2 id=&quot;第-3-层声明异见-contradiction&quot;&gt;第 3 层：声明异见 (Contradiction)&lt;/h2&gt;
-
-&lt;p&gt;这一层次我们终于来到了对说过的内容进行的回应，而不是怎么说的和谁说的。对一个论证的最低层次的回应就是简单陈述相反的论点，没有或只提供很少的支持性证据。&lt;/p&gt;
-
-&lt;p&gt;这一方法经常和第2层结合起来使用，正如：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;无法相信作者竟然用如此傲慢的方式贬低智能设计。智能设计是合理的科学理论。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;声明异见&lt;/strong&gt;有时可能有些威力，有时仅仅让人看见明确声明的反方命题就足以看到反方是正确的。但是通常来说，证据是有帮助的。&lt;/p&gt;
-
-&lt;h2 id=&quot;第-4-层证明异见-counterargument&quot;&gt;第 4 层：证明异见 (Counterargument)&lt;/h2&gt;
-
-&lt;p&gt;到了第4层上，我们终于见到了第一种有说服力的反对形式：&lt;strong&gt;证明异见&lt;/strong&gt;。之前的几种形式通常可以因为啥也没论证而被忽略。&lt;strong&gt;证明异见&lt;/strong&gt;可能会证明某些观点。问题在于，很难说证明的究竟是啥。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;证明异见&lt;/strong&gt;就是在&lt;strong&gt;声明异见&lt;/strong&gt;之外，再加上论证和/或论据。当其针对的是原论点时，这种方式是令人信服的。但是不幸的是，通常情况下&lt;strong&gt;证明异见&lt;/strong&gt;针对的是和原论点稍微有些区别的东西。多数情况下，争论得热火朝天的俩人其实争论的是两件不同的事情。有时他们甚至互相同意对方，但是陷于斗嘴的程度如此之深，以至于没有意识到这一点。&lt;/p&gt;
-
-&lt;p&gt;反对和作者原文有轻微不同的论点也是可能有合理原因的：当你感觉他们没有把握问题的中心的时候就可以这么做。但是当你这么做的时候，应该明确说明你在论证不同的论点。&lt;/p&gt;
-
-&lt;h2 id=&quot;第-5-层驳斥对方-refutation&quot;&gt;第 5 层：驳斥对方 (Refutation)&lt;/h2&gt;
-
-&lt;p&gt;最有说服力的反对形式是&lt;strong&gt;驳斥对方&lt;/strong&gt;。它同样是最罕见的，因为需要最多的工作量。其实，反对的不同层次构成了一种金字塔，层次越高，你能找到的实例就越少。&lt;/p&gt;
-
-&lt;p&gt;要&lt;strong&gt;驳斥&lt;/strong&gt;一个人，你可能得引用他们说过的话。你可能必须找到一件“还热乎着的凶器 (smoking gun)”，一个在你反对的内容中你认为搞错了的东西，然后解释它为什么错了。如果你找不到可以用来反对的实际引用，那么你可能在犯 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E7%A8%BB%E8%8D%89%E4%BA%BA%E8%AB%96%E8%AD%89&quot;&gt;“稻草人谬误”&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;尽管&lt;strong&gt;驳斥对方&lt;/strong&gt;一般包含引用，引用并不必然意味着&lt;strong&gt;驳斥对方&lt;/strong&gt;。有些作者引用部分他们反对的文章的内容，做出合理&lt;strong&gt;驳斥对方&lt;/strong&gt;的样子，然后用第 3 层甚至第 0 层的形式进行回应。&lt;/p&gt;
-
-&lt;h2 id=&quot;第-6-层驳斥对方中心论点&quot;&gt;第 6 层：驳斥对方中心论点&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;驳斥&lt;/strong&gt;的力度取决于你驳斥对方的是什么。最强有力的反对形式就是&lt;strong&gt;驳斥对方的中心论点&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;即便到了第5层，我们偶尔仍能看见故意的智力不诚实 (interlectual dishonesty)&lt;label for=&quot;intellectual-dishoesty&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;intellectual-dishoesty&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;相对于 intellectual honesty, 故意在辩论和推理中使用谬误被称作 intellectual dishonesty, 译作“智力不诚实”。详见维基百科 inteleectual honesty 词条。 &lt;/span&gt;，比如有人挑出一个论证中不重要的点然后把它们&lt;strong&gt;驳斥&lt;/strong&gt;一番。有时这么做的精神让这种反对更像是一种处心积虑的&lt;strong&gt;诉诸身份&lt;/strong&gt;的攻击，而非真正的&lt;strong&gt;驳斥对方&lt;/strong&gt;。比如，纠正某人的语法，或者揪住名字或数字中的小错不放。除非反对的论证实际上依赖于这些错误，否则纠正它们的唯一目的就是损害对手的名誉。&lt;/p&gt;
-
-&lt;p&gt;真正意义上的&lt;strong&gt;驳斥对方&lt;/strong&gt;要求一个人反驳其中心论点，或者至少是其中之一。那意味着一个人必须明确地指出中心论点是什么。所以一个真正有效的&lt;strong&gt;驳斥对方&lt;/strong&gt;看起来就像：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;作者的主要论点似乎是 X。正如他说的：&lt;/p&gt;
-
-  &lt;blockquote&gt;
-    &lt;p&gt;&lt;引用的内容&gt;
-&lt;/引用的内容&gt;&lt;/p&gt;
-  &lt;/blockquote&gt;
-
-  &lt;p&gt;但这是错的，原因如下……&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;你引用并指出错误的内容不一定是原作者主要论点的原样陈述，只要批判的是中心论点所依赖的东西就足够了。&lt;/p&gt;
-
-&lt;h2 id=&quot;这样做的意义&quot;&gt;这样做的意义&lt;/h2&gt;
-
-&lt;p&gt;现在我们有了给不同形式的反对进行分类的方法。这有什么好处？这种反对的分级所&lt;strong&gt;不能&lt;/strong&gt;带给我们的，就是判断输赢的方法。反对的不同层次描述的只是一个反对的形式，而不是反对是否正确。一个第 6 层的回应可能仍然是完全错误的。&lt;/p&gt;
-
-&lt;p&gt;但是尽管反对的不同层次没有给一个回复的可信度设定一个下限，但它的确设定了一个上限。一个第 6 层的回应不一定有说服力，但是一个第 2 层的回应一定没有说服力。&lt;/p&gt;
-
-&lt;p&gt;区分不同形式反对的最明显的好处就是帮助人们评估他们所阅读的东西。特别是，这将帮助他们看清的议论。一个雄辩的演讲者或者作家可以给人一种碾压对手的印象，仅仅通过使用强有力的词汇。实际上这可能是一个煽动者的决定性特质。通过辨别不同形式的反对，我们给了批判性阅读者一个图钉，让他们能戳破这种气球。&lt;/p&gt;
-
-&lt;p&gt;这种标签同样能帮助写作者。大多数的智力不诚实是无意的。有些人用&lt;strong&gt;诉诸语气&lt;/strong&gt;的方法批评他反对的观点，可能真的觉得自己言之有物。放大并看清他当时在反对分级上的位置，有可能会启发他尝试进步到&lt;strong&gt;证明异见&lt;/strong&gt;和&lt;strong&gt;驳斥对方&lt;/strong&gt;的层次上去。&lt;/p&gt;
-
-&lt;p&gt;但是好好反对的最大好处并不只是让对话变得更好，而是让被反对的人开心一点。如果你研究对话，会发现第 1 层比第 6 层更加刻薄。当你真的言之有物的时候，大可不必刻薄。实际上，你也不会想这么做。当你真的有观点要表达时，刻薄只能起阻碍作用。&lt;/p&gt;
-
-&lt;p&gt;如果沿着反对的不同层次向上攀登可以让人们不那么刻薄，那将会让大多数人更快乐。多数人并不乐于刻薄，他们这么做只是因为控制不当。&lt;/p&gt;
-
-&lt;p&gt;感谢 Trevor Blackwell 和 Jessica Livingston 阅读这篇文章的草稿。&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/TL-Paul-Graham-How-to-Disagree</guid>
         
         
         <category>post</category>
