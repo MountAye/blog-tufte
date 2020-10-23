@@ -7,20 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>.py matplotlib笔记：两种API | 阿掖山：一个博客</title>
+<title>.doc 聊聊买车这两年多 | 阿掖山：一个博客</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content=".py matplotlib笔记：两种API" />
+<meta property="og:title" content=".doc 聊聊买车这两年多" />
 <meta name="author" content="MountAye" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="import matplotlib.pyplot as plt" />
-<meta property="og:description" content="import matplotlib.pyplot as plt" />
-<link rel="canonical" href="mountaye.github.io/blog/articles/py-matplotlib-two-api" />
-<meta property="og:url" content="mountaye.github.io/blog/articles/py-matplotlib-two-api" />
+<meta name="description" content="阿掖山：一个博客" />
+<meta property="og:description" content="阿掖山：一个博客" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/doc-two-years-after-buying-car" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/doc-two-years-after-buying-car" />
 <meta property="og:site_name" content="阿掖山：一个博客" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-10-04T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-10-08T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"import matplotlib.pyplot as plt","@type":"BlogPosting","url":"mountaye.github.io/blog/articles/py-matplotlib-two-api","headline":".py matplotlib笔记：两种API","dateModified":"2020-10-04T00:00:00+00:00","datePublished":"2020-10-04T00:00:00+00:00","author":{"@type":"Person","name":"MountAye"},"mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/py-matplotlib-two-api"},"@context":"https://schema.org"}</script>
+{"description":"阿掖山：一个博客","@type":"BlogPosting","url":"mountaye.github.io/blog/articles/doc-two-years-after-buying-car","headline":".doc 聊聊买车这两年多","dateModified":"2020-10-08T00:00:00+00:00","datePublished":"2020-10-08T00:00:00+00:00","author":{"@type":"Person","name":"MountAye"},"mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/doc-two-years-after-buying-car"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
@@ -38,7 +38,7 @@
   <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
   <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
   <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
-  <link rel="canonical" href="/blog/articles/py-matplotlib-two-api">
+  <link rel="canonical" href="/blog/articles/doc-two-years-after-buying-car">
   <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
   <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
 </head>
@@ -119,134 +119,81 @@
 
 
 <article class="group post">
-    <h1>.py | matplotlib笔记：两种API</h1>
+    <h1>.doc | 聊聊买车这两年多</h1>
         <p class="subtitle">
-            October 4, 2020
+            October 8, 2020
         </p>
     <div class="postContent">
-        <p>“图”这个字在英语中可以对应好几个词，picture, image, figure, plot… 其中的 plot，意思是展示两组或两组以上的数据之间关系的图像。用时髦一点的话说，就是数据可视化的产物。</p>
+        <p>2018 年初，趁着寒假的功夫考了驾照，趁热打铁买了车，是一辆二手的丰田花冠。</p>
 
-<p>所谓<code class="language-plaintext highlighter-rouge">matplotlib</code>，顾名思义，<del><code class="language-plaintext highlighter-rouge">mat</code> 表示山寨 MATLAB</del>，<code class="language-plaintext highlighter-rouge">plot</code> 的含义如上所述，<code class="language-plaintext highlighter-rouge">lib</code> 表示这是 python 的<a href="http://www.yinwang.org/blog-cn/2017/05/25/dsl">一个第三方库 (library)，而不是某种领域专用的编程语言 (domain specific languange, DSL)</a>。</p>
+<p>最近有个朋友要买车了，知道我有车，所以来打听一下；碰巧我也临时起意想要换车，之前对买车和养车的花费，虽然一直在记账，但是脑子里是一团糨糊，需要理一理。</p>
 
-<p>所谓 API，全称是 application programming interface, 应用程序接口，约等于在你有了自己的数据，想调用 matplotlib 来画图的时候，那些需要写在你自己代码里的语句的语法规则。</p>
+<p>结果呢，在这篇文章动笔之前，朋友就已经秀出新车的照片了；算完买车的帐之后，我也暂时决定不换车了。所以这篇文章，权当是周更凑数吧。</p>
 
-<p>因为是代码库，所以在一切开始之前，需要在你的 python 代码开头声明引入</p>
+<h2 id="先来算帐">先来算帐</h2>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-</code></pre></div></div>
+<p>因为隐私的关系，所有价格都是约数，这样可以减小一点点<a href="https://program-think.blogspot.com/2017/12/howto-cover-your-tracks-10.html">信息量</a>（虽然没什么用就是了）.</p>
 
-<p><code class="language-plaintext highlighter-rouge">plt</code> 可以换成你喜欢并且不和其他代码冲突的名字，但是这三个字母是大家的约定俗成的，网上的绝大多数示例代码都这么写，<del>照抄就完事了。</del></p>
-
-<h2 id="matplotlib-的两种-api"><code class="language-plaintext highlighter-rouge">matplotlib</code> 的两种 API</h2>
-
-<p><code class="language-plaintext highlighter-rouge">matplotlib</code> 有两种 API，（其实还有第 3 种 <code class="language-plaintext highlighter-rouge">pylab</code>，但它没能经得起时间的检验，已经处于官方极不推荐的状态），分别是：</p>
+<p>与车有关的花费可以按照频率来归类：</p>
 
 <ul>
-  <li>基于状态的 (state-based)</li>
-  <li>面向对象的 (object-oriented)</li>
+  <li>一次性的：
+    <ul>
+      <li>汽车本身，给车行的：约 $13,000</li>
+      <li>消费税：约 $1,300</li>
+    </ul>
+  </li>
+  <li>每年一次：
+    <ul>
+      <li>财产税：从第二年开始，年末交，至今只有一次，$300</li>
+    </ul>
+  </li>
+  <li>半年一次：
+    <ul>
+      <li>保险：大约是个等差数列，$2100 开始，之后每次下降 $200</li>
+      <li>保养：没有特殊项目的话，$20 - $30</li>
+    </ul>
+  </li>
+  <li>每月一次：
+    <ul>
+      <li>加油：车用的少，平均每月一箱油。最贵的时候每次 $30，最便宜的时候（现在）每次 $20</li>
+    </ul>
+  </li>
+  <li>不定期的：
+    <ul>
+      <li>为了考驾照租了一辆车：$10</li>
+      <li>换驾照、车牌：每次 $20</li>
+      <li>换过一次轮胎：$700</li>
+      <li>换过一次刹车片：$500</li>
+      <li>洗车工具、清洗剂：$50</li>
+      <li>停车：在芝加哥两天停掉了接近 $150 :-( 其余至今累计不到 $100，包括在学校停车</li>
+    </ul>
+  </li>
 </ul>
 
-<p>两种风格混用的话大概率没法玩得转，会产生各种出人意料的输出结果，新手 debug 的能力又比较差，所以最好先选边站队，有时间再学剩下的一个。</p>
+<h2 id="再谈感受">再谈感受</h2>
 
-<p>对于有 MATLAB 基础的朋友，基于状态的 API 语法和 MATLAB 几乎一模一样，几乎可以直接上手，当年 python 算是后起之秀，这一招当初就是为了从 MATLAB 那里吸引用户， <del>相当歹毒。</del> 这套接口本身也比较简单，适合在调试程序的时候快速看一下结果，检查错误。</p>
+<h3 id="价格比想象中贵不少">价格比想象中贵不少</h3>
 
-<p>对于一般的初学者，matplotlib 的代码本身就是用面向对象的编程范式写成的，学习这套 API 可以更好的理解代码，知道自己究竟在干什么，顺便还可以熟悉一下面向对象的编程范式。现在学 python 之前就会 MATLAB 的人越来越少，网上 <del>可供复制粘贴</del> 的示例代码越来越多地使用面向对象的语法，学习面向对象的接口也更加实用。</p>
+<p>说实话，重新看到帐单的时候我有点不敢相信，虽然来这里的第一天就知道美国的东西标价和税是分开算的，但是我印象里一万三是税后价格。当初买车的预算只有一万元，结果不够，幸好当时爸妈在国内已经起床了，在签合同的当时紧急给我汇了一笔钱。估计是价格太高，花了家里这么多，自己实在惭愧，于是记忆就悄悄地自我修改，帮自己开脱了。</p>
 
-<h2 id="两种-api-的相同任务">两种 API 的相同任务</h2>
+<p>一般而言，美国汽车新车的价格是比国内便宜一点，但并没有江湖传言说的差那么多。国内价格按照官价汇率换成美元，和美国税后价格区别就在误差范围以内了。有次我和几个朋友开车路过一家卖野马的车行，大家讨论起来野马新车的价格，我猜的最准。 <del>当然了，官价汇率和实际购买力也有一点不同，微信公众号上不能多说，说多了号就没了。</del></p>
 
-<figure><figcaption></figcaption><img src="/blog/assets/photos/2020-10-04_figure-and-axes.png" /></figure>
+<p>美国买车便宜，主要在于这里的很多人买的都是二手车，一辆车在新车变成二手车的那一刻起贬值是最快的，五年左右的车价就能跌去一半。同时由于市场成熟，因为信息不对称被车商套路的可能性比国内小很多，有更多的人愿意买二手车。</p>
 
-<p>上图来自网上随便找的一篇论文，可以看到，一般我们会把信息相关的几幅小图放在一起，在文章排版的时候，这张组合在一起的图片算作一个单位。在 matplotlib 里面，这样一个基本单位叫做 <code class="language-plaintext highlighter-rouge">figure</code>，而每一幅小图叫做 <code class="language-plaintext highlighter-rouge">axis</code> （变量名常简写作 <code class="language-plaintext highlighter-rouge">ax</code>）。平时的单图可以看作只有一个 <code class="language-plaintext highlighter-rouge">axis</code> 的 <code class="language-plaintext highlighter-rouge">figure</code>，多图的时候往往用一个 tuple <code class="language-plaintext highlighter-rouge">axes</code> 的 <code class="language-plaintext highlighter-rouge">__getitem__()</code> 方法来控制每个子图。</p>
+<h3 id="车险及所谓华人互坑">车险，及所谓“华人互坑”</h3>
 
-<figure><figcaption></figcaption><img src="/blog/assets/photos/2020-10-04_anatomy-of-figure.png" /></figure>
+<p>虽然车险价格以一个等差数列稳步下降，但是其实中间换过一家保险公司。头一年半的三次付费是卖车的时候经手的业务员推荐的，看起来像是本地华人经营的一家保险中介，自己没有保险产品，给一些知名度不是那么高的保险公司拉客户。</p>
 
-<p>上图<a href="https://matplotlib.org/gallery/showcase/anatomy.html#anatomy-of-a-figure">来自官网</a>，图中的蓝字就是 matplotlib 认为的一张只有一个 axis 的 figure 所包含的元素。</p>
+<p>卖车的小哥是华人，我当时房东的晚辈亲戚。月均 300+，听起来就好像不怎么靠谱是吧，总感觉应验了豆瓣名言“在海外坑中国人最狠的都是自己人”。第一次交保险的时候简直心头在滴血，就连我这种拖延症晚期患者，在一年半以后也坚决换了某 G 字头知名保险公司。结果回过头来看，价格下降的幅度并没有明显改善，基本是汽车折旧和个人信用记录的正常积累。</p>
 
-<p>两种 API 要做的事情，就是建立 <code class="language-plaintext highlighter-rouge">figure</code> 和 <code class="language-plaintext highlighter-rouge">axis</code>，然后提供函数/方法来生成或者改变各个元素。</p>
+<p>当初把保险办好，所有的手续就都齐了，第二天直接拿着车行给的文件就把牌照办好了。我去看车的时候是开着考驾照租的车去的，买完车我再开回来，他帮我把新车开到我的公寓，然后打电话让嫂子开车接自己回家。这样一想，更为自己之前以小人之心度君子之腹而羞愧。这次朋友买车本来是想推荐给他的，结果前不久看朋友圈才知道他已经换了工作，有点可惜。</p>
 
-<h2 id="基于状态-state-based">基于状态 (state-based)</h2>
+<h3 id="我想换车还是算了">我想换车——还是算了</h3>
 
-<p>所谓基于状态的 API，不太好解释，前面已经说过，在每个函数前面加上 plt，剩下的就和写 MATLAB 几乎完全一样。</p>
+<p>觉得现在反正住得离学校很近，每天去学校也不需要开车，真正用车的机会也就是每周一次踢球、一次去超市，以及不定期的短途瞎逛。这样的用车场景，小车的油耗优势并不明显，出去玩的时候，有时需要走一些石子路，SUV 的通过性有明显的优势。所以有想要换车的打算。</p>
 
-<p>看<a href="https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py">官网给出的教程</a>，可以观察到两个有趣的现象：</p>
-
-<ul>
-  <li>几乎没有赋值运算符 <code class="language-plaintext highlighter-rouge">=</code></li>
-  <li>几乎所有的 <code class="language-plaintext highlighter-rouge">.</code> 前面都是 <code class="language-plaintext highlighter-rouge">plt</code></li>
-</ul>
-
-<p>也就是说，与 matplotlib 相关的命令都是函数，而且不需要将返回值赋给任何变量。<code class="language-plaintext highlighter-rouge">figure</code> 和 <code class="language-plaintext highlighter-rouge">axis</code> 的概念被隐藏起来了，<code class="language-plaintext highlighter-rouge">plt.figure()</code> 建立一个 figure；<code class="language-plaintext highlighter-rouge">plt.subplot()</code>建立多个 axes，并且将程序的注意力放到函数参数指定的子图上；紧跟着的设定各种元素的函数都会作用到之前最新一个 <code class="language-plaintext highlighter-rouge">plt.subplot()</code> 所指定的子图上。</p>
-
-<p>没有赋值说明函数的返回值并不重要，这些函数都会作用在后台维护的 figure 和 axis 的状态机上面，也就是说这些函数都有副作用，不是纯函数。</p>
-
-<h2 id="面向对象-object-oriented">面向对象 (object-oriented)</h2>
-
-<p><a href="https://matplotlib.org/gallery/showcase/anatomy.html#anatomy-of-a-figure">作为对比</a>：</p>
-
-<ul>
-  <li>头几句会有赋值运算符 <code class="language-plaintext highlighter-rouge">=</code>，被赋值的变量名一般就是 <code class="language-plaintext highlighter-rouge">fig</code> 和 <code class="language-plaintext highlighter-rouge">ax</code>。</li>
-  <li><code class="language-plaintext highlighter-rouge">.</code> 前面都是 <code class="language-plaintext highlighter-rouge">fig</code> 和 <code class="language-plaintext highlighter-rouge">ax</code>，其中 <code class="language-plaintext highlighter-rouge">ax</code> 居多。</li>
-</ul>
-
-<p><code class="language-plaintext highlighter-rouge">fig</code> 和 <code class="language-plaintext highlighter-rouge">ax</code> 分别是 <code class="language-plaintext highlighter-rouge">matplotlib.figure.Figure</code> 和 <code class="language-plaintext highlighter-rouge">matplotlib.axes.Axes</code> 两种对象的实例，画图和调整都是在调用两种对象的方法，主要是 <code class="language-plaintext highlighter-rouge">ax</code> 的方法。</p>
-
-<h2 id="不同之处-cheat-sheet">不同之处 Cheat Sheet</h2>
-
-<p>绝大多数命令，在两种 API 之下的名字都一样，差别就在于开头究竟是 <code class="language-plaintext highlighter-rouge">plt.</code> 还是 <code class="language-plaintext highlighter-rouge">ax.</code>，但是少数命令不同，下面做了一个表格，进行一个不完全的列举：</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>State-Based</th>
-      <th>任务</th>
-      <th>Object-Oriented</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">plt.figure(**args)</code></td>
-      <td><strong>新建 figure</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">fig = plt.figure(**args)</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">plt.subplot(**args)</code></td>
-      <td><strong>新建 axis</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">ax = fig.add_subplot(**args)</code></td>
-    </tr>
-    <tr>
-      <td>好像没有</td>
-      <td><strong>同时新建 figure 和复数 axes</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">fig,axes = plt.subplots(**args)</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">plt.title(**args)</code></td>
-      <td><strong>设置 figrue 标题</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">ax.set_title(**args)</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">plt.xlabel(**args)</code></td>
-      <td><strong>设置 x 轴名称</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">ax.set_xlabel(**args)</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">plt.ylabel(**args)</code></td>
-      <td><strong>设置 y 轴名称</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">ax.set_ylabel(**args)</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">plt.xlim(**args)</code></td>
-      <td><strong>设置 x 轴范围</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">ax.set_xlim(**args)</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">plt.ylim(**args)</code></td>
-      <td><strong>设置 y 轴范围</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">ax.set_ylim(**args)</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>其他不同的命令，以后用到的时候会随手更新。</p>
+<p>但是，上网看了一些车的报价，标价一万五的都是凤毛麟角，两万以上很普遍。这也正常，毕竟绝大多数的 SUV 和 B 级车同平台，本来就比现在的车大一圈，SUV 本身的功能又有溢价。以我现在的存款，肯定是要先卖旧车再买新车，各种标价之外的成本，再想到各种行政手续也要消耗不少的时间和精力，恐怕只能望而却步。</p>
 
     </div>
     <hr class="slender">
@@ -255,7 +202,7 @@
     <h2>读者评论</h2>
     <script type="text/javascript">
         // Global Variables
-        var milestoneID = 19;
+        var milestoneID = 20;
         var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
         var json; // OBJECT, get changed by side effects
         var iIssue = 0; // INTEGER
@@ -372,7 +319,7 @@
     <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
     
     <div id="commentIntro">
-        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/19">进行评论</a>。</p>
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/20">进行评论</a>。</p>
     </div>
     <div id="commentContent"></div>
 </section>
@@ -383,7 +330,7 @@
 
         <span class="print-footer">
     
-        .py | matplotlib笔记：两种API - October 4, 2020 - MountAye
+        .doc | 聊聊买车这两年多 - October 8, 2020 - MountAye
 </span>
     
         <footer>
