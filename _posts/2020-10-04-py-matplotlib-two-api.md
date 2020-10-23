@@ -5,7 +5,7 @@ keywords:   ""
 excerpt:    "import matplotlib.pyplot as plt"
 date:        2020-10-04
 categories:  post
-milestoneID: X
+milestoneID: 19
 ---
 
 “图”这个字在英语中可以对应好几个词，picture, image, figure, plot... 其中的 plot，意思是展示两组或两组以上的数据之间关系的图像。用时髦一点的话说，就是数据可视化的产物。  
