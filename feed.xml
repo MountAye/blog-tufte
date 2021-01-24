@@ -5,9 +5,94 @@
     <description>阿掖山：一个博客</description>
     <link>mountaye.github.io/blog/</link>
     <atom:link href="mountaye.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Jan 2021 04:33:17 +0000</pubDate>
-    <lastBuildDate>Sun, 17 Jan 2021 04:33:17 +0000</lastBuildDate>
+    <pubDate>Sun, 24 Jan 2021 05:57:53 +0000</pubDate>
+    <lastBuildDate>Sun, 24 Jan 2021 05:57:53 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>马普所·非平衡态系统中的集体过程·笔记 | 01.简介：朗之万方程和响应函数、热力学平衡和细致平衡条件</title>
+        <description>&lt;p&gt;来来回回地协调了好几次时间之后，我们最终确定每周三下午进行一次讨论。刚刚过去的这一周讨论了第一讲，时长超过了一个小时。&lt;/p&gt;
+
+&lt;p&gt;在讨论会之前，我的主要精力放在了仅有的几张有公式的幻灯片上，结果这一部分完全没有出现在讨论当中。讨论的主要内容是组里本科生艾萨提出的问题：“细致平衡条件 (detailed balance) 和平衡 (equilibrium) 的关系是什么”。这个问题其实挺有质量的，而且我们确实也没有给出一个令人满意的回答。我觉得要想说清楚这个问题，其实需要的是逻辑学和科学哲学，我现在在这方面的水平还不够，这篇文章姑且尝试解释一下。不过不谈数学的原因恐怕不是在这方面没有疑问，毕竟一不用做作业，二没有考试，完全出于兴趣的情况下，直面数学是需要热情和勇气的。&lt;/p&gt;
+
+&lt;h2 id=&quot;朗之万方程和响应函数&quot;&gt;朗之万方程和响应函数&lt;/h2&gt;
+
+&lt;h3 id=&quot;朗之万方程&quot;&gt;朗之万方程&lt;/h3&gt;
+
+&lt;p&gt;讲义第12页到15页，讲解了热力学平衡条件下的朗之万方程。所谓热力学平衡条件，真正用到的性质就只有能量均分定理。朗之万方程听起来高大上，实际上只不过是对牛顿第二定律进行了一下改写，明确指明了这个系统受到两种力的作用，下面的公式里，等号右边第一项是正比于速度的衰减项，防止方程的解在无限远处发散（”所以你承认你们科学家是在瞎编咯？”），另外一项是一个关于时间的随机函数，用来刻画不确定性的涨落。&lt;/p&gt;
+
+\[m \frac{d^2x(t)}{dt^2} = -\lambda \frac{dx(t)}{dt} + \xi(t)\]
+
+&lt;p&gt;朗之万是和爱因斯坦以及居里夫人（咳咳）同时代的人，依然可以用牛顿时代的东西青史标名，可见物理学果然还是内卷不足，广阔天地，大有可为。（逃）&lt;/p&gt;
+
+&lt;h3 id=&quot;粒子的位置是粒子之前受力作用的积累响应函数是卷积的核&quot;&gt;粒子的位置是粒子之前受力作用的积累：响应函数是卷积的核&lt;/h3&gt;
+
+&lt;p&gt;所谓牛顿第二定律，对于高中生来说是公式，对于大学生来说是方程，（“公式和方程有啥区别？”），对于刚上大学的高中毕业生来说是噩梦—— \(F=ma\)  是方程？这玩意需要解？这玩意也能解？这玩意怎么解？三个字母倒真不算方程，但是物理受到的力往往取决于其所在的位置 \(x(t)\) ，所以F其实是 \(F(x(t))\) ；\(a\)  是加速度，位置的二阶导数，也就是 \(d^2x(t)/dt^2\) ，这里的未知量是 \(x(t)\)，这是一个微分方程，常微分方程往往是本科阶段要上一个学期的课程。&lt;/p&gt;
+
+&lt;p&gt;响应函数用的是另一套思路，先不从微分方程的角度入手，直接来猜猜解应该长什么样子。此刻的位置与一段时间以前的受力以及当时的那个力对此刻残留的影响有关，这个“一段时间”究竟是多长时间呢？不知道，索性考虑所有时间长度，把这些影响全都加起来。学过微积分应该知道，对无限个无穷小量求和，再取个极限，这就是积分（“快把那个要先证明积分存在并收敛的数学家嘴堵上”），写作：&lt;/p&gt;
+
+\[x(t) = \int_{-\infty}^{t}h(t-\tau)\xi(\tau)d\tau\]
+
+&lt;p&gt;熟悉数学的朋友知道，等号右边的积分叫做卷积。一般卷积的定义里形式稍有不同，积分上下限分别是正负无穷，这对物理学家不是问题，只要令  \(\tau &amp;gt; t\)  的时候  \(h(t-\tau) = 0\)   就行了。&lt;/p&gt;
+
+&lt;p&gt;一方面，卷积既是一种定义在两个函数（\(\xi\) 和 \(h\)）之间的运算，可以简写作&lt;/p&gt;
+
+\[x = h * \xi\]
+
+&lt;p&gt;另一方面，也可以看作是对 \(\xi\) 的变换 (transform)，  \(h(t-\tau)\) 是这个变换的核 (kernal)，也就是讲义中所讲的 response function。当一个具体问题确定的时候，方程的解就和响应函数一一对应。&lt;/p&gt;
+
+&lt;p&gt;在方程实际被求解之前，响应函数和待求解的函数一样，是一个未知量。因为牛顿第二定律是一个二阶微分方程，要想求解，所以很自然的思路就是将方程两边同时做傅里叶变换，将导数转化为含有 iw 的代数方程，然后再将解做傅里叶逆变换。因为两个函数的卷积的傅里叶变换，等于两个函数各自的傅里叶变换的乘积，所以在傅里叶倒空间里，方程的解、响应函数、随机涨落三项是很简单的乘积形式。&lt;/p&gt;
+
+&lt;h3 id=&quot;关于朗之万方程的解讲义中不清楚的地方&quot;&gt;关于朗之万方程的解，讲义中不清楚的地方&lt;/h3&gt;
+
+&lt;p&gt;第14页右侧蓝字似乎是 “spectral density”.&lt;/p&gt;
+
+&lt;p&gt;第15页 \(\tilde{C}(\omega)\) 似乎是 \(\left&amp;lt;\tilde v(\omega)^2\right&amp;gt;\)&lt;/p&gt;
+
+&lt;h2 id=&quot;平衡-equilibrium-和细致平衡-detailed-balance&quot;&gt;平衡 (equilibrium) 和细致平衡 (detailed balance)&lt;/h2&gt;
+
+&lt;p&gt;先贴几个相关的链接：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Thermal_equilibrium&quot;&gt;维基百科：thermal equilibrium&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Thermodynamic_equilibrium&quot;&gt;维基百科：thermaldynamic equilibrium&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Detailed_balance&quot;&gt;维基百科：detailed balance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://physicallensonthecell.org/chemical-physics/equilibrium-means-detailed-balance&quot;&gt;Physical Lens on the Cell: Equilibrium Means Detailed Balance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;目前直接在谷歌搜索 “equilibrium” 并进入维基百科的话会发现找不到和物理有关的词条，因为 “mechanical equilibrium”, “thermal equilibrium”, “thermaldynamic equilibrium” 是几个独立的词条，而且都没有链接到 “equilibrium” 的消歧义页面上。&lt;/p&gt;
+
+&lt;p&gt;所谓 “mechanical equilibrium”，就是受力平衡，分为三种：稳定平衡、不稳定平衡、随遇平衡。实际上就是牛顿第二定律作为一个动力学方程，其中的稳定、不稳定和中性三种驻点 (fixed point)，和这一讲的关系不大。&lt;/p&gt;
+
+&lt;p&gt;热平衡简单。&lt;strong&gt;两个&lt;/strong&gt; 系统处于热平衡，那么两个系统的温度相同。&lt;strong&gt;一个&lt;/strong&gt; 系统处于热平衡，指的是这个系统温度时间上恒定，空间上均一。虽然这样说有点鸡贼了，盗用了读者在日常生活中对“温度”的理解。&lt;/p&gt;
+
+&lt;p&gt;热力学平衡的条件严格一些，不止热平衡，还要达到机械平衡，化学平衡，所有宏观上的热力学物理量（温度、质心坐标、粒子数……）都没有变化。&lt;/p&gt;
+
+&lt;p&gt;据此，大概可以归纳物理中一般性的“平衡”概念：某种物理性质在一个系统中的平衡，指的是这种物理量在系统内时间上的恒定，空间上的均匀；在多个系统之间的平衡，指的是这一物理量在这些系统之间没有流动。&lt;/p&gt;
+
+&lt;p&gt;其实上面这一段的草稿里，“指的是这个系统温度时间上恒定，空间上均一”后面想当然地来了一句“也就是任意两个子系统之间相互平衡”。当你听到了两个系统之间的平衡之后，再想到一个系统可以划分为多个子系统，思维的惯性就会用类比的方法来如此定义一个系统的平衡。&lt;/p&gt;
+
+&lt;p&gt;但是其实仔细一想，“时间上恒定，空间上均一”并不一定要求任意两个子系统之间相互平衡，但是任意两个子系统互相平衡是一个很有趣的状态，我们给他起名叫“细致平衡”。当任意两个子系统互相平衡的时候，可以确定地达到时间上恒定空间上均一的结果。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;所以这是我对艾萨问题的回答：&lt;/strong&gt;细致平衡条件是平衡的充分不必要条件。之所以常有这样的疑惑，是因为平衡的定义不能递归，一个系统的平衡和多个系统之间的平衡定义不同。&lt;/p&gt;
+
+&lt;p&gt;上面最后一个链接可以说是直接回答了艾萨的问题，但是这个页面的主标题是 “Equilibrium Means Detailed Balance”, 字面意思是“平衡意味着细致平衡”，也就是说平衡是细致平衡的充分条件，和我前面说的相反。但是文章的内容实际并没有讨论究竟是谁蕴含谁，所以姑且可以无视这个标题。&lt;/p&gt;
+
+&lt;p&gt;细致平衡条件在维基百科词条的正文中称作 “principle of detailed balance”，也就是说这是一个“原理”，和“定律”(law) 一样，这是科学 &lt;strong&gt;理论&lt;/strong&gt; 这一逻辑体系的公理，是没办法在理论内部通过逻辑推导来证明或者证伪的。我们之所以采用这些原理（也就是认为他们是真命题），是因为现有的 &lt;strong&gt;实验&lt;/strong&gt; 全都没有证明这些原理不正确。&lt;/p&gt;
+
+&lt;p&gt;多说两句，科学虽然存在理论，但归根结底是一种经验科学，必须落地于实验和观测。（这里的“经验”对应于“理性”，是有严格定义的哲学概念，不是我们日常用语中所说的那个经验。）而观测和实验总有认知的的边界，边界以外的事情科学家做不了保证，所以实验总没有办法一劳永逸地说某某是对的，只能说某某还没错。只要证而不伪，科学就说这是一个真命题。科学与非科学的界限，根据波普尔的科学哲学理论，就在于&lt;a href=&quot;https://program-think.blogspot.com/2015/10/What-is-Science.html&quot;&gt;可证伪性&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;另外讨论课里完全没有涉及的一点是，这里的“子系统”必须依然是“宏观的”(macroscopic)，各个子系统只能是小一号的总系统，（用软件工程的话说，定义的接口是一样的），不涉及组成这个系统的微观机制（不能是另一类对象）。比如说一盒理想气体，子系统只能是给盒子里加上隔板后的几小盒理想气体，不能精确到具体的气体原子分子，否则此时连机械平衡都满足不了。&lt;/p&gt;
+
+&lt;p&gt;这和经典力学里的“宏观无穷小”这一扭曲的概念有异曲同工之妙。归根结底，是因为宏观的科学理论建立得不够早，已经用上了微积分；但又太早，没考虑也不知道更低层次的物理规律。经典力学的更低层次已经形成了量子力学，而热力学的底层统计物理就只能和热力学挤在一起，和理论力学、电动力学、量子力学并列为四大力学，逃不出“N 大某某有 (N+1) 个”的魔咒。&lt;/p&gt;
+</description>
+        <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+        <link>mountaye.github.io/blog/articles/mipks-non-equilibrium-physics-note-01-introduction</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/mipks-non-equilibrium-physics-note-01-introduction</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
     
       <item>
         <title>马普所·非平衡态系统中的集体过程·语音转录 | 01.Introduction</title>
@@ -618,8 +703,8 @@
 &lt;p&gt;Bye.&lt;/p&gt;
 </description>
         <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-01-Introduction</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-01-Introduction</guid>
+        <link>mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-01-Introduction</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-01-Introduction</guid>
         
         
         <category>post</category>
@@ -1247,131 +1332,6 @@
         <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
         <link>mountaye.github.io/blog/articles/parents-visiting</link>
         <guid isPermaLink="true">mountaye.github.io/blog/articles/parents-visiting</guid>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>.ijm | 用 ImageJ 给大卫量尺寸</title>
-        <description>&lt;p&gt;前两天看果壳，推送的头条是《古代雕塑的丁丁真的都（像大卫）那么小吗？》，为了立论，作者根据图片测量了大卫像的丁丁长度，虽不十分精确，但是好歹有个定量的结果——“4厘米不到”，还给出了使用的工具——ImageJ。&lt;/p&gt;
-
-&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25_guokr-quote.png&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;怎么做到的，咱也来试试？&lt;/p&gt;
-
-&lt;h2 id=&quot;imagej-是啥&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageJ&lt;/code&gt; 是啥？&lt;/h2&gt;
-
-&lt;p&gt;上一篇文章（&lt;a href=&quot;/blog/blog/articles/raw-image-or-not&quot;&gt;《“你这是不是原图直出啊？”》&lt;/a&gt;）我们提到了，专业相机可以记录 RAW 格式的图片，这类图片包含的信息比平时常见的图片更多，也需要专门的软件进行处理。不只是消费者水平的相机，实验室里的显微镜、CT机都可以看作是特殊的照相机，它们产生的图像自然也需要专业的软件来读取和处理。&lt;/p&gt;
-
-&lt;p&gt;ImageJ 就是这样一款软件。相比于直接使用编程语言（比如 MATLAB，python 的 scikit-image 模块），它提供的方框、多边形、椭圆选区工具，直接用编程语言来替代的话要麻烦许多；而且各种操作的结果都可以几乎实时地反馈在画面上，不需要一遍又一遍地 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;imshow()&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;ImageJ 用 Java 写成，所以跨平台的表现一致，&lt;del&gt;用户界面有一股浓郁的 Windows 95 风味，而且在 MacOS 上也一样，Windows 用户幸灾乐祸中&lt;/del&gt;。代码开源在 GitHub，免费，能让用户知道自己的每个操作究竟在干啥，而且可以自己开发拓展功能，打包成第三方的发行版。我们今天要用的 Fiji，就是一个集成了很多常见拓展功能的 ImageJ 发行版。&lt;/p&gt;
-
-&lt;h2 id=&quot;具体怎么量&quot;&gt;具体怎么量？&lt;/h2&gt;
-
-&lt;p&gt;先简单列举一下步骤，详细介绍在后面：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;下载大卫像的正面照。&lt;/li&gt;
-  &lt;li&gt;运行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageJ&lt;/code&gt;，打开图片。&lt;/li&gt;
-  &lt;li&gt;复制图片，防止我们的操作改变原始数据。&lt;/li&gt;
-  &lt;li&gt;用矩形选择框选定大卫像从头到脚的区域，记录选择框的高度。&lt;/li&gt;
-  &lt;li&gt;用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Analyze -&amp;gt; Set Scale&lt;/code&gt; 工具确定像素和厘米的换算关系。&lt;/li&gt;
-  &lt;li&gt;用直线工具画出要测量的距离，从主面板读取长度。&lt;/li&gt;
-  &lt;li&gt;用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Analyze -&amp;gt; Tools -&amp;gt; Scale Bar...&lt;/code&gt; 绘制比例尺。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;如果你看到这么简略的介绍就能脑补出如何操作，那么就可以 &lt;del&gt;（关掉这篇文章）&lt;/del&gt; 跳过下面的详细介绍了。&lt;/p&gt;
-
-&lt;p&gt;我们使用的照片来自维基百科的“大卫像”汉语词条，图片作者是 Jörg Bittner Unna，根据 CC-BY-3.0 协议共享。我们下载的是中等尺寸（480×720）的图片：&lt;/p&gt;
-
-&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25-david.jpg&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;鼠标右键单击画中的任意一点，在弹出的菜单中选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Duplicate&lt;/code&gt;，在对话框中选确定，这样我们就得到一张原图的副本。之后的所有操作都在这个副本上进行，这样即便有任何操作失误，对副本做出了不可逆转的伤害，都不会影响到我们的原始数据。如果数据的安全和完整得不到保证，无意之失叫做学术错误，有意为之叫做学术造假。&lt;/p&gt;
-
-&lt;p&gt;选择工具栏中的矩形选择框（图中主面板左一的阴影按钮），在图中画出一个矩形，上下边分别是大卫像的头顶和脚底，&lt;strong&gt;画完后鼠标不要乱动&lt;/strong&gt;，然后在主面板的底部读出高度 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h=595&lt;/code&gt;，此处的单位是像素：&lt;/p&gt;
-
-&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25_find-height.png&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;点击主面板的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Analyze&lt;/code&gt; 按钮，在下拉菜单中找到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set Scale&lt;/code&gt;，在弹出的对话框中，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Distance in pixels&lt;/code&gt; 填入我们读出的 595 像素，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Known distance&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Unit of length&lt;/code&gt; 填入作者假设的 150 cm：&lt;/p&gt;
-
-&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25_set-scale.png&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;然后就可以开始正式的测量了。再次使用矩形选择工具，&lt;strong&gt;画完后鼠标不要乱动&lt;/strong&gt;，主面板底端的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;length=20.93&lt;/code&gt; 就是以 cm 为单位的距离了：&lt;/p&gt;
-
-&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25_measure-head.png&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;丁丁可以选中直线工具（左起第五个），用鼠标拖拽的方法画线，主面版的底端也会显示结果。&lt;/p&gt;
-
-&lt;p&gt;量完之后，要想方便他人，可以在图上画出比例尺。再次点击主面板的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Analyze&lt;/code&gt; 按钮，在下拉菜单中找到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Tools&lt;/code&gt;，然后找到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set Scale&lt;/code&gt;，在弹出的对话框里选择合适的选项，然后点击确定，就可以在画面中添加一个比例尺：&lt;/p&gt;
-
-&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25_menu-scale-bar.png&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;如果对操作满意的话，就可以保存图片了。&lt;del&gt;（我对这个结果不满意，所以直接没有保存就退出了。）&lt;/del&gt; 原图没有改动，可以直接关闭，软件应该也不会发表反对 &lt;del&gt;（通知书）&lt;/del&gt; 对话框。&lt;/p&gt;
-
-&lt;h2 id=&quot;量出来个几&quot;&gt;量出来个几？&lt;/h2&gt;
-
-&lt;p&gt;我们的截图显示，按照 150 厘米的身高，大卫的头颅对应的长度是 20.92 厘米。&lt;/p&gt;
-
-&lt;p&gt;对于丁丁，由于图片中的阴影部分对起止点的认定有很大的干扰作用，几次测量的结果都不相同，最小值是 3.91 厘米，最大值是 4.45 厘米。&lt;/p&gt;
-
-&lt;h2 id=&quot;这么量对吗&quot;&gt;这么量对吗？&lt;/h2&gt;
-
-&lt;p&gt;我们的结果和原文有一定不同，但处于同一数量级 &lt;del&gt;（废话）&lt;/del&gt;。由于原文并没有介绍自己使用的数据来源，原文中的图片本身并不适合测量这个数据（下面会讨论），而且还给关键区域加了遮挡，所以我们无从比较两个结果的差异。&lt;/p&gt;
-
-&lt;p&gt;对于我们自己的测量，我们可以对如下几个误差来源进行讨论：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;相机视差&lt;/li&gt;
-  &lt;li&gt;深度误差&lt;/li&gt;
-  &lt;li&gt;关于大卫身高的假设&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;相机视差&quot;&gt;相机视差&lt;/h3&gt;
-
-&lt;p&gt;我们在几何光学里学的相机成的是倒立的实像，物高和像高之间的关系按照牛顿公式取决于物距、像距、透镜的焦距等等知识，都用到了“傍轴条件”这一假设。换句话说，考虑的都是理想状态，要想满足这种理想状态，基本相当于要求镜片的直径无限大，厚度无限小，焦距还可以是任意值。&lt;/p&gt;
-
-&lt;p&gt;我们的相机显然不满足这种理想状态（简单证明，理想状态下大卫像和后面的墙壁显然不可能同时被同一个透镜组严格地在同一个平面上成像）。景深范围内，不同深度的物体都可以在图中成像，但是存在着透视关系。同样长度的物体，在不同的深度下，在图片上的成像的长度不同；在画面中央的长度，和在画面边缘时的成像长度也不同。B 站里的摄影师们拍小姐姐的时候，脸尽量靠近画面中间，腿一般出现在画面边缘，就是利用广角镜头的透视效应。&lt;/p&gt;
-
-&lt;p&gt;我们的照片目测是用中长焦镜头拍摄的，透视变形不是很明显，但是在测量雕像身高的时候还是遇到了困难，我们用的是脚尖到头顶的距离，如果取脚的中间的话结果就会短一些。&lt;/p&gt;
-
-&lt;h3 id=&quot;深度误差&quot;&gt;深度误差&lt;/h3&gt;
-
-&lt;p&gt;我们的照片是二维的，所以之前的测量，相当于假设被测距离的起点和终点在同一深度上。如果两点之间有一个深度差，那么测量线、深度差、实际距离三条线会构成一个直角三角形，实际距离需要按照勾股定理进行计算。我们这里得不到深度差，所以这一误差就成了一个系统误差，而且是有偏 (biased) 的，真实结果不小于测量值。&lt;/p&gt;
-
-&lt;p&gt;我们选取的照片几乎平视着整座雕像，尤其是我们比较关注的部位，所以深度差几乎可以忽略；果壳提供的图片是仰视的，所以如果这就是测量所用的照片的话，误差应该比我们更大。当然了，还是由于作者没有公布数据和方法，以及原文中图片有马赛克，这种比较没有意义。&lt;/p&gt;
-
-&lt;h3 id=&quot;关于大卫身高的假设&quot;&gt;关于大卫身高的假设&lt;/h3&gt;
-
-&lt;p&gt;开头的文章截图已经给出了将大卫像对应的身高定为 150 cm 的理由，我们来看一下，这个理由成立吗？&lt;/p&gt;
-
-&lt;p&gt;文中说“这相当于现代12岁男童的平均身高”，但是米开朗基罗真的是以 12 岁的人体为原型来创作的吗？我们为什么量了一下大卫的头高呢？是为了算头身比。大卫像头身比是 1:7.5，这已经几乎是一个成年人的比例了。艺术作品为了凸显对象的某些特点和气质，某些特点不符合原型的设定，这在艺术上是完全可能而且可以接受的。《红楼梦》书中的绣像，后来的电视剧中演员的服化道，几乎都比原书的年龄设定更成熟。&lt;/p&gt;
-
-&lt;p&gt;像是某一器官的大小，其衡量标准应该是相对于某个基准的（比如体长）的比值，也就是一个无量纲的量。像是4厘米这种带有长度量纲的量，虽然的确是能比一个比例更容易让人有直观的感受，但是结论很容易因为对身高的质疑而动摇。&lt;/p&gt;
-
-&lt;p&gt;最后，我觉得最致命的一个问题是，大卫像其实是文艺复兴时期的作品，和罗马仿希腊的艺术品一样，是一个其他文明模仿希腊的产物，而且模仿的过程中融入了很多近代人文主义的精神。这一题材也并非来自于希腊文化，大卫击杀歌利亚是犹太教-基督教文化中的故事。在这种情况下，作者应该额外论证文艺复兴对丁丁的描写照搬了希腊文化的习俗。既然如此，为什么不直接找一个古希腊时期的古希腊作品呢？&lt;/p&gt;
-
-&lt;p&gt;而且原文中有“你也许会说大卫像也许只是一个个例，万一只是米开朗基罗的恶趣味呢？一个例子不能说明古希腊雕塑里的小丁丁都很小”字样，不好意思，米开朗琪罗的作品不是古希腊雕塑的“一个例子”。&lt;/p&gt;
-
-&lt;h2 id=&quot;课后作业&quot;&gt;课后作业&lt;/h2&gt;
-
-&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2020-04-25_horseman.jpg&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;上图是法国画家雅克-路易·大卫的作品《跨越阿尔卑斯山圣伯纳隘道的拿破仑》，请根据该作品完成下列题目：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;请寻找资料估测马的体长，并据此估测拿破仑的身高。&lt;/li&gt;
-  &lt;li&gt;请寻找拿破仑身高相关的史料，并据此估测马的体长。&lt;/li&gt;
-  &lt;li&gt;比较前两题的结果。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;啥？你说拿破仑当时骑的是一头驴？哦，那没事了，下课！&lt;/p&gt;
-</description>
-        <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/measure-david-with-imagej</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/measure-david-with-imagej</guid>
         
         
         <category>post</category>

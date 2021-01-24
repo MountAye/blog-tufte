@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>马普所·非平衡态系统中的集体过程·笔记 01.简介：朗之万方程和响应函数、热力学平衡和细致平衡条件 | 阿掖山：一个博客</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="马普所·非平衡态系统中的集体过程·笔记 01.简介：朗之万方程和响应函数、热力学平衡和细致平衡条件" />
+<meta name="author" content="MountAye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="来来回回地协调了好几次时间之后，我们最终确定每周三下午进行一次讨论。刚刚过去的这一周讨论了第一讲，时长超过了一个小时。" />
+<meta property="og:description" content="来来回回地协调了好几次时间之后，我们最终确定每周三下午进行一次讨论。刚刚过去的这一周讨论了第一讲，时长超过了一个小时。" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/mipks-non-equilibrium-physics-note-01-introduction" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/mipks-non-equilibrium-physics-note-01-introduction" />
+<meta property="og:site_name" content="阿掖山：一个博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="马普所·非平衡态系统中的集体过程·笔记 01.简介：朗之万方程和响应函数、热力学平衡和细致平衡条件" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"MountAye"},"description":"来来回回地协调了好几次时间之后，我们最终确定每周三下午进行一次讨论。刚刚过去的这一周讨论了第一讲，时长超过了一个小时。","headline":"马普所·非平衡态系统中的集体过程·笔记 01.简介：朗之万方程和响应函数、热力学平衡和细致平衡条件","dateModified":"2021-01-23T00:00:00+00:00","datePublished":"2021-01-23T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/mipks-non-equilibrium-physics-note-01-introduction"},"url":"mountaye.github.io/blog/articles/mipks-non-equilibrium-physics-note-01-introduction","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">    
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/mipks-non-equilibrium-physics-note-01-introduction">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">I would be happy if this blog helps you; if it doesn't, I wouldn't be disappointed.</span><br>
+        ——<span id="quoteAuthor">Welcome to this blog</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">home</a>
+        
+  	
+        
+            <a href="/blog/History/">history</a>
+        
+  	
+        
+            <a href="/blog/Topics/">topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">comments</a>
+        
+  	
+        
+            <a href="/blog/About/">about</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>马普所·非平衡态系统中的集体过程·笔记 | 01.简介：朗之万方程和响应函数、热力学平衡和细致平衡条件</h1>
+        <p class="subtitle">
+            January 23, 2021
+        </p>
+    <div class="postContent">
+        <p>来来回回地协调了好几次时间之后，我们最终确定每周三下午进行一次讨论。刚刚过去的这一周讨论了第一讲，时长超过了一个小时。</p>
+
+<p>在讨论会之前，我的主要精力放在了仅有的几张有公式的幻灯片上，结果这一部分完全没有出现在讨论当中。讨论的主要内容是组里本科生艾萨提出的问题：“细致平衡条件 (detailed balance) 和平衡 (equilibrium) 的关系是什么”。这个问题其实挺有质量的，而且我们确实也没有给出一个令人满意的回答。我觉得要想说清楚这个问题，其实需要的是逻辑学和科学哲学，我现在在这方面的水平还不够，这篇文章姑且尝试解释一下。不过不谈数学的原因恐怕不是在这方面没有疑问，毕竟一不用做作业，二没有考试，完全出于兴趣的情况下，直面数学是需要热情和勇气的。</p>
+
+<h2 id="朗之万方程和响应函数">朗之万方程和响应函数</h2>
+
+<h3 id="朗之万方程">朗之万方程</h3>
+
+<p>讲义第12页到15页，讲解了热力学平衡条件下的朗之万方程。所谓热力学平衡条件，真正用到的性质就只有能量均分定理。朗之万方程听起来高大上，实际上只不过是对牛顿第二定律进行了一下改写，明确指明了这个系统受到两种力的作用，下面的公式里，等号右边第一项是正比于速度的衰减项，防止方程的解在无限远处发散（”所以你承认你们科学家是在瞎编咯？”），另外一项是一个关于时间的随机函数，用来刻画不确定性的涨落。</p>
+
+\[m \frac{d^2x(t)}{dt^2} = -\lambda \frac{dx(t)}{dt} + \xi(t)\]
+
+<p>朗之万是和爱因斯坦以及居里夫人（咳咳）同时代的人，依然可以用牛顿时代的东西青史标名，可见物理学果然还是内卷不足，广阔天地，大有可为。（逃）</p>
+
+<h3 id="粒子的位置是粒子之前受力作用的积累响应函数是卷积的核">粒子的位置是粒子之前受力作用的积累：响应函数是卷积的核</h3>
+
+<p>所谓牛顿第二定律，对于高中生来说是公式，对于大学生来说是方程，（“公式和方程有啥区别？”），对于刚上大学的高中毕业生来说是噩梦—— \(F=ma\)  是方程？这玩意需要解？这玩意也能解？这玩意怎么解？三个字母倒真不算方程，但是物理受到的力往往取决于其所在的位置 \(x(t)\) ，所以F其实是 \(F(x(t))\) ；\(a\)  是加速度，位置的二阶导数，也就是 \(d^2x(t)/dt^2\) ，这里的未知量是 \(x(t)\)，这是一个微分方程，常微分方程往往是本科阶段要上一个学期的课程。</p>
+
+<p>响应函数用的是另一套思路，先不从微分方程的角度入手，直接来猜猜解应该长什么样子。此刻的位置与一段时间以前的受力以及当时的那个力对此刻残留的影响有关，这个“一段时间”究竟是多长时间呢？不知道，索性考虑所有时间长度，把这些影响全都加起来。学过微积分应该知道，对无限个无穷小量求和，再取个极限，这就是积分（“快把那个要先证明积分存在并收敛的数学家嘴堵上”），写作：</p>
+
+\[x(t) = \int_{-\infty}^{t}h(t-\tau)\xi(\tau)d\tau\]
+
+<p>熟悉数学的朋友知道，等号右边的积分叫做卷积。一般卷积的定义里形式稍有不同，积分上下限分别是正负无穷，这对物理学家不是问题，只要令  \(\tau &gt; t\)  的时候  \(h(t-\tau) = 0\)   就行了。</p>
+
+<p>一方面，卷积既是一种定义在两个函数（\(\xi\) 和 \(h\)）之间的运算，可以简写作</p>
+
+\[x = h * \xi\]
+
+<p>另一方面，也可以看作是对 \(\xi\) 的变换 (transform)，  \(h(t-\tau)\) 是这个变换的核 (kernal)，也就是讲义中所讲的 response function。当一个具体问题确定的时候，方程的解就和响应函数一一对应。</p>
+
+<p>在方程实际被求解之前，响应函数和待求解的函数一样，是一个未知量。因为牛顿第二定律是一个二阶微分方程，要想求解，所以很自然的思路就是将方程两边同时做傅里叶变换，将导数转化为含有 iw 的代数方程，然后再将解做傅里叶逆变换。因为两个函数的卷积的傅里叶变换，等于两个函数各自的傅里叶变换的乘积，所以在傅里叶倒空间里，方程的解、响应函数、随机涨落三项是很简单的乘积形式。</p>
+
+<h3 id="关于朗之万方程的解讲义中不清楚的地方">关于朗之万方程的解，讲义中不清楚的地方</h3>
+
+<p>第14页右侧蓝字似乎是 “spectral density”.</p>
+
+<p>第15页 \(\tilde{C}(\omega)\) 似乎是 \(\left&lt;\tilde v(\omega)^2\right&gt;\)</p>
+
+<h2 id="平衡-equilibrium-和细致平衡-detailed-balance">平衡 (equilibrium) 和细致平衡 (detailed balance)</h2>
+
+<p>先贴几个相关的链接：</p>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Thermal_equilibrium">维基百科：thermal equilibrium</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Thermodynamic_equilibrium">维基百科：thermaldynamic equilibrium</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Detailed_balance">维基百科：detailed balance</a></li>
+  <li><a href="http://physicallensonthecell.org/chemical-physics/equilibrium-means-detailed-balance">Physical Lens on the Cell: Equilibrium Means Detailed Balance</a></li>
+</ul>
+
+<p>目前直接在谷歌搜索 “equilibrium” 并进入维基百科的话会发现找不到和物理有关的词条，因为 “mechanical equilibrium”, “thermal equilibrium”, “thermaldynamic equilibrium” 是几个独立的词条，而且都没有链接到 “equilibrium” 的消歧义页面上。</p>
+
+<p>所谓 “mechanical equilibrium”，就是受力平衡，分为三种：稳定平衡、不稳定平衡、随遇平衡。实际上就是牛顿第二定律作为一个动力学方程，其中的稳定、不稳定和中性三种驻点 (fixed point)，和这一讲的关系不大。</p>
+
+<p>热平衡简单。<strong>两个</strong> 系统处于热平衡，那么两个系统的温度相同。<strong>一个</strong> 系统处于热平衡，指的是这个系统温度时间上恒定，空间上均一。虽然这样说有点鸡贼了，盗用了读者在日常生活中对“温度”的理解。</p>
+
+<p>热力学平衡的条件严格一些，不止热平衡，还要达到机械平衡，化学平衡，所有宏观上的热力学物理量（温度、质心坐标、粒子数……）都没有变化。</p>
+
+<p>据此，大概可以归纳物理中一般性的“平衡”概念：某种物理性质在一个系统中的平衡，指的是这种物理量在系统内时间上的恒定，空间上的均匀；在多个系统之间的平衡，指的是这一物理量在这些系统之间没有流动。</p>
+
+<p>其实上面这一段的草稿里，“指的是这个系统温度时间上恒定，空间上均一”后面想当然地来了一句“也就是任意两个子系统之间相互平衡”。当你听到了两个系统之间的平衡之后，再想到一个系统可以划分为多个子系统，思维的惯性就会用类比的方法来如此定义一个系统的平衡。</p>
+
+<p>但是其实仔细一想，“时间上恒定，空间上均一”并不一定要求任意两个子系统之间相互平衡，但是任意两个子系统互相平衡是一个很有趣的状态，我们给他起名叫“细致平衡”。当任意两个子系统互相平衡的时候，可以确定地达到时间上恒定空间上均一的结果。</p>
+
+<p><strong>所以这是我对艾萨问题的回答：</strong>细致平衡条件是平衡的充分不必要条件。之所以常有这样的疑惑，是因为平衡的定义不能递归，一个系统的平衡和多个系统之间的平衡定义不同。</p>
+
+<p>上面最后一个链接可以说是直接回答了艾萨的问题，但是这个页面的主标题是 “Equilibrium Means Detailed Balance”, 字面意思是“平衡意味着细致平衡”，也就是说平衡是细致平衡的充分条件，和我前面说的相反。但是文章的内容实际并没有讨论究竟是谁蕴含谁，所以姑且可以无视这个标题。</p>
+
+<p>细致平衡条件在维基百科词条的正文中称作 “principle of detailed balance”，也就是说这是一个“原理”，和“定律”(law) 一样，这是科学 <strong>理论</strong> 这一逻辑体系的公理，是没办法在理论内部通过逻辑推导来证明或者证伪的。我们之所以采用这些原理（也就是认为他们是真命题），是因为现有的 <strong>实验</strong> 全都没有证明这些原理不正确。</p>
+
+<p>多说两句，科学虽然存在理论，但归根结底是一种经验科学，必须落地于实验和观测。（这里的“经验”对应于“理性”，是有严格定义的哲学概念，不是我们日常用语中所说的那个经验。）而观测和实验总有认知的的边界，边界以外的事情科学家做不了保证，所以实验总没有办法一劳永逸地说某某是对的，只能说某某还没错。只要证而不伪，科学就说这是一个真命题。科学与非科学的界限，根据波普尔的科学哲学理论，就在于<a href="https://program-think.blogspot.com/2015/10/What-is-Science.html">可证伪性</a>。</p>
+
+<p>另外讨论课里完全没有涉及的一点是，这里的“子系统”必须依然是“宏观的”(macroscopic)，各个子系统只能是小一号的总系统，（用软件工程的话说，定义的接口是一样的），不涉及组成这个系统的微观机制（不能是另一类对象）。比如说一盒理想气体，子系统只能是给盒子里加上隔板后的几小盒理想气体，不能精确到具体的气体原子分子，否则此时连机械平衡都满足不了。</p>
+
+<p>这和经典力学里的“宏观无穷小”这一扭曲的概念有异曲同工之妙。归根结底，是因为宏观的科学理论建立得不够早，已经用上了微积分；但又太早，没考虑也不知道更低层次的物理规律。经典力学的更低层次已经形成了量子力学，而热力学的底层统计物理就只能和热力学挤在一起，和理论力学、电动力学、量子力学并列为四大力学，逃不出“N 大某某有 (N+1) 个”的魔咒。</p>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = 25;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/25">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        马普所·非平衡态系统中的集体过程·笔记 | 01.简介：朗之万方程和响应函数、热力学平衡和细致平衡条件 - January 23, 2021 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-Popular_GitHub"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/About"><span class="icon-CN_tencent_wechat"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.douban.com/people/Gravitus/"><span class="icon-CN_douban_B"></span></a>
+      </li>
+    
+      <li>
+        <a href="//space.bilibili.com/29132299"><span class="icon-CN_bilibili"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-Popular_RSS"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2021 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted on <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>
