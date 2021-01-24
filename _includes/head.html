@@ -9,7 +9,9 @@
   {% endif %}
   <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
   {% if site.data.options.mathjax %}
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?..."></script>
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
   {% endif %}
   {% if page.milestoneID %}
     <link rel="stylesheet" type="text/css" href="{{ '/css/github-markdown.css' | prepend: site.baseurl }}">
