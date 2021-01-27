@@ -1,7 +1,7 @@
 ---
 layout:  post
 title:   .html | 翻译：保罗·格雷厄姆谈如何反对
-keywords: "保罗·格雷厄姆, 反对, Paul Graham, disagree, contradiction, couterargument, refutation"
+keywords: html
 excerpt: "如果我们都在越来越多地进行反对，那我们就需要把这件事小心做好。"
 date:    2019-08-24
 categories: post

@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:      ".jpg | “你这是不是原片直出啊？”"
-keywords:   ["摄影","darktable"]
+keywords:   jpg
 excerpt:    "“你这照片是 P 过的吧？假的吧！”"
 date:        2020-03-14
 categories:  post

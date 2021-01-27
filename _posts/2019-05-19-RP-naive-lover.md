@@ -1,8 +1,8 @@
 ---
 layout:  post
 title:   .html | 转载：青涩的爱人
-keywords: "转载, 草榴, 青涩, 爱情, 爱人"
-excerpt: 一篇情色文章，转自草榴社区。
+keywords: html
+excerpt: 本文转自草榴社区，原作者不详。本文包含对性的描写，未成年人请不要阅读。
 date:    2019-05-20
 categories: post
 milestoneID: 4

@@ -1,0 +1,42 @@
+---
+layout: full-width
+title: Topics
+---
+
+<h1 class="content-listing">话题分类</h1>
+
+<ul class="content-listing">
+
+    {% for cate in site.data.category %}
+
+    <h3 class="content-listing">
+        
+        <hr class="slender">
+
+        .{{ cate.ext }} | {{ cate.name }}
+
+    </h3>
+    <br>
+        {% for post in site.posts %}
+
+        {% if post.keywords==cate.ext %}
+
+            <li class="listing">
+
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+
+                        {{ post.title }}
+
+                    </a>
+
+                    <span class="smaller"> on {{ post.date | date: "%B %-d, %Y" }}</span>
+
+                </li>
+
+                {% endif %}
+
+            {% endfor %}
+
+        {% endfor %}
+
+</ul>

@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:      ".doc | 人生是马尔科夫过程吗？"
-keywords:   ""
+keywords:   doc
 excerpt:    "最近报名了一个写作班，老师留了作业，命题作文——“我想怎样地度过余生”。"
 date:        2020-07-05
 categories:  post

@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:      ".doc | 经验介绍会"
-keywords:   ""
+keywords:   doc
 excerpt:    "大三的时候，我们高中的班主任找到我，问我想不想回学校，给学弟学妹们介绍介绍经验，加油鼓劲。"
 date:        2020-10-31
 categories:  post

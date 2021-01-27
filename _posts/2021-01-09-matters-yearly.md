@@ -1,14 +1,12 @@
 ---
 layout:      post
 title:      "【2020Matters年度问卷】Normality Matters"
-keywords:   ""
-excerpt:    ""
+keywords:   doc
+excerpt:    "原文于2020年12月28日首发于 Matters，当时在赶平台奖励的截止日期，所以很多东西没有展开写，大家凑合看吧。"
 date:        2021-01-09
 categories:  post
-milestoneID: X
+milestoneID: 23
 ---
-
-> 原文于2020年12月28日首发于 Matters，当时在赶平台奖励的截止日期，所以很多东西没有展开写，大家凑合看吧。
 
 > Matters 是一个博客平台，在前几年区块链和去中心化思想还很热的时候上线，底层所有的博文会上传到 IPFS 区中心化平台，账号可以绑定一种叫做 LikeCoin 的数字货币，用来赞赏作者。2019年11月28日，我在 Matters 上传了自己翻译的 Paul Graham 的《How to Disagree》，算是正式加入了 Matters 社区。在那之前，我虽然建立了自己的博客(https:mountaye.github.io/blog)和公众号，但是一直没有规律性的更新。可以说，过去一年所有的不务正业，都可以以 Matters 为线索串联起来。我一向不擅长赶 deadline，所以压根没做周年纪念的打算。结果发现 Matters 官方有红包，没办法，只能为五斗米折腰了。
 

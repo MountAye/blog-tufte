@@ -1,8 +1,8 @@
 ---
 layout:  post
 title:  ".sh | 在 VirutalBox 中安装 Arch Linux"
-keywords: "虚拟机, VirtualBox, Linux, Arch, installation"
-excerpt: "脑子一热买了一台树莓派，只用原装的操作系统有点咸鱼了，决定挑战一下 Arch Linux。既然是 Arch，那么先在虚拟机里试试水就很有必要了。"
+keywords: md
+excerpt: "这是一篇速记，相当于实验的原始记录。日后有可能根据这些记录，整理出一些心得体会，或者全流程的教程。"
 date:    2019-09-03
 categories: post
 milestoneID: 9

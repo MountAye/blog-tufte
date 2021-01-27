@@ -1,7 +1,7 @@
 ﻿---
 layout:  post
 title:   .html | 转载：为什么俺推荐 Python[2]·作为动态语言的 Python
-keywords: "转载, 编程随想, IT, 编程, python, 动态语言"
+keywords: html
 excerpt: 今天主要是忽悠一下动态语言，捎带忽悠一下 Python。如果你看完本贴，觉得动态语言不错，那俺建议你从 Python 开始入手。
 categories: post
 milestoneID: 2

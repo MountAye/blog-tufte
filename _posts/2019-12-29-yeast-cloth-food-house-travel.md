@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:      ".tex | 实验室中酵母菌的衣食住行"
-keywords:   "酵母, 显微, 培养基, 培养液"
+keywords:   tex
 excerpt:    "实验室里的酵母，吃得怎样，住在哪里，过得好吗？"
 date:        2019-12-29
 categories:  post

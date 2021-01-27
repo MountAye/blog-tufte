@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:      ".md | 扫盲Barrier，用笔记本键鼠无线控制台式机"
-keywords:   ""
+keywords:   md
 excerpt:    "你看我这个标题它像不像编程随想:-p"
 date:        2020-12-22
 categories:  post

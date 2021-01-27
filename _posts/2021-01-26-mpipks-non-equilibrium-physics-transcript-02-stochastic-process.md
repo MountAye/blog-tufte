@@ -1,14 +1,14 @@
 ---
 layout:      post
-title:      "马普所·非平衡态系统中的集体过程·语音转录 | 02.Stochastic Process"
-keywords:   ""
+title:      "马普所·非平衡态系统中的集体过程·语音转录 | 02. Stochastic Process"
+keywords:   mpipks-transcript
 excerpt:    "这次的内容大致分为两部分，一是继续将朗之万方程推广，另一部分是主方程。"
 date:        2021-01-26
 categories:  post
 milestoneID: 26
 ---
 
-> 这次的内容大致分为两部分，一是继续将朗之万方程推广到牛顿力学以外的领域，另一部分是主方程。
+> 这次的内容大致分为两部分，一是继续将朗之万方程推广，另一部分是主方程。
 
 # 2. Stochastic Process
 

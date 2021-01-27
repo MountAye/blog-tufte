@@ -1,7 +1,7 @@
 ---
 layout:  post
 title:   .html | 翻译：为什么说物理不是一门学科
-keywords: "翻译, 科普, 物理, 生物"
+keywords: html
 excerpt: 一篇稍微硬核的科普文章，讨论物理在生物学当中的可用性。
 date:    2019-06-19
 categories: post

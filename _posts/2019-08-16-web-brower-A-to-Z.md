@@ -1,12 +1,14 @@
 ---
 layout:  post
 title:   .html | 浏览器A到Z
-keywords: "游记,图集"
+keywords: html
 excerpt: 人类的本质就是复读机。
 date:    2019-08-16
 categories: post
 milestoneID: 7
 ---
+
+> 人类的本质就是复读机。
 
 首先萌狼看[phoenixlzx](https://blog.phoenixlzx.com/2014/03/10/browser-from-a-to-z/)那有一篇这样的文章，貌似很好玩的样子。
 

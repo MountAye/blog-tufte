@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:      ".py | matplotlib笔记：两种API"
-keywords:   ""
+keywords:   md
 excerpt:    "import matplotlib.pyplot as plt"
 date:        2020-10-04
 categories:  post

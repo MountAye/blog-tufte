@@ -1,0 +1,16 @@
+- ext: jpg
+  name: 摄影和后期心得
+- ext: doc
+  name: 随笔散文
+- ext: pdf
+  name: 读书笔记
+- ext: md
+  name: IT类业余笔记
+- ext: tex
+  name: 科学类说明文
+- ext: mpipks-note
+  name: 马普所·非平衡态统计·笔记
+- ext: mpipks-transcript
+  name: 马普所·非平衡态统计·语音转录
+- ext: html
+  name: 转载和二次创作

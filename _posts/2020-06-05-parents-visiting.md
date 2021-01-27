@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:      ".doc | 接机"
-keywords:   ""
+keywords:   doc
 excerpt:    "今年寒假，疫情引而未发之时，爸妈来美国看我。"
 date:        2020-06-05
 categories:  post
