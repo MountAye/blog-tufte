@@ -5,14 +5,14 @@
     <description>阿掖山：一个博客</description>
     <link>mountaye.github.io/blog/</link>
     <atom:link href="mountaye.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 27 Jan 2021 03:16:44 +0000</pubDate>
-    <lastBuildDate>Wed, 27 Jan 2021 03:16:44 +0000</lastBuildDate>
+    <pubDate>Wed, 27 Jan 2021 22:22:12 +0000</pubDate>
+    <lastBuildDate>Wed, 27 Jan 2021 22:22:12 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
-        <title>马普所·非平衡态系统中的集体过程·语音转录 | 02.Stochastic Process</title>
+        <title>马普所·非平衡态系统中的集体过程·语音转录 | 02. Stochastic Process</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;这次的内容大致分为两部分，一是继续将朗之万方程推广到牛顿力学以外的领域，另一部分是主方程。&lt;/p&gt;
+  &lt;p&gt;这次的内容大致分为两部分，一是继续将朗之万方程推广，另一部分是主方程。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&quot;2-stochastic-process&quot;&gt;2. Stochastic Process&lt;/h1&gt;
@@ -416,7 +416,7 @@
       </item>
     
       <item>
-        <title>马普所·非平衡态系统中的集体过程·语音转录 | 01.Introduction</title>
+        <title>马普所·非平衡态系统中的集体过程·语音转录 | 01. Introduction</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;《非平衡态系统中的集体过程 (Collective processes in non-equilibrium systems)》是位于德累斯顿的马克思普朗克复杂物理研究所 (Max Planck Institute for the Physics of Complex Systems) Steffen Rulands 研究员的一门课程。&lt;/p&gt;
 
@@ -1035,10 +1035,6 @@
       <item>
         <title>【2020Matters年度问卷】Normality Matters</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;原文于2020年12月28日首发于 Matters，当时在赶平台奖励的截止日期，所以很多东西没有展开写，大家凑合看吧。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
   &lt;p&gt;Matters 是一个博客平台，在前几年区块链和去中心化思想还很热的时候上线，底层所有的博文会上传到 IPFS 区中心化平台，账号可以绑定一种叫做 LikeCoin 的数字货币，用来赞赏作者。2019年11月28日，我在 Matters 上传了自己翻译的 Paul Graham 的《How to Disagree》，算是正式加入了 Matters 社区。在那之前，我虽然建立了自己的博客(https:mountaye.github.io/blog)和公众号，但是一直没有规律性的更新。可以说，过去一年所有的不务正业，都可以以 Matters 为线索串联起来。我一向不擅长赶 deadline，所以压根没做周年纪念的打算。结果发现 Matters 官方有红包，没办法，只能为五斗米折腰了。&lt;/p&gt;
 &lt;/blockquote&gt;
 
