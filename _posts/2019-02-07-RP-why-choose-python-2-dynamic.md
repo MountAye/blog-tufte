@@ -119,7 +119,7 @@ A.__bases__ += (B,)
 
 好了，今天就聊到这里。下一个帖子，咱们来讲讲 Python 作为一个纯粹的面向对象语言，有些啥特色。
 
-[回到本系列的目录]({{ site.baseurl }}{% post_url 2019-02-07-RP-why-choose-python-0-overview %})
+[回到本系列的目录]({% post_url 2019-02-07-RP-why-choose-python-0-overview %})
 
 > **版权声明**<br>
 > 本博客{% sidenote "reference" "指编程随想的博客" %}所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：<br>

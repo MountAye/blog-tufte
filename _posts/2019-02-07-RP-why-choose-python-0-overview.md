@@ -18,11 +18,11 @@ milestoneID: 2
 
 为了方便阅读，把本系列帖子的目录整理如下（需翻墙）：
 
-1. [作为脚本语言的 Python]({{ site.baseurl }}{% post_url 2019-02-07-RP-why-choose-python-1-script %})
-2. [作为动态语言的 Python]({{ site.baseurl }}{% post_url 2019-02-07-RP-why-choose-python-2-dynamic %})
-3. [作为面向对象语言的 Python]({{ site.baseurl }}{% post_url 2019-02-07-RP-why-choose-python-3-oop %})
-4. [作为函数式编程语言的 Python]({{ site.baseurl }}{% post_url 2019-02-07-RP-why-choose-python-4-fp %})
-5. [作为瑞士军刀的 Python]({{ site.baseurl }}{% post_url 2019-02-07-RP-why-choose-python-5-tool %})
+1. [作为脚本语言的 Python]({% post_url 2019-02-07-RP-why-choose-python-1-script %})
+2. [作为动态语言的 Python]({% post_url 2019-02-07-RP-why-choose-python-2-dynamic %})
+3. [作为面向对象语言的 Python]({% post_url 2019-02-07-RP-why-choose-python-3-oop %})
+4. [作为函数式编程语言的 Python]({% post_url 2019-02-07-RP-why-choose-python-4-fp %})
+5. [作为瑞士军刀的 Python]({% post_url 2019-02-07-RP-why-choose-python-5-tool %})
 6. （未完待续）
 
 

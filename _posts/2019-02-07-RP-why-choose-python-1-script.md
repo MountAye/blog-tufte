@@ -129,7 +129,7 @@ milestoneID: 2
 啰嗦完Python作为脚本语言的方方面面，下一个帖子，咱来聊一下它作为动态语言的那些事儿。
 
 
-[回到本系列的目录]({{ site.baseurl }}{% post_url 2019-02-07-RP-why-choose-python-0-overview %})
+[回到本系列的目录]({% post_url 2019-02-07-RP-why-choose-python-0-overview %})
 
 > *版权声明*<br>
 > 本博客{% sidenote "reference" "指编程随想的博客" %}所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：<br>

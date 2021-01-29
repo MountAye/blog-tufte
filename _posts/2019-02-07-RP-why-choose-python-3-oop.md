@@ -175,7 +175,7 @@ test(p1)  # 打印出 parent1
 
 今天的话题，主要是让不熟悉 Python 的网友，对 Python 在面向对象方面的特性，有一个粗浅、感性的认识。聊完了 OOP，下一个帖子会聊一下关于 FP（函数式编程）的话题。
 
-[回到本系列的目录]({{ site.baseurl }}{% post_url 2019-02-07-RP-why-choose-python-0-overview %})
+[回到本系列的目录]({% post_url 2019-02-07-RP-why-choose-python-0-overview %})
 
 > **版权声明** <br>
 > 本博客{% sidenote "reference" "指编程随想的博客" %}所有的原创文章，原作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址: <br>

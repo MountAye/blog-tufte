@@ -2,8 +2,8 @@
   name: 摄影和后期心得
 - ext: doc
   name: 随笔散文
-- ext: pdf
-  name: 读书笔记
+- ext: zip
+  name: 读书·看片·玩游戏
 - ext: md
   name: IT类业余笔记
 - ext: tex

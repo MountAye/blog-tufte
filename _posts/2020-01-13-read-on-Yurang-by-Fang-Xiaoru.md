@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:      ".pdf | 读方孝孺《豫让论》"
-keywords:   pdf
+keywords:   zip
 excerpt:    "请注意：本文包含关于令人不适的描写以及明史，阅读请慎重。"
 date:        2020-01-13
 categories:  post
