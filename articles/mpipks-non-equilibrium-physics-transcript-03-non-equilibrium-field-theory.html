@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>马普所·非平衡态系统中的集体过程·语音转录 03.非平衡态场论 | 阿掖山：一个博客</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="马普所·非平衡态系统中的集体过程·语音转录 03.非平衡态场论" />
+<meta name="author" content="MountAye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="阿掖山：一个博客" />
+<meta property="og:description" content="阿掖山：一个博客" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-03-non-equilibrium-field-theory" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-03-non-equilibrium-field-theory" />
+<meta property="og:site_name" content="阿掖山：一个博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="马普所·非平衡态系统中的集体过程·语音转录 03.非平衡态场论" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"MountAye"},"description":"阿掖山：一个博客","headline":"马普所·非平衡态系统中的集体过程·语音转录 03.非平衡态场论","dateModified":"2021-02-04T00:00:00+00:00","datePublished":"2021-02-04T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-03-non-equilibrium-field-theory"},"url":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-03-non-equilibrium-field-theory","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">    
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/mpipks-non-equilibrium-physics-transcript-03-non-equilibrium-field-theory">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">I would be happy if this blog helps you; if it doesn't, I wouldn't be disappointed.</span><br>
+        ——<span id="quoteAuthor">Welcome to this blog</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">home</a>
+        
+  	
+        
+            <a href="/blog/History/">history</a>
+        
+  	
+        
+            <a href="/blog/Topics/">topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">comments</a>
+        
+  	
+        
+            <a href="/blog/About/">about</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>马普所·非平衡态系统中的集体过程·语音转录 | 03.非平衡态场论</h1>
+        <p class="subtitle">
+            February 4, 2021
+        </p>
+    <div class="postContent">
+        <h1 id="3-non-equilibrium-field-theory">3. Non-equilibrium Field Theory</h1>
+
+<blockquote>
+  <p>The slide 8 of examples was talked about at the end of the lecture rather than between neighboring slides.</p>
+</blockquote>
+
+<h3 id="random">random</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(00:00)</code> so i i have to set this sound to you so<br />
+<code class="language-plaintext highlighter-rouge">(00:02)</code> you hear them as well so you’re using<br />
+<code class="language-plaintext highlighter-rouge">(00:04)</code> headphones okay right that goes<br />
+<code class="language-plaintext highlighter-rouge">(00:08)</code> okay so then let’s start uh so welcome<br />
+<code class="language-plaintext highlighter-rouge">(00:11)</code> uh to our third lecture in collective<br />
+<code class="language-plaintext highlighter-rouge">(00:14)</code> processes and this will be<br />
+<code class="language-plaintext highlighter-rouge">(00:17)</code> the final lecture that is more<br />
+<code class="language-plaintext highlighter-rouge">(00:18)</code> methodology methodological<br />
+<code class="language-plaintext highlighter-rouge">(00:21)</code> and technical so today we’ll talk about<br />
+<code class="language-plaintext highlighter-rouge">(00:24)</code> a field theory representations of<br />
+<code class="language-plaintext highlighter-rouge">(00:28)</code> the kind of processes that we’ve been<br />
+<code class="language-plaintext highlighter-rouge">(00:29)</code> looking at last time<br />
+<code class="language-plaintext highlighter-rouge">(00:32)</code> let me just share the screen<br />
+<code class="language-plaintext highlighter-rouge">(00:42)</code> okay<br /></p>
+
+<h3 id="slide-1">slide 1</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(00:49)</code> here we go so if you remember the<br />
+<code class="language-plaintext highlighter-rouge">(00:52)</code> lecture so you can see that<br />
+<code class="language-plaintext highlighter-rouge">(00:54)</code> great uh so you remember if you remember<br />
+<code class="language-plaintext highlighter-rouge">(00:56)</code> lecture that we had last time<br />
+<code class="language-plaintext highlighter-rouge">(00:59)</code> uh i gave a little introduction to the<br />
+<code class="language-plaintext highlighter-rouge">(01:02)</code> mathematics that is<br />
+<code class="language-plaintext highlighter-rouge">(01:04)</code> behind the description of the stochastic<br />
+<code class="language-plaintext highlighter-rouge">(01:07)</code> processes<br />
+<code class="language-plaintext highlighter-rouge">(01:09)</code> and we discussed two kinds<br />
+<code class="language-plaintext highlighter-rouge">(01:12)</code> of stochastic processes alternatives not<br />
+<code class="language-plaintext highlighter-rouge">(01:15)</code> two kinds of stochastic processes but<br />
+<code class="language-plaintext highlighter-rouge">(01:17)</code> two ways<br />
+<code class="language-plaintext highlighter-rouge">(01:18)</code> of describing sarcastic processes the<br />
+<code class="language-plaintext highlighter-rouge">(01:21)</code> first way<br />
+<code class="language-plaintext highlighter-rouge">(01:22)</code> that was associated with the name<br />
+<code class="language-plaintext highlighter-rouge">(01:24)</code> nonzero<br />
+<code class="language-plaintext highlighter-rouge">(01:25)</code> that we already featured in the very<br />
+<code class="language-plaintext highlighter-rouge">(01:26)</code> first lecture<br />
+<code class="language-plaintext highlighter-rouge">(01:28)</code> relied on deriving<br />
+<code class="language-plaintext highlighter-rouge">(01:32)</code> a stochastic differential equation that<br />
+<code class="language-plaintext highlighter-rouge">(01:34)</code> describes<br />
+<code class="language-plaintext highlighter-rouge">(01:36)</code> the time evolution of a single<br />
+<code class="language-plaintext highlighter-rouge">(01:38)</code> realization<br />
+<code class="language-plaintext highlighter-rouge">(01:39)</code> of such a stochastic process and the<br />
+<code class="language-plaintext highlighter-rouge">(01:41)</code> alternative approach that einstein<br />
+<code class="language-plaintext highlighter-rouge">(01:44)</code> applied for the description of broad<br />
+<code class="language-plaintext highlighter-rouge">(01:46)</code> emotion<br />
+<code class="language-plaintext highlighter-rouge">(01:47)</code> was to derive an equation<br />
+<code class="language-plaintext highlighter-rouge">(01:52)</code> for the time evolution of the<br />
+<code class="language-plaintext highlighter-rouge">(01:54)</code> probability density<br />
+<code class="language-plaintext highlighter-rouge">(01:56)</code> itself yeah and that was the master<br />
+<code class="language-plaintext highlighter-rouge">(01:58)</code> equation this master equation is not a<br />
+<code class="language-plaintext highlighter-rouge">(02:00)</code> stochastic<br />
+<code class="language-plaintext highlighter-rouge">(02:01)</code> differential equation is a deterministic<br />
+<code class="language-plaintext highlighter-rouge">(02:04)</code> equation<br />
+<code class="language-plaintext highlighter-rouge">(02:05)</code> but it’s typically high dimensional and<br />
+<code class="language-plaintext highlighter-rouge">(02:09)</code> relies as you saw last time on some<br />
+<code class="language-plaintext highlighter-rouge">(02:13)</code> integrations over the possible states<br />
+<code class="language-plaintext highlighter-rouge">(02:16)</code> that you can jump into<br />
+<code class="language-plaintext highlighter-rouge">(02:18)</code> and then for those of you who remained<br />
+<code class="language-plaintext highlighter-rouge">(02:21)</code> for the example<br />
+<code class="language-plaintext highlighter-rouge">(02:23)</code> section last time you would have seen<br />
+<code class="language-plaintext highlighter-rouge">(02:26)</code> that these master equations although<br />
+<code class="language-plaintext highlighter-rouge">(02:29)</code> they look<br />
+<code class="language-plaintext highlighter-rouge">(02:30)</code> pretty complicated can be derived<br />
+<code class="language-plaintext highlighter-rouge">(02:32)</code> phenologically<br />
+<code class="language-plaintext highlighter-rouge">(02:34)</code> phenologically actually<br />
+<code class="language-plaintext highlighter-rouge">(02:37)</code> in most cases in a very simple way yeah<br />
+<code class="language-plaintext highlighter-rouge">(02:41)</code> so these are the two kinds of<br />
+<code class="language-plaintext highlighter-rouge">(02:42)</code> description and why are we not<br />
+<code class="language-plaintext highlighter-rouge">(02:44)</code> completely happy with that<br />
+<code class="language-plaintext highlighter-rouge">(02:48)</code> so there exists approximately<br />
+<code class="language-plaintext highlighter-rouge">(02:52)</code> suppose both in general conditions both<br />
+<code class="language-plaintext highlighter-rouge">(02:54)</code> of these different kinds of equations<br />
+<code class="language-plaintext highlighter-rouge">(02:55)</code> cannot be solved<br />
+<code class="language-plaintext highlighter-rouge">(02:57)</code> there exists approximative methods that<br />
+<code class="language-plaintext highlighter-rouge">(03:00)</code> we discussed last time for example the<br />
+<code class="language-plaintext highlighter-rouge">(03:01)</code> focal plunk equation<br />
+<code class="language-plaintext highlighter-rouge">(03:03)</code> that was an approximation for the master<br />
+<code class="language-plaintext highlighter-rouge">(03:06)</code> equation<br />
+<code class="language-plaintext highlighter-rouge">(03:07)</code> and these appropriate approximative<br />
+<code class="language-plaintext highlighter-rouge">(03:09)</code> methods that work in certain special<br />
+<code class="language-plaintext highlighter-rouge">(03:11)</code> cases<br />
+<code class="language-plaintext highlighter-rouge">(03:13)</code> now the focal planck equation as you<br />
+<code class="language-plaintext highlighter-rouge">(03:15)</code> remember the<br />
+<code class="language-plaintext highlighter-rouge">(03:16)</code> derivation relied on making strong<br />
+<code class="language-plaintext highlighter-rouge">(03:19)</code> assumptions<br />
+<code class="language-plaintext highlighter-rouge">(03:20)</code> on how these jumps in states state space<br />
+<code class="language-plaintext highlighter-rouge">(03:24)</code> look like they’re very nicely behave<br />
+<code class="language-plaintext highlighter-rouge">(03:26)</code> these jumps are very small<br />
+<code class="language-plaintext highlighter-rouge">(03:28)</code> and that they effectively rely on very<br />
+<code class="language-plaintext highlighter-rouge">(03:32)</code> large<br />
+<code class="language-plaintext highlighter-rouge">(03:32)</code> system size and<br />
+<code class="language-plaintext highlighter-rouge">(03:36)</code> in other cases there are no<br />
+<code class="language-plaintext highlighter-rouge">(03:39)</code> approximative<br />
+<code class="language-plaintext highlighter-rouge">(03:40)</code> methods at all so what field theory<br />
+<code class="language-plaintext highlighter-rouge">(03:44)</code> does for us is it gives us a flexible<br />
+<code class="language-plaintext highlighter-rouge">(03:47)</code> framework a general<br />
+<code class="language-plaintext highlighter-rouge">(03:48)</code> and flexible framework that allows us to<br />
+<code class="language-plaintext highlighter-rouge">(03:51)</code> describe a large class of stochastic<br />
+<code class="language-plaintext highlighter-rouge">(03:54)</code> systems<br />
+<code class="language-plaintext highlighter-rouge">(03:55)</code> and it is even<br />
+<code class="language-plaintext highlighter-rouge">(03:59)</code> maybe if you remember from statistical<br />
+<code class="language-plaintext highlighter-rouge">(04:01)</code> physics or quantum mechanics<br />
+<code class="language-plaintext highlighter-rouge">(04:03)</code> it’s uh so general that you can apply it<br />
+<code class="language-plaintext highlighter-rouge">(04:06)</code> to<br />
+<code class="language-plaintext highlighter-rouge">(04:06)</code> a very diverse set of systems that’s<br />
+<code class="language-plaintext highlighter-rouge">(04:10)</code> one thing is for example spatially<br />
+<code class="language-plaintext highlighter-rouge">(04:12)</code> extended systems<br />
+<code class="language-plaintext highlighter-rouge">(04:13)</code> yes you can see on the bottom uh right<br />
+<code class="language-plaintext highlighter-rouge">(04:16)</code> yeah so this is a system where<br />
+<code class="language-plaintext highlighter-rouge">(04:20)</code> the evolution over the spatial<br />
+<code class="language-plaintext highlighter-rouge">(04:22)</code> information<br />
+<code class="language-plaintext highlighter-rouge">(04:23)</code> itself is very important not because you<br />
+<code class="language-plaintext highlighter-rouge">(04:26)</code> see here there’s a chemical<br />
+<code class="language-plaintext highlighter-rouge">(04:28)</code> system you see that here structures form<br />
+<code class="language-plaintext highlighter-rouge">(04:31)</code> it’s an example of what’s called binodal<br />
+<code class="language-plaintext highlighter-rouge">(04:33)</code> decomposition<br />
+<code class="language-plaintext highlighter-rouge">(04:35)</code> now so here the spatial component is<br />
+<code class="language-plaintext highlighter-rouge">(04:36)</code> very important<br />
+<code class="language-plaintext highlighter-rouge">(04:38)</code> and this has to be taken into account<br />
+<code class="language-plaintext highlighter-rouge">(04:41)</code> when you want to understand of course<br />
+<code class="language-plaintext highlighter-rouge">(04:43)</code> collective processes<br />
+<code class="language-plaintext highlighter-rouge">(04:45)</code> another example are non-linearities in<br />
+<code class="language-plaintext highlighter-rouge">(04:48)</code> stochastic differential equations<br />
+<code class="language-plaintext highlighter-rouge">(04:51)</code> now these become especially if they<br />
+<code class="language-plaintext highlighter-rouge">(04:53)</code> affect an oyster and become pretty hard<br />
+<code class="language-plaintext highlighter-rouge">(04:55)</code> very quickly<br />
+<code class="language-plaintext highlighter-rouge">(04:56)</code> and another example is that i would have<br />
+<code class="language-plaintext highlighter-rouge">(04:58)</code> showed you last time<br />
+<code class="language-plaintext highlighter-rouge">(05:00)</code> that field theory that typical<br />
+<code class="language-plaintext highlighter-rouge">(05:02)</code> approximative methods like the focal<br />
+<code class="language-plaintext highlighter-rouge">(05:04)</code> planck<br />
+<code class="language-plaintext highlighter-rouge">(05:06)</code> method or other kinds of expansions<br />
+<code class="language-plaintext highlighter-rouge">(05:10)</code> uh are not very suitable for rare events<br />
+<code class="language-plaintext highlighter-rouge">(05:14)</code> for the tales of probability<br />
+<code class="language-plaintext highlighter-rouge">(05:16)</code> distributions<br />
+<code class="language-plaintext highlighter-rouge">(05:17)</code> so in fields here we have a general<br />
+<code class="language-plaintext highlighter-rouge">(05:19)</code> framework<br />
+<code class="language-plaintext highlighter-rouge">(05:20)</code> of understanding these variables<br />
+<code class="language-plaintext highlighter-rouge">(05:24)</code> and so there has been a lot of work on<br />
+<code class="language-plaintext highlighter-rouge">(05:26)</code> how to make approximations to these<br />
+<code class="language-plaintext highlighter-rouge">(05:28)</code> field theories<br />
+<code class="language-plaintext highlighter-rouge">(05:30)</code> that allow us to understand the tales of<br />
+<code class="language-plaintext highlighter-rouge">(05:32)</code> probability distributions and very often<br />
+<code class="language-plaintext highlighter-rouge">(05:34)</code> these tales<br />
+<code class="language-plaintext highlighter-rouge">(05:36)</code> are pretty important so they are not<br />
+<code class="language-plaintext highlighter-rouge">(05:39)</code> they’re rare<br />
+<code class="language-plaintext highlighter-rouge">(05:40)</code> but uh if you think about a nuclear<br />
+<code class="language-plaintext highlighter-rouge">(05:44)</code> reactor or something like this yes these<br />
+<code class="language-plaintext highlighter-rouge">(05:46)</code> rare events are rare<br />
+<code class="language-plaintext highlighter-rouge">(05:47)</code> but you want to know how often they hear<br />
+<code class="language-plaintext highlighter-rouge">(05:49)</code> and there are a few theoretic methods<br />
+<code class="language-plaintext highlighter-rouge">(05:51)</code> that allow you<br />
+<code class="language-plaintext highlighter-rouge">(05:52)</code> to calculate the tails of probability<br />
+<code class="language-plaintext highlighter-rouge">(05:54)</code> distributions<br />
+<code class="language-plaintext highlighter-rouge">(05:56)</code> very nicely so<br />
+<code class="language-plaintext highlighter-rouge">(06:00)</code> this is what we’ll do and in this<br />
+<code class="language-plaintext highlighter-rouge">(06:02)</code> lecture<br /></p>
+
+<h3 id="slide-2">slide 2</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(06:03)</code> i want to show you how we can derive<br />
+<code class="language-plaintext highlighter-rouge">(06:07)</code> a field theory description um<br />
+<code class="language-plaintext highlighter-rouge">(06:11)</code> for the longitudinal equation for<br />
+<code class="language-plaintext highlighter-rouge">(06:13)</code> stochastic differential equations<br />
+<code class="language-plaintext highlighter-rouge">(06:15)</code> we’ll be looking at very simple a<br />
+<code class="language-plaintext highlighter-rouge">(06:20)</code> very simple automatic equation that<br />
+<code class="language-plaintext highlighter-rouge">(06:22)</code> doesn’t have any<br />
+<code class="language-plaintext highlighter-rouge">(06:23)</code> explicit time derivative that doesn’t<br />
+<code class="language-plaintext highlighter-rouge">(06:25)</code> have<br />
+<code class="language-plaintext highlighter-rouge">(06:26)</code> multiplicative noise and we can<br />
+<code class="language-plaintext highlighter-rouge">(06:30)</code> nevertheless in the framework of field<br />
+<code class="language-plaintext highlighter-rouge">(06:31)</code> theory we can<br />
+<code class="language-plaintext highlighter-rouge">(06:33)</code> straightforwardly uh extend<br />
+<code class="language-plaintext highlighter-rouge">(06:36)</code> this methodology to more complicated<br />
+<code class="language-plaintext highlighter-rouge">(06:38)</code> systems so we restrict ourselves<br />
+<code class="language-plaintext highlighter-rouge">(06:40)</code> to this very simple larger equation uh<br />
+<code class="language-plaintext highlighter-rouge">(06:43)</code> with gaussian white noise<br />
+<code class="language-plaintext highlighter-rouge">(06:45)</code> that is as last time uncorrelated<br />
+<code class="language-plaintext highlighter-rouge">(06:50)</code> so if you<br />
+<code class="language-plaintext highlighter-rouge">(06:54)</code> so the first step here is to discretize<br />
+<code class="language-plaintext highlighter-rouge">(06:58)</code> time yeah and uh so we take<br />
+<code class="language-plaintext highlighter-rouge">(07:02)</code> the logical equation and we write it<br />
+<code class="language-plaintext highlighter-rouge">(07:03)</code> down in discrete time<br />
+<code class="language-plaintext highlighter-rouge">(07:06)</code> and uh as you saw uh last time<br />
+<code class="language-plaintext highlighter-rouge">(07:09)</code> uh or in the first of what was the first<br />
+<code class="language-plaintext highlighter-rouge">(07:12)</code> lecture already i saw<br />
+<code class="language-plaintext highlighter-rouge">(07:13)</code> two lectures ago oh wait whatever yeah<br />
+<code class="language-plaintext highlighter-rouge">(07:16)</code> so so no last time last time was the<br />
+<code class="language-plaintext highlighter-rouge">(07:18)</code> catholic processes<br />
+<code class="language-plaintext highlighter-rouge">(07:19)</code> yeah so as you saw last time the way we<br />
+<code class="language-plaintext highlighter-rouge">(07:22)</code> discretize<br />
+<code class="language-plaintext highlighter-rouge">(07:24)</code> stochastic differential equations and i<br />
+<code class="language-plaintext highlighter-rouge">(07:27)</code> showed you that for uh stochastic<br />
+<code class="language-plaintext highlighter-rouge">(07:28)</code> integrals is very important<br />
+<code class="language-plaintext highlighter-rouge">(07:32)</code> yeah and in this case we also have to<br />
+<code class="language-plaintext highlighter-rouge">(07:34)</code> discretize<br />
+<code class="language-plaintext highlighter-rouge">(07:35)</code> our stochastic differential equation in<br />
+<code class="language-plaintext highlighter-rouge">(07:37)</code> a certain way<br />
+<code class="language-plaintext highlighter-rouge">(07:39)</code> which is called the ito discretization<br />
+<code class="language-plaintext highlighter-rouge">(07:43)</code> and but if we do that if we discretize<br />
+<code class="language-plaintext highlighter-rouge">(07:47)</code> our stochastic differential equation in<br />
+<code class="language-plaintext highlighter-rouge">(07:49)</code> this way<br />
+<code class="language-plaintext highlighter-rouge">(07:50)</code> the idea is that in principle we can<br />
+<code class="language-plaintext highlighter-rouge">(07:53)</code> write down<br />
+<code class="language-plaintext highlighter-rouge">(07:55)</code> averages over any<br />
+<code class="language-plaintext highlighter-rouge">(07:58)</code> observable you know that’s here on the<br />
+<code class="language-plaintext highlighter-rouge">(08:01)</code> left left hand side by some complicated<br />
+<code class="language-plaintext highlighter-rouge">(08:04)</code> thing that is on the right hand side<br />
+<code class="language-plaintext highlighter-rouge">(08:07)</code> so this what is on the right hand side<br />
+<code class="language-plaintext highlighter-rouge">(08:09)</code> and this equation looks pretty<br />
+<code class="language-plaintext highlighter-rouge">(08:10)</code> complicated but it’s not that<br />
+<code class="language-plaintext highlighter-rouge">(08:12)</code> complicated so let’s have a look<br />
+<code class="language-plaintext highlighter-rouge">(08:14)</code> at these different terms in the first<br />
+<code class="language-plaintext highlighter-rouge">(08:18)</code> term here<br />
+<code class="language-plaintext highlighter-rouge">(08:19)</code> on the left right hand side the red term<br />
+<code class="language-plaintext highlighter-rouge">(08:22)</code> we just integrate over all possible<br />
+<code class="language-plaintext highlighter-rouge">(08:25)</code> realizations<br />
+<code class="language-plaintext highlighter-rouge">(08:27)</code> that a stochastic trajectory can take<br />
+<code class="language-plaintext highlighter-rouge">(08:32)</code> on the right hand side<br />
+<code class="language-plaintext highlighter-rouge">(08:35)</code> now if you look at the right hand side<br />
+<code class="language-plaintext highlighter-rouge">(08:37)</code> oh there’s a delta function missing here<br />
+<code class="language-plaintext highlighter-rouge">(08:40)</code> right at here delta here<br />
+<code class="language-plaintext highlighter-rouge">(08:43)</code> on the right hand side you have this<br />
+<code class="language-plaintext highlighter-rouge">(08:45)</code> delta function<br />
+<code class="language-plaintext highlighter-rouge">(08:49)</code> here you have this delta function and<br />
+<code class="language-plaintext highlighter-rouge">(08:52)</code> this delta function<br />
+<code class="language-plaintext highlighter-rouge">(08:54)</code> just makes sure that whatever we<br />
+<code class="language-plaintext highlighter-rouge">(08:56)</code> integrate here whatever trajectories we<br />
+<code class="language-plaintext highlighter-rouge">(08:59)</code> integrate over<br />
+<code class="language-plaintext highlighter-rouge">(09:01)</code> that they fulfill the discretized<br />
+<code class="language-plaintext highlighter-rouge">(09:04)</code> version<br />
+<code class="language-plaintext highlighter-rouge">(09:05)</code> of the larger equation<br />
+<code class="language-plaintext highlighter-rouge">(09:08)</code> yeah so the delta function is just the<br />
+<code class="language-plaintext highlighter-rouge">(09:11)</code> left-hand side<br />
+<code class="language-plaintext highlighter-rouge">(09:12)</code> minus the right-hand side of this launch<br />
+<code class="language-plaintext highlighter-rouge">(09:15)</code> of our equation<br />
+<code class="language-plaintext highlighter-rouge">(09:16)</code> and if the left-hand side is equal to<br />
+<code class="language-plaintext highlighter-rouge">(09:18)</code> the right-hand side<br />
+<code class="language-plaintext highlighter-rouge">(09:20)</code> then we take that trajectory into<br />
+<code class="language-plaintext highlighter-rouge">(09:22)</code> account<br />
+<code class="language-plaintext highlighter-rouge">(09:23)</code> you know and then sandwiched between<br />
+<code class="language-plaintext highlighter-rouge">(09:26)</code> that we have<br />
+<code class="language-plaintext highlighter-rouge">(09:27)</code> our observable o that is some functional<br />
+<code class="language-plaintext highlighter-rouge">(09:31)</code> of our trajectory x<br />
+<code class="language-plaintext highlighter-rouge">(09:34)</code> now as i say functional so i don’t know<br />
+<code class="language-plaintext highlighter-rouge">(09:37)</code> how much uh<br />
+<code class="language-plaintext highlighter-rouge">(09:37)</code> functional analysis all of you had so<br />
+<code class="language-plaintext highlighter-rouge">(09:40)</code> most<br />
+<code class="language-plaintext highlighter-rouge">(09:41)</code> so i would expect that most of you would<br />
+<code class="language-plaintext highlighter-rouge">(09:44)</code> have that<br />
+<code class="language-plaintext highlighter-rouge">(09:44)</code> until the first fourth term<br />
+<code class="language-plaintext highlighter-rouge">(09:48)</code> or so also but just just to make sure a<br />
+<code class="language-plaintext highlighter-rouge">(09:51)</code> functional<br />
+<code class="language-plaintext highlighter-rouge">(09:52)</code> is basically a function that maps um<br />
+<code class="language-plaintext highlighter-rouge">(09:56)</code> that maps this that maps<br />
+<code class="language-plaintext highlighter-rouge">(09:59)</code> this function x uh yes that map<br />
+<code class="language-plaintext highlighter-rouge">(10:03)</code> a function to a real number yeah<br />
+<code class="language-plaintext highlighter-rouge">(10:06)</code> and this is our how we define these<br />
+<code class="language-plaintext highlighter-rouge">(10:08)</code> observables<br />
+<code class="language-plaintext highlighter-rouge">(10:09)</code> now you take a trajectory and you map it<br />
+<code class="language-plaintext highlighter-rouge">(10:12)</code> to them to a number<br />
+<code class="language-plaintext highlighter-rouge">(10:16)</code> okay so this looks very complicated it<br />
+<code class="language-plaintext highlighter-rouge">(10:18)</code> doesn’t help us<br />
+<code class="language-plaintext highlighter-rouge">(10:19)</code> anything at all and uh<br />
+<code class="language-plaintext highlighter-rouge">(10:22)</code> one the other step that we need to make<br />
+<code class="language-plaintext highlighter-rouge">(10:24)</code> on the slide is we that we<br />
+<code class="language-plaintext highlighter-rouge">(10:26)</code> introduce some notations here<br />
+<code class="language-plaintext highlighter-rouge">(10:29)</code> and uh of course we don’t always want to<br />
+<code class="language-plaintext highlighter-rouge">(10:32)</code> write<br />
+<code class="language-plaintext highlighter-rouge">(10:33)</code> all of these integrals here on the left<br />
+<code class="language-plaintext highlighter-rouge">(10:36)</code> hand side<br />
+<code class="language-plaintext highlighter-rouge">(10:37)</code> we just say we write that in this<br />
+<code class="language-plaintext highlighter-rouge">(10:39)</code> functional form here<br />
+<code class="language-plaintext highlighter-rouge">(10:41)</code> and of course many of you will know that<br />
+<code class="language-plaintext highlighter-rouge">(10:43)</code> this is just<br />
+<code class="language-plaintext highlighter-rouge">(10:44)</code> a functional integral or a path into<br />
+<code class="language-plaintext highlighter-rouge">(10:47)</code> yeah that’s how we define it here<br /></p>
+
+<h3 id="slide-3">slide 3</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(10:49)</code> and now for uh notational convenience<br />
+<code class="language-plaintext highlighter-rouge">(10:54)</code> now we just go to a continuum locate<br />
+<code class="language-plaintext highlighter-rouge">(10:56)</code> notation now we forget that we<br />
+<code class="language-plaintext highlighter-rouge">(10:58)</code> discretize time in the previous step<br />
+<code class="language-plaintext highlighter-rouge">(11:01)</code> and we write the equation back in<br />
+<code class="language-plaintext highlighter-rouge">(11:03)</code> continuous form<br />
+<code class="language-plaintext highlighter-rouge">(11:05)</code> just for the sake of simplicity and we<br />
+<code class="language-plaintext highlighter-rouge">(11:07)</code> define<br />
+<code class="language-plaintext highlighter-rouge">(11:08)</code> some delta functional<br />
+<code class="language-plaintext highlighter-rouge">(11:11)</code> that is just equal to the product over<br />
+<code class="language-plaintext highlighter-rouge">(11:14)</code> all data functions that we had on the<br />
+<code class="language-plaintext highlighter-rouge">(11:16)</code> previous slide<br />
+<code class="language-plaintext highlighter-rouge">(11:17)</code> now if you look here are the product of<br />
+<code class="language-plaintext highlighter-rouge">(11:20)</code> our data functions<br />
+<code class="language-plaintext highlighter-rouge">(11:21)</code> just make sure that you fulfill the<br />
+<code class="language-plaintext highlighter-rouge">(11:23)</code> larger equation really at each time<br />
+<code class="language-plaintext highlighter-rouge">(11:25)</code> point<br />
+<code class="language-plaintext highlighter-rouge">(11:27)</code> and we just define like a super delta<br />
+<code class="language-plaintext highlighter-rouge">(11:29)</code> function or delta functional<br />
+<code class="language-plaintext highlighter-rouge">(11:31)</code> that makes sure that we really satisfy<br />
+<code class="language-plaintext highlighter-rouge">(11:33)</code> the larger equation for each time point<br />
+<code class="language-plaintext highlighter-rouge">(11:41)</code> so now we make a little trick<br />
+<code class="language-plaintext highlighter-rouge">(11:45)</code> now we say we have this delta function<br />
+<code class="language-plaintext highlighter-rouge">(11:47)</code> or this product of delta functions<br />
+<code class="language-plaintext highlighter-rouge">(11:50)</code> and what we say is that in fourier space<br />
+<code class="language-plaintext highlighter-rouge">(11:54)</code> the delta function is represented by a<br />
+<code class="language-plaintext highlighter-rouge">(11:58)</code> plane<br />
+<code class="language-plaintext highlighter-rouge">(11:58)</code> wave yeah so we fully transform the<br />
+<code class="language-plaintext highlighter-rouge">(12:02)</code> delta function<br />
+<code class="language-plaintext highlighter-rouge">(12:15)</code> or a functional is now and<br />
+<code class="language-plaintext highlighter-rouge">(12:18)</code> the fourier transform of the delta<br />
+<code class="language-plaintext highlighter-rouge">(12:20)</code> function<br />
+<code class="language-plaintext highlighter-rouge">(12:21)</code> just becomes delta x dot<br />
+<code class="language-plaintext highlighter-rouge">(12:25)</code> minus f of x minus<br />
+<code class="language-plaintext highlighter-rouge">(12:29)</code> sine because our delta our function<br />
+<code class="language-plaintext highlighter-rouge">(12:31)</code> equation<br />
+<code class="language-plaintext highlighter-rouge">(12:33)</code> is equal to a fury space<br />
+<code class="language-plaintext highlighter-rouge">(12:38)</code> d x tilde<br />
+<code class="language-plaintext highlighter-rouge">(12:43)</code> e to the minus i x to the<br />
+<code class="language-plaintext highlighter-rouge">(12:48)</code> x dot minus<br />
+<code class="language-plaintext highlighter-rouge">(12:52)</code> f of x minus c<br />
+<code class="language-plaintext highlighter-rouge">(12:56)</code> now we now get this variable x tilde<br />
+<code class="language-plaintext highlighter-rouge">(13:00)</code> so this is nothing there’s nothing<br />
+<code class="language-plaintext highlighter-rouge">(13:01)</code> happening it’s just the definition of<br />
+<code class="language-plaintext highlighter-rouge">(13:03)</code> the forage in the form<br />
+<code class="language-plaintext highlighter-rouge">(13:04)</code> of a delta function and because we have<br />
+<code class="language-plaintext highlighter-rouge">(13:08)</code> this<br />
+<code class="language-plaintext highlighter-rouge">(13:08)</code> product for many delta functions here<br />
+<code class="language-plaintext highlighter-rouge">(13:12)</code> we have the integral here that the path<br />
+<code class="language-plaintext highlighter-rouge">(13:15)</code> integral here will also get a path<br />
+<code class="language-plaintext highlighter-rouge">(13:17)</code> integral<br />
+<code class="language-plaintext highlighter-rouge">(13:18)</code> delta x total you know that’s that just<br />
+<code class="language-plaintext highlighter-rouge">(13:22)</code> the definition of the fury transform<br />
+<code class="language-plaintext highlighter-rouge">(13:24)</code> and now we plug this<br />
+<code class="language-plaintext highlighter-rouge">(13:28)</code> in again so<br />
+<code class="language-plaintext highlighter-rouge">(13:32)</code> we obtain from that<br />
+<code class="language-plaintext highlighter-rouge">(13:35)</code> that the expectation value of our<br />
+<code class="language-plaintext highlighter-rouge">(13:39)</code> observable yeah<br />
+<code class="language-plaintext highlighter-rouge">(13:43)</code> taken to the average now this average is<br />
+<code class="language-plaintext highlighter-rouge">(13:45)</code> over the distance<br />
+<code class="language-plaintext highlighter-rouge">(13:47)</code> over over a different voice realizations<br />
+<code class="language-plaintext highlighter-rouge">(13:52)</code> yeah it is equal now we plug that in<br />
+<code class="language-plaintext highlighter-rouge">(13:55)</code> an integral now over<br />
+<code class="language-plaintext highlighter-rouge">(13:58)</code> x and x tilde so it’s a path integral<br />
+<code class="language-plaintext highlighter-rouge">(14:03)</code> over x and x tilde so we there’s an<br />
+<code class="language-plaintext highlighter-rouge">(14:06)</code> integral<br />
+<code class="language-plaintext highlighter-rouge">(14:07)</code> over all realization of x and all<br />
+<code class="language-plaintext highlighter-rouge">(14:10)</code> realization<br />
+<code class="language-plaintext highlighter-rouge">(14:11)</code> of x2 now so now this x still that pops<br />
+<code class="language-plaintext highlighter-rouge">(14:14)</code> up yeah so we don’t really know what it<br />
+<code class="language-plaintext highlighter-rouge">(14:15)</code> is<br />
+<code class="language-plaintext highlighter-rouge">(14:16)</code> but it will hang around and it will show<br />
+<code class="language-plaintext highlighter-rouge">(14:18)</code> you later what it actually mean<br />
+<code class="language-plaintext highlighter-rouge">(14:21)</code> means so we have this fourth integral<br />
+<code class="language-plaintext highlighter-rouge">(14:25)</code> so our observable of x and then<br />
+<code class="language-plaintext highlighter-rouge">(14:33)</code> plugging in e to the minus<br />
+<code class="language-plaintext highlighter-rouge">(14:37)</code> i x tilde<br />
+<code class="language-plaintext highlighter-rouge">(14:40)</code> um sorry<br />
+<code class="language-plaintext highlighter-rouge">(14:44)</code> we’ve got an integral so we have here a<br />
+<code class="language-plaintext highlighter-rouge">(14:46)</code> little<br />
+<code class="language-plaintext highlighter-rouge">(14:47)</code> integral dt<br />
+<code class="language-plaintext highlighter-rouge">(14:52)</code> and this integral<br />
+<code class="language-plaintext highlighter-rouge">(14:56)</code> we get because we had this<br />
+<code class="language-plaintext highlighter-rouge">(15:00)</code> product over here now so here the<br />
+<code class="language-plaintext highlighter-rouge">(15:03)</code> product<br />
+<code class="language-plaintext highlighter-rouge">(15:04)</code> we had here gives us an integral so our<br />
+<code class="language-plaintext highlighter-rouge">(15:07)</code> sum<br />
+<code class="language-plaintext highlighter-rouge">(15:08)</code> in the exponential so this was<br />
+<code class="language-plaintext highlighter-rouge">(15:10)</code> originally like a product of many<br />
+<code class="language-plaintext highlighter-rouge">(15:12)</code> exponential<br />
+<code class="language-plaintext highlighter-rouge">(15:14)</code> and uh so this is this and then we have<br />
+<code class="language-plaintext highlighter-rouge">(15:18)</code> our<br />
+<code class="language-plaintext highlighter-rouge">(15:18)</code> x tilde x dot minus<br />
+<code class="language-plaintext highlighter-rouge">(15:23)</code> f of x minus x psi<br />
+<code class="language-plaintext highlighter-rouge">(15:28)</code> and then we close the average<br />
+<code class="language-plaintext highlighter-rouge">(15:32)</code> and then we just plug this in yeah we<br />
+<code class="language-plaintext highlighter-rouge">(15:34)</code> can move out<br />
+<code class="language-plaintext highlighter-rouge">(15:36)</code> everything that does not depend on psi<br />
+<code class="language-plaintext highlighter-rouge">(15:39)</code> or the noise<br />
+<code class="language-plaintext highlighter-rouge">(15:41)</code> out of the average because average is<br />
+<code class="language-plaintext highlighter-rouge">(15:43)</code> over the noise<br />
+<code class="language-plaintext highlighter-rouge">(15:46)</code> b x x to the<br />
+<code class="language-plaintext highlighter-rouge">(15:51)</code> power of x right now comes the stuff<br />
+<code class="language-plaintext highlighter-rouge">(15:54)</code> that does not depend<br />
+<code class="language-plaintext highlighter-rouge">(15:56)</code> on x under x i integral<br />
+<code class="language-plaintext highlighter-rouge">(16:00)</code> e t x to the<br />
+<code class="language-plaintext highlighter-rouge">(16:04)</code> x dot minus f of x<br />
+<code class="language-plaintext highlighter-rouge">(16:08)</code> and now we have some<br />
+<code class="language-plaintext highlighter-rouge">(16:12)</code> average over minus i<br />
+<code class="language-plaintext highlighter-rouge">(16:15)</code> dt x tilde<br />
+<code class="language-plaintext highlighter-rouge">(16:19)</code> times psi<br /></p>
+
+<h3 id="slide-4">slide 4</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(16:23)</code> you know so<br />
+<code class="language-plaintext highlighter-rouge">(16:26)</code> now the question is what is this here<br />
+<code class="language-plaintext highlighter-rouge">(16:32)</code> can we calculate this at the moment we<br />
+<code class="language-plaintext highlighter-rouge">(16:34)</code> cannot do anything with this equation<br />
+<code class="language-plaintext highlighter-rouge">(16:36)</code> with this expression can you can we<br />
+<code class="language-plaintext highlighter-rouge">(16:38)</code> calculate<br />
+<code class="language-plaintext highlighter-rouge">(16:40)</code> this last term that involves a noise<br />
+<code class="language-plaintext highlighter-rouge">(16:44)</code> average<br />
+<code class="language-plaintext highlighter-rouge">(16:45)</code> over e to the minus dt<br />
+<code class="language-plaintext highlighter-rouge">(16:49)</code> and psi now and there’s hope that we can<br />
+<code class="language-plaintext highlighter-rouge">(16:52)</code> calculate this because we know what<br />
+<code class="language-plaintext highlighter-rouge">(16:54)</code> psi is now we said that x i<br />
+<code class="language-plaintext highlighter-rouge">(16:58)</code> is a gaussian random variable<br />
+<code class="language-plaintext highlighter-rouge">(17:01)</code> yeah it has follows a normal<br />
+<code class="language-plaintext highlighter-rouge">(17:03)</code> distribution<br />
+<code class="language-plaintext highlighter-rouge">(17:04)</code> it’s uncorrelated so we know a lot of<br />
+<code class="language-plaintext highlighter-rouge">(17:07)</code> things about this<br />
+<code class="language-plaintext highlighter-rouge">(17:08)</code> sign and what we do right now<br />
+<code class="language-plaintext highlighter-rouge">(17:12)</code> right because psi is gaussian there’s<br />
+<code class="language-plaintext highlighter-rouge">(17:14)</code> also hope that we can actually<br />
+<code class="language-plaintext highlighter-rouge">(17:17)</code> solve or integrate this integral that is<br />
+<code class="language-plaintext highlighter-rouge">(17:20)</code> this average here<br />
+<code class="language-plaintext highlighter-rouge">(17:21)</code> now i’ll show you now how this works in<br />
+<code class="language-plaintext highlighter-rouge">(17:24)</code> detail<br />
+<code class="language-plaintext highlighter-rouge">(17:25)</code> yeah so we make use of the definition of<br />
+<code class="language-plaintext highlighter-rouge">(17:28)</code> phi<br />
+<code class="language-plaintext highlighter-rouge">(17:30)</code> so let’s see what this second average<br />
+<code class="language-plaintext highlighter-rouge">(17:32)</code> looks like<br />
+<code class="language-plaintext highlighter-rouge">(17:34)</code> now that’s o of x<br />
+<code class="language-plaintext highlighter-rouge">(17:38)</code> uh sorry it’s not o of x it is<br />
+<code class="language-plaintext highlighter-rouge">(17:42)</code> e to the minus i dt<br />
+<code class="language-plaintext highlighter-rouge">(17:47)</code> integral x of<br />
+<code class="language-plaintext highlighter-rouge">(17:50)</code> sine<br />
+<code class="language-plaintext highlighter-rouge">(17:54)</code> now and this is<br />
+<code class="language-plaintext highlighter-rouge">(17:58)</code> by definition by the definition of the<br />
+<code class="language-plaintext highlighter-rouge">(18:00)</code> average<br />
+<code class="language-plaintext highlighter-rouge">(18:03)</code> is equal to the integral over dxi<br />
+<code class="language-plaintext highlighter-rouge">(18:08)</code> times the probability over the<br />
+<code class="language-plaintext highlighter-rouge">(18:11)</code> probability distribution of<br />
+<code class="language-plaintext highlighter-rouge">(18:13)</code> psi which is a gaussian or a normal<br />
+<code class="language-plaintext highlighter-rouge">(18:15)</code> distribution<br />
+<code class="language-plaintext highlighter-rouge">(18:18)</code> 2 pi a a is the strength of our noise<br />
+<code class="language-plaintext highlighter-rouge">(18:23)</code> e to the minus psi<br />
+<code class="language-plaintext highlighter-rouge">(18:26)</code> squared over 2a<br />
+<code class="language-plaintext highlighter-rouge">(18:29)</code> yeah so this is the probability<br />
+<code class="language-plaintext highlighter-rouge">(18:31)</code> distribution<br />
+<code class="language-plaintext highlighter-rouge">(18:33)</code> and we know that psi is normally<br />
+<code class="language-plaintext highlighter-rouge">(18:36)</code> distributed<br />
+<code class="language-plaintext highlighter-rouge">(18:37)</code> yeah and that’s why we have this normal<br />
+<code class="language-plaintext highlighter-rouge">(18:40)</code> distribution here<br />
+<code class="language-plaintext highlighter-rouge">(18:42)</code> at now we multiply this by the thing<br />
+<code class="language-plaintext highlighter-rouge">(18:45)</code> we’re averaging over<br />
+<code class="language-plaintext highlighter-rouge">(18:48)</code> yeah e to the minus i<br />
+<code class="language-plaintext highlighter-rouge">(18:51)</code> d t x to the sine<br />
+<code class="language-plaintext highlighter-rouge">(18:57)</code> now so this excuse me yes isn’t it<br />
+<code class="language-plaintext highlighter-rouge">(19:00)</code> supposed to be exponential<br />
+<code class="language-plaintext highlighter-rouge">(19:02)</code> plus psi integral delta t whatever<br />
+<code class="language-plaintext highlighter-rouge">(19:08)</code> integral over let me see<br />
+<code class="language-plaintext highlighter-rouge">(19:12)</code> you mean the second integral this one<br />
+<code class="language-plaintext highlighter-rouge">(19:13)</code> here<br />
+<code class="language-plaintext highlighter-rouge">(19:16)</code> yeah okay so this one is that minus or<br />
+<code class="language-plaintext highlighter-rouge">(19:18)</code> plus<br />
+<code class="language-plaintext highlighter-rouge">(19:20)</code> let me just check<br />
+<code class="language-plaintext highlighter-rouge">(19:23)</code> let me check my notes<br />
+<code class="language-plaintext highlighter-rouge">(19:27)</code> okay<br />
+<code class="language-plaintext highlighter-rouge">(19:31)</code> so here we go<br />
+<code class="language-plaintext highlighter-rouge">(19:35)</code> so no there’s a minus<br />
+<code class="language-plaintext highlighter-rouge">(19:39)</code> i i wouldn’t be able to find him i<br />
+<code class="language-plaintext highlighter-rouge">(19:42)</code> wouldn’t be able to find it<br />
+<code class="language-plaintext highlighter-rouge">(19:43)</code> [Music]<br />
+<code class="language-plaintext highlighter-rouge">(19:45)</code> on the previous slide you can go and<br />
+<code class="language-plaintext highlighter-rouge">(19:47)</code> just<br />
+<code class="language-plaintext highlighter-rouge">(19:48)</code> okay so let me see maybe there’s a here<br />
+<code class="language-plaintext highlighter-rouge">(19:51)</code> we have the minus<br />
+<code class="language-plaintext highlighter-rouge">(19:54)</code> here we have the minus u of the minus<br />
+<code class="language-plaintext highlighter-rouge">(19:57)</code> here we have the minus and another minus<br />
+<code class="language-plaintext highlighter-rouge">(20:00)</code> yeah you’re right<br />
+<code class="language-plaintext highlighter-rouge">(20:01)</code> let me see what’s wrong here uh<br />
+<code class="language-plaintext highlighter-rouge">(20:04)</code> okay oh yes okay so here<br />
+<code class="language-plaintext highlighter-rouge">(20:12)</code> i think this minus here is not right<br />
+<code class="language-plaintext highlighter-rouge">(20:17)</code> now that’s just the definition here wait<br />
+<code class="language-plaintext highlighter-rouge">(20:20)</code> minus my i don’t know<br />
+<code class="language-plaintext highlighter-rouge">(20:22)</code> okay minus minus is plus<br />
+<code class="language-plaintext highlighter-rouge">(20:28)</code> minus minus with plus i think i think<br />
+<code class="language-plaintext highlighter-rouge">(20:29)</code> you’re right<br />
+<code class="language-plaintext highlighter-rouge">(20:31)</code> but then here should be a minus so where<br />
+<code class="language-plaintext highlighter-rouge">(20:33)</code> does the<br />
+<code class="language-plaintext highlighter-rouge">(20:34)</code> is there an i squared somewhere<br />
+<code class="language-plaintext highlighter-rouge">(20:44)</code> excuse me i think there should be a<br />
+<code class="language-plaintext highlighter-rouge">(20:46)</code> minus sign<br /></p>
+
+<h3 id="slide-4-1">slide 4</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(20:47)</code> um in the first exponential as well in<br />
+<code class="language-plaintext highlighter-rouge">(20:50)</code> the last step on this particular slide<br />
+<code class="language-plaintext highlighter-rouge">(20:52)</code> there are two exponential studies yes<br />
+<code class="language-plaintext highlighter-rouge">(20:54)</code> yes yes yes yes<br />
+<code class="language-plaintext highlighter-rouge">(20:56)</code> that’s what i’m wondering about um let<br />
+<code class="language-plaintext highlighter-rouge">(20:58)</code> me see if it’s<br />
+<code class="language-plaintext highlighter-rouge">(20:59)</code> actually the final result<br />
+<code class="language-plaintext highlighter-rouge">(21:02)</code> um i x minus minus<br />
+<code class="language-plaintext highlighter-rouge">(21:08)</code> [Music]<br />
+<code class="language-plaintext highlighter-rouge">(21:14)</code> okay so so mike<br />
+<code class="language-plaintext highlighter-rouge">(21:17)</code> let me let me just see<br />
+<code class="language-plaintext highlighter-rouge">(21:24)</code> let me just see<br />
+<code class="language-plaintext highlighter-rouge">(21:28)</code> so let’s let’s put this minus here in<br />
+<code class="language-plaintext highlighter-rouge">(21:30)</code> brackets<br />
+<code class="language-plaintext highlighter-rouge">(21:31)</code> now so this one minus this should have<br />
+<code class="language-plaintext highlighter-rouge">(21:34)</code> the opposite<br />
+<code class="language-plaintext highlighter-rouge">(21:35)</code> i don’t wait with me okay this is the<br />
+<code class="language-plaintext highlighter-rouge">(21:37)</code> minus then<br />
+<code class="language-plaintext highlighter-rouge">(21:38)</code> this should be plus you say<br />
+<code class="language-plaintext highlighter-rouge">(21:42)</code> you know i think i think it i think it<br />
+<code class="language-plaintext highlighter-rouge">(21:45)</code> will come out correctly later<br />
+<code class="language-plaintext highlighter-rouge">(21:46)</code> now let’s see how it goes um let’s see<br />
+<code class="language-plaintext highlighter-rouge">(21:50)</code> how it goes<br />
+<code class="language-plaintext highlighter-rouge">(21:51)</code> now it makes sense<br />
+<code class="language-plaintext highlighter-rouge">(21:56)</code> now we have to have a gaussian integral<br />
+<code class="language-plaintext highlighter-rouge">(22:00)</code> and that will determine whether what<br />
+<code class="language-plaintext highlighter-rouge">(22:04)</code> we’re doing is right<br />
+<code class="language-plaintext highlighter-rouge">(22:05)</code> okay so let’s let’s go on so this here<br />
+<code class="language-plaintext highlighter-rouge">(22:08)</code> is the integral and now we just<br />
+<code class="language-plaintext highlighter-rouge">(22:12)</code> put everything together and say<br />
+<code class="language-plaintext highlighter-rouge">(22:15)</code> that the sign 1 over<br />
+<code class="language-plaintext highlighter-rouge">(22:20)</code> 2 a e<br />
+<code class="language-plaintext highlighter-rouge">(22:24)</code> minus dt x to the<br />
+<code class="language-plaintext highlighter-rouge">(22:28)</code> psi<br />
+<code class="language-plaintext highlighter-rouge">(22:32)</code> now that’s the first one so that would<br />
+<code class="language-plaintext highlighter-rouge">(22:34)</code> be a plus then<br />
+<code class="language-plaintext highlighter-rouge">(22:36)</code> minus i dt x<br />
+<code class="language-plaintext highlighter-rouge">(22:40)</code> to the sine<br />
+<code class="language-plaintext highlighter-rouge">(22:43)</code> now i just i just uh i just combined the<br />
+<code class="language-plaintext highlighter-rouge">(22:46)</code> exponentials<br />
+<code class="language-plaintext highlighter-rouge">(22:47)</code> now thanks for thanks for paying so much<br />
+<code class="language-plaintext highlighter-rouge">(22:49)</code> attention<br />
+<code class="language-plaintext highlighter-rouge">(22:51)</code> um so yeah and this is here<br />
+<code class="language-plaintext highlighter-rouge">(22:54)</code> a gaussian integral and if you don’t<br />
+<code class="language-plaintext highlighter-rouge">(22:57)</code> know remember<br />
+<code class="language-plaintext highlighter-rouge">(22:58)</code> the gaussian integrals and you can look<br />
+<code class="language-plaintext highlighter-rouge">(23:00)</code> at the bottom here<br />
+<code class="language-plaintext highlighter-rouge">(23:01)</code> these gaussian intervals are pretty easy<br />
+<code class="language-plaintext highlighter-rouge">(23:04)</code> to solve<br />
+<code class="language-plaintext highlighter-rouge">(23:05)</code> probably most of you have heard of that<br />
+<code class="language-plaintext highlighter-rouge">(23:08)</code> and we can also solve<br />
+<code class="language-plaintext highlighter-rouge">(23:10)</code> this gaussian integral here and what we<br />
+<code class="language-plaintext highlighter-rouge">(23:13)</code> get<br />
+<code class="language-plaintext highlighter-rouge">(23:13)</code> is that this is just e to the a over 2<br />
+<code class="language-plaintext highlighter-rouge">(23:18)</code> dt x to the squared<br />
+<code class="language-plaintext highlighter-rouge">(23:23)</code> yeah because we know yeah and here<br />
+<code class="language-plaintext highlighter-rouge">(23:27)</code> one thing you have to make uh you need<br />
+<code class="language-plaintext highlighter-rouge">(23:29)</code> to remember<br />
+<code class="language-plaintext highlighter-rouge">(23:30)</code> is that this here has eyes in it<br />
+<code class="language-plaintext highlighter-rouge">(23:33)</code> now if you look at this formula at the<br />
+<code class="language-plaintext highlighter-rouge">(23:35)</code> bottom you need to take into account<br />
+<code class="language-plaintext highlighter-rouge">(23:36)</code> that these are complex<br />
+<code class="language-plaintext highlighter-rouge">(23:38)</code> integrals so we can calculate<br />
+<code class="language-plaintext highlighter-rouge">(23:42)</code> this quantity here<br />
+<code class="language-plaintext highlighter-rouge">(23:45)</code> we can calculate this quant this<br />
+<code class="language-plaintext highlighter-rouge">(23:46)</code> quantity here because we know<br />
+<code class="language-plaintext highlighter-rouge">(23:49)</code> how psi looks like and that we integrate<br />
+<code class="language-plaintext highlighter-rouge">(23:52)</code> over the distribution of<br />
+<code class="language-plaintext highlighter-rouge">(23:53)</code> sine of the noise organization and we<br />
+<code class="language-plaintext highlighter-rouge">(23:56)</code> get<br />
+<code class="language-plaintext highlighter-rouge">(23:56)</code> the term that we have here yeah<br />
+<code class="language-plaintext highlighter-rouge">(23:59)</code> and now we already have arrived at the<br />
+<code class="language-plaintext highlighter-rouge">(24:02)</code> famous<br />
+<code class="language-plaintext highlighter-rouge">(24:03)</code> no at least famous for a very small<br />
+<code class="language-plaintext highlighter-rouge">(24:05)</code> number of people<br /></p>
+
+<h3 id="slide-5">slide 5</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(24:06)</code> and this is the so-called martin citra<br />
+<code class="language-plaintext highlighter-rouge">(24:09)</code> rose johnson they dominicus<br />
+<code class="language-plaintext highlighter-rouge">(24:12)</code> uh functional integral yeah that’s what<br />
+<code class="language-plaintext highlighter-rouge">(24:14)</code> you see here<br />
+<code class="language-plaintext highlighter-rouge">(24:16)</code> in the red box now we just now put<br />
+<code class="language-plaintext highlighter-rouge">(24:18)</code> everything together<br />
+<code class="language-plaintext highlighter-rouge">(24:19)</code> here we have our noise here we have<br />
+<code class="language-plaintext highlighter-rouge">(24:23)</code> uh what we had before and here<br />
+<code class="language-plaintext highlighter-rouge">(24:28)</code> is so to say that it’s a deterministic<br />
+<code class="language-plaintext highlighter-rouge">(24:30)</code> part that came from the larger equation<br />
+<code class="language-plaintext highlighter-rouge">(24:33)</code> yeah and uh so what this tells us now<br />
+<code class="language-plaintext highlighter-rouge">(24:37)</code> here<br />
+<code class="language-plaintext highlighter-rouge">(24:38)</code> and maybe it looks familiar to some of<br />
+<code class="language-plaintext highlighter-rouge">(24:40)</code> you yet quantum field theory<br />
+<code class="language-plaintext highlighter-rouge">(24:42)</code> this looks very familiar so what we do<br />
+<code class="language-plaintext highlighter-rouge">(24:45)</code> now is<br />
+<code class="language-plaintext highlighter-rouge">(24:46)</code> we want to calculate the average over<br />
+<code class="language-plaintext highlighter-rouge">(24:49)</code> some observable<br />
+<code class="language-plaintext highlighter-rouge">(24:52)</code> we integrate over all possible<br />
+<code class="language-plaintext highlighter-rouge">(24:56)</code> realizations and over all possible<br />
+<code class="language-plaintext highlighter-rouge">(24:58)</code> realizations of some weird quantity<br />
+<code class="language-plaintext highlighter-rouge">(25:00)</code> x tilde so we got a second field here<br />
+<code class="language-plaintext highlighter-rouge">(25:05)</code> and weight the contributions of<br />
+<code class="language-plaintext highlighter-rouge">(25:08)</code> different trajectories<br />
+<code class="language-plaintext highlighter-rouge">(25:11)</code> by this exponential factor here<br />
+<code class="language-plaintext highlighter-rouge">(25:14)</code> now and this exponential factor looks<br />
+<code class="language-plaintext highlighter-rouge">(25:16)</code> very much like what you know from<br />
+<code class="language-plaintext highlighter-rouge">(25:19)</code> other field theories like quantum field<br />
+<code class="language-plaintext highlighter-rouge">(25:21)</code> theory and this is why this is very<br />
+<code class="language-plaintext highlighter-rouge">(25:23)</code> often called<br />
+<code class="language-plaintext highlighter-rouge">(25:24)</code> an action<br />
+<code class="language-plaintext highlighter-rouge">(25:28)</code> now that’s the martin sutra rose or ms<br />
+<code class="language-plaintext highlighter-rouge">(25:31)</code> rjd functional<br />
+<code class="language-plaintext highlighter-rouge">(25:34)</code> integral that allows us to really write<br />
+<code class="language-plaintext highlighter-rouge">(25:37)</code> a field theory<br />
+<code class="language-plaintext highlighter-rouge">(25:39)</code> for stochastic processes<br />
+<code class="language-plaintext highlighter-rouge">(25:42)</code> now so here our axes are not fields yet<br />
+<code class="language-plaintext highlighter-rouge">(25:45)</code> now they’re trajectories they don’t have<br />
+<code class="language-plaintext highlighter-rouge">(25:47)</code> a space component now they don’t have<br />
+<code class="language-plaintext highlighter-rouge">(25:49)</code> spatial dimensions<br />
+<code class="language-plaintext highlighter-rouge">(25:51)</code> but as you can see later the structure<br />
+<code class="language-plaintext highlighter-rouge">(25:53)</code> of a real spatial<br />
+<code class="language-plaintext highlighter-rouge">(25:55)</code> the the integrals they will look very<br />
+<code class="language-plaintext highlighter-rouge">(25:58)</code> similar<br />
+<code class="language-plaintext highlighter-rouge">(26:00)</code> now we can also rewrite this a little<br />
+<code class="language-plaintext highlighter-rouge">(26:04)</code> bit here and look at specific<br />
+<code class="language-plaintext highlighter-rouge">(26:05)</code> trajectories and then we can look for<br />
+<code class="language-plaintext highlighter-rouge">(26:09)</code> example at a special case<br />
+<code class="language-plaintext highlighter-rouge">(26:11)</code> where it is observable is just<br />
+<code class="language-plaintext highlighter-rouge">(26:14)</code> the propagator here or this will<br />
+<code class="language-plaintext highlighter-rouge">(26:16)</code> propagate as the probability<br />
+<code class="language-plaintext highlighter-rouge">(26:18)</code> that we end up at some state x at a time<br />
+<code class="language-plaintext highlighter-rouge">(26:22)</code> t<br />
+<code class="language-plaintext highlighter-rouge">(26:23)</code> if we start it add some x naught<br />
+<code class="language-plaintext highlighter-rouge">(26:27)</code> at a time t naught you know and we<br />
+<code class="language-plaintext highlighter-rouge">(26:30)</code> obtain this<br />
+<code class="language-plaintext highlighter-rouge">(26:31)</code> not by just requiring that this<br />
+<code class="language-plaintext highlighter-rouge">(26:33)</code> observable is a delta function<br />
+<code class="language-plaintext highlighter-rouge">(26:36)</code> where uh we say that the x the specific<br />
+<code class="language-plaintext highlighter-rouge">(26:39)</code> time<br />
+<code class="language-plaintext highlighter-rouge">(26:40)</code> t at a time t needs to be equal<br />
+<code class="language-plaintext highlighter-rouge">(26:43)</code> to the x that we give to the probability<br />
+<code class="language-plaintext highlighter-rouge">(26:46)</code> distribution here<br />
+<code class="language-plaintext highlighter-rouge">(26:50)</code> and then we plug that in and<br />
+<code class="language-plaintext highlighter-rouge">(26:53)</code> what we now need to say is that we only<br />
+<code class="language-plaintext highlighter-rouge">(26:56)</code> integrate<br />
+<code class="language-plaintext highlighter-rouge">(26:57)</code> over trajectories that actually started<br />
+<code class="language-plaintext highlighter-rouge">(27:00)</code> it’s not an end<br />
+<code class="language-plaintext highlighter-rouge">(27:01)</code> and x at a given times now that’s that’s<br />
+<code class="language-plaintext highlighter-rouge">(27:04)</code> what we have to take to account for in<br />
+<code class="language-plaintext highlighter-rouge">(27:06)</code> the boundaries and the bounds of the<br />
+<code class="language-plaintext highlighter-rouge">(27:07)</code> integrals<br />
+<code class="language-plaintext highlighter-rouge">(27:08)</code> yeah and then we get this form here<br />
+<code class="language-plaintext highlighter-rouge">(27:13)</code> now that looks very similar and that’s a<br />
+<code class="language-plaintext highlighter-rouge">(27:16)</code> different representation if you remember<br />
+<code class="language-plaintext highlighter-rouge">(27:18)</code> last time we had the<br />
+<code class="language-plaintext highlighter-rouge">(27:19)</code> koi maguro of uh chap and komogorov<br />
+<code class="language-plaintext highlighter-rouge">(27:21)</code> equation<br />
+<code class="language-plaintext highlighter-rouge">(27:22)</code> it was an equation for the same quantity<br />
+<code class="language-plaintext highlighter-rouge">(27:25)</code> and the idea was a little bit similar<br />
+<code class="language-plaintext highlighter-rouge">(27:27)</code> in this technical mcgovern<br />
+<code class="language-plaintext highlighter-rouge">(27:30)</code> equation we had the same spirit<br />
+<code class="language-plaintext highlighter-rouge">(27:33)</code> and we looked at different sums of<br />
+<code class="language-plaintext highlighter-rouge">(27:35)</code> different paths<br />
+<code class="language-plaintext highlighter-rouge">(27:37)</code> um a process could take to go from x<br />
+<code class="language-plaintext highlighter-rouge">(27:40)</code> naught to x<br />
+<code class="language-plaintext highlighter-rouge">(27:41)</code> and here we do the same thing in a more<br />
+<code class="language-plaintext highlighter-rouge">(27:43)</code> fancy way<br />
+<code class="language-plaintext highlighter-rouge">(27:49)</code> just to reflect on this a little bit<br />
+<code class="language-plaintext highlighter-rouge">(27:51)</code> more<br />
+<code class="language-plaintext highlighter-rouge">(27:52)</code> so what happened now so we started<br />
+<code class="language-plaintext highlighter-rouge">(27:55)</code> here with<br />
+<code class="language-plaintext highlighter-rouge">(27:59)</code> a longer equation we discretized it<br />
+<code class="language-plaintext highlighter-rouge">(28:03)</code> and if you remember uh quantum fields<br />
+<code class="language-plaintext highlighter-rouge">(28:06)</code> theory that’s also the step that you do<br />
+<code class="language-plaintext highlighter-rouge">(28:08)</code> there<br />
+<code class="language-plaintext highlighter-rouge">(28:08)</code> you discretize time into small intervals<br />
+<code class="language-plaintext highlighter-rouge">(28:12)</code> as the first step if you derive<br />
+<code class="language-plaintext highlighter-rouge">(28:13)</code> a quantum fluid theory and then<br />
+<code class="language-plaintext highlighter-rouge">(28:17)</code> we wrote expectation values of some<br />
+<code class="language-plaintext highlighter-rouge">(28:19)</code> observables<br />
+<code class="language-plaintext highlighter-rouge">(28:20)</code> formally in a way that involved<br />
+<code class="language-plaintext highlighter-rouge">(28:23)</code> integrals of<br />
+<code class="language-plaintext highlighter-rouge">(28:23)</code> all possible trajectories and the<br />
+<code class="language-plaintext highlighter-rouge">(28:25)</code> resultant trajectories<br />
+<code class="language-plaintext highlighter-rouge">(28:27)</code> filtered four trajectories that solve<br />
+<code class="language-plaintext highlighter-rouge">(28:30)</code> the launch of a creation<br />
+<code class="language-plaintext highlighter-rouge">(28:32)</code> now that was to say self uh<br />
+<code class="language-plaintext highlighter-rouge">(28:35)</code> circular starting point and in the next<br />
+<code class="language-plaintext highlighter-rouge">(28:39)</code> uh step we then got this field<br />
+<code class="language-plaintext highlighter-rouge">(28:42)</code> side tilde now that we still don’t know<br />
+<code class="language-plaintext highlighter-rouge">(28:44)</code> what it is exactly about<br />
+<code class="language-plaintext highlighter-rouge">(28:46)</code> now we got that from the fourier<br />
+<code class="language-plaintext highlighter-rouge">(28:47)</code> transform of the delta function<br />
+<code class="language-plaintext highlighter-rouge">(28:52)</code> and now now we have two fields we<br />
+<code class="language-plaintext highlighter-rouge">(28:54)</code> integrate over two fields<br />
+<code class="language-plaintext highlighter-rouge">(28:56)</code> x and x x tilde and<br />
+<code class="language-plaintext highlighter-rouge">(28:59)</code> in the end we managed to integrate out<br />
+<code class="language-plaintext highlighter-rouge">(29:03)</code> the noise so what we have here<br />
+<code class="language-plaintext highlighter-rouge">(29:07)</code> now is something that does not depend on<br />
+<code class="language-plaintext highlighter-rouge">(29:09)</code> the sign anymore<br />
+<code class="language-plaintext highlighter-rouge">(29:11)</code> it’s a deterministic<br />
+<code class="language-plaintext highlighter-rouge">(29:14)</code> equation and deterministic integral so<br />
+<code class="language-plaintext highlighter-rouge">(29:17)</code> somehow<br />
+<code class="language-plaintext highlighter-rouge">(29:18)</code> our noise was observed observed absorbed<br />
+<code class="language-plaintext highlighter-rouge">(29:23)</code> into a new field a new fluctuating field<br />
+<code class="language-plaintext highlighter-rouge">(29:28)</code> x tilde yeah and that’s how<br />
+<code class="language-plaintext highlighter-rouge">(29:31)</code> it very often goes now that you<br />
+<code class="language-plaintext highlighter-rouge">(29:34)</code> make a field theory and what you gain is<br />
+<code class="language-plaintext highlighter-rouge">(29:37)</code> you get a nice nice integral but you<br />
+<code class="language-plaintext highlighter-rouge">(29:39)</code> have to pay for<br />
+<code class="language-plaintext highlighter-rouge">(29:40)</code> it by having additional fields conjugate<br />
+<code class="language-plaintext highlighter-rouge">(29:43)</code> fields<br />
+<code class="language-plaintext highlighter-rouge">(29:44)</code> that you have to integrate over and the<br />
+<code class="language-plaintext highlighter-rouge">(29:47)</code> same is true here<br />
+<code class="language-plaintext highlighter-rouge">(29:48)</code> and i’ll show you later what these x<br />
+<code class="language-plaintext highlighter-rouge">(29:50)</code> tilde actually mean before i do that let<br /></p>
+
+<h3 id="slide-6">slide 6</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(29:55)</code> me just mention so so now we have a few<br />
+<code class="language-plaintext highlighter-rouge">(29:56)</code> theory i have a path integral and these<br />
+<code class="language-plaintext highlighter-rouge">(29:59)</code> path integrals are very useful<br />
+<code class="language-plaintext highlighter-rouge">(30:01)</code> because we can make use of a lot of<br />
+<code class="language-plaintext highlighter-rouge">(30:03)</code> tools<br />
+<code class="language-plaintext highlighter-rouge">(30:04)</code> from other field fields from quantum<br />
+<code class="language-plaintext highlighter-rouge">(30:06)</code> field theory<br />
+<code class="language-plaintext highlighter-rouge">(30:08)</code> renormalization perturbation theory and<br />
+<code class="language-plaintext highlighter-rouge">(30:10)</code> so we can<br />
+<code class="language-plaintext highlighter-rouge">(30:11)</code> make use of these tools very powerful<br />
+<code class="language-plaintext highlighter-rouge">(30:14)</code> frameworks developed in the last 70<br />
+<code class="language-plaintext highlighter-rouge">(30:18)</code> years or so<br />
+<code class="language-plaintext highlighter-rouge">(30:20)</code> we can make use of these frameworks and<br />
+<code class="language-plaintext highlighter-rouge">(30:21)</code> apply them to these<br />
+<code class="language-plaintext highlighter-rouge">(30:23)</code> few theories for stochastic processes<br />
+<code class="language-plaintext highlighter-rouge">(30:27)</code> and one of the things that we can do is<br />
+<code class="language-plaintext highlighter-rouge">(30:29)</code> we can<br />
+<code class="language-plaintext highlighter-rouge">(30:30)</code> define a so-called generating functional<br />
+<code class="language-plaintext highlighter-rouge">(30:35)</code> that’s maybe something that you already<br />
+<code class="language-plaintext highlighter-rouge">(30:36)</code> know from other field theories<br />
+<code class="language-plaintext highlighter-rouge">(30:38)</code> so what you do is you add some auxiliary<br />
+<code class="language-plaintext highlighter-rouge">(30:42)</code> fields<br />
+<code class="language-plaintext highlighter-rouge">(30:43)</code> external fields h and h<br />
+<code class="language-plaintext highlighter-rouge">(30:46)</code> tilde and these fields cuddle<br />
+<code class="language-plaintext highlighter-rouge">(30:51)</code> to x and x tilde the accelerations<br />
+<code class="language-plaintext highlighter-rouge">(30:55)</code> respectively<br />
+<code class="language-plaintext highlighter-rouge">(30:57)</code> and what is this is then the generating<br />
+<code class="language-plaintext highlighter-rouge">(31:00)</code> function<br />
+<code class="language-plaintext highlighter-rouge">(31:01)</code> and of course we know that these fields<br />
+<code class="language-plaintext highlighter-rouge">(31:04)</code> don’t really exist<br />
+<code class="language-plaintext highlighter-rouge">(31:05)</code> now we just added them and the reason<br />
+<code class="language-plaintext highlighter-rouge">(31:08)</code> why we added them<br />
+<code class="language-plaintext highlighter-rouge">(31:10)</code> is that if we take derivatives<br />
+<code class="language-plaintext highlighter-rouge">(31:13)</code> with respect to these fields h or this<br />
+<code class="language-plaintext highlighter-rouge">(31:16)</code> external<br />
+<code class="language-plaintext highlighter-rouge">(31:17)</code> forces or external fields h here<br />
+<code class="language-plaintext highlighter-rouge">(31:21)</code> and here what will happen is that each<br />
+<code class="language-plaintext highlighter-rouge">(31:24)</code> time<br />
+<code class="language-plaintext highlighter-rouge">(31:25)</code> because this is an in exponential<br />
+<code class="language-plaintext highlighter-rouge">(31:28)</code> the x<br />
+<code class="language-plaintext highlighter-rouge">(31:31)</code> let or just draw that now the x<br />
+<code class="language-plaintext highlighter-rouge">(31:36)</code> or the x tilde<br />
+<code class="language-plaintext highlighter-rouge">(31:40)</code> will go down here<br />
+<code class="language-plaintext highlighter-rouge">(31:44)</code> yeah and if we do that if we take these<br />
+<code class="language-plaintext highlighter-rouge">(31:46)</code> derivatives<br />
+<code class="language-plaintext highlighter-rouge">(31:48)</code> you know so we can therefore get the<br />
+<code class="language-plaintext highlighter-rouge">(31:52)</code> expectation values of combinations of<br />
+<code class="language-plaintext highlighter-rouge">(31:56)</code> the x<br />
+<code class="language-plaintext highlighter-rouge">(31:56)</code> and x tildes just by differentiating<br />
+<code class="language-plaintext highlighter-rouge">(31:59)</code> this<br />
+<code class="language-plaintext highlighter-rouge">(32:01)</code> generating functional with respect to<br />
+<code class="language-plaintext highlighter-rouge">(32:04)</code> these<br />
+<code class="language-plaintext highlighter-rouge">(32:05)</code> weird virtual fields<br />
+<code class="language-plaintext highlighter-rouge">(32:08)</code> yeah and when we’ve done that we have to<br />
+<code class="language-plaintext highlighter-rouge">(32:12)</code> remove these fields again so we have to<br />
+<code class="language-plaintext highlighter-rouge">(32:14)</code> set them back to zero<br />
+<code class="language-plaintext highlighter-rouge">(32:15)</code> now for example if you want to have the<br />
+<code class="language-plaintext highlighter-rouge">(32:17)</code> correlation the autocorrelation function<br />
+<code class="language-plaintext highlighter-rouge">(32:19)</code> so how much<br />
+<code class="language-plaintext highlighter-rouge">(32:21)</code> is the process at a time t correlated to<br />
+<code class="language-plaintext highlighter-rouge">(32:24)</code> the state at a time t<br />
+<code class="language-plaintext highlighter-rouge">(32:25)</code> prime yeah then we<br />
+<code class="language-plaintext highlighter-rouge">(32:28)</code> differentiate and we<br />
+<code class="language-plaintext highlighter-rouge">(32:32)</code> take the derivative first with respect<br />
+<code class="language-plaintext highlighter-rouge">(32:34)</code> to<br />
+<code class="language-plaintext highlighter-rouge">(32:35)</code> with respect to h at a certain time t<br />
+<code class="language-plaintext highlighter-rouge">(32:39)</code> yeah and then we get one of these axes<br />
+<code class="language-plaintext highlighter-rouge">(32:42)</code> here and then we take the derivative<br />
+<code class="language-plaintext highlighter-rouge">(32:44)</code> with uh to h at<br />
+<code class="language-plaintext highlighter-rouge">(32:48)</code> a time a different time t prime and then<br />
+<code class="language-plaintext highlighter-rouge">(32:50)</code> we get the field again<br />
+<code class="language-plaintext highlighter-rouge">(32:52)</code> at a different time here<br />
+<code class="language-plaintext highlighter-rouge">(32:55)</code> yeah and these are of course functional<br />
+<code class="language-plaintext highlighter-rouge">(32:57)</code> derivatives now that was<br />
+<code class="language-plaintext highlighter-rouge">(32:59)</code> uh functional calculus if you haven’t<br />
+<code class="language-plaintext highlighter-rouge">(33:01)</code> done that<br />
+<code class="language-plaintext highlighter-rouge">(33:02)</code> it’s uh for these what you what you do<br />
+<code class="language-plaintext highlighter-rouge">(33:04)</code> is you<br />
+<code class="language-plaintext highlighter-rouge">(33:05)</code> look at the change of a functional<br />
+<code class="language-plaintext highlighter-rouge">(33:08)</code> now for example this here is a<br />
+<code class="language-plaintext highlighter-rouge">(33:10)</code> functional<br />
+<code class="language-plaintext highlighter-rouge">(33:12)</code> we look at the change of a functional<br />
+<code class="language-plaintext highlighter-rouge">(33:15)</code> with respect to small<br />
+<code class="language-plaintext highlighter-rouge">(33:16)</code> changes of its argument also you have a<br />
+<code class="language-plaintext highlighter-rouge">(33:20)</code> look at<br />
+<code class="language-plaintext highlighter-rouge">(33:20)</code> perturbations in age and h tilde<br />
+<code class="language-plaintext highlighter-rouge">(33:24)</code> around some value yeah and then you<br />
+<code class="language-plaintext highlighter-rouge">(33:28)</code> see how your function changes that’s<br />
+<code class="language-plaintext highlighter-rouge">(33:30)</code> called a functional derivative<br />
+<code class="language-plaintext highlighter-rouge">(33:32)</code> and if you do that you get very<br />
+<code class="language-plaintext highlighter-rouge">(33:34)</code> conveniently these pre-factors here<br />
+<code class="language-plaintext highlighter-rouge">(33:39)</code> right here in front of the action and if<br />
+<code class="language-plaintext highlighter-rouge">(33:42)</code> you look at<br />
+<code class="language-plaintext highlighter-rouge">(33:43)</code> the definition here this is just what<br />
+<code class="language-plaintext highlighter-rouge">(33:46)</code> gives us our observable<br />
+<code class="language-plaintext highlighter-rouge">(33:48)</code> as for example if our observable is x<br />
+<code class="language-plaintext highlighter-rouge">(33:52)</code> that we just take the derivative once<br />
+<code class="language-plaintext highlighter-rouge">(33:55)</code> we get an x here yeah<br />
+<code class="language-plaintext highlighter-rouge">(33:58)</code> and if we have the x here we have the<br />
+<code class="language-plaintext highlighter-rouge">(34:01)</code> first moment so the mean<br />
+<code class="language-plaintext highlighter-rouge">(34:03)</code> of x the average of x if we take the<br />
+<code class="language-plaintext highlighter-rouge">(34:06)</code> derivative twice<br />
+<code class="language-plaintext highlighter-rouge">(34:07)</code> at different times then we get a<br />
+<code class="language-plaintext highlighter-rouge">(34:09)</code> correlation here on the left-hand side<br />
+<code class="language-plaintext highlighter-rouge">(34:13)</code> so this is a very convenient tool and as<br />
+<code class="language-plaintext highlighter-rouge">(34:15)</code> i said<br />
+<code class="language-plaintext highlighter-rouge">(34:16)</code> if you want to have a correlation<br />
+<code class="language-plaintext highlighter-rouge">(34:18)</code> function for example we take the<br />
+<code class="language-plaintext highlighter-rouge">(34:19)</code> derivative<br />
+<code class="language-plaintext highlighter-rouge">(34:20)</code> twice and you must always remember to<br />
+<code class="language-plaintext highlighter-rouge">(34:23)</code> set<br />
+<code class="language-plaintext highlighter-rouge">(34:23)</code> these fields to zero again it’s actually<br />
+<code class="language-plaintext highlighter-rouge">(34:26)</code> the same approach as you do in the<br />
+<code class="language-plaintext highlighter-rouge">(34:28)</code> quantity<br />
+<code class="language-plaintext highlighter-rouge">(34:29)</code> and classical field theory the<br />
+<code class="language-plaintext highlighter-rouge">(34:31)</code> equilibrium equilibrium field t<br />
+<code class="language-plaintext highlighter-rouge">(34:37)</code> okay so now what is this x<br />
+<code class="language-plaintext highlighter-rouge">(34:40)</code> of t that’s just a remark so i’m not<br />
+<code class="language-plaintext highlighter-rouge">(34:42)</code> doing the calculations like<br /></p>
+
+<h3 id="slide-7">slide 7</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(34:44)</code> what is this x tilde of t that we get<br />
+<code class="language-plaintext highlighter-rouge">(34:48)</code> got in this process<br />
+<code class="language-plaintext highlighter-rouge">(34:52)</code> there are different uh<br />
+<code class="language-plaintext highlighter-rouge">(34:55)</code> c theories for stochastic processes and<br />
+<code class="language-plaintext highlighter-rouge">(34:57)</code> for master equations<br />
+<code class="language-plaintext highlighter-rouge">(34:58)</code> and you always get some kind of<br />
+<code class="language-plaintext highlighter-rouge">(35:01)</code> auxiliary<br />
+<code class="language-plaintext highlighter-rouge">(35:02)</code> field some some conjugate field that you<br />
+<code class="language-plaintext highlighter-rouge">(35:05)</code> have to pay for<br />
+<code class="language-plaintext highlighter-rouge">(35:07)</code> and uh this x tilde from here from here<br />
+<code class="language-plaintext highlighter-rouge">(35:10)</code> you can<br />
+<code class="language-plaintext highlighter-rouge">(35:12)</code> get an intuition about that i’m not<br />
+<code class="language-plaintext highlighter-rouge">(35:14)</code> super rigorous but you can get<br />
+<code class="language-plaintext highlighter-rouge">(35:16)</code> your intuition about this if you write<br />
+<code class="language-plaintext highlighter-rouge">(35:18)</code> down the master equation<br />
+<code class="language-plaintext highlighter-rouge">(35:20)</code> sorry the larger equation with respect<br />
+<code class="language-plaintext highlighter-rouge">(35:24)</code> and add some external source<br />
+<code class="language-plaintext highlighter-rouge">(35:27)</code> capital h of t<br />
+<code class="language-plaintext highlighter-rouge">(35:32)</code> you know and if you add this external<br />
+<code class="language-plaintext highlighter-rouge">(35:34)</code> force capital h<br />
+<code class="language-plaintext highlighter-rouge">(35:36)</code> of t now some temporally fluctuating<br />
+<code class="language-plaintext highlighter-rouge">(35:39)</code> force<br />
+<code class="language-plaintext highlighter-rouge">(35:40)</code> that doesn’t depend on x itself<br />
+<code class="language-plaintext highlighter-rouge">(35:43)</code> and you plug that in into this martin<br />
+<code class="language-plaintext highlighter-rouge">(35:46)</code> sergio rose<br />
+<code class="language-plaintext highlighter-rouge">(35:47)</code> functional integral or martin citra ruse<br />
+<code class="language-plaintext highlighter-rouge">(35:50)</code> johnson did you limit it to minikit<br />
+<code class="language-plaintext highlighter-rouge">(35:54)</code> then you see a formal analogy that if<br />
+<code class="language-plaintext highlighter-rouge">(35:57)</code> you<br />
+<code class="language-plaintext highlighter-rouge">(35:57)</code> that this you get a term that looks like<br />
+<code class="language-plaintext highlighter-rouge">(36:00)</code> h tilde<br />
+<code class="language-plaintext highlighter-rouge">(36:04)</code> if you define this to be minus i this<br />
+<code class="language-plaintext highlighter-rouge">(36:07)</code> external field<br />
+<code class="language-plaintext highlighter-rouge">(36:09)</code> yeah and now we can see what happens<br />
+<code class="language-plaintext highlighter-rouge">(36:14)</code> to x what is the effect of this external<br />
+<code class="language-plaintext highlighter-rouge">(36:17)</code> field<br />
+<code class="language-plaintext highlighter-rouge">(36:19)</code> h of t on x so there’s a little bit in<br />
+<code class="language-plaintext highlighter-rouge">(36:22)</code> an<br />
+<code class="language-plaintext highlighter-rouge">(36:23)</code> analogy already here now so here on the<br />
+<code class="language-plaintext highlighter-rouge">(36:25)</code> left hand side it has something to do<br />
+<code class="language-plaintext highlighter-rouge">(36:27)</code> with this uh external field from the<br />
+<code class="language-plaintext highlighter-rouge">(36:31)</code> generating functional that couples to x<br />
+<code class="language-plaintext highlighter-rouge">(36:33)</code> tilde<br />
+<code class="language-plaintext highlighter-rouge">(36:34)</code> now let’s see what this does to x to the<br />
+<code class="language-plaintext highlighter-rouge">(36:37)</code> actual stochastic process<br />
+<code class="language-plaintext highlighter-rouge">(36:39)</code> now to this end we calculate a response<br />
+<code class="language-plaintext highlighter-rouge">(36:43)</code> function<br />
+<code class="language-plaintext highlighter-rouge">(36:43)</code> and this response function is just the<br />
+<code class="language-plaintext highlighter-rouge">(36:47)</code> change<br />
+<code class="language-plaintext highlighter-rouge">(36:48)</code> in the average of f x with respect<br />
+<code class="language-plaintext highlighter-rouge">(36:52)</code> to changes in this external field<br />
+<code class="language-plaintext highlighter-rouge">(36:55)</code> that’s called the response so how does<br />
+<code class="language-plaintext highlighter-rouge">(36:56)</code> the system respond<br />
+<code class="language-plaintext highlighter-rouge">(36:58)</code> to changes in this external field<br />
+<code class="language-plaintext highlighter-rouge">(37:01)</code> yeah and so as you remember the average<br />
+<code class="language-plaintext highlighter-rouge">(37:05)</code> here we just get by<br />
+<code class="language-plaintext highlighter-rouge">(37:08)</code> integrating uh by by taking this for<br />
+<code class="language-plaintext highlighter-rouge">(37:12)</code> this this generating functional<br />
+<code class="language-plaintext highlighter-rouge">(37:15)</code> and taking the derivative with respect<br />
+<code class="language-plaintext highlighter-rouge">(37:17)</code> to h<br />
+<code class="language-plaintext highlighter-rouge">(37:18)</code> once so that’s the first moment<br />
+<code class="language-plaintext highlighter-rouge">(37:22)</code> and because of this equality here<br />
+<code class="language-plaintext highlighter-rouge">(37:27)</code> now we see that this year<br />
+<code class="language-plaintext highlighter-rouge">(37:30)</code> this response function is we also get<br />
+<code class="language-plaintext highlighter-rouge">(37:33)</code> that<br />
+<code class="language-plaintext highlighter-rouge">(37:33)</code> if we take the derivative with respect<br />
+<code class="language-plaintext highlighter-rouge">(37:36)</code> to h<br />
+<code class="language-plaintext highlighter-rouge">(37:37)</code> and then h tilde at a certain time<br />
+<code class="language-plaintext highlighter-rouge">(37:41)</code> t let me see let me just say<br />
+<code class="language-plaintext highlighter-rouge">(37:45)</code> here that’s the tilde<br />
+<code class="language-plaintext highlighter-rouge">(37:51)</code> yeah and this here what this is<br />
+<code class="language-plaintext highlighter-rouge">(37:59)</code> as on the last slide is the correlation<br />
+<code class="language-plaintext highlighter-rouge">(38:02)</code> between<br />
+<code class="language-plaintext highlighter-rouge">(38:02)</code> x of t and x tilde of t<br />
+<code class="language-plaintext highlighter-rouge">(38:06)</code> now somehow the response of the system<br />
+<code class="language-plaintext highlighter-rouge">(38:10)</code> with respect to an external force<br />
+<code class="language-plaintext highlighter-rouge">(38:13)</code> or an infinitely miserable external<br />
+<code class="language-plaintext highlighter-rouge">(38:16)</code> force<br />
+<code class="language-plaintext highlighter-rouge">(38:17)</code> is given by how the x total<br />
+<code class="language-plaintext highlighter-rouge">(38:21)</code> couples to x<br />
+<code class="language-plaintext highlighter-rouge">(38:24)</code> so it describes the activity or is<br />
+<code class="language-plaintext highlighter-rouge">(38:27)</code> related<br />
+<code class="language-plaintext highlighter-rouge">(38:28)</code> to an infinitesimal response<br />
+<code class="language-plaintext highlighter-rouge">(38:32)</code> of x of the field x with respect<br />
+<code class="language-plaintext highlighter-rouge">(38:35)</code> to a small perturbation and that’s why<br />
+<code class="language-plaintext highlighter-rouge">(38:39)</code> this field x tilde is also called the<br />
+<code class="language-plaintext highlighter-rouge">(38:41)</code> response field<br />
+<code class="language-plaintext highlighter-rouge">(38:44)</code> now there’s just a little bit of<br />
+<code class="language-plaintext highlighter-rouge">(38:46)</code> intuition and very often this these<br />
+<code class="language-plaintext highlighter-rouge">(38:48)</code> conjugate variables somehow in some way<br />
+<code class="language-plaintext highlighter-rouge">(38:51)</code> encode the noise<br />
+<code class="language-plaintext highlighter-rouge">(38:56)</code> now i have an example uh let me just<br />
+<code class="language-plaintext highlighter-rouge">(38:59)</code> check the time whether we do it now or<br />
+<code class="language-plaintext highlighter-rouge">(39:01)</code> at the end of the lecture<br />
+<code class="language-plaintext highlighter-rouge">(39:05)</code> let’s do it at the end of the lecture<br />
+<code class="language-plaintext highlighter-rouge">(39:06)</code> again not this example for those of you<br />
+<code class="language-plaintext highlighter-rouge">(39:09)</code> or who<br />
+<code class="language-plaintext highlighter-rouge">(39:10)</code> heard a few theory course last year uh<br />
+<code class="language-plaintext highlighter-rouge">(39:13)</code> there were no<br />
+<code class="language-plaintext highlighter-rouge">(39:14)</code> examples so i’ll leave that to the to<br />
+<code class="language-plaintext highlighter-rouge">(39:16)</code> the end of the lecture that<br />
+<code class="language-plaintext highlighter-rouge">(39:17)</code> people can dial out uh if they’re tired<br /></p>
+
+<h3 id="slide-9">slide 9</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(39:24)</code> now i want to just give you a second<br />
+<code class="language-plaintext highlighter-rouge">(39:26)</code> remark<br />
+<code class="language-plaintext highlighter-rouge">(39:28)</code> so we are now in the framework of<br />
+<code class="language-plaintext highlighter-rouge">(39:29)</code> physicians<br />
+<code class="language-plaintext highlighter-rouge">(39:31)</code> and in field theory now if you remember<br />
+<code class="language-plaintext highlighter-rouge">(39:34)</code> we can have different formulations of<br />
+<code class="language-plaintext highlighter-rouge">(39:36)</code> field theories otherwise the lagrangian<br />
+<code class="language-plaintext highlighter-rouge">(39:39)</code> field theory and the hamiltonian field<br />
+<code class="language-plaintext highlighter-rouge">(39:42)</code> and we can translate these two into each<br />
+<code class="language-plaintext highlighter-rouge">(39:45)</code> other<br />
+<code class="language-plaintext highlighter-rouge">(39:45)</code> and we can do the same things here for<br />
+<code class="language-plaintext highlighter-rouge">(39:49)</code> the non-equilibrium for the stochastic<br />
+<code class="language-plaintext highlighter-rouge">(39:51)</code> process<br />
+<code class="language-plaintext highlighter-rouge">(39:53)</code> yeah and it’s also just a remark no it’s<br />
+<code class="language-plaintext highlighter-rouge">(39:56)</code> not<br />
+<code class="language-plaintext highlighter-rouge">(39:57)</code> so important for the rest of the lecture<br />
+<code class="language-plaintext highlighter-rouge">(40:00)</code> but you can formally define<br />
+<code class="language-plaintext highlighter-rouge">(40:03)</code> new variables q and<br />
+<code class="language-plaintext highlighter-rouge">(40:07)</code> p by these relations here<br />
+<code class="language-plaintext highlighter-rouge">(40:10)</code> and then this probability will take the<br />
+<code class="language-plaintext highlighter-rouge">(40:14)</code> form<br />
+<code class="language-plaintext highlighter-rouge">(40:14)</code> that i wrote down here now so this<br />
+<code class="language-plaintext highlighter-rouge">(40:18)</code> has formally the form of a hamiltonian<br />
+<code class="language-plaintext highlighter-rouge">(40:22)</code> action oh or having a hamiltonian theory<br />
+<code class="language-plaintext highlighter-rouge">(40:25)</code> so we have<br />
+<code class="language-plaintext highlighter-rouge">(40:26)</code> p times q dot minus<br />
+<code class="language-plaintext highlighter-rouge">(40:29)</code> some hamiltonian and this hamiltonian<br />
+<code class="language-plaintext highlighter-rouge">(40:32)</code> is given by this term here this looks a<br />
+<code class="language-plaintext highlighter-rouge">(40:35)</code> little bit like a kinetic energy so it’s<br />
+<code class="language-plaintext highlighter-rouge">(40:38)</code> just<br />
+<code class="language-plaintext highlighter-rouge">(40:38)</code> just just saying that we can write by<br />
+<code class="language-plaintext highlighter-rouge">(40:41)</code> variable transformation we can write<br />
+<code class="language-plaintext highlighter-rouge">(40:42)</code> these<br />
+<code class="language-plaintext highlighter-rouge">(40:43)</code> field theories uh then quite analogously<br />
+<code class="language-plaintext highlighter-rouge">(40:47)</code> to feed theories that we already know<br />
+<code class="language-plaintext highlighter-rouge">(40:51)</code> and we can even go one step further<br />
+<code class="language-plaintext highlighter-rouge">(40:55)</code> now we can take this here and integrate<br />
+<code class="language-plaintext highlighter-rouge">(40:58)</code> out the piece<br />
+<code class="language-plaintext highlighter-rouge">(40:59)</code> now because it’s just gradually<br />
+<code class="language-plaintext highlighter-rouge">(41:01)</code> quadratic in p<br />
+<code class="language-plaintext highlighter-rouge">(41:03)</code> so these are just essentially gaussian<br />
+<code class="language-plaintext highlighter-rouge">(41:05)</code> integrals that you can integrate over<br />
+<code class="language-plaintext highlighter-rouge">(41:06)</code> them<br />
+<code class="language-plaintext highlighter-rouge">(41:07)</code> and just to tell you the results that we<br />
+<code class="language-plaintext highlighter-rouge">(41:09)</code> then get<br />
+<code class="language-plaintext highlighter-rouge">(41:10)</code> a field theory that looks like a<br />
+<code class="language-plaintext highlighter-rouge">(41:13)</code> lagrangian field theory<br />
+<code class="language-plaintext highlighter-rouge">(41:16)</code> now we have a lagrangian that depends on<br />
+<code class="language-plaintext highlighter-rouge">(41:17)</code> q and the<br />
+<code class="language-plaintext highlighter-rouge">(41:19)</code> derivative of q with respect to time<br />
+<code class="language-plaintext highlighter-rouge">(41:22)</code> and if you then look at the analogy<br />
+<code class="language-plaintext highlighter-rouge">(41:26)</code> at this hammer at this land range here<br />
+<code class="language-plaintext highlighter-rouge">(41:28)</code> then<br />
+<code class="language-plaintext highlighter-rouge">(41:29)</code> this looks like it describes some kind<br />
+<code class="language-plaintext highlighter-rouge">(41:31)</code> of particle<br />
+<code class="language-plaintext highlighter-rouge">(41:32)</code> with that has some mass one over a uh<br />
+<code class="language-plaintext highlighter-rouge">(41:35)</code> that lays<br />
+<code class="language-plaintext highlighter-rouge">(41:36)</code> like in a potential that happens that’s<br />
+<code class="language-plaintext highlighter-rouge">(41:38)</code> coupled to some<br />
+<code class="language-plaintext highlighter-rouge">(41:39)</code> q dot here and uh we have now here<br />
+<code class="language-plaintext highlighter-rouge">(41:43)</code> the quadratic potential of laughter now<br />
+<code class="language-plaintext highlighter-rouge">(41:46)</code> so now these analogies they’re not very<br />
+<code class="language-plaintext highlighter-rouge">(41:48)</code> helpful yeah they don’t tell you<br />
+<code class="language-plaintext highlighter-rouge">(41:49)</code> anything<br />
+<code class="language-plaintext highlighter-rouge">(41:50)</code> uh these hamiltonians that you get here<br />
+<code class="language-plaintext highlighter-rouge">(41:53)</code> uh<br />
+<code class="language-plaintext highlighter-rouge">(41:53)</code> they’re not comparable to hamiltonians<br />
+<code class="language-plaintext highlighter-rouge">(41:55)</code> that you get important systems<br />
+<code class="language-plaintext highlighter-rouge">(41:57)</code> for example these hamiltonians they’re<br />
+<code class="language-plaintext highlighter-rouge">(42:01)</code> not emission quantities<br />
+<code class="language-plaintext highlighter-rouge">(42:05)</code> for quantum physicists<br />
+<code class="language-plaintext highlighter-rouge">(42:10)</code> and just to say that they’re different<br />
+<code class="language-plaintext highlighter-rouge">(42:11)</code> ways of formulating these<br />
+<code class="language-plaintext highlighter-rouge">(42:13)</code> theories that you get by variable<br />
+<code class="language-plaintext highlighter-rouge">(42:16)</code> transformations<br />
+<code class="language-plaintext highlighter-rouge">(42:17)</code> uh this second equation here has a name<br />
+<code class="language-plaintext highlighter-rouge">(42:19)</code> that’s the own sagar<br />
+<code class="language-plaintext highlighter-rouge">(42:21)</code> mac look functional you know and like<br />
+<code class="language-plaintext highlighter-rouge">(42:24)</code> you will<br />
+<code class="language-plaintext highlighter-rouge">(42:25)</code> pop up these these these kind of<br />
+<code class="language-plaintext highlighter-rouge">(42:27)</code> functional<br />
+<code class="language-plaintext highlighter-rouge">(42:28)</code> um pop up in papers if you read papers<br />
+<code class="language-plaintext highlighter-rouge">(42:31)</code> that<br />
+<code class="language-plaintext highlighter-rouge">(42:32)</code> they they pop up in different ways but<br />
+<code class="language-plaintext highlighter-rouge">(42:34)</code> in the end<br />
+<code class="language-plaintext highlighter-rouge">(42:35)</code> the same uh um<br />
+<code class="language-plaintext highlighter-rouge">(42:40)</code> implementations as a few implementations<br />
+<code class="language-plaintext highlighter-rouge">(42:43)</code> of the same<br />
+<code class="language-plaintext highlighter-rouge">(42:44)</code> stochastic differential equation but<br />
+<code class="language-plaintext highlighter-rouge">(42:46)</code> just reformulations of the same thing<br /></p>
+
+<h3 id="slide-10">slide 10</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(42:52)</code> okay now<br />
+<code class="language-plaintext highlighter-rouge">(42:55)</code> i told you in the beginning of the<br />
+<code class="language-plaintext highlighter-rouge">(42:57)</code> lecture that um<br />
+<code class="language-plaintext highlighter-rouge">(43:01)</code> i actually what most of the cases<br />
+<code class="language-plaintext highlighter-rouge">(43:03)</code> interested in<br />
+<code class="language-plaintext highlighter-rouge">(43:04)</code> now and what field theories are also<br />
+<code class="language-plaintext highlighter-rouge">(43:07)</code> good for<br />
+<code class="language-plaintext highlighter-rouge">(43:08)</code> are spatially extended systems<br />
+<code class="language-plaintext highlighter-rouge">(43:13)</code> now how do you write down a larger<br />
+<code class="language-plaintext highlighter-rouge">(43:16)</code> equation or a spatially extended system<br />
+<code class="language-plaintext highlighter-rouge">(43:19)</code> now it gets of course a little bit more<br />
+<code class="language-plaintext highlighter-rouge">(43:20)</code> complicated but there’s actually a<br />
+<code class="language-plaintext highlighter-rouge">(43:22)</code> classification<br />
+<code class="language-plaintext highlighter-rouge">(43:23)</code> theme for a long general equation that<br />
+<code class="language-plaintext highlighter-rouge">(43:27)</code> describes systems<br />
+<code class="language-plaintext highlighter-rouge">(43:28)</code> that have spatial degrees of freedom<br />
+<code class="language-plaintext highlighter-rouge">(43:32)</code> and this classification scheme you can<br />
+<code class="language-plaintext highlighter-rouge">(43:34)</code> see on the slide<br />
+<code class="language-plaintext highlighter-rouge">(43:36)</code> and so we’re looking here at some time<br />
+<code class="language-plaintext highlighter-rouge">(43:40)</code> evolution of some field phi<br />
+<code class="language-plaintext highlighter-rouge">(43:43)</code> at a position x at a time t<br />
+<code class="language-plaintext highlighter-rouge">(43:47)</code> and this time evolution is given by<br />
+<code class="language-plaintext highlighter-rouge">(43:49)</code> different components<br />
+<code class="language-plaintext highlighter-rouge">(43:51)</code> yeah that’s r on the right hand sides on<br />
+<code class="language-plaintext highlighter-rouge">(43:54)</code> the very right we have the noise<br />
+<code class="language-plaintext highlighter-rouge">(43:56)</code> as always yeah and this noise<br />
+<code class="language-plaintext highlighter-rouge">(44:01)</code> now has the usual properties the average<br />
+<code class="language-plaintext highlighter-rouge">(44:04)</code> of the noise is zero<br />
+<code class="language-plaintext highlighter-rouge">(44:06)</code> and it also has correlations so how is<br />
+<code class="language-plaintext highlighter-rouge">(44:09)</code> a fluctuation a fluctuating force of<br />
+<code class="language-plaintext highlighter-rouge">(44:12)</code> that xi represents how is that<br />
+<code class="language-plaintext highlighter-rouge">(44:15)</code> correlated between different time points<br />
+<code class="language-plaintext highlighter-rouge">(44:18)</code> and how they correlated between<br />
+<code class="language-plaintext highlighter-rouge">(44:20)</code> different positions<br />
+<code class="language-plaintext highlighter-rouge">(44:21)</code> in space so while the assumption that<br />
+<code class="language-plaintext highlighter-rouge">(44:24)</code> different<br />
+<code class="language-plaintext highlighter-rouge">(44:25)</code> correlations that this noise is<br />
+<code class="language-plaintext highlighter-rouge">(44:28)</code> uncorrelated in time so that<br />
+<code class="language-plaintext highlighter-rouge">(44:30)</code> you don’t have memory is something that<br />
+<code class="language-plaintext highlighter-rouge">(44:32)</code> is<br />
+<code class="language-plaintext highlighter-rouge">(44:33)</code> very reasonable and that we that we<br />
+<code class="language-plaintext highlighter-rouge">(44:35)</code> typically make<br />
+<code class="language-plaintext highlighter-rouge">(44:37)</code> it’s not so clear that the noise is also<br />
+<code class="language-plaintext highlighter-rouge">(44:40)</code> independent at each position in space<br />
+<code class="language-plaintext highlighter-rouge">(44:44)</code> you know so generally there will be some<br />
+<code class="language-plaintext highlighter-rouge">(44:47)</code> some<br />
+<code class="language-plaintext highlighter-rouge">(44:48)</code> length you perturb the system and then<br />
+<code class="language-plaintext highlighter-rouge">(44:49)</code> you don’t perturb a single atom<br />
+<code class="language-plaintext highlighter-rouge">(44:51)</code> yeah but you deter like a small region<br />
+<code class="language-plaintext highlighter-rouge">(44:54)</code> for example<br />
+<code class="language-plaintext highlighter-rouge">(44:55)</code> and then these fluctuating forces are<br />
+<code class="language-plaintext highlighter-rouge">(44:58)</code> correlated<br />
+<code class="language-plaintext highlighter-rouge">(45:00)</code> over small regions and these<br />
+<code class="language-plaintext highlighter-rouge">(45:02)</code> correlations in the spatial<br />
+<code class="language-plaintext highlighter-rouge">(45:06)</code> uh in these spatial systems and the<br />
+<code class="language-plaintext highlighter-rouge">(45:09)</code> fluctuating force that act on these<br />
+<code class="language-plaintext highlighter-rouge">(45:11)</code> systems<br />
+<code class="language-plaintext highlighter-rouge">(45:13)</code> are given by so-called spatial<br />
+<code class="language-plaintext highlighter-rouge">(45:15)</code> correlation<br />
+<code class="language-plaintext highlighter-rouge">(45:16)</code> now that just says how are these<br />
+<code class="language-plaintext highlighter-rouge">(45:19)</code> fluctuating forces<br />
+<code class="language-plaintext highlighter-rouge">(45:21)</code> how are they correlated between two<br />
+<code class="language-plaintext highlighter-rouge">(45:24)</code> given positions<br />
+<code class="language-plaintext highlighter-rouge">(45:25)</code> in space yeah and<br />
+<code class="language-plaintext highlighter-rouge">(45:28)</code> now we have the rest here<br />
+<code class="language-plaintext highlighter-rouge">(45:32)</code> the black parts here<br />
+<code class="language-plaintext highlighter-rouge">(45:35)</code> yeah it’s just a fancy way of writing<br />
+<code class="language-plaintext highlighter-rouge">(45:38)</code> down<br />
+<code class="language-plaintext highlighter-rouge">(45:39)</code> the deterministic part of what’s<br />
+<code class="language-plaintext highlighter-rouge">(45:42)</code> actually happening<br />
+<code class="language-plaintext highlighter-rouge">(45:44)</code> yeah and it’s just a fancy way of<br />
+<code class="language-plaintext highlighter-rouge">(45:47)</code> writing down uh the actual<br />
+<code class="language-plaintext highlighter-rouge">(45:50)</code> uh for example chemical reactions<br />
+<code class="language-plaintext highlighter-rouge">(45:53)</code> that change the value of the field at a<br />
+<code class="language-plaintext highlighter-rouge">(45:56)</code> given position<br />
+<code class="language-plaintext highlighter-rouge">(45:58)</code> yeah and we can formally write down this<br />
+<code class="language-plaintext highlighter-rouge">(46:01)</code> uh this term by saying okay so we have<br />
+<code class="language-plaintext highlighter-rouge">(46:04)</code> some kind of potential<br />
+<code class="language-plaintext highlighter-rouge">(46:06)</code> and the dynamics will go so to some<br />
+<code class="language-plaintext highlighter-rouge">(46:09)</code> minimum<br />
+<code class="language-plaintext highlighter-rouge">(46:10)</code> of this potential not just some some<br />
+<code class="language-plaintext highlighter-rouge">(46:13)</code> equilibrium state<br />
+<code class="language-plaintext highlighter-rouge">(46:15)</code> yeah and then uh we can formally write<br />
+<code class="language-plaintext highlighter-rouge">(46:18)</code> this<br />
+<code class="language-plaintext highlighter-rouge">(46:18)</code> this way here that we have some<br />
+<code class="language-plaintext highlighter-rouge">(46:21)</code> functions and free energy functional<br />
+<code class="language-plaintext highlighter-rouge">(46:23)</code> f that depends on the fields and this is<br />
+<code class="language-plaintext highlighter-rouge">(46:26)</code> given by some input<br />
+<code class="language-plaintext highlighter-rouge">(46:28)</code> space integral uh where we have this<br />
+<code class="language-plaintext highlighter-rouge">(46:31)</code> term here that will flatten<br />
+<code class="language-plaintext highlighter-rouge">(46:33)</code> the field that something like can become<br />
+<code class="language-plaintext highlighter-rouge">(46:36)</code> a diffusion term<br />
+<code class="language-plaintext highlighter-rouge">(46:37)</code> and on the right hand side we have<br />
+<code class="language-plaintext highlighter-rouge">(46:40)</code> something<br />
+<code class="language-plaintext highlighter-rouge">(46:41)</code> that is a potential that describes<br />
+<code class="language-plaintext highlighter-rouge">(46:43)</code> what’s actually which where we’re going<br />
+<code class="language-plaintext highlighter-rouge">(46:44)</code> to with the field<br />
+<code class="language-plaintext highlighter-rouge">(46:46)</code> now if you have to have heard<br />
+<code class="language-plaintext highlighter-rouge">(46:48)</code> statistical physics<br />
+<code class="language-plaintext highlighter-rouge">(46:50)</code> yeah then uh these will look familiar to<br />
+<code class="language-plaintext highlighter-rouge">(46:53)</code> them<br />
+<code class="language-plaintext highlighter-rouge">(46:53)</code> to you like fight to the force theory<br />
+<code class="language-plaintext highlighter-rouge">(46:55)</code> ginsburg londo and so on<br />
+<code class="language-plaintext highlighter-rouge">(46:58)</code> now there’s this red stuff here yeah and<br />
+<code class="language-plaintext highlighter-rouge">(47:01)</code> this red stuff is just a way<br />
+<code class="language-plaintext highlighter-rouge">(47:03)</code> of classifying different kinds of<br />
+<code class="language-plaintext highlighter-rouge">(47:06)</code> systems<br />
+<code class="language-plaintext highlighter-rouge">(47:07)</code> and people distinguish between system<br />
+<code class="language-plaintext highlighter-rouge">(47:10)</code> where the order parameter so our phi<br />
+<code class="language-plaintext highlighter-rouge">(47:13)</code> is not conserved for example in chemical<br />
+<code class="language-plaintext highlighter-rouge">(47:16)</code> systems where you can<br />
+<code class="language-plaintext highlighter-rouge">(47:17)</code> convert one chemical species to another<br />
+<code class="language-plaintext highlighter-rouge">(47:20)</code> chemical species<br />
+<code class="language-plaintext highlighter-rouge">(47:21)</code> yeah and then another chemical species<br />
+<code class="language-plaintext highlighter-rouge">(47:23)</code> and so on then the con<br />
+<code class="language-plaintext highlighter-rouge">(47:25)</code> concentration of one chemical species is<br />
+<code class="language-plaintext highlighter-rouge">(47:28)</code> not<br />
+<code class="language-plaintext highlighter-rouge">(47:28)</code> conserved in the entire system<br />
+<code class="language-plaintext highlighter-rouge">(47:32)</code> yeah and this is what you get if you set<br />
+<code class="language-plaintext highlighter-rouge">(47:34)</code> this exponent to zero<br />
+<code class="language-plaintext highlighter-rouge">(47:36)</code> that means you don’t have this laplacian<br />
+<code class="language-plaintext highlighter-rouge">(47:38)</code> the second derivative here<br />
+<code class="language-plaintext highlighter-rouge">(47:42)</code> the other case is when you have<br />
+<code class="language-plaintext highlighter-rouge">(47:45)</code> set this to one here set this n to one<br />
+<code class="language-plaintext highlighter-rouge">(47:49)</code> then this will here be part of<br />
+<code class="language-plaintext highlighter-rouge">(47:52)</code> something like a diffusion term yeah<br />
+<code class="language-plaintext highlighter-rouge">(47:55)</code> this will go into a diffusion term<br />
+<code class="language-plaintext highlighter-rouge">(47:57)</code> and what you uh will then get is uh what<br />
+<code class="language-plaintext highlighter-rouge">(48:00)</code> is<br />
+<code class="language-plaintext highlighter-rouge">(48:00)</code> what what these kind of systems that<br />
+<code class="language-plaintext highlighter-rouge">(48:02)</code> describe are<br />
+<code class="language-plaintext highlighter-rouge">(48:04)</code> situations where the field supply is<br />
+<code class="language-plaintext highlighter-rouge">(48:06)</code> conserved<br />
+<code class="language-plaintext highlighter-rouge">(48:07)</code> now so you remove stuff at one point of<br />
+<code class="language-plaintext highlighter-rouge">(48:09)</code> the system if you remove stuff at one<br />
+<code class="language-plaintext highlighter-rouge">(48:11)</code> point of the system<br />
+<code class="language-plaintext highlighter-rouge">(48:12)</code> it has to pop up in another point<br />
+<code class="language-plaintext highlighter-rouge">(48:16)</code> an example is for example uh if you have<br />
+<code class="language-plaintext highlighter-rouge">(48:18)</code> something like hydrodynamics also where<br />
+<code class="language-plaintext highlighter-rouge">(48:20)</code> you just<br />
+<code class="language-plaintext highlighter-rouge">(48:20)</code> move mars around and uh but it doesn’t<br />
+<code class="language-plaintext highlighter-rouge">(48:24)</code> really disappear<br />
+<code class="language-plaintext highlighter-rouge">(48:25)</code> and you just move things around but<br />
+<code class="language-plaintext highlighter-rouge">(48:27)</code> things don’t disappear<br />
+<code class="language-plaintext highlighter-rouge">(48:28)</code> that’s an example for these kind of<br />
+<code class="language-plaintext highlighter-rouge">(48:30)</code> model b<br />
+<code class="language-plaintext highlighter-rouge">(48:32)</code> systems yeah and<br />
+<code class="language-plaintext highlighter-rouge">(48:35)</code> uh so if you plug these things in so<br />
+<code class="language-plaintext highlighter-rouge">(48:37)</code> typical examples very famous example<br />
+<code class="language-plaintext highlighter-rouge">(48:39)</code> systems also called reaction diffusion<br />
+<code class="language-plaintext highlighter-rouge">(48:43)</code> systems<br />
+<code class="language-plaintext highlighter-rouge">(48:44)</code> now so and the typical reaction<br />
+<code class="language-plaintext highlighter-rouge">(48:45)</code> diffusion equation<br />
+<code class="language-plaintext highlighter-rouge">(48:47)</code> is seen here on the right hand side that<br />
+<code class="language-plaintext highlighter-rouge">(48:50)</code> describes a situation<br />
+<code class="language-plaintext highlighter-rouge">(48:52)</code> where uh the phi if you look here at the<br />
+<code class="language-plaintext highlighter-rouge">(48:55)</code> phi<br />
+<code class="language-plaintext highlighter-rouge">(48:56)</code> now then what happens what this term<br />
+<code class="language-plaintext highlighter-rouge">(48:59)</code> here does<br />
+<code class="language-plaintext highlighter-rouge">(49:00)</code> is a 5 is just a little bit larger than<br />
+<code class="language-plaintext highlighter-rouge">(49:03)</code> 0<br />
+<code class="language-plaintext highlighter-rouge">(49:04)</code> yeah then this term will be positive<br />
+<code class="language-plaintext highlighter-rouge">(49:07)</code> yeah and this this<br />
+<code class="language-plaintext highlighter-rouge">(49:10)</code> this will give to rise an increase in<br />
+<code class="language-plaintext highlighter-rouge">(49:12)</code> the field<br />
+<code class="language-plaintext highlighter-rouge">(49:14)</code> now this term is a diffusion term uh<br />
+<code class="language-plaintext highlighter-rouge">(49:17)</code> that just<br />
+<code class="language-plaintext highlighter-rouge">(49:17)</code> transports information to the set<br />
+<code class="language-plaintext highlighter-rouge">(49:19)</code> between different positions<br />
+<code class="language-plaintext highlighter-rouge">(49:21)</code> in the system and then we have our noise<br />
+<code class="language-plaintext highlighter-rouge">(49:24)</code> and this noise typically has<br />
+<code class="language-plaintext highlighter-rouge">(49:26)</code> prefactors it’s multiplicative uh if you<br />
+<code class="language-plaintext highlighter-rouge">(49:29)</code> look for example at biological systems<br /></p>
+
+<h3 id="slide-11">slide 11</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(49:34)</code> so at the take home message for these<br />
+<code class="language-plaintext highlighter-rouge">(49:36)</code> spatial systems<br />
+<code class="language-plaintext highlighter-rouge">(49:38)</code> now we you can think about okay we just<br />
+<code class="language-plaintext highlighter-rouge">(49:40)</code> add an x variable well what i just said<br />
+<code class="language-plaintext highlighter-rouge">(49:42)</code> is just a complicated way of<br />
+<code class="language-plaintext highlighter-rouge">(49:44)</code> saying okay so we have some x variable<br />
+<code class="language-plaintext highlighter-rouge">(49:47)</code> and some diffusion yeah but everything<br />
+<code class="language-plaintext highlighter-rouge">(49:50)</code> else will look very similar as before<br />
+<code class="language-plaintext highlighter-rouge">(49:53)</code> now and indeed we can follow exactly the<br />
+<code class="language-plaintext highlighter-rouge">(49:56)</code> same steps now<br />
+<code class="language-plaintext highlighter-rouge">(49:57)</code> now we take the long-term equation<br />
+<code class="language-plaintext highlighter-rouge">(49:59)</code> general launch of my equation here<br />
+<code class="language-plaintext highlighter-rouge">(50:02)</code> you know which is this one i do exactly<br />
+<code class="language-plaintext highlighter-rouge">(50:05)</code> the same steps as before<br />
+<code class="language-plaintext highlighter-rouge">(50:07)</code> and now this here would be the first<br />
+<code class="language-plaintext highlighter-rouge">(50:10)</code> step<br />
+<code class="language-plaintext highlighter-rouge">(50:13)</code> now where we have this delta functions<br />
+<code class="language-plaintext highlighter-rouge">(50:16)</code> now now we don’t only have a product<br />
+<code class="language-plaintext highlighter-rouge">(50:18)</code> over i<br />
+<code class="language-plaintext highlighter-rouge">(50:19)</code> that is already in the over time that is<br />
+<code class="language-plaintext highlighter-rouge">(50:21)</code> already in this delta function here<br />
+<code class="language-plaintext highlighter-rouge">(50:23)</code> but also over x yeah and then we just<br />
+<code class="language-plaintext highlighter-rouge">(50:26)</code> plug in this<br />
+<code class="language-plaintext highlighter-rouge">(50:27)</code> generalized launch of our equation and<br />
+<code class="language-plaintext highlighter-rouge">(50:29)</code> do the same step<br />
+<code class="language-plaintext highlighter-rouge">(50:31)</code> and then we get the field theory the<br />
+<code class="language-plaintext highlighter-rouge">(50:33)</code> martin citra rose functional<br />
+<code class="language-plaintext highlighter-rouge">(50:35)</code> for the spatially extended system so<br />
+<code class="language-plaintext highlighter-rouge">(50:38)</code> this looks pretty complicated<br />
+<code class="language-plaintext highlighter-rouge">(50:40)</code> but it is actually the same as before<br />
+<code class="language-plaintext highlighter-rouge">(50:43)</code> you know so we have we integrate again<br />
+<code class="language-plaintext highlighter-rouge">(50:46)</code> over the field fine and the response<br />
+<code class="language-plaintext highlighter-rouge">(50:50)</code> field<br />
+<code class="language-plaintext highlighter-rouge">(50:50)</code> file tilde and<br />
+<code class="language-plaintext highlighter-rouge">(50:54)</code> then we sum up different contributions<br />
+<code class="language-plaintext highlighter-rouge">(50:59)</code> to our variable to our observable like<br />
+<code class="language-plaintext highlighter-rouge">(51:02)</code> the second term<br />
+<code class="language-plaintext highlighter-rouge">(51:03)</code> and then as before we wait that<br />
+<code class="language-plaintext highlighter-rouge">(51:06)</code> with some exponential that essentially<br />
+<code class="language-plaintext highlighter-rouge">(51:10)</code> quantifies<br />
+<code class="language-plaintext highlighter-rouge">(51:10)</code> how far we are away from a realistic<br />
+<code class="language-plaintext highlighter-rouge">(51:14)</code> realization of the launching equation<br />
+<code class="language-plaintext highlighter-rouge">(51:17)</code> yeah and here we have<br />
+<code class="language-plaintext highlighter-rouge">(51:19)</code> exactly the same structure as before<br />
+<code class="language-plaintext highlighter-rouge">(51:22)</code> here you have the launch of the equation<br />
+<code class="language-plaintext highlighter-rouge">(51:25)</code> now you see you say that you need to<br />
+<code class="language-plaintext highlighter-rouge">(51:27)</code> solve the deterministic part of the<br />
+<code class="language-plaintext highlighter-rouge">(51:29)</code> moisture equation<br />
+<code class="language-plaintext highlighter-rouge">(51:31)</code> and this was previously just<br />
+<code class="language-plaintext highlighter-rouge">(51:34)</code> x tilde squared i said previously<br />
+<code class="language-plaintext highlighter-rouge">(51:40)</code> this was this term here<br />
+<code class="language-plaintext highlighter-rouge">(51:43)</code> was something like a<br />
+<code class="language-plaintext highlighter-rouge">(51:46)</code> over 2 x to the squared<br />
+<code class="language-plaintext highlighter-rouge">(51:50)</code> well now that looks more complicated<br />
+<code class="language-plaintext highlighter-rouge">(51:52)</code> yeah but it has the same form as if you<br />
+<code class="language-plaintext highlighter-rouge">(51:54)</code> look at this<br />
+<code class="language-plaintext highlighter-rouge">(51:56)</code> you have here your x tilde or phi tilde<br />
+<code class="language-plaintext highlighter-rouge">(52:00)</code> here you have another one that just<br />
+<code class="language-plaintext highlighter-rouge">(52:03)</code> coupled by the correlations in the noise<br />
+<code class="language-plaintext highlighter-rouge">(52:07)</code> uh that is described by this voice<br />
+<code class="language-plaintext highlighter-rouge">(52:10)</code> kernel<br />
+<code class="language-plaintext highlighter-rouge">(52:11)</code> now but the structure is the same as<br />
+<code class="language-plaintext highlighter-rouge">(52:14)</code> before<br />
+<code class="language-plaintext highlighter-rouge">(52:15)</code> yeah and uh so so uh so this is the<br />
+<code class="language-plaintext highlighter-rouge">(52:18)</code> martial citra rose<br />
+<code class="language-plaintext highlighter-rouge">(52:20)</code> functional for the noise for the<br />
+<code class="language-plaintext highlighter-rouge">(52:22)</code> spatially extended system<br />
+<code class="language-plaintext highlighter-rouge">(52:25)</code> yeah and with this uh i’m done with the<br />
+<code class="language-plaintext highlighter-rouge">(52:29)</code> definitions<br />
+<code class="language-plaintext highlighter-rouge">(52:29)</code> and with the actual<br />
+<code class="language-plaintext highlighter-rouge">(52:33)</code> derivation of the field theory now<br /></p>
+
+<h3 id="slide-8">slide 8</h3>
+
+<p><br />
+<code class="language-plaintext highlighter-rouge">(52:36)</code> let’s see if we can apply it and now i<br />
+<code class="language-plaintext highlighter-rouge">(52:39)</code> go back<br />
+<code class="language-plaintext highlighter-rouge">(52:40)</code> to the example and just see how we’re<br />
+<code class="language-plaintext highlighter-rouge">(52:43)</code> doing in time<br />
+<code class="language-plaintext highlighter-rouge">(52:47)</code> okay great i think almost exactly an<br />
+<code class="language-plaintext highlighter-rouge">(52:49)</code> hour<br />
+<code class="language-plaintext highlighter-rouge">(52:50)</code> so if you don’t already know all of this<br />
+<code class="language-plaintext highlighter-rouge">(52:52)</code> maybe from last year’s lecture<br />
+<code class="language-plaintext highlighter-rouge">(52:53)</code> then uh feel free to feel free for her<br />
+<code class="language-plaintext highlighter-rouge">(52:56)</code> to drop out<br />
+<code class="language-plaintext highlighter-rouge">(52:56)</code> and for the rest i’ll go through one<br />
+<code class="language-plaintext highlighter-rouge">(52:58)</code> example<br />
+<code class="language-plaintext highlighter-rouge">(53:00)</code> and i’ll double check so if i upload<br />
+<code class="language-plaintext highlighter-rouge">(53:02)</code> when i upload the uh<br />
+<code class="language-plaintext highlighter-rouge">(53:04)</code> the lecture notes i’ll try to make sure<br />
+<code class="language-plaintext highlighter-rouge">(53:06)</code> that actually these minus signs<br />
+<code class="language-plaintext highlighter-rouge">(53:09)</code> are correct yeah so so if there was a<br />
+<code class="language-plaintext highlighter-rouge">(53:11)</code> mistake i’ll correct it<br />
+<code class="language-plaintext highlighter-rouge">(53:12)</code> in the uploaded version that you find on<br />
+<code class="language-plaintext highlighter-rouge">(53:15)</code> the website<br />
+<code class="language-plaintext highlighter-rouge">(53:17)</code> excuse me yes so<br />
+<code class="language-plaintext highlighter-rouge">(53:20)</code> when you wrote the response function<br />
+<code class="language-plaintext highlighter-rouge">(53:23)</code> there was this i guess heavyside<br />
+<code class="language-plaintext highlighter-rouge">(53:28)</code> function multiplied with<br />
+<code class="language-plaintext highlighter-rouge">(53:29)</code> your autocorrelation so<br />
+<code class="language-plaintext highlighter-rouge">(53:33)</code> does that come up because uh you have<br />
+<code class="language-plaintext highlighter-rouge">(53:36)</code> a kind of the etho formalism<br />
+<code class="language-plaintext highlighter-rouge">(53:39)</code> into your system the point<br />
+<code class="language-plaintext highlighter-rouge">(53:44)</code> the response function if you have a<br />
+<code class="language-plaintext highlighter-rouge">(53:46)</code> perturbation here<br />
+<code class="language-plaintext highlighter-rouge">(53:48)</code> if you perturb at t prime and you look<br />
+<code class="language-plaintext highlighter-rouge">(53:50)</code> at the response at t<br />
+<code class="language-plaintext highlighter-rouge">(53:52)</code> now that’s how this response function is<br />
+<code class="language-plaintext highlighter-rouge">(53:55)</code> defined<br />
+<code class="language-plaintext highlighter-rouge">(53:56)</code> answer you should have here that’s a d<br />
+<code class="language-plaintext highlighter-rouge">(53:58)</code> prime<br />
+<code class="language-plaintext highlighter-rouge">(53:59)</code> here as you perturb at t prime and you<br />
+<code class="language-plaintext highlighter-rouge">(54:02)</code> look<br />
+<code class="language-plaintext highlighter-rouge">(54:03)</code> at the time t yeah then<br />
+<code class="language-plaintext highlighter-rouge">(54:06)</code> oh the other way around actually the<br />
+<code class="language-plaintext highlighter-rouge">(54:08)</code> answer so then then this<br />
+<code class="language-plaintext highlighter-rouge">(54:12)</code> herbicide function just ensures<br />
+<code class="language-plaintext highlighter-rouge">(54:15)</code> causality<br />
+<code class="language-plaintext highlighter-rouge">(54:16)</code> that you cannot observe the response<br />
+<code class="language-plaintext highlighter-rouge">(54:19)</code> that hap that happens before you could<br />
+<code class="language-plaintext highlighter-rouge">(54:20)</code> do the perturbation before you apply the<br />
+<code class="language-plaintext highlighter-rouge">(54:22)</code> force<br />
+<code class="language-plaintext highlighter-rouge">(54:25)</code> now so that’s that’s that’s the reason<br />
+<code class="language-plaintext highlighter-rouge">(54:27)</code> why you get these tata functions<br />
+<code class="language-plaintext highlighter-rouge">(54:30)</code> okay okay thanks for the question<br />
+<code class="language-plaintext highlighter-rouge">(54:35)</code> let’s go then to the<br />
+<code class="language-plaintext highlighter-rouge">(54:42)</code> first example<br />
+<code class="language-plaintext highlighter-rouge">(54:46)</code> here we go yeah and<br />
+<code class="language-plaintext highlighter-rouge">(54:49)</code> uh so let’s let’s have a look at the<br />
+<code class="language-plaintext highlighter-rouge">(54:52)</code> fields here for a very<br />
+<code class="language-plaintext highlighter-rouge">(54:54)</code> simple example and all like in the<br />
+<code class="language-plaintext highlighter-rouge">(54:56)</code> stochastic processes<br />
+<code class="language-plaintext highlighter-rouge">(54:58)</code> also simple examples quickly become<br />
+<code class="language-plaintext highlighter-rouge">(55:04)</code> complicated<br />
+<code class="language-plaintext highlighter-rouge">(55:06)</code> so let me find the notes<br />
+<code class="language-plaintext highlighter-rouge">(55:11)</code> here we go<br />
+<code class="language-plaintext highlighter-rouge">(55:18)</code> okay we start with a simple<br />
+<code class="language-plaintext highlighter-rouge">(55:22)</code> with probably one of the simplest larger<br />
+<code class="language-plaintext highlighter-rouge">(55:24)</code> way equation uh you can<br />
+<code class="language-plaintext highlighter-rouge">(55:26)</code> imagine and uh because it’s so simple<br />
+<code class="language-plaintext highlighter-rouge">(55:29)</code> uh it has a name because it has been<br />
+<code class="language-plaintext highlighter-rouge">(55:32)</code> extensively<br />
+<code class="language-plaintext highlighter-rouge">(55:33)</code> studied and it’s called the einstein<br />
+<code class="language-plaintext highlighter-rouge">(55:35)</code> ruling<br />
+<code class="language-plaintext highlighter-rouge">(55:36)</code> process and this process is just given<br />
+<code class="language-plaintext highlighter-rouge">(55:40)</code> by the time<br />
+<code class="language-plaintext highlighter-rouge">(55:41)</code> by the time derivative of x<br />
+<code class="language-plaintext highlighter-rouge">(55:45)</code> dot and this is equal to<br />
+<code class="language-plaintext highlighter-rouge">(55:48)</code> some restoring force all right so plus<br />
+<code class="language-plaintext highlighter-rouge">(55:51)</code> sometimes<br />
+<code class="language-plaintext highlighter-rouge">(55:52)</code> uh some external fluctuating force<br />
+<code class="language-plaintext highlighter-rouge">(55:56)</code> side and as always we have the usual<br />
+<code class="language-plaintext highlighter-rouge">(55:59)</code> conditions that are outside<br />
+<code class="language-plaintext highlighter-rouge">(56:00)</code> very nicely behaved doesn’t have a mean<br />
+<code class="language-plaintext highlighter-rouge">(56:04)</code> and it’s uncorrelated in time<br />
+<code class="language-plaintext highlighter-rouge">(56:08)</code> so now writing down the margin citra<br />
+<code class="language-plaintext highlighter-rouge">(56:12)</code> rose<br />
+<code class="language-plaintext highlighter-rouge">(56:13)</code> function integral easy because we just<br />
+<code class="language-plaintext highlighter-rouge">(56:16)</code> have to plug in this laundromate<br />
+<code class="language-plaintext highlighter-rouge">(56:18)</code> equation<br />
+<code class="language-plaintext highlighter-rouge">(56:19)</code> so martin<br />
+<code class="language-plaintext highlighter-rouge">(56:23)</code> martin cedar rose johnson the dominicus<br />
+<code class="language-plaintext highlighter-rouge">(56:28)</code> some people say martin said rose i did<br />
+<code class="language-plaintext highlighter-rouge">(56:30)</code> that once and i happened to be in munich<br />
+<code class="language-plaintext highlighter-rouge">(56:32)</code> and then i they were very angry that i<br />
+<code class="language-plaintext highlighter-rouge">(56:34)</code> forgot johnson<br />
+<code class="language-plaintext highlighter-rouge">(56:36)</code> my parents apparently had some<br />
+<code class="language-plaintext highlighter-rouge">(56:37)</code> connections to munich<br />
+<code class="language-plaintext highlighter-rouge">(56:40)</code> and uh now so that’s the full<br />
+<code class="language-plaintext highlighter-rouge">(56:43)</code> that that that contains i think<br />
+<code class="language-plaintext highlighter-rouge">(56:45)</code> everybody who contributed<br />
+<code class="language-plaintext highlighter-rouge">(56:47)</code> uh<br />
+<code class="language-plaintext highlighter-rouge">(56:52)</code> reads now so what is the action now just<br />
+<code class="language-plaintext highlighter-rouge">(56:56)</code> i don’t write the full integral just<br />
+<code class="language-plaintext highlighter-rouge">(56:57)</code> write the action<br />
+<code class="language-plaintext highlighter-rouge">(56:59)</code> so the action is<br />
+<code class="language-plaintext highlighter-rouge">(57:03)</code> dt i x tilde<br />
+<code class="language-plaintext highlighter-rouge">(57:12)</code> del t x plus alpha x<br />
+<code class="language-plaintext highlighter-rouge">(57:19)</code> now let’s make sure that we fulfill the<br />
+<code class="language-plaintext highlighter-rouge">(57:21)</code> login equation<br />
+<code class="language-plaintext highlighter-rouge">(57:23)</code> plus a over 2<br />
+<code class="language-plaintext highlighter-rouge">(57:27)</code> dt<br />
+<code class="language-plaintext highlighter-rouge">(57:31)</code> x tilde now that would be squared<br />
+<code class="language-plaintext highlighter-rouge">(57:37)</code> now we can write down the generating<br />
+<code class="language-plaintext highlighter-rouge">(57:39)</code> function<br />
+<code class="language-plaintext highlighter-rouge">(57:41)</code> generating<br />
+<code class="language-plaintext highlighter-rouge">(57:47)</code> functional yeah and this is just as<br />
+<code class="language-plaintext highlighter-rouge">(57:50)</code> before<br />
+<code class="language-plaintext highlighter-rouge">(57:52)</code> that of h is tilde<br />
+<code class="language-plaintext highlighter-rouge">(57:57)</code> is equal to the integral<br />
+<code class="language-plaintext highlighter-rouge">(58:00)</code> over our two fields function interval of<br />
+<code class="language-plaintext highlighter-rouge">(58:02)</code> the word two fields<br />
+<code class="language-plaintext highlighter-rouge">(58:04)</code> field response field uh<br />
+<code class="language-plaintext highlighter-rouge">(58:07)</code> e to the minus s<br />
+<code class="language-plaintext highlighter-rouge">(58:11)</code> plus dt<br />
+<code class="language-plaintext highlighter-rouge">(58:15)</code> h x so that the external auxiliary field<br />
+<code class="language-plaintext highlighter-rouge">(58:19)</code> that comes to x<br />
+<code class="language-plaintext highlighter-rouge">(58:21)</code> plus an external field that couples<br />
+<code class="language-plaintext highlighter-rouge">(58:24)</code> to x tilde<br />
+<code class="language-plaintext highlighter-rouge">(58:28)</code> yeah and uh just<br />
+<code class="language-plaintext highlighter-rouge">(58:31)</code> just to make sure everybody understands<br />
+<code class="language-plaintext highlighter-rouge">(58:33)</code> now so why do i say that this field<br />
+<code class="language-plaintext highlighter-rouge">(58:35)</code> couples to x<br />
+<code class="language-plaintext highlighter-rouge">(58:36)</code> and x tilde here so these and why are<br />
+<code class="language-plaintext highlighter-rouge">(58:38)</code> these external fields<br />
+<code class="language-plaintext highlighter-rouge">(58:40)</code> provided like this this just follows if<br />
+<code class="language-plaintext highlighter-rouge">(58:42)</code> you write down<br />
+<code class="language-plaintext highlighter-rouge">(58:43)</code> um something like for example the<br />
+<code class="language-plaintext highlighter-rouge">(58:45)</code> ginsburg landlord theory also<br />
+<code class="language-plaintext highlighter-rouge">(58:48)</code> or you look at the icing model now then<br />
+<code class="language-plaintext highlighter-rouge">(58:50)</code> terms like this here<br />
+<code class="language-plaintext highlighter-rouge">(58:55)</code> will tilt the potential in one direction<br />
+<code class="language-plaintext highlighter-rouge">(58:59)</code> yeah and here this tilts the potential<br />
+<code class="language-plaintext highlighter-rouge">(59:04)</code> in the x-direction and this tills the<br />
+<code class="language-plaintext highlighter-rouge">(59:06)</code> potential in the axillary<br />
+<code class="language-plaintext highlighter-rouge">(59:07)</code> direction this tilts it in the x<br />
+<code class="language-plaintext highlighter-rouge">(59:10)</code> direction<br />
+<code class="language-plaintext highlighter-rouge">(59:12)</code> and this tilts it in the x tilde<br />
+<code class="language-plaintext highlighter-rouge">(59:14)</code> direction<br />
+<code class="language-plaintext highlighter-rouge">(59:16)</code> now so this is why we call these<br />
+<code class="language-plaintext highlighter-rouge">(59:17)</code> external fields<br />
+<code class="language-plaintext highlighter-rouge">(59:19)</code> and that they couple to uh<br />
+<code class="language-plaintext highlighter-rouge">(59:22)</code> these fields x and x that’s the analogy<br />
+<code class="language-plaintext highlighter-rouge">(59:26)</code> to uh the ginsberg london theory and<br />
+<code class="language-plaintext highlighter-rouge">(59:29)</code> other fields<br />
+<code class="language-plaintext highlighter-rouge">(59:32)</code> okay so let’s go this is the<br />
+<code class="language-plaintext highlighter-rouge">(59:35)</code> um functional generating functional<br />
+<code class="language-plaintext highlighter-rouge">(59:40)</code> and now we use that<br />
+<code class="language-plaintext highlighter-rouge">(59:44)</code> integral over dx e to the iq x<br />
+<code class="language-plaintext highlighter-rouge">(59:48)</code> is just delta of q so we use the<br />
+<code class="language-plaintext highlighter-rouge">(59:52)</code> definition of the fourier transform of<br />
+<code class="language-plaintext highlighter-rouge">(59:54)</code> the delta function<br />
+<code class="language-plaintext highlighter-rouge">(59:56)</code> and by doing that we get that<br />
+<code class="language-plaintext highlighter-rouge">(60:00)</code> this functional generative function<br />
+<code class="language-plaintext highlighter-rouge">(60:04)</code> is equal to d of<br />
+<code class="language-plaintext highlighter-rouge">(60:07)</code> x to the e<br />
+<code class="language-plaintext highlighter-rouge">(60:11)</code> to the a over two<br />
+<code class="language-plaintext highlighter-rouge">(60:16)</code> integral dt x to the squared<br />
+<code class="language-plaintext highlighter-rouge">(60:22)</code> plus dt<br />
+<code class="language-plaintext highlighter-rouge">(60:26)</code> our two fields h x<br />
+<code class="language-plaintext highlighter-rouge">(60:29)</code> plus h tilde x<br />
+<code class="language-plaintext highlighter-rouge">(60:33)</code> yeah and now we’ve got our delta<br />
+<code class="language-plaintext highlighter-rouge">(60:37)</code> function<br />
+<code class="language-plaintext highlighter-rouge">(60:39)</code> i del t minus alpha<br />
+<code class="language-plaintext highlighter-rouge">(60:44)</code> x to the plus h<br />
+<code class="language-plaintext highlighter-rouge">(60:53)</code> now when is this delta function here the<br />
+<code class="language-plaintext highlighter-rouge">(60:56)</code> delta function<br />
+<code class="language-plaintext highlighter-rouge">(60:58)</code> actually non-zero now so the delta<br />
+<code class="language-plaintext highlighter-rouge">(61:02)</code> delta functional<br />
+<code class="language-plaintext highlighter-rouge">(61:08)</code> is non zero<br />
+<code class="language-plaintext highlighter-rouge">(61:11)</code> if our x tilde<br />
+<code class="language-plaintext highlighter-rouge">(61:15)</code> solves this ordinary differential<br />
+<code class="language-plaintext highlighter-rouge">(61:18)</code> equation<br />
+<code class="language-plaintext highlighter-rouge">(61:20)</code> you know that we have here in the delta<br />
+<code class="language-plaintext highlighter-rouge">(61:22)</code> function now we can just write it down<br />
+<code class="language-plaintext highlighter-rouge">(61:26)</code> i times t to infinity<br />
+<code class="language-plaintext highlighter-rouge">(61:30)</code> dt prime e to the minus<br />
+<code class="language-plaintext highlighter-rouge">(61:35)</code> alpha t minus p prime<br />
+<code class="language-plaintext highlighter-rouge">(61:39)</code> h of t prime yeah<br />
+<code class="language-plaintext highlighter-rouge">(61:45)</code> now we substitute that so we saw that we<br />
+<code class="language-plaintext highlighter-rouge">(61:48)</code> already got rid of<br />
+<code class="language-plaintext highlighter-rouge">(61:49)</code> one field here by doing this reverse<br />
+<code class="language-plaintext highlighter-rouge">(61:53)</code> fury transform now we substitute that we<br />
+<code class="language-plaintext highlighter-rouge">(61:56)</code> get<br />
+<code class="language-plaintext highlighter-rouge">(61:57)</code> rid of our second field now we<br />
+<code class="language-plaintext highlighter-rouge">(61:59)</code> substitute<br />
+<code class="language-plaintext highlighter-rouge">(62:05)</code> into that<br />
+<code class="language-plaintext highlighter-rouge">(62:11)</code> and what we get<br />
+<code class="language-plaintext highlighter-rouge">(62:14)</code> is age h tilde<br />
+<code class="language-plaintext highlighter-rouge">(62:17)</code> is equal to and now comes a large<br />
+<code class="language-plaintext highlighter-rouge">(62:20)</code> exponential<br />
+<code class="language-plaintext highlighter-rouge">(62:21)</code> to see how to write that on the screen<br />
+<code class="language-plaintext highlighter-rouge">(62:26)</code> minus integral dt<br />
+<code class="language-plaintext highlighter-rouge">(62:30)</code> integral dt prime the second it comes<br />
+<code class="language-plaintext highlighter-rouge">(62:34)</code> from this x tilde<br />
+<code class="language-plaintext highlighter-rouge">(62:35)</code> and then we have<br />
+<code class="language-plaintext highlighter-rouge">(62:39)</code> a over 2 e to the minus<br />
+<code class="language-plaintext highlighter-rouge">(62:42)</code> alpha t minus t prime<br />
+<code class="language-plaintext highlighter-rouge">(62:48)</code> times h of t<br />
+<code class="language-plaintext highlighter-rouge">(62:53)</code> h of t prime plus<br />
+<code class="language-plaintext highlighter-rouge">(62:57)</code> i theta<br />
+<code class="language-plaintext highlighter-rouge">(63:00)</code> t minus t prime<br />
+<code class="language-plaintext highlighter-rouge">(63:03)</code> e to the minus alpha t<br />
+<code class="language-plaintext highlighter-rouge">(63:07)</code> minus t prime<br />
+<code class="language-plaintext highlighter-rouge">(63:10)</code> times i’m sorry i said it like<br />
+<code class="language-plaintext highlighter-rouge">(63:14)</code> even for the simplest process it gets<br />
+<code class="language-plaintext highlighter-rouge">(63:16)</code> lengthy<br />
+<code class="language-plaintext highlighter-rouge">(63:17)</code> h of t h of t prime<br />
+<code class="language-plaintext highlighter-rouge">(63:21)</code> yeah but what’s happening here is<br />
+<code class="language-plaintext highlighter-rouge">(63:24)</code> nothing magical it’s just a calculation<br />
+<code class="language-plaintext highlighter-rouge">(63:26)</code> such<br />
+<code class="language-plaintext highlighter-rouge">(63:26)</code> integrals well we substituted that x<br />
+<code class="language-plaintext highlighter-rouge">(63:29)</code> total<br />
+<code class="language-plaintext highlighter-rouge">(63:31)</code> into our generating functional and then<br />
+<code class="language-plaintext highlighter-rouge">(63:34)</code> we collected the terms<br />
+<code class="language-plaintext highlighter-rouge">(63:35)</code> and made sure<br />
+<code class="language-plaintext highlighter-rouge">(63:40)</code> that the right time order<br />
+<code class="language-plaintext highlighter-rouge">(63:43)</code> is given and now we have this generating<br />
+<code class="language-plaintext highlighter-rouge">(63:46)</code> function it looks a little bit<br />
+<code class="language-plaintext highlighter-rouge">(63:47)</code> complicated<br />
+<code class="language-plaintext highlighter-rouge">(63:48)</code> but we can deal with that now so we can<br />
+<code class="language-plaintext highlighter-rouge">(63:51)</code> take<br />
+<code class="language-plaintext highlighter-rouge">(63:52)</code> functional derivatives with this now for<br />
+<code class="language-plaintext highlighter-rouge">(63:54)</code> example to get a correlation function<br />
+<code class="language-plaintext highlighter-rouge">(64:02)</code> and so we have x<br />
+<code class="language-plaintext highlighter-rouge">(64:06)</code> of the x of t prime<br />
+<code class="language-plaintext highlighter-rouge">(64:10)</code> now we take the second<br />
+<code class="language-plaintext highlighter-rouge">(64:14)</code> derivative<br />
+<code class="language-plaintext highlighter-rouge">(64:19)</code> once at time t<br />
+<code class="language-plaintext highlighter-rouge">(64:24)</code> and once at time t prime<br />
+<code class="language-plaintext highlighter-rouge">(64:30)</code> and then we must not forget<br />
+<code class="language-plaintext highlighter-rouge">(64:33)</code> to set the fields equal to zero again<br />
+<code class="language-plaintext highlighter-rouge">(64:40)</code> now and if you look at this equation if<br />
+<code class="language-plaintext highlighter-rouge">(64:43)</code> we do that<br />
+<code class="language-plaintext highlighter-rouge">(64:44)</code> then and do a little bit of calculations<br />
+<code class="language-plaintext highlighter-rouge">(64:48)</code> don’t<br />
+<code class="language-plaintext highlighter-rouge">(64:48)</code> get that actually this correlation<br />
+<code class="language-plaintext highlighter-rouge">(64:50)</code> function is<br />
+<code class="language-plaintext highlighter-rouge">(64:51)</code> a over alpha e to the minus alpha<br />
+<code class="language-plaintext highlighter-rouge">(64:56)</code> t minus t prime<br />
+<code class="language-plaintext highlighter-rouge">(65:02)</code> so that’s just uh an example yeah so<br />
+<code class="language-plaintext highlighter-rouge">(65:05)</code> these actual calculations<br />
+<code class="language-plaintext highlighter-rouge">(65:06)</code> are a little bit messy but that’s not<br />
+<code class="language-plaintext highlighter-rouge">(65:09)</code> just how you use these field theories<br />
+<code class="language-plaintext highlighter-rouge">(65:12)</code> that you have the field theory you write<br />
+<code class="language-plaintext highlighter-rouge">(65:14)</code> down the general functional<br />
+<code class="language-plaintext highlighter-rouge">(65:16)</code> yeah and then you look that you are able<br />
+<code class="language-plaintext highlighter-rouge">(65:19)</code> to<br />
+<code class="language-plaintext highlighter-rouge">(65:19)</code> take these functional derivatives with<br />
+<code class="language-plaintext highlighter-rouge">(65:22)</code> respect to these external fields<br />
+<code class="language-plaintext highlighter-rouge">(65:24)</code> and the rest is then say<br />
+<code class="language-plaintext highlighter-rouge">(65:28)</code> mathematics yeah<br />
+<code class="language-plaintext highlighter-rouge">(65:32)</code> okay great so this was an example and<br />
+<code class="language-plaintext highlighter-rouge">(65:35)</code> from next week<br />
+<code class="language-plaintext highlighter-rouge">(65:35)</code> we’ll be a little bit more intuitive<br />
+<code class="language-plaintext highlighter-rouge">(65:37)</code> again now we’ve covered the technical<br />
+<code class="language-plaintext highlighter-rouge">(65:39)</code> stuff<br />
+<code class="language-plaintext highlighter-rouge">(65:40)</code> uh and we can look into some real uh<br />
+<code class="language-plaintext highlighter-rouge">(65:43)</code> physics<br />
+<code class="language-plaintext highlighter-rouge">(65:44)</code> and physics problems okay see you all<br />
+<code class="language-plaintext highlighter-rouge">(65:47)</code> next week<br />
+<code class="language-plaintext highlighter-rouge">(65:48)</code> bye <br /></p>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = 29;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/29">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        马普所·非平衡态系统中的集体过程·语音转录 | 03.非平衡态场论 - February 4, 2021 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-Popular_GitHub"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/About"><span class="icon-CN_tencent_wechat"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.douban.com/people/Gravitus/"><span class="icon-CN_douban_B"></span></a>
+      </li>
+    
+      <li>
+        <a href="//space.bilibili.com/29132299"><span class="icon-CN_bilibili"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-Popular_RSS"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2021 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted on <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>
