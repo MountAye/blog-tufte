@@ -1,12 +1,12 @@
-- title: home
+- title: Home
   url: /
-- title: history
+- title: History 
   url: /History/
-- title: topics
+- title: Topics
   url: /Topics/
-- title: links
+- title: Links
   url: /Links/
-- title: comments
+- title: Comments
   url: /Comments/
-- title: about
+- title: About
   url: /About/
