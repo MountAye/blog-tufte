@@ -8,6 +8,12 @@ categories:  post
 milestoneID: 26
 ---
 
+> 《非平衡态系统中的集体过程 (Collective processes in non-equilibrium systems)》是位于德累斯顿的马克思普朗克复杂物理研究所 (Max Planck Institute for the Physics of Complex Systems) Steffen Rulands 研究员的一门课程。
+>
+> 课程主页[链接在此](https://www.pks.mpg.de/statistical-physics-of-living-systems/teaching/collective-processes-in-non-equilibrium-systems/)，网页上有课程的课件，录像发布于 YouTube。
+>
+> YouTube 把视频中讲者说的话从语音转化成了文字，我把这些转录复制了下来，进行了简单的断句，并且推测了各段文字对应的课件的内容。
+>
 > 这次的内容大致分为两部分，一是继续将朗之万方程推广，另一部分是主方程。
 
 # 2. Stochastic Process
