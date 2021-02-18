@@ -19,9 +19,9 @@ title: Topics
     <br>
         {% for post in site.posts %}
 
-        {% if post.keywords==cate.ext %}
+            {% if post.keywords==cate.ext %}
 
-            <li class="listing">
+                <li class="listing">
 
                     <a href="{{ post.url | prepend: site.baseurl }}">
 
@@ -33,10 +33,10 @@ title: Topics
 
                 </li>
 
-                {% endif %}
-
-            {% endfor %}
+            {% endif %}
 
         {% endfor %}
+
+    {% endfor %}
 
 </ul>
