@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>马普所·非平衡态系统中的集体过程·语音转录 06. Non-equilibrium Criticality | 阿掖山：一个博客</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="马普所·非平衡态系统中的集体过程·语音转录 06. Non-equilibrium Criticality" />
+<meta name="author" content="MountAye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="下一讲就是重整化群了" />
+<meta property="og:description" content="下一讲就是重整化群了" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-06-criticality" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-06-criticality" />
+<meta property="og:site_name" content="阿掖山：一个博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="马普所·非平衡态系统中的集体过程·语音转录 06. Non-equilibrium Criticality" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"MountAye"},"description":"下一讲就是重整化群了","headline":"马普所·非平衡态系统中的集体过程·语音转录 06. Non-equilibrium Criticality","dateModified":"2021-02-25T00:00:00+00:00","datePublished":"2021-02-25T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-06-criticality"},"url":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-06-criticality","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">    
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/mpipks-non-equilibrium-physics-transcript-06-criticality">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">I would be happy if this blog helps you; if it doesn't, I wouldn't be disappointed.</span><br>
+        ——<span id="quoteAuthor">Welcome to this blog</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">Home</a>
+        
+  	
+        
+            <a href="/blog/History/">History</a>
+        
+  	
+        
+            <a href="/blog/Topics/">Topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">Links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">Comments</a>
+        
+  	
+        
+            <a href="/blog/About/">About</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>马普所·非平衡态系统中的集体过程·语音转录 | 06. Non-equilibrium Criticality</h1>
+        <p class="subtitle">
+            February 25, 2021
+        </p>
+    <div class="postContent">
+        <h3 id="slide-1">slide 1</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">00:00</code> there we go
+<br /><code class="language-plaintext highlighter-rouge">00:07</code> okay so now you can see the screen i
+<br /><code class="language-plaintext highlighter-rouge">00:09</code> hope
+<br /><code class="language-plaintext highlighter-rouge">00:10</code> with a little overview so what where are
+<br /><code class="language-plaintext highlighter-rouge">00:13</code> we actually
+<br /><code class="language-plaintext highlighter-rouge">00:14</code> uh at the moment yeah so we had uh
+<br /><code class="language-plaintext highlighter-rouge">00:18</code> two lectures ago we started thinking
+<br /><code class="language-plaintext highlighter-rouge">00:20</code> about how order can emerge
+<br /><code class="language-plaintext highlighter-rouge">00:22</code> you know and we said that this somehow
+<br /><code class="language-plaintext highlighter-rouge">00:25</code> um very often uh relies on a balance
+<br /><code class="language-plaintext highlighter-rouge">00:29</code> between
+<br /><code class="language-plaintext highlighter-rouge">00:30</code> fluctuations you know that favor
+<br /><code class="language-plaintext highlighter-rouge">00:31</code> disorder and
+<br /><code class="language-plaintext highlighter-rouge">00:33</code> interactions that favor order
+<br /><code class="language-plaintext highlighter-rouge">00:37</code> and then we went on next week last week
+<br /><code class="language-plaintext highlighter-rouge">00:40</code> to study how we can have transitions
+<br /><code class="language-plaintext highlighter-rouge">00:44</code> between different non-equilibrium states
+<br /><code class="language-plaintext highlighter-rouge">00:48</code> for example between a
+<br /><code class="language-plaintext highlighter-rouge">00:49</code> disordered and an order state or between
+<br /><code class="language-plaintext highlighter-rouge">00:52</code> different kinds of ordered states
+<br /><code class="language-plaintext highlighter-rouge">00:54</code> and we started that in a situation where
+<br /><code class="language-plaintext highlighter-rouge">00:56</code> we neglected
+<br /><code class="language-plaintext highlighter-rouge">00:58</code> moles we pretended that our
+<br /><code class="language-plaintext highlighter-rouge">01:00</code> non-equilibrium system
+<br /><code class="language-plaintext highlighter-rouge">01:01</code> or our general system could also be an
+<br /><code class="language-plaintext highlighter-rouge">01:04</code> equilibrium system is very very large
+<br /><code class="language-plaintext highlighter-rouge">01:06</code> and then we were basically back in the
+<br /><code class="language-plaintext highlighter-rouge">01:08</code> framework
+<br /><code class="language-plaintext highlighter-rouge">01:09</code> of non-linear differential equations and
+<br /><code class="language-plaintext highlighter-rouge">01:12</code> non-linear partial differential
+<br /><code class="language-plaintext highlighter-rouge">01:14</code> equations
+<br /><code class="language-plaintext highlighter-rouge">01:15</code> and to understand then what kind of
+<br /><code class="language-plaintext highlighter-rouge">01:17</code> order we had
+<br /><code class="language-plaintext highlighter-rouge">01:19</code> we looked at specific situations here
+<br /><code class="language-plaintext highlighter-rouge">01:21</code> where this order
+<br /><code class="language-plaintext highlighter-rouge">01:23</code> or these patterns arose continuously
+<br /><code class="language-plaintext highlighter-rouge">01:26</code> or not abruptly but they first were
+<br /><code class="language-plaintext highlighter-rouge">01:28</code> small and then we can larger larger
+<br /><code class="language-plaintext highlighter-rouge">01:31</code> and in these situations were allowed and
+<br /><code class="language-plaintext highlighter-rouge">01:33</code> to linearize
+<br /><code class="language-plaintext highlighter-rouge">01:34</code> and to ignore these difficult
+<br /><code class="language-plaintext highlighter-rouge">01:38</code> non-linearities in these equations
+<br /><code class="language-plaintext highlighter-rouge">01:42</code> so today we’re now in a state where we
+<br /><code class="language-plaintext highlighter-rouge">01:44</code> want to
+<br /><code class="language-plaintext highlighter-rouge">01:46</code> join these two lectures now we’re
+<br /><code class="language-plaintext highlighter-rouge">01:49</code> looking at transitions between
+<br /><code class="language-plaintext highlighter-rouge">01:51</code> non-equilibrium
+<br /><code class="language-plaintext highlighter-rouge">01:53</code> steady states where
+<br /><code class="language-plaintext highlighter-rouge">01:57</code> we have noise yeah and i wouldn’t tell
+<br /><code class="language-plaintext highlighter-rouge">02:01</code> you that i wouldn’t have a lecture on
+<br /><code class="language-plaintext highlighter-rouge">02:02</code> this if
+<br /><code class="language-plaintext highlighter-rouge">02:03</code> the noise these fluctuations in these
+<br /><code class="language-plaintext highlighter-rouge">02:06</code> transitions weren’t super important
+<br /><code class="language-plaintext highlighter-rouge">02:09</code> and maybe yeah then
+<br /><code class="language-plaintext highlighter-rouge">02:12</code> once we’ve understood that we are in a
+<br /><code class="language-plaintext highlighter-rouge">02:15</code> position
+<br /><code class="language-plaintext highlighter-rouge">02:16</code> uh just to understand how does actually
+<br /><code class="language-plaintext highlighter-rouge">02:19</code> order look like
+<br /><code class="language-plaintext highlighter-rouge">02:20</code> how can we identify order and after that
+<br /><code class="language-plaintext highlighter-rouge">02:23</code> we’ll then
+<br /><code class="language-plaintext highlighter-rouge">02:23</code> go to data and actually learn some tools
+<br /><code class="language-plaintext highlighter-rouge">02:26</code> from data science
+<br /><code class="language-plaintext highlighter-rouge">02:27</code> on how to extract such order
+<br /><code class="language-plaintext highlighter-rouge">02:31</code> from complex and big data sets
+<br /><code class="language-plaintext highlighter-rouge">02:34</code> and then at the end of this lecture of
+<br /><code class="language-plaintext highlighter-rouge">02:37</code> this uh this term
+<br /><code class="language-plaintext highlighter-rouge">02:38</code> uh we’ll have a specific example from
+<br /><code class="language-plaintext highlighter-rouge">02:40</code> research where we bring that all
+<br /><code class="language-plaintext highlighter-rouge">02:42</code> together and we see
+<br /><code class="language-plaintext highlighter-rouge">02:43</code> how this works together uh in the
+<br /><code class="language-plaintext highlighter-rouge">02:45</code> context of
+<br /><code class="language-plaintext highlighter-rouge">02:46</code> current research</p>
+
+<h3 id="slide-2">slide 2</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">02:50</code> okay so to start
+<br /><code class="language-plaintext highlighter-rouge">02:54</code> let’s remind ourselves about
+<br /><code class="language-plaintext highlighter-rouge">02:57</code> how we actually transit from order to
+<br /><code class="language-plaintext highlighter-rouge">03:00</code> from disorder to order in equilibrium
+<br /><code class="language-plaintext highlighter-rouge">03:03</code> yeah and we’ll continue we’ll
+<br /><code class="language-plaintext highlighter-rouge">03:06</code> continue looking at continuous phase
+<br /><code class="language-plaintext highlighter-rouge">03:09</code> transition and
+<br /><code class="language-plaintext highlighter-rouge">03:10</code> in equilibrium these continuous phase
+<br /><code class="language-plaintext highlighter-rouge">03:12</code> positions are characterized
+<br /><code class="language-plaintext highlighter-rouge">03:14</code> by a critical point and this is just the
+<br /><code class="language-plaintext highlighter-rouge">03:16</code> point where this balance
+<br /><code class="language-plaintext highlighter-rouge">03:18</code> between fluctuations and interactions
+<br /><code class="language-plaintext highlighter-rouge">03:21</code> this ordering and these disordering
+<br /><code class="language-plaintext highlighter-rouge">03:24</code> forces
+<br /><code class="language-plaintext highlighter-rouge">03:25</code> are just equal now the system doesn’t
+<br /><code class="language-plaintext highlighter-rouge">03:27</code> really know
+<br /><code class="language-plaintext highlighter-rouge">03:28</code> exactly where to go whether to create an
+<br /><code class="language-plaintext highlighter-rouge">03:30</code> ordered state or to a completely
+<br /><code class="language-plaintext highlighter-rouge">03:32</code> disintegrated
+<br /><code class="language-plaintext highlighter-rouge">03:33</code> order state and it’s somewhere in
+<br /><code class="language-plaintext highlighter-rouge">03:34</code> between and
+<br /><code class="language-plaintext highlighter-rouge">03:36</code> uh so i i suppose
+<br /><code class="language-plaintext highlighter-rouge">03:39</code> uh you’ve you you’ll have had that in
+<br /><code class="language-plaintext highlighter-rouge">03:42</code> your
+<br /><code class="language-plaintext highlighter-rouge">03:42</code> statistical physics lecture normally
+<br /><code class="language-plaintext highlighter-rouge">03:44</code> yeah but at the end of the first
+<br /><code class="language-plaintext highlighter-rouge">03:46</code> statistical physics lectures but i’ll
+<br /><code class="language-plaintext highlighter-rouge">03:49</code> just give you
+<br /><code class="language-plaintext highlighter-rouge">03:51</code> a little reminder of the most important
+<br /><code class="language-plaintext highlighter-rouge">03:54</code> concepts
+<br /><code class="language-plaintext highlighter-rouge">03:55</code> so here you see like this example from
+<br /><code class="language-plaintext highlighter-rouge">03:58</code> equilibrium
+<br /><code class="language-plaintext highlighter-rouge">03:59</code> this very powerful and intuitive model
+<br /><code class="language-plaintext highlighter-rouge">04:02</code> system which is called the izing model
+<br /><code class="language-plaintext highlighter-rouge">04:04</code> which is essentially modeling a
+<br /><code class="language-plaintext highlighter-rouge">04:05</code> ferromagnet magnet
+<br /><code class="language-plaintext highlighter-rouge">04:07</code> and on the left hand side you can see
+<br /><code class="language-plaintext highlighter-rouge">04:10</code> simulations
+<br /><code class="language-plaintext highlighter-rouge">04:12</code> for three different temperatures it’s
+<br /><code class="language-plaintext highlighter-rouge">04:15</code> just
+<br /><code class="language-plaintext highlighter-rouge">04:16</code> such an icing model and what you see
+<br /><code class="language-plaintext highlighter-rouge">04:18</code> here if the temperature is very low
+<br /><code class="language-plaintext highlighter-rouge">04:21</code> you get an ordered state now everything
+<br /><code class="language-plaintext highlighter-rouge">04:23</code> is black
+<br /><code class="language-plaintext highlighter-rouge">04:24</code> all spins are putting the same
+<br /><code class="language-plaintext highlighter-rouge">04:26</code> directions
+<br /><code class="language-plaintext highlighter-rouge">04:27</code> in the same direction and if the
+<br /><code class="language-plaintext highlighter-rouge">04:29</code> temperature is high
+<br /><code class="language-plaintext highlighter-rouge">04:32</code> then you get a disordered state and this
+<br /><code class="language-plaintext highlighter-rouge">04:35</code> disorder state as you see as a kind of
+<br /><code class="language-plaintext highlighter-rouge">04:37</code> salt and pepper state now the average
+<br /><code class="language-plaintext highlighter-rouge">04:40</code> magnetization is zero
+<br /><code class="language-plaintext highlighter-rouge">04:43</code> but and locally uh you will always find
+<br /><code class="language-plaintext highlighter-rouge">04:46</code> spin that goes up and down
+<br /><code class="language-plaintext highlighter-rouge">04:48</code> go up and down and then you have that
+<br /><code class="language-plaintext highlighter-rouge">04:50</code> thing in between these states
+<br /><code class="language-plaintext highlighter-rouge">04:52</code> yeah when the temperature is exactly
+<br /><code class="language-plaintext highlighter-rouge">04:56</code> equal to a critical temperature and this
+<br /><code class="language-plaintext highlighter-rouge">04:59</code> is where
+<br /><code class="language-plaintext highlighter-rouge">04:59</code> there is a balance between energy and
+<br /><code class="language-plaintext highlighter-rouge">05:02</code> entropy of
+<br /><code class="language-plaintext highlighter-rouge">05:03</code> fluctuations and order and
+<br /><code class="language-plaintext highlighter-rouge">05:06</code> what you see here is this state
+<br /><code class="language-plaintext highlighter-rouge">05:09</code> where you have these domains here
+<br /><code class="language-plaintext highlighter-rouge">05:11</code> domains of these black domains
+<br /><code class="language-plaintext highlighter-rouge">05:14</code> and if you zoom in to such a system
+<br /><code class="language-plaintext highlighter-rouge">05:18</code> what you’ll see at the critical point
+<br /><code class="language-plaintext highlighter-rouge">05:19</code> you’ll see that it looks exactly the
+<br /><code class="language-plaintext highlighter-rouge">05:21</code> same
+<br /><code class="language-plaintext highlighter-rouge">05:21</code> now you zoom in and you would wouldn’t
+<br /><code class="language-plaintext highlighter-rouge">05:24</code> be able to say whether this is a
+<br /><code class="language-plaintext highlighter-rouge">05:25</code> snapshot a zoomed in version of the one
+<br /><code class="language-plaintext highlighter-rouge">05:27</code> on the left hand side
+<br /><code class="language-plaintext highlighter-rouge">05:29</code> or whether this is an entirely different
+<br /><code class="language-plaintext highlighter-rouge">05:32</code> simulation
+<br /><code class="language-plaintext highlighter-rouge">05:34</code> and then you can zoom in further and
+<br /><code class="language-plaintext highlighter-rouge">05:35</code> further and
+<br /><code class="language-plaintext highlighter-rouge">05:37</code> you again all the time get the same
+<br /><code class="language-plaintext highlighter-rouge">05:39</code> impression that you can’t really make
+<br /><code class="language-plaintext highlighter-rouge">05:41</code> out
+<br /><code class="language-plaintext highlighter-rouge">05:42</code> uh what is now the typical length how
+<br /><code class="language-plaintext highlighter-rouge">05:44</code> large are these classes
+<br /><code class="language-plaintext highlighter-rouge">05:46</code> you have here these domains of all sizes
+<br /><code class="language-plaintext highlighter-rouge">05:49</code> equally now because you have domains
+<br /><code class="language-plaintext highlighter-rouge">05:53</code> these white things or black things of
+<br /><code class="language-plaintext highlighter-rouge">05:55</code> all
+<br /><code class="language-plaintext highlighter-rouge">05:56</code> size is equally represented you can’t
+<br /><code class="language-plaintext highlighter-rouge">05:59</code> make out a single sound you can’t make a
+<br /><code class="language-plaintext highlighter-rouge">06:01</code> typical
+<br /><code class="language-plaintext highlighter-rouge">06:02</code> length scale here because you can’t say
+<br /><code class="language-plaintext highlighter-rouge">06:04</code> that
+<br /><code class="language-plaintext highlighter-rouge">06:06</code> the typical size of such a cluster here
+<br /><code class="language-plaintext highlighter-rouge">06:10</code> is for example that large
+<br /><code class="language-plaintext highlighter-rouge">06:13</code> as you always find clusters that are
+<br /><code class="language-plaintext highlighter-rouge">06:15</code> much smaller you find glasses that are
+<br /><code class="language-plaintext highlighter-rouge">06:17</code> much
+<br /><code class="language-plaintext highlighter-rouge">06:17</code> larger here’s a cluster now that has the
+<br /><code class="language-plaintext highlighter-rouge">06:20</code> size of the entire system that’s
+<br /><code class="language-plaintext highlighter-rouge">06:22</code> infinitely large
+<br /><code class="language-plaintext highlighter-rouge">06:23</code> and then you have all a spectrum of
+<br /><code class="language-plaintext highlighter-rouge">06:26</code> sizes in between that
+<br /><code class="language-plaintext highlighter-rouge">06:28</code> yeah well here in this example you kind
+<br /><code class="language-plaintext highlighter-rouge">06:31</code> of get an idea
+<br /><code class="language-plaintext highlighter-rouge">06:33</code> that these clusters are typically very
+<br /><code class="language-plaintext highlighter-rouge">06:35</code> small
+<br /><code class="language-plaintext highlighter-rouge">06:36</code> these domains whereas pin points up or
+<br /><code class="language-plaintext highlighter-rouge">06:38</code> so are very small they have a
+<br /><code class="language-plaintext highlighter-rouge">06:40</code> typical size but you can’t see it on the
+<br /><code class="language-plaintext highlighter-rouge">06:42</code> left hand side
+<br /><code class="language-plaintext highlighter-rouge">06:44</code> yeah same as if i would zoom in with
+<br /><code class="language-plaintext highlighter-rouge">06:46</code> this camera you know so
+<br /><code class="language-plaintext highlighter-rouge">06:49</code> if we do like this now you immediately
+<br /><code class="language-plaintext highlighter-rouge">06:52</code> see
+<br /><code class="language-plaintext highlighter-rouge">06:53</code> that i zoomed in now because i have a
+<br /><code class="language-plaintext highlighter-rouge">06:56</code> characteristic size i’m
+<br /><code class="language-plaintext highlighter-rouge">06:57</code> one meter 80 or something yeah and now
+<br /><code class="language-plaintext highlighter-rouge">07:00</code> you
+<br /><code class="language-plaintext highlighter-rouge">07:00</code> see that you that have zoomed in the
+<br /><code class="language-plaintext highlighter-rouge">07:02</code> camera and the picture is not the same
+<br /><code class="language-plaintext highlighter-rouge">07:04</code> as before
+<br /><code class="language-plaintext highlighter-rouge">07:06</code> so i’m not in a critical state yeah but
+<br /><code class="language-plaintext highlighter-rouge">07:09</code> the icing system is in a critical state
+<br /><code class="language-plaintext highlighter-rouge">07:12</code> and this critical state is characterized
+<br /><code class="language-plaintext highlighter-rouge">07:15</code> by self-similarity
+<br /><code class="language-plaintext highlighter-rouge">07:17</code> so they have structures of all sizes
+<br /><code class="language-plaintext highlighter-rouge">07:19</code> represented
+<br /><code class="language-plaintext highlighter-rouge">07:21</code> in this system now this is the
+<br /><code class="language-plaintext highlighter-rouge">07:23</code> self-similarity
+<br /><code class="language-plaintext highlighter-rouge">07:24</code> and the mathematical representation of
+<br /><code class="language-plaintext highlighter-rouge">07:27</code> the self-similarity
+<br /><code class="language-plaintext highlighter-rouge">07:28</code> the fact that you don’t have an average
+<br /><code class="language-plaintext highlighter-rouge">07:30</code> cluster size
+<br /><code class="language-plaintext highlighter-rouge">07:32</code> is that the correlation length diverges
+<br /><code class="language-plaintext highlighter-rouge">07:35</code> now so the correlation length is
+<br /><code class="language-plaintext highlighter-rouge">07:37</code> infinity
+<br /><code class="language-plaintext highlighter-rouge">07:38</code> that means the correlation function you
+<br /><code class="language-plaintext highlighter-rouge">07:41</code> know
+<br /><code class="language-plaintext highlighter-rouge">07:41</code> so how that represents how large
+<br /><code class="language-plaintext highlighter-rouge">07:45</code> these clusters are is scale in variance
+<br /><code class="language-plaintext highlighter-rouge">07:48</code> that means
+<br /><code class="language-plaintext highlighter-rouge">07:49</code> that really classes of different sizes
+<br /><code class="language-plaintext highlighter-rouge">07:51</code> are equally represented
+<br /><code class="language-plaintext highlighter-rouge">07:53</code> and such if you ask what is the
+<br /><code class="language-plaintext highlighter-rouge">07:55</code> probability that i
+<br /><code class="language-plaintext highlighter-rouge">07:56</code> am now in a white cluster that i’m in a
+<br /><code class="language-plaintext highlighter-rouge">07:59</code> black cluster a certain distance away
+<br /><code class="language-plaintext highlighter-rouge">08:01</code> then the answer to this doesn’t depend
+<br /><code class="language-plaintext highlighter-rouge">08:03</code> on any specific distance
+<br /><code class="language-plaintext highlighter-rouge">08:05</code> you know it’s the same this probability
+<br /><code class="language-plaintext highlighter-rouge">08:07</code> is the same this
+<br /><code class="language-plaintext highlighter-rouge">08:08</code> correlation function here it’s the same
+<br /><code class="language-plaintext highlighter-rouge">08:11</code> when we
+<br /><code class="language-plaintext highlighter-rouge">08:12</code> calculated in the original version of
+<br /><code class="language-plaintext highlighter-rouge">08:15</code> the simulation or a zoomed in
+<br /><code class="language-plaintext highlighter-rouge">08:17</code> uh fraction of this this is the
+<br /><code class="language-plaintext highlighter-rouge">08:19</code> self-similarity
+<br /><code class="language-plaintext highlighter-rouge">08:21</code> the self-similarity at a critical point
+<br /><code class="language-plaintext highlighter-rouge">08:23</code> goes along with power laws
+<br /><code class="language-plaintext highlighter-rouge">08:26</code> you know so the power laws have the um
+<br /><code class="language-plaintext highlighter-rouge">08:30</code> for example like this here the critical
+<br /><code class="language-plaintext highlighter-rouge">08:31</code> length as you go the critical
+<br /><code class="language-plaintext highlighter-rouge">08:34</code> correlation length as you go closer to
+<br /><code class="language-plaintext highlighter-rouge">08:37</code> the
+<br /><code class="language-plaintext highlighter-rouge">08:37</code> critical point diverges to infinity it
+<br /><code class="language-plaintext highlighter-rouge">08:40</code> goes to infinity
+<br /><code class="language-plaintext highlighter-rouge">08:42</code> and it does so with an exponent that’s
+<br /><code class="language-plaintext highlighter-rouge">08:44</code> to be
+<br /><code class="language-plaintext highlighter-rouge">08:45</code> called new when this gets zero here
+<br /><code class="language-plaintext highlighter-rouge">08:49</code> this term will be infinity and these
+<br /><code class="language-plaintext highlighter-rouge">08:51</code> exponents
+<br /><code class="language-plaintext highlighter-rouge">08:52</code> capture how fast you go to infinity
+<br /><code class="language-plaintext highlighter-rouge">08:56</code> and these exponents are very the fact
+<br /><code class="language-plaintext highlighter-rouge">08:58</code> that you have an exponent but
+<br /><code class="language-plaintext highlighter-rouge">08:59</code> that you have such a power rule means
+<br /><code class="language-plaintext highlighter-rouge">09:02</code> that yourself similar you have a power
+<br /><code class="language-plaintext highlighter-rouge">09:04</code> law if you have
+<br /><code class="language-plaintext highlighter-rouge">09:06</code> something like this you can zoom in and
+<br /><code class="language-plaintext highlighter-rouge">09:08</code> you still have the same exponent here
+<br /><code class="language-plaintext highlighter-rouge">09:10</code> and you can’t do that with an
+<br /><code class="language-plaintext highlighter-rouge">09:11</code> exponential function or so
+<br /><code class="language-plaintext highlighter-rouge">09:14</code> now and it also tells you that this is
+<br /><code class="language-plaintext highlighter-rouge">09:17</code> here
+<br /><code class="language-plaintext highlighter-rouge">09:18</code> uh if you have power laws from some
+<br /><code class="language-plaintext highlighter-rouge">09:20</code> distribution that goes over
+<br /><code class="language-plaintext highlighter-rouge">09:22</code> that has a power law that has this long
+<br /><code class="language-plaintext highlighter-rouge">09:25</code> tail some exponent you cannot typically
+<br /><code class="language-plaintext highlighter-rouge">09:29</code> calculate averages or moments because
+<br /><code class="language-plaintext highlighter-rouge">09:31</code> these integrals diverge
+<br /><code class="language-plaintext highlighter-rouge">09:34</code> now you have the power law of the
+<br /><code class="language-plaintext highlighter-rouge">09:35</code> correlation function and you have a
+<br /><code class="language-plaintext highlighter-rouge">09:38</code> power law
+<br /><code class="language-plaintext highlighter-rouge">09:38</code> now if you have a power of the
+<br /><code class="language-plaintext highlighter-rouge">09:39</code> correlation function you also have the
+<br /><code class="language-plaintext highlighter-rouge">09:41</code> power laws
+<br /><code class="language-plaintext highlighter-rouge">09:42</code> for example in the density and the
+<br /><code class="language-plaintext highlighter-rouge">09:44</code> magnetization
+<br /><code class="language-plaintext highlighter-rouge">09:46</code> uh near the critical point and all kinds
+<br /><code class="language-plaintext highlighter-rouge">09:48</code> of other thermodynamic
+<br /><code class="language-plaintext highlighter-rouge">09:50</code> quantities and i just wanted to briefly</p>
+
+<h3 id="slide-3">slide 3</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">09:53</code> show you why this is the case
+<br /><code class="language-plaintext highlighter-rouge">09:55</code> now it’s actually the background of this
+<br /><code class="language-plaintext highlighter-rouge">09:58</code> the background of this is actually an
+<br /><code class="language-plaintext highlighter-rouge">09:59</code> assumption
+<br /><code class="language-plaintext highlighter-rouge">10:01</code> that you say you have a free energy
+<br /><code class="language-plaintext highlighter-rouge">10:05</code> and with this free energy uh
+<br /><code class="language-plaintext highlighter-rouge">10:08</code> this free energy as you go to the
+<br /><code class="language-plaintext highlighter-rouge">10:10</code> critical pound point uh
+<br /><code class="language-plaintext highlighter-rouge">10:11</code> gets in finite it has singularity
+<br /><code class="language-plaintext highlighter-rouge">10:15</code> and then you say that you assume
+<br /><code class="language-plaintext highlighter-rouge">10:19</code> that the free energy here
+<br /><code class="language-plaintext highlighter-rouge">10:23</code> this free energy has
+<br /><code class="language-plaintext highlighter-rouge">10:26</code> one part that has all the physics and
+<br /><code class="language-plaintext highlighter-rouge">10:29</code> all the details a regular part
+<br /><code class="language-plaintext highlighter-rouge">10:32</code> but you say that the part of the free
+<br /><code class="language-plaintext highlighter-rouge">10:33</code> energy that
+<br /><code class="language-plaintext highlighter-rouge">10:35</code> diverges at a critical point
+<br /><code class="language-plaintext highlighter-rouge">10:39</code> this one here so now it’s is a
+<br /><code class="language-plaintext highlighter-rouge">10:44</code> t t
+<br /><code class="language-plaintext highlighter-rouge">10:46</code> is something like t minus
+<br /><code class="language-plaintext highlighter-rouge">10:50</code> t c over t you know and h
+<br /><code class="language-plaintext highlighter-rouge">10:53</code> is the external field if you have
+<br /><code class="language-plaintext highlighter-rouge">10:56</code> something like this as a free energy as
+<br /><code class="language-plaintext highlighter-rouge">10:58</code> the function of these parameters
+<br /><code class="language-plaintext highlighter-rouge">11:00</code> yeah then the singular part the one that
+<br /><code class="language-plaintext highlighter-rouge">11:03</code> goes to infinity
+<br /><code class="language-plaintext highlighter-rouge">11:05</code> is a homogeneous function
+<br /><code class="language-plaintext highlighter-rouge">11:08</code> homogeneous function just uh tells you
+<br /><code class="language-plaintext highlighter-rouge">11:12</code> that if you have f of
+<br /><code class="language-plaintext highlighter-rouge">11:15</code> lambda x that this is equal to
+<br /><code class="language-plaintext highlighter-rouge">11:18</code> lambda to the power of some alpha
+<br /><code class="language-plaintext highlighter-rouge">11:22</code> f on x yeah and this represents that
+<br /><code class="language-plaintext highlighter-rouge">11:25</code> just this these gains zooming in you
+<br /><code class="language-plaintext highlighter-rouge">11:28</code> have the same function you zoom in where
+<br /><code class="language-plaintext highlighter-rouge">11:29</code> you rescale your variable
+<br /><code class="language-plaintext highlighter-rouge">11:31</code> you zoom in and you get the same
+<br /><code class="language-plaintext highlighter-rouge">11:33</code> function back
+<br /><code class="language-plaintext highlighter-rouge">11:34</code> now this is a homogeneous function and
+<br /><code class="language-plaintext highlighter-rouge">11:37</code> you still assume that this free energy
+<br /><code class="language-plaintext highlighter-rouge">11:39</code> density in this case is a homogeneous
+<br /><code class="language-plaintext highlighter-rouge">11:42</code> function
+<br /><code class="language-plaintext highlighter-rouge">11:43</code> and this homogeneous function can only
+<br /><code class="language-plaintext highlighter-rouge">11:45</code> depend
+<br /><code class="language-plaintext highlighter-rouge">11:46</code> on dimensionless quantities now for
+<br /><code class="language-plaintext highlighter-rouge">11:49</code> example
+<br /><code class="language-plaintext highlighter-rouge">11:50</code> you wouldn’t expect this divergence to
+<br /><code class="language-plaintext highlighter-rouge">11:53</code> infinity
+<br /><code class="language-plaintext highlighter-rouge">11:54</code> to depend on how you measure a length
+<br /><code class="language-plaintext highlighter-rouge">11:58</code> now whether you measure the length in
+<br /><code class="language-plaintext highlighter-rouge">12:01</code> units of centimeters or meters
+<br /><code class="language-plaintext highlighter-rouge">12:04</code> whether you measure temperature in
+<br /><code class="language-plaintext highlighter-rouge">12:07</code> kelvin or in units of one kelvin or two
+<br /><code class="language-plaintext highlighter-rouge">12:10</code> kelvins or so
+<br /><code class="language-plaintext highlighter-rouge">12:12</code> so you can see you these kind of things
+<br /><code class="language-plaintext highlighter-rouge">12:15</code> these units
+<br /><code class="language-plaintext highlighter-rouge">12:15</code> dimensions should be irrelevant for how
+<br /><code class="language-plaintext highlighter-rouge">12:18</code> this quantity goes to infinity
+<br /><code class="language-plaintext highlighter-rouge">12:22</code> yeah and if we say that then we say okay
+<br /><code class="language-plaintext highlighter-rouge">12:24</code> so we have
+<br /><code class="language-plaintext highlighter-rouge">12:26</code> here so-called scaling function that
+<br /><code class="language-plaintext highlighter-rouge">12:29</code> depends on dimensional parameter
+<br /><code class="language-plaintext highlighter-rouge">12:31</code> a dimensional dimensionless
+<br /><code class="language-plaintext highlighter-rouge">12:34</code> combinations of our parameters so the
+<br /><code class="language-plaintext highlighter-rouge">12:37</code> external field
+<br /><code class="language-plaintext highlighter-rouge">12:38</code> divided to the temperature and then we
+<br /><code class="language-plaintext highlighter-rouge">12:40</code> have to
+<br /><code class="language-plaintext highlighter-rouge">12:41</code> take the temperature to some power of
+<br /><code class="language-plaintext highlighter-rouge">12:43</code> something
+<br /><code class="language-plaintext highlighter-rouge">12:45</code> to make everything dimensionless
+<br /><code class="language-plaintext highlighter-rouge">12:48</code> so that it has no units no and there’s
+<br /><code class="language-plaintext highlighter-rouge">12:51</code> something that’s not
+<br /><code class="language-plaintext highlighter-rouge">12:52</code> something we don’t know yeah and
+<br /><code class="language-plaintext highlighter-rouge">12:56</code> this has the free energy has some units
+<br /><code class="language-plaintext highlighter-rouge">12:59</code> therefore the whole thing gets doesn’t
+<br /><code class="language-plaintext highlighter-rouge">13:01</code> have the units you need a pre-factor
+<br /><code class="language-plaintext highlighter-rouge">13:04</code> that gives you the right units you know
+<br /><code class="language-plaintext highlighter-rouge">13:06</code> and then
+<br /><code class="language-plaintext highlighter-rouge">13:08</code> you have this alpha which we don’t know
+<br /><code class="language-plaintext highlighter-rouge">13:11</code> yeah
+<br /><code class="language-plaintext highlighter-rouge">13:11</code> this is some exponent that depends on
+<br /><code class="language-plaintext highlighter-rouge">13:13</code> the specific model
+<br /><code class="language-plaintext highlighter-rouge">13:14</code> for example for the eisenmann zero
+<br /><code class="language-plaintext highlighter-rouge">13:17</code> you know and then you have these uh this
+<br /><code class="language-plaintext highlighter-rouge">13:20</code> is the
+<br /><code class="language-plaintext highlighter-rouge">13:21</code> consequence of how you translate this
+<br /><code class="language-plaintext highlighter-rouge">13:23</code> homogeneity
+<br /><code class="language-plaintext highlighter-rouge">13:25</code> here of the free energy to something
+<br /><code class="language-plaintext highlighter-rouge">13:28</code> that you give names
+<br /><code class="language-plaintext highlighter-rouge">13:29</code> as you have here this part that diverges
+<br /><code class="language-plaintext highlighter-rouge">13:32</code> yeah that has the units
+<br /><code class="language-plaintext highlighter-rouge">13:34</code> and this part here is the so-called
+<br /><code class="language-plaintext highlighter-rouge">13:37</code> scaling function
+<br /><code class="language-plaintext highlighter-rouge">13:38</code> that only depends on dimensionless
+<br /><code class="language-plaintext highlighter-rouge">13:40</code> parameters
+<br /><code class="language-plaintext highlighter-rouge">13:41</code> and it turns out that these exponents
+<br /><code class="language-plaintext highlighter-rouge">13:43</code> and this scaling function are universal
+<br /><code class="language-plaintext highlighter-rouge">13:45</code> so if you know it for one model then you
+<br /><code class="language-plaintext highlighter-rouge">13:47</code> know it will know it
+<br /><code class="language-plaintext highlighter-rouge">13:49</code> you will know it for a very large class
+<br /><code class="language-plaintext highlighter-rouge">13:52</code> and we’ll see that once we do
+<br /><code class="language-plaintext highlighter-rouge">13:53</code> renormalization later today
+<br /><code class="language-plaintext highlighter-rouge">13:57</code> so uh so what does it mean yeah so if we
+<br /><code class="language-plaintext highlighter-rouge">13:59</code> make this
+<br /><code class="language-plaintext highlighter-rouge">14:00</code> assumption that’s really an assumption
+<br /><code class="language-plaintext highlighter-rouge">14:02</code> about
+<br /><code class="language-plaintext highlighter-rouge">14:04</code> homogeneity of the free energy then we
+<br /><code class="language-plaintext highlighter-rouge">14:07</code> can calculate for example
+<br /><code class="language-plaintext highlighter-rouge">14:09</code> the magnetization m of th
+<br /><code class="language-plaintext highlighter-rouge">14:12</code> now this is in thermodynamics something
+<br /><code class="language-plaintext highlighter-rouge">14:14</code> like
+<br /><code class="language-plaintext highlighter-rouge">14:16</code> del f 2 del h
+<br /><code class="language-plaintext highlighter-rouge">14:19</code> you know and then we just plug this in
+<br /><code class="language-plaintext highlighter-rouge">14:22</code> and we get something like temperature
+<br /><code class="language-plaintext highlighter-rouge">14:25</code> this reduced temperature
+<br /><code class="language-plaintext highlighter-rouge">14:27</code> t to the power of minus 2 minus alpha
+<br /><code class="language-plaintext highlighter-rouge">14:30</code> means
+<br /><code class="language-plaintext highlighter-rouge">14:30</code> minus delta some other function that we
+<br /><code class="language-plaintext highlighter-rouge">14:34</code> don’t know
+<br /><code class="language-plaintext highlighter-rouge">14:35</code> that again depends on a dimensionless
+<br /><code class="language-plaintext highlighter-rouge">14:40</code> parameter and then
+<br /><code class="language-plaintext highlighter-rouge">14:44</code> this scales like some better that’s the
+<br /><code class="language-plaintext highlighter-rouge">14:47</code> definition
+<br /><code class="language-plaintext highlighter-rouge">14:48</code> of this exponent better of the
+<br /><code class="language-plaintext highlighter-rouge">14:50</code> magnetization
+<br /><code class="language-plaintext highlighter-rouge">14:52</code> yeah and uh so in thermodynamics this is
+<br /><code class="language-plaintext highlighter-rouge">14:55</code> called
+<br /><code class="language-plaintext highlighter-rouge">14:56</code> <strong>rhythm scaling</strong> basically in any textbook
+<br /><code class="language-plaintext highlighter-rouge">14:59</code> on statistical physics
+<br /><code class="language-plaintext highlighter-rouge">15:00</code> and it’s just just to show you how the
+<br /><code class="language-plaintext highlighter-rouge">15:04</code> assumption
+<br /><code class="language-plaintext highlighter-rouge">15:05</code> of homogeneity near the critical point
+<br /><code class="language-plaintext highlighter-rouge">15:09</code> leads to power laws in other
+<br /><code class="language-plaintext highlighter-rouge">15:11</code> thermodynamic quantities
+<br /><code class="language-plaintext highlighter-rouge">15:13</code> i’ve shown you here the magnetization
+<br /><code class="language-plaintext highlighter-rouge">15:17</code> this was the magnetization
+<br /><code class="language-plaintext highlighter-rouge">15:23</code> but the same holds true for example for
+<br /><code class="language-plaintext highlighter-rouge">15:26</code> susceptibility
+<br /><code class="language-plaintext highlighter-rouge">15:27</code> and other thermodynamic quantities that
+<br /><code class="language-plaintext highlighter-rouge">15:29</code> you can get by taking derivatives of
+<br /><code class="language-plaintext highlighter-rouge">15:31</code> your
+<br /><code class="language-plaintext highlighter-rouge">15:32</code> energy so
+<br /><code class="language-plaintext highlighter-rouge">15:35</code> this homogeneity or this self-similarity
+<br /><code class="language-plaintext highlighter-rouge">15:39</code> that i showed you here that is a
+<br /><code class="language-plaintext highlighter-rouge">15:41</code> reflection that is one of the hallmarks
+<br /><code class="language-plaintext highlighter-rouge">15:44</code> of uh critical behavior and that’s what
+<br /><code class="language-plaintext highlighter-rouge">15:47</code> we’re looking for when we look for
+<br /><code class="language-plaintext highlighter-rouge">15:49</code> critical behavior
+<br /><code class="language-plaintext highlighter-rouge">15:50</code> and now the question is can we see
+<br /><code class="language-plaintext highlighter-rouge">15:53</code> something like this
+<br /><code class="language-plaintext highlighter-rouge">15:55</code> also a non-equilibrium system</p>
+
+<h3 id="slide-4">slide 4</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">15:58</code> before before i start with that
+<br /><code class="language-plaintext highlighter-rouge">16:01</code> uh let’s just have a look at one
+<br /><code class="language-plaintext highlighter-rouge">16:02</code> specific how this scaling
+<br /><code class="language-plaintext highlighter-rouge">16:04</code> behaves if you look at these equations
+<br /><code class="language-plaintext highlighter-rouge">16:08</code> here
+<br /><code class="language-plaintext highlighter-rouge">16:10</code> what does it mean it means that
+<br /><code class="language-plaintext highlighter-rouge">16:13</code> actually the curves that you get you
+<br /><code class="language-plaintext highlighter-rouge">16:16</code> know so if you just divide so once you
+<br /><code class="language-plaintext highlighter-rouge">16:19</code> make a measurement for example with a
+<br /><code class="language-plaintext highlighter-rouge">16:21</code> known temperature
+<br /><code class="language-plaintext highlighter-rouge">16:23</code> and a known magnetic field you measure
+<br /><code class="language-plaintext highlighter-rouge">16:26</code> this function here
+<br /><code class="language-plaintext highlighter-rouge">16:28</code> then you know that it doesn’t depend
+<br /><code class="language-plaintext highlighter-rouge">16:29</code> separately
+<br /><code class="language-plaintext highlighter-rouge">16:31</code> on the age and the temperature
+<br /><code class="language-plaintext highlighter-rouge">16:35</code> so you can rescale your axis so this is
+<br /><code class="language-plaintext highlighter-rouge">16:37</code> what is your y
+<br /><code class="language-plaintext highlighter-rouge">16:38</code> x axis you can use that your x axis and
+<br /><code class="language-plaintext highlighter-rouge">16:41</code> your y
+<br /><code class="language-plaintext highlighter-rouge">16:42</code> axis to make all of these curves
+<br /><code class="language-plaintext highlighter-rouge">16:46</code> collapse onto each other yeah and this
+<br /><code class="language-plaintext highlighter-rouge">16:49</code> is this uh
+<br /><code class="language-plaintext highlighter-rouge">16:50</code> scaling form that we see in equilibrium
+<br /><code class="language-plaintext highlighter-rouge">16:54</code> physics this is for the icing model
+<br /><code class="language-plaintext highlighter-rouge">16:56</code> so on the x-axis we have this scaled
+<br /><code class="language-plaintext highlighter-rouge">16:58</code> temperature
+<br /><code class="language-plaintext highlighter-rouge">16:59</code> that would be t on the previous slide
+<br /><code class="language-plaintext highlighter-rouge">17:02</code> lowercase t
+<br /><code class="language-plaintext highlighter-rouge">17:04</code> uh times something so this is v scale
+<br /><code class="language-plaintext highlighter-rouge">17:08</code> and then these uh people in these
+<br /><code class="language-plaintext highlighter-rouge">17:11</code> experiments
+<br /><code class="language-plaintext highlighter-rouge">17:12</code> for uh for
+<br /><code class="language-plaintext highlighter-rouge">17:15</code> for a ferro ferromagnet measured
+<br /><code class="language-plaintext highlighter-rouge">17:18</code> the magnetization for different values
+<br /><code class="language-plaintext highlighter-rouge">17:20</code> of the
+<br /><code class="language-plaintext highlighter-rouge">17:22</code> of different experimental parameter
+<br /><code class="language-plaintext highlighter-rouge">17:24</code> values
+<br /><code class="language-plaintext highlighter-rouge">17:25</code> like magnetic field external magnetic
+<br /><code class="language-plaintext highlighter-rouge">17:27</code> field temperature
+<br /><code class="language-plaintext highlighter-rouge">17:30</code> and by making use of this formula here
+<br /><code class="language-plaintext highlighter-rouge">17:33</code> you see that uh the scaling
+<br /><code class="language-plaintext highlighter-rouge">17:37</code> behavior what is where is my
+<br /><code class="language-plaintext highlighter-rouge">17:40</code> is it going down here yeah that’s the
+<br /><code class="language-plaintext highlighter-rouge">17:42</code> scaling behavior here
+<br /><code class="language-plaintext highlighter-rouge">17:45</code> yeah that the only thing
+<br /><code class="language-plaintext highlighter-rouge">17:49</code> that you don’t know is this g of m that
+<br /><code class="language-plaintext highlighter-rouge">17:52</code> you have to measure
+<br /><code class="language-plaintext highlighter-rouge">17:53</code> yeah once you know the h and the
+<br /><code class="language-plaintext highlighter-rouge">17:56</code> temperature
+<br /><code class="language-plaintext highlighter-rouge">17:58</code> you can make all of these different g of
+<br /><code class="language-plaintext highlighter-rouge">18:00</code> m’s the gms
+<br /><code class="language-plaintext highlighter-rouge">18:02</code> this scaling function you can rescale
+<br /><code class="language-plaintext highlighter-rouge">18:05</code> these axes
+<br /><code class="language-plaintext highlighter-rouge">18:06</code> to make them collapse onto each other
+<br /><code class="language-plaintext highlighter-rouge">18:09</code> yeah and this is this observation this
+<br /><code class="language-plaintext highlighter-rouge">18:11</code> is how you observe
+<br /><code class="language-plaintext highlighter-rouge">18:12</code> scaling an experiment so you manage to
+<br /><code class="language-plaintext highlighter-rouge">18:15</code> collapse
+<br /><code class="language-plaintext highlighter-rouge">18:16</code> your experimental curves by multiplying
+<br /><code class="language-plaintext highlighter-rouge">18:19</code> this x-axis and the y-axis with certain
+<br /><code class="language-plaintext highlighter-rouge">18:23</code> values
+<br /><code class="language-plaintext highlighter-rouge">18:23</code> of offense you have to guess you can
+<br /><code class="language-plaintext highlighter-rouge">18:27</code> collapse all of these curves on the same
+<br /><code class="language-plaintext highlighter-rouge">18:30</code> uh universal so-called scaling form
+<br /><code class="language-plaintext highlighter-rouge">18:34</code> now this is the manifestation of scaling
+<br /><code class="language-plaintext highlighter-rouge">18:36</code> and that’s of course
+<br /><code class="language-plaintext highlighter-rouge">18:37</code> also something we’ll be looking at and
+<br /><code class="language-plaintext highlighter-rouge">18:39</code> non-equilibrium systems
+<br /><code class="language-plaintext highlighter-rouge">18:41</code> but also in data
+<br /><code class="language-plaintext highlighter-rouge">18:44</code> now scaling is a whole mark of critical
+<br /><code class="language-plaintext highlighter-rouge">18:48</code> behavior and today</p>
+
+<h3 id="slide-5">slide 5</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">18:52</code> we want to see whether these concepts
+<br /><code class="language-plaintext highlighter-rouge">18:56</code> of scaling and criticality yeah
+<br /><code class="language-plaintext highlighter-rouge">18:59</code> where and these these continuous
+<br /><code class="language-plaintext highlighter-rouge">19:02</code> phase transitions actually also extend
+<br /><code class="language-plaintext highlighter-rouge">19:05</code> to non-equilibrium systems
+<br /><code class="language-plaintext highlighter-rouge">19:07</code> yeah and it turns out so now we first we
+<br /><code class="language-plaintext highlighter-rouge">19:10</code> need to find a non-equilibrium system
+<br /><code class="language-plaintext highlighter-rouge">19:12</code> that is as intuitive
+<br /><code class="language-plaintext highlighter-rouge">19:15</code> as the ising model and the icing model
+<br /><code class="language-plaintext highlighter-rouge">19:18</code> is very intuitive
+<br /><code class="language-plaintext highlighter-rouge">19:19</code> you have that in your lectures when
+<br /><code class="language-plaintext highlighter-rouge">19:21</code> you’re a student and
+<br /><code class="language-plaintext highlighter-rouge">19:22</code> in your later life as a scientist you
+<br /><code class="language-plaintext highlighter-rouge">19:24</code> always refer to that because it’s so
+<br /><code class="language-plaintext highlighter-rouge">19:26</code> simple and intuitive that uh you can
+<br /><code class="language-plaintext highlighter-rouge">19:28</code> explain a lot of things a lot of
+<br /><code class="language-plaintext highlighter-rouge">19:30</code> things about continuous phase
+<br /><code class="language-plaintext highlighter-rouge">19:32</code> transitions in equilibrium
+<br /><code class="language-plaintext highlighter-rouge">19:33</code> just based on this very simple model
+<br /><code class="language-plaintext highlighter-rouge">19:35</code> like i did in the beginning of this
+<br /><code class="language-plaintext highlighter-rouge">19:37</code> lecture
+<br /><code class="language-plaintext highlighter-rouge">19:38</code> and it turns out now that the uh
+<br /><code class="language-plaintext highlighter-rouge">19:41</code> icing model of non-equilibrium physics
+<br /><code class="language-plaintext highlighter-rouge">19:44</code> of course is
+<br /><code class="language-plaintext highlighter-rouge">19:46</code> that so people would dig a disagree but
+<br /><code class="language-plaintext highlighter-rouge">19:48</code> one of the simplest models in
+<br /><code class="language-plaintext highlighter-rouge">19:49</code> mono-equilibrium physics that shows
+<br /><code class="language-plaintext highlighter-rouge">19:52</code> critical behavior
+<br /><code class="language-plaintext highlighter-rouge">19:53</code> is an epidemic model and this epidemic
+<br /><code class="language-plaintext highlighter-rouge">19:56</code> model we knew already
+<br /><code class="language-plaintext highlighter-rouge">19:57</code> from the previous lectures here we have
+<br /><code class="language-plaintext highlighter-rouge">20:02</code> our good old si model again
+<br /><code class="language-plaintext highlighter-rouge">20:06</code> now so this epidemic model is this is
+<br /><code class="language-plaintext highlighter-rouge">20:08</code> the simplest model
+<br /><code class="language-plaintext highlighter-rouge">20:10</code> that you can think about so you have
+<br /><code class="language-plaintext highlighter-rouge">20:11</code> infected individuals
+<br /><code class="language-plaintext highlighter-rouge">20:14</code> i and susceptible individuals or
+<br /><code class="language-plaintext highlighter-rouge">20:17</code> healthier people’s less
+<br /><code class="language-plaintext highlighter-rouge">20:19</code> now if an i meets an s
+<br /><code class="language-plaintext highlighter-rouge">20:22</code> then the s gets infected with the rate
+<br /><code class="language-plaintext highlighter-rouge">20:25</code> say lambda half
+<br /><code class="language-plaintext highlighter-rouge">20:27</code> and turns into an affected infidel and
+<br /><code class="language-plaintext highlighter-rouge">20:30</code> in the end you have two of them
+<br /><code class="language-plaintext highlighter-rouge">20:33</code> then you have the other process that we
+<br /><code class="language-plaintext highlighter-rouge">20:34</code> recover
+<br /><code class="language-plaintext highlighter-rouge">20:36</code> and we set this rate to one now we can
+<br /><code class="language-plaintext highlighter-rouge">20:38</code> just set that to one
+<br /><code class="language-plaintext highlighter-rouge">20:40</code> without any loss of generality and uh
+<br /><code class="language-plaintext highlighter-rouge">20:43</code> so that infected we measure units
+<br /><code class="language-plaintext highlighter-rouge">20:46</code> time in units of this recovery rate
+<br /><code class="language-plaintext highlighter-rouge">20:50</code> you know service infected individuals
+<br /><code class="language-plaintext highlighter-rouge">20:52</code> can also
+<br /><code class="language-plaintext highlighter-rouge">20:54</code> then recover and become
+<br /><code class="language-plaintext highlighter-rouge">20:57</code> healthy again we have these two kinds of
+<br /><code class="language-plaintext highlighter-rouge">21:00</code> individuals
+<br /><code class="language-plaintext highlighter-rouge">21:01</code> and now we put them in the real world so
+<br /><code class="language-plaintext highlighter-rouge">21:04</code> last time we were only looking at some
+<br /><code class="language-plaintext highlighter-rouge">21:06</code> well-mixed
+<br /><code class="language-plaintext highlighter-rouge">21:07</code> average quantities but now we put them
+<br /><code class="language-plaintext highlighter-rouge">21:10</code> into the real world like the city of
+<br /><code class="language-plaintext highlighter-rouge">21:11</code> brisbane also
+<br /><code class="language-plaintext highlighter-rouge">21:13</code> where they actually can where actually
+<br /><code class="language-plaintext highlighter-rouge">21:16</code> space
+<br /><code class="language-plaintext highlighter-rouge">21:17</code> matters yeah so i’m more likely to
+<br /><code class="language-plaintext highlighter-rouge">21:19</code> infect somebody else working at the
+<br /><code class="language-plaintext highlighter-rouge">21:22</code> mp rpk pks than somebody looking at
+<br /><code class="language-plaintext highlighter-rouge">21:25</code> another max planck institute for example
+<br /><code class="language-plaintext highlighter-rouge">21:28</code> yeah so
+<br /><code class="language-plaintext highlighter-rouge">21:29</code> so here uh these spatial structures
+<br /><code class="language-plaintext highlighter-rouge">21:32</code> these special degrees of freedom
+<br /><code class="language-plaintext highlighter-rouge">21:34</code> uh are taken into account and the
+<br /><code class="language-plaintext highlighter-rouge">21:36</code> simplest way of you
+<br /><code class="language-plaintext highlighter-rouge">21:38</code> how you can think about this is at the
+<br /><code class="language-plaintext highlighter-rouge">21:40</code> bottom here
+<br /><code class="language-plaintext highlighter-rouge">21:42</code> now that you look at letters
+<br /><code class="language-plaintext highlighter-rouge">21:45</code> you have a letters each site
+<br /><code class="language-plaintext highlighter-rouge">21:48</code> carries either an affected individual or
+<br /><code class="language-plaintext highlighter-rouge">21:51</code> a recovered individual and
+<br /><code class="language-plaintext highlighter-rouge">21:55</code> you know an infected or a recovered
+<br /><code class="language-plaintext highlighter-rouge">21:56</code> individual and
+<br /><code class="language-plaintext highlighter-rouge">21:58</code> when an infected individual
+<br /><code class="language-plaintext highlighter-rouge">22:02</code> is next to a recovered a healthy one
+<br /><code class="language-plaintext highlighter-rouge">22:05</code> then
+<br /><code class="language-plaintext highlighter-rouge">22:05</code> the healthy one can turn into an
+<br /><code class="language-plaintext highlighter-rouge">22:07</code> infected one
+<br /><code class="language-plaintext highlighter-rouge">22:09</code> with a certain probability of with a
+<br /><code class="language-plaintext highlighter-rouge">22:10</code> certain rate lambda over two
+<br /><code class="language-plaintext highlighter-rouge">22:13</code> yeah and also there’s another process
+<br /><code class="language-plaintext highlighter-rouge">22:16</code> here if i saw if the
+<br /><code class="language-plaintext highlighter-rouge">22:18</code> individual on a certain position is
+<br /><code class="language-plaintext highlighter-rouge">22:21</code> infected
+<br /><code class="language-plaintext highlighter-rouge">22:21</code> it can turn into a healthy one at a rate
+<br /><code class="language-plaintext highlighter-rouge">22:24</code> lambda
+<br /><code class="language-plaintext highlighter-rouge">22:26</code> so this is this simple spatial version
+<br /><code class="language-plaintext highlighter-rouge">22:29</code> that you can think about for this and
+<br /><code class="language-plaintext highlighter-rouge">22:32</code> simple epidemic model and it’s also the
+<br /><code class="language-plaintext highlighter-rouge">22:35</code> literature is often called the contact
+<br /><code class="language-plaintext highlighter-rouge">22:38</code> process
+<br /><code class="language-plaintext highlighter-rouge">22:40</code> so of course real epidemic model models
+<br /><code class="language-plaintext highlighter-rouge">22:43</code> have
+<br /><code class="language-plaintext highlighter-rouge">22:44</code> typically one more component namely the
+<br /><code class="language-plaintext highlighter-rouge">22:47</code> um
+<br /><code class="language-plaintext highlighter-rouge">22:49</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">22:51</code> the infected recovered uh wait
+<br /><code class="language-plaintext highlighter-rouge">22:54</code> is this also here okay so so the third
+<br /><code class="language-plaintext highlighter-rouge">22:57</code> component that you normally have
+<br /><code class="language-plaintext highlighter-rouge">22:59</code> and these models are the recovered one
+<br /><code class="language-plaintext highlighter-rouge">23:01</code> the immune people
+<br /><code class="language-plaintext highlighter-rouge">23:02</code> now you have the disease yeah and then
+<br /><code class="language-plaintext highlighter-rouge">23:04</code> you are fine for the rest of your life
+<br /><code class="language-plaintext highlighter-rouge">23:06</code> and you’re immune to this disease
+<br /><code class="language-plaintext highlighter-rouge">23:08</code> so you can only forget in fact one then
+<br /><code class="language-plaintext highlighter-rouge">23:11</code> you have a third
+<br /><code class="language-plaintext highlighter-rouge">23:12</code> species here a third kinds of particles
+<br /><code class="language-plaintext highlighter-rouge">23:15</code> which would be the recovered ones
+<br /><code class="language-plaintext highlighter-rouge">23:17</code> or the immune ones and they cannot be a
+<br /><code class="language-plaintext highlighter-rouge">23:21</code> faculty again
+<br /><code class="language-plaintext highlighter-rouge">23:22</code> but this slightly more complicated model
+<br /><code class="language-plaintext highlighter-rouge">23:25</code> uh is shows very similar behavior to the
+<br /><code class="language-plaintext highlighter-rouge">23:28</code> model that we’re studying here
+<br /><code class="language-plaintext highlighter-rouge">23:31</code> for the things that we’re interested in
+<br /><code class="language-plaintext highlighter-rouge">23:32</code> so here we’re interested in infinities
+<br /><code class="language-plaintext highlighter-rouge">23:34</code> in singularities so once you
+<br /><code class="language-plaintext highlighter-rouge">23:38</code> once you look at these kind of things
+<br /><code class="language-plaintext highlighter-rouge">23:40</code> then these models will qualitatively the
+<br /><code class="language-plaintext highlighter-rouge">23:42</code> same
+<br /><code class="language-plaintext highlighter-rouge">23:43</code> although also the exponents will be
+<br /><code class="language-plaintext highlighter-rouge">23:45</code> different
+<br /><code class="language-plaintext highlighter-rouge">23:47</code> but once you look of course into
+<br /><code class="language-plaintext highlighter-rouge">23:49</code> non-singularities it’s more critical
+<br /><code class="language-plaintext highlighter-rouge">23:51</code> behavior
+<br /><code class="language-plaintext highlighter-rouge">23:52</code> than the messiness of how wide your
+<br /><code class="language-plaintext highlighter-rouge">23:55</code> roads are
+<br /><code class="language-plaintext highlighter-rouge">23:57</code> how often the tram goes uh between the
+<br /><code class="language-plaintext highlighter-rouge">24:00</code> blasphemy institutes and so on these
+<br /><code class="language-plaintext highlighter-rouge">24:02</code> things will matter
+<br /><code class="language-plaintext highlighter-rouge">24:05</code> yeah but close to the critical point uh
+<br /><code class="language-plaintext highlighter-rouge">24:07</code> we’ll be fine</p>
+
+<h3 id="slide-6">slide 6</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">24:10</code> so this is a stochastic simulation of
+<br /><code class="language-plaintext highlighter-rouge">24:13</code> such a system
+<br /><code class="language-plaintext highlighter-rouge">24:14</code> and we can just see what happens on the
+<br /><code class="language-plaintext highlighter-rouge">24:17</code> left hand side
+<br /><code class="language-plaintext highlighter-rouge">24:18</code> you see a simulation of such a lattice
+<br /><code class="language-plaintext highlighter-rouge">24:20</code> system
+<br /><code class="language-plaintext highlighter-rouge">24:21</code> where you initially have random random
+<br /><code class="language-plaintext highlighter-rouge">24:25</code> random initialization so every site
+<br /><code class="language-plaintext highlighter-rouge">24:28</code> is either with the probability of one
+<br /><code class="language-plaintext highlighter-rouge">24:30</code> half
+<br /><code class="language-plaintext highlighter-rouge">24:32</code> a certain probability infected or
+<br /><code class="language-plaintext highlighter-rouge">24:35</code> not infected and what you see here
+<br /><code class="language-plaintext highlighter-rouge">24:39</code> now is in blue infected
+<br /><code class="language-plaintext highlighter-rouge">24:42</code> individuals now if this lambda
+<br /><code class="language-plaintext highlighter-rouge">24:46</code> now this infection rate is smaller
+<br /><code class="language-plaintext highlighter-rouge">24:49</code> than a certain critical value
+<br /><code class="language-plaintext highlighter-rouge">24:52</code> then what you will see is that this
+<br /><code class="language-plaintext highlighter-rouge">24:54</code> infraction
+<br /><code class="language-plaintext highlighter-rouge">24:55</code> this infection can spread for a while
+<br /><code class="language-plaintext highlighter-rouge">24:58</code> but most of the time with a certain
+<br /><code class="language-plaintext highlighter-rouge">24:59</code> probability
+<br /><code class="language-plaintext highlighter-rouge">25:00</code> it will uh disappear
+<br /><code class="language-plaintext highlighter-rouge">25:04</code> now so in this regime here in this phase
+<br /><code class="language-plaintext highlighter-rouge">25:08</code> the recovery rate outweighs
+<br /><code class="language-plaintext highlighter-rouge">25:11</code> the infection rate you know and
+<br /><code class="language-plaintext highlighter-rouge">25:14</code> uh so that’s what we’re supposed to be
+<br /><code class="language-plaintext highlighter-rouge">25:17</code> on in this regime we’re supposed to be
+<br /><code class="language-plaintext highlighter-rouge">25:19</code> investing
+<br /><code class="language-plaintext highlighter-rouge">25:19</code> starting next week and then on the right
+<br /><code class="language-plaintext highlighter-rouge">25:23</code> hand side
+<br /><code class="language-plaintext highlighter-rouge">25:24</code> that’s the regime that we’re currently
+<br /><code class="language-plaintext highlighter-rouge">25:26</code> in now then the infection rate
+<br /><code class="language-plaintext highlighter-rouge">25:28</code> is larger than the uh
+<br /><code class="language-plaintext highlighter-rouge">25:31</code> than the recovery rate now so the
+<br /><code class="language-plaintext highlighter-rouge">25:33</code> infection probability is higher
+<br /><code class="language-plaintext highlighter-rouge">25:36</code> and what you will then end up is is a
+<br /><code class="language-plaintext highlighter-rouge">25:39</code> state where most of the individuals will
+<br /><code class="language-plaintext highlighter-rouge">25:42</code> carry the disease will be infected
+<br /><code class="language-plaintext highlighter-rouge">25:45</code> so you will you will reach a steady
+<br /><code class="language-plaintext highlighter-rouge">25:47</code> state
+<br /><code class="language-plaintext highlighter-rouge">25:49</code> not everybody is all the time in fact
+<br /><code class="language-plaintext highlighter-rouge">25:50</code> that you will reach some steady state
+<br /><code class="language-plaintext highlighter-rouge">25:52</code> with a certain percentage of infected
+<br /><code class="language-plaintext highlighter-rouge">25:55</code> people
+<br /><code class="language-plaintext highlighter-rouge">25:57</code> and now we have this situation in
+<br /><code class="language-plaintext highlighter-rouge">26:00</code> between
+<br /><code class="language-plaintext highlighter-rouge">26:02</code> that’s this one here and this is
+<br /><code class="language-plaintext highlighter-rouge">26:05</code> where the um where
+<br /><code class="language-plaintext highlighter-rouge">26:08</code> the infection rate is more or less
+<br /><code class="language-plaintext highlighter-rouge">26:11</code> balanced
+<br /><code class="language-plaintext highlighter-rouge">26:12</code> with the recovery rate it’s not exactly
+<br /><code class="language-plaintext highlighter-rouge">26:15</code> equal to one
+<br /><code class="language-plaintext highlighter-rouge">26:16</code> so that’s these things are complicated
+<br /><code class="language-plaintext highlighter-rouge">26:18</code> yeah you might think that
+<br /><code class="language-plaintext highlighter-rouge">26:20</code> okay if this this lambda is equal to one
+<br /><code class="language-plaintext highlighter-rouge">26:23</code> or one half or so
+<br /><code class="language-plaintext highlighter-rouge">26:25</code> yeah then uh then that’s the critical
+<br /><code class="language-plaintext highlighter-rouge">26:27</code> point of these systems i’ll show you are
+<br /><code class="language-plaintext highlighter-rouge">26:29</code> more complicated than you might think
+<br /><code class="language-plaintext highlighter-rouge">26:32</code> because the noise is so important here
+<br /><code class="language-plaintext highlighter-rouge">26:35</code> and here
+<br /><code class="language-plaintext highlighter-rouge">26:36</code> what you see is that you have domains
+<br /><code class="language-plaintext highlighter-rouge">26:39</code> that become larger and larger over time
+<br /><code class="language-plaintext highlighter-rouge">26:41</code> so from
+<br /><code class="language-plaintext highlighter-rouge">26:42</code> when we go from top to bottom we have
+<br /><code class="language-plaintext highlighter-rouge">26:43</code> time now so we go we start here at the
+<br /><code class="language-plaintext highlighter-rouge">26:46</code> top
+<br /><code class="language-plaintext highlighter-rouge">26:47</code> and then this domain goes large and
+<br /><code class="language-plaintext highlighter-rouge">26:49</code> larger you have merging
+<br /><code class="language-plaintext highlighter-rouge">26:51</code> of domains with infected individuals
+<br /><code class="language-plaintext highlighter-rouge">26:54</code> and then we have branches that they die
+<br /><code class="language-plaintext highlighter-rouge">26:56</code> out
+<br /><code class="language-plaintext highlighter-rouge">26:57</code> like this one here and uh
+<br /><code class="language-plaintext highlighter-rouge">27:00</code> it looks a little bit like a
+<br /><code class="language-plaintext highlighter-rouge">27:02</code> self-similar state
+<br /><code class="language-plaintext highlighter-rouge">27:04</code> now we have domains of all sizes for
+<br /><code class="language-plaintext highlighter-rouge">27:07</code> example
+<br /><code class="language-plaintext highlighter-rouge">27:08</code> in the time domain or from top to bottom
+<br /><code class="language-plaintext highlighter-rouge">27:11</code> you have some branches that die out
+<br /><code class="language-plaintext highlighter-rouge">27:13</code> quite quickly here
+<br /><code class="language-plaintext highlighter-rouge">27:15</code> but then you have other branches like
+<br /><code class="language-plaintext highlighter-rouge">27:17</code> the big one in the middle
+<br /><code class="language-plaintext highlighter-rouge">27:19</code> where that just go on for uh forever
+<br /><code class="language-plaintext highlighter-rouge">27:23</code> without really occupying the whole
+<br /><code class="language-plaintext highlighter-rouge">27:24</code> system
+<br /><code class="language-plaintext highlighter-rouge">27:26</code> and then if you look take a slice in
+<br /><code class="language-plaintext highlighter-rouge">27:28</code> this direction here
+<br /><code class="language-plaintext highlighter-rouge">27:30</code> these simulations are very small also
+<br /><code class="language-plaintext highlighter-rouge">27:33</code> it’s not like a design
+<br /><code class="language-plaintext highlighter-rouge">27:34</code> you can’t see that well you’ll also see
+<br /><code class="language-plaintext highlighter-rouge">27:36</code> that here you have
+<br /><code class="language-plaintext highlighter-rouge">27:37</code> structures of all different sizes
+<br /><code class="language-plaintext highlighter-rouge">27:41</code> there are small ones like this one here
+<br /><code class="language-plaintext highlighter-rouge">27:44</code> yeah and the larger ones like this one
+<br /><code class="language-plaintext highlighter-rouge">27:46</code> and so you have these structures of all
+<br /><code class="language-plaintext highlighter-rouge">27:48</code> different sizes
+<br /><code class="language-plaintext highlighter-rouge">27:51</code> and this is again reminiscent of cell
+<br /><code class="language-plaintext highlighter-rouge">27:53</code> similarity
+<br /><code class="language-plaintext highlighter-rouge">27:54</code> and the critical point so it turns out
+<br /><code class="language-plaintext highlighter-rouge">27:57</code> our little empiric model has a critical
+<br /><code class="language-plaintext highlighter-rouge">28:00</code> point
+<br /><code class="language-plaintext highlighter-rouge">28:00</code> can i ask a question um i i think i
+<br /><code class="language-plaintext highlighter-rouge">28:04</code> roughly understand the model
+<br /><code class="language-plaintext highlighter-rouge">28:06</code> but this simulation is the simulation of
+<br /><code class="language-plaintext highlighter-rouge">28:08</code> what
+<br /><code class="language-plaintext highlighter-rouge">28:09</code> so is it a hamiltonian system where the
+<br /><code class="language-plaintext highlighter-rouge">28:12</code> um just yes so what is this basically
+<br /><code class="language-plaintext highlighter-rouge">28:15</code> nothing
+<br /><code class="language-plaintext highlighter-rouge">28:16</code> yeah so uh you just take what it is here
+<br /><code class="language-plaintext highlighter-rouge">28:19</code> or you take that just this year the way
+<br /><code class="language-plaintext highlighter-rouge">28:21</code> here that you write these simulations
+<br /><code class="language-plaintext highlighter-rouge">28:23</code> the different ways to write them you
+<br /><code class="language-plaintext highlighter-rouge">28:25</code> have a lattice you know you have a
+<br /><code class="language-plaintext highlighter-rouge">28:26</code> numerical simulation you have a vector
+<br /><code class="language-plaintext highlighter-rouge">28:28</code> an array and you either have like
+<br /><code class="language-plaintext highlighter-rouge">28:31</code> one or zero and then you pick a side
+<br /><code class="language-plaintext highlighter-rouge">28:35</code> randomly
+<br /><code class="language-plaintext highlighter-rouge">28:36</code> and perform these reactions here
+<br /><code class="language-plaintext highlighter-rouge">28:39</code> you know so so the one way to do that is
+<br /><code class="language-plaintext highlighter-rouge">28:41</code> to pick a side randomly
+<br /><code class="language-plaintext highlighter-rouge">28:44</code> and check if your neighbors overcome if
+<br /><code class="language-plaintext highlighter-rouge">28:45</code> you pick this side
+<br /><code class="language-plaintext highlighter-rouge">28:47</code> and if your neighbor is susceptible or
+<br /><code class="language-plaintext highlighter-rouge">28:49</code> it does not is not infected
+<br /><code class="language-plaintext highlighter-rouge">28:52</code> then you infect the neighbor with the
+<br /><code class="language-plaintext highlighter-rouge">28:53</code> probability
+<br /><code class="language-plaintext highlighter-rouge">28:55</code> lambda over two so like a monte carlo
+<br /><code class="language-plaintext highlighter-rouge">28:58</code> simulation it’s a monte carlo simulation
+<br /><code class="language-plaintext highlighter-rouge">29:00</code> the different ways you can also think of
+<br /><code class="language-plaintext highlighter-rouge">29:02</code> a cellular automaton
+<br /><code class="language-plaintext highlighter-rouge">29:04</code> yeah but uh the typical way to simulate
+<br /><code class="language-plaintext highlighter-rouge">29:06</code> these things are multicolored
+<br /><code class="language-plaintext highlighter-rouge">29:08</code> simulations
+<br /><code class="language-plaintext highlighter-rouge">29:09</code> okay but there’s no hamiltonian there’s
+<br /><code class="language-plaintext highlighter-rouge">29:10</code> no deeper insight you can just take
+<br /><code class="language-plaintext highlighter-rouge">29:12</code> these rules
+<br /><code class="language-plaintext highlighter-rouge">29:13</code> and simulate them on a lattice and the
+<br /><code class="language-plaintext highlighter-rouge">29:15</code> only thing you have to do
+<br /><code class="language-plaintext highlighter-rouge">29:16</code> is to take into account that this is not
+<br /><code class="language-plaintext highlighter-rouge">29:19</code> a deterministic process here
+<br /><code class="language-plaintext highlighter-rouge">29:21</code> but it’s a random process with a
+<br /><code class="language-plaintext highlighter-rouge">29:23</code> probability one-half
+<br /><code class="language-plaintext highlighter-rouge">29:25</code> you turn this one here lambda over two
+<br /><code class="language-plaintext highlighter-rouge">29:27</code> you turn this one here
+<br /><code class="language-plaintext highlighter-rouge">29:29</code> into an infected blue one can i then
+<br /><code class="language-plaintext highlighter-rouge">29:32</code> properly
+<br /><code class="language-plaintext highlighter-rouge">29:33</code> um make a make a statement about the
+<br /><code class="language-plaintext highlighter-rouge">29:36</code> <strong>time scale</strong> how
+<br /><code class="language-plaintext highlighter-rouge">29:37</code> some how this thing spreads because it’s
+<br /><code class="language-plaintext highlighter-rouge">29:40</code> it’s random right so i can
+<br /><code class="language-plaintext highlighter-rouge">29:44</code> that’s what we’ll be trying to do today
+<br /><code class="language-plaintext highlighter-rouge">29:47</code> okay uh but we’ll
+<br /><code class="language-plaintext highlighter-rouge">29:48</code> uh only be managing to do that tomorrow
+<br /><code class="language-plaintext highlighter-rouge">29:50</code> uh let me just go on
+<br /><code class="language-plaintext highlighter-rouge">29:52</code> so here you get some kind of idea
+<br /><code class="language-plaintext highlighter-rouge">29:55</code> already
+<br /><code class="language-plaintext highlighter-rouge">29:56</code> in this slide here you can get us some
+<br /><code class="language-plaintext highlighter-rouge">29:58</code> kind of idea here so that
+<br /><code class="language-plaintext highlighter-rouge">30:00</code> that you have here a time scale yeah
+<br /><code class="language-plaintext highlighter-rouge">30:03</code> it’s not
+<br /><code class="language-plaintext highlighter-rouge">30:04</code> where things uh where things uh
+<br /><code class="language-plaintext highlighter-rouge">30:06</code> disappear
+<br /><code class="language-plaintext highlighter-rouge">30:08</code> yeah so you say that for example here
+<br /><code class="language-plaintext highlighter-rouge">30:10</code> the typically the
+<br /><code class="language-plaintext highlighter-rouge">30:12</code> the number of infected individuals will
+<br /><code class="language-plaintext highlighter-rouge">30:14</code> go down with an exponential function
+<br /><code class="language-plaintext highlighter-rouge">30:17</code> yeah and then this has a typical time
+<br /><code class="language-plaintext highlighter-rouge">30:18</code> and then you get rid of most of the
+<br /><code class="language-plaintext highlighter-rouge">30:20</code> infected ones
+<br /><code class="language-plaintext highlighter-rouge">30:22</code> this has some certain time at this
+<br /><code class="language-plaintext highlighter-rouge">30:25</code> typical
+<br /><code class="language-plaintext highlighter-rouge">30:25</code> this certain time where you say okay
+<br /><code class="language-plaintext highlighter-rouge">30:29</code> at this time i’m i have lost most of my
+<br /><code class="language-plaintext highlighter-rouge">30:31</code> infected
+<br /><code class="language-plaintext highlighter-rouge">30:32</code> people now that they’re healthy again
+<br /><code class="language-plaintext highlighter-rouge">30:35</code> this is then called
+<br /><code class="language-plaintext highlighter-rouge">30:36</code> psi parallel
+<br /><code class="language-plaintext highlighter-rouge">30:39</code> yeah so this is like a correlation
+<br /><code class="language-plaintext highlighter-rouge">30:41</code> length so i’m actually actually getting
+<br /><code class="language-plaintext highlighter-rouge">30:43</code> a hat a little bit too far so so this
+<br /><code class="language-plaintext highlighter-rouge">30:45</code> you have here a correlation length in
+<br /><code class="language-plaintext highlighter-rouge">30:47</code> time
+<br /><code class="language-plaintext highlighter-rouge">30:48</code> but that tells you exactly that how f
+<br /><code class="language-plaintext highlighter-rouge">30:51</code> how quickly
+<br /><code class="language-plaintext highlighter-rouge">30:52</code> does this disease disappear
+<br /><code class="language-plaintext highlighter-rouge">30:55</code> yes you have a correlation length in
+<br /><code class="language-plaintext highlighter-rouge">30:57</code> space like this
+<br /><code class="language-plaintext highlighter-rouge">30:59</code> so for example this one here
+<br /><code class="language-plaintext highlighter-rouge">31:03</code> now our analysis is it depends on how
+<br /><code class="language-plaintext highlighter-rouge">31:05</code> you define it it can relate to that
+<br /><code class="language-plaintext highlighter-rouge">31:07</code> uh this is typically called psi
+<br /><code class="language-plaintext highlighter-rouge">31:10</code> perpendicular
+<br /><code class="language-plaintext highlighter-rouge">31:12</code> you have a correlation length in space
+<br /><code class="language-plaintext highlighter-rouge">31:13</code> now that tells you how large are your
+<br /><code class="language-plaintext highlighter-rouge">31:15</code> clusters
+<br /><code class="language-plaintext highlighter-rouge">31:16</code> but you also have a correlation length
+<br /><code class="language-plaintext highlighter-rouge">31:18</code> and time how long
+<br /><code class="language-plaintext highlighter-rouge">31:20</code> lived are your clusters how long does it
+<br /><code class="language-plaintext highlighter-rouge">31:23</code> take for them to disappear
+<br /><code class="language-plaintext highlighter-rouge">31:25</code> and it turns out that both of these
+<br /><code class="language-plaintext highlighter-rouge">31:27</code> things at the critical point are
+<br /><code class="language-plaintext highlighter-rouge">31:29</code> infinite
+<br /><code class="language-plaintext highlighter-rouge">31:30</code> so the system is not only self-similar
+<br /><code class="language-plaintext highlighter-rouge">31:32</code> in space but also in time
+<br /><code class="language-plaintext highlighter-rouge">31:37</code> yeah but first before we before we do
+<br /><code class="language-plaintext highlighter-rouge">31:39</code> that um
+<br /><code class="language-plaintext highlighter-rouge">31:40</code> uh before we do that formally so what i
+<br /><code class="language-plaintext highlighter-rouge">31:43</code> see here
+<br /><code class="language-plaintext highlighter-rouge">31:44</code> is is the stochastic simulation uh we’ll
+<br /><code class="language-plaintext highlighter-rouge">31:46</code> later
+<br /><code class="language-plaintext highlighter-rouge">31:48</code> motivate some larger equation that we
+<br /><code class="language-plaintext highlighter-rouge">31:50</code> actually will be studying
+<br /><code class="language-plaintext highlighter-rouge">31:52</code> but for now now the system is as simple
+<br /><code class="language-plaintext highlighter-rouge">31:54</code> as it gets now you have a neighbor
+<br /><code class="language-plaintext highlighter-rouge">31:56</code> if this neighbor is not infected you
+<br /><code class="language-plaintext highlighter-rouge">31:58</code> infect it with a certain probability
+<br /><code class="language-plaintext highlighter-rouge">32:00</code> yeah it’s the simplest there’s like five
+<br /><code class="language-plaintext highlighter-rouge">32:03</code> lines of code also
+<br /><code class="language-plaintext highlighter-rouge">32:04</code> in matlab now there’s nothing there’s
+<br /><code class="language-plaintext highlighter-rouge">32:08</code> nothing
+<br /><code class="language-plaintext highlighter-rouge">32:09</code> uh in terms of the simulation the modal
+<br /><code class="language-plaintext highlighter-rouge">32:11</code> definition is nothing
+<br /><code class="language-plaintext highlighter-rouge">32:12</code> that is nothing deep in there but of
+<br /><code class="language-plaintext highlighter-rouge">32:15</code> course the consequences as we see on the
+<br /><code class="language-plaintext highlighter-rouge">32:16</code> slide
+<br /><code class="language-plaintext highlighter-rouge">32:17</code> are rather non-trivial</p>
+
+<h3 id="slide-7">slide 7</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">32:22</code> so now we want to go one step
+<br /><code class="language-plaintext highlighter-rouge">32:26</code> ahead and try to formalize this
+<br /><code class="language-plaintext highlighter-rouge">32:29</code> mathematically
+<br /><code class="language-plaintext highlighter-rouge">32:32</code> and um to formalize this we first need
+<br /><code class="language-plaintext highlighter-rouge">32:36</code> to
+<br /><code class="language-plaintext highlighter-rouge">32:36</code> have something to put into our larger
+<br /><code class="language-plaintext highlighter-rouge">32:39</code> equation
+<br /><code class="language-plaintext highlighter-rouge">32:40</code> yeah and that something that we put into
+<br /><code class="language-plaintext highlighter-rouge">32:42</code> our laundry equation
+<br /><code class="language-plaintext highlighter-rouge">32:44</code> is the density of this or this order
+<br /><code class="language-plaintext highlighter-rouge">32:47</code> parameter
+<br /><code class="language-plaintext highlighter-rouge">32:49</code> is the density of infected
+<br /><code class="language-plaintext highlighter-rouge">32:52</code> individuals all right to get this we uh
+<br /><code class="language-plaintext highlighter-rouge">32:58</code> um we we do a double average
+<br /><code class="language-plaintext highlighter-rouge">33:02</code> so this average here is over the lattice
+<br /><code class="language-plaintext highlighter-rouge">33:06</code> now we sum over the letters and we count
+<br /><code class="language-plaintext highlighter-rouge">33:10</code> now with this si variable like a spin
+<br /><code class="language-plaintext highlighter-rouge">33:14</code> how many infected individuals we have
+<br /><code class="language-plaintext highlighter-rouge">33:17</code> and divide it by the total number of
+<br /><code class="language-plaintext highlighter-rouge">33:19</code> lattice sites
+<br /><code class="language-plaintext highlighter-rouge">33:20</code> the system size and then we average
+<br /><code class="language-plaintext highlighter-rouge">33:23</code> again
+<br /><code class="language-plaintext highlighter-rouge">33:23</code> over the ensemble now this is our order
+<br /><code class="language-plaintext highlighter-rouge">33:26</code> parameter and this parameter this order
+<br /><code class="language-plaintext highlighter-rouge">33:28</code> parameter
+<br /><code class="language-plaintext highlighter-rouge">33:29</code> tells us whether we have order or not
+<br /><code class="language-plaintext highlighter-rouge">33:33</code> you know if this is one then everybody
+<br /><code class="language-plaintext highlighter-rouge">33:35</code> is infected
+<br /><code class="language-plaintext highlighter-rouge">33:36</code> yeah it’s not or not order or not if
+<br /><code class="language-plaintext highlighter-rouge">33:38</code> this is one
+<br /><code class="language-plaintext highlighter-rouge">33:39</code> everybody’s infected and if this is zero
+<br /><code class="language-plaintext highlighter-rouge">33:42</code> then everybody is healthy
+<br /><code class="language-plaintext highlighter-rouge">33:45</code> so this is our like our magnetization
+<br /><code class="language-plaintext highlighter-rouge">33:48</code> and now
+<br /><code class="language-plaintext highlighter-rouge">33:49</code> we want to do the same thing as an
+<br /><code class="language-plaintext highlighter-rouge">33:52</code> equilibrium
+<br /><code class="language-plaintext highlighter-rouge">33:53</code> i also want to ask what are we actually
+<br /><code class="language-plaintext highlighter-rouge">33:56</code> looking at yeah so
+<br /><code class="language-plaintext highlighter-rouge">34:00</code> what we say is we don’t know
+<br /><code class="language-plaintext highlighter-rouge">34:04</code> but we make the assumption
+<br /><code class="language-plaintext highlighter-rouge">34:07</code> that in this non-equilibrium critical
+<br /><code class="language-plaintext highlighter-rouge">34:10</code> point
+<br /><code class="language-plaintext highlighter-rouge">34:11</code> we also have scaling behavior and we
+<br /><code class="language-plaintext highlighter-rouge">34:14</code> also have self-similarity
+<br /><code class="language-plaintext highlighter-rouge">34:16</code> now and of course you can test this
+<br /><code class="language-plaintext highlighter-rouge">34:18</code> assumption if you do large enough
+<br /><code class="language-plaintext highlighter-rouge">34:20</code> computer simulations
+<br /><code class="language-plaintext highlighter-rouge">34:22</code> so one thing is that this
+<br /><code class="language-plaintext highlighter-rouge">34:25</code> if our system obtains a steady state
+<br /><code class="language-plaintext highlighter-rouge">34:28</code> with some density
+<br /><code class="language-plaintext highlighter-rouge">34:30</code> you know so that’s a row
+<br /><code class="language-plaintext highlighter-rouge">34:33</code> stationary density something like the
+<br /><code class="language-plaintext highlighter-rouge">34:36</code> magnetization you know the process of 90
+<br /><code class="language-plaintext highlighter-rouge">34:39</code> of the people
+<br /><code class="language-plaintext highlighter-rouge">34:40</code> are infected uh
+<br /><code class="language-plaintext highlighter-rouge">34:43</code> this goes with
+<br /><code class="language-plaintext highlighter-rouge">34:48</code> lambda minus lambda c to the power
+<br /><code class="language-plaintext highlighter-rouge">34:51</code> of beta it’s like the magnetization we
+<br /><code class="language-plaintext highlighter-rouge">34:54</code> don’t know what beta is
+<br /><code class="language-plaintext highlighter-rouge">34:56</code> but there is some better that we want to
+<br /><code class="language-plaintext highlighter-rouge">35:00</code> know
+<br /><code class="language-plaintext highlighter-rouge">35:02</code> now as i’ve discussed already before we
+<br /><code class="language-plaintext highlighter-rouge">35:04</code> have now not just
+<br /><code class="language-plaintext highlighter-rouge">35:05</code> one correlation length but two so one is
+<br /><code class="language-plaintext highlighter-rouge">35:08</code> the spatial
+<br /><code class="language-plaintext highlighter-rouge">35:13</code> correlation length
+<br /><code class="language-plaintext highlighter-rouge">35:18</code> and this is typically denoted by psi
+<br /><code class="language-plaintext highlighter-rouge">35:21</code> perpendicular
+<br /><code class="language-plaintext highlighter-rouge">35:22</code> because it’s perpendicular to time and
+<br /><code class="language-plaintext highlighter-rouge">35:26</code> perpendicular so if you look at these
+<br /><code class="language-plaintext highlighter-rouge">35:28</code> pictures here
+<br /><code class="language-plaintext highlighter-rouge">35:30</code> you can kind of get an idea
+<br /><code class="language-plaintext highlighter-rouge">35:33</code> why this is called perpendicular and
+<br /><code class="language-plaintext highlighter-rouge">35:35</code> parallel
+<br /><code class="language-plaintext highlighter-rouge">35:37</code> suppose that this is here whether this
+<br /><code class="language-plaintext highlighter-rouge">35:39</code> actually an
+<br /><code class="language-plaintext highlighter-rouge">35:40</code> equivalent model is the one of water
+<br /><code class="language-plaintext highlighter-rouge">35:43</code> pouring
+<br /><code class="language-plaintext highlighter-rouge">35:44</code> into soil you know so you have little
+<br /><code class="language-plaintext highlighter-rouge">35:48</code> channels
+<br /><code class="language-plaintext highlighter-rouge">35:48</code> it’s a rough thing yeah and then for
+<br /><code class="language-plaintext highlighter-rouge">35:51</code> example here
+<br /><code class="language-plaintext highlighter-rouge">35:52</code> the water flows down
+<br /><code class="language-plaintext highlighter-rouge">35:56</code> but at some point now the density of the
+<br /><code class="language-plaintext highlighter-rouge">35:59</code> soil is too large
+<br /><code class="language-plaintext highlighter-rouge">36:00</code> and the water stops this is
+<br /><code class="language-plaintext highlighter-rouge">36:03</code> this is an example where the soil is
+<br /><code class="language-plaintext highlighter-rouge">36:05</code> like the soil is like
+<br /><code class="language-plaintext highlighter-rouge">36:06</code> it’s very open it’s not very dense you
+<br /><code class="language-plaintext highlighter-rouge">36:09</code> put water in it
+<br /><code class="language-plaintext highlighter-rouge">36:10</code> and it flows all the way to the bottom
+<br /><code class="language-plaintext highlighter-rouge">36:13</code> so that’s
+<br /><code class="language-plaintext highlighter-rouge">36:14</code> what is what is sorry yes um you said
+<br /><code class="language-plaintext highlighter-rouge">36:17</code> that
+<br /><code class="language-plaintext highlighter-rouge">36:19</code> in case of critical systems the
+<br /><code class="language-plaintext highlighter-rouge">36:20</code> correlation length in space can be
+<br /><code class="language-plaintext highlighter-rouge">36:22</code> divergent
+<br /><code class="language-plaintext highlighter-rouge">36:24</code> yes and also the correlation length in
+<br /><code class="language-plaintext highlighter-rouge">36:27</code> time could be divergent
+<br /><code class="language-plaintext highlighter-rouge">36:28</code> yes so if the correlation length in time
+<br /><code class="language-plaintext highlighter-rouge">36:31</code> is divergent then in this specific
+<br /><code class="language-plaintext highlighter-rouge">36:33</code> example
+<br /><code class="language-plaintext highlighter-rouge">36:35</code> the it’ll the number of infected
+<br /><code class="language-plaintext highlighter-rouge">36:38</code> clusters will always be present
+<br /><code class="language-plaintext highlighter-rouge">36:40</code> right yes exactly you will not you will
+<br /><code class="language-plaintext highlighter-rouge">36:43</code> never get rid of this
+<br /><code class="language-plaintext highlighter-rouge">36:44</code> disease but of course this infinities
+<br /><code class="language-plaintext highlighter-rouge">36:47</code> when i talk about infinity
+<br /><code class="language-plaintext highlighter-rouge">36:49</code> these infinities are not defined really
+<br /><code class="language-plaintext highlighter-rouge">36:52</code> in this small simulation where we maybe
+<br /><code class="language-plaintext highlighter-rouge">36:54</code> have
+<br /><code class="language-plaintext highlighter-rouge">36:54</code> 100 individuals also now these
+<br /><code class="language-plaintext highlighter-rouge">36:57</code> infinities are defined for
+<br /><code class="language-plaintext highlighter-rouge">36:58</code> systems that don’t really have an
+<br /><code class="language-plaintext highlighter-rouge">37:00</code> infinite infinitely large size
+<br /><code class="language-plaintext highlighter-rouge">37:03</code> now this here what you see the
+<br /><code class="language-plaintext highlighter-rouge">37:05</code> simulation in the middle
+<br /><code class="language-plaintext highlighter-rouge">37:07</code> can just by chance disappear
+<br /><code class="language-plaintext highlighter-rouge">37:11</code> and it will disappear and i can tell you
+<br /><code class="language-plaintext highlighter-rouge">37:15</code> even that the disease in this case here
+<br /><code class="language-plaintext highlighter-rouge">37:18</code> the right hand side will disappear with
+<br /><code class="language-plaintext highlighter-rouge">37:21</code> a very small probability
+<br /><code class="language-plaintext highlighter-rouge">37:23</code> right so it’s a very nice feature of
+<br /><code class="language-plaintext highlighter-rouge">37:25</code> this model that will turn out to be very
+<br /><code class="language-plaintext highlighter-rouge">37:28</code> important
+<br /><code class="language-plaintext highlighter-rouge">37:29</code> what happens if all individuals
+<br /><code class="language-plaintext highlighter-rouge">37:32</code> are healthy what happens if all
+<br /><code class="language-plaintext highlighter-rouge">37:36</code> individuals are healthy
+<br /><code class="language-plaintext highlighter-rouge">37:39</code> then there’s no process here
+<br /><code class="language-plaintext highlighter-rouge">37:44</code> there are only s’s there’s no process
+<br /><code class="language-plaintext highlighter-rouge">37:46</code> here that can give you the disease back
+<br /><code class="language-plaintext highlighter-rouge">37:49</code> once the disease is extinct
+<br /><code class="language-plaintext highlighter-rouge">37:52</code> it will never come back and because this
+<br /><code class="language-plaintext highlighter-rouge">37:55</code> is a stochastic system
+<br /><code class="language-plaintext highlighter-rouge">37:57</code> you just have to wait long enough and
+<br /><code class="language-plaintext highlighter-rouge">37:59</code> just by chance
+<br /><code class="language-plaintext highlighter-rouge">38:01</code> even this is casey on the right hand
+<br /><code class="language-plaintext highlighter-rouge">38:03</code> side will turn into the
+<br /><code class="language-plaintext highlighter-rouge">38:05</code> case just because it’s stochastic just
+<br /><code class="language-plaintext highlighter-rouge">38:08</code> by chance
+<br /><code class="language-plaintext highlighter-rouge">38:09</code> maybe you have to wait 100 billion years
+<br /><code class="language-plaintext highlighter-rouge">38:11</code> or so for this to happen but you know
+<br /><code class="language-plaintext highlighter-rouge">38:13</code> that at some point you will end up in
+<br /><code class="language-plaintext highlighter-rouge">38:15</code> this state
+<br /><code class="language-plaintext highlighter-rouge">38:17</code> where the disease went extinct by chance
+<br /><code class="language-plaintext highlighter-rouge">38:20</code> you have to wait extremely long for that
+<br /><code class="language-plaintext highlighter-rouge">38:22</code> but you know that it will happen
+<br /><code class="language-plaintext highlighter-rouge">38:24</code> and these states here now like in this
+<br /><code class="language-plaintext highlighter-rouge">38:27</code> system here
+<br /><code class="language-plaintext highlighter-rouge">38:28</code> you go to zero and then there’s no way
+<br /><code class="language-plaintext highlighter-rouge">38:30</code> it can come back
+<br /><code class="language-plaintext highlighter-rouge">38:32</code> yeah in reality you will have to wait
+<br /><code class="language-plaintext highlighter-rouge">38:34</code> for evolution
+<br /><code class="language-plaintext highlighter-rouge">38:36</code> to create another virus that has the
+<br /><code class="language-plaintext highlighter-rouge">38:39</code> same properties
+<br /><code class="language-plaintext highlighter-rouge">38:40</code> now to come back so that texas goes
+<br /><code class="language-plaintext highlighter-rouge">38:42</code> extremely long
+<br /><code class="language-plaintext highlighter-rouge">38:43</code> yeah it’s a much it’s much longer than
+<br /><code class="language-plaintext highlighter-rouge">38:45</code> the spreading of the disease itself it
+<br /><code class="language-plaintext highlighter-rouge">38:47</code> happens in one or two years
+<br /><code class="language-plaintext highlighter-rouge">38:50</code> you know and so these are called
+<br /><code class="language-plaintext highlighter-rouge">38:52</code> absorbing states you can go in there
+<br /><code class="language-plaintext highlighter-rouge">38:54</code> but you can never go out again
+<br /><code class="language-plaintext highlighter-rouge">38:58</code> so in other words this means that in
+<br /><code class="language-plaintext highlighter-rouge">39:00</code> these absorbing states
+<br /><code class="language-plaintext highlighter-rouge">39:02</code> they’re very important for not only for
+<br /><code class="language-plaintext highlighter-rouge">39:03</code> virus spreading but in any ecological
+<br /><code class="language-plaintext highlighter-rouge">39:05</code> model
+<br /><code class="language-plaintext highlighter-rouge">39:06</code> now we have extinction and this
+<br /><code class="language-plaintext highlighter-rouge">39:09</code> absorbing states
+<br /><code class="language-plaintext highlighter-rouge">39:10</code> uh you can get in but you will never be
+<br /><code class="language-plaintext highlighter-rouge">39:12</code> able to get out
+<br /><code class="language-plaintext highlighter-rouge">39:14</code> now once you’re in there you’re trapped
+<br /><code class="language-plaintext highlighter-rouge">39:16</code> and these absorbing states they don’t
+<br /><code class="language-plaintext highlighter-rouge">39:18</code> have
+<br /><code class="language-plaintext highlighter-rouge">39:19</code> fluctuations they don’t have any noise
+<br /><code class="language-plaintext highlighter-rouge">39:21</code> and we’ll see that in the larger
+<br /><code class="language-plaintext highlighter-rouge">39:22</code> equation you know so these absorbing
+<br /><code class="language-plaintext highlighter-rouge">39:25</code> states don’t have any noise
+<br /><code class="language-plaintext highlighter-rouge">39:28</code> and by this you can already see that
+<br /><code class="language-plaintext highlighter-rouge">39:30</code> this whole system
+<br /><code class="language-plaintext highlighter-rouge">39:31</code> is a non-equilibrium system because if
+<br /><code class="language-plaintext highlighter-rouge">39:34</code> you have a state that has no noise
+<br /><code class="language-plaintext highlighter-rouge">39:36</code> this is not a thermal system where you
+<br /><code class="language-plaintext highlighter-rouge">39:38</code> have a temperature
+<br /><code class="language-plaintext highlighter-rouge">39:40</code> now so this here is a system where you
+<br /><code class="language-plaintext highlighter-rouge">39:41</code> have noise now for example here you have
+<br /><code class="language-plaintext highlighter-rouge">39:44</code> noise but once you reach the state
+<br /><code class="language-plaintext highlighter-rouge">39:47</code> where there’s no disease no virus left
+<br /><code class="language-plaintext highlighter-rouge">39:51</code> you don’t have any noise anymore you
+<br /><code class="language-plaintext highlighter-rouge">39:54</code> know and that cannot happen in a
+<br /><code class="language-plaintext highlighter-rouge">39:55</code> thermodynamic system that is an
+<br /><code class="language-plaintext highlighter-rouge">39:57</code> equilibrium
+<br /><code class="language-plaintext highlighter-rouge">39:58</code> that you always have your temperature
+<br /><code class="language-plaintext highlighter-rouge">40:00</code> and this will always give you noise
+<br /><code class="language-plaintext highlighter-rouge">40:01</code> regardless of how many
+<br /><code class="language-plaintext highlighter-rouge">40:03</code> particles you have or whatever yeah so
+<br /><code class="language-plaintext highlighter-rouge">40:06</code> this already tells you that this is a
+<br /><code class="language-plaintext highlighter-rouge">40:07</code> non-equilibrium system
+<br /><code class="language-plaintext highlighter-rouge">40:09</code> and it’s a very interesting system and
+<br /><code class="language-plaintext highlighter-rouge">40:11</code> the system is actually one of the
+<br /><code class="language-plaintext highlighter-rouge">40:13</code> universality classes non-equilibrium
+<br /><code class="language-plaintext highlighter-rouge">40:15</code> physics
+<br /><code class="language-plaintext highlighter-rouge">40:16</code> so that’s once you are getting a little
+<br /><code class="language-plaintext highlighter-rouge">40:19</code> bit ahead
+<br /><code class="language-plaintext highlighter-rouge">40:20</code> once you know that your system has one
+<br /><code class="language-plaintext highlighter-rouge">40:22</code> absorbing state
+<br /><code class="language-plaintext highlighter-rouge">40:24</code> many ecological systems for example one
+<br /><code class="language-plaintext highlighter-rouge">40:26</code> absorbing state
+<br /><code class="language-plaintext highlighter-rouge">40:28</code> then it’s quite likely that what i’ll
+<br /><code class="language-plaintext highlighter-rouge">40:29</code> show you in these
+<br /><code class="language-plaintext highlighter-rouge">40:31</code> uh renewalization calculations today and
+<br /><code class="language-plaintext highlighter-rouge">40:34</code> next week
+<br /><code class="language-plaintext highlighter-rouge">40:35</code> will also apply to these systems is a
+<br /><code class="language-plaintext highlighter-rouge">40:37</code> very powerful
+<br /><code class="language-plaintext highlighter-rouge">40:38</code> you know universality class and
+<br /><code class="language-plaintext highlighter-rouge">40:40</code> universal system
+<br /><code class="language-plaintext highlighter-rouge">40:42</code> for non-equilibrium systems
+<br /><code class="language-plaintext highlighter-rouge">40:45</code> yeah but let’s let’s i was here talking
+<br /><code class="language-plaintext highlighter-rouge">40:47</code> about did i actually answer your
+<br /><code class="language-plaintext highlighter-rouge">40:49</code> question so i got a little bit
+<br /><code class="language-plaintext highlighter-rouge">40:50</code> uh distracted uh i i distracted myself
+<br /><code class="language-plaintext highlighter-rouge">40:55</code> a little bit yeah did i do that
+<br /><code class="language-plaintext highlighter-rouge">40:58</code> okay okay i i forgot it at the end i
+<br /><code class="language-plaintext highlighter-rouge">41:01</code> forgot this question but i hope i
+<br /><code class="language-plaintext highlighter-rouge">41:02</code> answered it at some point
+<br /><code class="language-plaintext highlighter-rouge">41:04</code> okay so you have the two correlations
+<br /><code class="language-plaintext highlighter-rouge">41:06</code> just spatial correlation length
+<br /><code class="language-plaintext highlighter-rouge">41:07</code> you know that’s uh sigma
+<br /><code class="language-plaintext highlighter-rouge">41:11</code> uh side perpendicular and actually
+<br /><code class="language-plaintext highlighter-rouge">41:14</code> what i want to say here is actually
+<br /><code class="language-plaintext highlighter-rouge">41:16</code> that’s that’s what i would say
+<br /><code class="language-plaintext highlighter-rouge">41:18</code> yeah so you have here you have soul and
+<br /><code class="language-plaintext highlighter-rouge">41:20</code> you have water
+<br /><code class="language-plaintext highlighter-rouge">41:21</code> flowing through this then the parallel
+<br /><code class="language-plaintext highlighter-rouge">41:23</code> length here
+<br /><code class="language-plaintext highlighter-rouge">41:26</code> this one it’s called parallel because
+<br /><code class="language-plaintext highlighter-rouge">41:28</code> it’s parallel to the direction of
+<br /><code class="language-plaintext highlighter-rouge">41:29</code> gravitation
+<br /><code class="language-plaintext highlighter-rouge">41:31</code> and the other length here is
+<br /><code class="language-plaintext highlighter-rouge">41:34</code> perpendicular because it’s perpendicular
+<br /><code class="language-plaintext highlighter-rouge">41:36</code> to the
+<br /><code class="language-plaintext highlighter-rouge">41:37</code> direction of gravitation now that’s
+<br /><code class="language-plaintext highlighter-rouge">41:38</code> where these names come from
+<br /><code class="language-plaintext highlighter-rouge">41:40</code> because these models called direct or
+<br /><code class="language-plaintext highlighter-rouge">41:42</code> the directed percolation
+<br /><code class="language-plaintext highlighter-rouge">41:44</code> is that you have something flowing
+<br /><code class="language-plaintext highlighter-rouge">41:47</code> through a rough
+<br /><code class="language-plaintext highlighter-rouge">41:48</code> medium like soil and then you have a
+<br /><code class="language-plaintext highlighter-rouge">41:51</code> direct gravitation force that pulls the
+<br /><code class="language-plaintext highlighter-rouge">41:54</code> fluid into one direction
+<br /><code class="language-plaintext highlighter-rouge">41:55</code> but not in the other direction and
+<br /><code class="language-plaintext highlighter-rouge">41:57</code> that’s where these parallel and
+<br /><code class="language-plaintext highlighter-rouge">41:58</code> perpendicular
+<br /><code class="language-plaintext highlighter-rouge">42:00</code> yeah so and then we give that some
+<br /><code class="language-plaintext highlighter-rouge">42:02</code> exponent
+<br /><code class="language-plaintext highlighter-rouge">42:04</code> lambda minus lambda c to the power of
+<br /><code class="language-plaintext highlighter-rouge">42:08</code> minus
+<br /><code class="language-plaintext highlighter-rouge">42:09</code> mu perpendicular
+<br /><code class="language-plaintext highlighter-rouge">42:12</code> now that we have the temporal or dynamic
+<br /><code class="language-plaintext highlighter-rouge">42:22</code> correlation length
+<br /><code class="language-plaintext highlighter-rouge">42:25</code> side parallel and this
+<br /><code class="language-plaintext highlighter-rouge">42:28</code> we call and very surprisingly minus
+<br /><code class="language-plaintext highlighter-rouge">42:32</code> new parallel
+<br /><code class="language-plaintext highlighter-rouge">42:35</code> and this is now as you said so
+<br /><code class="language-plaintext highlighter-rouge">42:38</code> our temporal correlation can become
+<br /><code class="language-plaintext highlighter-rouge">42:41</code> infinity
+<br /><code class="language-plaintext highlighter-rouge">42:42</code> what does it mean yeah so i have a
+<br /><code class="language-plaintext highlighter-rouge">42:45</code> perturbation
+<br /><code class="language-plaintext highlighter-rouge">42:46</code> to the system so what so if you have a
+<br /><code class="language-plaintext highlighter-rouge">42:49</code> the spatial correlation and infinity
+<br /><code class="language-plaintext highlighter-rouge">42:52</code> like an isomorph
+<br /><code class="language-plaintext highlighter-rouge">42:53</code> you make a perturbation and this
+<br /><code class="language-plaintext highlighter-rouge">42:56</code> perturbation will in principle
+<br /><code class="language-plaintext highlighter-rouge">42:58</code> affect all parts of the magnet
+<br /><code class="language-plaintext highlighter-rouge">43:01</code> yeah you will have a very very long
+<br /><code class="language-plaintext highlighter-rouge">43:03</code> range correlation you flip a spin
+<br /><code class="language-plaintext highlighter-rouge">43:05</code> somewhere
+<br /><code class="language-plaintext highlighter-rouge">43:05</code> and it has an effect somewhere
+<br /><code class="language-plaintext highlighter-rouge">43:07</code> completely somewhere else
+<br /><code class="language-plaintext highlighter-rouge">43:10</code> now we have an infinite correlation
+<br /><code class="language-plaintext highlighter-rouge">43:13</code> length
+<br /><code class="language-plaintext highlighter-rouge">43:13</code> in time what does that mean so that
+<br /><code class="language-plaintext highlighter-rouge">43:16</code> means that if we perturb the system we
+<br /><code class="language-plaintext highlighter-rouge">43:18</code> are at a critical point
+<br /><code class="language-plaintext highlighter-rouge">43:19</code> we will perturb the system and the time
+<br /><code class="language-plaintext highlighter-rouge">43:23</code> that it takes the system to go back to
+<br /><code class="language-plaintext highlighter-rouge">43:26</code> forget this perturbation
+<br /><code class="language-plaintext highlighter-rouge">43:27</code> is infinitely long yeah
+<br /><code class="language-plaintext highlighter-rouge">43:30</code> so so you have again now processes in
+<br /><code class="language-plaintext highlighter-rouge">43:33</code> all time scales and parallel
+<br /><code class="language-plaintext highlighter-rouge">43:35</code> very long very slow process and also
+<br /><code class="language-plaintext highlighter-rouge">43:37</code> infinitely long processes
+<br /><code class="language-plaintext highlighter-rouge">43:39</code> yeah it’s like like the space in the
+<br /><code class="language-plaintext highlighter-rouge">43:41</code> isis mode you have classes of all
+<br /><code class="language-plaintext highlighter-rouge">43:43</code> different sizes now you have also
+<br /><code class="language-plaintext highlighter-rouge">43:44</code> processes
+<br /><code class="language-plaintext highlighter-rouge">43:45</code> of all different length scales at the
+<br /><code class="language-plaintext highlighter-rouge">43:48</code> same time
+<br /><code class="language-plaintext highlighter-rouge">43:49</code> now and this is what this criticality
+<br /><code class="language-plaintext highlighter-rouge">43:51</code> does to time
+<br /><code class="language-plaintext highlighter-rouge">43:52</code> the time domain you make it perturbation
+<br /><code class="language-plaintext highlighter-rouge">43:55</code> and it never just disappears again
+<br /><code class="language-plaintext highlighter-rouge">43:57</code> that the effects of this particular
+<br /><code class="language-plaintext highlighter-rouge">43:59</code> perturbation you will see in this system
+<br /><code class="language-plaintext highlighter-rouge">44:01</code> infinitely long now so that’s the cool
+<br /><code class="language-plaintext highlighter-rouge">44:04</code> thing about critical systems that does
+<br /><code class="language-plaintext highlighter-rouge">44:06</code> uh
+<br /><code class="language-plaintext highlighter-rouge">44:08</code> it does uh they do very straight things
+<br /><code class="language-plaintext highlighter-rouge">44:11</code> and then now we define another uh
+<br /><code class="language-plaintext highlighter-rouge">44:15</code> i’ve got a question yes sorry is are we
+<br /><code class="language-plaintext highlighter-rouge">44:18</code> still dealing with a mean field model
+<br /><code class="language-plaintext highlighter-rouge">44:21</code> uh i i didn’t tell you yet uh but we’ll
+<br /><code class="language-plaintext highlighter-rouge">44:24</code> we won’t be dealing with the mean field
+<br /><code class="language-plaintext highlighter-rouge">44:26</code> of model
+<br /><code class="language-plaintext highlighter-rouge">44:27</code> yeah so mean field is not very good for
+<br /><code class="language-plaintext highlighter-rouge">44:30</code> these kind of things
+<br /><code class="language-plaintext highlighter-rouge">44:32</code> yeah so we’re not uh we’re not dealing
+<br /><code class="language-plaintext highlighter-rouge">44:34</code> with the mean fit model
+<br /><code class="language-plaintext highlighter-rouge">44:35</code> last last time last week we were dealing
+<br /><code class="language-plaintext highlighter-rouge">44:37</code> with mean field models
+<br /><code class="language-plaintext highlighter-rouge">44:39</code> but this time we have to take propaganda
+<br /><code class="language-plaintext highlighter-rouge">44:41</code> fluctuations properly into account
+<br /><code class="language-plaintext highlighter-rouge">44:44</code> and we will have also to take into
+<br /><code class="language-plaintext highlighter-rouge">44:46</code> confluctuations on all
+<br /><code class="language-plaintext highlighter-rouge">44:48</code> different temporal and spatial scales
+<br /><code class="language-plaintext highlighter-rouge">44:51</code> you know so that’s that’s what we will
+<br /><code class="language-plaintext highlighter-rouge">44:53</code> have to do and that’s what we will uh do
+<br /><code class="language-plaintext highlighter-rouge">44:55</code> with the renovation group
+<br /><code class="language-plaintext highlighter-rouge">44:58</code> so mean field theory is typically pretty
+<br /><code class="language-plaintext highlighter-rouge">45:00</code> bad for these things
+<br /><code class="language-plaintext highlighter-rouge">45:03</code> even just for the getting what is this
+<br /><code class="language-plaintext highlighter-rouge">45:05</code> lambda c i’m going to show you what this
+<br /><code class="language-plaintext highlighter-rouge">45:06</code> lambda c is but this is
+<br /><code class="language-plaintext highlighter-rouge">45:08</code> in the mean field version we would say
+<br /><code class="language-plaintext highlighter-rouge">45:10</code> okay this is just one half or something
+<br /><code class="language-plaintext highlighter-rouge">45:12</code> like this
+<br /><code class="language-plaintext highlighter-rouge">45:12</code> yeah where you write down some
+<br /><code class="language-plaintext highlighter-rouge">45:14</code> differential equation like you did last
+<br /><code class="language-plaintext highlighter-rouge">45:16</code> time
+<br /><code class="language-plaintext highlighter-rouge">45:16</code> you write you guess some differential
+<br /><code class="language-plaintext highlighter-rouge">45:18</code> equation you motivate it
+<br /><code class="language-plaintext highlighter-rouge">45:20</code> and then you get some lambda c but i’ll
+<br /><code class="language-plaintext highlighter-rouge">45:22</code> show you today
+<br /><code class="language-plaintext highlighter-rouge">45:23</code> now that this is actually not how it
+<br /><code class="language-plaintext highlighter-rouge">45:26</code> works if you have these
+<br /><code class="language-plaintext highlighter-rouge">45:27</code> strong fluctuations to get different
+<br /><code class="language-plaintext highlighter-rouge">45:29</code> results
+<br /><code class="language-plaintext highlighter-rouge">45:31</code> okay so then we have a third exponent
+<br /><code class="language-plaintext highlighter-rouge">45:35</code> the dynamic critical exponents
+<br /><code class="language-plaintext highlighter-rouge">45:39</code> and that means that near lambda c near
+<br /><code class="language-plaintext highlighter-rouge">45:42</code> the critical point
+<br /><code class="language-plaintext highlighter-rouge">45:45</code> we say that uh these correlation lengths
+<br /><code class="language-plaintext highlighter-rouge">45:49</code> now they they both follow power rules
+<br /><code class="language-plaintext highlighter-rouge">45:52</code> you know and we say that they are
+<br /><code class="language-plaintext highlighter-rouge">45:54</code> connected
+<br /><code class="language-plaintext highlighter-rouge">45:55</code> by this exponent called z
+<br /><code class="language-plaintext highlighter-rouge">45:59</code> and this is called
+<br /><code class="language-plaintext highlighter-rouge">46:02</code> a dynamical
+<br /><code class="language-plaintext highlighter-rouge">46:07</code> critical
+<br /><code class="language-plaintext highlighter-rouge">46:11</code> exponent yeah so we what we did now
+<br /><code class="language-plaintext highlighter-rouge">46:14</code> is okay we said okay these systems look
+<br /><code class="language-plaintext highlighter-rouge">46:17</code> self-similar
+<br /><code class="language-plaintext highlighter-rouge">46:18</code> uh like in equilibrium and we assume
+<br /><code class="language-plaintext highlighter-rouge">46:21</code> that the same concepts of scaling
+<br /><code class="language-plaintext highlighter-rouge">46:23</code> and power laws also apply to
+<br /><code class="language-plaintext highlighter-rouge">46:26</code> non-equilibrium systems</p>
+
+<h3 id="slide-8">slide 8</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">46:30</code> and now i have a slide here that we
+<br /><code class="language-plaintext highlighter-rouge">46:31</code> already talked about
+<br /><code class="language-plaintext highlighter-rouge">46:33</code> this is just what are these correlation
+<br /><code class="language-plaintext highlighter-rouge">46:35</code> lengths now so what are these
+<br /><code class="language-plaintext highlighter-rouge">46:37</code> correlation uh
+<br /><code class="language-plaintext highlighter-rouge">46:40</code> what are what are these correlation
+<br /><code class="language-plaintext highlighter-rouge">46:41</code> lengths these two and we discussed that
+<br /><code class="language-plaintext highlighter-rouge">46:44</code> basically already
+<br /><code class="language-plaintext highlighter-rouge">46:45</code> and so if you look here on the right
+<br /><code class="language-plaintext highlighter-rouge">46:49</code> hand side for example
+<br /><code class="language-plaintext highlighter-rouge">46:51</code> so on the left hand side i have two
+<br /><code class="language-plaintext highlighter-rouge">46:53</code> simulations
+<br /><code class="language-plaintext highlighter-rouge">46:55</code> that were started from an initial seat
+<br /><code class="language-plaintext highlighter-rouge">46:58</code> from this just one
+<br /><code class="language-plaintext highlighter-rouge">46:59</code> infected individual and on the right
+<br /><code class="language-plaintext highlighter-rouge">47:02</code> hand side
+<br /><code class="language-plaintext highlighter-rouge">47:03</code> these figures uh they are from
+<br /><code class="language-plaintext highlighter-rouge">47:06</code> assimilation
+<br /><code class="language-plaintext highlighter-rouge">47:06</code> were maybe 50 percent of the letters
+<br /><code class="language-plaintext highlighter-rouge">47:10</code> was infected you know other
+<br /><code class="language-plaintext highlighter-rouge">47:13</code> simulations i didn’t show you uh there’s
+<br /><code class="language-plaintext highlighter-rouge">47:16</code> a nice review
+<br /><code class="language-plaintext highlighter-rouge">47:17</code> article by hindi uh
+<br /><code class="language-plaintext highlighter-rouge">47:24</code> about a non-equilibrium criticality and
+<br /><code class="language-plaintext highlighter-rouge">47:26</code> face transitions
+<br /><code class="language-plaintext highlighter-rouge">47:28</code> and that’s where it took this pair this
+<br /><code class="language-plaintext highlighter-rouge">47:30</code> uh it’s a very nice review
+<br /><code class="language-plaintext highlighter-rouge">47:32</code> uh about the kind of things that we’re
+<br /><code class="language-plaintext highlighter-rouge">47:34</code> doing this week and next week
+<br /><code class="language-plaintext highlighter-rouge">47:37</code> so here now we this is just an intuition
+<br /><code class="language-plaintext highlighter-rouge">47:40</code> about what these correlation lengths are
+<br /><code class="language-plaintext highlighter-rouge">47:42</code> uh i told you already you know that this
+<br /><code class="language-plaintext highlighter-rouge">47:45</code> um that this temporal correlation length
+<br /><code class="language-plaintext highlighter-rouge">47:49</code> side parallel gives you to say the time
+<br /><code class="language-plaintext highlighter-rouge">47:52</code> that the disease
+<br /><code class="language-plaintext highlighter-rouge">47:54</code> dies out as you can see that here
+<br /><code class="language-plaintext highlighter-rouge">47:57</code> in this simulation here that the
+<br /><code class="language-plaintext highlighter-rouge">47:59</code> parallel correlation length
+<br /><code class="language-plaintext highlighter-rouge">48:01</code> that’s the time for such a droplet here
+<br /><code class="language-plaintext highlighter-rouge">48:04</code> to go away again now we know that
+<br /><code class="language-plaintext highlighter-rouge">48:08</code> if we’re below the critical point that
+<br /><code class="language-plaintext highlighter-rouge">48:09</code> at some point it will disappear
+<br /><code class="language-plaintext highlighter-rouge">48:12</code> and this has a typical time and this is
+<br /><code class="language-plaintext highlighter-rouge">48:14</code> just the excite
+<br /><code class="language-plaintext highlighter-rouge">48:16</code> parallel and then you have also a
+<br /><code class="language-plaintext highlighter-rouge">48:18</code> typical size of such a droplet here
+<br /><code class="language-plaintext highlighter-rouge">48:21</code> that’s psi perpendicular that’s just how
+<br /><code class="language-plaintext highlighter-rouge">48:24</code> large
+<br /><code class="language-plaintext highlighter-rouge">48:25</code> do these domains get and you can also
+<br /><code class="language-plaintext highlighter-rouge">48:28</code> see that here on the right hand side of
+<br /><code class="language-plaintext highlighter-rouge">48:29</code> course
+<br /><code class="language-plaintext highlighter-rouge">48:30</code> how long does how large does the domain
+<br /><code class="language-plaintext highlighter-rouge">48:33</code> of uninfected
+<br /><code class="language-plaintext highlighter-rouge">48:34</code> or infected individuals get now there’s
+<br /><code class="language-plaintext highlighter-rouge">48:37</code> this one here and how long does it
+<br /><code class="language-plaintext highlighter-rouge">48:39</code> survive
+<br /><code class="language-plaintext highlighter-rouge">48:41</code> now that’s how these correlation lengths
+<br /><code class="language-plaintext highlighter-rouge">48:44</code> are to be
+<br /><code class="language-plaintext highlighter-rouge">48:45</code> interpreted intuitively</p>
+
+<h3 id="slide-9">slide 9</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">48:49</code> okay now
+<br /><code class="language-plaintext highlighter-rouge">48:53</code> i’m going to do a little step
+<br /><code class="language-plaintext highlighter-rouge">48:57</code> uh that where i’m trying to avoid a long
+<br /><code class="language-plaintext highlighter-rouge">49:02</code> calculation
+<br /><code class="language-plaintext highlighter-rouge">49:05</code> what we usually would do now is we would
+<br /><code class="language-plaintext highlighter-rouge">49:08</code> take this lattice model and we would
+<br /><code class="language-plaintext highlighter-rouge">49:11</code> try to derive a master equation
+<br /><code class="language-plaintext highlighter-rouge">49:15</code> and also this probability that the
+<br /><code class="language-plaintext highlighter-rouge">49:17</code> lattice
+<br /><code class="language-plaintext highlighter-rouge">49:18</code> has a certain configuration and then we
+<br /><code class="language-plaintext highlighter-rouge">49:21</code> would be looking
+<br /><code class="language-plaintext highlighter-rouge">49:22</code> at this master equation uh
+<br /><code class="language-plaintext highlighter-rouge">49:25</code> this very complex master equation that
+<br /><code class="language-plaintext highlighter-rouge">49:27</code> tells us the time evolution of this
+<br /><code class="language-plaintext highlighter-rouge">49:29</code> vector and we try to get the rates
+<br /><code class="language-plaintext highlighter-rouge">49:33</code> and then we would uh do approximations
+<br /><code class="language-plaintext highlighter-rouge">49:36</code> uh like the system size expansion or the
+<br /><code class="language-plaintext highlighter-rouge">49:38</code> chromosomes
+<br /><code class="language-plaintext highlighter-rouge">49:39</code> expansion and so on and then we would
+<br /><code class="language-plaintext highlighter-rouge">49:41</code> try to derive this large
+<br /><code class="language-plaintext highlighter-rouge">49:43</code> which now that’s a lengthy business and
+<br /><code class="language-plaintext highlighter-rouge">49:46</code> it’s not the subject of our
+<br /><code class="language-plaintext highlighter-rouge">49:48</code> lecture what i just want to show you is
+<br /><code class="language-plaintext highlighter-rouge">49:52</code> that why does this larger equation that
+<br /><code class="language-plaintext highlighter-rouge">49:55</code> i’ll show you
+<br /><code class="language-plaintext highlighter-rouge">49:56</code> later not look like what you naively
+<br /><code class="language-plaintext highlighter-rouge">49:59</code> would expect
+<br /><code class="language-plaintext highlighter-rouge">50:01</code> to this end you can just show you that
+<br /><code class="language-plaintext highlighter-rouge">50:03</code> such a letter
+<br /><code class="language-plaintext highlighter-rouge">50:04</code> system you can interpret in different
+<br /><code class="language-plaintext highlighter-rouge">50:06</code> ways
+<br /><code class="language-plaintext highlighter-rouge">50:08</code> one way is to say that it won’t give you
+<br /><code class="language-plaintext highlighter-rouge">50:11</code> like
+<br /><code class="language-plaintext highlighter-rouge">50:12</code> the mathematical rigorous form of the
+<br /><code class="language-plaintext highlighter-rouge">50:14</code> larger equation but it shows you why
+<br /><code class="language-plaintext highlighter-rouge">50:16</code> it looks not like you expect it to look
+<br /><code class="language-plaintext highlighter-rouge">50:19</code> like
+<br /><code class="language-plaintext highlighter-rouge">50:20</code> so the first way we can interpret
+<br /><code class="language-plaintext highlighter-rouge">50:24</code> this lattice system is to say what
+<br /><code class="language-plaintext highlighter-rouge">50:27</code> happens
+<br /><code class="language-plaintext highlighter-rouge">50:28</code> at t and what is the state at some d
+<br /><code class="language-plaintext highlighter-rouge">50:32</code> plus dt some like a very short time
+<br /><code class="language-plaintext highlighter-rouge">50:35</code> interval after that
+<br /><code class="language-plaintext highlighter-rouge">50:38</code> and now i’m taking like in this master
+<br /><code class="language-plaintext highlighter-rouge">50:40</code> equation i’m taking the perspective
+<br /><code class="language-plaintext highlighter-rouge">50:43</code> of the state in a certain site
+<br /><code class="language-plaintext highlighter-rouge">50:48</code> and then ask what are the previous
+<br /><code class="language-plaintext highlighter-rouge">50:51</code> states
+<br /><code class="language-plaintext highlighter-rouge">50:52</code> that give rise to me being infected
+<br /><code class="language-plaintext highlighter-rouge">50:57</code> you know what gives rises yeah and
+<br /><code class="language-plaintext highlighter-rouge">51:00</code> suppose that i was not infected before
+<br /><code class="language-plaintext highlighter-rouge">51:03</code> yeah then my left neighbor could have
+<br /><code class="language-plaintext highlighter-rouge">51:05</code> been infected
+<br /><code class="language-plaintext highlighter-rouge">51:07</code> my right neighbor could have been
+<br /><code class="language-plaintext highlighter-rouge">51:09</code> infected or both of them could have been
+<br /><code class="language-plaintext highlighter-rouge">51:12</code> infected
+<br /><code class="language-plaintext highlighter-rouge">51:12</code> and have affected me these are the three
+<br /><code class="language-plaintext highlighter-rouge">51:15</code> processes that
+<br /><code class="language-plaintext highlighter-rouge">51:16</code> lead to me being infected and then
+<br /><code class="language-plaintext highlighter-rouge">51:19</code> if it was there’s another process
+<br /><code class="language-plaintext highlighter-rouge">51:23</code> and i should use here different colors
+<br /><code class="language-plaintext highlighter-rouge">51:25</code> it’s not the recovery
+<br /><code class="language-plaintext highlighter-rouge">51:35</code> i switched the colors not red is
+<br /><code class="language-plaintext highlighter-rouge">51:39</code> healthy sorry
+<br /><code class="language-plaintext highlighter-rouge">51:43</code> red is healthy and blue is infected
+<br /><code class="language-plaintext highlighter-rouge">51:48</code> okay yeah if i in this recovery process
+<br /><code class="language-plaintext highlighter-rouge">51:53</code> it doesn’t matter what my neighbors were
+<br /><code class="language-plaintext highlighter-rouge">51:54</code> i would just i just know that was
+<br /><code class="language-plaintext highlighter-rouge">51:56</code> previously infected
+<br /><code class="language-plaintext highlighter-rouge">51:57</code> if i’m now in the process of recovery
+<br /><code class="language-plaintext highlighter-rouge">52:01</code> now this is this master equation picture
+<br /><code class="language-plaintext highlighter-rouge">52:03</code> where we ask the word which state do i
+<br /><code class="language-plaintext highlighter-rouge">52:04</code> come from
+<br /><code class="language-plaintext highlighter-rouge">52:06</code> and now we can take an equivalent
+<br /><code class="language-plaintext highlighter-rouge">52:09</code> description
+<br /><code class="language-plaintext highlighter-rouge">52:10</code> and take more a lattice picture now that
+<br /><code class="language-plaintext highlighter-rouge">52:13</code> corresponds more a little bit left to
+<br /><code class="language-plaintext highlighter-rouge">52:14</code> the longer
+<br /><code class="language-plaintext highlighter-rouge">52:15</code> picture yeah where update where i say
+<br /><code class="language-plaintext highlighter-rouge">52:18</code> what is the state of the lattice now
+<br /><code class="language-plaintext highlighter-rouge">52:20</code> and what is the state of the lattice the
+<br /><code class="language-plaintext highlighter-rouge">52:21</code> next step
+<br /><code class="language-plaintext highlighter-rouge">52:23</code> now that corresponds to this
+<br /><code class="language-plaintext highlighter-rouge">52:24</code> differential equation picture
+<br /><code class="language-plaintext highlighter-rouge">52:28</code> yeah and then how can i update it so
+<br /><code class="language-plaintext highlighter-rouge">52:32</code> then i need at least two lattice points
+<br /><code class="language-plaintext highlighter-rouge">52:35</code> at the same time to update to define
+<br /><code class="language-plaintext highlighter-rouge">52:37</code> these updating rules
+<br /><code class="language-plaintext highlighter-rouge">52:39</code> and then i have different possibilities
+<br /><code class="language-plaintext highlighter-rouge">52:41</code> here
+<br /><code class="language-plaintext highlighter-rouge">52:42</code> yeah if my two lattice points are
+<br /><code class="language-plaintext highlighter-rouge">52:45</code> infected
+<br /><code class="language-plaintext highlighter-rouge">52:46</code> that previously either the left one or
+<br /><code class="language-plaintext highlighter-rouge">52:49</code> the right one
+<br /><code class="language-plaintext highlighter-rouge">52:50</code> was infected
+<br /><code class="language-plaintext highlighter-rouge">52:54</code> the recovery process is no more
+<br /><code class="language-plaintext highlighter-rouge">52:56</code> complicated
+<br /><code class="language-plaintext highlighter-rouge">52:57</code> yeah if i have known that in this two
+<br /><code class="language-plaintext highlighter-rouge">53:00</code> side picture i have one
+<br /><code class="language-plaintext highlighter-rouge">53:03</code> infected and one one infected and one
+<br /><code class="language-plaintext highlighter-rouge">53:07</code> not affected once this white is down
+<br /><code class="language-plaintext highlighter-rouge">53:09</code> here
+<br /><code class="language-plaintext highlighter-rouge">53:10</code> this is
+<br /><code class="language-plaintext highlighter-rouge">53:13</code> healthy this is
+<br /><code class="language-plaintext highlighter-rouge">53:17</code> infected
+<br /><code class="language-plaintext highlighter-rouge">53:21</code> now if i have one infected and one
+<br /><code class="language-plaintext highlighter-rouge">53:24</code> healthy one
+<br /><code class="language-plaintext highlighter-rouge">53:25</code> previously my system could have been
+<br /><code class="language-plaintext highlighter-rouge">53:29</code> must have been in a state now if i’m
+<br /><code class="language-plaintext highlighter-rouge">53:31</code> looking at the
+<br /><code class="language-plaintext highlighter-rouge">53:32</code> recovery process where both of them were
+<br /><code class="language-plaintext highlighter-rouge">53:35</code> infected
+<br /><code class="language-plaintext highlighter-rouge">53:37</code> now so with the probability one half i
+<br /><code class="language-plaintext highlighter-rouge">53:39</code> have either this
+<br /><code class="language-plaintext highlighter-rouge">53:41</code> or this one here and then
+<br /><code class="language-plaintext highlighter-rouge">53:44</code> if both of the states in the second time
+<br /><code class="language-plaintext highlighter-rouge">53:47</code> step
+<br /><code class="language-plaintext highlighter-rouge">53:48</code> are healthy then one of them was in fact
+<br /><code class="language-plaintext highlighter-rouge">53:52</code> before now so here i update two sides at
+<br /><code class="language-plaintext highlighter-rouge">53:55</code> the same time
+<br /><code class="language-plaintext highlighter-rouge">53:57</code> or i can also say i updated the whole
+<br /><code class="language-plaintext highlighter-rouge">53:59</code> letters at the same time
+<br /><code class="language-plaintext highlighter-rouge">54:00</code> in parallel and now
+<br /><code class="language-plaintext highlighter-rouge">54:04</code> the thing is what is this here
+<br /><code class="language-plaintext highlighter-rouge">54:09</code> what is this here these two processes
+<br /><code class="language-plaintext highlighter-rouge">54:11</code> here
+<br /><code class="language-plaintext highlighter-rouge">54:12</code> suddenly i have a process a process for
+<br /><code class="language-plaintext highlighter-rouge">54:15</code> recovery
+<br /><code class="language-plaintext highlighter-rouge">54:17</code> that involves two individuals
+<br /><code class="language-plaintext highlighter-rouge">54:20</code> yeah formally that involves two
+<br /><code class="language-plaintext highlighter-rouge">54:22</code> individuals so here have two individuals
+<br /><code class="language-plaintext highlighter-rouge">54:25</code> to infect it
+<br /><code class="language-plaintext highlighter-rouge">54:26</code> and after that only one of them is
+<br /><code class="language-plaintext highlighter-rouge">54:28</code> infected</p>
+
+<h3 id="slide-10">slide 10</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">54:30</code> now suddenly i have two individuals and
+<br /><code class="language-plaintext highlighter-rouge">54:32</code> if i ask how
+<br /><code class="language-plaintext highlighter-rouge">54:33</code> such a term here if i take this
+<br /><code class="language-plaintext highlighter-rouge">54:37</code> description as the basis for my larger
+<br /><code class="language-plaintext highlighter-rouge">54:40</code> equation
+<br /><code class="language-plaintext highlighter-rouge">54:41</code> how will this term pop up in my larger
+<br /><code class="language-plaintext highlighter-rouge">54:44</code> equation
+<br /><code class="language-plaintext highlighter-rouge">54:45</code> then it’s this term is proportional to
+<br /><code class="language-plaintext highlighter-rouge">54:49</code> one-half
+<br /><code class="language-plaintext highlighter-rouge">54:50</code> times
+<br /><code class="language-plaintext highlighter-rouge">54:55</code> the probability that one of them is
+<br /><code class="language-plaintext highlighter-rouge">54:57</code> infected and the probability that the
+<br /><code class="language-plaintext highlighter-rouge">54:59</code> other one is
+<br /><code class="language-plaintext highlighter-rouge">55:00</code> also infected so we will have something
+<br /><code class="language-plaintext highlighter-rouge">55:03</code> like rho
+<br /><code class="language-plaintext highlighter-rouge">55:04</code> of x t squared
+<br /><code class="language-plaintext highlighter-rouge">55:08</code> and we’ll get a minus because we
+<br /><code class="language-plaintext highlighter-rouge">55:10</code> decrease the number
+<br /><code class="language-plaintext highlighter-rouge">55:11</code> of infected individuals
+<br /><code class="language-plaintext highlighter-rouge">55:15</code> now this is just to show you yeah by
+<br /><code class="language-plaintext highlighter-rouge">55:16</code> this uh
+<br /><code class="language-plaintext highlighter-rouge">55:18</code> magnesium inside the exotic lattice
+<br /><code class="language-plaintext highlighter-rouge">55:20</code> representation
+<br /><code class="language-plaintext highlighter-rouge">55:22</code> that you suddenly get a term you write
+<br /><code class="language-plaintext highlighter-rouge">55:25</code> down the larger equation here
+<br /><code class="language-plaintext highlighter-rouge">55:27</code> this is the larger equation
+<br /><code class="language-plaintext highlighter-rouge">55:30</code> and this is here what you expect the
+<br /><code class="language-plaintext highlighter-rouge">55:32</code> first thing is what you expect is an
+<br /><code class="language-plaintext highlighter-rouge">55:34</code> infection term
+<br /><code class="language-plaintext highlighter-rouge">55:35</code> you have the density of infected people
+<br /><code class="language-plaintext highlighter-rouge">55:37</code> at a certain position x
+<br /><code class="language-plaintext highlighter-rouge">55:40</code> and this depends on how many infected
+<br /><code class="language-plaintext highlighter-rouge">55:43</code> people i already have
+<br /><code class="language-plaintext highlighter-rouge">55:44</code> that is this typical exponential
+<br /><code class="language-plaintext highlighter-rouge">55:47</code> increase of the infection rate
+<br /><code class="language-plaintext highlighter-rouge">55:51</code> now we get another term here
+<br /><code class="language-plaintext highlighter-rouge">55:55</code> this term that describes the recovery
+<br /><code class="language-plaintext highlighter-rouge">55:58</code> process now this describes
+<br /><code class="language-plaintext highlighter-rouge">56:02</code> the recovery process and
+<br /><code class="language-plaintext highlighter-rouge">56:05</code> it suddenly has this quadratic term
+<br /><code class="language-plaintext highlighter-rouge">56:08</code> although this recovery process like this
+<br /><code class="language-plaintext highlighter-rouge">56:10</code> picture looked completely linear because
+<br /><code class="language-plaintext highlighter-rouge">56:12</code> every individual was doing it
+<br /><code class="language-plaintext highlighter-rouge">56:14</code> individually now we have now the second
+<br /><code class="language-plaintext highlighter-rouge">56:18</code> degree term here and that looks like an
+<br /><code class="language-plaintext highlighter-rouge">56:21</code> interaction
+<br /><code class="language-plaintext highlighter-rouge">56:22</code> and this comes just because we’re
+<br /><code class="language-plaintext highlighter-rouge">56:23</code> updating all the letters in parallel in
+<br /><code class="language-plaintext highlighter-rouge">56:25</code> this
+<br /><code class="language-plaintext highlighter-rouge">56:26</code> lingerie equation and that’s why we get
+<br /><code class="language-plaintext highlighter-rouge">56:29</code> this
+<br /><code class="language-plaintext highlighter-rouge">56:30</code> second degree term here we have a
+<br /><code class="language-plaintext highlighter-rouge">56:33</code> diffusion term
+<br /><code class="language-plaintext highlighter-rouge">56:34</code> this one here that was also not in our
+<br /><code class="language-plaintext highlighter-rouge">56:36</code> model description
+<br /><code class="language-plaintext highlighter-rouge">56:38</code> you know that we never said that these
+<br /><code class="language-plaintext highlighter-rouge">56:41</code> particles are actually moving around
+<br /><code class="language-plaintext highlighter-rouge">56:44</code> but there is some spread of spatial
+<br /><code class="language-plaintext highlighter-rouge">56:46</code> information because you
+<br /><code class="language-plaintext highlighter-rouge">56:47</code> interact with the nearest neighbor yeah
+<br /><code class="language-plaintext highlighter-rouge">56:50</code> and this
+<br /><code class="language-plaintext highlighter-rouge">56:51</code> is models if you zoom out and go to a
+<br /><code class="language-plaintext highlighter-rouge">56:54</code> continuous picture
+<br /><code class="language-plaintext highlighter-rouge">56:56</code> it’s a spread diffusive spread of
+<br /><code class="language-plaintext highlighter-rouge">56:58</code> infection information
+<br /><code class="language-plaintext highlighter-rouge">57:00</code> and that’s why you effectively get a
+<br /><code class="language-plaintext highlighter-rouge">57:02</code> term here you need to have a term
+<br /><code class="language-plaintext highlighter-rouge">57:05</code> that involves spatial derivatives now
+<br /><code class="language-plaintext highlighter-rouge">57:07</code> where you actually spread something over
+<br /><code class="language-plaintext highlighter-rouge">57:09</code> space you spread the infection of
+<br /><code class="language-plaintext highlighter-rouge">57:11</code> space and that’s why you get this term
+<br /><code class="language-plaintext highlighter-rouge">57:13</code> here
+<br /><code class="language-plaintext highlighter-rouge">57:14</code> and you have of course again a noise
+<br /><code class="language-plaintext highlighter-rouge">57:16</code> term
+<br /><code class="language-plaintext highlighter-rouge">57:18</code> now and i’ll give these here parameters
+<br /><code class="language-plaintext highlighter-rouge">57:20</code> and also new names the combinations of
+<br /><code class="language-plaintext highlighter-rouge">57:22</code> the old parameters
+<br /><code class="language-plaintext highlighter-rouge">57:24</code> and we want to keep this we want to have
+<br /><code class="language-plaintext highlighter-rouge">57:26</code> different parameters at each of these
+<br /><code class="language-plaintext highlighter-rouge">57:28</code> rates because we in the next step want
+<br /><code class="language-plaintext highlighter-rouge">57:30</code> to renormalize these parameters that we
+<br /><code class="language-plaintext highlighter-rouge">57:33</code> we need them and the noise here
+<br /><code class="language-plaintext highlighter-rouge">57:36</code> on the right hand side is our good old
+<br /><code class="language-plaintext highlighter-rouge">57:39</code> gaussian noise now that has
+<br /><code class="language-plaintext highlighter-rouge">57:41</code> zero mean and
+<br /><code class="language-plaintext highlighter-rouge">57:44</code> correlations in space and time
+<br /><code class="language-plaintext highlighter-rouge">57:47</code> that are luckily delta distributors so
+<br /><code class="language-plaintext highlighter-rouge">57:50</code> they’re
+<br /><code class="language-plaintext highlighter-rouge">57:50</code> memory less they don’t have memory in
+<br /><code class="language-plaintext highlighter-rouge">57:52</code> space or in time
+<br /><code class="language-plaintext highlighter-rouge">57:54</code> but they depend on this density here
+<br /><code class="language-plaintext highlighter-rouge">58:00</code> they depend on this density and what
+<br /><code class="language-plaintext highlighter-rouge">58:03</code> this means
+<br /><code class="language-plaintext highlighter-rouge">58:04</code> is that this noise
+<br /><code class="language-plaintext highlighter-rouge">58:08</code> the correlation
+<br /><code class="language-plaintext highlighter-rouge">58:11</code> in the noise or the strength of this
+<br /><code class="language-plaintext highlighter-rouge">58:13</code> noise that’s the strength of
+<br /><code class="language-plaintext highlighter-rouge">58:15</code> noise
+<br /><code class="language-plaintext highlighter-rouge">58:19</code> is zero
+<br /><code class="language-plaintext highlighter-rouge">58:24</code> if the disease
+<br /><code class="language-plaintext highlighter-rouge">58:28</code> is extinct that’s called
+<br /><code class="language-plaintext highlighter-rouge">58:31</code> multiplicative noise because now the
+<br /><code class="language-plaintext highlighter-rouge">58:33</code> density
+<br /><code class="language-plaintext highlighter-rouge">58:35</code> rho of x and t is a pre-factor in the
+<br /><code class="language-plaintext highlighter-rouge">58:39</code> noise term that
+<br /><code class="language-plaintext highlighter-rouge">58:40</code> if is it is contributing
+<br /><code class="language-plaintext highlighter-rouge">58:43</code> or defining the strength of the nodes
+<br /><code class="language-plaintext highlighter-rouge">58:45</code> and once we have
+<br /><code class="language-plaintext highlighter-rouge">58:46</code> zero infected individuals left then the
+<br /><code class="language-plaintext highlighter-rouge">58:49</code> noise disappeared and we can never have
+<br /><code class="language-plaintext highlighter-rouge">58:51</code> get away out of this term out of this
+<br /><code class="language-plaintext highlighter-rouge">58:53</code> point
+<br /><code class="language-plaintext highlighter-rouge">58:54</code> where the infection is lost</p>
+
+<h3 id="slide-11">slide 11</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">58:59</code> so maybe
+<br /><code class="language-plaintext highlighter-rouge">59:02</code> quite late in time as a next step
+<br /><code class="language-plaintext highlighter-rouge">59:10</code> um we get a little bit more formal so
+<br /><code class="language-plaintext highlighter-rouge">59:12</code> now we have the larger
+<br /><code class="language-plaintext highlighter-rouge">59:13</code> equation now and what you see here
+<br /><code class="language-plaintext highlighter-rouge">59:16</code> already
+<br /><code class="language-plaintext highlighter-rouge">59:17</code> is the martensite rose functional
+<br /><code class="language-plaintext highlighter-rouge">59:20</code> integral that we derived
+<br /><code class="language-plaintext highlighter-rouge">59:22</code> and this functional martin citra rose
+<br /><code class="language-plaintext highlighter-rouge">59:24</code> function integral
+<br /><code class="language-plaintext highlighter-rouge">59:25</code> or <strong>martensite rules johnson the dominic</strong>
+<br /><code class="language-plaintext highlighter-rouge">59:27</code> is functional integral
+<br /><code class="language-plaintext highlighter-rouge">59:29</code> you can divide very easily we remember
+<br /><code class="language-plaintext highlighter-rouge">59:32</code> the equation that we had
+<br /><code class="language-plaintext highlighter-rouge">59:33</code> a few lectures ago first
+<br /><code class="language-plaintext highlighter-rouge">59:36</code> part of this function integral
+<br /><code class="language-plaintext highlighter-rouge">59:42</code> what was it here
+<br /><code class="language-plaintext highlighter-rouge">59:45</code> it’s just the launch of a equation
+<br /><code class="language-plaintext highlighter-rouge">59:48</code> yeah that that makes sure that you
+<br /><code class="language-plaintext highlighter-rouge">59:50</code> actually solve the launcher equation
+<br /><code class="language-plaintext highlighter-rouge">59:52</code> here you have the laundry equation and
+<br /><code class="language-plaintext highlighter-rouge">59:55</code> then you have these terms here
+<br /><code class="language-plaintext highlighter-rouge">59:57</code> on the right hand side there are higher
+<br /><code class="language-plaintext highlighter-rouge">60:00</code> order
+<br /><code class="language-plaintext highlighter-rouge">60:01</code> here we have this phi squared
+<br /><code class="language-plaintext highlighter-rouge">60:04</code> that’s just this one here and here
+<br /><code class="language-plaintext highlighter-rouge">60:08</code> you have a noise term that we also had
+<br /><code class="language-plaintext highlighter-rouge">60:10</code> before now that was this
+<br /><code class="language-plaintext highlighter-rouge">60:12</code> gaussian noise term that we came from
+<br /><code class="language-plaintext highlighter-rouge">60:14</code> integrating out the psi
+<br /><code class="language-plaintext highlighter-rouge">60:16</code> in the martensitic rows formula now so
+<br /><code class="language-plaintext highlighter-rouge">60:19</code> we have this term here
+<br /><code class="language-plaintext highlighter-rouge">60:21</code> is quite noise but in contrast to the
+<br /><code class="language-plaintext highlighter-rouge">60:23</code> previous case
+<br /><code class="language-plaintext highlighter-rouge">60:25</code> where the noise didn’t depend on the
+<br /><code class="language-plaintext highlighter-rouge">60:27</code> density itself
+<br /><code class="language-plaintext highlighter-rouge">60:28</code> we now here that’s the only difference
+<br /><code class="language-plaintext highlighter-rouge">60:31</code> have
+<br /><code class="language-plaintext highlighter-rouge">60:31</code> another phi here
+<br /><code class="language-plaintext highlighter-rouge">60:35</code> now we have another phi here
+<br /><code class="language-plaintext highlighter-rouge">60:38</code> that’s the only difference that we get
+<br /><code class="language-plaintext highlighter-rouge">60:40</code> for multiplicative noise
+<br /><code class="language-plaintext highlighter-rouge">60:42</code> and because we have multiplicative noise
+<br /><code class="language-plaintext highlighter-rouge">60:46</code> you can see that somehow now the noise
+<br /><code class="language-plaintext highlighter-rouge">60:50</code> term
+<br /><code class="language-plaintext highlighter-rouge">60:51</code> here looks a little bit like another
+<br /><code class="language-plaintext highlighter-rouge">60:55</code> term that is
+<br /><code class="language-plaintext highlighter-rouge">60:55</code> actually as an interaction term where we
+<br /><code class="language-plaintext highlighter-rouge">60:58</code> couple the two fields
+<br /><code class="language-plaintext highlighter-rouge">61:00</code> one linearly to each other this term and
+<br /><code class="language-plaintext highlighter-rouge">61:03</code> suddenly the noise term is not
+<br /><code class="language-plaintext highlighter-rouge">61:04</code> simple a gaussian it’s not simple a
+<br /><code class="language-plaintext highlighter-rouge">61:07</code> gaussian that the inti can integrate
+<br /><code class="language-plaintext highlighter-rouge">61:08</code> over
+<br /><code class="language-plaintext highlighter-rouge">61:09</code> suddenly it couples to the other fields
+<br /><code class="language-plaintext highlighter-rouge">61:11</code> now the strength of this noise curve
+<br /><code class="language-plaintext highlighter-rouge">61:13</code> is proportional to phi that’s this
+<br /><code class="language-plaintext highlighter-rouge">61:16</code> multiplicative noise that makes life
+<br /><code class="language-plaintext highlighter-rouge">61:18</code> complicated
+<br /><code class="language-plaintext highlighter-rouge">61:20</code> now we now do a simple step now we
+<br /><code class="language-plaintext highlighter-rouge">61:23</code> re-scale we now
+<br /><code class="language-plaintext highlighter-rouge">61:24</code> we now we take this martensitic rows
+<br /><code class="language-plaintext highlighter-rouge">61:27</code> generating function that i wrote down
+<br /><code class="language-plaintext highlighter-rouge">61:29</code> here we take this
+<br /><code class="language-plaintext highlighter-rouge">61:31</code> yeah and we just make our lives easier
+<br /><code class="language-plaintext highlighter-rouge">61:33</code> life easier for later
+<br /><code class="language-plaintext highlighter-rouge">61:35</code> yeah and by doing this to do this
+<br /><code class="language-plaintext highlighter-rouge">61:39</code> we rescale some of these
+<br /><code class="language-plaintext highlighter-rouge">61:42</code> fields and parameters so rescale
+<br /><code class="language-plaintext highlighter-rouge">61:47</code> the fields so what we do
+<br /><code class="language-plaintext highlighter-rouge">61:50</code> is we want to
+<br /><code class="language-plaintext highlighter-rouge">61:53</code> get rid of
+<br /><code class="language-plaintext highlighter-rouge">61:59</code> we have had two terms this one and this
+<br /><code class="language-plaintext highlighter-rouge">62:02</code> one
+<br /><code class="language-plaintext highlighter-rouge">62:03</code> they look kind of similar and the idea
+<br /><code class="language-plaintext highlighter-rouge">62:06</code> is now
+<br /><code class="language-plaintext highlighter-rouge">62:06</code> that if we have a proper transformation
+<br /><code class="language-plaintext highlighter-rouge">62:09</code> or fields
+<br /><code class="language-plaintext highlighter-rouge">62:10</code> that we can make them exactly equal up
+<br /><code class="language-plaintext highlighter-rouge">62:13</code> to some pre-factors
+<br /><code class="language-plaintext highlighter-rouge">62:15</code> yeah so that’s what we want to do we
+<br /><code class="language-plaintext highlighter-rouge">62:16</code> want to simplify this action
+<br /><code class="language-plaintext highlighter-rouge">62:19</code> and uh to symmetrize it now so that we
+<br /><code class="language-plaintext highlighter-rouge">62:22</code> can treat these two terms
+<br /><code class="language-plaintext highlighter-rouge">62:23</code> and e equally now that’s how we may we
+<br /><code class="language-plaintext highlighter-rouge">62:26</code> want to make the prefactor here
+<br /><code class="language-plaintext highlighter-rouge">62:28</code> this and this prefactor equal
+<br /><code class="language-plaintext highlighter-rouge">62:32</code> now we can summarize these two trends
+<br /><code class="language-plaintext highlighter-rouge">62:35</code> now so really scared the fields but just
+<br /><code class="language-plaintext highlighter-rouge">62:37</code> tell you how to do that you have phi
+<br /><code class="language-plaintext highlighter-rouge">62:40</code> goes over to 2 lambda
+<br /><code class="language-plaintext highlighter-rouge">62:43</code> over gamma times phi
+<br /><code class="language-plaintext highlighter-rouge">62:46</code> if i tilde the response field goes over
+<br /><code class="language-plaintext highlighter-rouge">62:50</code> to
+<br /><code class="language-plaintext highlighter-rouge">62:52</code> gamma to lambda
+<br /><code class="language-plaintext highlighter-rouge">62:56</code> and gamma goes over to
+<br /><code class="language-plaintext highlighter-rouge">63:00</code> two gamma lambda
+<br /><code class="language-plaintext highlighter-rouge">63:05</code> yeah so we rescale this we are allowed
+<br /><code class="language-plaintext highlighter-rouge">63:07</code> to do that
+<br /><code class="language-plaintext highlighter-rouge">63:08</code> and then we get our new generating
+<br /><code class="language-plaintext highlighter-rouge">63:11</code> functional
+<br /><code class="language-plaintext highlighter-rouge">63:13</code> and this generating functional is again
+<br /><code class="language-plaintext highlighter-rouge">63:16</code> of this form
+<br /><code class="language-plaintext highlighter-rouge">63:17</code> d phi d phi tilde
+<br /><code class="language-plaintext highlighter-rouge">63:22</code> e to the some action as naught and we
+<br /><code class="language-plaintext highlighter-rouge">63:26</code> find that
+<br /><code class="language-plaintext highlighter-rouge">63:26</code> what this is phi
+<br /><code class="language-plaintext highlighter-rouge">63:30</code> by children
+<br /><code class="language-plaintext highlighter-rouge">63:33</code> plus now this is has a naught the others
+<br /><code class="language-plaintext highlighter-rouge">63:36</code> the non-interacting term
+<br /><code class="language-plaintext highlighter-rouge">63:38</code> and now we have a term that of course
+<br /><code class="language-plaintext highlighter-rouge">63:40</code> that describes interactions
+<br /><code class="language-plaintext highlighter-rouge">63:43</code> now that’s where the fun is happening
+<br /><code class="language-plaintext highlighter-rouge">63:46</code> by artillery and just write that down
+<br /><code class="language-plaintext highlighter-rouge">63:50</code> this as not phi
+<br /><code class="language-plaintext highlighter-rouge">63:54</code> phi tilde this action is the integral
+<br /><code class="language-plaintext highlighter-rouge">63:57</code> over dx
+<br /><code class="language-plaintext highlighter-rouge">63:59</code> dt
+<br /><code class="language-plaintext highlighter-rouge">64:03</code> so here we should have
+<br /><code class="language-plaintext highlighter-rouge">64:06</code> dt as well
+<br /><code class="language-plaintext highlighter-rouge">64:10</code> yeah so at the x dt
+<br /><code class="language-plaintext highlighter-rouge">64:13</code> and now we um have
+<br /><code class="language-plaintext highlighter-rouge">64:17</code> 5 x t
+<br /><code class="language-plaintext highlighter-rouge">64:21</code> tau sorry what we need that
+<br /><code class="language-plaintext highlighter-rouge">64:25</code> del t minus d naught
+<br /><code class="language-plaintext highlighter-rouge">64:28</code> squared minus kappa
+<br /><code class="language-plaintext highlighter-rouge">64:32</code> phi of x t
+<br /><code class="language-plaintext highlighter-rouge">64:37</code> and then we have another part as
+<br /><code class="language-plaintext highlighter-rouge">64:40</code> interaction phi phi to the
+<br /><code class="language-plaintext highlighter-rouge">64:45</code> gamma over two integral dx
+<br /><code class="language-plaintext highlighter-rouge">64:49</code> dt phi tilde
+<br /><code class="language-plaintext highlighter-rouge">64:53</code> x t minus i sorry that looks
+<br /><code class="language-plaintext highlighter-rouge">64:56</code> not so nice
+<br /><code class="language-plaintext highlighter-rouge">65:01</code> all right tilde of x and t
+<br /><code class="language-plaintext highlighter-rouge">65:05</code> times phi of x
+<br /><code class="language-plaintext highlighter-rouge">65:09</code> t minus phi to the
+<br /><code class="language-plaintext highlighter-rouge">65:13</code> of x and t
+<br /><code class="language-plaintext highlighter-rouge">65:17</code> phi of x
+<br /><code class="language-plaintext highlighter-rouge">65:20</code> t so this is this interaction term
+<br /><code class="language-plaintext highlighter-rouge">65:24</code> and it’s called interaction term because
+<br /><code class="language-plaintext highlighter-rouge">65:26</code> we have here
+<br /><code class="language-plaintext highlighter-rouge">65:27</code> higher orders of the field coupling to
+<br /><code class="language-plaintext highlighter-rouge">65:29</code> each other
+<br /><code class="language-plaintext highlighter-rouge">65:31</code> yeah so
+<br /><code class="language-plaintext highlighter-rouge">65:34</code> this is now our martin’s intervals
+<br /><code class="language-plaintext highlighter-rouge">65:37</code> integral
+<br /><code class="language-plaintext highlighter-rouge">65:38</code> yeah and this is what we’ll be dealing
+<br /><code class="language-plaintext highlighter-rouge">65:41</code> with and this is what we’ll define
+<br /><code class="language-plaintext highlighter-rouge">65:43</code> the result renormalization group on and
+<br /><code class="language-plaintext highlighter-rouge">65:46</code> because i knew that we would be doing
+<br /><code class="language-plaintext highlighter-rouge">65:48</code> renormalization
+<br /><code class="language-plaintext highlighter-rouge">65:50</code> i have already introduced this little
+<br /><code class="language-plaintext highlighter-rouge">65:54</code> towel here now because in
+<br /><code class="language-plaintext highlighter-rouge">65:57</code> renormalization
+<br /><code class="language-plaintext highlighter-rouge">65:58</code> we want to cause grain we want to
+<br /><code class="language-plaintext highlighter-rouge">66:00</code> transform this action
+<br /><code class="language-plaintext highlighter-rouge">66:02</code> and we want to see how our action and
+<br /><code class="language-plaintext highlighter-rouge">66:04</code> how the parameters are
+<br /><code class="language-plaintext highlighter-rouge">66:06</code> of our action change in this procedure
+<br /><code class="language-plaintext highlighter-rouge">66:09</code> and that’s why all our terms here need
+<br /><code class="language-plaintext highlighter-rouge">66:11</code> to have a prefactor
+<br /><code class="language-plaintext highlighter-rouge">66:14</code> yeah and that’s why i introduced this
+<br /><code class="language-plaintext highlighter-rouge">66:15</code> tau that’s why i have this d
+<br /><code class="language-plaintext highlighter-rouge">66:18</code> you know and this kappa here i have them
+<br /><code class="language-plaintext highlighter-rouge">66:20</code> all
+<br /><code class="language-plaintext highlighter-rouge">66:21</code> giving them different names although
+<br /><code class="language-plaintext highlighter-rouge">66:22</code> they’re not independent of each other
+<br /><code class="language-plaintext highlighter-rouge">66:25</code> because our original model just had one
+<br /><code class="language-plaintext highlighter-rouge">66:27</code> parameter that was the lambda
+<br /><code class="language-plaintext highlighter-rouge">66:29</code> yeah so that’s the uh that’s the martin
+<br /><code class="language-plaintext highlighter-rouge">66:32</code> sutra rose
+<br /><code class="language-plaintext highlighter-rouge">66:34</code> functional integral and um
+<br /><code class="language-plaintext highlighter-rouge">66:38</code> next so we’re already quite late now
+<br /><code class="language-plaintext highlighter-rouge">66:41</code> next time
+<br /><code class="language-plaintext highlighter-rouge">66:42</code> we start right away with uh first with
+<br /><code class="language-plaintext highlighter-rouge">66:47</code> introducing renormalization intuitively
+<br /><code class="language-plaintext highlighter-rouge">66:51</code> and then as a second step you’ll then
+<br /><code class="language-plaintext highlighter-rouge">66:53</code> apply that
+<br /><code class="language-plaintext highlighter-rouge">66:54</code> to this epidemic model and re-normalize
+<br /><code class="language-plaintext highlighter-rouge">66:57</code> this margin central rows
+<br /><code class="language-plaintext highlighter-rouge">66:58</code> functional integral now apparently i was
+<br /><code class="language-plaintext highlighter-rouge">67:01</code> always
+<br /><code class="language-plaintext highlighter-rouge">67:01</code> very optimistic and it was trying to
+<br /><code class="language-plaintext highlighter-rouge">67:04</code> introduce already
+<br /><code class="language-plaintext highlighter-rouge">67:05</code> the renomination today but we can do
+<br /><code class="language-plaintext highlighter-rouge">67:07</code> that just next week
+<br /><code class="language-plaintext highlighter-rouge">67:08</code> now because it’s already quite late
+<br /><code class="language-plaintext highlighter-rouge">67:11</code> today</p>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = 32;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/32">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        马普所·非平衡态系统中的集体过程·语音转录 | 06. Non-equilibrium Criticality - February 25, 2021 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-Popular_GitHub"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/About"><span class="icon-CN_tencent_wechat"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.douban.com/people/Gravitus/"><span class="icon-CN_douban_B"></span></a>
+      </li>
+    
+      <li>
+        <a href="//space.bilibili.com/29132299"><span class="icon-CN_bilibili"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-Popular_RSS"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2021 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted on <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>
