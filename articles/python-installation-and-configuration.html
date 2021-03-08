@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>.py 在 Windows 10 上配置 python 开发环境 | 阿掖山：一个博客</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content=".py 在 Windows 10 上配置 python 开发环境" />
+<meta name="author" content="MountAye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="截图截到哭……" />
+<meta property="og:description" content="截图截到哭……" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/python-installation-and-configuration" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/python-installation-and-configuration" />
+<meta property="og:site_name" content="阿掖山：一个博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content=".py 在 Windows 10 上配置 python 开发环境" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"MountAye"},"description":"截图截到哭……","headline":".py 在 Windows 10 上配置 python 开发环境","dateModified":"2021-03-07T00:00:00+00:00","datePublished":"2021-03-07T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/python-installation-and-configuration"},"url":"mountaye.github.io/blog/articles/python-installation-and-configuration","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">    
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/python-installation-and-configuration">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">I would be happy if this blog helps you; if it doesn't, I wouldn't be disappointed.</span><br>
+        ——<span id="quoteAuthor">Welcome to this blog</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">Home</a>
+        
+  	
+        
+            <a href="/blog/History/">History</a>
+        
+  	
+        
+            <a href="/blog/Topics/">Topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">Links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">Comments</a>
+        
+  	
+        
+            <a href="/blog/About/">About</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>.py | 在 Windows 10 上配置 python 开发环境</h1>
+        <p class="subtitle">
+            March 7, 2021
+        </p>
+    <div class="postContent">
+        <p>我的 python 版本之前一直停留在 3.7，目前最新已经到了 3.9。最近研究上要用一段别人写的 python 的代码，原作要求 3.6 版本的 python，所以卸载了 3.7 版本，重新安装了 3.9 和 3.6 两个版本的 python。</p>
+
+<p>煽动爸妈学编程很久了，欠他们一篇教程。不论是打算不断精进者的第一门编程语言，还是浅尝辄止者打算学的唯一一门语言，python 都是一个很不错的选择。所以即便爸妈对编程可以说是毫无兴趣，我也还是把这篇教程写完了，希望能帮到其他人。因为是面向纯新手的，所以基于 Windows 10 操作系统。因为这套设置我自己也要用，处于个人偏好，所以没有直接使用 <code class="language-plaintext highlighter-rouge">conda</code>。</p>
+
+<h2 id="别看你今天闹得欢-先拉个清单"><del>别看你今天闹得欢</del> 先拉个清单</h2>
+<ul>
+  <li>python
+    <ul>
+      <li>在官网下载 <code class="language-plaintext highlighter-rouge">python</code> 解释器</li>
+      <li>安装 <code class="language-plaintext highlighter-rouge">python</code> 解释器</li>
+    </ul>
+  </li>
+  <li>虚拟环境
+    <ul>
+      <li>设置环境变量</li>
+      <li>用 <code class="language-plaintext highlighter-rouge">pip</code> 安装 <code class="language-plaintext highlighter-rouge">virtualenv</code></li>
+      <li>用 <code class="language-plaintext highlighter-rouge">pip</code> 安装 <code class="language-plaintext highlighter-rouge">virtualenvwrapper</code></li>
+      <li>创建一个虚拟环境，安装 <code class="language-plaintext highlighter-rouge">jupyter</code></li>
+    </ul>
+  </li>
+  <li>编辑器
+    <ul>
+      <li>在官网下载 <code class="language-plaintext highlighter-rouge">vscode</code></li>
+      <li>安装 <code class="language-plaintext highlighter-rouge">vscode</code> 和相关插件</li>
+      <li>测试一下效果</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="教程本体">教程本体</h2>
+
+<h3 id="在官网下载-python-解释器">在官网下载 <code class="language-plaintext highlighter-rouge">python</code> 解释器</h3>
+
+<p>在 python 的官网上 (<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>) 下载</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-python-official-website.png" /></figure>
+
+<h3 id="安装-python-解释器">安装 <code class="language-plaintext highlighter-rouge">python</code> 解释器</h3>
+
+<p>执行下载的文件，可以看到如下图所示的界面，点击红框中的选项，因为我想更改安装路径。此处似乎也可以勾选最下面的 “Add Python 3.9 to PATH”，我安装的时候没有选，后面才发现还要手动完成这一工作。</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-python-install.png" /></figure>
+
+<p>接下来的界面里每个选项都勾选，next。</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-python-next.png" /></figure>
+
+<p>在接下来出现的界面中，选择 “Install for all users”，然后选择一个自己喜欢的安装路径。我之所以选择 <code class="language-plaintext highlighter-rouge">C:\Python39</code> 这个位置，是因为:</p>
+<ol>
+  <li>C 盘是系统盘，而且是固态硬盘，比较快；</li>
+  <li>默认路径在个人文件夹里，非常难找</li>
+  <li><code class="language-plaintext highlighter-rouge">C:\Program Files</code> 需要管理员权限，用 <code class="language-plaintext highlighter-rouge">pip</code> 做软件包管理不方便。</li>
+</ol>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-python-install-path.png" /></figure>
+
+<p>安装完成后进入命令提示符，输入 <code class="language-plaintext highlighter-rouge">py</code>，应该可以看到一串 python 版本信息，然后命令提示符变成 <code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;</code> 字样，此时就已经进入了 python 环境，可以按行运行 python 命令。输入 <code class="language-plaintext highlighter-rouge">exit()</code> 就可以退出 python。</p>
+
+<h3 id="设置环境变量">设置环境变量</h3>
+
+<p>在 windows 的搜索框里输入 “environment variables”，没等你输完，应该就可以看到下图中的联想结果：</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-environment-variable-search.png" /></figure>
+
+<p>再按照下图，依次点击按钮，一共要做两件事:</p>
+<ol>
+  <li>给 <code class="language-plaintext highlighter-rouge">Path</code> 变量添加 <code class="language-plaintext highlighter-rouge">C:\Python39</code> 和 <code class="language-plaintext highlighter-rouge">C:\Python39\Scripts</code> 两个新值。</li>
+  <li>新建一个文件夹，用于存放 python 的虚拟环境（比如 <code class="language-plaintext highlighter-rouge">C:\PythonEnvs</code>）。创建一个名为 <code class="language-plaintext highlighter-rouge">WORKON_HOME</code> 的新变量，并将其值设为 <code class="language-plaintext highlighter-rouge">C:\PythonEnvs</code>.</li>
+</ol>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-environment-variable-box.png" /></figure>
+
+<h3 id="用-pip-安装-virtualenv-和-virtualenvwrapper">用 <code class="language-plaintext highlighter-rouge">pip</code> 安装 <code class="language-plaintext highlighter-rouge">virtualenv</code> 和 <code class="language-plaintext highlighter-rouge">virtualenvwrapper</code></h3>
+
+<p>按照刚才的步骤，此时 <code class="language-plaintext highlighter-rouge">pip</code> 应该已经安装，此时在命令行输入途中的命令，应该可以看到类似的返回信息：</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-pip-check.png" /></figure>
+
+<p>如果命令行说没找到 <code class="language-plaintext highlighter-rouge">pip</code>，可能需要按照<a href="https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py">这个链接</a>里的方法重新安装。</p>
+
+<p>在命令行中输入 <code class="language-plaintext highlighter-rouge">py -m pip install virtualenv</code>， 安装虚拟环境管理器：</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-virtualenv-install.png" /></figure>
+
+<p>显示安装成功之后，在命令行输入 <code class="language-plaintext highlighter-rouge">py -m pip install virtualenvwrapper-win</code>，结果应该和上图差不多，忘了截图。</p>
+
+<h3 id="创建一个虚拟环境安装-jupyter">创建一个虚拟环境，安装 <code class="language-plaintext highlighter-rouge">jupyter</code></h3>
+
+<p><code class="language-plaintext highlighter-rouge">virtualenv</code> 和 <code class="language-plaintext highlighter-rouge">virtualenvwrapper</code> 安装完成之后，在命令行中输入 <code class="language-plaintext highlighter-rouge">mkvirtualenv base</code>，新建一个名为 base 的虚拟环境。</p>
+
+<p>然后输入 <code class="language-plaintext highlighter-rouge">workon base</code>，此时命令提示符的行首应该会多出一个 <code class="language-plaintext highlighter-rouge">(base)</code> 字样，这说明我们已经工作在了 base 这个虚拟环境里。此时 <code class="language-plaintext highlighter-rouge">pip --version</code> 的结果说明我们的 python 的地址已经和之前不同了。</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-virtualenvwrapper-check.png" /></figure>
+
+<p>在这个环境之下，安装 jupyter，输入命令 <code class="language-plaintext highlighter-rouge">pip install jupyter</code>，安装 jupyter。这一步不是必须的，但是这样我们将来安装 vscode 之后，可以获得和 conda 自带的 spyder 类似的体验，菜鸟逐行调试的时候非常方便。</p>
+
+<h3 id="下载和安装-vscode">下载和安装 <code class="language-plaintext highlighter-rouge">vscode</code></h3>
+
+<p>从 vscode 的官网下载安装包（<a href="https://code.visualstudio.com/">链接在此</a>），可以看到大大的下载按钮：</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-vscode-download.png" /></figure>
+
+<p>下在之后的安装过程就和一般的程序安装一样（安装很久了，没有截图）。</p>
+
+<p>然后在你想开始写代码的文件夹里，鼠标右键单击，选择 “Open with Code”:</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-vscode-folder-open.png" /></figure>
+
+<p>然后在 vscode 的界面，在文件树上单击红框中的按钮，新建一个文件，命名为 <code class="language-plaintext highlighter-rouge">*.py</code>，这里随便写了个 “hello”.</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-vscode-new-file.png" /></figure>
+
+<p>在随后打开的文档编辑区输入 <code class="language-plaintext highlighter-rouge">print("Hello World")</code>，将光标停留在这一行，按 <code class="language-plaintext highlighter-rouge">Shift</code>+<code class="language-plaintext highlighter-rouge">Enter</code> 执行这一行：</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-vscode-run.png" /></figure>
+
+<p>因为是第一次执行，又因为安装了 <code class="language-plaintext highlighter-rouge">jupyter</code>，这时候 vscode 的右下角应该会出现一个提示框，询问是否用 jupyter interactive window 执行代码。然后关掉下方的这个 terminal (下半区右上角的叉号)。重新按 <code class="language-plaintext highlighter-rouge">Shift</code>+<code class="language-plaintext highlighter-rouge">Enter</code> 执行，此时的结果应该如下图，点击红圈中的变量浏览器，这就几乎和 spyder 的体验一样了。</p>
+
+<figure><figcaption></figcaption><img src="/blog/assets/photos/2021-03-07-vscode-interactive.png" /></figure>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = 34;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/34">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        .py | 在 Windows 10 上配置 python 开发环境 - March 7, 2021 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-Popular_GitHub"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/About"><span class="icon-CN_tencent_wechat"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.douban.com/people/Gravitus/"><span class="icon-CN_douban_B"></span></a>
+      </li>
+    
+      <li>
+        <a href="//space.bilibili.com/29132299"><span class="icon-CN_bilibili"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-Popular_RSS"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2021 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted on <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>

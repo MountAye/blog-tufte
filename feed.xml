@@ -5,9 +5,140 @@
     <description>阿掖山：一个博客</description>
     <link>mountaye.github.io/blog/</link>
     <atom:link href="mountaye.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 26 Feb 2021 04:07:39 +0000</pubDate>
-    <lastBuildDate>Fri, 26 Feb 2021 04:07:39 +0000</lastBuildDate>
+    <pubDate>Mon, 08 Mar 2021 06:05:13 +0000</pubDate>
+    <lastBuildDate>Mon, 08 Mar 2021 06:05:13 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>.py | 在 Windows 10 上配置 python 开发环境</title>
+        <description>&lt;p&gt;我的 python 版本之前一直停留在 3.7，目前最新已经到了 3.9。最近研究上要用一段别人写的 python 的代码，原作要求 3.6 版本的 python，所以卸载了 3.7 版本，重新安装了 3.9 和 3.6 两个版本的 python。&lt;/p&gt;
+
+&lt;p&gt;煽动爸妈学编程很久了，欠他们一篇教程。不论是打算不断精进者的第一门编程语言，还是浅尝辄止者打算学的唯一一门语言，python 都是一个很不错的选择。所以即便爸妈对编程可以说是毫无兴趣，我也还是把这篇教程写完了，希望能帮到其他人。因为是面向纯新手的，所以基于 Windows 10 操作系统。因为这套设置我自己也要用，处于个人偏好，所以没有直接使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conda&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;别看你今天闹得欢-先拉个清单&quot;&gt;&lt;del&gt;别看你今天闹得欢&lt;/del&gt; 先拉个清单&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;python
+    &lt;ul&gt;
+      &lt;li&gt;在官网下载 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; 解释器&lt;/li&gt;
+      &lt;li&gt;安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; 解释器&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;虚拟环境
+    &lt;ul&gt;
+      &lt;li&gt;设置环境变量&lt;/li&gt;
+      &lt;li&gt;用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtualenv&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtualenvwrapper&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;创建一个虚拟环境，安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jupyter&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;编辑器
+    &lt;ul&gt;
+      &lt;li&gt;在官网下载 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vscode&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vscode&lt;/code&gt; 和相关插件&lt;/li&gt;
+      &lt;li&gt;测试一下效果&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;教程本体&quot;&gt;教程本体&lt;/h2&gt;
+
+&lt;h3 id=&quot;在官网下载-python-解释器&quot;&gt;在官网下载 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; 解释器&lt;/h3&gt;
+
+&lt;p&gt;在 python 的官网上 (&lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;https://www.python.org/downloads/&lt;/a&gt;) 下载&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-python-official-website.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;安装-python-解释器&quot;&gt;安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; 解释器&lt;/h3&gt;
+
+&lt;p&gt;执行下载的文件，可以看到如下图所示的界面，点击红框中的选项，因为我想更改安装路径。此处似乎也可以勾选最下面的 “Add Python 3.9 to PATH”，我安装的时候没有选，后面才发现还要手动完成这一工作。&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-python-install.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;接下来的界面里每个选项都勾选，next。&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-python-next.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;在接下来出现的界面中，选择 “Install for all users”，然后选择一个自己喜欢的安装路径。我之所以选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Python39&lt;/code&gt; 这个位置，是因为:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;C 盘是系统盘，而且是固态硬盘，比较快；&lt;/li&gt;
+  &lt;li&gt;默认路径在个人文件夹里，非常难找&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Program Files&lt;/code&gt; 需要管理员权限，用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 做软件包管理不方便。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-python-install-path.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;安装完成后进入命令提示符，输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;py&lt;/code&gt;，应该可以看到一串 python 版本信息，然后命令提示符变成 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt; 字样，此时就已经进入了 python 环境，可以按行运行 python 命令。输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exit()&lt;/code&gt; 就可以退出 python。&lt;/p&gt;
+
+&lt;h3 id=&quot;设置环境变量&quot;&gt;设置环境变量&lt;/h3&gt;
+
+&lt;p&gt;在 windows 的搜索框里输入 “environment variables”，没等你输完，应该就可以看到下图中的联想结果：&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-environment-variable-search.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;再按照下图，依次点击按钮，一共要做两件事:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;给 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Path&lt;/code&gt; 变量添加 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Python39&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Python39\Scripts&lt;/code&gt; 两个新值。&lt;/li&gt;
+  &lt;li&gt;新建一个文件夹，用于存放 python 的虚拟环境（比如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\PythonEnvs&lt;/code&gt;）。创建一个名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WORKON_HOME&lt;/code&gt; 的新变量，并将其值设为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\PythonEnvs&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-environment-variable-box.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;用-pip-安装-virtualenv-和-virtualenvwrapper&quot;&gt;用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtualenv&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtualenvwrapper&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;按照刚才的步骤，此时 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 应该已经安装，此时在命令行输入途中的命令，应该可以看到类似的返回信息：&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-pip-check.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果命令行说没找到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;，可能需要按照&lt;a href=&quot;https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py&quot;&gt;这个链接&lt;/a&gt;里的方法重新安装。&lt;/p&gt;
+
+&lt;p&gt;在命令行中输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;py -m pip install virtualenv&lt;/code&gt;， 安装虚拟环境管理器：&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-virtualenv-install.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;显示安装成功之后，在命令行输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;py -m pip install virtualenvwrapper-win&lt;/code&gt;，结果应该和上图差不多，忘了截图。&lt;/p&gt;
+
+&lt;h3 id=&quot;创建一个虚拟环境安装-jupyter&quot;&gt;创建一个虚拟环境，安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jupyter&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtualenv&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtualenvwrapper&lt;/code&gt; 安装完成之后，在命令行中输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mkvirtualenv base&lt;/code&gt;，新建一个名为 base 的虚拟环境。&lt;/p&gt;
+
+&lt;p&gt;然后输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;workon base&lt;/code&gt;，此时命令提示符的行首应该会多出一个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(base)&lt;/code&gt; 字样，这说明我们已经工作在了 base 这个虚拟环境里。此时 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip --version&lt;/code&gt; 的结果说明我们的 python 的地址已经和之前不同了。&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-virtualenvwrapper-check.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;在这个环境之下，安装 jupyter，输入命令 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install jupyter&lt;/code&gt;，安装 jupyter。这一步不是必须的，但是这样我们将来安装 vscode 之后，可以获得和 conda 自带的 spyder 类似的体验，菜鸟逐行调试的时候非常方便。&lt;/p&gt;
+
+&lt;h3 id=&quot;下载和安装-vscode&quot;&gt;下载和安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vscode&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;从 vscode 的官网下载安装包（&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;链接在此&lt;/a&gt;），可以看到大大的下载按钮：&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-vscode-download.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;下在之后的安装过程就和一般的程序安装一样（安装很久了，没有截图）。&lt;/p&gt;
+
+&lt;p&gt;然后在你想开始写代码的文件夹里，鼠标右键单击，选择 “Open with Code”:&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-vscode-folder-open.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后在 vscode 的界面，在文件树上单击红框中的按钮，新建一个文件，命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*.py&lt;/code&gt;，这里随便写了个 “hello”.&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-vscode-new-file.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;在随后打开的文档编辑区输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print(&quot;Hello World&quot;)&lt;/code&gt;，将光标停留在这一行，按 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift&lt;/code&gt;+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enter&lt;/code&gt; 执行这一行：&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-vscode-run.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;因为是第一次执行，又因为安装了 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jupyter&lt;/code&gt;，这时候 vscode 的右下角应该会出现一个提示框，询问是否用 jupyter interactive window 执行代码。然后关掉下方的这个 terminal (下半区右上角的叉号)。重新按 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shift&lt;/code&gt;+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enter&lt;/code&gt; 执行，此时的结果应该如下图，点击红圈中的变量浏览器，这就几乎和 spyder 的体验一样了。&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;img src=&quot;/blog/assets/photos/2021-03-07-vscode-interactive.png&quot; /&gt;&lt;/figure&gt;
+</description>
+        <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+        <link>mountaye.github.io/blog/articles/python-installation-and-configuration</link>
+        <guid isPermaLink="true">mountaye.github.io/blog/articles/python-installation-and-configuration</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
     
       <item>
         <title>马普所·非平衡态系统中的集体过程·语音转录 | 06. Non-equilibrium Criticality</title>
@@ -7942,623 +8073,6 @@
         <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
         <link>mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-note-01-introduction</link>
         <guid isPermaLink="true">mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-note-01-introduction</guid>
-        
-        
-        <category>post</category>
-        
-      </item>
-    
-      <item>
-        <title>马普所·非平衡态系统中的集体过程·语音转录 | 01. Introduction</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;《非平衡态系统中的集体过程 (Collective processes in non-equilibrium systems)》是位于德累斯顿的马克思普朗克复杂物理研究所 (Max Planck Institute for the Physics of Complex Systems) Steffen Rulands 研究员的一门课程。&lt;/p&gt;
-
-  &lt;p&gt;课程主页&lt;a href=&quot;https://www.pks.mpg.de/statistical-physics-of-living-systems/teaching/collective-processes-in-non-equilibrium-systems/&quot;&gt;链接在此&lt;/a&gt;，网页上有课程的课件，录像发布于 YouTube。&lt;/p&gt;
-
-  &lt;p&gt;YouTube 把视频中讲者说的话从语音转化成了文字，我把这些转录复制了下来，进行了简单的断句，并且推测了各段文字对应的课件的内容。&lt;/p&gt;
-
-  &lt;p&gt;这是&lt;a href=&quot;https://www.youtube.com/watch?v=Lm4jR_k08EM&amp;amp;feature=emb_logo&quot;&gt;第一讲&lt;/a&gt;，内容分为两部分，首先是简单介绍了课程，然后讲解了朗之万方程在平衡态前提下解的性质，以此引出研究非平衡态物理的必要性。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-
-&lt;h3 id=&quot;slide-1&quot;&gt;Slide 1&lt;/h3&gt;
-
-&lt;p&gt;We have to do everything over wi-fi..&lt;/p&gt;
-
-&lt;p&gt;Okay great.&lt;/p&gt;
-
-&lt;p&gt;Welcome everyone to this term’s lecture&lt;/p&gt;
-
-&lt;p&gt;My name is stefan. I’m a group leader here at the pks at the max planck institute for physics of complex systems, and we have quite a few people.&lt;/p&gt;
-
-&lt;p&gt;Normally our lectures have like only 10 people most, and that’s because we’re a research institute yeah and that means we normally don’t do a lot of teaching because we don’t have to, but sometimes we do it once in a year HAHAHAjust for for fun and this is this lecture is the same spirit that we’re drawing out something new that we’re giving a lecture for fun and see what comes out of it.&lt;/p&gt;
-
-&lt;p&gt;To start this is.&lt;/p&gt;
-
-&lt;p&gt;We already had some technical issues well that would probably be a common uh theme for the rest of this lecture. And some of these issues will be sorted out by NAME yeah who’s here in the room with me and who’s the only person in the room at the moment well because we’re as everybody else we’re back in lockdown and YI TANG is probably at the bottom of the list you can write to him in the chat in case you have any questions or anything else.&lt;/p&gt;
-
-&lt;p&gt;Just like him if you can’t hear me then just send a message.&lt;/p&gt;
-
-&lt;p&gt;So i’ll share my screen you should still be able to see me yeah.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-2&quot;&gt;Slide 2&lt;/h3&gt;
-
-&lt;p&gt;This is the lecture and today i would just like to give you an overview of what all of this is about you know and to give you some information that allow you to decide whether you want to follow the lecture for the rest of the term.&lt;/p&gt;
-
-&lt;p&gt;I guess there are quite a lot of people that are dialing in from abroad you know or from not even india i’ve seen and um.&lt;/p&gt;
-
-&lt;p&gt;Just to let you know where you are at the moment you’re joining a lecturer that is taking place in the max planck institute mpi pks in briston and this max planck institute is focused on theoretical physics that’s an explanation for the physics of complex systems we’re doing directive biophysics we’re doing condensed metaphysics and also atomic physics.&lt;/p&gt;
-
-&lt;p&gt;These are the three branches of this lecture and um we’re covering all of these these aspects from the perspective of the rate of physics as you can see it is quite nice here although placing a little bit in the corner of germany also sometimes a little bit difficult to get here to get out which turned out to be a benefit in the times of corona virus. This is the institute.&lt;/p&gt;
-
-&lt;h2 id=&quot;1-non-equilibrium-systems&quot;&gt;1. Non-Equilibrium Systems&lt;/h2&gt;
-
-&lt;h3 id=&quot;slide-3&quot;&gt;Slide 3:&lt;/h3&gt;
-
-&lt;p&gt;And to start this lecture to give you an idea what we’ll be doing this term i’m just showing you some of kinds of systems that will be covered at least in spirit in this course.&lt;/p&gt;
-
-&lt;p&gt;What you see here are three examples of systems that all share some striking spatial temporal structures and all of these structures arise because there are some microscopic or some interactions on the small scale on larger scale and macroscopic scales then these interactions lead to some interesting phenomena to the emergence of order and&lt;/p&gt;
-
-&lt;p&gt;the left hand side you see a swarm of fish i look at the name but what they do these fish do they rotate in these torus structures not to distract predators you know that’s what they do and these interactions are thus just a result of alignment interactions yeah. All right i hope you can see that. The microscopic scale each fish aligns its velocity to some some fish in the neighborhood and in the microscopic cell and then getting swarmed.&lt;/p&gt;
-
-&lt;p&gt;In the second picture it’s another example of collective processes that’s the emergence of traffic jumps. You have the traffic the phenomenon that traffic jams arise spontaneously and these spontaneous traffic jams are a collective phenomenon that arise from interactions between individual drivers and in particular how they break in response to changing the velocities of other drivers. On the microscopic scale we here have changes in velocity yeah and out of this you get a macroscopic phenomenon and longest case due to these interactions that is trafficked [Music] that’s taking a place on much smaller scales.&lt;/p&gt;
-
-&lt;p&gt;That’s what you see here is uh what’s going on inside the cancer cell and what you see is the cytoskeleton yeah we see here is lung fibers macroscopic or mesoscopic fibers of molecular assemblies and these fibers are also built by genetic processes of proteins attaching and detaching from these fibers. Here in this case you have molecular interactions that give rise to uh the two to through macroscopic structures that in the end then control the shape of cells and also partially their movement yeah the cycle skeleton i apologize for this for the for my handwriting.&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;I’m waiting actually for a very nice 12 inch ipad but it was not delivered yet so. I’m in the unfortunate situation that i’m writing just on a 12 inch 10 inch ipad yeah which is of course much smaller yeah and that’s why my handwriting is a little bit uh not that good. But that will improve over the course of this lecture on the once the delivery comes.&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;These are the three examples and in all of these examples physics has played an important role in understanding these collective processes.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-4-breaking-of-microscopic-symmetries&quot;&gt;Slide 4: Breaking of microscopic symmetries&lt;/h3&gt;
-
-&lt;p&gt;Why do we need actually physicists what do we need to study to understand collective behavior in such systems? right maybe even even simpler example is water and ice water is made of water molecules and we need we know exactly what water molecules do.&lt;/p&gt;
-
-&lt;p&gt;We can probably solve the friday schrodinger equation for a single motor molecule at least numerically but once you put these water molecules together and you know the temperature you get ice crystals and if you zoom on even further you get these complex structures that are snowflakes and these patterns that you see here in these ice crystals are in your way in the hamiltonian that describes the quantum dynamics of a water molecule.&lt;/p&gt;
-
-&lt;p&gt;What that means is that for example the water molecule is of Schroedinger equation is a rotationally invariant translationally invariant.&lt;/p&gt;
-
-&lt;p&gt;You can rotate the trigonometric dimension and then the trigonometry equation you still get the same behavior these macroscopic structures here these ice crystals they don’t obey the same symmetries.&lt;/p&gt;
-
-&lt;p&gt;We have symmetry breaking as we push these water molecules together and let them interact and the symmetry breaking is often called emergence and give rise to the complexity that we see in nature and biology and also in social systems yeah.&lt;/p&gt;
-
-&lt;p&gt;The macroscopic behavior of such systems does not necessarily obey the laws that govern the microscopic say on the the microscopic structures don’t follow the same symmetries as the microscopic descriptions such as the trigonal equation yeah if they did everything was easy and nature would be pretty boring as well.&lt;/p&gt;
-
-&lt;p&gt;That means that these macroscopic structures follow different laws than government on the microscopic scale and we need sophisticated tools from statistical physics and non-equilibrium statistical physics to connect these different levels these different scales to connect the microscopic interactions to macroscopic phenomena yeah that’s what a large part of which is what statistical physics is about.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-5-big-data-in-public-helth&quot;&gt;Slide 5: Big data in public helth&lt;/h3&gt;
-
-&lt;p&gt;At the same time in recent years we probably became aware of that this whole thing that’s called big data yeah.&lt;/p&gt;
-
-&lt;p&gt;We’re able to study complex systems with unprecedented detail empirically where we can take measurements in quantities that were impossible a few years ago and one examples are of is of course social systems that underlie of course for example the spreading of epidemics.&lt;/p&gt;
-
-&lt;p&gt;So for example if you look at what these people do that do covet modeling also they take it you can’t trace the traces and you have these abstracts like traits your movement that creates your traits your interactions and you have all of these data this data on the level of a very high microscopic resolution of single individuals of course you test people you trace them they know who is infected who is not affected to some degree and then you also know who is interacting with whom else yeah.&lt;/p&gt;
-
-&lt;p&gt;You know something about the social interactions things about this i think think about social networks like facebook huge data available made available that describe social systems on this on the scale of individual interactions yeah and of course in other elections in the united states is of course also true for elections.&lt;/p&gt;
-
-&lt;p&gt;In recent years it has become increasingly clear that people hire data big data companies that digest all of this data about voter preferences and so on to make predictions about or the best counties to approach and so on and that’s certainly true for the us but also for the uk.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-6-big-date-in-bioilogy-genomics&quot;&gt;Slide 6: Big date in bioilogy (genomics)&lt;/h3&gt;
-
-&lt;p&gt;Another example of where such high dimensional and huge data sets emerged is biology.In biology we have seen technological breakthroughs in recent years. They also allow us to study biological system systems in unprecedented microscopic detail.&lt;/p&gt;
-
-&lt;p&gt;There are several technologies that imaging involved but one of these breakthroughs was in genomics that’s also something something we’re working on in the group.&lt;/p&gt;
-
-&lt;p&gt;These breakthroughs in genomics allow us to measure the state of individual cells the molecular states of individual cells with unprecedented detail that was not possible before. As you see here on this slide you see an example of such an experiment.&lt;/p&gt;
-
-&lt;p&gt;That’s hd was conducted by collaborators in cambridge and here. You see information. This is just a point of this information that is gathered together in these experiments and what you see here are measurements on individual positions of the dna.That’s what’s on the x-axis. The x-axis here gives you the position on the dna like the genome and for each of these positions for each of these molecules that the dna is made of you can measure whether there is a modification of this molecule or not.&lt;/p&gt;
-
-&lt;p&gt;That’s what you see in the bottom half of this plot and in this top half of the plot you can see you can measure something about how the dna is folded in this region of the genome.&lt;/p&gt;
-
-&lt;p&gt;If you download such an experiment that comes with like a terabyte of data as well.&lt;/p&gt;
-
-&lt;p&gt;That’s a huge amount of data and you cannot only do that for a single cell but you can do that for many different cells at the same time and that’s what’s on the y-axis.&lt;/p&gt;
-
-&lt;p&gt;So on the y-axis are different cells at the same of taking from an embryo&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-7-function-relies-on-collective-properties&quot;&gt;Slide 7: Function relies on collective properties&lt;/h3&gt;
-
-&lt;p&gt;And here we in principle can measure the molecular state of cells of all cells from the early mouse embryo yeah and that’s in physics not something that we do very efficiently but we don’t start an experiment and measure every single thing in a magnet.&lt;/p&gt;
-
-&lt;p&gt;We don’t uh measure every single velocity of uh particles of every single particle in a gas. That’s not typically how we think of to do macroscopic measurements in biology and social sciences we can.&lt;/p&gt;
-
-&lt;p&gt;Approach these systems on a microscopic scale with almost arbitrary details and that of course gives rise to questions about how do we connect these two developments.&lt;/p&gt;
-
-&lt;p&gt;How do we take such large data sets and translate them to understanding of collective processes.&lt;/p&gt;
-
-&lt;p&gt;Why would you actually want to do something like this if you describe something if you can measure everything on the microscopic level? why do you actually want to understand something why i actually interested in these collective processes and the reason is actually very well depicted in this car. Here if i give you a list of the microscopic parts the car is made of you would have a hard time understanding how this car works or how an engine works and of course how this works how this car works it’s not a property of all of these individual screws and tires and.&lt;/p&gt;
-
-&lt;p&gt;On it’s it’s a property of how all of these things work together as the function of this car depends on how they work together and how they work together is not immediately you cannot immediately deduce from listing all of the cars the paths are measuring all of the parts the car is made of and the same also comes through of course in biology but biological function does not rely on individual molecules in the cell they are biological function relies on how this molecule works together and then have some microscopic or mesoscopic consequences yeah and this is exactly the question that we want to address in this lecture here.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-8-focus-of-this-lecture&quot;&gt;Slide 8: Focus of this lecture&lt;/h3&gt;
-
-&lt;p&gt;what are the actually the tools that we need to understand that we need to know in order to unders identify and to understand collective processes collective behavior in systems that are out of thermal equilibrium and traditionally.&lt;/p&gt;
-
-&lt;p&gt;People like me and probably many of you we’ve been educated in equilibrium systems we had statistical physics lectures and statistical mechanics maybe this is some mechanics too you know.&lt;/p&gt;
-
-&lt;p&gt;That are that deal with some very specialized cases in um the also the internal equilibrium yeah.&lt;/p&gt;
-
-&lt;p&gt;A gas that is somehow isolated or that is in contact with some heat bath. So these are very special cases and we then try to use our understanding that we gained in our statistical mechanics lectures on criticality transitions and so on and we try to transfer that to one equilibrium system.&lt;/p&gt;
-
-&lt;p&gt;The whole rest of the systems that are out there yeah and that’s what we do and it actually works quite well.&lt;/p&gt;
-
-&lt;p&gt;We’re making some of course we have developed tools also non-equilibrium physics but our intuition was typically trained in equilibrium systems and.&lt;/p&gt;
-
-&lt;p&gt;The the goal of this lecture is actually to identify what is actually the intuition that you need one of the tools that you need in order to derive these collective properties of systems that consist of many interacting two-way particles and also on the one hand we have these high-dimensional data sets like the ones that i showed you and the question is how do we treat these data sets in order to derive theories in order to build hypotheses [Music].&lt;/p&gt;
-
-&lt;p&gt;How do we actually treat this data set how do we derive the hypothesis how do we understand the structure in such highly dimensional reach data sets and.&lt;/p&gt;
-
-&lt;p&gt;That is that we will need some tools from data science.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-9-overview&quot;&gt;Slide 9: Overview&lt;/h3&gt;
-
-&lt;p&gt;How to deal with data sets that in the case that i’ve shown you have millions of dimensions yeah the reverse direction is actually how do i understand order from microscopic theories yeah and these tools that we need for that come from non-equilibrium statistical physics that then allow us to make predictions from theories that allow us to infer how do we once we have the theory once we have a microscopic description of biological or social systems how do we derive collective processes from this how do we derive collective degrees of freedom from this.&lt;/p&gt;
-
-&lt;p&gt;These are the two ways that we will deal with in this lecture.&lt;/p&gt;
-
-&lt;p&gt;This is this is how it will work in practice yeah and we will start with a basic introduction into stochastic processes and also a field theory. It would be good if you could give me some feedback. I don’t know how many people are we know oh 63. So it would be good if you give some feedback what’s actually your background.&lt;/p&gt;
-
-&lt;p&gt;On the website and i think on twitter i don’t know direct website i said that uh what what you need is a basic understanding of not basic understanding but you need to have a statistical physics lecture yeah.&lt;/p&gt;
-
-&lt;p&gt;You shouldn’t be shocked to uh shouldn’t be the first standard that you hear what it faced about a phase transition it should be the first time to hear about entropy also yeah and say it’s a statistical physics lecture and building on top of that then we introduced some things that we can’t rely on having been told the statistical physics lectures which are sarcastic processes and non-equilibrium theories of past integral representations of these stochastic processes and then we go on and ask how do microscopic directions lead to macroscopic order actually i have a little torch here.&lt;/p&gt;
-
-&lt;p&gt;How do microsoft the macros microscopic interactions give rise to macroscopic or and of course there’s no general theory for this in non-equilibrium systems we don’t know how this works in general but we can use some constructive examples that would like in statistical physics and equilibrium statistical physics would be the izing model that’s a very very powerful example for second-order phase transitions and we’ll deal here in the second part with some very powerful examples of monochemical systems of how order arises in non-aggregate systems.&lt;/p&gt;
-
-&lt;p&gt;Next we’ll go on to study transitions between these ordered states.&lt;/p&gt;
-
-&lt;p&gt;Non-equilibrium phase transitions we’ll introduce regularization group theory and talk about non-equilibrium criticality and look at some very specific phase transitions so-called absorbing state-based conditions that are very relevant for epidemics and actually i have a few examples from epidemics in this lecture.&lt;/p&gt;
-
-&lt;p&gt;Next we ask the reverse question the reverse arrow and how do we actually identify such collective order in data sets that come with terabytes of size and 10 million dimensions how do i actually identify how can i actually efficiently on a computer deal with these kind of data sets and how can i use statistical tools for machine learning to break these to identify structure in such data i also will have then some applications from real research and finally as a bonus we’ll have we’ll discuss we’ll ask the reverse question.&lt;/p&gt;
-
-&lt;p&gt;Not how microscopic order gives rise to microscopic interactions give rise to macroscopic order but we’ll ask how does macroscopic order shape microscopic states that’s the reverse question it’s a very new question in the in the field but that has some very interesting application for example for neural networks.&lt;/p&gt;
-
-&lt;p&gt;This is the structure of the of the code and i’m very actually very happy also to adapt to your needs if time permits yeah.&lt;/p&gt;
-
-&lt;p&gt;Just send an email if you have any questions or anything else yeah.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-10-prerequisite-and-literature&quot;&gt;Slide 10: Prerequisite and Literature&lt;/h3&gt;
-
-&lt;p&gt;You have prerequisites statistical physics yes.&lt;/p&gt;
-
-&lt;p&gt;We make use of functional analysis yeah.&lt;/p&gt;
-
-&lt;p&gt;That’s typically taught also uh before statistical physics i think but that’s a helpful tool but you need but if you don’t have that it’s also enough to reduce that quickly with a lecture the field theory is also helpful i don’t give a rigorous introduction to field theory in general but i’ll introduce a few theories that we need here for this specific course but if you know already some 3d theory you’ll see that things are actually quite similar to using quantum field theory sort of quantum systems for example yeah.&lt;/p&gt;
-
-&lt;p&gt;Literature.&lt;/p&gt;
-
-&lt;p&gt;It’s actually a problem yeah because there’s no book that tells you exactly the story that we want to address in this course and i’ll give you some literature for each of these sections that we’re going to deal with some generally quite good books especially for the first part of the lecture are the ones by elkland and science.&lt;/p&gt;
-
-&lt;p&gt;A condensed metal field theory that that covers this fluency we aspect one equilibrium theory aspect and the same book by coming up on non-equipment theory basic tells the same perspective the same perspective from the more quantum point of view they’re just dealing with one part of the lecture and.&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;This lecture is generally as you know taking place tuesdays at 4 40 pm cet and will last typically for one and a half hour but i’m a little bit hesitant to talk with one of my power on zoom because i know how tiring this can be and. What i’ll do i’ll have the content of one in our blackboard lecture but usually because of this ipad and.On we’ll cover that that stuff in a quicker time because i have don’t have that much writing and but calculations are always write them on the ipad. I’m not going too fast through them um. That’s the lecture and then there’s a website also i can’t remember the exact. That’s the that’s the group website and if you look for teaching you’ll see a link to this course and i’ll upload if technology permits. I’ll upload first slides of pdfs of what is written in the lecture and also try to upload the video videos of the of the lecture i can’t promise it for this one because um i have to just hope that it works and but i’ll also post links to videos at least starting on the next lecture where i figured out how all of these things work here.&lt;/del&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-11&quot;&gt;Slide 11&lt;/h3&gt;
-
-&lt;p&gt;So to start today to start today for the rest of the lecture i’ll just [Music] give you a brief um reminder of actually how we can see that a system is out of equilibrium.&lt;/p&gt;
-
-&lt;p&gt;The kind of systems that we’re dealing with in this lecture and the simplest answers you can uh take that you can hear is that any system is out of equilibrium.&lt;/p&gt;
-
-&lt;p&gt;You have to have very very extremely special cases where systems are actually internal equilibrium and anything you see in biology for sure in those social systems is out of the equilibrium.&lt;/p&gt;
-
-&lt;p&gt;The question is actually already um part of this way that everything is non-equilibrium system yeah but given that we learn statistical physics typically in equilibrium systems just let me make sure that we all are on the same page to understand what it means to be not internal equilibrium.&lt;/p&gt;
-
-&lt;p&gt;How can we be out of thermal equilibrium equilibrium and why is it important.&lt;/p&gt;
-
-&lt;p&gt;The first thing is what you can do is if you look at these plots of these pictures that i showed you um at the beginning of the lecture the fish spawn and.&lt;/p&gt;
-
-&lt;p&gt;On there’s one thing that’s already striking fear if you have listen to the to the statistical physics lectures is that something’s wrong with the second law of thermodynamics apparently right.&lt;/p&gt;
-
-&lt;p&gt;So the second law of thermodynamics basically in a very rudimentary way states that entropy increases in systems that are isolated yeah and they determine that they approach some equilibrium stable maximum entropy and that often is obviously not the case for the systems that i showed you.&lt;/p&gt;
-
-&lt;p&gt;They’re not in this state that you would assume to be in terms of equilibrium and because they’re very dynamic and highly structured yeah and the reason.&lt;/p&gt;
-
-&lt;p&gt;How can you how can you break some say the second law i hope that enough like hardcore statistical physics i have always have the quotes of course the second floor is correct that’s the one way you can avoid this is that a system is just not isolated and one of the conditions for the second law yeah the first thing is the system is isolated yeah it’s isolated but it doesn’t haven’t reached equilibrium yet but it will do.&lt;/p&gt;
-
-&lt;p&gt;At some rate of time yeah.&lt;/p&gt;
-
-&lt;p&gt;Examples are for example chemical reactions.&lt;/p&gt;
-
-&lt;p&gt;Also on the right hand side here you see this you see these this this this dish here and there’s some chemical in this dish and what you see what you see of this was a video still have to figure out how to show videos and this note notepad application here yeah but these are waves more that progress here and you have rotating spiral waves here electrons are target waves that toggle with as you see that they do some kind of positive circular wave patterns here and this is obviously more than equilibrium but this system alternating equilibrium homogeneous state here such as the fuel that it’s based on is all consumed that’s called the bzec reaction and of course another example of a system that’s probably isolated is the universe yeah and the universe is very far away from equilibrium as you can just see by looking at the sky and but it will approach some equilibrium state of mass and entropy in very long time.&lt;/p&gt;
-
-&lt;p&gt;This is an example of a system that is approaching equilibrium but it’s not an equilibrium yet.&lt;/p&gt;
-
-&lt;p&gt;The other kind of systems the other way of how you can avoid the second law is if the system is just not isolated but it’s open and what that means is it’s coupled to some kind of boundaries and physics we typically call that baths yeah that exchange for example entropy energy or particles with this system and these these are the kind of systems these open systems that we are dealing with in this lecture yeah and probably in your statistical physics lectures um you have dealt with some open systems that were nevertheless in equilibrium.&lt;/p&gt;
-
-&lt;p&gt;That’s why you have the all these different ensembles in statistical physics because we have these open systems that can exchange particles or energy with their environment.&lt;/p&gt;
-
-&lt;p&gt;The system that is open is not can still be an equilibrium.&lt;/p&gt;
-
-&lt;p&gt;How can we mainly what how can we make a system stay out of equilibrium an open system out of equilibrium yeah.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-12-what-keeps-a-system-out-of-equilibrium&quot;&gt;Slide 12: What keeps a system out of equilibrium&lt;/h3&gt;
-
-&lt;p&gt;We can consider a very simple example here and this very simple example is just a particle this red particle here and this red particle just follows some kind of trajectory.&lt;/p&gt;
-
-&lt;p&gt;That is given by some kind of hamiltonian some hamiltonian dynamics yeah and then this particle here will do some ballistic motion but at some point it will collide with other particles in the same system and.&lt;/p&gt;
-
-&lt;p&gt;There are two effects that such collisions can have yeah.&lt;/p&gt;
-
-&lt;p&gt;The one is that on a microscopic level.&lt;/p&gt;
-
-&lt;p&gt;That which is the amount then you will see that the movement of this particle is slowed down yeah and.&lt;/p&gt;
-
-&lt;p&gt;These collisions on on a on a long time scale give rise or hinder the motion of the particle that’s typically what’s called friction.&lt;/p&gt;
-
-&lt;p&gt;Then there’s another thing that these collisions do namely they lead to abrupt changes in the velocity and in the direction of your particle yeah.&lt;/p&gt;
-
-&lt;p&gt;The act these repeated collisions act like a fluctuating force that all the time pushes this particle in a different direction and.&lt;/p&gt;
-
-&lt;p&gt;We can write down the equation of differential equation that describes the motion of such a particle.&lt;/p&gt;
-
-&lt;p&gt;That’s just a generalization of newton’s law.&lt;/p&gt;
-
-&lt;p&gt;That you would mean that mass times acceleration the velocity time derivative of velocity is equal to minus the mass that’s the friction times v times the velocity plus whatever external force you apply to the system and.&lt;/p&gt;
-
-&lt;p&gt;Comes this fluctuating force psi that i mentioned previously.&lt;/p&gt;
-
-&lt;p&gt;Such as such an equation describes the particles the dynamics of these systems it looks like newton’s equation but we have this weird force on the right hand side on the right hand side that is described to you in more detail in a few minutes yeah and this equation has a name it’s just probably most of you know that is to launch on a equation.&lt;/p&gt;
-
-&lt;p&gt;So this launcher equation has a few troops yes.&lt;/p&gt;
-
-&lt;p&gt;Not only this randomly fluctuating force but we also have this gamma here that’s just the dissipative friction it’s called dissipative friction.&lt;/p&gt;
-
-&lt;p&gt;It describes how some of all of these collisions decrease the velocity of this particle and then we have some extrinsic macroscopic force.&lt;/p&gt;
-
-&lt;p&gt;You tilt the system left or right and then you apply the force to the particle.&lt;/p&gt;
-
-&lt;p&gt;And we have this floating randomly fluctuating force that’s the last component.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-13-properties-of-the-fluctuating-force&quot;&gt;Slide 13: properties of the fluctuating force&lt;/h3&gt;
-
-&lt;p&gt;So what is this force and what is this about.&lt;/p&gt;
-
-&lt;p&gt;So this force is a random variable yeah.&lt;/p&gt;
-
-&lt;p&gt;Maybe you’ve heard the statistics lectures it’s the random variable it takes the random value at each instant of time and it’s not just any random value but we know from the central limit theorem that if you sum up a lot of these forces you know then the net result in some time interval will follow a normal distribution or a gaussian distribution like this as we say in physics.&lt;/p&gt;
-
-&lt;p&gt;The central central limit theory tells us that we’re probably doing quite well if we approximate sine of t with a gaussian or a normal distribution as a goal is a commotion random variable yeah that’s already nice because the fortune distributions are always quite nice to deal with.&lt;/p&gt;
-
-&lt;p&gt;And what we also know is that his force is not always pushing in the same direction.&lt;/p&gt;
-
-&lt;p&gt;So the average of this force is zero it has vanishing mean you know soy average of soil of t is zero.&lt;/p&gt;
-
-&lt;p&gt;If it has a non-zero mean you could just absorb it in some other part of the equation yeah and then we have to say something how this force is random force how strong it is and how it is evolves over time yeah.&lt;/p&gt;
-
-&lt;p&gt;And this we describe in terms of the correlation autocorrelation of this force.&lt;/p&gt;
-
-&lt;p&gt;And of course we make these assumptions because everything is very messy that this force is uncorrelated in time yeah that means that the correlation of psi of t with psi at some other time t prime [Music] is some value a well that’s the strength of the noise times the delta function t minus t prime.&lt;/p&gt;
-
-&lt;p&gt;This is also only correlated to itself it doesn’t have any memory why this A is just the strength of the noise or fluctuations of this fluctuating force.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-14-in-equilibrium-fluctuations-and-dissipation-are-strictly-coupled&quot;&gt;Slide 14: in equilibrium, fluctuations and dissipation are strictly coupled&lt;/h3&gt;
-
-&lt;p&gt;I will show you that if this particle if this system is an equilibrium then this strength of this force here is already determined.&lt;/p&gt;
-
-&lt;p&gt;That we already know the strength of this curve with this force and particularly i will show you that this force is actually determined by the friction the force and the friction are not independent quantities and comes a little experiment because i have to do the first calculation of this lecture um if this experiment fails.&lt;/p&gt;
-
-&lt;p&gt;Because uh for whatever reason it’s also important because it’s not we’re still much in the sort of state theory real theory part of this lecture that was next week but i’m just just giving you something some intuition about what it means to be in equilibrium.&lt;/p&gt;
-
-&lt;p&gt;Let’s have a look at this equation again and the first thing we do is we do a Fourier transformation yeah we say for a transformation we say that this fourier transform of the velocity of this particles as a function of some omega frequency omega is just the definition of the fourier transform e to the i w t v of t yeah and if you plug this in and just look at the equation again here.&lt;/p&gt;
-
-&lt;p&gt;Here we’ll get some some i the i from the exponential comes i’m sorry is the pointer.&lt;/p&gt;
-
-&lt;p&gt;Here the i from the exponential comes down at the omega as well because we have the time derivative and and the rest is basically just a linear term yeah.&lt;/p&gt;
-
-&lt;p&gt;What we then get if we fully transform is that we have um minus on omega from the exponential here the fourier transform is equal to minus m gamma fourier transform of the velocity plus the fourier transform of the mods yeah so.&lt;/p&gt;
-
-&lt;p&gt;We have an algebraic equation and we can solve this formally we can solve this formally and say that v tilde is equal to 1 over minus i omega plus m gamma times sine tilde.&lt;/p&gt;
-
-&lt;p&gt;We can just write that down.&lt;/p&gt;
-
-&lt;p&gt;So because we can’t do anything with that i can write it down and it’s prefecture here is typically called the response function.&lt;/p&gt;
-
-&lt;p&gt;Our omega and this response function gives how the velocity reacts to a fluctuating force yeah so.&lt;/p&gt;
-
-&lt;p&gt;We look at the fourier transform of the velocity.&lt;/p&gt;
-
-&lt;p&gt;Let’s have a look at the fourier transform of fluctuations of these correlations in fluctuations.&lt;/p&gt;
-
-&lt;p&gt;Let’s have a look at the fourier transform of this quantity here psi of t psi or zero.&lt;/p&gt;
-
-&lt;p&gt;For t prime t prime.&lt;/p&gt;
-
-&lt;p&gt;And if we plug that again.&lt;/p&gt;
-
-&lt;p&gt;We just do the same trick.&lt;/p&gt;
-
-&lt;p&gt;Sine of omega sine of omega prime is equal to the integral over dt e to the i wt and.&lt;/p&gt;
-
-&lt;p&gt;The correlator psi of t times t prime.&lt;/p&gt;
-
-&lt;p&gt;And to make use of the four properties of the fourier transform especially the fourier transform of delta functions just one and that we see in the furious phase this correlated with correlations and the fluctuating force are just equal to 8 and this is sometimes called spectral density that’s not important excuse me um the equation on the the very first equation it would be like exponential minus i omega t right yes yes and then there will be the on the second line there will be minus i omega m v yes that’s correct and there will be the m factor will be like in common in the denominator on the let’s hear third exactly.&lt;/p&gt;
-
-&lt;p&gt;That’s correct that’s correct actually actually that’s exactly how i have the notes.&lt;/p&gt;
-
-&lt;p&gt;May i have a question regarding the previous slide yeah.&lt;/p&gt;
-
-&lt;p&gt;It’s it’s really maybe it’s just a very nice question but um the fact that we allow our zeity to follow the central limit theorem and hence follow a gaussian distribution it just reminds me of the maxwell distribution of velocities which is one of the crux of thermodynamics and thermal equilibrium conditions why do we allow zai to follow gaussian distribution.&lt;/p&gt;
-
-&lt;p&gt;So the the the sign is uh the strength or it is a force that’s acting at each time point yeah on on the velocity it’s not the velocity itself there’s a force that’s acting on the [Music] force that’s acting on the velocity and it’s just random.&lt;/p&gt;
-
-&lt;p&gt;If you have yeah you suppose you you have a time interval delta t.&lt;/p&gt;
-
-&lt;p&gt;This time interval you have 10 million forces acting on your particles.&lt;/p&gt;
-
-&lt;p&gt;That you that means that your velocity is equal to your old velocity and then along some over these 10 million identically distributed random variables yes yeah it’s just a very basic statistical thing that this is a gaussian distribution in many cases it’s not gaussian.&lt;/p&gt;
-
-&lt;p&gt;There are many examples where it’s not caution but that’s typically cases where things get very very messy yeah.&lt;/p&gt;
-
-&lt;p&gt;That’s well beyond the scope of the lecture but there’s still.&lt;/p&gt;
-
-&lt;p&gt;So your your opponent the master distribution is actually very good because we still have to if the v in equilibrium still has to fulfill the maxwell’s distribution.&lt;/p&gt;
-
-&lt;p&gt;You still you still have a constraint that the constraint is not whether the constraint is not in the gaussian distribution but it’s in the a the pre-factor.&lt;/p&gt;
-
-&lt;p&gt;So that’s that’s where the equilibrium condition goes into and i’ll show you actually i’ll show you that in the next step here yeah um so.&lt;/p&gt;
-
-&lt;p&gt;We can we have the correlations and noise and we can just calculate the correlations and velocity velocities as well v of omega v of omega prime that’s equal to something like one over.&lt;/p&gt;
-
-&lt;p&gt;If we do the same thing as both.&lt;/p&gt;
-
-&lt;p&gt;We get two times this pre-factor i omega and plus gamma m squared and then on the right hand side we have the force yeah and.&lt;/p&gt;
-
-&lt;p&gt;What we can do from that is that we can calculate this.&lt;/p&gt;
-
-&lt;p&gt;So we know that the right hand side here remembers the pointer this one here is just equal to a yeah and we can.&lt;/p&gt;
-
-&lt;p&gt;Go back to real space to real time perform this integral and by performing this intro we have to do some contour integral yeah it’s not extremely important how this how this integral is exactly works it’s a contour integral because you have here something a prefactor that has some rules and then you can use a residual theory well.&lt;/p&gt;
-
-&lt;p&gt;We do here a contour integral no and then we get a over 2 m squared gamma.&lt;/p&gt;
-
-&lt;p&gt;Another situation until.&lt;/p&gt;
-
-&lt;p&gt;We have assumed that the system is an equilibrium but if we assume that is that it is an equilibrium then the equi-partition theory you know.&lt;/p&gt;
-
-&lt;p&gt;We partition theorem as a state that basically the energy of the system is distributed equally across all degrees of freedom and this theorem tells us that the kinetic energy gets fraction of or is equal to kbt over 2.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-15&quot;&gt;Slide 15&lt;/h3&gt;
-
-&lt;p&gt;that’s. where i put the condition of thermal equilibrium and what we get from that is just what you see here in this box here this a the strength of this fluctuating force is equal to a term that contains the friction coefficient at the temperature.&lt;/p&gt;
-
-&lt;p&gt;By setting this one parameter in the equation the gamma or gamma times m by setting this in the equation by fixing this you already know the strength of the fluctuating force yeah and this is just a manifestation it’s called einstein relation and it’s a manifestation of the very important fluctuation dissipation theory in statistical physics.&lt;/p&gt;
-
-&lt;p&gt;This fluctuation dissipation theorem tells you that the strength of the fluctuating force in your system of the strength of fluctuations is given by the strength of friction and in general terms you can write this as i write down here on the left hand side you have the strength of fluctuation of the strength of correlations in v they are already exciting.&lt;/p&gt;
-
-&lt;p&gt;This this [Music].&lt;/p&gt;
-
-&lt;p&gt;This these correlations are something like sorry something like sine omega sine omega prime.&lt;/p&gt;
-
-&lt;p&gt;That’s the general fluctuation dissipation the strength of this fluctuating force the strength of fluctuations in my velocities due to this force is given by this response function the imaginary part of the response function and this response function is essentially in this case determined by the friction.&lt;/p&gt;
-
-&lt;p&gt;Another way to read this fluctuation dissipation theorem is that the intake of energy that this particle gets through this fluctuating force needs to be exactly balanced by the loss of energy due to friction yeah and this is true if we are internal equilibrium and that also means that we can use this fluctuation dissipation theorem to decide when we’re not in equilibrium [Music].&lt;/p&gt;
-
-&lt;p&gt;For example there’s a theorem that says that if we calculate a quantity called j which is just just the total deviation in this equation.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-16-what-happens-if-we-couple-the-particle-to-an-additional-energy-reservior&quot;&gt;Slide 16: what happens if we couple the particle to an additional energy reservior&lt;/h3&gt;
-
-&lt;p&gt;If this does not hold true if this is not equal on both sides yeah then the amount of disagreement tells you something about how far you are from equilibrium yeah c prime let’s see the derivative of omega minus 2 kbt imaginary part of the response function r of omega if we calculate that then we know this quantity j and this quantity j is just the amount of dissipated heat yeah.&lt;/p&gt;
-
-&lt;p&gt;If you are out of equilibrium if you they violate.&lt;/p&gt;
-
-&lt;p&gt;You say the second law you have to cap from the compensate for that in your environment and that means that the media need to export heat to environment and this is quantified in this equation and it tells you how far away you are from terminal equilibrium that’s ethereum by [Music].&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-17&quot;&gt;Slide 17&lt;/h3&gt;
-
-&lt;p&gt;Let’s continue with our part with our particle here.&lt;/p&gt;
-
-&lt;p&gt;How can we make this.&lt;/p&gt;
-
-&lt;p&gt;How can we drive this system out of equilibrium and turns out it’s actually pretty simple yeah and this there’s actually a very specific biological example for that and these are bacteria.&lt;/p&gt;
-
-&lt;p&gt;Many of the bacteria have so-called flagella.&lt;/p&gt;
-
-&lt;p&gt;These are these little hairs here and the tails and these flagella can rotate.&lt;/p&gt;
-
-&lt;p&gt;And when these flagellar rotate then this material can move holistically that will let us rotate through a medium through through space.&lt;/p&gt;
-
-&lt;p&gt;Energy from the environment for example glucose for example glucose yeah then that metabolize this energy and convert it to kinematic one part of it they converted to kinematic energy to kinetic energy.&lt;/p&gt;
-
-&lt;p&gt;They can move in one certain direction.&lt;/p&gt;
-
-&lt;p&gt;And we can write down the larger equation for that.&lt;/p&gt;
-
-&lt;p&gt;We have the same as before and v dot equals minus m gamma v plus epsilon [Music] k v.&lt;/p&gt;
-
-&lt;p&gt;This epsilon kb comes from here let’s just simply use this energy epsilon here that you metabolize and you put it into kinetic energy as this one here yeah then you get a force that corresponds to this one here epsilon kv force plus of course your collisions with your neighbors yeah the point is.&lt;/p&gt;
-
-&lt;p&gt;That we have a second friction terminal that has an opposite sign but in principle we can set the second friction terminal that’s the total total dissipation term bisection called participation actually amount of terms that are proportional to b yeah and we cannot do the same calculation as before but.&lt;/p&gt;
-
-&lt;p&gt;Our pre-factors of what we call previously the gamma the pre-factors of the spectrum can take any value that we want.&lt;/p&gt;
-
-&lt;p&gt;It’s up to the bacteria to digest material to digest nutrients and convert into into [Music] into kinematic energies there are of course some constraints in terms of chemistry of metabolism and.&lt;/p&gt;
-
-&lt;p&gt;On it’s not a certain maximum amount that you can achieve but in principle you’re free to choose your epsilon and your k in whichever way you want you can make that time dependent or whatever yeah.&lt;/p&gt;
-
-&lt;p&gt;This means that by this choice here by converting chemical energy to kinematic energy this bacterium breaks the fluctuation dissipation theory and this is because dissipation is independent of fluctuations.&lt;/p&gt;
-
-&lt;p&gt;The pre-factor of these fluctuations here is.&lt;/p&gt;
-
-&lt;p&gt;Completely independent of the pre-factor of these dissipative terms and we can get whatever we want and break the fluctuation dissipation theorem.&lt;/p&gt;
-
-&lt;p&gt;This material is called an active particle or active brownian motion is out of terminal [Music].&lt;/p&gt;
-
-&lt;p&gt;What’s the general pattern behind this.&lt;/p&gt;
-
-&lt;p&gt;We break detail the rate the fluctuation dissipation theorem and then we are out of terminal equilibrium but how can we do that in general.&lt;/p&gt;
-
-&lt;p&gt;I think there’s a general topic behind that and this general theme is that you have an isolated system you couple it to some boundary conditions.&lt;/p&gt;
-
-&lt;p&gt;Mathematically we’ll say boundary conditions in physics we say both yeah and in some cases this bath if it’s nicely behaved.&lt;/p&gt;
-
-&lt;p&gt;If it’s also an equilibrium then this whole system will also take an equilibrium state but if you couple it to multiple balls for example a hot and cold one HAHAHAthat then your system is out of equilibrium if these bulbs are not compatible with each other for example here in this case of active browning motions that we just discussed we have different bars that couple to the fluctuation and dissipation parts in the fluctuation dissipation no [Music].&lt;/p&gt;
-
-&lt;p&gt;This particle takes up chemical energy and converts it into this this movement yeah by a reaction that typically involves the conversion of atp to adp yeah that’s how living systems uh use energy.&lt;/p&gt;
-
-&lt;p&gt;The same yeah and because this particle moves around it needs to increase because this particle is let’s say it needs to increase heat in the surrounding.&lt;/p&gt;
-
-&lt;p&gt;That means it’s coupled to a heat path.&lt;/p&gt;
-
-&lt;p&gt;It dissipates heat to a heat pump.&lt;/p&gt;
-
-&lt;h3 id=&quot;slide-18&quot;&gt;Slide 18&lt;/h3&gt;
-
-&lt;p&gt;Of course there are many other examples in physics that you can see one famous example is turbulence turbulence uh probably if you set saw one of these airplane videos with the turbulence behind the airplanes is a big problem you have an intuition what turbulence is and in turbulence kinetic energy of this velocity fluctuation uh cascades from some large spatial scales.&lt;/p&gt;
-
-&lt;p&gt;For probably the scale of the airplane turbine also all the way down to some small scales where it’s then dissipated yeah.&lt;/p&gt;
-
-&lt;p&gt;In this case you have different bars at different scales.&lt;/p&gt;
-
-&lt;p&gt;You have a heat path on a large scale.&lt;/p&gt;
-
-&lt;p&gt;Where you input energy and then you dissipate this energy on smaller small enough scales.&lt;/p&gt;
-
-&lt;p&gt;That’s here small scales.&lt;/p&gt;
-
-&lt;p&gt;There’s also a heat bars because it takes up energy yeah [Music].&lt;/p&gt;
-
-&lt;p&gt;If we were in live lecture a live lecture.&lt;/p&gt;
-
-&lt;p&gt;I would ask you.&lt;/p&gt;
-
-&lt;p&gt;For suggestions for other assistants but.&lt;/p&gt;
-
-&lt;p&gt;Only italians here and i would always have to ask and but.&lt;/p&gt;
-
-&lt;p&gt;For people who come from biological physics this approach with the baths with the coupling the system to bounce is not very natural in our case we typically define a non-equilibrium nature of the systems of non-aggregate systems by probability fluxes.&lt;/p&gt;
-
-&lt;p&gt;The microscopic levels are the same but this idea with the bath is also quite general and actually comes from another lecture that i gave last year with a colleague from condensed measure physics and in condensed metaphysics and quantum systems the idea of a bath is much more natural and then it’s a very nice exercise to translate our favorite non-equilibrium systems in social sciences and biological physics and just sort of say to say and ask actually what are the the two incompatible paths that drive these systems out of equilibrium and in some systems like epidemics and.&lt;/p&gt;
-
-&lt;p&gt;These answers is pretty pretty difficult and but maybe we can do that at the end of this this term yeah.&lt;/p&gt;
-
-&lt;p&gt;With this i i’m finishing the lecture for today.&lt;/p&gt;
-
-&lt;h3 id=&quot;q--a-session&quot;&gt;Q &amp;amp; A session&lt;/h3&gt;
-
-&lt;p&gt;Excuse me stefan yes.&lt;/p&gt;
-
-&lt;p&gt;I work in biological physics.&lt;/p&gt;
-
-&lt;p&gt;I i do study gene transcriptional regulatory networks.&lt;/p&gt;
-
-&lt;p&gt;The for example you have a transcription factor that regulates a target gene.&lt;/p&gt;
-
-&lt;p&gt;The transcription factor may may be regarded as the bath for the regulated gene is it.&lt;/p&gt;
-
-&lt;p&gt;Can you keep the long sentence.&lt;/p&gt;
-
-&lt;p&gt;The transcription factor is that that can be regarded as a bath for the regulated gene.&lt;/p&gt;
-
-&lt;p&gt;One thing one thing you have to think.&lt;/p&gt;
-
-&lt;p&gt;I’m not entirely sure but one thing you have to think about is whether your system consumes energy in any case yeah um because at some point you have to use atp yeah if you at some point you have to use atp and then you have the chemical bar somewhere.&lt;/p&gt;
-
-&lt;p&gt;Sometimes this chemical part is hidden somewhere in some in another place but my guess is that if it’s a non-equilibrium process.&lt;/p&gt;
-
-&lt;p&gt;It’s a normal enzyme kinetics is not it’s an equilibrium yeah.&lt;/p&gt;
-
-&lt;p&gt;You need to do something like if you modify chromatin the transcription make a transcription factor modify chromatin and sometimes you lock that in with epigenetic marks and these epigenetic marks then all the such that the irreversible step of they they are the step that require energy yeah.&lt;/p&gt;
-
-&lt;p&gt;I would say it depends on the transcription factor like everything in biology that’s it’s it’s probably very complicated thank you.&lt;/p&gt;
-
-&lt;p&gt;Thanks a lot for your question um are there any other questions yeah.&lt;/p&gt;
-
-&lt;p&gt;Considering an example of a heavy iron collision in a particle accelerator um.&lt;/p&gt;
-
-&lt;p&gt;The the experiments there they start with the particles colliding at extremely high energies and then there is a phase that they thermalize and then the particles also convert into other particles and that is the sort of the general way how the system evolves but that is more or less will study through equilibrium and statistical methods.&lt;/p&gt;
-
-&lt;p&gt;Could you you know with reference to today’s terms that you introduced in the lecture regarding like the fluctuation strength of fluctuation and other factors could you explain with examples on that with that particular experiments experiment probably.&lt;/p&gt;
-
-&lt;p&gt;I think i think probably until.&lt;/p&gt;
-
-&lt;p&gt;Already the coolest thing about this lecture is that we seem to have an extremely diverse audience yeah.&lt;/p&gt;
-
-&lt;p&gt;So we’re getting some questions here from particle accelerators i think in this case the equilibrium is actually fine yeah because you don’t inject the energy you have you inject the energy once into the system and then you let it evolve yes yeah.&lt;/p&gt;
-
-&lt;p&gt;Like you know like in this particle you’re not this you’re not basically continuously injecting more energy while the condition takes place.&lt;/p&gt;
-
-&lt;p&gt;You inject it once like in the human universe you check it once at the beginning and then you let it evolve and at some point you’ll reach some equilibrium state.&lt;/p&gt;
-
-&lt;p&gt;Not being an expert in elementary particle physics i would actually naively think that equilibrium is actually quite fine but isn’t it exactly like the example we did before of the universe which is considered as a non-equilibrium system which is isolated yes.&lt;/p&gt;
-
-&lt;p&gt;Okay.&lt;/p&gt;
-
-&lt;p&gt;Sorry.&lt;/p&gt;
-
-&lt;p&gt;So this the universe is non-equilibrium of course yes but it’s an isolated system i guess yeah.&lt;/p&gt;
-
-&lt;p&gt;It’s an isolated system and because it’s an isolated system it needs to obey the second law of thermodynamics that means you get all the consequences like the entropy increases and.&lt;/p&gt;
-
-&lt;p&gt;On.&lt;/p&gt;
-
-&lt;p&gt;You know that the universe at some very distant future will be in a state of maximum entropy that’s what people refer to when they say like entropy death of the universe or whatever yeah.&lt;/p&gt;
-
-&lt;p&gt;It will reach some state of maximum entropy and um let me think exactly.&lt;/p&gt;
-
-&lt;p&gt;Um yeah i think i think in terms of the the particle collisions you have to um you have to yes and you have to i think you have to think about time scales here yeah um with respect to the times i think if you take the limit of t tending to infinity that really depends on the scalar t to infinity for t to infinity.&lt;/p&gt;
-
-&lt;p&gt;So for t to infinity you know that your system will end up in equilibrium if it’s isolated yeah because you ejected the energy at some point yeah and then you and then you isolate it and see what happens.&lt;/p&gt;
-
-&lt;p&gt;You know that at some point it will be in equilibrium the question is how long does it take.&lt;/p&gt;
-
-&lt;p&gt;And that’s a question that i cannot answer without elementary particle physics knowledge for example in physics we have examples where systems you take them out of equilibrium and then you see what happens and they will never reach equilibrium actually yeah because that’s called aging yeah they very very slowly have a very slow dynamics and then it goes back yeah.&lt;/p&gt;
-
-&lt;p&gt;This these are systems where you wouldn’t say that you would make like equilibrium approximations HAHAHAif you have a system that exponentially relaxes back to a steady state to the equilibrium that you you you perturb it and then you see what happens but it immediately goes back to the equilibrium state yeah.&lt;/p&gt;
-
-&lt;p&gt;What i’m saying is that that with these time scales that the question is how long does it actually take to go to equilibrium and that’s a that’s probably a question that is very specific for these kind of systems that set equilibrium is much easier than non-equilibrium.&lt;/p&gt;
-
-&lt;p&gt;It could just be that people just make the the approximation f equilibrium approximation without well actually saying that it’s actually more than equilibrium for example in physics and statistical physics we have own saga theory that describes systems that are just a little bit out of equilibrium and what this theory actually says is that if you go out of equilibrium then you have still have the same kind of fluctuations as actually in equilibrium itself yeah.&lt;/p&gt;
-
-&lt;p&gt;This is an example where you when you say.&lt;/p&gt;
-
-&lt;p&gt;My system is not an equilibrium but i treat it something like an equilibrium system and thank you for the answer and another question is are we allowed to chop our system which we know is going to eventually end up in equilibrium and we chop the system at a certain point of time where it still hasn’t reached equilibrium.&lt;/p&gt;
-
-&lt;p&gt;It becomes a valid case study for non-equilibrium statistical physics we deliberately chop it yes.&lt;/p&gt;
-
-&lt;p&gt;So fHAHAHAit’s one thing i have to say that that all of these systems are valid case studies for non-equilibrium physics we just.&lt;/p&gt;
-
-&lt;p&gt;There’s a whole field of this first case of system that these glasses all these glasses glassy dynamics spinning glasses and.&lt;/p&gt;
-
-&lt;p&gt;On neural networks these things they they fall in this neural network is not a very good example but all these glasses are certainly non-equilibrium systems because they for a very long time stayed out of equilibrium but at some point it will be an equilibrium.&lt;/p&gt;
-
-&lt;p&gt;I’m here talking about systems that contacts we also say sometimes active systems.&lt;/p&gt;
-
-&lt;p&gt;That constantly take up energy from the environment.&lt;/p&gt;
-
-&lt;p&gt;Think about biological systems are they constantly for a cell to survive you always have to convert atp to adp you always have to take up chemical energy always otherwise the biological systems can’t keep up the complex structures that are going in the process that are going on inside cells.&lt;/p&gt;
-
-&lt;p&gt;Once you stop this process the cell is death that yeah.&lt;/p&gt;
-
-&lt;p&gt;So i’m here talking about systems that constantly take up this energy yeah and at any instant in time yeah and [Music].&lt;/p&gt;
-
-&lt;p&gt;Regarding your question once you’re out of equilibrium you’re basically it’s very hard to make general statements it’s not like an equilibrium where we have our partition function and then we have phase transitions and renormalization and criticality and universality these kind of things are much more difficult and non-equilibrium systems yeah.&lt;/p&gt;
-
-&lt;p&gt;To answer your question they think that probably the the the answer depends on how what exact system you chop up otherwise it’s quite likely that there’s no general answer to that.&lt;/p&gt;
-
-&lt;p&gt;Thank you thank you for your question.&lt;/p&gt;
-
-&lt;p&gt;Are there any other questions.&lt;/p&gt;
-
-&lt;p&gt;If you if there are no other questions if you have any feedback.&lt;/p&gt;
-
-&lt;p&gt;Just send me an email this week i’ll try to implement it and also if you have any thing that’s useful for you that you want to learn in this lecture.&lt;/p&gt;
-
-&lt;p&gt;Just also send me an email.&lt;/p&gt;
-
-&lt;p&gt;I can’t promise that i’ll i’ll be able to implement that because it’s already quite tight um but this letter is sort of also a little bit experiment yeah.&lt;/p&gt;
-
-&lt;p&gt;What are actually the tools that we need to get some understanding of these non-equilibrium systems yeah.&lt;/p&gt;
-
-&lt;p&gt;What are actually the the the fundamental concepts that we need to understand yeah and the answer to this might be quite different for each of us and it would be quite keen to learn about what’s your background and what are you what are you hoping to get from your neck from this lecture yeah.&lt;/p&gt;
-
-&lt;p&gt;Just send me an email and um with that see you see you all next week.&lt;/p&gt;
-
-&lt;p&gt;If there are no questions then i’ll close the lecture and see you all next week same time.&lt;/p&gt;
-
-&lt;p&gt;Bye.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
-        <link>mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-01-Introduction</link>
-        <guid isPermaLink="true">mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-01-Introduction</guid>
         
         
         <category>post</category>
