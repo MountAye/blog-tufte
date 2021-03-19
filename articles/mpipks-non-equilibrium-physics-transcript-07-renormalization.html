@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>.mpipks-transcript 07. Renormalization Group | 阿掖山：一个博客</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content=".mpipks-transcript 07. Renormalization Group" />
+<meta name="author" content="MountAye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="重整化群！冲！" />
+<meta property="og:description" content="重整化群！冲！" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-07-renormalization" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-07-renormalization" />
+<meta property="og:site_name" content="阿掖山：一个博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content=".mpipks-transcript 07. Renormalization Group" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"MountAye"},"description":"重整化群！冲！","@type":"BlogPosting","headline":".mpipks-transcript 07. Renormalization Group","dateModified":"2021-03-19T00:00:00+00:00","datePublished":"2021-03-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-07-renormalization"},"url":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-07-renormalization","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">    
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/mpipks-non-equilibrium-physics-transcript-07-renormalization">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">I would be happy if this blog helps you; if it doesn't, I wouldn't be disappointed.</span><br>
+        ——<span id="quoteAuthor">Welcome to this blog</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">Home</a>
+        
+  	
+        
+            <a href="/blog/History/">History</a>
+        
+  	
+        
+            <a href="/blog/Topics/">Topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">Links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">Comments</a>
+        
+  	
+        
+            <a href="/blog/About/">About</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>.mpipks-transcript | 07. Renormalization Group</h1>
+        <p class="subtitle">
+            March 19, 2021
+        </p>
+    <div class="postContent">
+        <h3 id="introduction">introduction</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">00:00</code> to our little uh lecture
+<br /><code class="language-plaintext highlighter-rouge">00:03</code> so meanwhile uh most of my group
+<br /><code class="language-plaintext highlighter-rouge">00:07</code> are in current time and i’m one of the
+<br /><code class="language-plaintext highlighter-rouge">00:09</code> few people left
+<br /><code class="language-plaintext highlighter-rouge">00:11</code> and um and ethan detang who used to join
+<br /><code class="language-plaintext highlighter-rouge">00:15</code> me here in the lecture hall
+<br /><code class="language-plaintext highlighter-rouge">00:17</code> uh has escaped to a safer place
+<br /><code class="language-plaintext highlighter-rouge">00:20</code> and so now uh buddy tang is watching the
+<br /><code class="language-plaintext highlighter-rouge">00:24</code> chat and
+<br /><code class="language-plaintext highlighter-rouge">00:25</code> the participantsness and we’ll let you
+<br /><code class="language-plaintext highlighter-rouge">00:26</code> in and
+<br /><code class="language-plaintext highlighter-rouge">00:29</code> moderate a little bit the chat and um
+<br /><code class="language-plaintext highlighter-rouge">00:34</code> so it’s a good time actually to be
+<br /><code class="language-plaintext highlighter-rouge">00:35</code> working on some epidemic models that we
+<br /><code class="language-plaintext highlighter-rouge">00:37</code> start
+<br /><code class="language-plaintext highlighter-rouge">00:38</code> that we started working on last time and
+<br /><code class="language-plaintext highlighter-rouge">00:42</code> uh in particular last time</p>
+
+<h3 id="slide-1">slide 1</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">00:46</code> we were looking at the simplest possible
+<br /><code class="language-plaintext highlighter-rouge">00:49</code> epidemic model you might think about
+<br /><code class="language-plaintext highlighter-rouge">00:52</code> so let me share the screen just to give
+<br /><code class="language-plaintext highlighter-rouge">00:54</code> you a little bit of an
+<br /><code class="language-plaintext highlighter-rouge">00:56</code> um
+<br /><code class="language-plaintext highlighter-rouge">01:01</code> of reminder
+<br /><code class="language-plaintext highlighter-rouge">01:10</code> okay
+<br /><code class="language-plaintext highlighter-rouge">01:32</code> okay
+<br /><code class="language-plaintext highlighter-rouge">01:39</code> okay here we go so we introduced this
+<br /><code class="language-plaintext highlighter-rouge">01:43</code> little epidemic model where you had
+<br /><code class="language-plaintext highlighter-rouge">01:46</code> two kinds of people infected one
+<br /><code class="language-plaintext highlighter-rouge">01:50</code> and the susceptible ones and the model
+<br /><code class="language-plaintext highlighter-rouge">01:53</code> was very simple so these infected ones
+<br /><code class="language-plaintext highlighter-rouge">01:55</code> could uh meet up with an affected one uh
+<br /><code class="language-plaintext highlighter-rouge">01:58</code> within with a susceptible one
+<br /><code class="language-plaintext highlighter-rouge">02:00</code> that’s that maybe they weren’t uh to a
+<br /><code class="language-plaintext highlighter-rouge">02:01</code> party or so it just
+<br /><code class="language-plaintext highlighter-rouge">02:03</code> used the same train yeah and then the
+<br /><code class="language-plaintext highlighter-rouge">02:05</code> susceptible one uh
+<br /><code class="language-plaintext highlighter-rouge">02:07</code> got infected and then you have the
+<br /><code class="language-plaintext highlighter-rouge">02:11</code> second process
+<br /><code class="language-plaintext highlighter-rouge">02:12</code> where if you are infected with a certain
+<br /><code class="language-plaintext highlighter-rouge">02:15</code> rate also probability
+<br /><code class="language-plaintext highlighter-rouge">02:17</code> per unit of time you get rid of your
+<br /><code class="language-plaintext highlighter-rouge">02:20</code> disease
+<br /><code class="language-plaintext highlighter-rouge">02:21</code> and you recover and go back to
+<br /><code class="language-plaintext highlighter-rouge">02:23</code> susceptible
+<br /><code class="language-plaintext highlighter-rouge">02:25</code> you know so you’re a recovered person
+<br /><code class="language-plaintext highlighter-rouge">02:28</code> so and then we went one step further and
+<br /><code class="language-plaintext highlighter-rouge">02:31</code> we
+<br /><code class="language-plaintext highlighter-rouge">02:31</code> put this very simple model on a lattice
+<br /><code class="language-plaintext highlighter-rouge">02:34</code> in a spatial context
+<br /><code class="language-plaintext highlighter-rouge">02:36</code> the simplest spatial context you can
+<br /><code class="language-plaintext highlighter-rouge">02:38</code> think about is just having
+<br /><code class="language-plaintext highlighter-rouge">02:40</code> lattice in one dimension yeah
+<br /><code class="language-plaintext highlighter-rouge">02:43</code> so suppose that this letter looks a
+<br /><code class="language-plaintext highlighter-rouge">02:45</code> little like the train like a train
+<br /><code class="language-plaintext highlighter-rouge">02:47</code> and uh so on this little letters you
+<br /><code class="language-plaintext highlighter-rouge">02:50</code> react
+<br /><code class="language-plaintext highlighter-rouge">02:51</code> basically with your nearest neighbors if
+<br /><code class="language-plaintext highlighter-rouge">02:53</code> you if you infect somebody
+<br /><code class="language-plaintext highlighter-rouge">02:55</code> you’re in fact your nearest neighbor but
+<br /><code class="language-plaintext highlighter-rouge">02:57</code> uh not
+<br /><code class="language-plaintext highlighter-rouge">02:58</code> anybody else yeah and then</p>
+
+<h3 id="slide-2">slide 2</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">03:02</code> we saw that such a simple model gave
+<br /><code class="language-plaintext highlighter-rouge">03:04</code> rise
+<br /><code class="language-plaintext highlighter-rouge">03:05</code> uh to rich phenomenology depending on
+<br /><code class="language-plaintext highlighter-rouge">03:08</code> the relation between the rate of
+<br /><code class="language-plaintext highlighter-rouge">03:10</code> infection
+<br /><code class="language-plaintext highlighter-rouge">03:11</code> and the rate of recovery which was set
+<br /><code class="language-plaintext highlighter-rouge">03:14</code> to one
+<br /><code class="language-plaintext highlighter-rouge">03:15</code> now if the infection rate was very large
+<br /><code class="language-plaintext highlighter-rouge">03:18</code> then
+<br /><code class="language-plaintext highlighter-rouge">03:18</code> we got a state where we had a large
+<br /><code class="language-plaintext highlighter-rouge">03:22</code> fraction of individuals constantly
+<br /><code class="language-plaintext highlighter-rouge">03:24</code> carrying the disease
+<br /><code class="language-plaintext highlighter-rouge">03:26</code> and when the rate of infection was very
+<br /><code class="language-plaintext highlighter-rouge">03:29</code> low
+<br /><code class="language-plaintext highlighter-rouge">03:30</code> then we ended up in a stainless
+<br /><code class="language-plaintext highlighter-rouge">03:31</code> so-called absorbing state
+<br /><code class="language-plaintext highlighter-rouge">03:33</code> where the disease got extinct
+<br /><code class="language-plaintext highlighter-rouge">03:37</code> now in between that we found that there
+<br /><code class="language-plaintext highlighter-rouge">03:39</code> is a value of this infection rate
+<br /><code class="language-plaintext highlighter-rouge">03:41</code> where infection and recovery just
+<br /><code class="language-plaintext highlighter-rouge">03:43</code> balance
+<br /><code class="language-plaintext highlighter-rouge">03:44</code> and this state was characterized uh
+<br /><code class="language-plaintext highlighter-rouge">03:47</code> very in a very similar way to the ising
+<br /><code class="language-plaintext highlighter-rouge">03:50</code> model
+<br /><code class="language-plaintext highlighter-rouge">03:51</code> in equilibrium was characterized by
+<br /><code class="language-plaintext highlighter-rouge">03:54</code> scale and variance
+<br /><code class="language-plaintext highlighter-rouge">03:55</code> that means that these correlation
+<br /><code class="language-plaintext highlighter-rouge">03:57</code> lengths that we looked at
+<br /><code class="language-plaintext highlighter-rouge">03:59</code> along the space axis
+<br /><code class="language-plaintext highlighter-rouge">04:03</code> and along the time axis we had two
+<br /><code class="language-plaintext highlighter-rouge">04:05</code> correlation lengths
+<br /><code class="language-plaintext highlighter-rouge">04:06</code> they both diverged that means we had
+<br /><code class="language-plaintext highlighter-rouge">04:09</code> self-similarity
+<br /><code class="language-plaintext highlighter-rouge">04:10</code> in this critical point</p>
+
+<h3 id="slide-3">slide 3</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">04:15</code> yeah and then we went on and we derived
+<br /><code class="language-plaintext highlighter-rouge">04:17</code> the launch of the equation
+<br /><code class="language-plaintext highlighter-rouge">04:19</code> and from this launch of an equation we</p>
+
+<h3 id="slide-4">slide 4</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">04:21</code> then just wrote down
+<br /><code class="language-plaintext highlighter-rouge">04:22</code> the martin citra rose functional
+<br /><code class="language-plaintext highlighter-rouge">04:26</code> integral and i’ll show you that later
+<br /><code class="language-plaintext highlighter-rouge">04:28</code> when we actually used it
+<br /><code class="language-plaintext highlighter-rouge">04:30</code> when we’ll actually use it for the
+<br /><code class="language-plaintext highlighter-rouge">04:31</code> realization procedure
+<br /><code class="language-plaintext highlighter-rouge">04:33</code> and for once we once we had written down
+<br /><code class="language-plaintext highlighter-rouge">04:36</code> these actions at the margin et cetera
+<br /><code class="language-plaintext highlighter-rouge">04:38</code> rose function integral
+<br /><code class="language-plaintext highlighter-rouge">04:40</code> of course we can go to free of space and
+<br /><code class="language-plaintext highlighter-rouge">04:42</code> write down
+<br /><code class="language-plaintext highlighter-rouge">04:43</code> this action also in fourier space</p>
+
+<h3 id="slide-5">slide 5</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">04:47</code> now that’s the formalities yeah
+<br /><code class="language-plaintext highlighter-rouge">04:50</code> that looks pretty complicated now
+<br /><code class="language-plaintext highlighter-rouge">04:55</code> we have a problem right so this looks
+<br /><code class="language-plaintext highlighter-rouge">04:57</code> pretty complicated
+<br /><code class="language-plaintext highlighter-rouge">04:59</code> and uh we have a situation
+<br /><code class="language-plaintext highlighter-rouge">05:02</code> where we have divergences where we our
+<br /><code class="language-plaintext highlighter-rouge">05:06</code> correlation length is infinite infinite
+<br /><code class="language-plaintext highlighter-rouge">05:10</code> and we don’t really know how to deal
+<br /><code class="language-plaintext highlighter-rouge">05:12</code> with this infinite correlation</p>
+
+<h3 id="slide-6">slide 6</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">05:16</code> and this is exactly the situation where
+<br /><code class="language-plaintext highlighter-rouge">05:19</code> we have developed in the last
+<br /><code class="language-plaintext highlighter-rouge">05:21</code> 70 years or so mathematical techniques
+<br /><code class="language-plaintext highlighter-rouge">05:25</code> originally in
+<br /><code class="language-plaintext highlighter-rouge">05:26</code> quantum field theory that allow us to
+<br /><code class="language-plaintext highlighter-rouge">05:29</code> deal with these
+<br /><code class="language-plaintext highlighter-rouge">05:30</code> divergences with these infinities
+<br /><code class="language-plaintext highlighter-rouge">05:33</code> now we’ve made two observations here so
+<br /><code class="language-plaintext highlighter-rouge">05:36</code> one is
+<br /><code class="language-plaintext highlighter-rouge">05:37</code> scale scale invariance that i just
+<br /><code class="language-plaintext highlighter-rouge">05:38</code> mentioned yeah scale variance
+<br /><code class="language-plaintext highlighter-rouge">05:40</code> at this critical point there’s no
+<br /><code class="language-plaintext highlighter-rouge">05:43</code> distinguished length scale we zoom
+<br /><code class="language-plaintext highlighter-rouge">05:45</code> in and the picture we get is
+<br /><code class="language-plaintext highlighter-rouge">05:48</code> statistically
+<br /><code class="language-plaintext highlighter-rouge">05:49</code> still the same as the original picture
+<br /><code class="language-plaintext highlighter-rouge">05:54</code> the second observation is
+<br /><code class="language-plaintext highlighter-rouge">05:57</code> that so and as a result of the scale
+<br /><code class="language-plaintext highlighter-rouge">05:59</code> invariance we saw that
+<br /><code class="language-plaintext highlighter-rouge">06:00</code> in equilibrium all of these
+<br /><code class="language-plaintext highlighter-rouge">06:03</code> thermodynamic quantities
+<br /><code class="language-plaintext highlighter-rouge">06:05</code> i like the like the free energy
+<br /><code class="language-plaintext highlighter-rouge">06:08</code> the magnetization and icing model obey
+<br /><code class="language-plaintext highlighter-rouge">06:10</code> power laws
+<br /><code class="language-plaintext highlighter-rouge">06:12</code> as you approach the critical point so
+<br /><code class="language-plaintext highlighter-rouge">06:14</code> they diverge with certain power laws
+<br /><code class="language-plaintext highlighter-rouge">06:17</code> and the second observation is
+<br /><code class="language-plaintext highlighter-rouge">06:20</code> that at this critical point
+<br /><code class="language-plaintext highlighter-rouge">06:23</code> our empirical observation is for example
+<br /><code class="language-plaintext highlighter-rouge">06:26</code> in the equilibrium but also in
+<br /><code class="language-plaintext highlighter-rouge">06:27</code> non-equilibrium
+<br /><code class="language-plaintext highlighter-rouge">06:29</code> that there are a lot of different
+<br /><code class="language-plaintext highlighter-rouge">06:32</code> real world systems that are described by
+<br /><code class="language-plaintext highlighter-rouge">06:36</code> the same
+<br /><code class="language-plaintext highlighter-rouge">06:38</code> theory the same simple theory so for
+<br /><code class="language-plaintext highlighter-rouge">06:42</code> example
+<br /><code class="language-plaintext highlighter-rouge">06:43</code> you have the icing more you know the
+<br /><code class="language-plaintext highlighter-rouge">06:44</code> icing model is super simple it’s much
+<br /><code class="language-plaintext highlighter-rouge">06:46</code> simpler than actually a real magnet
+<br /><code class="language-plaintext highlighter-rouge">06:49</code> nevertheless the icing motor can predict
+<br /><code class="language-plaintext highlighter-rouge">06:52</code> exponents
+<br /><code class="language-plaintext highlighter-rouge">06:54</code> near the critical point of real magnets
+<br /><code class="language-plaintext highlighter-rouge">06:58</code> also of different materials very nicely
+<br /><code class="language-plaintext highlighter-rouge">07:03</code> and it even the icing model even can
+<br /><code class="language-plaintext highlighter-rouge">07:05</code> predict
+<br /><code class="language-plaintext highlighter-rouge">07:07</code> critical phenomena in completely
+<br /><code class="language-plaintext highlighter-rouge">07:09</code> unrelated systems
+<br /><code class="language-plaintext highlighter-rouge">07:12</code> like phase transitions in water if you
+<br /><code class="language-plaintext highlighter-rouge">07:14</code> put water in a high pressure then you
+<br /><code class="language-plaintext highlighter-rouge">07:15</code> have a phase where you have
+<br /><code class="language-plaintext highlighter-rouge">07:17</code> like a coexistence of water and steam
+<br /><code class="language-plaintext highlighter-rouge">07:20</code> and this you can predict these exponents
+<br /><code class="language-plaintext highlighter-rouge">07:22</code> you can predict with the icing water
+<br /><code class="language-plaintext highlighter-rouge">07:24</code> and this power of such simple models to
+<br /><code class="language-plaintext highlighter-rouge">07:28</code> predict a large
+<br /><code class="language-plaintext highlighter-rouge">07:29</code> range of critical phenomena is called
+<br /><code class="language-plaintext highlighter-rouge">07:33</code> universality and both of these
+<br /><code class="language-plaintext highlighter-rouge">07:36</code> observations
+<br /><code class="language-plaintext highlighter-rouge">07:37</code> are the scale and variance the cell
+<br /><code class="language-plaintext highlighter-rouge">07:39</code> similarity
+<br /><code class="language-plaintext highlighter-rouge">07:40</code> and universality can be systematically
+<br /><code class="language-plaintext highlighter-rouge">07:43</code> started with a renormalization group
+<br /><code class="language-plaintext highlighter-rouge">07:46</code> the first thing you might actually think
+<br /><code class="language-plaintext highlighter-rouge">07:47</code> about okay so why do we need actually
+<br /><code class="language-plaintext highlighter-rouge">07:49</code> something complicated
+<br /><code class="language-plaintext highlighter-rouge">07:51</code> now we just do a naive approach
+<br /><code class="language-plaintext highlighter-rouge">07:54</code> uh similar to the one that we used
+<br /><code class="language-plaintext highlighter-rouge">07:57</code> implicitly in these lectures about
+<br /><code class="language-plaintext highlighter-rouge">07:59</code> pattern formation
+<br /><code class="language-plaintext highlighter-rouge">08:00</code> and non-linear dynamics now what we
+<br /><code class="language-plaintext highlighter-rouge">08:03</code> could do is okay we say okay so we just
+<br /><code class="language-plaintext highlighter-rouge">08:06</code> instantaneously zoom out of the system
+<br /><code class="language-plaintext highlighter-rouge">08:09</code> yeah go to
+<br /><code class="language-plaintext highlighter-rouge">08:10</code> wave vector zero so in finite wavelength
+<br /><code class="language-plaintext highlighter-rouge">08:13</code> you look only at the very large
+<br /><code class="language-plaintext highlighter-rouge">08:15</code> properties
+<br /><code class="language-plaintext highlighter-rouge">08:16</code> and just pretend that we can average
+<br /><code class="language-plaintext highlighter-rouge">08:18</code> over everything we just look at average
+<br /><code class="language-plaintext highlighter-rouge">08:20</code> quantities
+<br /><code class="language-plaintext highlighter-rouge">08:21</code> that’s that should be called mean field
+<br /><code class="language-plaintext highlighter-rouge">08:23</code> theory where you pretend
+<br /><code class="language-plaintext highlighter-rouge">08:25</code> that your system the state of the system
+<br /><code class="language-plaintext highlighter-rouge">08:28</code> at a certain
+<br /><code class="language-plaintext highlighter-rouge">08:28</code> site is governed by
+<br /><code class="language-plaintext highlighter-rouge">08:32</code> a field that rises over
+<br /><code class="language-plaintext highlighter-rouge">08:35</code> basically an average over the entire
+<br /><code class="language-plaintext highlighter-rouge">08:37</code> system
+<br /><code class="language-plaintext highlighter-rouge">08:38</code> yeah so this mean field theory where you
+<br /><code class="language-plaintext highlighter-rouge">08:41</code> instantaneously
+<br /><code class="language-plaintext highlighter-rouge">08:42</code> go to the macroscopic scale
+<br /><code class="language-plaintext highlighter-rouge">08:46</code> this doesn’t work in others it fails to
+<br /><code class="language-plaintext highlighter-rouge">08:49</code> predict these exponents that we get at a
+<br /><code class="language-plaintext highlighter-rouge">08:51</code> critical point
+<br /><code class="language-plaintext highlighter-rouge">08:52</code> and it also doesn’t give any uh reason
+<br /><code class="language-plaintext highlighter-rouge">08:55</code> why we should have universality
+<br /><code class="language-plaintext highlighter-rouge">08:59</code> now renewalization does something very
+<br /><code class="language-plaintext highlighter-rouge">09:02</code> smart now that provides a systematic way
+<br /><code class="language-plaintext highlighter-rouge">09:06</code> of connecting these microscopic degrees
+<br /><code class="language-plaintext highlighter-rouge">09:09</code> of freedom that are described for
+<br /><code class="language-plaintext highlighter-rouge">09:10</code> example by hamiltonian
+<br /><code class="language-plaintext highlighter-rouge">09:13</code> to uh macroscopic descriptions
+<br /><code class="language-plaintext highlighter-rouge">09:17</code> now it does so by taking into account
+<br /><code class="language-plaintext highlighter-rouge">09:21</code> all the intermediary scales between
+<br /><code class="language-plaintext highlighter-rouge">09:24</code> micro
+<br /><code class="language-plaintext highlighter-rouge">09:24</code> the microscopic level and the
+<br /><code class="language-plaintext highlighter-rouge">09:26</code> macroscopic level
+<br /><code class="language-plaintext highlighter-rouge">09:28</code> and as you uh my guess from these
+<br /><code class="language-plaintext highlighter-rouge">09:30</code> critical phenomena if you have scale
+<br /><code class="language-plaintext highlighter-rouge">09:32</code> environments and all
+<br /><code class="language-plaintext highlighter-rouge">09:33</code> scales are equal and equally important
+<br /><code class="language-plaintext highlighter-rouge">09:36</code> this approach where you
+<br /><code class="language-plaintext highlighter-rouge">09:38</code> take into account all of these scales
+<br /><code class="language-plaintext highlighter-rouge">09:41</code> one at a time
+<br /><code class="language-plaintext highlighter-rouge">09:43</code> now going from microscopic to
+<br /><code class="language-plaintext highlighter-rouge">09:44</code> macroscopic which
+<br /><code class="language-plaintext highlighter-rouge">09:46</code> makes much more sense than arbitrarily
+<br /><code class="language-plaintext highlighter-rouge">09:48</code> focusing only on the largest scale as
+<br /><code class="language-plaintext highlighter-rouge">09:50</code> you do in new york theory
+<br /><code class="language-plaintext highlighter-rouge">09:54</code> now so rememberization group the
+<br /><code class="language-plaintext highlighter-rouge">09:56</code> romanization
+<br /><code class="language-plaintext highlighter-rouge">09:57</code> group allows us to go from the
+<br /><code class="language-plaintext highlighter-rouge">09:59</code> microscopic
+<br /><code class="language-plaintext highlighter-rouge">10:00</code> level now that is described by some
+<br /><code class="language-plaintext highlighter-rouge">10:03</code> hamiltonian
+<br /><code class="language-plaintext highlighter-rouge">10:04</code> by some symmetries all the way to the
+<br /><code class="language-plaintext highlighter-rouge">10:07</code> macroscopic
+<br /><code class="language-plaintext highlighter-rouge">10:08</code> level without ever forgetting what is
+<br /><code class="language-plaintext highlighter-rouge">10:11</code> going on
+<br /><code class="language-plaintext highlighter-rouge">10:12</code> in between now that’s the power of the
+<br /><code class="language-plaintext highlighter-rouge">10:14</code> renalization group and in this lecture i
+<br /><code class="language-plaintext highlighter-rouge">10:16</code> will show you
+<br /><code class="language-plaintext highlighter-rouge">10:18</code> how this is actually implemented
+<br /><code class="language-plaintext highlighter-rouge">10:21</code> now how we can actually do that
+<br /><code class="language-plaintext highlighter-rouge">10:30</code> okay so there’s a little bit of a lot of
+<br /><code class="language-plaintext highlighter-rouge">10:33</code> information i should have split this
+<br /><code class="language-plaintext highlighter-rouge">10:34</code> slide</p>
+
+<h3 id="slide-7">slide 7</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">10:35</code> um so
+<br /><code class="language-plaintext highlighter-rouge">10:39</code> so so we are now going to follow this
+<br /><code class="language-plaintext highlighter-rouge">10:41</code> program now going from microscopic
+<br /><code class="language-plaintext highlighter-rouge">10:43</code> to macroscopic one scale
+<br /><code class="language-plaintext highlighter-rouge">10:46</code> one length scale at a time now we’re
+<br /><code class="language-plaintext highlighter-rouge">10:49</code> starting with something microscopic that
+<br /><code class="language-plaintext highlighter-rouge">10:51</code> is super complicated don’t think about
+<br /><code class="language-plaintext highlighter-rouge">10:53</code> the icing model
+<br /><code class="language-plaintext highlighter-rouge">10:54</code> think about something that has 10 000
+<br /><code class="language-plaintext highlighter-rouge">10:57</code> different couplings or so
+<br /><code class="language-plaintext highlighter-rouge">11:00</code> now we take that model with 10 000
+<br /><code class="language-plaintext highlighter-rouge">11:03</code> different parameters
+<br /><code class="language-plaintext highlighter-rouge">11:05</code> on the microscopic scale so the real
+<br /><code class="language-plaintext highlighter-rouge">11:07</code> physics
+<br /><code class="language-plaintext highlighter-rouge">11:08</code> that’s going on on the microscopic scale
+<br /><code class="language-plaintext highlighter-rouge">11:10</code> that’s complicated
+<br /><code class="language-plaintext highlighter-rouge">11:12</code> yeah it’s much more complicated than the
+<br /><code class="language-plaintext highlighter-rouge">11:13</code> icing model and it just as the disease
+<br /><code class="language-plaintext highlighter-rouge">11:16</code> is much more complicated as the ice i
+<br /><code class="language-plaintext highlighter-rouge">11:18</code> model that i showed you
+<br /><code class="language-plaintext highlighter-rouge">11:21</code> and then we go to larger and larger
+<br /><code class="language-plaintext highlighter-rouge">11:24</code> scales
+<br /><code class="language-plaintext highlighter-rouge">11:26</code> and hope to end up with something that
+<br /><code class="language-plaintext highlighter-rouge">11:28</code> is simpler
+<br /><code class="language-plaintext highlighter-rouge">11:30</code> and less correlated than on the
+<br /><code class="language-plaintext highlighter-rouge">11:32</code> microscopic scale
+<br /><code class="language-plaintext highlighter-rouge">11:34</code> yeah so how do we do that so realization
+<br /><code class="language-plaintext highlighter-rouge">11:37</code> consists of three
+<br /><code class="language-plaintext highlighter-rouge">11:38</code> steps uh the most important step
+<br /><code class="language-plaintext highlighter-rouge">11:42</code> now the the actual uh what’s actually
+<br /><code class="language-plaintext highlighter-rouge">11:46</code> underlying renovation
+<br /><code class="language-plaintext highlighter-rouge">11:48</code> is a course grading step now in this
+<br /><code class="language-plaintext highlighter-rouge">11:51</code> course grading step
+<br /><code class="language-plaintext highlighter-rouge">11:53</code> you can think about uh that you
+<br /><code class="language-plaintext highlighter-rouge">11:57</code> unsharpen an image suppose you take a
+<br /><code class="language-plaintext highlighter-rouge">11:59</code> photo
+<br /><code class="language-plaintext highlighter-rouge">12:00</code> and then you can focus you can make the
+<br /><code class="language-plaintext highlighter-rouge">12:02</code> picture
+<br /><code class="language-plaintext highlighter-rouge">12:04</code> uh sharp or less sharp yeah by turning
+<br /><code class="language-plaintext highlighter-rouge">12:07</code> like the lens
+<br /><code class="language-plaintext highlighter-rouge">12:08</code> and the ring on the lens if you still
+<br /><code class="language-plaintext highlighter-rouge">12:10</code> use a rear camera
+<br /><code class="language-plaintext highlighter-rouge">12:11</code> yeah so you can make a job or let’s try
+<br /><code class="language-plaintext highlighter-rouge">12:13</code> or think about the microscope
+<br /><code class="language-plaintext highlighter-rouge">12:15</code> you can have to turn some knobs to make
+<br /><code class="language-plaintext highlighter-rouge">12:17</code> the image sharp or not sharp
+<br /><code class="language-plaintext highlighter-rouge">12:19</code> and the first step we
+<br /><code class="language-plaintext highlighter-rouge">12:22</code> cause grain so we cause grain
+<br /><code class="language-plaintext highlighter-rouge">12:26</code> and that means literally that we make
+<br /><code class="language-plaintext highlighter-rouge">12:28</code> the image that we’re looking at in the
+<br /><code class="language-plaintext highlighter-rouge">12:30</code> system
+<br /><code class="language-plaintext highlighter-rouge">12:31</code> unsharp so that we that’s what we do
+<br /><code class="language-plaintext highlighter-rouge">12:35</code> yeah so we
+<br /><code class="language-plaintext highlighter-rouge">12:36</code> mathematically that means if you uh if
+<br /><code class="language-plaintext highlighter-rouge">12:39</code> you close grain if you make something
+<br /><code class="language-plaintext highlighter-rouge">12:41</code> out sharp unsharp then that means that
+<br /><code class="language-plaintext highlighter-rouge">12:43</code> you integrate out
+<br /><code class="language-plaintext highlighter-rouge">12:46</code> fast fluctuations or short range
+<br /><code class="language-plaintext highlighter-rouge">12:48</code> fluctuations
+<br /><code class="language-plaintext highlighter-rouge">12:49</code> i’ll show you on the next slide how this
+<br /><code class="language-plaintext highlighter-rouge">12:51</code> looks like intuitively so first you get
+<br /><code class="language-plaintext highlighter-rouge">12:53</code> rid of
+<br /><code class="language-plaintext highlighter-rouge">12:53</code> all these uh fluctuations that happen on
+<br /><code class="language-plaintext highlighter-rouge">12:56</code> very small length scales
+<br /><code class="language-plaintext highlighter-rouge">12:59</code> and you have to perform an integral to
+<br /><code class="language-plaintext highlighter-rouge">13:01</code> do that
+<br /><code class="language-plaintext highlighter-rouge">13:02</code> and this integral of course is very
+<br /><code class="language-plaintext highlighter-rouge">13:05</code> complicated
+<br /><code class="language-plaintext highlighter-rouge">13:06</code> to calculate now the second state
+<br /><code class="language-plaintext highlighter-rouge">13:10</code> we have a new field yeah
+<br /><code class="language-plaintext highlighter-rouge">13:13</code> now let’s say phi average
+<br /><code class="language-plaintext highlighter-rouge">13:17</code> but because we have course grade this
+<br /><code class="language-plaintext highlighter-rouge">13:19</code> new field
+<br /><code class="language-plaintext highlighter-rouge">13:21</code> our new image is blurry but
+<br /><code class="language-plaintext highlighter-rouge">13:25</code> it is also not on the same length scale
+<br /><code class="language-plaintext highlighter-rouge">13:27</code> as before
+<br /><code class="language-plaintext highlighter-rouge">13:29</code> yeah so it’s just blurry but what we now
+<br /><code class="language-plaintext highlighter-rouge">13:32</code> have to do
+<br /><code class="language-plaintext highlighter-rouge">13:33</code> is to rescale length
+<br /><code class="language-plaintext highlighter-rouge">13:36</code> to make the structures that we have in
+<br /><code class="language-plaintext highlighter-rouge">13:38</code> this new image
+<br /><code class="language-plaintext highlighter-rouge">13:40</code> similar to the structures that we had in
+<br /><code class="language-plaintext highlighter-rouge">13:42</code> the original image
+<br /><code class="language-plaintext highlighter-rouge">13:43</code> now so that means we need to rescale
+<br /><code class="language-plaintext highlighter-rouge">13:45</code> length scales
+<br /><code class="language-plaintext highlighter-rouge">13:48</code> by a factor of b
+<br /><code class="language-plaintext highlighter-rouge">13:52</code> and the other thing that happens if you
+<br /><code class="language-plaintext highlighter-rouge">13:53</code> make things blurry
+<br /><code class="language-plaintext highlighter-rouge">13:55</code> is that you lose contrast in the image
+<br /><code class="language-plaintext highlighter-rouge">13:58</code> so the image looks a bit dull so we
+<br /><code class="language-plaintext highlighter-rouge">14:02</code> also need to now to increase the
+<br /><code class="language-plaintext highlighter-rouge">14:03</code> contrast again
+<br /><code class="language-plaintext highlighter-rouge">14:05</code> and we do that by rescaling our
+<br /><code class="language-plaintext highlighter-rouge">14:09</code> fields as well so these are the three
+<br /><code class="language-plaintext highlighter-rouge">14:12</code> steps of renormalization as if we first
+<br /><code class="language-plaintext highlighter-rouge">14:14</code> integrate out very short
+<br /><code class="language-plaintext highlighter-rouge">14:18</code> fluctuations happening on the smallest
+<br /><code class="language-plaintext highlighter-rouge">14:20</code> length scales
+<br /><code class="language-plaintext highlighter-rouge">14:22</code> and the second step and the third step
+<br /><code class="language-plaintext highlighter-rouge">14:25</code> make sure that once we have integrated
+<br /><code class="language-plaintext highlighter-rouge">14:28</code> out
+<br /><code class="language-plaintext highlighter-rouge">14:29</code> these uh these short length skills
+<br /><code class="language-plaintext highlighter-rouge">14:32</code> that our new theory that we get is
+<br /><code class="language-plaintext highlighter-rouge">14:34</code> actually comparable
+<br /><code class="language-plaintext highlighter-rouge">14:36</code> to the previous one so we have to reset
+<br /><code class="language-plaintext highlighter-rouge">14:39</code> the length scales and we have to reset
+<br /><code class="language-plaintext highlighter-rouge">14:41</code> the fields the contrast of the field by
+<br /><code class="language-plaintext highlighter-rouge">14:44</code> multiplying them
+<br /><code class="language-plaintext highlighter-rouge">14:45</code> with appropriate numbers</p>
+
+<h3 id="slide-8">slide 8</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">14:50</code> so how does that look like so we start
+<br /><code class="language-plaintext highlighter-rouge">14:52</code> with a field file
+<br /><code class="language-plaintext highlighter-rouge">14:53</code> now that has short range fluctuations
+<br /><code class="language-plaintext highlighter-rouge">14:56</code> you know fast fluctuations in space
+<br /><code class="language-plaintext highlighter-rouge">14:58</code> now for example um
+<br /><code class="language-plaintext highlighter-rouge">15:02</code> yeah here these wobbly things yeah these
+<br /><code class="language-plaintext highlighter-rouge">15:04</code> are fast fluctuations
+<br /><code class="language-plaintext highlighter-rouge">15:07</code> but it also has slow fluctuations that
+<br /><code class="language-plaintext highlighter-rouge">15:09</code> would be
+<br /><code class="language-plaintext highlighter-rouge">15:11</code> that would be here a slow fluctuation
+<br /><code class="language-plaintext highlighter-rouge">15:15</code> now you have fluctuations on all
+<br /><code class="language-plaintext highlighter-rouge">15:17</code> different length scales and now
+<br /><code class="language-plaintext highlighter-rouge">15:19</code> we cause grain that means we integrate
+<br /><code class="language-plaintext highlighter-rouge">15:21</code> out
+<br /><code class="language-plaintext highlighter-rouge">15:22</code> these fast fluctuations and what we get
+<br /><code class="language-plaintext highlighter-rouge">15:25</code> is a new field if i uh this phi
+<br /><code class="language-plaintext highlighter-rouge">15:29</code> average here because phi r
+<br /><code class="language-plaintext highlighter-rouge">15:33</code> that is smooth that doesn’t have these
+<br /><code class="language-plaintext highlighter-rouge">15:35</code> small
+<br /><code class="language-plaintext highlighter-rouge">15:36</code> wiggles anymore but it is smooth here
+<br /><code class="language-plaintext highlighter-rouge">15:41</code> now so we have course grade the fields
+<br /><code class="language-plaintext highlighter-rouge">15:44</code> and now we have coarse grains the field
+<br /><code class="language-plaintext highlighter-rouge">15:46</code> we reset the length
+<br /><code class="language-plaintext highlighter-rouge">15:48</code> rescale the length scale
+<br /><code class="language-plaintext highlighter-rouge">15:51</code> x prime to make fluctuations on the new
+<br /><code class="language-plaintext highlighter-rouge">15:57</code> field comparable to typical fluctuations
+<br /><code class="language-plaintext highlighter-rouge">16:00</code> on the
+<br /><code class="language-plaintext highlighter-rouge">16:00</code> original field the second step
+<br /><code class="language-plaintext highlighter-rouge">16:05</code> we then renormalize um
+<br /><code class="language-plaintext highlighter-rouge">16:08</code> there’s actually no three here because i
+<br /><code class="language-plaintext highlighter-rouge">16:11</code> started
+<br /><code class="language-plaintext highlighter-rouge">16:12</code> i know there is a three okay so uh
+<br /><code class="language-plaintext highlighter-rouge">16:16</code> as a final step and we have to rescale
+<br /><code class="language-plaintext highlighter-rouge">16:18</code> the fields now we have to
+<br /><code class="language-plaintext highlighter-rouge">16:20</code> change the magnitude of the signal here
+<br /><code class="language-plaintext highlighter-rouge">16:23</code> to make it comparable
+<br /><code class="language-plaintext highlighter-rouge">16:24</code> to the original signal over here
+<br /><code class="language-plaintext highlighter-rouge">16:28</code> now this sounds very intuitive
+<br /><code class="language-plaintext highlighter-rouge">16:31</code> and very simple but of course in reality
+<br /><code class="language-plaintext highlighter-rouge">16:34</code> it’s quite difficult</p>
+
+<h3 id="answering-a-question">answering a question</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">16:39</code> so let’s see how this works uh
+<br /><code class="language-plaintext highlighter-rouge">16:42</code> what’s the result so can i have a
+<br /><code class="language-plaintext highlighter-rouge">16:45</code> question here
+<br /><code class="language-plaintext highlighter-rouge">16:50</code> um in the previous slide
+<br /><code class="language-plaintext highlighter-rouge">16:54</code> when we re-normalize uh fi
+<br /><code class="language-plaintext highlighter-rouge">16:57</code> prime we essentially doing it
+<br /><code class="language-plaintext highlighter-rouge">17:01</code> because we want uh whatever abs
+<br /><code class="language-plaintext highlighter-rouge">17:04</code> magnitude or value of phi prime is to
+<br /><code class="language-plaintext highlighter-rouge">17:07</code> equal
+<br /><code class="language-plaintext highlighter-rouge">17:08</code> uh the value of five the original field
+<br /><code class="language-plaintext highlighter-rouge">17:11</code> yes
+<br /><code class="language-plaintext highlighter-rouge">17:11</code> exactly so what we want to do is so so
+<br /><code class="language-plaintext highlighter-rouge">17:14</code> we do this procedure not only once
+<br /><code class="language-plaintext highlighter-rouge">17:16</code> but many times now the next step will do
+<br /><code class="language-plaintext highlighter-rouge">17:18</code> that many times
+<br /><code class="language-plaintext highlighter-rouge">17:20</code> and uh each time we do these three steps
+<br /><code class="language-plaintext highlighter-rouge">17:24</code> we get a new hamiltonian or a new action
+<br /><code class="language-plaintext highlighter-rouge">17:28</code> and this new action will be
+<br /><code class="language-plaintext highlighter-rouge">17:31</code> different to the original action
+<br /><code class="language-plaintext highlighter-rouge">17:35</code> it will be different for trivial reasons
+<br /><code class="language-plaintext highlighter-rouge">17:38</code> namely because once we cause when
+<br /><code class="language-plaintext highlighter-rouge">17:41</code> think about this course grading as an
+<br /><code class="language-plaintext highlighter-rouge">17:43</code> average instead
+<br /><code class="language-plaintext highlighter-rouge">17:44</code> now you have i’ll show you later a
+<br /><code class="language-plaintext highlighter-rouge">17:47</code> specific example suppose you average
+<br /><code class="language-plaintext highlighter-rouge">17:49</code> uh in some area here and that’s why
+<br /><code class="language-plaintext highlighter-rouge">17:52</code> that’s how you smooth
+<br /><code class="language-plaintext highlighter-rouge">17:54</code> yeah when you average you know think
+<br /><code class="language-plaintext highlighter-rouge">17:56</code> about the spin system you average
+<br /><code class="language-plaintext highlighter-rouge">17:59</code> then you don’t have plus minus plus one
+<br /><code class="language-plaintext highlighter-rouge">18:01</code> or minus one
+<br /><code class="language-plaintext highlighter-rouge">18:02</code> but the new average field will be plus
+<br /><code class="language-plaintext highlighter-rouge">18:04</code> 0.1
+<br /><code class="language-plaintext highlighter-rouge">18:06</code> and minus 0.1 now just because you
+<br /><code class="language-plaintext highlighter-rouge">18:08</code> averaged
+<br /><code class="language-plaintext highlighter-rouge">18:09</code> over in the field yeah but you don’t
+<br /><code class="language-plaintext highlighter-rouge">18:11</code> want the new spins to live in this world
+<br /><code class="language-plaintext highlighter-rouge">18:13</code> of plus
+<br /><code class="language-plaintext highlighter-rouge">18:14</code> 0.1 and minus 0.1 but you’d want them
+<br /><code class="language-plaintext highlighter-rouge">18:18</code> also
+<br /><code class="language-plaintext highlighter-rouge">18:18</code> live on the scale of plus minus 1 just
+<br /><code class="language-plaintext highlighter-rouge">18:21</code> to make the
+<br /><code class="language-plaintext highlighter-rouge">18:21</code> hamiltonians comparable now so this is a
+<br /><code class="language-plaintext highlighter-rouge">18:24</code> trivial effect that you get by course
+<br /><code class="language-plaintext highlighter-rouge">18:26</code> grading that you don’t want to have
+<br /><code class="language-plaintext highlighter-rouge">18:28</code> to dominate your results and we need to
+<br /><code class="language-plaintext highlighter-rouge">18:31</code> get rid of that
+<br /><code class="language-plaintext highlighter-rouge">18:32</code> this trivial rescalings of the fields
+<br /><code class="language-plaintext highlighter-rouge">18:35</code> and of the
+<br /><code class="language-plaintext highlighter-rouge">18:36</code> of the um of the length scales just by
+<br /><code class="language-plaintext highlighter-rouge">18:39</code> explicitly taking the step and saying
+<br /><code class="language-plaintext highlighter-rouge">18:41</code> okay
+<br /><code class="language-plaintext highlighter-rouge">18:42</code> now i have co-strained my field now i
+<br /><code class="language-plaintext highlighter-rouge">18:45</code> have to reset the length scales
+<br /><code class="language-plaintext highlighter-rouge">18:46</code> and i have to reset the amplitude of my
+<br /><code class="language-plaintext highlighter-rouge">18:49</code> fields
+<br /><code class="language-plaintext highlighter-rouge">18:50</code> by multiplying these these quantities
+<br /><code class="language-plaintext highlighter-rouge">18:53</code> with appropriate numbers
+<br /><code class="language-plaintext highlighter-rouge">18:56</code> i just want to have comparable things at
+<br /><code class="language-plaintext highlighter-rouge">18:58</code> each step
+<br /><code class="language-plaintext highlighter-rouge">19:00</code> yes thank you so much uh but regarding
+<br /><code class="language-plaintext highlighter-rouge">19:03</code> this particular point
+<br /><code class="language-plaintext highlighter-rouge">19:04</code> you showed in the first slide that phi
+<br /><code class="language-plaintext highlighter-rouge">19:07</code> prime
+<br /><code class="language-plaintext highlighter-rouge">19:07</code> phi is divided by b uh in the
+<br /><code class="language-plaintext highlighter-rouge">19:10</code> in introductory slide remember
+<br /><code class="language-plaintext highlighter-rouge">19:12</code> normalization i couldn’t understand that
+<br /><code class="language-plaintext highlighter-rouge">19:15</code> yes here yeah five in the next one
+<br /><code class="language-plaintext highlighter-rouge">19:19</code> five bar by b or um
+<br /><code class="language-plaintext highlighter-rouge">19:23</code> so which which one third point
+<br /><code class="language-plaintext highlighter-rouge">19:26</code> third point yeah that’s just a number
+<br /><code class="language-plaintext highlighter-rouge">19:28</code> yeah we don’t know this number yet
+<br /><code class="language-plaintext highlighter-rouge">19:31</code> we don’t know it yet we can get it by
+<br /><code class="language-plaintext highlighter-rouge">19:33</code> dimensional analysis
+<br /><code class="language-plaintext highlighter-rouge">19:34</code> uh very often um so we don’t know this
+<br /><code class="language-plaintext highlighter-rouge">19:37</code> number yet
+<br /><code class="language-plaintext highlighter-rouge">19:38</code> it doesn’t the same b okay it’s not
+<br /><code class="language-plaintext highlighter-rouge">19:42</code> from one i think it’s an s actually
+<br /><code class="language-plaintext highlighter-rouge">19:47</code> so so it doesn’t have to be b it depends
+<br /><code class="language-plaintext highlighter-rouge">19:50</code> on the dimensions of your field
+<br /><code class="language-plaintext highlighter-rouge">19:53</code> typically b to the power of something
+<br /><code class="language-plaintext highlighter-rouge">19:55</code> also
+<br /><code class="language-plaintext highlighter-rouge">19:56</code> that doesn’t have to be b and it depends
+<br /><code class="language-plaintext highlighter-rouge">19:58</code> on the on the dimensions of your fields
+<br /><code class="language-plaintext highlighter-rouge">20:00</code> here
+<br /><code class="language-plaintext highlighter-rouge">20:01</code> um okay just at this point we just say
+<br /><code class="language-plaintext highlighter-rouge">20:03</code> okay so we have to do something with our
+<br /><code class="language-plaintext highlighter-rouge">20:05</code> fields to make them comparable
+<br /><code class="language-plaintext highlighter-rouge">20:08</code> now think about an average now you can’t
+<br /><code class="language-plaintext highlighter-rouge">20:10</code> get average and if you’re doing average
+<br /><code class="language-plaintext highlighter-rouge">20:12</code> all the time
+<br /><code class="language-plaintext highlighter-rouge">20:13</code> yeah then your uh the central limited
+<br /><code class="language-plaintext highlighter-rouge">20:16</code> theorem will be that the
+<br /><code class="language-plaintext highlighter-rouge">20:17</code> average like in a disordered system will
+<br /><code class="language-plaintext highlighter-rouge">20:20</code> get very very small
+<br /><code class="language-plaintext highlighter-rouge">20:22</code> yes the variance of this average will
+<br /><code class="language-plaintext highlighter-rouge">20:24</code> get very very small
+<br /><code class="language-plaintext highlighter-rouge">20:26</code> and we don’t want this effect to happen
+<br /><code class="language-plaintext highlighter-rouge">20:28</code> because it destroys this basically
+<br /><code class="language-plaintext highlighter-rouge">20:30</code> or if i what we actually want to look at
+<br /><code class="language-plaintext highlighter-rouge">20:33</code> now what we actually want to look at is
+<br /><code class="language-plaintext highlighter-rouge">20:34</code> how does the theory in itself the
+<br /><code class="language-plaintext highlighter-rouge">20:36</code> structure of the theory
+<br /><code class="language-plaintext highlighter-rouge">20:38</code> change as we go through the scale and we
+<br /><code class="language-plaintext highlighter-rouge">20:41</code> don’t want to have these effects that
+<br /><code class="language-plaintext highlighter-rouge">20:42</code> come
+<br /><code class="language-plaintext highlighter-rouge">20:43</code> by uh by uh
+<br /><code class="language-plaintext highlighter-rouge">20:46</code> just that we that we can’t compare
+<br /><code class="language-plaintext highlighter-rouge">20:49</code> um suppose you compare like uh uh
+<br /><code class="language-plaintext highlighter-rouge">20:53</code> you compare um the velocity of a car
+<br /><code class="language-plaintext highlighter-rouge">20:56</code> you live in the uk also or in the united
+<br /><code class="language-plaintext highlighter-rouge">20:57</code> states and you compare the velocity of
+<br /><code class="language-plaintext highlighter-rouge">20:59</code> the car in miles per hour
+<br /><code class="language-plaintext highlighter-rouge">21:01</code> or in kilometers per hour now you have
+<br /><code class="language-plaintext highlighter-rouge">21:04</code> to you cannot compare that
+<br /><code class="language-plaintext highlighter-rouge">21:05</code> but pure numbers you have to do
+<br /><code class="language-plaintext highlighter-rouge">21:07</code> something you have to be scared by 1.6
+<br /><code class="language-plaintext highlighter-rouge">21:09</code> to make them comparable and here also we
+<br /><code class="language-plaintext highlighter-rouge">21:12</code> go through these scales look
+<br /><code class="language-plaintext highlighter-rouge">21:13</code> like meters uh kilo kilometers miles and
+<br /><code class="language-plaintext highlighter-rouge">21:17</code> so on
+<br /><code class="language-plaintext highlighter-rouge">21:18</code> and to make these things comparable all
+<br /><code class="language-plaintext highlighter-rouge">21:20</code> the different lengths that we have to
+<br /><code class="language-plaintext highlighter-rouge">21:21</code> rescale
+<br /><code class="language-plaintext highlighter-rouge">21:22</code> them all the time yeah just that way
+<br /><code class="language-plaintext highlighter-rouge">21:24</code> that we’re all the way talking about
+<br /><code class="language-plaintext highlighter-rouge">21:26</code> um the same thing um
+<br /><code class="language-plaintext highlighter-rouge">21:30</code> so in germany we say we uh you cannot
+<br /><code class="language-plaintext highlighter-rouge">21:32</code> compare apples and oranges
+<br /><code class="language-plaintext highlighter-rouge">21:34</code> different things you have to uh
+<br /><code class="language-plaintext highlighter-rouge">21:37</code> if you compare apple and origins then um
+<br /><code class="language-plaintext highlighter-rouge">21:40</code> then then you’re doing something wrong
+<br /><code class="language-plaintext highlighter-rouge">21:43</code> in other words to compare apples
+<br /><code class="language-plaintext highlighter-rouge">21:45</code> to different kinds of apples so to say
+<br /><code class="language-plaintext highlighter-rouge">21:48</code> yes but we always want to talk about
+<br /><code class="language-plaintext highlighter-rouge">21:50</code> apples and not about miles and
+<br /><code class="language-plaintext highlighter-rouge">21:52</code> kilometers now so that’s that’s the idea
+<br /><code class="language-plaintext highlighter-rouge">21:55</code> about this rescaling step
+<br /><code class="language-plaintext highlighter-rouge">21:59</code> i’ll show you later an example where
+<br /><code class="language-plaintext highlighter-rouge">22:00</code> this rescaling step is already implicit
+<br /><code class="language-plaintext highlighter-rouge">22:02</code> of course you can choose this course
+<br /><code class="language-plaintext highlighter-rouge">22:06</code> grading step in a way
+<br /><code class="language-plaintext highlighter-rouge">22:07</code> that it doesn’t change the magnitude of
+<br /><code class="language-plaintext highlighter-rouge">22:10</code> the field
+<br /><code class="language-plaintext highlighter-rouge">22:12</code> yeah so that you can choose the course
+<br /><code class="language-plaintext highlighter-rouge">22:14</code> grading step in a way here this one
+<br /><code class="language-plaintext highlighter-rouge">22:16</code> in a way that it doesn’t change the
+<br /><code class="language-plaintext highlighter-rouge">22:18</code> magnitude of this field and then you
+<br /><code class="language-plaintext highlighter-rouge">22:19</code> don’t have to do this renormalization
+<br /><code class="language-plaintext highlighter-rouge">22:21</code> step
+<br /><code class="language-plaintext highlighter-rouge">22:24</code> now but the principle you will have to
+<br /><code class="language-plaintext highlighter-rouge">22:26</code> do that
+<br /><code class="language-plaintext highlighter-rouge">22:28</code> okay so now we have these three points
+<br /><code class="language-plaintext highlighter-rouge">22:31</code> now we rescale uh we of course grain</p>
+
+<h3 id="slide-9">slide 9</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">22:35</code> rescale and renormalize and once we do
+<br /><code class="language-plaintext highlighter-rouge">22:39</code> that
+<br /><code class="language-plaintext highlighter-rouge">22:39</code> our action or our equilibrium or
+<br /><code class="language-plaintext highlighter-rouge">22:41</code> hamiltonian
+<br /><code class="language-plaintext highlighter-rouge">22:43</code> will become a new action
+<br /><code class="language-plaintext highlighter-rouge">22:48</code> now s prime and say we
+<br /><code class="language-plaintext highlighter-rouge">22:52</code> did this rescaling on a very small
+<br /><code class="language-plaintext highlighter-rouge">22:54</code> length scale
+<br /><code class="language-plaintext highlighter-rouge">22:55</code> dl now this s prime
+<br /><code class="language-plaintext highlighter-rouge">23:00</code> is then given by some operator r
+<br /><code class="language-plaintext highlighter-rouge">23:03</code> of s and if we do that repeatedly
+<br /><code class="language-plaintext highlighter-rouge">23:08</code> you know so what we then get is a
+<br /><code class="language-plaintext highlighter-rouge">23:11</code> remoralization group flow our g
+<br /><code class="language-plaintext highlighter-rouge">23:13</code> flow and that’s basically
+<br /><code class="language-plaintext highlighter-rouge">23:17</code> the differential equation for the action
+<br /><code class="language-plaintext highlighter-rouge">23:21</code> yeah the s over the l
+<br /><code class="language-plaintext highlighter-rouge">23:26</code> is then something like this r
+<br /><code class="language-plaintext highlighter-rouge">23:29</code> of s so we normalize one step further
+<br /><code class="language-plaintext highlighter-rouge">23:33</code> minus the previous step
+<br /><code class="language-plaintext highlighter-rouge">23:38</code> you know so we change we do these three
+<br /><code class="language-plaintext highlighter-rouge">23:41</code> steps
+<br /><code class="language-plaintext highlighter-rouge">23:41</code> just a little bit not just and we call
+<br /><code class="language-plaintext highlighter-rouge">23:44</code> square
+<br /><code class="language-plaintext highlighter-rouge">23:45</code> we integrate out a very small additional
+<br /><code class="language-plaintext highlighter-rouge">23:48</code> scale
+<br /><code class="language-plaintext highlighter-rouge">23:50</code> yeah and our action is then different on
+<br /><code class="language-plaintext highlighter-rouge">23:53</code> the next scale
+<br /><code class="language-plaintext highlighter-rouge">23:54</code> of course we assume that this is somehow
+<br /><code class="language-plaintext highlighter-rouge">23:55</code> continuous and well behaved
+<br /><code class="language-plaintext highlighter-rouge">23:58</code> and then we’ll have a flow equation
+<br /><code class="language-plaintext highlighter-rouge">24:01</code> of our action and of course in reality
+<br /><code class="language-plaintext highlighter-rouge">24:04</code> this will not be a flow equation of our
+<br /><code class="language-plaintext highlighter-rouge">24:06</code> action
+<br /><code class="language-plaintext highlighter-rouge">24:06</code> but of the parameters that define our
+<br /><code class="language-plaintext highlighter-rouge">24:09</code> action
+<br /><code class="language-plaintext highlighter-rouge">24:10</code> now suppose so how does it look like
+<br /><code class="language-plaintext highlighter-rouge">24:18</code> now so here is in some space of all
+<br /><code class="language-plaintext highlighter-rouge">24:21</code> possible actions
+<br /><code class="language-plaintext highlighter-rouge">24:23</code> of some parameters p1
+<br /><code class="language-plaintext highlighter-rouge">24:27</code> p2 p3
+<br /><code class="language-plaintext highlighter-rouge">24:32</code> now and this action now think about the
+<br /><code class="language-plaintext highlighter-rouge">24:34</code> uh
+<br /><code class="language-plaintext highlighter-rouge">24:35</code> think about our non-linear dynamics or
+<br /><code class="language-plaintext highlighter-rouge">24:37</code> dynamical systems lecture
+<br /><code class="language-plaintext highlighter-rouge">24:39</code> what we can this is this is a
+<br /><code class="language-plaintext highlighter-rouge">24:41</code> differential equation here
+<br /><code class="language-plaintext highlighter-rouge">24:44</code> it looks complicated but this is a
+<br /><code class="language-plaintext highlighter-rouge">24:46</code> differential equation it tells you
+<br /><code class="language-plaintext highlighter-rouge">24:47</code> how the parameters of our action
+<br /><code class="language-plaintext highlighter-rouge">24:51</code> change as we cause gradients we do this
+<br /><code class="language-plaintext highlighter-rouge">24:54</code> renormalization procedure
+<br /><code class="language-plaintext highlighter-rouge">24:57</code> now and this gives us a differential
+<br /><code class="language-plaintext highlighter-rouge">24:59</code> equation
+<br /><code class="language-plaintext highlighter-rouge">25:01</code> and if you have a differential equation
+<br /><code class="language-plaintext highlighter-rouge">25:02</code> that will be highly non-linear of course
+<br /><code class="language-plaintext highlighter-rouge">25:05</code> now we can do the same thing as we did
+<br /><code class="language-plaintext highlighter-rouge">25:07</code> in this lecture or nonlinear system we
+<br /><code class="language-plaintext highlighter-rouge">25:09</code> can
+<br /><code class="language-plaintext highlighter-rouge">25:10</code> derive a phase portrait now in the space
+<br /><code class="language-plaintext highlighter-rouge">25:12</code> of all possible actions
+<br /><code class="language-plaintext highlighter-rouge">25:14</code> of all possible models where does this
+<br /><code class="language-plaintext highlighter-rouge">25:17</code> minimalization group
+<br /><code class="language-plaintext highlighter-rouge">25:18</code> group flow carry us
+<br /><code class="language-plaintext highlighter-rouge">25:22</code> so let’s start with a very simple
+<br /><code class="language-plaintext highlighter-rouge">25:27</code> line
+<br /><code class="language-plaintext highlighter-rouge">25:31</code> that’s the line in the space of all
+<br /><code class="language-plaintext highlighter-rouge">25:33</code> possible models
+<br /><code class="language-plaintext highlighter-rouge">25:34</code> now this is the line of models
+<br /><code class="language-plaintext highlighter-rouge">25:37</code> that actually describe our physical
+<br /><code class="language-plaintext highlighter-rouge">25:39</code> systems
+<br /><code class="language-plaintext highlighter-rouge">25:40</code> now think about different combinations
+<br /><code class="language-plaintext highlighter-rouge">25:42</code> of temperature
+<br /><code class="language-plaintext highlighter-rouge">25:43</code> and magnetic fields in the icing model
+<br /><code class="language-plaintext highlighter-rouge">25:48</code> now so this is this is where this model
+<br /><code class="language-plaintext highlighter-rouge">25:50</code> lives in this space
+<br /><code class="language-plaintext highlighter-rouge">25:52</code> now if we take the right parameter
+<br /><code class="language-plaintext highlighter-rouge">25:55</code> combinations
+<br /><code class="language-plaintext highlighter-rouge">25:58</code> we will be at some critical point
+<br /><code class="language-plaintext highlighter-rouge">26:06</code> yeah so there’s no flow yet now so this
+<br /><code class="language-plaintext highlighter-rouge">26:09</code> is just
+<br /><code class="language-plaintext highlighter-rouge">26:10</code> uh the the the the range of different
+<br /><code class="language-plaintext highlighter-rouge">26:13</code> models that we can have for example in
+<br /><code class="language-plaintext highlighter-rouge">26:15</code> eisenhower that correspond to some real
+<br /><code class="language-plaintext highlighter-rouge">26:17</code> physical system
+<br /><code class="language-plaintext highlighter-rouge">26:18</code> but there of course there are many other
+<br /><code class="language-plaintext highlighter-rouge">26:20</code> model in the models in this space
+<br /><code class="language-plaintext highlighter-rouge">26:22</code> that don’t describe our physical system
+<br /><code class="language-plaintext highlighter-rouge">26:24</code> now they don’t describe a magnet but
+<br /><code class="language-plaintext highlighter-rouge">26:26</code> something else or that there are not
+<br /><code class="language-plaintext highlighter-rouge">26:28</code> given by a simple hamiltonian with
+<br /><code class="language-plaintext highlighter-rouge">26:29</code> nearest neighbors
+<br /><code class="language-plaintext highlighter-rouge">26:30</code> interactions but by something that has
+<br /><code class="language-plaintext highlighter-rouge">26:33</code> long-range interactions or something
+<br /><code class="language-plaintext highlighter-rouge">26:35</code> very weird
+<br /><code class="language-plaintext highlighter-rouge">26:36</code> now there’s a space of all possible
+<br /><code class="language-plaintext highlighter-rouge">26:37</code> models is very large
+<br /><code class="language-plaintext highlighter-rouge">26:40</code> now we have this critical point and
+<br /><code class="language-plaintext highlighter-rouge">26:43</code> other models in this space also have
+<br /><code class="language-plaintext highlighter-rouge">26:46</code> critical points
+<br /><code class="language-plaintext highlighter-rouge">26:47</code> now and these critical points live on a
+<br /><code class="language-plaintext highlighter-rouge">26:51</code> manifold
+<br /><code class="language-plaintext highlighter-rouge">26:58</code> now they leave on a manifold you know
+<br /><code class="language-plaintext highlighter-rouge">27:01</code> that is the critical manifold
+<br /><code class="language-plaintext highlighter-rouge">27:09</code> you know so that’s all the points of
+<br /><code class="language-plaintext highlighter-rouge">27:11</code> this critical manifolds are critical
+<br /><code class="language-plaintext highlighter-rouge">27:13</code> points
+<br /><code class="language-plaintext highlighter-rouge">27:14</code> of some actions
+<br /><code class="language-plaintext highlighter-rouge">27:17</code> and our action our critical point of our
+<br /><code class="language-plaintext highlighter-rouge">27:20</code> action
+<br /><code class="language-plaintext highlighter-rouge">27:21</code> is also on this manifold but all
+<br /><code class="language-plaintext highlighter-rouge">27:24</code> other points of this manifolds are also
+<br /><code class="language-plaintext highlighter-rouge">27:26</code> some critical points of some other
+<br /><code class="language-plaintext highlighter-rouge">27:29</code> actions so
+<br /><code class="language-plaintext highlighter-rouge">27:33</code> what happens now now
+<br /><code class="language-plaintext highlighter-rouge">27:37</code> we are close to the critical point let’s
+<br /><code class="language-plaintext highlighter-rouge">27:39</code> say
+<br /><code class="language-plaintext highlighter-rouge">27:40</code> we’re here now very close to the
+<br /><code class="language-plaintext highlighter-rouge">27:44</code> critical point
+<br /><code class="language-plaintext highlighter-rouge">27:46</code> and now we really normalize
+<br /><code class="language-plaintext highlighter-rouge">27:50</code> we go through we make this procedure of
+<br /><code class="language-plaintext highlighter-rouge">27:53</code> renormalizing
+<br /><code class="language-plaintext highlighter-rouge">27:54</code> the core straining going to larger and
+<br /><code class="language-plaintext highlighter-rouge">27:56</code> larger scales and rescaling our fields
+<br /><code class="language-plaintext highlighter-rouge">27:59</code> and lengths
+<br /><code class="language-plaintext highlighter-rouge">28:00</code> and then our anatomy or our action will
+<br /><code class="language-plaintext highlighter-rouge">28:03</code> change
+<br /><code class="language-plaintext highlighter-rouge">28:04</code> so it will flow in this space
+<br /><code class="language-plaintext highlighter-rouge">28:07</code> in some direction
+<br /><code class="language-plaintext highlighter-rouge">28:11</code> so where does it flow to in the
+<br /><code class="language-plaintext highlighter-rouge">28:13</code> non-dynamics lecture
+<br /><code class="language-plaintext highlighter-rouge">28:16</code> we’ve seen that what determines such
+<br /><code class="language-plaintext highlighter-rouge">28:18</code> dynamical systems
+<br /><code class="language-plaintext highlighter-rouge">28:20</code> are fixed points and
+<br /><code class="language-plaintext highlighter-rouge">28:24</code> what you typically have to assume in the
+<br /><code class="language-plaintext highlighter-rouge">28:25</code> real normalization group theory
+<br /><code class="language-plaintext highlighter-rouge">28:28</code> that there is some fixed point
+<br /><code class="language-plaintext highlighter-rouge">28:31</code> on this critical manifold yeah
+<br /><code class="language-plaintext highlighter-rouge">28:36</code> the fixed point of the realization would
+<br /><code class="language-plaintext highlighter-rouge">28:39</code> flow
+<br /><code class="language-plaintext highlighter-rouge">28:40</code> on this critical manifold
+<br /><code class="language-plaintext highlighter-rouge">28:44</code> and now what happens with our flow
+<br /><code class="language-plaintext highlighter-rouge">28:50</code> of course we will go to this fixed point
+<br /><code class="language-plaintext highlighter-rouge">28:55</code> and then we might go away again
+<br /><code class="language-plaintext highlighter-rouge">28:59</code> now the sixth point the fixed points
+<br /><code class="language-plaintext highlighter-rouge">29:02</code> like in the dynamic resistance lectures
+<br /><code class="language-plaintext highlighter-rouge">29:04</code> determine the flow of our dynamical
+<br /><code class="language-plaintext highlighter-rouge">29:07</code> system
+<br /><code class="language-plaintext highlighter-rouge">29:09</code> now what is this fixed point here this
+<br /><code class="language-plaintext highlighter-rouge">29:11</code> fixed point is not the critical point
+<br /><code class="language-plaintext highlighter-rouge">29:14</code> it’s the critical point of some other
+<br /><code class="language-plaintext highlighter-rouge">29:16</code> model
+<br /><code class="language-plaintext highlighter-rouge">29:18</code> but this critical point here
+<br /><code class="language-plaintext highlighter-rouge">29:23</code> has stability yeah just like in normal
+<br /><code class="language-plaintext highlighter-rouge">29:25</code> domains so this is non-linear dynamics
+<br /><code class="language-plaintext highlighter-rouge">29:27</code> here
+<br /><code class="language-plaintext highlighter-rouge">29:28</code> so it’s very often exactly what we did
+<br /><code class="language-plaintext highlighter-rouge">29:30</code> in this lectures before
+<br /><code class="language-plaintext highlighter-rouge">29:31</code> so we asked what is the flow now we ask
+<br /><code class="language-plaintext highlighter-rouge">29:33</code> them to ask about the stability
+<br /><code class="language-plaintext highlighter-rouge">29:35</code> of this fixed point now so this fixed
+<br /><code class="language-plaintext highlighter-rouge">29:39</code> point
+<br /><code class="language-plaintext highlighter-rouge">29:40</code> has stable directions now you perturb
+<br /><code class="language-plaintext highlighter-rouge">29:44</code> and you get pushed out and unstable
+<br /><code class="language-plaintext highlighter-rouge">29:46</code> directions
+<br /><code class="language-plaintext highlighter-rouge">29:48</code> yeah typically or by definition
+<br /><code class="language-plaintext highlighter-rouge">29:52</code> the directions on the critical manifolds
+<br /><code class="language-plaintext highlighter-rouge">29:55</code> are stable now that’s how this manifold
+<br /><code class="language-plaintext highlighter-rouge">29:59</code> is actually defined
+<br /><code class="language-plaintext highlighter-rouge">30:00</code> you can and there’s a theory and only
+<br /><code class="language-plaintext highlighter-rouge">30:02</code> resistance
+<br /><code class="language-plaintext highlighter-rouge">30:04</code> that tells you that and there are also
+<br /><code class="language-plaintext highlighter-rouge">30:07</code> other directions
+<br /><code class="language-plaintext highlighter-rouge">30:09</code> that are not stable now let’s have them
+<br /><code class="language-plaintext highlighter-rouge">30:12</code> in green
+<br /><code class="language-plaintext highlighter-rouge">30:14</code> for example the way i drew this these
+<br /><code class="language-plaintext highlighter-rouge">30:17</code> are the ones
+<br /><code class="language-plaintext highlighter-rouge">30:19</code> in this direction
+<br /><code class="language-plaintext highlighter-rouge">30:26</code> so this determines the stability of the
+<br /><code class="language-plaintext highlighter-rouge">30:28</code> flow of our fix
+<br /><code class="language-plaintext highlighter-rouge">30:29</code> of our our system and if we have only
+<br /><code class="language-plaintext highlighter-rouge">30:32</code> one fixed point this one fixed point
+<br /><code class="language-plaintext highlighter-rouge">30:35</code> will tell us what happens to the flow of
+<br /><code class="language-plaintext highlighter-rouge">30:37</code> our system just like in nonlinear
+<br /><code class="language-plaintext highlighter-rouge">30:39</code> dynamics
+<br /><code class="language-plaintext highlighter-rouge">30:40</code> lecture okay so
+<br /><code class="language-plaintext highlighter-rouge">30:43</code> now we re-normalize
+<br /><code class="language-plaintext highlighter-rouge">30:46</code> it because we didn’t start exactly at
+<br /><code class="language-plaintext highlighter-rouge">30:48</code> the critical point we stay in the
+<br /><code class="language-plaintext highlighter-rouge">30:50</code> vicinity of this manifold here
+<br /><code class="language-plaintext highlighter-rouge">30:52</code> here and this critic this fixed point of
+<br /><code class="language-plaintext highlighter-rouge">30:55</code> the flow will do
+<br /><code class="language-plaintext highlighter-rouge">30:56</code> something to us no it will push us away
+<br /><code class="language-plaintext highlighter-rouge">30:59</code> or will attract us and now you can
+<br /><code class="language-plaintext highlighter-rouge">31:04</code> do the same thing that you do in
+<br /><code class="language-plaintext highlighter-rouge">31:05</code> learning your dynamics namely you linear
+<br /><code class="language-plaintext highlighter-rouge">31:07</code> wise
+<br /><code class="language-plaintext highlighter-rouge">31:08</code> around this fixed point so we say that
+<br /><code class="language-plaintext highlighter-rouge">31:11</code> our action
+<br /><code class="language-plaintext highlighter-rouge">31:13</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">31:16</code> called linear stability
+<br /><code class="language-plaintext highlighter-rouge">31:21</code> you linearize around this fixed point so
+<br /><code class="language-plaintext highlighter-rouge">31:24</code> you say
+<br /><code class="language-plaintext highlighter-rouge">31:25</code> that our action is equal to the action
+<br /><code class="language-plaintext highlighter-rouge">31:29</code> at this fixed point
+<br /><code class="language-plaintext highlighter-rouge">31:32</code> plus sum over different
+<br /><code class="language-plaintext highlighter-rouge">31:35</code> directions i who operate is i
+<br /><code class="language-plaintext highlighter-rouge">31:39</code> h i
+<br /><code class="language-plaintext highlighter-rouge">31:45</code> times b to the power of lambda i
+<br /><code class="language-plaintext highlighter-rouge">31:52</code> times
+<br /><code class="language-plaintext highlighter-rouge">31:56</code> q i yeah so this here are
+<br /><code class="language-plaintext highlighter-rouge">32:01</code> these two eyes are the eigen directions
+<br /><code class="language-plaintext highlighter-rouge">32:08</code> so these are operators you can think
+<br /><code class="language-plaintext highlighter-rouge">32:09</code> about this as operators so like eigen
+<br /><code class="language-plaintext highlighter-rouge">32:12</code> direction of these operators and
+<br /><code class="language-plaintext highlighter-rouge">32:16</code> the b is our course grading scale
+<br /><code class="language-plaintext highlighter-rouge">32:30</code> the h tells us
+<br /><code class="language-plaintext highlighter-rouge">32:34</code> how far we are away from the fixed point
+<br /><code class="language-plaintext highlighter-rouge">32:42</code> and the s tells us uh is just the action
+<br /><code class="language-plaintext highlighter-rouge">32:48</code> that we have at this fixed point
+<br /><code class="language-plaintext highlighter-rouge">32:51</code> you know so we it’s the same thing for
+<br /><code class="language-plaintext highlighter-rouge">32:53</code> all of this was once we have once we
+<br /><code class="language-plaintext highlighter-rouge">32:55</code> have this mineralization group flow
+<br /><code class="language-plaintext highlighter-rouge">32:58</code> we’re in the subject of non-linear
+<br /><code class="language-plaintext highlighter-rouge">32:59</code> dynamics and we use the tools
+<br /><code class="language-plaintext highlighter-rouge">33:02</code> of nonlinear dynamics renalization group
+<br /><code class="language-plaintext highlighter-rouge">33:05</code> theory this language is slightly
+<br /><code class="language-plaintext highlighter-rouge">33:09</code> different
+<br /><code class="language-plaintext highlighter-rouge">33:10</code> you know so that’s that’s why you have
+<br /><code class="language-plaintext highlighter-rouge">33:12</code> this b to the lambdas and so on
+<br /><code class="language-plaintext highlighter-rouge">33:14</code> here and you separate the h i from the b
+<br /><code class="language-plaintext highlighter-rouge">33:17</code> to the lambda
+<br /><code class="language-plaintext highlighter-rouge">33:18</code> that’s just the framework the how you
+<br /><code class="language-plaintext highlighter-rouge">33:20</code> write it in the realization
+<br /><code class="language-plaintext highlighter-rouge">33:23</code> theory for convenience reasons but what
+<br /><code class="language-plaintext highlighter-rouge">33:26</code> we do here is
+<br /><code class="language-plaintext highlighter-rouge">33:27</code> a simple linear stability analysis
+<br /><code class="language-plaintext highlighter-rouge">33:30</code> of a non-linear system i will
+<br /><code class="language-plaintext highlighter-rouge">33:34</code> re-linearize around the fixed point
+<br /><code class="language-plaintext highlighter-rouge">33:36</code> we see how whether perturbations grow or
+<br /><code class="language-plaintext highlighter-rouge">33:39</code> shrink
+<br /><code class="language-plaintext highlighter-rouge">33:40</code> in different directions yeah and that
+<br /><code class="language-plaintext highlighter-rouge">33:43</code> characterizes
+<br /><code class="language-plaintext highlighter-rouge">33:44</code> then our nonlinear system and now we can
+<br /><code class="language-plaintext highlighter-rouge">33:47</code> ask if we perturb around this fixed
+<br /><code class="language-plaintext highlighter-rouge">33:50</code> point
+<br /><code class="language-plaintext highlighter-rouge">33:51</code> in one direction i does it grow
+<br /><code class="language-plaintext highlighter-rouge">33:54</code> this perturbation or does it shrink
+<br /><code class="language-plaintext highlighter-rouge">33:57</code> lambda i
+<br /><code class="language-plaintext highlighter-rouge">33:58</code> is larger than zero now this bi
+<br /><code class="language-plaintext highlighter-rouge">34:03</code> is larger than one or b is larger than
+<br /><code class="language-plaintext highlighter-rouge">34:07</code> one
+<br /><code class="language-plaintext highlighter-rouge">34:08</code> now so lambda i is larger than zero then
+<br /><code class="language-plaintext highlighter-rouge">34:11</code> our perturbation will grow
+<br /><code class="language-plaintext highlighter-rouge">34:13</code> yeah perturbation
+<br /><code class="language-plaintext highlighter-rouge">34:20</code> growth and then we say this direction or
+<br /><code class="language-plaintext highlighter-rouge">34:23</code> this operator q
+<br /><code class="language-plaintext highlighter-rouge">34:24</code> i you can also think about q i as one of
+<br /><code class="language-plaintext highlighter-rouge">34:27</code> the
+<br /><code class="language-plaintext highlighter-rouge">34:28</code> terms in the action now think about one
+<br /><code class="language-plaintext highlighter-rouge">34:31</code> of the terms in the action
+<br /><code class="language-plaintext highlighter-rouge">34:32</code> or one of the terms in the hamiltonian
+<br /><code class="language-plaintext highlighter-rouge">34:36</code> this direction qi
+<br /><code class="language-plaintext highlighter-rouge">34:40</code> is then called relevant
+<br /><code class="language-plaintext highlighter-rouge">34:45</code> why is this relevant what we call when
+<br /><code class="language-plaintext highlighter-rouge">34:46</code> do we call this relevance
+<br /><code class="language-plaintext highlighter-rouge">34:48</code> you know if this perturbation grows we
+<br /><code class="language-plaintext highlighter-rouge">34:51</code> are in this green direction here that
+<br /><code class="language-plaintext highlighter-rouge">34:53</code> pushes us away from the critical point
+<br /><code class="language-plaintext highlighter-rouge">34:56</code> so that means
+<br /><code class="language-plaintext highlighter-rouge">34:56</code> that if we are an experimentalist
+<br /><code class="language-plaintext highlighter-rouge">35:00</code> and if we want to tune our system
+<br /><code class="language-plaintext highlighter-rouge">35:03</code> to get into the critical point
+<br /><code class="language-plaintext highlighter-rouge">35:07</code> then
+<br /><code class="language-plaintext highlighter-rouge">35:10</code> then we know that we have to turn
+<br /><code class="language-plaintext highlighter-rouge">35:13</code> these relevant parameters qi
+<br /><code class="language-plaintext highlighter-rouge">35:18</code> now this relevant parameter for which
+<br /><code class="language-plaintext highlighter-rouge">35:19</code> this uh that are
+<br /><code class="language-plaintext highlighter-rouge">35:21</code> unstable directions of this fixed point
+<br /><code class="language-plaintext highlighter-rouge">35:25</code> now and if we have a relevant directions
+<br /><code class="language-plaintext highlighter-rouge">35:28</code> we also have irrelevant directions
+<br /><code class="language-plaintext highlighter-rouge">35:30</code> lambda is smaller than zero
+<br /><code class="language-plaintext highlighter-rouge">35:32</code> and these directions are called
+<br /><code class="language-plaintext highlighter-rouge">35:34</code> irrelevant
+<br /><code class="language-plaintext highlighter-rouge">35:35</code> now perturbation
+<br /><code class="language-plaintext highlighter-rouge">35:43</code> shrinks that means that
+<br /><code class="language-plaintext highlighter-rouge">35:47</code> qi is irrelevant
+<br /><code class="language-plaintext highlighter-rouge">35:53</code> that means the qi in this case is not a
+<br /><code class="language-plaintext highlighter-rouge">35:56</code> parameter that drives us into this
+<br /><code class="language-plaintext highlighter-rouge">35:58</code> critical point
+<br /><code class="language-plaintext highlighter-rouge">36:01</code> and then we have the case that lambda i
+<br /><code class="language-plaintext highlighter-rouge">36:03</code> is exactly equal to zero
+<br /><code class="language-plaintext highlighter-rouge">36:05</code> then we don’t really know what to do
+<br /><code class="language-plaintext highlighter-rouge">36:08</code> then this q
+<br /><code class="language-plaintext highlighter-rouge">36:09</code> i is
+<br /><code class="language-plaintext highlighter-rouge">36:12</code> marginal and we cannot tell from this
+<br /><code class="language-plaintext highlighter-rouge">36:15</code> linear stability analysis alone
+<br /><code class="language-plaintext highlighter-rouge">36:17</code> from the linear realization around this
+<br /><code class="language-plaintext highlighter-rouge">36:19</code> fixed bond we cannot tell alone
+<br /><code class="language-plaintext highlighter-rouge">36:21</code> whether this perturbation will grow or
+<br /><code class="language-plaintext highlighter-rouge">36:24</code> shrink and we have to use
+<br /><code class="language-plaintext highlighter-rouge">36:25</code> other methods okay
+<br /><code class="language-plaintext highlighter-rouge">36:28</code> so what happened now so we
+<br /><code class="language-plaintext highlighter-rouge">36:31</code> started our theory close to the critical
+<br /><code class="language-plaintext highlighter-rouge">36:34</code> point
+<br /><code class="language-plaintext highlighter-rouge">36:35</code> we did this rememberization group
+<br /><code class="language-plaintext highlighter-rouge">36:37</code> procedure
+<br /><code class="language-plaintext highlighter-rouge">36:39</code> course grading rescaling renormalization
+<br /><code class="language-plaintext highlighter-rouge">36:43</code> and then in this procedure
+<br /><code class="language-plaintext highlighter-rouge">36:46</code> our action or our model will flow
+<br /><code class="language-plaintext highlighter-rouge">36:49</code> through the space of all possible models
+<br /><code class="language-plaintext highlighter-rouge">36:52</code> yeah
+<br /><code class="language-plaintext highlighter-rouge">36:55</code> and then we ask where does it flow to
+<br /><code class="language-plaintext highlighter-rouge">37:00</code> and we look at the non-linear dynamics
+<br /><code class="language-plaintext highlighter-rouge">37:01</code> lecture and ask
+<br /><code class="language-plaintext highlighter-rouge">37:03</code> so where does such a nonlinear system
+<br /><code class="language-plaintext highlighter-rouge">37:05</code> drive us to
+<br /><code class="language-plaintext highlighter-rouge">37:07</code> and our nonlinear dynamics lecture will
+<br /><code class="language-plaintext highlighter-rouge">37:09</code> tell us look at the fixed points
+<br /><code class="language-plaintext highlighter-rouge">37:12</code> right and in this realization flow you
+<br /><code class="language-plaintext highlighter-rouge">37:14</code> also have fixed points you assume that
+<br /><code class="language-plaintext highlighter-rouge">37:15</code> you have a fixed point
+<br /><code class="language-plaintext highlighter-rouge">37:17</code> and this fixed point tells us about
+<br /><code class="language-plaintext highlighter-rouge">37:21</code> what is going on on the macroscopic
+<br /><code class="language-plaintext highlighter-rouge">37:24</code> scale now that determines this fixed
+<br /><code class="language-plaintext highlighter-rouge">37:26</code> point
+<br /><code class="language-plaintext highlighter-rouge">37:26</code> determines which is the end result of
+<br /><code class="language-plaintext highlighter-rouge">37:28</code> our minimization group
+<br /><code class="language-plaintext highlighter-rouge">37:30</code> procedure
+<br /><code class="language-plaintext highlighter-rouge">37:33</code> so at this fixed point is characterized
+<br /><code class="language-plaintext highlighter-rouge">37:36</code> by stability
+<br /><code class="language-plaintext highlighter-rouge">37:38</code> it has a finite number of relevant
+<br /><code class="language-plaintext highlighter-rouge">37:40</code> directions
+<br /><code class="language-plaintext highlighter-rouge">37:43</code> now it’s had a finite number of
+<br /><code class="language-plaintext highlighter-rouge">37:44</code> parameters that are actually important
+<br /><code class="language-plaintext highlighter-rouge">37:47</code> to change if you want to go to the
+<br /><code class="language-plaintext highlighter-rouge">37:48</code> critical point
+<br /><code class="language-plaintext highlighter-rouge">37:51</code> and because you only have a finite
+<br /><code class="language-plaintext highlighter-rouge">37:53</code> number of directions that are relevant
+<br /><code class="language-plaintext highlighter-rouge">37:56</code> you usually get away with models that
+<br /><code class="language-plaintext highlighter-rouge">37:58</code> also have this very finite number
+<br /><code class="language-plaintext highlighter-rouge">38:01</code> of parameters instead of models like a
+<br /><code class="language-plaintext highlighter-rouge">38:04</code> bigger magnet or so that is a very
+<br /><code class="language-plaintext highlighter-rouge">38:06</code> complicated geometry and everything
+<br /><code class="language-plaintext highlighter-rouge">38:08</code> there are instead of model that has 15
+<br /><code class="language-plaintext highlighter-rouge">38:10</code> 000 parameters
+<br /><code class="language-plaintext highlighter-rouge">38:12</code> now you get away with a finite number of
+<br /><code class="language-plaintext highlighter-rouge">38:13</code> parameters that are given
+<br /><code class="language-plaintext highlighter-rouge">38:15</code> by the relevant eigen directions
+<br /><code class="language-plaintext highlighter-rouge">38:19</code> of this fixed point now so now what
+<br /><code class="language-plaintext highlighter-rouge">38:22</code> happens if we have a different model so
+<br /><code class="language-plaintext highlighter-rouge">38:24</code> now this is now the
+<br /><code class="language-plaintext highlighter-rouge">38:25</code> magnet one that this is not a
+<br /><code class="language-plaintext highlighter-rouge">38:29</code> magnet or material one we can also look
+<br /><code class="language-plaintext highlighter-rouge">38:31</code> at a magnet at another of another
+<br /><code class="language-plaintext highlighter-rouge">38:33</code> material
+<br /><code class="language-plaintext highlighter-rouge">38:34</code> now so this magnet one
+<br /><code class="language-plaintext highlighter-rouge">38:40</code> and now we have here
+<br /><code class="language-plaintext highlighter-rouge">38:47</code> a magnitude
+<br /><code class="language-plaintext highlighter-rouge">38:51</code> now each of them at the physical real
+<br /><code class="language-plaintext highlighter-rouge">38:53</code> microscopic level is destroyed by 15 000
+<br /><code class="language-plaintext highlighter-rouge">38:56</code> parameters or whatever something very
+<br /><code class="language-plaintext highlighter-rouge">38:57</code> complicated
+<br /><code class="language-plaintext highlighter-rouge">38:59</code> and for this magnitude we can do the
+<br /><code class="language-plaintext highlighter-rouge">39:02</code> same procedure
+<br /><code class="language-plaintext highlighter-rouge">39:04</code> we renormalize
+<br /><code class="language-plaintext highlighter-rouge">39:07</code> and we while we renormalize we will end
+<br /><code class="language-plaintext highlighter-rouge">39:10</code> up at the vicinity of this fixed point
+<br /><code class="language-plaintext highlighter-rouge">39:14</code> and in the vicinity of the fixed point
+<br /><code class="language-plaintext highlighter-rouge">39:17</code> the behavior of the flow is determined
+<br /><code class="language-plaintext highlighter-rouge">39:20</code> by a finite number
+<br /><code class="language-plaintext highlighter-rouge">39:22</code> of parameters again
+<br /><code class="language-plaintext highlighter-rouge">39:26</code> and both of these magnets here are
+<br /><code class="language-plaintext highlighter-rouge">39:29</code> under renormalization now on the large
+<br /><code class="language-plaintext highlighter-rouge">39:31</code> scale repeat these
+<br /><code class="language-plaintext highlighter-rouge">39:33</code> procedures determined by the same fixed
+<br /><code class="language-plaintext highlighter-rouge">39:37</code> point
+<br /><code class="language-plaintext highlighter-rouge">39:37</code> about the same point but this one here
+<br /><code class="language-plaintext highlighter-rouge">39:41</code> and because they’re determined by the
+<br /><code class="language-plaintext highlighter-rouge">39:42</code> same fixed point with the same stability
+<br /><code class="language-plaintext highlighter-rouge">39:46</code> and with the same properties of how they
+<br /><code class="language-plaintext highlighter-rouge">39:48</code> go
+<br /><code class="language-plaintext highlighter-rouge">39:49</code> uh of how the flow behaves around this
+<br /><code class="language-plaintext highlighter-rouge">39:51</code> fixed point
+<br /><code class="language-plaintext highlighter-rouge">39:53</code> that’s why these two magnets here are
+<br /><code class="language-plaintext highlighter-rouge">39:55</code> described macroscopically by the same
+<br /><code class="language-plaintext highlighter-rouge">39:57</code> theory
+<br /><code class="language-plaintext highlighter-rouge">39:58</code> and that’s then the reason why we have
+<br /><code class="language-plaintext highlighter-rouge">40:01</code> universality
+<br /><code class="language-plaintext highlighter-rouge">40:03</code> so in this way in this very general way
+<br /><code class="language-plaintext highlighter-rouge">40:05</code> so we look of course in our in
+<br /><code class="language-plaintext highlighter-rouge">40:07</code> more detail the renal isolation group
+<br /><code class="language-plaintext highlighter-rouge">40:10</code> theory gives us a justification for why
+<br /><code class="language-plaintext highlighter-rouge">40:14</code> only a finite number of parameters
+<br /><code class="language-plaintext highlighter-rouge">40:17</code> matter
+<br /><code class="language-plaintext highlighter-rouge">40:17</code> on the or finite a limited level of
+<br /><code class="language-plaintext highlighter-rouge">40:21</code> description is sufficient to describe
+<br /><code class="language-plaintext highlighter-rouge">40:23</code> large scale properties of a large
+<br /><code class="language-plaintext highlighter-rouge">40:26</code> number of very different systems and the
+<br /><code class="language-plaintext highlighter-rouge">40:29</code> reason is
+<br /><code class="language-plaintext highlighter-rouge">40:30</code> at this critical point they’re
+<br /><code class="language-plaintext highlighter-rouge">40:33</code> described macroscopically by the same
+<br /><code class="language-plaintext highlighter-rouge">40:36</code> fixed point of the renewalization
+<br /><code class="language-plaintext highlighter-rouge">40:39</code> workflow</p>
+
+<h3 id="slide-10">slide 10</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">40:42</code> now how does this look in detail
+<br /><code class="language-plaintext highlighter-rouge">40:47</code> so the very first or the
+<br /><code class="language-plaintext highlighter-rouge">40:50</code> most uh simple way of doing
+<br /><code class="language-plaintext highlighter-rouge">40:53</code> remoralization
+<br /><code class="language-plaintext highlighter-rouge">40:55</code> is to take what i said initially about
+<br /><code class="language-plaintext highlighter-rouge">40:58</code> this
+<br /><code class="language-plaintext highlighter-rouge">40:59</code> defocusing about this course training
+<br /><code class="language-plaintext highlighter-rouge">41:01</code> literally
+<br /><code class="language-plaintext highlighter-rouge">41:02</code> and do the whole procedure in real space
+<br /><code class="language-plaintext highlighter-rouge">41:06</code> now suppose you have here a lattice
+<br /><code class="language-plaintext highlighter-rouge">41:09</code> system
+<br /><code class="language-plaintext highlighter-rouge">41:11</code> and also suppose you have this lattice
+<br /><code class="language-plaintext highlighter-rouge">41:12</code> system here and you have some
+<br /><code class="language-plaintext highlighter-rouge">41:15</code> spins here and what you can do then to
+<br /><code class="language-plaintext highlighter-rouge">41:19</code> cause grain
+<br /><code class="language-plaintext highlighter-rouge">41:20</code> is to
+<br /><code class="language-plaintext highlighter-rouge">41:24</code> you know what you can do to coarse grain
+<br /><code class="language-plaintext highlighter-rouge">41:26</code> is to create
+<br /><code class="language-plaintext highlighter-rouge">41:27</code> boxes or blocks now of a certain size
+<br /><code class="language-plaintext highlighter-rouge">41:31</code> and then to calculate this cross here
+<br /><code class="language-plaintext highlighter-rouge">41:34</code> that is a representation of all of these
+<br /><code class="language-plaintext highlighter-rouge">41:37</code> microscopic spin for each block
+<br /><code class="language-plaintext highlighter-rouge">41:40</code> yeah so we have this uh spins here
+<br /><code class="language-plaintext highlighter-rouge">41:44</code> like what are 16 in each block and you
+<br /><code class="language-plaintext highlighter-rouge">41:48</code> now transform them to a single number
+<br /><code class="language-plaintext highlighter-rouge">41:50</code> you can do that by averaging over them
+<br /><code class="language-plaintext highlighter-rouge">41:52</code> or you can take
+<br /><code class="language-plaintext highlighter-rouge">41:54</code> you can say that i take the spin
+<br /><code class="language-plaintext highlighter-rouge">41:58</code> that is the majority of these other
+<br /><code class="language-plaintext highlighter-rouge">42:01</code> spins here
+<br /><code class="language-plaintext highlighter-rouge">42:02</code> if the majority goes up then my new spin
+<br /><code class="language-plaintext highlighter-rouge">42:06</code> that describes the entire block
+<br /><code class="language-plaintext highlighter-rouge">42:07</code> will also go up and this would be a way
+<br /><code class="language-plaintext highlighter-rouge">42:11</code> to get a rid of this renormalization
+<br /><code class="language-plaintext highlighter-rouge">42:14</code> step if you say i take the majority
+<br /><code class="language-plaintext highlighter-rouge">42:18</code> i take a majority rule so this new spin
+<br /><code class="language-plaintext highlighter-rouge">42:20</code> here x
+<br /><code class="language-plaintext highlighter-rouge">42:21</code> will take the value of the majority of
+<br /><code class="language-plaintext highlighter-rouge">42:24</code> the original spins
+<br /><code class="language-plaintext highlighter-rouge">42:27</code> then the new spin will also be plus or
+<br /><code class="language-plaintext highlighter-rouge">42:29</code> minus one
+<br /><code class="language-plaintext highlighter-rouge">42:31</code> if my new spin yeah and i don’t have to
+<br /><code class="language-plaintext highlighter-rouge">42:33</code> renormalize them because it has the same
+<br /><code class="language-plaintext highlighter-rouge">42:35</code> values as the original splits
+<br /><code class="language-plaintext highlighter-rouge">42:38</code> if i take the new spin as the average
+<br /><code class="language-plaintext highlighter-rouge">42:43</code> over all of these spins here then
+<br /><code class="language-plaintext highlighter-rouge">42:47</code> i typically get a very small number the
+<br /><code class="language-plaintext highlighter-rouge">42:49</code> average won’t be one or minus one but it
+<br /><code class="language-plaintext highlighter-rouge">42:51</code> will be
+<br /><code class="language-plaintext highlighter-rouge">42:52</code> 0.3 or 0.1 or 0.5 or so but it will not
+<br /><code class="language-plaintext highlighter-rouge">42:57</code> be
+<br /><code class="language-plaintext highlighter-rouge">42:57</code> one or minus one in most cases yeah so
+<br /><code class="language-plaintext highlighter-rouge">43:00</code> in this case if i perform this procedure
+<br /><code class="language-plaintext highlighter-rouge">43:02</code> i would have to renormalize
+<br /><code class="language-plaintext highlighter-rouge">43:04</code> you know and i have to would have to
+<br /><code class="language-plaintext highlighter-rouge">43:05</code> rescale my fields
+<br /><code class="language-plaintext highlighter-rouge">43:08</code> to make them comparable to the original
+<br /><code class="language-plaintext highlighter-rouge">43:10</code> step
+<br /><code class="language-plaintext highlighter-rouge">43:12</code> yeah so now we have these blocks
+<br /><code class="language-plaintext highlighter-rouge">43:17</code> and we define some new spin that
+<br /><code class="language-plaintext highlighter-rouge">43:20</code> describes each of these blocks
+<br /><code class="language-plaintext highlighter-rouge">43:23</code> and now we write down a new model
+<br /><code class="language-plaintext highlighter-rouge">43:26</code> a new hamiltonian for these new spins
+<br /><code class="language-plaintext highlighter-rouge">43:29</code> here
+<br /><code class="language-plaintext highlighter-rouge">43:31</code> and what we hope is that the spins that
+<br /><code class="language-plaintext highlighter-rouge">43:35</code> we have here
+<br /><code class="language-plaintext highlighter-rouge">43:38</code> in this new system this course-grade
+<br /><code class="language-plaintext highlighter-rouge">43:40</code> system are described by a theory
+<br /><code class="language-plaintext highlighter-rouge">43:43</code> that is structurally very similar to the
+<br /><code class="language-plaintext highlighter-rouge">43:45</code> original theory
+<br /><code class="language-plaintext highlighter-rouge">43:48</code> and this hope is actually justified by
+<br /><code class="language-plaintext highlighter-rouge">43:52</code> the observation of
+<br /><code class="language-plaintext highlighter-rouge">43:55</code> scale and variance now so if your system
+<br /><code class="language-plaintext highlighter-rouge">43:58</code> is scaled in variance we can hope that
+<br /><code class="language-plaintext highlighter-rouge">43:59</code> if we zoom out
+<br /><code class="language-plaintext highlighter-rouge">44:01</code> and our system is statistically the same
+<br /><code class="language-plaintext highlighter-rouge">44:04</code> then then our partition function
+<br /><code class="language-plaintext highlighter-rouge">44:06</code> or our action will also be the same
+<br /><code class="language-plaintext highlighter-rouge">44:09</code> just with some different parameters now
+<br /><code class="language-plaintext highlighter-rouge">44:11</code> that is the hope that is underlying
+<br /><code class="language-plaintext highlighter-rouge">44:13</code> renewalization group procedures with
+<br /><code class="language-plaintext highlighter-rouge">44:16</code> these
+<br /><code class="language-plaintext highlighter-rouge">44:16</code> block spins here what you typically get
+<br /><code class="language-plaintext highlighter-rouge">44:19</code> is that you get
+<br /><code class="language-plaintext highlighter-rouge">44:20</code> higher order turns all the time you know
+<br /><code class="language-plaintext highlighter-rouge">44:23</code> so that’s this hope is not
+<br /><code class="language-plaintext highlighter-rouge">44:24</code> mathematically super precise uh but
+<br /><code class="language-plaintext highlighter-rouge">44:28</code> that’s what you have to assume in order
+<br /><code class="language-plaintext highlighter-rouge">44:30</code> to achieve anything
+<br /><code class="language-plaintext highlighter-rouge">44:33</code> okay yeah
+<br /><code class="language-plaintext highlighter-rouge">44:36</code> okay so we call screen and then
+<br /><code class="language-plaintext highlighter-rouge">44:40</code> we rescale the second step so that the
+<br /><code class="language-plaintext highlighter-rouge">44:42</code> distance between these
+<br /><code class="language-plaintext highlighter-rouge">44:44</code> spins here the new spins is the same
+<br /><code class="language-plaintext highlighter-rouge">44:47</code> distance as we had
+<br /><code class="language-plaintext highlighter-rouge">44:49</code> between the original spins now that’s
+<br /><code class="language-plaintext highlighter-rouge">44:52</code> what we have to do anyway
+<br /><code class="language-plaintext highlighter-rouge">44:53</code> and that’s why how we divide length
+<br /><code class="language-plaintext highlighter-rouge">44:55</code> scales
+<br /><code class="language-plaintext highlighter-rouge">44:57</code> by the same factor that corresponds to
+<br /><code class="language-plaintext highlighter-rouge">45:00</code> the size of our boxes
+<br /><code class="language-plaintext highlighter-rouge">45:02</code> yeah and now the lengths are the same as
+<br /><code class="language-plaintext highlighter-rouge">45:04</code> before</p>
+
+<h3 id="slide-11">slide 11</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">45:09</code> so let’s do this procedure in a very
+<br /><code class="language-plaintext highlighter-rouge">45:13</code> simple case which is the 1d
+<br /><code class="language-plaintext highlighter-rouge">45:16</code> ising model
+<br /><code class="language-plaintext highlighter-rouge">45:21</code> now so the one deising model now is
+<br /><code class="language-plaintext highlighter-rouge">45:24</code> written the tradition function
+<br /><code class="language-plaintext highlighter-rouge">45:26</code> it can be written in like a long form
+<br /><code class="language-plaintext highlighter-rouge">45:30</code> in this way here that i sum up
+<br /><code class="language-plaintext highlighter-rouge">45:33</code> all combinations of nearest neighbor
+<br /><code class="language-plaintext highlighter-rouge">45:36</code> interactions
+<br /><code class="language-plaintext highlighter-rouge">45:38</code> now that’s just the hamiltonian here of
+<br /><code class="language-plaintext highlighter-rouge">45:40</code> the ising model without an external
+<br /><code class="language-plaintext highlighter-rouge">45:42</code> field
+<br /><code class="language-plaintext highlighter-rouge">45:43</code> now and then i have to have a sum about
+<br /><code class="language-plaintext highlighter-rouge">45:45</code> all possible values of the sigma i’s
+<br /><code class="language-plaintext highlighter-rouge">45:48</code> of the of the that my fee that my all
+<br /><code class="language-plaintext highlighter-rouge">45:51</code> the possible values
+<br /><code class="language-plaintext highlighter-rouge">45:52</code> that the sigma can take that gives me my
+<br /><code class="language-plaintext highlighter-rouge">45:54</code> partition function
+<br /><code class="language-plaintext highlighter-rouge">45:57</code> now what i do know is the first
+<br /><code class="language-plaintext highlighter-rouge">46:01</code> course grading stuff now this first
+<br /><code class="language-plaintext highlighter-rouge">46:04</code> coast grading step
+<br /><code class="language-plaintext highlighter-rouge">46:06</code> means that these red spins here
+<br /><code class="language-plaintext highlighter-rouge">46:09</code> like with the all these these black
+<br /><code class="language-plaintext highlighter-rouge">46:11</code> spins are the white splits
+<br /><code class="language-plaintext highlighter-rouge">46:13</code> now i’ll integrate out the white spins
+<br /><code class="language-plaintext highlighter-rouge">46:17</code> here in this picture i’ll integrate
+<br /><code class="language-plaintext highlighter-rouge">46:20</code> these ones out
+<br /><code class="language-plaintext highlighter-rouge">46:23</code> now every second spin all even spins
+<br /><code class="language-plaintext highlighter-rouge">46:26</code> and if i do that i will get a new theory
+<br /><code class="language-plaintext highlighter-rouge">46:30</code> that is described by interactions
+<br /><code class="language-plaintext highlighter-rouge">46:32</code> between these
+<br /><code class="language-plaintext highlighter-rouge">46:33</code> uneven spins that are and these
+<br /><code class="language-plaintext highlighter-rouge">46:36</code> interactions occurred to us are
+<br /><code class="language-plaintext highlighter-rouge">46:37</code> depicted in these red with these red
+<br /><code class="language-plaintext highlighter-rouge">46:41</code> lines
+<br /><code class="language-plaintext highlighter-rouge">46:44</code> okay so and the stars is actually very
+<br /><code class="language-plaintext highlighter-rouge">46:47</code> simple activated talks
+<br /><code class="language-plaintext highlighter-rouge">46:49</code> so that’s so for if we just do it for
+<br /><code class="language-plaintext highlighter-rouge">46:56</code> for sigma 2 now we just sum
+<br /><code class="language-plaintext highlighter-rouge">46:59</code> out we take the terms that correspond to
+<br /><code class="language-plaintext highlighter-rouge">47:02</code> sigma 2
+<br /><code class="language-plaintext highlighter-rouge">47:04</code> and we get that that is equal to
+<br /><code class="language-plaintext highlighter-rouge">47:08</code> not many terms and then we have the
+<br /><code class="language-plaintext highlighter-rouge">47:11</code> contribution from sigma 2
+<br /><code class="language-plaintext highlighter-rouge">47:14</code> uh k sigma 1
+<br /><code class="language-plaintext highlighter-rouge">47:17</code> plus sigma 3 now that’s what what’s left
+<br /><code class="language-plaintext highlighter-rouge">47:20</code> plus e to the minus k sigma 1
+<br /><code class="language-plaintext highlighter-rouge">47:25</code> sigma 3
+<br /><code class="language-plaintext highlighter-rouge">47:28</code> and then all the rest e to the k
+<br /><code class="language-plaintext highlighter-rouge">47:32</code> sigma 3 sigma
+<br /><code class="language-plaintext highlighter-rouge">47:36</code> 4 plus four sigma
+<br /><code class="language-plaintext highlighter-rouge">47:40</code> five and all the other splits
+<br /><code class="language-plaintext highlighter-rouge">47:44</code> so what i just that said is that sigma
+<br /><code class="language-plaintext highlighter-rouge">47:46</code> two can have two values
+<br /><code class="language-plaintext highlighter-rouge">47:48</code> minus one plus one yeah and i just
+<br /><code class="language-plaintext highlighter-rouge">47:51</code> substituted i expected
+<br /><code class="language-plaintext highlighter-rouge">47:53</code> explicitly now set sigma 2 to plus 1 and
+<br /><code class="language-plaintext highlighter-rouge">47:56</code> minus 1
+<br /><code class="language-plaintext highlighter-rouge">47:57</code> and perform the sum and that’s what i
+<br /><code class="language-plaintext highlighter-rouge">47:59</code> get then here for this first
+<br /><code class="language-plaintext highlighter-rouge">48:01</code> term and now i can do that for all
+<br /><code class="language-plaintext highlighter-rouge">48:12</code> even sigmas and then what i get is
+<br /><code class="language-plaintext highlighter-rouge">48:16</code> exactly the same thing sum over
+<br /><code class="language-plaintext highlighter-rouge">48:20</code> many terms e to the k
+<br /><code class="language-plaintext highlighter-rouge">48:23</code> sigma 1 plus sigma 3 as before
+<br /><code class="language-plaintext highlighter-rouge">48:27</code> plus e to the minus k sigma 1
+<br /><code class="language-plaintext highlighter-rouge">48:31</code> sigma 3. now that was the original one
+<br /><code class="language-plaintext highlighter-rouge">48:34</code> where we set sigma
+<br /><code class="language-plaintext highlighter-rouge">48:36</code> 2 to -1 and then we get the same thing
+<br /><code class="language-plaintext highlighter-rouge">48:42</code> e to the k for the next
+<br /><code class="language-plaintext highlighter-rouge">48:45</code> term now for the next interaction sigma
+<br /><code class="language-plaintext highlighter-rouge">48:48</code> 3
+<br /><code class="language-plaintext highlighter-rouge">48:49</code> plus sigma 5
+<br /><code class="language-plaintext highlighter-rouge">48:54</code> e to the minus k sigma 3
+<br /><code class="language-plaintext highlighter-rouge">48:58</code> sigma 5
+<br /><code class="language-plaintext highlighter-rouge">49:01</code> and so on yeah
+<br /><code class="language-plaintext highlighter-rouge">49:07</code> for all the other terms yeah</p>
+
+<h3 id="slide-12">slide 12</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">49:13</code> so now the idea is
+<br /><code class="language-plaintext highlighter-rouge">49:18</code> that because when we are at a critical
+<br /><code class="language-plaintext highlighter-rouge">49:21</code> state
+<br /><code class="language-plaintext highlighter-rouge">49:23</code> that we expect our partition function to
+<br /><code class="language-plaintext highlighter-rouge">49:25</code> be self-similar when we call screen
+<br /><code class="language-plaintext highlighter-rouge">49:28</code> the statistics of the system remains the
+<br /><code class="language-plaintext highlighter-rouge">49:31</code> same as we zoom out
+<br /><code class="language-plaintext highlighter-rouge">49:33</code> and that’s why we also expect
+<br /><code class="language-plaintext highlighter-rouge">49:36</code> the quantity that gives us the statistic
+<br /><code class="language-plaintext highlighter-rouge">49:40</code> statistics the partition function to be
+<br /><code class="language-plaintext highlighter-rouge">49:42</code> self-similar as well
+<br /><code class="language-plaintext highlighter-rouge">49:45</code> and what we now do is that we find
+<br /><code class="language-plaintext highlighter-rouge">49:49</code> a new value of k prime
+<br /><code class="language-plaintext highlighter-rouge">49:53</code> and some function f
+<br /><code class="language-plaintext highlighter-rouge">49:56</code> of k that tells us that we
+<br /><code class="language-plaintext highlighter-rouge">49:59</code> that these terms that we got
+<br /><code class="language-plaintext highlighter-rouge">50:02</code> here sigma 1 sigma 3 we always got the
+<br /><code class="language-plaintext highlighter-rouge">50:06</code> sum for each coupling
+<br /><code class="language-plaintext highlighter-rouge">50:08</code> they should take the same form as the
+<br /><code class="language-plaintext highlighter-rouge">50:11</code> original hamiltonian but with some
+<br /><code class="language-plaintext highlighter-rouge">50:14</code> pre-factor here
+<br /><code class="language-plaintext highlighter-rouge">50:17</code> and some new coupling here
+<br /><code class="language-plaintext highlighter-rouge">50:20</code> but the form should be the same as
+<br /><code class="language-plaintext highlighter-rouge">50:22</code> before
+<br /><code class="language-plaintext highlighter-rouge">50:24</code> now as i said this is not usually
+<br /><code class="language-plaintext highlighter-rouge">50:27</code> well justified but we have to do that in
+<br /><code class="language-plaintext highlighter-rouge">50:29</code> order to do anything
+<br /><code class="language-plaintext highlighter-rouge">50:31</code> and if you require that if you do some
+<br /><code class="language-plaintext highlighter-rouge">50:33</code> algebra you will find that if you set
+<br /><code class="language-plaintext highlighter-rouge">50:36</code> k prime to this one one half
+<br /><code class="language-plaintext highlighter-rouge">50:39</code> logarithm hyperbolic cosine of 2k
+<br /><code class="language-plaintext highlighter-rouge">50:44</code> and the function f of k to this year
+<br /><code class="language-plaintext highlighter-rouge">50:48</code> then it fulfills this condition yeah
+<br /><code class="language-plaintext highlighter-rouge">50:54</code> so now we can plug this in now so if we
+<br /><code class="language-plaintext highlighter-rouge">50:59</code> if we use that
+<br /><code class="language-plaintext highlighter-rouge">51:01</code> then our hammer tilt our partition
+<br /><code class="language-plaintext highlighter-rouge">51:05</code> function
+<br /><code class="language-plaintext highlighter-rouge">51:06</code> will read again we have many
+<br /><code class="language-plaintext highlighter-rouge">51:10</code> terms f of k
+<br /><code class="language-plaintext highlighter-rouge">51:14</code> e to the k prime
+<br /><code class="language-plaintext highlighter-rouge">51:17</code> sigma 1 sigma 3
+<br /><code class="language-plaintext highlighter-rouge">51:21</code> f of k e to the k
+<br /><code class="language-plaintext highlighter-rouge">51:24</code> prime sigma 3 sigma 5
+<br /><code class="language-plaintext highlighter-rouge">51:29</code> and so on
+<br /><code class="language-plaintext highlighter-rouge">51:32</code> now and this is just the same we can
+<br /><code class="language-plaintext highlighter-rouge">51:35</code> write this now
+<br /><code class="language-plaintext highlighter-rouge">51:36</code> as a new partition function that has a
+<br /><code class="language-plaintext highlighter-rouge">51:40</code> new prefactor
+<br /><code class="language-plaintext highlighter-rouge">51:42</code> f of k now we pull this out this
+<br /><code class="language-plaintext highlighter-rouge">51:45</code> prefactor
+<br /><code class="language-plaintext highlighter-rouge">51:46</code> f of k and we have that n over two times
+<br /><code class="language-plaintext highlighter-rouge">51:51</code> times a new partition function that
+<br /><code class="language-plaintext highlighter-rouge">51:55</code> depends on the new system size
+<br /><code class="language-plaintext highlighter-rouge">52:00</code> and a new coupling k prime
+<br /><code class="language-plaintext highlighter-rouge">52:04</code> yeah so we have this down this one
+<br /><code class="language-plaintext highlighter-rouge">52:06</code> renormalization step
+<br /><code class="language-plaintext highlighter-rouge">52:08</code> we get a new partition function that
+<br /><code class="language-plaintext highlighter-rouge">52:10</code> looks exactly the same as the old one
+<br /><code class="language-plaintext highlighter-rouge">52:12</code> in structure but we have a new coupling
+<br /><code class="language-plaintext highlighter-rouge">52:15</code> k prime
+<br /><code class="language-plaintext highlighter-rouge">52:17</code> and a pre-factor here that is this
+<br /><code class="language-plaintext highlighter-rouge">52:20</code> function
+<br /><code class="language-plaintext highlighter-rouge">52:21</code> f and that also depends on the coupling
+<br /><code class="language-plaintext highlighter-rouge">52:25</code> also what we did here is that we now
+<br /><code class="language-plaintext highlighter-rouge">52:27</code> have
+<br /><code class="language-plaintext highlighter-rouge">52:31</code> a relationship between the partition
+<br /><code class="language-plaintext highlighter-rouge">52:34</code> functions
+<br /><code class="language-plaintext highlighter-rouge">52:35</code> at different stages of the
+<br /><code class="language-plaintext highlighter-rouge">52:38</code> renewalization procedure
+<br /><code class="language-plaintext highlighter-rouge">52:45</code> yeah and now
+<br /><code class="language-plaintext highlighter-rouge">52:50</code> what does it mean look at
+<br /><code class="language-plaintext highlighter-rouge">52:53</code> this one here k prime
+<br /><code class="language-plaintext highlighter-rouge">52:57</code> this is already a description
+<br /><code class="language-plaintext highlighter-rouge">53:02</code> now this is already a description of how
+<br /><code class="language-plaintext highlighter-rouge">53:04</code> our coupling
+<br /><code class="language-plaintext highlighter-rouge">53:05</code> one parameter k prime
+<br /><code class="language-plaintext highlighter-rouge">53:09</code> depends on the value of this okay now
+<br /><code class="language-plaintext highlighter-rouge">53:12</code> how this parameter k
+<br /><code class="language-plaintext highlighter-rouge">53:13</code> evolves in this course grading procedure
+<br /><code class="language-plaintext highlighter-rouge">53:17</code> in this renewalization procedure
+<br /><code class="language-plaintext highlighter-rouge">53:20</code> you know so this k that gets updated
+<br /><code class="language-plaintext highlighter-rouge">53:23</code> now it’s not in differential form yeah
+<br /><code class="language-plaintext highlighter-rouge">53:26</code> like in
+<br /><code class="language-plaintext highlighter-rouge">53:26</code> like uh like we did in the non-linear
+<br /><code class="language-plaintext highlighter-rouge">53:28</code> dynamics
+<br /><code class="language-plaintext highlighter-rouge">53:29</code> actually but it’s in this uh other way
+<br /><code class="language-plaintext highlighter-rouge">53:32</code> that you can describe non-linear
+<br /><code class="language-plaintext highlighter-rouge">53:34</code> systems but by iterative updating now so
+<br /><code class="language-plaintext highlighter-rouge">53:38</code> the new value of k
+<br /><code class="language-plaintext highlighter-rouge">53:39</code> prime is given by the old value
+<br /><code class="language-plaintext highlighter-rouge">53:43</code> is by this function here applied to the
+<br /><code class="language-plaintext highlighter-rouge">53:45</code> old value
+<br /><code class="language-plaintext highlighter-rouge">53:47</code> and now now is this is this updating
+<br /><code class="language-plaintext highlighter-rouge">53:50</code> scheme here
+<br /><code class="language-plaintext highlighter-rouge">53:52</code> and we can expand this term here the
+<br /><code class="language-plaintext highlighter-rouge">53:54</code> logarithm
+<br /><code class="language-plaintext highlighter-rouge">53:55</code> of the hyperbolic cosine and so for low
+<br /><code class="language-plaintext highlighter-rouge">53:58</code> values of this coupling
+<br /><code class="language-plaintext highlighter-rouge">54:00</code> this goes with k squared now so normally
+<br /><code class="language-plaintext highlighter-rouge">54:03</code> i have an idea
+<br /><code class="language-plaintext highlighter-rouge">54:05</code> about how this looks like i have already
+<br /><code class="language-plaintext highlighter-rouge">54:08</code> prepared this
+<br /><code class="language-plaintext highlighter-rouge">54:09</code> very nice and we can now solve this
+<br /><code class="language-plaintext highlighter-rouge">54:11</code> equation here
+<br /><code class="language-plaintext highlighter-rouge">54:13</code> graphically so we want to get the flow
+<br /><code class="language-plaintext highlighter-rouge">54:15</code> and we can solve this graphically
+<br /><code class="language-plaintext highlighter-rouge">54:17</code> and see where this linearization
+<br /><code class="language-plaintext highlighter-rouge">54:19</code> procedure
+<br /><code class="language-plaintext highlighter-rouge">54:20</code> carries our k our coupling k
+<br /><code class="language-plaintext highlighter-rouge">54:23</code> now and because our partition function
+<br /><code class="language-plaintext highlighter-rouge">54:27</code> remains invariant</p>
+
+<h3 id="slide-13">slide 13</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">54:30</code> well our k the update of our k
+<br /><code class="language-plaintext highlighter-rouge">54:35</code> describes actually the behavior of our
+<br /><code class="language-plaintext highlighter-rouge">54:37</code> hamiltonian
+<br /><code class="language-plaintext highlighter-rouge">54:38</code> under renormalization
+<br /><code class="language-plaintext highlighter-rouge">54:41</code> okay so this is the plot here so what i
+<br /><code class="language-plaintext highlighter-rouge">54:44</code> what you do
+<br /><code class="language-plaintext highlighter-rouge">54:44</code> is that you plot the left hand side
+<br /><code class="language-plaintext highlighter-rouge">54:48</code> of this equation k prime it’s just
+<br /><code class="language-plaintext highlighter-rouge">54:51</code> linear with slope one
+<br /><code class="language-plaintext highlighter-rouge">54:54</code> and uh the right hand side
+<br /><code class="language-plaintext highlighter-rouge">54:58</code> now this is uh this here
+<br /><code class="language-plaintext highlighter-rouge">55:02</code> and where the left hand side is equal to
+<br /><code class="language-plaintext highlighter-rouge">55:04</code> the right hand side there you have a
+<br /><code class="language-plaintext highlighter-rouge">55:06</code> fixed point
+<br /><code class="language-plaintext highlighter-rouge">55:07</code> now so this is here the way you need to
+<br /><code class="language-plaintext highlighter-rouge">55:10</code> read this this is the next value of the
+<br /><code class="language-plaintext highlighter-rouge">55:11</code> realization
+<br /><code class="language-plaintext highlighter-rouge">55:12</code> this is the previous one if you start
+<br /><code class="language-plaintext highlighter-rouge">55:14</code> here we’ll go
+<br /><code class="language-plaintext highlighter-rouge">55:15</code> here then here and here and here
+<br /><code class="language-plaintext highlighter-rouge">55:19</code> and at some point these two lines meet
+<br /><code class="language-plaintext highlighter-rouge">55:22</code> and that’s
+<br /><code class="language-plaintext highlighter-rouge">55:22</code> that’s where your fixed point is so this
+<br /><code class="language-plaintext highlighter-rouge">55:25</code> humanization procedure
+<br /><code class="language-plaintext highlighter-rouge">55:27</code> will bring us to some fixed point which
+<br /><code class="language-plaintext highlighter-rouge">55:29</code> happens
+<br /><code class="language-plaintext highlighter-rouge">55:30</code> to be uh down here at zero
+<br /><code class="language-plaintext highlighter-rouge">55:36</code> yeah and then we can look at how this
+<br /><code class="language-plaintext highlighter-rouge">55:39</code> uh we can also then plot
+<br /><code class="language-plaintext highlighter-rouge">55:42</code> a flow diagram as i did in a more
+<br /><code class="language-plaintext highlighter-rouge">55:45</code> complicated way before
+<br /><code class="language-plaintext highlighter-rouge">55:47</code> and how we also did it in the actual
+<br /><code class="language-plaintext highlighter-rouge">55:49</code> nonlinear dynamics lecture
+<br /><code class="language-plaintext highlighter-rouge">55:51</code> now we can plot it on this in this
+<br /><code class="language-plaintext highlighter-rouge">55:53</code> one-dimensional line
+<br /><code class="language-plaintext highlighter-rouge">55:55</code> then we have a stable fixed point at
+<br /><code class="language-plaintext highlighter-rouge">55:57</code> zero
+<br /><code class="language-plaintext highlighter-rouge">55:58</code> now that’s here stable
+<br /><code class="language-plaintext highlighter-rouge">56:02</code> and any value where we start with our
+<br /><code class="language-plaintext highlighter-rouge">56:04</code> course grading procedure
+<br /><code class="language-plaintext highlighter-rouge">56:06</code> will be driven to a value of k equals
+<br /><code class="language-plaintext highlighter-rouge">56:09</code> zero
+<br /><code class="language-plaintext highlighter-rouge">56:10</code> now we start with a very strong coupling
+<br /><code class="language-plaintext highlighter-rouge">56:12</code> we renormalize
+<br /><code class="language-plaintext highlighter-rouge">56:14</code> and we will be driven to zero
+<br /><code class="language-plaintext highlighter-rouge">56:17</code> that means that this renormalization
+<br /><code class="language-plaintext highlighter-rouge">56:21</code> procedure this course grading procedure
+<br /><code class="language-plaintext highlighter-rouge">56:24</code> in this one-dimensional icing model
+<br /><code class="language-plaintext highlighter-rouge">56:28</code> will always on the macroscopic skin on
+<br /><code class="language-plaintext highlighter-rouge">56:31</code> large
+<br /><code class="language-plaintext highlighter-rouge">56:31</code> length scales always lead to a model
+<br /><code class="language-plaintext highlighter-rouge">56:35</code> that is effectively described by
+<br /><code class="language-plaintext highlighter-rouge">56:40</code> a system that has zero coupling
+<br /><code class="language-plaintext highlighter-rouge">56:43</code> yeah this coupling here vanishes and if
+<br /><code class="language-plaintext highlighter-rouge">56:46</code> we have zero coupling that means that
+<br /><code class="language-plaintext highlighter-rouge">56:48</code> our system
+<br /><code class="language-plaintext highlighter-rouge">56:49</code> is above the critical point that’s
+<br /><code class="language-plaintext highlighter-rouge">56:52</code> non-critical
+<br /><code class="language-plaintext highlighter-rouge">56:54</code> so we will normalize we go on and on
+<br /><code class="language-plaintext highlighter-rouge">56:57</code> and we always end up on the system that
+<br /><code class="language-plaintext highlighter-rouge">56:59</code> has very high temperature
+<br /><code class="language-plaintext highlighter-rouge">57:01</code> or very low coupling yeah that’s a it is
+<br /><code class="language-plaintext highlighter-rouge">57:04</code> a disordered system
+<br /><code class="language-plaintext highlighter-rouge">57:06</code> and that’s just a reflection of the fact
+<br /><code class="language-plaintext highlighter-rouge">57:07</code> that the one deicing model
+<br /><code class="language-plaintext highlighter-rouge">57:10</code> doesn’t have any order for a finite
+<br /><code class="language-plaintext highlighter-rouge">57:12</code> temperature
+<br /><code class="language-plaintext highlighter-rouge">57:15</code> now so you have to start with coupling
+<br /><code class="language-plaintext highlighter-rouge">57:18</code> exactly equal to infinity
+<br /><code class="language-plaintext highlighter-rouge">57:21</code> to get an order over the temperature
+<br /><code class="language-plaintext highlighter-rouge">57:24</code> exactly
+<br /><code class="language-plaintext highlighter-rouge">57:24</code> equal to zero only then you can have
+<br /><code class="language-plaintext highlighter-rouge">57:26</code> order everything else
+<br /><code class="language-plaintext highlighter-rouge">57:28</code> will drive you to this fixed point here
+<br /><code class="language-plaintext highlighter-rouge">57:32</code> that corresponds to a system where you
+<br /><code class="language-plaintext highlighter-rouge">57:35</code> have no
+<br /><code class="language-plaintext highlighter-rouge">57:36</code> coupling at all now so the one that we
+<br /><code class="language-plaintext highlighter-rouge">57:39</code> knew that already that the 1d
+<br /><code class="language-plaintext highlighter-rouge">57:40</code> system doesn’t show all in the ising
+<br /><code class="language-plaintext highlighter-rouge">57:42</code> model doesn’t have order
+<br /><code class="language-plaintext highlighter-rouge">57:44</code> it doesn’t have a really critical point
+<br /><code class="language-plaintext highlighter-rouge">57:47</code> and that’s why our flow
+<br /><code class="language-plaintext highlighter-rouge">57:48</code> tells us that macroscopic scales this
+<br /><code class="language-plaintext highlighter-rouge">57:51</code> system
+<br /><code class="language-plaintext highlighter-rouge">57:51</code> goes to a system that doesn’t have
+<br /><code class="language-plaintext highlighter-rouge">57:55</code> any interaction so it’s completely
+<br /><code class="language-plaintext highlighter-rouge">57:56</code> disordered</p>
+
+<h3 id="slide-14">slide 14</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">57:59</code> of course you can do the same procedure
+<br /><code class="language-plaintext highlighter-rouge">58:01</code> for um
+<br /><code class="language-plaintext highlighter-rouge">58:04</code> for the 2d system yeah and there is of
+<br /><code class="language-plaintext highlighter-rouge">58:06</code> course
+<br /><code class="language-plaintext highlighter-rouge">58:07</code> again much more complicated then this 2d
+<br /><code class="language-plaintext highlighter-rouge">58:10</code> system
+<br /><code class="language-plaintext highlighter-rouge">58:12</code> you get a flow diagram that looks like
+<br /><code class="language-plaintext highlighter-rouge">58:15</code> this here
+<br /><code class="language-plaintext highlighter-rouge">58:17</code> on the bottom so here you suddenly
+<br /><code class="language-plaintext highlighter-rouge">58:21</code> have another fixed point an unstable
+<br /><code class="language-plaintext highlighter-rouge">58:23</code> fixed point
+<br /><code class="language-plaintext highlighter-rouge">58:25</code> in between these two extremes now this
+<br /><code class="language-plaintext highlighter-rouge">58:28</code> unstable fixed point
+<br /><code class="language-plaintext highlighter-rouge">58:30</code> here if you start to the left of this
+<br /><code class="language-plaintext highlighter-rouge">58:33</code> unstable fixed point you were driven to
+<br /><code class="language-plaintext highlighter-rouge">58:36</code> a state
+<br /><code class="language-plaintext highlighter-rouge">58:37</code> without that that we had previously
+<br /><code class="language-plaintext highlighter-rouge">58:40</code> where the coupling is very low
+<br /><code class="language-plaintext highlighter-rouge">58:42</code> or that corresponds to the system at
+<br /><code class="language-plaintext highlighter-rouge">58:43</code> very high temperature
+<br /><code class="language-plaintext highlighter-rouge">58:45</code> if you start to the right of this you’ll
+<br /><code class="language-plaintext highlighter-rouge">58:47</code> be driven to a state
+<br /><code class="language-plaintext highlighter-rouge">58:49</code> where you have order you know where your
+<br /><code class="language-plaintext highlighter-rouge">58:51</code> coupling is basically infinity or your
+<br /><code class="language-plaintext highlighter-rouge">58:53</code> temperature effective temperature
+<br /><code class="language-plaintext highlighter-rouge">58:55</code> is zero and because you have now this
+<br /><code class="language-plaintext highlighter-rouge">58:58</code> fixed point here this new fixed point
+<br /><code class="language-plaintext highlighter-rouge">59:00</code> right you get
+<br /><code class="language-plaintext highlighter-rouge">59:02</code> this singularity or this discontinuity
+<br /><code class="language-plaintext highlighter-rouge">59:05</code> of the free energy because if you go a
+<br /><code class="language-plaintext highlighter-rouge">59:06</code> little bit to the left
+<br /><code class="language-plaintext highlighter-rouge">59:08</code> you go to another a different
+<br /><code class="language-plaintext highlighter-rouge">59:10</code> macroscopic state
+<br /><code class="language-plaintext highlighter-rouge">59:11</code> then if you go a little bit to the right
+<br /><code class="language-plaintext highlighter-rouge">59:14</code> and of course you can test that with
+<br /><code class="language-plaintext highlighter-rouge">59:15</code> numerical simulations
+<br /><code class="language-plaintext highlighter-rouge">59:17</code> now so that’s here from the book of
+<br /><code class="language-plaintext highlighter-rouge">59:19</code> cardi which is a very very nice book um
+<br /><code class="language-plaintext highlighter-rouge">59:22</code> scaling and renormalization and
+<br /><code class="language-plaintext highlighter-rouge">59:23</code> statistical physics
+<br /><code class="language-plaintext highlighter-rouge">59:26</code> and i have to say that
+<br /><code class="language-plaintext highlighter-rouge">59:29</code> the class don’t look very good on this
+<br /><code class="language-plaintext highlighter-rouge">59:32</code> ipad
+<br /><code class="language-plaintext highlighter-rouge">59:34</code> so what you see here are just
+<br /><code class="language-plaintext highlighter-rouge">59:36</code> simulations of the two the eisenmann
+<br /><code class="language-plaintext highlighter-rouge">59:39</code> and what they did is they performed one
+<br /><code class="language-plaintext highlighter-rouge">59:42</code> block spin removalization procedure
+<br /><code class="language-plaintext highlighter-rouge">59:45</code> that’s that’s what we did right now
+<br /><code class="language-plaintext highlighter-rouge">59:47</code> that’s the coarse grain so one step of
+<br /><code class="language-plaintext highlighter-rouge">59:50</code> this coarse graining
+<br /><code class="language-plaintext highlighter-rouge">59:52</code> and uh if you are right at the critical
+<br /><code class="language-plaintext highlighter-rouge">59:55</code> point on the left hand side
+<br /><code class="language-plaintext highlighter-rouge">59:57</code> you do the coarse graining step yeah
+<br /><code class="language-plaintext highlighter-rouge">59:59</code> then
+<br /><code class="language-plaintext highlighter-rouge">60:00</code> the system remains invariant if you
+<br /><code class="language-plaintext highlighter-rouge">60:02</code> start in a fixed point you’ll stay there
+<br /><code class="language-plaintext highlighter-rouge">60:05</code> if you start a little bit this course
+<br /><code class="language-plaintext highlighter-rouge">60:07</code> grading procedure
+<br /><code class="language-plaintext highlighter-rouge">60:08</code> and here that’s not there’s nothing
+<br /><code class="language-plaintext highlighter-rouge">60:10</code> fancier they just took the simulations
+<br /><code class="language-plaintext highlighter-rouge">60:13</code> and they did one course grading step
+<br /><code class="language-plaintext highlighter-rouge">60:15</code> they averaged you have maybe over a
+<br /><code class="language-plaintext highlighter-rouge">60:17</code> block of spins or so
+<br /><code class="language-plaintext highlighter-rouge">60:19</code> and if you are above this
+<br /><code class="language-plaintext highlighter-rouge">60:23</code> critical temperature that means you
+<br /><code class="language-plaintext highlighter-rouge">60:24</code> start here on the left of this fixed
+<br /><code class="language-plaintext highlighter-rouge">60:26</code> point
+<br /><code class="language-plaintext highlighter-rouge">60:27</code> and if you do this course grading step
+<br /><code class="language-plaintext highlighter-rouge">60:29</code> then your system looks more disordered
+<br /><code class="language-plaintext highlighter-rouge">60:31</code> than before
+<br /><code class="language-plaintext highlighter-rouge">60:33</code> yeah so this year it looks like a higher
+<br /><code class="language-plaintext highlighter-rouge">60:35</code> temperature than this year because you
+<br /><code class="language-plaintext highlighter-rouge">60:37</code> have a lot of these small domains
+<br /><code class="language-plaintext highlighter-rouge">60:39</code> now this is just a reflection of this
+<br /><code class="language-plaintext highlighter-rouge">60:41</code> stat like an intuitive
+<br /><code class="language-plaintext highlighter-rouge">60:43</code> picture of how you go in this
+<br /><code class="language-plaintext highlighter-rouge">60:45</code> reunionization procedure
+<br /><code class="language-plaintext highlighter-rouge">60:47</code> to the left to a state that has no
+<br /><code class="language-plaintext highlighter-rouge">60:49</code> coupling at all
+<br /><code class="language-plaintext highlighter-rouge">60:50</code> k equals zero and if you’re coupling a
+<br /><code class="language-plaintext highlighter-rouge">60:53</code> zero that’s the same as when your
+<br /><code class="language-plaintext highlighter-rouge">60:54</code> temperature
+<br /><code class="language-plaintext highlighter-rouge">60:55</code> is very large and if you want to read
+<br /><code class="language-plaintext highlighter-rouge">60:58</code> more about this
+<br /><code class="language-plaintext highlighter-rouge">60:59</code> have a look at the book of john carty
+<br /><code class="language-plaintext highlighter-rouge">61:01</code> and there’s also of what i just showed
+<br /><code class="language-plaintext highlighter-rouge">61:03</code> you
+<br /><code class="language-plaintext highlighter-rouge">61:04</code> there is a there is a nice book by um
+<br /><code class="language-plaintext highlighter-rouge">61:11</code> so there’s a nice book there’s a nice
+<br /><code class="language-plaintext highlighter-rouge">61:13</code> article by karanov
+<br /><code class="language-plaintext highlighter-rouge">61:15</code> um by teaching the immunization group
+<br /><code class="language-plaintext highlighter-rouge">61:17</code> and he does these calculations also for
+<br /><code class="language-plaintext highlighter-rouge">61:19</code> the 2d
+<br /><code class="language-plaintext highlighter-rouge">61:20</code> model okay so now
+<br /><code class="language-plaintext highlighter-rouge">61:23</code> we state in a real space yeah and in
+<br /><code class="language-plaintext highlighter-rouge">61:26</code> real space
+<br /><code class="language-plaintext highlighter-rouge">61:28</code> uh is very intuitive now
+<br /><code class="language-plaintext highlighter-rouge">61:31</code> and it works for the one deising model
+<br /><code class="language-plaintext highlighter-rouge">61:33</code> for the 2d eisen model gets already
+<br /><code class="language-plaintext highlighter-rouge">61:34</code> complicated
+<br /><code class="language-plaintext highlighter-rouge">61:36</code> and it’s basically impractical to do
+<br /><code class="language-plaintext highlighter-rouge">61:38</code> that
+<br /><code class="language-plaintext highlighter-rouge">61:39</code> for general um
+<br /><code class="language-plaintext highlighter-rouge">61:43</code> for for general physical models now it
+<br /><code class="language-plaintext highlighter-rouge">61:46</code> gets very complicated to do that
+<br /><code class="language-plaintext highlighter-rouge">61:47</code> procedure
+<br /><code class="language-plaintext highlighter-rouge">61:48</code> in real space and the reason is that
+<br /><code class="language-plaintext highlighter-rouge">61:50</code> there’s no small parameter involved
+<br /><code class="language-plaintext highlighter-rouge">61:53</code> that you can use for an expansion</p>
+
+<h3 id="slide-15">slide 15</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">61:57</code> then there was another guy called wilson
+<br /><code class="language-plaintext highlighter-rouge">61:59</code> who came up with another idea
+<br /><code class="language-plaintext highlighter-rouge">62:01</code> now that was actually and that’s called
+<br /><code class="language-plaintext highlighter-rouge">62:03</code> the wilson
+<br /><code class="language-plaintext highlighter-rouge">62:05</code> momentum shell idea
+<br /><code class="language-plaintext highlighter-rouge">62:09</code> that’s the world’s in momentum shell
+<br /><code class="language-plaintext highlighter-rouge">62:11</code> idea so what does it mean so what was
+<br /><code class="language-plaintext highlighter-rouge">62:14</code> wilson’s idea was that we caused grain
+<br /><code class="language-plaintext highlighter-rouge">62:18</code> by integrating out fast degrees of
+<br /><code class="language-plaintext highlighter-rouge">62:21</code> freedom
+<br /><code class="language-plaintext highlighter-rouge">62:22</code> or degrees of freedom that have a very
+<br /><code class="language-plaintext highlighter-rouge">62:24</code> short wavelength
+<br /><code class="language-plaintext highlighter-rouge">62:26</code> in fourier space that’s the way you do
+<br /><code class="language-plaintext highlighter-rouge">62:29</code> that
+<br /><code class="language-plaintext highlighter-rouge">62:30</code> is uh you look at free space also this
+<br /><code class="language-plaintext highlighter-rouge">62:33</code> is our
+<br /><code class="language-plaintext highlighter-rouge">62:34</code> free space let’s say we have two
+<br /><code class="language-plaintext highlighter-rouge">62:35</code> directions in free space
+<br /><code class="language-plaintext highlighter-rouge">62:38</code> then we have here
+<br /><code class="language-plaintext highlighter-rouge">62:44</code> a maximum wave vector that’s the maximum
+<br /><code class="language-plaintext highlighter-rouge">62:52</code> wave vector and this wave vector let’s
+<br /><code class="language-plaintext highlighter-rouge">62:55</code> call it
+<br /><code class="language-plaintext highlighter-rouge">62:56</code> capital omega is the same
+<br /><code class="language-plaintext highlighter-rouge">63:00</code> just given by that’s the smallest
+<br /><code class="language-plaintext highlighter-rouge">63:02</code> structure we can have in the system
+<br /><code class="language-plaintext highlighter-rouge">63:04</code> that’s a microscopic length scale
+<br /><code class="language-plaintext highlighter-rouge">63:06</code> yeah and that’s in these lattice systems
+<br /><code class="language-plaintext highlighter-rouge">63:08</code> this typical
+<br /><code class="language-plaintext highlighter-rouge">63:09</code> uh one over the the lattice the
+<br /><code class="language-plaintext highlighter-rouge">63:12</code> microscopic level the lattice spacing
+<br /><code class="language-plaintext highlighter-rouge">63:15</code> yeah so we cannot go any smaller than
+<br /><code class="language-plaintext highlighter-rouge">63:17</code> that
+<br /><code class="language-plaintext highlighter-rouge">63:19</code> now starting from the smallest length
+<br /><code class="language-plaintext highlighter-rouge">63:21</code> scale now so a description of our system
+<br /><code class="language-plaintext highlighter-rouge">63:24</code> on the smallest length scale
+<br /><code class="language-plaintext highlighter-rouge">63:27</code> we now integrate out the blue stuff here
+<br /><code class="language-plaintext highlighter-rouge">63:32</code> that’s this one here that’s the momentum
+<br /><code class="language-plaintext highlighter-rouge">63:35</code> shell
+<br /><code class="language-plaintext highlighter-rouge">63:42</code> and we integrate out this momentum shell
+<br /><code class="language-plaintext highlighter-rouge">63:45</code> until we reach
+<br /><code class="language-plaintext highlighter-rouge">63:48</code> a new wavelength a new y vector of a new
+<br /><code class="language-plaintext highlighter-rouge">63:51</code> length scale
+<br /><code class="language-plaintext highlighter-rouge">63:54</code> omega prime is equal to the original
+<br /><code class="language-plaintext highlighter-rouge">63:57</code> omega
+<br /><code class="language-plaintext highlighter-rouge">63:58</code> divided sum by some number lambda
+<br /><code class="language-plaintext highlighter-rouge">64:01</code> yeah so
+<br /><code class="language-plaintext highlighter-rouge">64:05</code> we integrate out one bit in momentum
+<br /><code class="language-plaintext highlighter-rouge">64:08</code> space
+<br /><code class="language-plaintext highlighter-rouge">64:10</code> at a time and that means that we perform
+<br /><code class="language-plaintext highlighter-rouge">64:13</code> an integration
+<br /><code class="language-plaintext highlighter-rouge">64:15</code> uh on a momentum shell on a tiny shell
+<br /><code class="language-plaintext highlighter-rouge">64:18</code> in momentum space and also our new field
+<br /><code class="language-plaintext highlighter-rouge">64:26</code> in the momentum shell
+<br /><code class="language-plaintext highlighter-rouge">64:32</code> is then called typically something like
+<br /><code class="language-plaintext highlighter-rouge">64:35</code> feel
+<br /><code class="language-plaintext highlighter-rouge">64:36</code> find larger of q
+<br /><code class="language-plaintext highlighter-rouge">64:40</code> and this is just undefined by
+<br /><code class="language-plaintext highlighter-rouge">64:43</code> phi of q
+<br /><code class="language-plaintext highlighter-rouge">64:46</code> with q in this interval
+<br /><code class="language-plaintext highlighter-rouge">64:51</code> omega over lambda to omega
+<br /><code class="language-plaintext highlighter-rouge">64:56</code> yeah so we integrate
+<br /><code class="language-plaintext highlighter-rouge">65:00</code> out one step and now wilson’s scheme is
+<br /><code class="language-plaintext highlighter-rouge">65:03</code> actually very similar
+<br /><code class="language-plaintext highlighter-rouge">65:08</code> to what we’ve done already yes the first
+<br /><code class="language-plaintext highlighter-rouge">65:10</code> step will be
+<br /><code class="language-plaintext highlighter-rouge">65:12</code> recall screen
+<br /><code class="language-plaintext highlighter-rouge">65:18</code> now by rescaling oops sorry
+<br /><code class="language-plaintext highlighter-rouge">65:29</code> no by rescaling
+<br /><code class="language-plaintext highlighter-rouge">65:34</code> and that will give rise to some
+<br /><code class="language-plaintext highlighter-rouge">65:38</code> change in the coefficients
+<br /><code class="language-plaintext highlighter-rouge">65:46</code> in the action
+<br /><code class="language-plaintext highlighter-rouge">65:49</code> and the second step is that we perform
+<br /><code class="language-plaintext highlighter-rouge">65:56</code> this integration in the momentum shell
+<br /><code class="language-plaintext highlighter-rouge">66:00</code> integrate out
+<br /><code class="language-plaintext highlighter-rouge">66:04</code> short range
+<br /><code class="language-plaintext highlighter-rouge">66:08</code> fluctuations
+<br /><code class="language-plaintext highlighter-rouge">66:12</code> or momentum
+<br /><code class="language-plaintext highlighter-rouge">66:19</code> a second step and we’ll in the next
+<br /><code class="language-plaintext highlighter-rouge">66:22</code> lecture
+<br /><code class="language-plaintext highlighter-rouge">66:22</code> we do exactly this yeah we performed
+<br /><code class="language-plaintext highlighter-rouge">66:24</code> this wilson’s ruralization group
+<br /><code class="language-plaintext highlighter-rouge">66:26</code> procedure that is much more practical
+<br /><code class="language-plaintext highlighter-rouge">66:29</code> than the
+<br /><code class="language-plaintext highlighter-rouge">66:29</code> block spin immunization group that we
+<br /><code class="language-plaintext highlighter-rouge">66:32</code> had in the
+<br /><code class="language-plaintext highlighter-rouge">66:32</code> beginning of this lecture and the good
+<br /><code class="language-plaintext highlighter-rouge">66:36</code> thing about this wilson’s
+<br /><code class="language-plaintext highlighter-rouge">66:38</code> of wilson’s idea is that it actually has
+<br /><code class="language-plaintext highlighter-rouge">66:40</code> a small parameter
+<br /><code class="language-plaintext highlighter-rouge">66:41</code> this momentum shell is very small
+<br /><code class="language-plaintext highlighter-rouge">66:44</code> and uh yes so this
+<br /><code class="language-plaintext highlighter-rouge">66:48</code> has a small parameter that means that we
+<br /><code class="language-plaintext highlighter-rouge">66:50</code> can actually then
+<br /><code class="language-plaintext highlighter-rouge">66:51</code> hope to get some approximative um
+<br /><code class="language-plaintext highlighter-rouge">66:55</code> uh scheme out of this approximative
+<br /><code class="language-plaintext highlighter-rouge">67:00</code> so that we can approximate our integrals
+<br /><code class="language-plaintext highlighter-rouge">67:02</code> that we get from the course grade
+<br /><code class="language-plaintext highlighter-rouge">67:04</code> yeah so we’ll do that uh next week
+<br /><code class="language-plaintext highlighter-rouge">67:07</code> for our little epidemic model and we’ll
+<br /><code class="language-plaintext highlighter-rouge">67:10</code> derive
+<br /><code class="language-plaintext highlighter-rouge">67:11</code> the renalization group flow from our
+<br /><code class="language-plaintext highlighter-rouge">67:13</code> equity epidemic model
+<br /><code class="language-plaintext highlighter-rouge">67:15</code> and from this flow we’ll then get the
+<br /><code class="language-plaintext highlighter-rouge">67:17</code> exponents that derive that describe
+<br /><code class="language-plaintext highlighter-rouge">67:20</code> the action of the the the behavior
+<br /><code class="language-plaintext highlighter-rouge">67:23</code> of this epidemic model near the critical
+<br /><code class="language-plaintext highlighter-rouge">67:26</code> point
+<br /><code class="language-plaintext highlighter-rouge">67:27</code> yeah and um
+<br /><code class="language-plaintext highlighter-rouge">67:30</code> exactly yeah so so that’s what we’ll do
+<br /><code class="language-plaintext highlighter-rouge">67:33</code> i’ll
+<br /><code class="language-plaintext highlighter-rouge">67:33</code> just leave it for here today because and
+<br /><code class="language-plaintext highlighter-rouge">67:35</code> then next week we do the calculation and
+<br /><code class="language-plaintext highlighter-rouge">67:37</code> if you’re
+<br /><code class="language-plaintext highlighter-rouge">67:38</code> not interested in calculating that
+<br /><code class="language-plaintext highlighter-rouge">67:41</code> because it’s so
+<br /><code class="language-plaintext highlighter-rouge">67:42</code> uh so uh
+<br /><code class="language-plaintext highlighter-rouge">67:46</code> so uh short before christmas if you’re
+<br /><code class="language-plaintext highlighter-rouge">67:48</code> free to skip the next lecture
+<br /><code class="language-plaintext highlighter-rouge">67:50</code> yeah and uh officially i think it’s not
+<br /><code class="language-plaintext highlighter-rouge">67:53</code> a lecture data
+<br /><code class="language-plaintext highlighter-rouge">67:56</code> but i wanted to get that done before
+<br /><code class="language-plaintext highlighter-rouge">67:57</code> christmas that we can after christmas at
+<br /><code class="language-plaintext highlighter-rouge">68:00</code> january what is that fifth or so i can’t
+<br /><code class="language-plaintext highlighter-rouge">68:03</code> remember
+<br /><code class="language-plaintext highlighter-rouge">68:03</code> um we’ll start actually done with data
+<br /><code class="language-plaintext highlighter-rouge">68:06</code> science and
+<br /><code class="language-plaintext highlighter-rouge">68:07</code> to look at some real data yeah okay
+<br /><code class="language-plaintext highlighter-rouge">68:10</code> great
+<br /><code class="language-plaintext highlighter-rouge">68:11</code> so that was today only the intuitive
+<br /><code class="language-plaintext highlighter-rouge">68:13</code> part about romanization so next week
+<br /><code class="language-plaintext highlighter-rouge">68:15</code> we’ll do
+<br /><code class="language-plaintext highlighter-rouge">68:15</code> we’ll see that in action and see how it
+<br /><code class="language-plaintext highlighter-rouge">68:18</code> actually works in the non-equilibrium
+<br /><code class="language-plaintext highlighter-rouge">68:19</code> system
+<br /><code class="language-plaintext highlighter-rouge">68:22</code> bye</p>
+
+<h3 id="answering-a-question-1">answering a question</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">68:28</code> excuse me yes
+<br /><code class="language-plaintext highlighter-rouge">68:31</code> um could you please explain again why
+<br /><code class="language-plaintext highlighter-rouge">68:33</code> were we trying to reach the fixed point
+<br /><code class="language-plaintext highlighter-rouge">68:35</code> from the critical point
+<br /><code class="language-plaintext highlighter-rouge">68:37</code> so so we’re not trying to
+<br /><code class="language-plaintext highlighter-rouge">68:41</code> it’s just that you assume for this to
+<br /><code class="language-plaintext highlighter-rouge">68:44</code> work that there is such a fixed point
+<br /><code class="language-plaintext highlighter-rouge">68:47</code> that determines the flow of the
+<br /><code class="language-plaintext highlighter-rouge">68:50</code> renormalization group yeah in this
+<br /><code class="language-plaintext highlighter-rouge">68:53</code> generality you have to assume that that
+<br /><code class="language-plaintext highlighter-rouge">68:55</code> there is
+<br /><code class="language-plaintext highlighter-rouge">68:56</code> such a fixed point and from nonlinear
+<br /><code class="language-plaintext highlighter-rouge">68:58</code> dynamics dynamical system
+<br /><code class="language-plaintext highlighter-rouge">69:00</code> lecture that we have we know that once
+<br /><code class="language-plaintext highlighter-rouge">69:02</code> we have such a fixed point
+<br /><code class="language-plaintext highlighter-rouge">69:04</code> we basically know already how the system
+<br /><code class="language-plaintext highlighter-rouge">69:07</code> behaves also in other parts
+<br /><code class="language-plaintext highlighter-rouge">69:09</code> of uh of the faith yeah so that’s why
+<br /><code class="language-plaintext highlighter-rouge">69:12</code> the system these fixed points are so
+<br /><code class="language-plaintext highlighter-rouge">69:14</code> important now we have to assume that
+<br /><code class="language-plaintext highlighter-rouge">69:16</code> there exists some verb
+<br /><code class="language-plaintext highlighter-rouge">69:17</code> uh but we have to basically for every
+<br /><code class="language-plaintext highlighter-rouge">69:19</code> individual model that we look at we have
+<br /><code class="language-plaintext highlighter-rouge">69:21</code> to show that they actually
+<br /><code class="language-plaintext highlighter-rouge">69:23</code> that they that we have actually
+<br /><code class="language-plaintext highlighter-rouge">69:25</code> meaningful
+<br /><code class="language-plaintext highlighter-rouge">69:27</code> or moral more than one thing of course
+<br /><code class="language-plaintext highlighter-rouge">69:31</code> yeah so but once you have the flow it’s
+<br /><code class="language-plaintext highlighter-rouge">69:33</code> a problem in normal dynamics
+<br /><code class="language-plaintext highlighter-rouge">69:35</code> that’s that once you have the flow you
+<br /><code class="language-plaintext highlighter-rouge">69:36</code> do what you do in non-aerodynamic
+<br /><code class="language-plaintext highlighter-rouge">69:38</code> dynamic dynamics so typically in these
+<br /><code class="language-plaintext highlighter-rouge">69:40</code> books of linearization they use a
+<br /><code class="language-plaintext highlighter-rouge">69:42</code> different language that’s a little bit
+<br /><code class="language-plaintext highlighter-rouge">69:43</code> disconnected from this dynamical systems
+<br /><code class="language-plaintext highlighter-rouge">69:47</code> field
+<br /><code class="language-plaintext highlighter-rouge">69:48</code> no but what you do is you have
+<br /><code class="language-plaintext highlighter-rouge">69:50</code> non-linear
+<br /><code class="language-plaintext highlighter-rouge">69:51</code> differential equations and then you just
+<br /><code class="language-plaintext highlighter-rouge">69:53</code> want to see what happens to these
+<br /><code class="language-plaintext highlighter-rouge">69:55</code> nonlinear differential equations
+<br /><code class="language-plaintext highlighter-rouge">69:57</code> and then if you ask this question then
+<br /><code class="language-plaintext highlighter-rouge">70:00</code> and non-in your system you need to ask
+<br /><code class="language-plaintext highlighter-rouge">70:01</code> about the fixed points
+<br /><code class="language-plaintext highlighter-rouge">70:03</code> and about the stability of yeah and
+<br /><code class="language-plaintext highlighter-rouge">70:05</code> that’s why this fixed point
+<br /><code class="language-plaintext highlighter-rouge">70:07</code> in the randomization group flow is so
+<br /><code class="language-plaintext highlighter-rouge">70:10</code> important
+<br /><code class="language-plaintext highlighter-rouge">70:11</code> now if there wasn’t any fixed point at
+<br /><code class="language-plaintext highlighter-rouge">70:13</code> all yeah then
+<br /><code class="language-plaintext highlighter-rouge">70:14</code> it would be a very good system so we
+<br /><code class="language-plaintext highlighter-rouge">70:16</code> have to have such a big
+<br /><code class="language-plaintext highlighter-rouge">70:19</code> point on the critical manifold for this
+<br /><code class="language-plaintext highlighter-rouge">70:22</code> uh for this procedure to work
+<br /><code class="language-plaintext highlighter-rouge">70:25</code> now we have to assume at this stage here
+<br /><code class="language-plaintext highlighter-rouge">70:27</code> we have to assume
+<br /><code class="language-plaintext highlighter-rouge">70:29</code> that it exists and if it exists then it
+<br /><code class="language-plaintext highlighter-rouge">70:31</code> will determine
+<br /><code class="language-plaintext highlighter-rouge">70:32</code> our flow yeah
+<br /><code class="language-plaintext highlighter-rouge">70:36</code> but we don’t want to we don’t want to do
+<br /><code class="language-plaintext highlighter-rouge">70:38</code> so once we have to fix the the system
+<br /><code class="language-plaintext highlighter-rouge">70:40</code> the renewalization group will
+<br /><code class="language-plaintext highlighter-rouge">70:41</code> automatically
+<br /><code class="language-plaintext highlighter-rouge">70:42</code> carry us to the fixed point now we don’t
+<br /><code class="language-plaintext highlighter-rouge">70:44</code> we don’t want to go the system to
+<br /><code class="language-plaintext highlighter-rouge">70:47</code> the system to go there if the fixed
+<br /><code class="language-plaintext highlighter-rouge">70:49</code> point exists
+<br /><code class="language-plaintext highlighter-rouge">70:50</code> we’ll have to uh we know that the flow
+<br /><code class="language-plaintext highlighter-rouge">70:54</code> will determine we will be determined by
+<br /><code class="language-plaintext highlighter-rouge">70:56</code> this
+<br /><code class="language-plaintext highlighter-rouge">70:58</code> yeah so that’s the that’s the that’s the
+<br /><code class="language-plaintext highlighter-rouge">71:01</code> idea
+<br /><code class="language-plaintext highlighter-rouge">71:02</code> but there’s non-linear systems that in
+<br /><code class="language-plaintext highlighter-rouge">71:04</code> principle has not much to do with
+<br /><code class="language-plaintext highlighter-rouge">71:06</code> renormalization
+<br /><code class="language-plaintext highlighter-rouge">71:07</code> yeah it is a general property of the
+<br /><code class="language-plaintext highlighter-rouge">71:10</code> dynamic
+<br /><code class="language-plaintext highlighter-rouge">71:14</code> okay thank you okay great
+<br /><code class="language-plaintext highlighter-rouge">71:24</code> any other questions
+<br /><code class="language-plaintext highlighter-rouge">71:28</code> um i have a question um so
+<br /><code class="language-plaintext highlighter-rouge">71:32</code> does this does this um
+<br /><code class="language-plaintext highlighter-rouge">71:35</code> require you to have a very
+<br /><code class="language-plaintext highlighter-rouge">71:38</code> good understanding of the microscopic
+<br /><code class="language-plaintext highlighter-rouge">71:42</code> um dynamics i guess
+<br /><code class="language-plaintext highlighter-rouge">71:45</code> you have to have a model to start with i
+<br /><code class="language-plaintext highlighter-rouge">71:48</code> mean
+<br /><code class="language-plaintext highlighter-rouge">71:48</code> um but that’s kind of what i mean is
+<br /><code class="language-plaintext highlighter-rouge">71:51</code> if you have some model that’s leaving
+<br /><code class="language-plaintext highlighter-rouge">71:55</code> out certain things that are
+<br /><code class="language-plaintext highlighter-rouge">71:57</code> that maybe
+<br /><code class="language-plaintext highlighter-rouge">72:01</code> you know you thought wasn’t so important
+<br /><code class="language-plaintext highlighter-rouge">72:03</code> or something like that
+<br /><code class="language-plaintext highlighter-rouge">72:04</code> but then as you core scream more and
+<br /><code class="language-plaintext highlighter-rouge">72:08</code> more
+<br /><code class="language-plaintext highlighter-rouge">72:08</code> like does it like um
+<br /><code class="language-plaintext highlighter-rouge">72:11</code> will it give rise to like a different rg
+<br /><code class="language-plaintext highlighter-rouge">72:14</code> flow than
+<br /><code class="language-plaintext highlighter-rouge">72:15</code> if you had included you know other other
+<br /><code class="language-plaintext highlighter-rouge">72:19</code> uh okay i think i think that that
+<br /><code class="language-plaintext highlighter-rouge">72:21</code> depends on
+<br /><code class="language-plaintext highlighter-rouge">72:22</code> what you leave away and what you leave
+<br /><code class="language-plaintext highlighter-rouge">72:24</code> out and what you can use so in principle
+<br /><code class="language-plaintext highlighter-rouge">72:28</code> for the usual model including this si
+<br /><code class="language-plaintext highlighter-rouge">72:30</code> model that we have here
+<br /><code class="language-plaintext highlighter-rouge">72:32</code> that we’re looking at and also but also
+<br /><code class="language-plaintext highlighter-rouge">72:34</code> for the icing model and
+<br /><code class="language-plaintext highlighter-rouge">72:36</code> they they fall a little bit out of the
+<br /><code class="language-plaintext highlighter-rouge">72:37</code> blue when somebody presents them to you
+<br /><code class="language-plaintext highlighter-rouge">72:40</code> and for example in the lecture now they
+<br /><code class="language-plaintext highlighter-rouge">72:43</code> completely make sense that they
+<br /><code class="language-plaintext highlighter-rouge">72:45</code> destroyed these systems
+<br /><code class="language-plaintext highlighter-rouge">72:47</code> but usually people have used
+<br /><code class="language-plaintext highlighter-rouge">72:50</code> renormalization studies
+<br /><code class="language-plaintext highlighter-rouge">72:52</code> to show that additional terms don’t
+<br /><code class="language-plaintext highlighter-rouge">72:55</code> don’t matter for these yeah also for
+<br /><code class="language-plaintext highlighter-rouge">72:57</code> this active
+<br /><code class="language-plaintext highlighter-rouge">72:58</code> uh for these active systems that we
+<br /><code class="language-plaintext highlighter-rouge">73:00</code> talked about
+<br /><code class="language-plaintext highlighter-rouge">73:02</code> with these aligning uh with these
+<br /><code class="language-plaintext highlighter-rouge">73:04</code> aligning directions
+<br /><code class="language-plaintext highlighter-rouge">73:05</code> and so on now for these systems i showed
+<br /><code class="language-plaintext highlighter-rouge">73:08</code> you briefly a larger way equation and
+<br /><code class="language-plaintext highlighter-rouge">73:09</code> people did a
+<br /><code class="language-plaintext highlighter-rouge">73:10</code> lot of work to show that this is
+<br /><code class="language-plaintext highlighter-rouge">73:12</code> actually the simplest
+<br /><code class="language-plaintext highlighter-rouge">73:14</code> uh description that you can have that
+<br /><code class="language-plaintext highlighter-rouge">73:15</code> describes this system now because the
+<br /><code class="language-plaintext highlighter-rouge">73:18</code> rigid rimmelization they found
+<br /><code class="language-plaintext highlighter-rouge">73:20</code> that all other terms so this is the
+<br /><code class="language-plaintext highlighter-rouge">73:22</code> minimal set of terms that i need
+<br /><code class="language-plaintext highlighter-rouge">73:24</code> to describe still the same
+<br /><code class="language-plaintext highlighter-rouge">73:26</code> renewalization
+<br /><code class="language-plaintext highlighter-rouge">73:27</code> or still renumerization yeah
+<br /><code class="language-plaintext highlighter-rouge">73:31</code> and uh whether you get new terms i
+<br /><code class="language-plaintext highlighter-rouge">73:34</code> so i i would i wouldn’t expect that if
+<br /><code class="language-plaintext highlighter-rouge">73:35</code> you
+<br /><code class="language-plaintext highlighter-rouge">73:37</code> i wouldn’t expect to get new relevant
+<br /><code class="language-plaintext highlighter-rouge">73:39</code> terms
+<br /><code class="language-plaintext highlighter-rouge">73:40</code> out of nothing yeah in general you know
+<br /><code class="language-plaintext highlighter-rouge">73:43</code> otherwise you could start with just
+<br /><code class="language-plaintext highlighter-rouge">73:45</code> nothing at all and see what happens and
+<br /><code class="language-plaintext highlighter-rouge">73:47</code> then you get like a theory of everything
+<br /><code class="language-plaintext highlighter-rouge">73:49</code> i wouldn’t expect these things to pop up
+<br /><code class="language-plaintext highlighter-rouge">73:52</code> yeah but of course you get all kind of
+<br /><code class="language-plaintext highlighter-rouge">73:53</code> messy things
+<br /><code class="language-plaintext highlighter-rouge">73:55</code> now you can have if you start with the
+<br /><code class="language-plaintext highlighter-rouge">73:57</code> icing more then in reality then you get
+<br /><code class="language-plaintext highlighter-rouge">73:59</code> higher order
+<br /><code class="language-plaintext highlighter-rouge">74:00</code> interactions and so on and
+<br /><code class="language-plaintext highlighter-rouge">74:04</code> and you have to basically have to get
+<br /><code class="language-plaintext highlighter-rouge">74:06</code> rid of them
+<br /><code class="language-plaintext highlighter-rouge">74:08</code> okay i think let’s uh okay great
+<br /><code class="language-plaintext highlighter-rouge">74:18</code> okay so if there are no more questions
+<br /><code class="language-plaintext highlighter-rouge">74:20</code> then uh
+<br /><code class="language-plaintext highlighter-rouge">74:21</code> see you all next week so as as
+<br /><code class="language-plaintext highlighter-rouge">74:25</code> as usual next week i’ll uh
+<br /><code class="language-plaintext highlighter-rouge">74:28</code> start with a repetition of this and
+<br /><code class="language-plaintext highlighter-rouge">74:31</code> explain explain it again before we
+<br /><code class="language-plaintext highlighter-rouge">74:33</code> actually do the
+<br /><code class="language-plaintext highlighter-rouge">74:34</code> real calculation okay bye see you next
+<br /><code class="language-plaintext highlighter-rouge">74:40</code> week
+<br /><code class="language-plaintext highlighter-rouge">74:45</code> you</p>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = 35;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/35">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        .mpipks-transcript | 07. Renormalization Group - March 19, 2021 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-Popular_GitHub"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/About"><span class="icon-CN_tencent_wechat"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.douban.com/people/Gravitus/"><span class="icon-CN_douban_B"></span></a>
+      </li>
+    
+      <li>
+        <a href="//space.bilibili.com/29132299"><span class="icon-CN_bilibili"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-Popular_RSS"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2021 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted on <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>

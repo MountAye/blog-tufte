@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Comments" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"MountAye"},"description":"阿掖山：一个博客","headline":"Comments","@type":"WebPage","url":"mountaye.github.io/blog/Comments/","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"MountAye"},"description":"阿掖山：一个博客","@type":"WebPage","headline":"Comments","url":"mountaye.github.io/blog/Comments/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
@@ -33,9 +33,6 @@
     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
   
-  
-    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
-    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">    
   
   <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
   <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
@@ -119,13 +116,53 @@
 
         <article class="full-width">
 
-        <h1 id="留言和评论">留言和评论</h1>
+        <div class="content-listing">
 
-<p>本博客是一个静态网站，没有可以处理留言和评论的服务端。作为替代，本博客使用 GitHub 仓库的 issue 区作为评论区。</p>
+<h1 id="留言和评论">留言和评论</h1>
+
+<hr class="slender" />
 
 <p>对于博客的一般性问题进行留言，请在 <a href="https://github.com/MountAye/blog/milestone/1">General Comments</a> 区提交 issue。</p>
 
 <p>评论博文，请点击博文结尾处提供的链接，或在 <a href="https://github.com/MountAye/blog/milestones">issue 区的 milestones</a> 中寻找和博文同名的条目，新建或评论他人的 issues。</p>
+
+<h2 id="留言方法">留言方法</h2>
+
+<p>本博客是一个静态网站，没有可以处理留言和评论的服务端。作为替代，本博客使用 GitHub 仓库的 issue 区作为评论区。每个 milestone 对应于一篇博文，每条 issue 对应于一层评论，每个 comment 对应于一条回复。</p>
+
+<p>又由于 GitHub 的设定，除我以外的用户没办法指定 issue 对应的 milestone，所以评论方法有点复杂：</p>
+
+<ul>
+  <li>根据在想要留言的页面上提供的链接找到 GitHub 仓库的 issue 区：</li>
+</ul>
+
+<figure><figcaption>comment-find</figcaption><img src="/blog/assets/photos/comment-find.png" /></figure>
+
+<ul>
+  <li>在跳转的页面里，找到要评论的文章对应的 Milestone 编号，也就是图中黑色标题的中括号里的数字【34】：</li>
+</ul>
+
+<figure><figcaption>comment-create</figcaption><img src="/blog/assets/photos/comment-create.png" /></figure>
+
+<ul>
+  <li>点击右上角的 <code class="language-plaintext highlighter-rouge">create issue</code> 按钮，再点击接下来页面的 <code class="language-plaintext highlighter-rouge">get started</code> 按钮，进入编辑区：</li>
+</ul>
+
+<figure><figcaption>comment-start</figcaption><img src="/blog/assets/photos/comment-start.png" /></figure>
+
+<ul>
+  <li>在你评论的标题之前，输入带有黑色全角中括号的 Milestone 编号：</li>
+</ul>
+
+<figure><figcaption>comment-submit</figcaption><img src="/blog/assets/photos/comment-submit.png" /></figure>
+
+<ul>
+  <li>阅读正文部分的提示后，删除提示内容，编辑留言内容，满意之后点击 <code class="language-plaintext highlighter-rouge">Submit new issue</code> 按钮。</li>
+</ul>
+
+<h2 id="留言规则">留言规则</h2>
+
+<p>鉴于目前评论数量极少，尚未出现有必要管制的言论，暂时没有对成文法的强烈需求，所以暂时采用习惯法，依靠博主和读者的自觉来维持评论区秩序。</p>
 
 <p>所有 issues 和 comments 需遵守 GitHub 社区相关规范：</p>
 
@@ -147,21 +184,13 @@
   </li>
 </ol>
 
-<hr class="slender" />
-
-<p>GitHub 有一个设定，只有 repo 的所有者才能给一个 issue 添加 milestone 的分类。也就是说对于一般读者，即便跳转到对应的 milestone 页面去留言，新产生的 issue 也依然是没有 milestone 的，需要由我手动分类。<br />
-ε=( o｀ω′)ノ</p>
-
-<p>作为临时的权宜之计，希望大家在 <code class="language-plaintext highlighter-rouge">issue</code> 的标题的方括号【】内写明文章对应的 <code class="language-plaintext highlighter-rouge">Milestone</code> 编号，谢谢。<br />
-(●’◡’●)</p>
 
 <script type="text/javascript" src="/blog/assets/js/date.js"></script>
-
 <section id="comment">
     <h2>读者评论</h2>
     <script type="text/javascript">
         // Global Variables
-        var milestoneID = 1;
+        var milestoneID = ;
         var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
         var json; // OBJECT, get changed by side effects
         var iIssue = 0; // INTEGER
@@ -278,11 +307,13 @@
     <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
     
     <div id="commentIntro">
-        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/1">进行评论</a>。</p>
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/">进行评论</a>。</p>
     </div>
     <div id="commentContent"></div>
 </section>
 
+
+</div>
 
 
         </article>
