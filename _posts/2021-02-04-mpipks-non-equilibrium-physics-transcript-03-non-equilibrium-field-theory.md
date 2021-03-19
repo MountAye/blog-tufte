@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:      "马普所·非平衡态系统中的集体过程·语音转录 | 03. Non-equilibrium Field Theory"
+title:      ".mpipks-transcript | 03. Non-equilibrium Field Theory"
 keywords:   "mpipks-transcript"
 excerpt:    ""
 date:        2021-02-04

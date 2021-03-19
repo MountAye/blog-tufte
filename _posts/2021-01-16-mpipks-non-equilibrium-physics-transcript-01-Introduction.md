@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:      "马普所·非平衡态系统中的集体过程·语音转录 | 01. Introduction"
+title:      ".mpipks-transcript | 01. Introduction"
 keywords:   mpipks-transcript
 excerpt:    ""
 date:        2021-01-09

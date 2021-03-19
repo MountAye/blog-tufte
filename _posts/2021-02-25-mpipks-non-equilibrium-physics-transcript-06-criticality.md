@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:      "马普所·非平衡态系统中的集体过程·语音转录 | 06. Non-equilibrium Criticality"
+title:      ".mpipks-transcript | 06. Non-equilibrium Criticality"
 keywords:   "mpipks-transcript"
 excerpt:    "下一讲就是重整化群了"
 date:        2021-02-25

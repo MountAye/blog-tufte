@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:      "马普所·非平衡态系统中的集体过程·语音转录 | 04. How order emerges in non-equilibrium systems"
+title:      ".mpipks-transcript | 04. How order emerges in non-equilibrium systems"
 keywords:   "mpipks-transcript"
 excerpt:    ""
 date:        2021-02-08

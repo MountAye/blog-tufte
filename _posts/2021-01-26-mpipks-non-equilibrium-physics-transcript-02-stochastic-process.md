@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:      "马普所·非平衡态系统中的集体过程·语音转录 | 02. Stochastic Process"
+title:      ".mpipks-transcript | 02. Stochastic Process"
 keywords:   mpipks-transcript
 excerpt:    "这次的内容大致分为两部分，一是继续将朗之万方程推广，另一部分是主方程。"
 date:        2021-01-26

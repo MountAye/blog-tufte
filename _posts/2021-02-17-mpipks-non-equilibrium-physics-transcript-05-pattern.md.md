@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:      "马普所·非平衡态系统中的集体过程·语音转录 | 05. Pattern"
+title:      ".mpipks-transcript | 05. Pattern"
 keywords:   "mpipks-transcript"
 excerpt:    "How these systems can transit between different order states."
 date:        2021-02-17

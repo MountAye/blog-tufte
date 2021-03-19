@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:      "马普所·非平衡态系统中的集体过程·笔记 | 02. 朗之万方程和主方程"
+title:      ".mpipks-note | 02. 朗之万方程和主方程"
 keywords:   "mpipks-note"
 excerpt:    "这次讨论的主要内容很让我意外地落回了各种数学细节里。"
 date:        2021-02-04
