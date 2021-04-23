@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>.qs QC Hack 量子编程马拉松 | 阿掖山：一个博客</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content=".qs QC Hack 量子编程马拉松" />
+<meta name="author" content="MountAye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="阿掖山：一个博客" />
+<meta property="og:description" content="阿掖山：一个博客" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/qc-hackathon-write-up" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/qc-hackathon-write-up" />
+<meta property="og:site_name" content="阿掖山：一个博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content=".qs QC Hack 量子编程马拉松" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"MountAye"},"description":"阿掖山：一个博客","@type":"BlogPosting","headline":".qs QC Hack 量子编程马拉松","dateModified":"2021-04-18T00:00:00+00:00","datePublished":"2021-04-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/qc-hackathon-write-up"},"url":"mountaye.github.io/blog/articles/qc-hackathon-write-up","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">    
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/qc-hackathon-write-up">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">If you enable JavaScript on this site, you'll see a random quotation here.</span><br>
+        ——<span id="quoteAuthor">Welcome to this blog</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">Home</a>
+        
+  	
+        
+            <a href="/blog/History/">History</a>
+        
+  	
+        
+            <a href="/blog/Topics/">Topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">Links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">Comments</a>
+        
+  	
+        
+            <a href="/blog/About/">About</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>.qs | QC Hack 量子编程马拉松</h1>
+        <p class="subtitle">
+            April 18, 2021
+        </p>
+    <div class="postContent">
+        <h2 id="一">一</h2>
+
+<p>4月初的时候，系秘书转发了一封邮件，耶鲁和斯坦福有两个关于量子计算的学生社团，打算举办为期一周的<a href="https://www.quantumcoalition.io/">线上训练营</a>，然后在周末举办一个24小时的编程马拉松 (<a href="https://en.wikipedia.org/wiki/Hackathon">hackathon</a>) 的活动。只要年满18岁就可以参加，并不限定本科生。</p>
+
+<p>整个活动由几家从事量子计算的科技公司赞助，前面的线上训练营基本就是各家轮流上来介绍一下自己家的量子计算平台的使用方法，最后的编程马拉松也由他们每家出一套题，所以这个活动也有在学生和公司之间搭桥，给参与者争取实习机会的目的在里面。参与者可以自由组队，但是在项目提交的的时候每个人只能属于一支队伍。虽然参与者可以参加任意数量的题目，但是每一名参与者最终只能成为一家公司的优胜者。如果预感到自己在某一个项目的赢面比较大，可以在提交之前通知自己参加的其他队伍把自己除名。24小时的时间限制还是比较紧迫的，所以基本上认准一家答题就可以了。</p>
+
+<p>女朋友也收到了一样的邮件，所以理所当然地一起组队。我之前在本科阶段上过一门一学期的量子信息和量子通信课程，内容约等于在量子力学之后再上一个学期的习题课，以及在不讲群论的情况下应用 SU(2) 群，并没有接触过这个活动中会用到的编程语言。女朋友没有上过这门课，基本就是物理专业普通研究生的量子力学水平。周中的线上训练营，我只参加了第一天的，是 Microsoft 的 Quantum Development Kit (QDK) 和 Q# 编程语言相关的，顺便介绍了一下量子计算中很有名的 Deutsch 算法。剩下的讲座我基本上都没有参加，一方面是知道前面的规则之后就懒下来了，另一方面是实验室的工作仍然需要继续，再有就是线上活动实在是太容易摸鱼了没有效率。周五的晚上，女朋友看了一晚上我的量子信息笔记，我看了看 Q# 的语法规则，在台式机上安装了开发环境。以上就是我们参加编程马拉松之前的基础和准备。</p>
+
+<h2 id="二">二</h2>
+
+<p>Hackathon 美东时间周六上午10点开始，周日上午10点结束。因为我们只看了 Microsoft 相关的内容，所以直奔<a href="https://github.com/quantumcoalition/qchack-microsoft-challenge">相关题目</a>。</p>
+
+<p>题目一共分为两部分。</p>
+
+<p>第一部分一共四道题，就像是一般的计算机课程的作业一样，参赛者只需要在举办方写好的主程序文件里的指定区域填入代码，然后运行主办方写好的测试文件检查结果，测试通过即可得分。四道题目要求如下：</p>
+
+<ol>
+  <li>判断一个3-5位的2进制数能否被4整除。</li>
+  <li>判断一个3比特位当中是否至少有两位不同。</li>
+  <li>同第2题，但是要求量子比特门最多只能使用 3-比特，而且 3-比特门最多使用一次。</li>
+  <li>给定一个有两种颜色的无向图，判断图当中不含有任何单一颜色的三角形。</li>
+</ol>
+
+<p>第二部分内容比较自由，要求用 Grover’s 算法解决一个自己感兴趣的问题，打哪指哪，然后写一篇文章介绍自己的这个项目，并提交相关的代码。根据问题深度(6分)、工具使用(5分)、创新性(4分)、教育价值(5分) 四方面进行评分。</p>
+
+<h2 id="三">三</h2>
+
+<h3 id="i1">I.1.</h3>
+
+<p>第一道题最简单，但是我们当时约等于0基础，所以做起来也颇费了一些时间。不过由于我听过第一天的课，知道 <code class="language-plaintext highlighter-rouge">oracle</code> 在 Q# 编程语言中是一个很重要的概念，所以在题目给出的参考教程 <a href="https://github.com/Microsoft/QuantumKatas/">Quantum Kantas</a> 里找到了<a href="https://github.com/microsoft/QuantumKatas/tree/main/tutorials/Oracles">oracle 相关的教程</a>。里面有个名为 <code class="language-plaintext highlighter-rouge">ControlledOnBitString</code> 的 function，可以根据一串量子比特的取值是否等于一个特定的二值串而对另外一个比特做一个特定的操作。前一天晚上又知道了 <code class="language-plaintext highlighter-rouge">Microsoft.Quantum.Convert</code> 的 namespace 里有各种数据类型转换的函数，搭配 <code class="language-plaintext highlighter-rouge">IntAsBoolArray</code>，就做出了第一题的初版。后来看到了更简单的 <code class="language-plaintext highlighter-rouge">ControlledOnInt</code> 函数，就直接用上了。</p>
+
+<h3 id="i2">I.2.</h3>
+
+<p>第二题的初版是女朋友做的。题目要求是找出是否至少两位不同，这一判断的否定就是三位比特全部相同，所以同样用 <code class="language-plaintext highlighter-rouge">ControlledOnBitString</code> 函数，然后判断一次全 <code class="language-plaintext highlighter-rouge">true</code> 一次全 <code class="language-plaintext highlighter-rouge">false</code>，再把最终结果取反就可以了。但是在做第三题的时候，因为两个题目长得太像了，中间不小心把一个能通过第二题测试但是通不过第三题测试的答案直接覆盖在了第二题上面，懒的改回去了，于是就成了最后提交的版本。</p>
+
+<h3 id="i3">I.3.</h3>
+
+<p>第三题和第二题非常不同。第二题的解决思路中，判断全 <code class="language-plaintext highlighter-rouge">true</code> 和全 <code class="language-plaintext highlighter-rouge">false</code>有3个控制位1个输出位，这里用了两次 4-量子比特门，所以第三问需要全新的思路。另外我曾经试过在一个 <code class="language-plaintext highlighter-rouge">operation</code> 里申请一个新的 <code class="language-plaintext highlighter-rouge">Qubit()</code> 结果测试报错，因为误解了报错信息，所以误认为除了程序的主 operation 之外不能创建新的 qubit，于是被卡住了。这时候已经来到了下午，实在想不出来又很困，于是去床上躺了一会。半睡半醒之间想到，题目虽然要求输入的量子比特不变，但是我们仍然可以直接改动输入，只要在函数结束之前把对输入的改动全部复原就可以了。于是用 CNOT 门分别作用在 1-2, 1-3 对输入的量子比特上，两个门分别以第2、3号比特为输出。然后用一个 3-bit 门判断2、3号比特是否相同，并输出到结果位上。为了复原第2、3号比特，只需要把 CNOT 在两对比特上分别再用一次就行了。</p>
+
+<p>但是这个结果还是无法通过测试（后来成为了第二题的提交版本），报错的提示信息是使用了超过一次 3-量子比特门——这不是开玩笑吗？于是打开了官方提供的测试文件，发现测试代码计算 3-量子比特门的使用次数的时候，会把用户定义的 3-量子比特门的数量，和 <code class="language-plaintext highlighter-rouge">CCNOT</code> 门的数量做加法，于是看文档，我们定义的那个 “用一个 3-bit 门判断2、3号比特是否相同，并输出到结果位上” 的操作和 <code class="language-plaintext highlighter-rouge">CCNOT</code> 门是等价的，于是直接换用 <code class="language-plaintext highlighter-rouge">CCNOT</code> 门，问题解决。</p>
+
+<h3 id="i4">I.4.</h3>
+
+<p>第四题看起来复杂，但是可以分成三个部分：</p>
+
+<ol>
+  <li>找出图中所有的三角形，确定每个三角形的三条边，这一步完全可以用经典算法完成；</li>
+  <li>创建一个和三角形相同数量的量子比特数列，对每个三角形，把三条边直接带入第二/三题的操作里，结果输入创建的量子比特列中；</li>
+  <li>判断量子比特列是否全为 <code class="language-plaintext highlighter-rouge">true</code>，结果输出到整个程序的结果位上。</li>
+</ol>
+
+<p>第一步由女朋友来想我来写（毕竟只有一台电脑有开发环境），难点在于：</p>
+
+<ol>
+  <li>Q# 语法改变数列值的语法十分难受
+ <br /><code class="language-plaintext highlighter-rouge">mutable points = [-1,-1,-1,-1,-1,-1];</code>
+ <br /><code class="language-plaintext highlighter-rouge">set points w/=0..1 &lt;- [0,1];</code>；</li>
+  <li>作为一种强类型语言对元组和数列的区分让我这个 python 选手十分蛋疼
+ <br /><code class="language-plaintext highlighter-rouge">(Int,Int)</code>/<code class="language-plaintext highlighter-rouge">Int[]</code>；</li>
+  <li>求数列中不重复的值居然不排序不能给出正确结果。
+ <br /><code class="language-plaintext highlighter-rouge">let uniquePoints = Arrays.Unique(EqualI,Arrays.Sorted(LessThanI,points));</code></li>
+</ol>
+
+<p>这也是唯一一段用上了 <code class="language-plaintext highlighter-rouge">Message()</code> 函数来 debug 的部分。</p>
+
+<p>第三步就重新回到了第三题暂时敷衍掉的问题：对于在操作中创建的 <code class="language-plaintext highlighter-rouge">Qubit()</code>/<code class="language-plaintext highlighter-rouge">Qubit[]</code>，<code class="language-plaintext highlighter-rouge">Reset()</code>/<code class="language-plaintext highlighter-rouge">ResetAll()</code> 函数相当于测量，会破坏操作的 adjoint 性质，不测量则（当时的我）没有办法将这个量子比特列复原。</p>
+
+<p>此时已经午夜，我来解决这个问题，女朋友去看第二部分，后来她看完 Grover‘s 算法的教程去睡了，我还在想这个问题。直接把报错信息复制到 Google，找到了一个<a href="">论坛里的问答</a>，好像是去年微软在其他地方举办的类似活动的。里面只是提到要“uncompute the qubits”，给出的例子用的是旧版本 Q# 的语法，<del>没法直接抄</del> 。最终不抱希望地把之前对那个 <code class="language-plaintext highlighter-rouge">Qubit[]</code> 做过的循环顺序倒过来重做了一遍，诶，您猜怎么着，还是没通过！绝望了！正序重做一边，诶，通过了！为什么为什么为什么？到现在也没弄清楚。</p>
+
+<h3 id="ii">II.</h3>
+
+<p>然后把女朋友叫醒，让她来讲一讲 Grover’s 算法。听完之后我的理解是，对于一个 $f:(0,1)^N \rarr (0,1)$ 的函数，这个算法可以大概率地找到一个解 $S\in(0,1)^N$ 满足 $f(S)=1$.</p>
+
+<p>至于这个函数 $f$，之前每一道题都是这样一个函数，当时已经夜里两三点了，实在是没时间再想一个新函数了，于是我们直接就拿复杂度最高的第4题来换个皮。换个什么皮呢？为了这个活动翘掉了这周的<a href="/blog/articles/barrier-forward-keyboard-mouse-to-another-computer">《文明6》联机游戏</a>，然后之前看 YouTuber <a href="https://www.youtube.com/user/PotatoMcWhiskey">“Potato McWhiskey”</a>介绍过<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1753346735&amp;searchtext=diplomacy">一个 Mod</a>，里面可以将文明之间的外交关系可视化为无向图，所以，诶嘿嘿嘿……</p>
+
+<p>女朋友写完文稿就睡了，我把文稿改了改，然后和官方对 Grover’s 算法的实现缝合了一下。提交的时候，距离截止时间大约还有一个小时。</p>
+
+<h2 id="四">四</h2>
+
+<p>之后的周五的时候收到了消息，我们得奖了。优胜者一共6支队伍。从活动结束之后公布的结果看，要想成为优胜，第一部分的4道题必须全部正确，然后第二部分得分在 8-20 分之间。</p>
+
+<p>这个成绩是个什么水平？截止到写这篇文章的此刻，官方题目的 Github 仓库有 80 份 fork，有少数几份 fork 是针对已有的 fork，有可能来自同一队伍，再考虑到可能有些队伍的不同成员分别 fork 了主项目，所以估测 60 支队伍应该是有的，官方给出 6 组优胜者这么一个不零不整的数字，个人猜测是取了前 10%？据主办方在 discord 提供的消息，有一支队伍的第二题成绩高于8分，但是前面没有全对，所以没有得奖；其余队伍的第二题都不超过6分；并不清楚有多少队伍第一题全对，主办方也不打算公布各队的详细成绩。</p>
+
+<p>这大约说明活动的参与者，其成绩基本上符合二八原理——少数人得到的分数，占据了所有参赛者全部得分的大多数。</p>
+
+<p>参加过这个活动之后，我们一下子就从量子计算小白摇身一变，成了优秀人才了？实际上，直到现在，我还是搞不太清楚 oracle 到底是个什么东西，女朋友对量子计算的理解估计比我还差（逃）。美国哲学教授约翰·希尔勒提出过一个叫做<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E6%96%87%E6%88%BF%E9%97%B4">“中文房间”</a>的思想实验，说一个只会说英语的人被关在一间满是汉字字块的房间里，不断从房间外收到写着中文问题的纸条。房间里有一本英文写成的手册，指示如何对输入的汉字进行回复。凭借这个手册，房中人可以在完全不会中文的情况下，与外界进行交流。希尔勒类比外人、房中人、手册，与程序员、计算机、计算机程序，认为房中人不会中文，进而论证计算机不可能通过程序来获得理解力。</p>
+
+<p>希尔勒教授想论证啥是他的事，我倒是对这个类比的本体很感兴趣——如果一个人已经能够熟练运用那个英文写成的汉字使用手册了，我们还能不能，能在多大程度上说他不懂中文呢？就说一般的程序员，工作时间能保证不看 stack overflow 的有几个，所以他们都不会编程？反对中文房间思想实验结论的人，很多都支持用图灵测试超过某一阈值来作为有智能的标志，但是我觉得，智能本身就不是一个非有即无的性质，而是一个连续分布，没有上限的谱。</p>
+
+<p>另一方面，得分名列前茅，和能力名列前茅，又是两回事。本科的时候做建模美赛，我们学校数理金融的一个学神前一年成绩“略有不佳”，没拿到 M 奖，于是我们那年找到了我和风神俩学物理的，准备再次冲击荣誉。巧了这一年的题目正好有一道浴缸放热水的问题，这不就是物理中的扩散方程嘛，那得奖还不是手拿把掐的？结果呢，H 奖，丢人丢到姥姥家去了。合着我们两个成绩还都不错的物理专业学生，在自己的专业里，打不过那么多同龄的非物理专业本科生？</p>
+
+<p>两相对照之下，我想起了很久之前看过的一篇博客文章，文章以一个问题开头——“熟练”的反义词是什么？当然说“生疏”这文章就写不下去了，作者给出的答案是——“应变”。熟练意味着，你对于问题、选项、最优解已经有了充分且完备的了解，只需要重复自己的经验就可以了，但是在自己不了解的战场上，经验至少不能直接派上用场，这时候，脱离具体环境的应变能力就成了生存和取胜的关键，我们当时的专业水平高不成低不就，反而成了掣肘我们的桎梏。</p>
+
+<p>读到这篇文章的时候，我被这种剑走偏锋的观点击中了，从那以后，一直都在注意培养自己的应变能力——如果明天我所研究的这个领域消失了，我还有没有谋生的能力？如果自己正在解决的问题被上帝或者 Matrix 作弊修改成一个新问题，我能不能看到连作弊都改动不了的题眼，然后一击命中？在凌晨两三点的时候，我也没有放弃解决第一题第 4 问的 Qubit 复位问题，虽然当时我并不知道评分标准，但是内心非常确定，这个问题必须解决。</p>
+
+<p>以上两次活动的成绩差别，也可以从得奖难度来看。建模美赛的 M 奖，得奖率应该远小于 10%，即便考虑到二八原理中绝大多数参赛者都只是凑数，而且样本越大凑数者越多，这个差距也还是无法忽略。我们能够得奖，和量子计算领域才刚刚萌芽，连“方兴未艾”都算不上，因此竞争并不激烈也有很大关系，应变能力是切入这些蓝海领域的必要条件，是躲避内卷的利器。我们现在对“内卷”人人喊打，但是培养应变能力是需要牺牲相当多本可以精进专业的时间和精力的。当社会中的大多数人向往着逃离内卷的时候，真的不需要有人咬定一个领域不断深耕？我现在的选择真的正确吗？我不知道。我是打算留在当前的领域继续熟练，还是换个领域应变，抑或是虚掷 PhD 光阴换一张工作签证？我也不知道。</p>
+
+<h2 id="五">五</h2>
+
+<p>哦对了，我有女朋友了，而且在 hackathon 的过程中把女朋友惹哭了……问题是我现在已经不记得具体是怎么把人家惹哭的了，连道歉都显得很不诚恳……我确实是一个不擅长合作的人，或者说跟别人说话的我，和想问题的我并不是同一个人，之前本科 CUPT 和建模的时候也一样，需要和人打交道的时候就几乎干不了活儿，严重的时候自己就退化成了鼓励师……总之一切错误在我，希望她不要记仇…… <br />（。・＿・。）ﾉ</p>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = 37;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/37">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        .qs | QC Hack 量子编程马拉松 - April 18, 2021 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-Popular_GitHub"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/About"><span class="icon-CN_tencent_wechat"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.douban.com/people/Gravitus/"><span class="icon-CN_douban_B"></span></a>
+      </li>
+    
+      <li>
+        <a href="//space.bilibili.com/29132299"><span class="icon-CN_bilibili"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-Popular_RSS"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2021 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted on <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>
