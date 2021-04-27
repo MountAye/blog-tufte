@@ -3,7 +3,7 @@ layout:      post
 title:      ".qs | QC Hack 量子编程马拉松"
 keywords:   "md"
 excerpt:    ""
-date:        2021-04-18
+date:        2021-04-22
 categories:  post
 milestoneID: 37
 ---

@@ -97,7 +97,11 @@ milestoneID: 34
 
 下在之后的安装过程就和一般的程序安装一样（安装很久了，没有截图）。
 
-然后在你想开始写代码的文件夹里，鼠标右键单击，选择 "Open with Code":
+安装完成之后打开程序，点击左侧工具栏红框中的那个图标，搜索 python 的相关 vscode 插件。python 开发一般都需要 `python`, `pylance`, `jupyter` 这三个：
+
+{% maincolumn "assets/photos/2021-03-07-vscode-plugin.png" "" %}
+
+以后要运行 vscode 的时候，在你想开始写代码的文件夹里，鼠标右键单击，选择 "Open with Code":
 
 {% maincolumn "assets/photos/2021-03-07-vscode-folder-open.png" "" %}
 
