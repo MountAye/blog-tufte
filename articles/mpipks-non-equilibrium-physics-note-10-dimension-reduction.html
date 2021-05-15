@@ -7,22 +7,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>.html 转载：为什么俺推荐 Python[0]·概述 | 阿掖山：一个博客</title>
+<title>.mpipks-note 10. Dimension Reduction | 阿掖山：一个博客</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content=".html 转载：为什么俺推荐 Python[0]·概述" />
+<meta property="og:title" content=".mpipks-note 10. Dimension Reduction" />
 <meta name="author" content="MountAye" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="从几个不同的角度来鼓吹一下 Python。" />
-<meta property="og:description" content="从几个不同的角度来鼓吹一下 Python。" />
-<link rel="canonical" href="mountaye.github.io/blog/articles/RP-why-choose-python-0-overview" />
-<meta property="og:url" content="mountaye.github.io/blog/articles/RP-why-choose-python-0-overview" />
+<meta name="description" content="对高维数据的降维打击" />
+<meta property="og:description" content="对高维数据的降维打击" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction" />
 <meta property="og:site_name" content="阿掖山：一个博客" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-02-07T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-05-15T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content=".html 转载：为什么俺推荐 Python[0]·概述" />
+<meta property="twitter:title" content=".mpipks-note 10. Dimension Reduction" />
 <script type="application/ld+json">
-{"headline":".html 转载：为什么俺推荐 Python[0]·概述","dateModified":"2019-02-07T00:00:00+00:00","datePublished":"2019-02-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/RP-why-choose-python-0-overview"},"url":"mountaye.github.io/blog/articles/RP-why-choose-python-0-overview","author":{"@type":"Person","name":"MountAye"},"@type":"BlogPosting","description":"从几个不同的角度来鼓吹一下 Python。","@context":"https://schema.org"}</script>
+{"headline":".mpipks-note 10. Dimension Reduction","dateModified":"2021-05-15T00:00:00+00:00","datePublished":"2021-05-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction"},"url":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction","author":{"@type":"Person","name":"MountAye"},"@type":"BlogPosting","description":"对高维数据的降维打击","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
@@ -42,7 +42,7 @@
   <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
   <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
   <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
-  <link rel="canonical" href="/blog/articles/RP-why-choose-python-0-overview">
+  <link rel="canonical" href="/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction">
   <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
   <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
 </head>
@@ -123,37 +123,162 @@
 
 
 <article class="group post">
-    <h1>.html | 转载：为什么俺推荐 Python[0]·概述</h1>
+    <h1>.mpipks-note | 10. Dimension Reduction</h1>
         <p class="subtitle">
-            February 7, 2019
+            May 15, 2021
         </p>
     <div class="postContent">
-        <p>当初博客开张的时候，原计划在编程语言方面聊聊 C++、Java 和 Python。谁曾想半年多过去了，尚未写过 Python 的帖子。实在是说不过去啊！所以今天赶紧写一篇来凑数。</p>
-
-<p>其实俺接触 Python 的时间，也不算太早（大概是2003年那会儿）。当时看到 Eric Raymond 关于几大编程语言的评价（原文在“这里”，翻译在“这里”），之后又看了他写的《Why Python?》。感觉这位大牛蛮器重 Python 滴，于是俺也就跟风学习了一番。从此一发不可收拾——现在 Python 已然成为俺最常使用的脚本语言了。</p>
-
-<p>接下来，俺就从几个不同的角度来鼓吹一下 Python。假如你从来没有听说过或者从来没用过此语言，听了俺的忽悠之后，或许会有所心动 :-) 假如你觉得俺只不过是 Python 阵营的枪手，发发广告帖，那你就不用再浪费宝贵的时间去看后续的帖子了。</p>
-
-<p>按照俺先前的习惯，会把接下来的内容拆成几个帖子来写……</p>
-
-<p>为了方便阅读，把本系列帖子的目录整理如下（需翻墙）：</p>
-
-<ol>
-  <li><a href="/blog/articles/RP-why-choose-python-1-script">作为脚本语言的 Python</a></li>
-  <li><a href="/blog/articles/RP-why-choose-python-2-dynamic">作为动态语言的 Python</a></li>
-  <li><a href="/blog/articles/RP-why-choose-python-3-oop">作为面向对象语言的 Python</a></li>
-  <li><a href="/blog/articles/RP-why-choose-python-4-fp">作为函数式编程语言的 Python</a></li>
-  <li><a href="/blog/articles/RP-why-choose-python-5-tool">作为瑞士军刀的 Python</a></li>
-  <li>（未完待续）</li>
-</ol>
-
-<blockquote>
-  <p><strong>版权声明</strong></p>
-
-  <p>本博客<label for="blog" class="margin-toggle sidenote-number"></label><input type="checkbox" id="blog" class="margin-toggle" /><span class="sidenote">指编程随想的博客 </span>所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者编程随想和本文原始地址：<br /></p>
-
-  <p><a href="https://program-think.blogspot.com/2009/08/why-choose-python-0-overview.html">https://program-think.blogspot.com/2009/08/why-choose-python-0-overview.html</a></p>
+        <blockquote>
+  <p>第十讲是由校外邀请来的嘉宾来讲数据降维，所以课程网站上没有课件。时间轴和语音转录相对来说不那么有意义了。所以在听课的过程中做了如下笔记。</p>
 </blockquote>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li>High dimensinoal data</li>
+  <li>Dimensionality Reduction Methods</li>
+  <li>Clustering (a discrete form of reduction)</li>
+</ul>
+
+<h2 id="high-dimensional-data">High Dimensional Data</h2>
+
+<p>data matrix X:n*m.</p>
+
+<p>n samples as rows, m columns as observables</p>
+
+<p>How to visualize?</p>
+<ul>
+  <li>m=1: list</li>
+  <li>m=2: x-y plot</li>
+</ul>
+
+<p><strong>Aim of dimension reduction: reduce the number of observables, while keeping relevant information.</strong></p>
+
+<h3 id="examples">Examples</h3>
+
+<p>Ferromagnetic Ising model of a 28*28 lattice, 50,000 samples. The 1st principal component scales with the magnetization.</p>
+
+<p>500,000 DNA sites of 3,000 humans. Projections onto the first 2 principal components givees a rough map of Europe</p>
+
+<p>Fashion MNIST: 60,000 pictures of 784 (28*28) pixels. UMAP projections onto 2 dimensions</p>
+
+<h2 id="linear-dimension-reduction">Linear dimension reduction</h2>
+
+<ul>
+  <li>Principal component analysis</li>
+  <li>Non-negative matrix factorization</li>
+  <li>Independent component analysis</li>
+  <li>Factor analysis</li>
+</ul>
+
+<h3 id="principal-component-analysis">Principal component analysis</h3>
+
+<p>change of basis</p>
+
+<p><strong>Aim:</strong> to find a transformation such that</p>
+<ul>
+  <li>the components are uncorrelated</li>
+  <li>ordered by the explained variability</li>
+</ul>
+
+<p><strong>Math</strong>:</p>
+
+<p>\(X^T X\) is a \(m \times m\) matrix. Eigen-decomposition gives \((\lambda,W)\) where \(W\)’s columns are eigen vectors sorted by \(\lambda\)</p>
+
+<p>\(T = X \cdot W\) where  \(T\) is the score onto principal components, and \(T^TT\) is diagonal</p>
+
+<p>\(T_r = X \cdot W_r\) where \(W_r\) is a n*r matrix of the first r components</p>
+
+<p><strong>Practice In <code class="language-plaintext highlighter-rouge">R</code></strong>:</p>
+
+<ul>
+  <li>Iris Dataset</li>
+  <li>Pitures of Objects at Different Angles:</li>
+  <li>Swiss Roll: the transformed data almost have the same structure as the original data. This shows the limit of PCA due to linearity</li>
+</ul>
+
+<p><a href="">wikipedia - Nonlinear_dimensionality_reduction</a></p>
+
+<h3 id="umap-uniform-manifold-approximation">UMAP: uniform manifold approximation</h3>
+
+<p><strong>Assumptions</strong>:</p>
+<ul>
+  <li>uniformed distributeed on Riemann manifold</li>
+  <li>Riemann metric is locally constant</li>
+  <li>The manifold is locally conncected</li>
+</ul>
+
+<p><strong>Results</strong>:</p>
+<ul>
+  <li>models the manifold with a fuzzy topological structure</li>
+  <li>finds low dimensional projection of the data that has the cloest possible equivalent fuzzy topological structure</li>
+</ul>
+
+<p><strong>Simplex</strong>
+0-simplex: dot
+1-simplex: line
+2-simplex: triangle
+3-simplex: 正四面体</p>
+
+<p><strong>Problem</strong>:</p>
+
+<p>When the uniform distribution is not met, the result may not be what we like. To circumvent this, we need to define the local metric with the nearest neighbours.</p>
+
+<p><strong>Finding a low dimensional representation</strong></p>
+<ul>
+  <li>derive similar fuzzy topological representation of a low dimensional representation</li>
+  <li>interpret edge weight s as proba</li>
+  <li>minimize cross entropy</li>
+  <li><a href="pair-code.github.com/understand_umap">pair-code.github.io/understand_umap</a></li>
+</ul>
+
+<p><strong>Practice in <code class="language-plaintext highlighter-rouge">R</code></strong></p>
+<ul>
+  <li>Swiss Roll becomes a 2-d ring</li>
+  <li>Pictures at different angles are well seperated</li>
+</ul>
+
+<h2 id="clustering">Clustering</h2>
+
+<h3 id="hierarchiral-clustering">hierarchiral clustering</h3>
+<ul>
+  <li>metric</li>
+  <li>linkage criterion / distance between clusters</li>
+</ul>
+
+<h3 id="centroid-base-clustering-k-means">centroid base clustering (k-means)</h3>
+<ul>
+  <li>pre-specify number of clusters, k</li>
+  <li>partition the data such that the squared distance to cluster mean position is minimal</li>
+  <li>Lloyd algorithm
+    <ul>
+      <li>start with random centers</li>
+      <li>assign data to neatest center</li>
+      <li>compute new centers</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="graph-based-clustering">graph based-clustering</h3>
+<ul>
+  <li>graph representation of data</li>
+  <li>partition the data such that modularity Q is optimized</li>
+  <li>\(Q = \sum_{i=1}^c e_{ii}-\gamma {a_i}^2, a_i = \sum_{j-1}^c e_{ij}\).
+    <ul>
+      <li>\(e_{ij}\): fraction of links between cluster i and j</li>
+      <li>\(\gamma\): resulution</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+
+<p>Question: How to identify order in high-dimensinoal data?</p>
+<ul>
+  <li>dimensionality reductuon to visualize high-dimensional data and to identify macroscopic observables</li>
+  <li>clustering to identify discrete order in high dimensional data</li>
+  <li>methods to se depending on the problem at hand</li>
+</ul>
 
     </div>
     <hr class="slender">
@@ -162,7 +287,7 @@
     <h2>读者评论</h2>
     <script type="text/javascript">
         // Global Variables
-        var milestoneID = 2;
+        var milestoneID = 40;
         var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
         var json; // OBJECT, get changed by side effects
         var iIssue = 0; // INTEGER
@@ -279,7 +404,7 @@
     <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
     
     <div id="commentIntro">
-        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/2">进行评论</a>。</p>
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/40">进行评论</a>。</p>
     </div>
     <div id="commentContent"></div>
 </section>
@@ -290,7 +415,7 @@
 
         <span class="print-footer">
     
-        .html | 转载：为什么俺推荐 Python[0]·概述 - February 7, 2019 - MountAye
+        .mpipks-note | 10. Dimension Reduction - May 15, 2021 - MountAye
 </span>
     
         <footer>

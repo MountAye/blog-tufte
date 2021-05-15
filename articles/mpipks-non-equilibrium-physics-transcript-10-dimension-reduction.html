@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>.mpipks-transcript 10. Dimension Reduction | 阿掖山：一个博客</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content=".mpipks-transcript 10. Dimension Reduction" />
+<meta name="author" content="MountAye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="这一讲由嘉宾给出，官网没有课件。所以不再做课件帧数的标记了。作为替代，随堂做了笔记，参见[笔记部分]" />
+<meta property="og:description" content="这一讲由嘉宾给出，官网没有课件。所以不再做课件帧数的标记了。作为替代，随堂做了笔记，参见[笔记部分]" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-10-dimension-reduction" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-10-dimension-reduction" />
+<meta property="og:site_name" content="阿掖山：一个博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content=".mpipks-transcript 10. Dimension Reduction" />
+<script type="application/ld+json">
+{"headline":".mpipks-transcript 10. Dimension Reduction","dateModified":"2021-05-14T00:00:00+00:00","datePublished":"2021-05-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-10-dimension-reduction"},"url":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-transcript-10-dimension-reduction","author":{"@type":"Person","name":"MountAye"},"@type":"BlogPosting","description":"这一讲由嘉宾给出，官网没有课件。所以不再做课件帧数的标记了。作为替代，随堂做了笔记，参见[笔记部分]","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+  
+    <link rel="stylesheet" type="text/css" href="/blog/css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/font-awesome.css">    
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/mpipks-non-equilibrium-physics-transcript-10-dimension-reduction">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">If you enable JavaScript on this site, you'll see a random quotation here.</span><br>
+        ——<span id="quoteAuthor">Welcome to this blog</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">Home</a>
+        
+  	
+        
+            <a href="/blog/History/">History</a>
+        
+  	
+        
+            <a href="/blog/Topics/">Topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">Links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">Comments</a>
+        
+  	
+        
+            <a href="/blog/About/">About</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>.mpipks-transcript | 10. Dimension Reduction</h1>
+        <p class="subtitle">
+            May 14, 2021
+        </p>
+    <div class="postContent">
+        <blockquote>
+  <p>这一讲由嘉宾给出，官网没有课件。所以不再做课件帧数的标记了。作为替代，随堂做了笔记，参见<a href="/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction">笔记部分</a>。</p>
+</blockquote>
+
+<p><br /><code class="language-plaintext highlighter-rouge">00:07</code> okay so let’s
+<br /><code class="language-plaintext highlighter-rouge">00:08</code> uh let’s join uh so welcome
+<br /><code class="language-plaintext highlighter-rouge">00:12</code> to our uh lecture again now to this uh
+<br /><code class="language-plaintext highlighter-rouge">00:16</code> today we have a special guest as we uh
+<br /><code class="language-plaintext highlighter-rouge">00:19</code> which is fabian
+<br /><code class="language-plaintext highlighter-rouge">00:21</code> ross that you see on the other window
+<br /><code class="language-plaintext highlighter-rouge">00:23</code> and as you remember
+<br /><code class="language-plaintext highlighter-rouge">00:25</code> uh we before christmas we introduced uh
+<br /><code class="language-plaintext highlighter-rouge">00:28</code> theoretical physics concepts that
+<br /><code class="language-plaintext highlighter-rouge">00:30</code> explain how order emerges
+<br /><code class="language-plaintext highlighter-rouge">00:33</code> in non-equilibrium systems and then last
+<br /><code class="language-plaintext highlighter-rouge">00:36</code> week i started
+<br /><code class="language-plaintext highlighter-rouge">00:37</code> introducing some basic tools
+<br /><code class="language-plaintext highlighter-rouge">00:40</code> from data science namely what are the
+<br /><code class="language-plaintext highlighter-rouge">00:43</code> tools that we can use
+<br /><code class="language-plaintext highlighter-rouge">00:45</code> to computationally deal with large
+<br /><code class="language-plaintext highlighter-rouge">00:48</code> amounts of data
+<br /><code class="language-plaintext highlighter-rouge">00:50</code> and today so i need some special help
+<br /><code class="language-plaintext highlighter-rouge">00:53</code> from somebody who’s a real expert
+<br /><code class="language-plaintext highlighter-rouge">00:56</code> which is far beyond you know fabian is a
+<br /><code class="language-plaintext highlighter-rouge">00:59</code> trained
+<br /><code class="language-plaintext highlighter-rouge">01:00</code> uh physicist and did a phd in
+<br /><code class="language-plaintext highlighter-rouge">01:02</code> mathematical biology
+<br /><code class="language-plaintext highlighter-rouge">01:04</code> i then did a postdoc in my group at the
+<br /><code class="language-plaintext highlighter-rouge">01:07</code> max plain institute in dresden and now
+<br /><code class="language-plaintext highlighter-rouge">01:10</code> he’s a professional
+<br /><code class="language-plaintext highlighter-rouge">01:12</code> uh data scientist and bioinformatician
+<br /><code class="language-plaintext highlighter-rouge">01:16</code> at the center for regenerative therapies
+<br /><code class="language-plaintext highlighter-rouge">01:18</code> in dresden
+<br /><code class="language-plaintext highlighter-rouge">01:20</code> and so he’s talking actually about
+<br /><code class="language-plaintext highlighter-rouge">01:21</code> something that he’s uh
+<br /><code class="language-plaintext highlighter-rouge">01:23</code> doing for his professional job which is
+<br /><code class="language-plaintext highlighter-rouge">01:25</code> very nice
+<br /><code class="language-plaintext highlighter-rouge">01:26</code> and uh over to you fabian thanks a lot
+<br /><code class="language-plaintext highlighter-rouge">01:29</code> for
+<br /><code class="language-plaintext highlighter-rouge">01:30</code> for sharing your expertise yeah
+<br /><code class="language-plaintext highlighter-rouge">01:33</code> thanks thanks for having me here uh for
+<br /><code class="language-plaintext highlighter-rouge">01:36</code> giving miss
+<br /><code class="language-plaintext highlighter-rouge">01:37</code> uh giving me this opportunity so to give
+<br /><code class="language-plaintext highlighter-rouge">01:39</code> a lecture on
+<br /><code class="language-plaintext highlighter-rouge">01:40</code> exploring high dimensional data so i
+<br /><code class="language-plaintext highlighter-rouge">01:42</code> think uh stefan
+<br /><code class="language-plaintext highlighter-rouge">01:44</code> introduced me very well thank you very
+<br /><code class="language-plaintext highlighter-rouge">01:47</code> much and
+<br /><code class="language-plaintext highlighter-rouge">01:48</code> and also made the point of where we are
+<br /><code class="language-plaintext highlighter-rouge">01:51</code> in the course
+<br /><code class="language-plaintext highlighter-rouge">01:53</code> so i just wanted to ask you i just would
+<br /><code class="language-plaintext highlighter-rouge">01:56</code> uh to say that uh whenever you
+<br /><code class="language-plaintext highlighter-rouge">01:58</code> uh wanna ask something i think during
+<br /><code class="language-plaintext highlighter-rouge">02:00</code> the course you just like uh unmuted
+<br /><code class="language-plaintext highlighter-rouge">02:01</code> yourself and ask the question so that’s
+<br /><code class="language-plaintext highlighter-rouge">02:03</code> totally fine to me also
+<br /><code class="language-plaintext highlighter-rouge">02:05</code> type something in the chat and i try to
+<br /><code class="language-plaintext highlighter-rouge">02:07</code> try to answer and then uh
+<br /><code class="language-plaintext highlighter-rouge">02:09</code> like if you’re not saying anything uh
+<br /><code class="language-plaintext highlighter-rouge">02:11</code> please mute yourself to reduce noise
+<br /><code class="language-plaintext highlighter-rouge">02:14</code> um
+<br /><code class="language-plaintext highlighter-rouge">02:18</code> all right so um okay i’m
+<br /><code class="language-plaintext highlighter-rouge">02:22</code> i’m going to start right away
+<br /><code class="language-plaintext highlighter-rouge">02:25</code> um so today will be about um exploring
+<br /><code class="language-plaintext highlighter-rouge">02:29</code> uh high dimensional data
+<br /><code class="language-plaintext highlighter-rouge">02:30</code> right and as many of you
+<br /><code class="language-plaintext highlighter-rouge">02:34</code> know with a high dimensional and in high
+<br /><code class="language-plaintext highlighter-rouge">02:36</code> dimensions
+<br /><code class="language-plaintext highlighter-rouge">02:37</code> strange things can happen so if you for
+<br /><code class="language-plaintext highlighter-rouge">02:39</code> instance look at this thing here what
+<br /><code class="language-plaintext highlighter-rouge">02:41</code> you see here is a three-dimensional
+<br /><code class="language-plaintext highlighter-rouge">02:42</code> projection
+<br /><code class="language-plaintext highlighter-rouge">02:43</code> of a four-dimensional object rotating
+<br /><code class="language-plaintext highlighter-rouge">02:46</code> and this
+<br /><code class="language-plaintext highlighter-rouge">02:47</code> looks very funny right and i mean like
+<br /><code class="language-plaintext highlighter-rouge">02:49</code> four dimensions is where we kind of
+<br /><code class="language-plaintext highlighter-rouge">02:51</code> still can kind of get a glimpse but but
+<br /><code class="language-plaintext highlighter-rouge">02:53</code> what if it gets to
+<br /><code class="language-plaintext highlighter-rouge">02:54</code> thousands or millions of dimensions what
+<br /><code class="language-plaintext highlighter-rouge">02:56</code> do we do with these kind of data
+<br /><code class="language-plaintext highlighter-rouge">02:59</code> um so before i start
+<br /><code class="language-plaintext highlighter-rouge">03:02</code> uh let me let me give you a brief
+<br /><code class="language-plaintext highlighter-rouge">03:04</code> structure of the course
+<br /><code class="language-plaintext highlighter-rouge">03:06</code> today of the lecture um
+<br /><code class="language-plaintext highlighter-rouge">03:18</code> might have to click into the window
+<br /><code class="language-plaintext highlighter-rouge">03:21</code> no i actually want to share okay
+<br /><code class="language-plaintext highlighter-rouge">03:25</code> my ipod screen yes sorry for the delay
+<br /><code class="language-plaintext highlighter-rouge">03:29</code> um all right so so i basically start
+<br /><code class="language-plaintext highlighter-rouge">03:33</code> by introducing what i mean by high
+<br /><code class="language-plaintext highlighter-rouge">03:35</code> dimensional data
+<br /><code class="language-plaintext highlighter-rouge">03:41</code> um i will then
+<br /><code class="language-plaintext highlighter-rouge">03:44</code> cover two dimension
+<br /><code class="language-plaintext highlighter-rouge">03:48</code> dimensionality reduction methods
+<br /><code class="language-plaintext highlighter-rouge">03:51</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">03:58</code> and also talk a bit like what’s the idea
+<br /><code class="language-plaintext highlighter-rouge">04:01</code> of of
+<br /><code class="language-plaintext highlighter-rouge">04:01</code> reducing dimensions and third if we
+<br /><code class="language-plaintext highlighter-rouge">04:04</code> still have time i’ll talk a little bit
+<br /><code class="language-plaintext highlighter-rouge">04:06</code> about
+<br /><code class="language-plaintext highlighter-rouge">04:06</code> clustering which we kind of can think of
+<br /><code class="language-plaintext highlighter-rouge">04:08</code> as a discrete form of dimensionality
+<br /><code class="language-plaintext highlighter-rouge">04:11</code> reduction i’d say
+<br /><code class="language-plaintext highlighter-rouge">04:13</code> so what do i mean by high dimensional
+<br /><code class="language-plaintext highlighter-rouge">04:16</code> data
+<br /><code class="language-plaintext highlighter-rouge">04:18</code> well let’s let’s start with an object
+<br /><code class="language-plaintext highlighter-rouge">04:21</code> that i call a data matrix
+<br /><code class="language-plaintext highlighter-rouge">04:28</code> um x which is of shape n by m
+<br /><code class="language-plaintext highlighter-rouge">04:41</code> and maybe you remember from last week um
+<br /><code class="language-plaintext highlighter-rouge">04:45</code> tidy data formats so this um uh
+<br /><code class="language-plaintext highlighter-rouge">04:49</code> matrix should be in a tidy format
+<br /><code class="language-plaintext highlighter-rouge">04:50</code> already so in the rows we have
+<br /><code class="language-plaintext highlighter-rouge">04:52</code> n samples
+<br /><code class="language-plaintext highlighter-rouge">04:57</code> and in the columns we have m
+<br /><code class="language-plaintext highlighter-rouge">04:59</code> measurements or observables
+<br /><code class="language-plaintext highlighter-rouge">05:08</code> um so what do i mean by this so so an
+<br /><code class="language-plaintext highlighter-rouge">05:11</code> example could be what you what you
+<br /><code class="language-plaintext highlighter-rouge">05:12</code> measure here is for instance you um
+<br /><code class="language-plaintext highlighter-rouge">05:15</code> uh take a uh take yourself right and you
+<br /><code class="language-plaintext highlighter-rouge">05:19</code> measure for instance the length of your
+<br /><code class="language-plaintext highlighter-rouge">05:21</code> thumb and the length of your index
+<br /><code class="language-plaintext highlighter-rouge">05:22</code> finger and the length of your middle
+<br /><code class="language-plaintext highlighter-rouge">05:24</code> finger and so on you do the same thing
+<br /><code class="language-plaintext highlighter-rouge">05:26</code> on there
+<br /><code class="language-plaintext highlighter-rouge">05:26</code> with the other hand you measure your
+<br /><code class="language-plaintext highlighter-rouge">05:28</code> foot size your body height
+<br /><code class="language-plaintext highlighter-rouge">05:30</code> maybe uh the heartbeat rate and so on
+<br /><code class="language-plaintext highlighter-rouge">05:32</code> and and uh
+<br /><code class="language-plaintext highlighter-rouge">05:33</code> you end up gathering more and more
+<br /><code class="language-plaintext highlighter-rouge">05:35</code> observables
+<br /><code class="language-plaintext highlighter-rouge">05:38</code> and that’s m observables and this gives
+<br /><code class="language-plaintext highlighter-rouge">05:40</code> us the dimensionality of our data
+<br /><code class="language-plaintext highlighter-rouge">05:44</code> um and now you can do this with yourself
+<br /><code class="language-plaintext highlighter-rouge">05:47</code> and you can do this well you can ask
+<br /><code class="language-plaintext highlighter-rouge">05:49</code> your friends to do it with them and so
+<br /><code class="language-plaintext highlighter-rouge">05:50</code> on and then
+<br /><code class="language-plaintext highlighter-rouge">05:52</code> you can maybe do it with all people in
+<br /><code class="language-plaintext highlighter-rouge">05:55</code> asia all over the world and this uh
+<br /><code class="language-plaintext highlighter-rouge">05:57</code> gives you the number of samples that you
+<br /><code class="language-plaintext highlighter-rouge">05:58</code> have right
+<br /><code class="language-plaintext highlighter-rouge">06:00</code> um now how do you how do you treat these
+<br /><code class="language-plaintext highlighter-rouge">06:04</code> this kind of data right if we go one
+<br /><code class="language-plaintext highlighter-rouge">06:06</code> step back
+<br /><code class="language-plaintext highlighter-rouge">06:07</code> and uh think about how how can we
+<br /><code class="language-plaintext highlighter-rouge">06:10</code> visualize
+<br /><code class="language-plaintext highlighter-rouge">06:11</code> and uh stephan uploaded some slides on
+<br /><code class="language-plaintext highlighter-rouge">06:14</code> that and and maybe we’ll also talk on
+<br /><code class="language-plaintext highlighter-rouge">06:16</code> that a little bit but
+<br /><code class="language-plaintext highlighter-rouge">06:18</code> what can we what can we actually
+<br /><code class="language-plaintext highlighter-rouge">06:20</code> visualize easily
+<br /><code class="language-plaintext highlighter-rouge">06:22</code> um
+<br /><code class="language-plaintext highlighter-rouge">06:28</code> so if you uh if you would have one
+<br /><code class="language-plaintext highlighter-rouge">06:31</code> dimensional data right that’s rather
+<br /><code class="language-plaintext highlighter-rouge">06:33</code> easy right
+<br /><code class="language-plaintext highlighter-rouge">06:34</code> you you can um just uh plot your data
+<br /><code class="language-plaintext highlighter-rouge">06:38</code> on a one-dimensional line for instance
+<br /><code class="language-plaintext highlighter-rouge">06:40</code> and also
+<br /><code class="language-plaintext highlighter-rouge">06:41</code> for two dimensions
+<br /><code class="language-plaintext highlighter-rouge">06:45</code> um i think this is pretty
+<br /><code class="language-plaintext highlighter-rouge">06:47</code> straightforward right
+<br /><code class="language-plaintext highlighter-rouge">06:49</code> um so if this would be the
+<br /><code class="language-plaintext highlighter-rouge">06:53</code> entries of our data matrix x1 x2
+<br /><code class="language-plaintext highlighter-rouge">06:57</code> um we can just plot them as a scatter
+<br /><code class="language-plaintext highlighter-rouge">07:00</code> plot right
+<br /><code class="language-plaintext highlighter-rouge">07:02</code> and we could for instance see whether
+<br /><code class="language-plaintext highlighter-rouge">07:03</code> they are correlated or not
+<br /><code class="language-plaintext highlighter-rouge">07:05</code> but um as soon as we are like
+<br /><code class="language-plaintext highlighter-rouge">07:08</code> in in three dimensions or larger like
+<br /><code class="language-plaintext highlighter-rouge">07:10</code> three dimensions we can still
+<br /><code class="language-plaintext highlighter-rouge">07:11</code> handle we can do a three-dimensional
+<br /><code class="language-plaintext highlighter-rouge">07:13</code> plot maybe but this is still
+<br /><code class="language-plaintext highlighter-rouge">07:15</code> hard to quantify um this this gets um
+<br /><code class="language-plaintext highlighter-rouge">07:19</code> this gets uh non-trivial right and so we
+<br /><code class="language-plaintext highlighter-rouge">07:22</code> need techniques to
+<br /><code class="language-plaintext highlighter-rouge">07:24</code> to uh think about how to actually look
+<br /><code class="language-plaintext highlighter-rouge">07:26</code> at these data and how to analyze these
+<br /><code class="language-plaintext highlighter-rouge">07:28</code> data so
+<br /><code class="language-plaintext highlighter-rouge">07:30</code> the aim of dimensionality reduction then
+<br /><code class="language-plaintext highlighter-rouge">07:35</code> i’d say is to reduce the number of
+<br /><code class="language-plaintext highlighter-rouge">07:42</code> observables
+<br /><code class="language-plaintext highlighter-rouge">07:50</code> while keeping
+<br /><code class="language-plaintext highlighter-rouge">07:57</code> relevant information
+<br /><code class="language-plaintext highlighter-rouge">08:04</code> and what this relevant information is
+<br /><code class="language-plaintext highlighter-rouge">08:06</code> right this is something uh
+<br /><code class="language-plaintext highlighter-rouge">08:08</code> you you have to decide by the problem at
+<br /><code class="language-plaintext highlighter-rouge">08:11</code> hand
+<br /><code class="language-plaintext highlighter-rouge">08:12</code> um now um
+<br /><code class="language-plaintext highlighter-rouge">08:15</code> before i go
+<br /><code class="language-plaintext highlighter-rouge">08:18</code> into talking about how you can reduce
+<br /><code class="language-plaintext highlighter-rouge">08:21</code> dimensionality
+<br /><code class="language-plaintext highlighter-rouge">08:22</code> i wanted to show you some examples
+<br /><code class="language-plaintext highlighter-rouge">08:26</code> so i’ll share some slides for this
+<br /><code class="language-plaintext highlighter-rouge">08:33</code> um and so
+<br /><code class="language-plaintext highlighter-rouge">08:37</code> i think as many physicists are in the
+<br /><code class="language-plaintext highlighter-rouge">08:39</code> audience one example i wanted to share
+<br /><code class="language-plaintext highlighter-rouge">08:41</code> something
+<br /><code class="language-plaintext highlighter-rouge">08:41</code> that i think many of you are already
+<br /><code class="language-plaintext highlighter-rouge">08:44</code> know
+<br /><code class="language-plaintext highlighter-rouge">08:45</code> which is um where we know where many of
+<br /><code class="language-plaintext highlighter-rouge">08:48</code> you know that a
+<br /><code class="language-plaintext highlighter-rouge">08:49</code> low number of observables actually
+<br /><code class="language-plaintext highlighter-rouge">08:51</code> suffice to to describe the system very
+<br /><code class="language-plaintext highlighter-rouge">08:53</code> well and that’s in the realm of
+<br /><code class="language-plaintext highlighter-rouge">08:54</code> statistical physics and you
+<br /><code class="language-plaintext highlighter-rouge">08:56</code> saw a lot of uh examples from stefan by
+<br /><code class="language-plaintext highlighter-rouge">08:58</code> that
+<br /><code class="language-plaintext highlighter-rouge">08:59</code> but even in a rather easy example like
+<br /><code class="language-plaintext highlighter-rouge">09:01</code> an and paramagnetic
+<br /><code class="language-plaintext highlighter-rouge">09:03</code> iso model right you know that there’s uh
+<br /><code class="language-plaintext highlighter-rouge">09:07</code> there’s many many spins in this system
+<br /><code class="language-plaintext highlighter-rouge">09:09</code> right and imagine you could measure all
+<br /><code class="language-plaintext highlighter-rouge">09:11</code> these spins
+<br /><code class="language-plaintext highlighter-rouge">09:12</code> um you have a very high dimensional
+<br /><code class="language-plaintext highlighter-rouge">09:15</code> representation of the state of the
+<br /><code class="language-plaintext highlighter-rouge">09:17</code> system then
+<br /><code class="language-plaintext highlighter-rouge">09:18</code> but many of these spins will be
+<br /><code class="language-plaintext highlighter-rouge">09:20</code> correlated and we know from statistical
+<br /><code class="language-plaintext highlighter-rouge">09:22</code> physics that actually you can
+<br /><code class="language-plaintext highlighter-rouge">09:24</code> very well describe the microscopic state
+<br /><code class="language-plaintext highlighter-rouge">09:26</code> of such a system
+<br /><code class="language-plaintext highlighter-rouge">09:27</code> with just the magnetization
+<br /><code class="language-plaintext highlighter-rouge">09:30</code> now what will happen if we come from the
+<br /><code class="language-plaintext highlighter-rouge">09:32</code> other side from the data science
+<br /><code class="language-plaintext highlighter-rouge">09:34</code> perspective and that’s a
+<br /><code class="language-plaintext highlighter-rouge">09:36</code> paper here an archive by sebastian
+<br /><code class="language-plaintext highlighter-rouge">09:38</code> vetzel and what he did was
+<br /><code class="language-plaintext highlighter-rouge">09:40</code> um he
+<br /><code class="language-plaintext highlighter-rouge">09:44</code> did a simulation of a ferromagnetic
+<br /><code class="language-plaintext highlighter-rouge">09:46</code> icing model on a 28 by 28 letters
+<br /><code class="language-plaintext highlighter-rouge">09:49</code> at different temperatures and so 28 by
+<br /><code class="language-plaintext highlighter-rouge">09:52</code> 28 gives
+<br /><code class="language-plaintext highlighter-rouge">09:53</code> you 784 spins right and we he recorded
+<br /><code class="language-plaintext highlighter-rouge">09:57</code> the state of all these spins and 50 000
+<br /><code class="language-plaintext highlighter-rouge">09:59</code> different samples at different
+<br /><code class="language-plaintext highlighter-rouge">10:00</code> temperatures
+<br /><code class="language-plaintext highlighter-rouge">10:02</code> and now you have a data matrix with 784
+<br /><code class="language-plaintext highlighter-rouge">10:04</code> dimensions right and then you can start
+<br /><code class="language-plaintext highlighter-rouge">10:07</code> to
+<br /><code class="language-plaintext highlighter-rouge">10:07</code> say okay if i just would have this
+<br /><code class="language-plaintext highlighter-rouge">10:10</code> matrix and i wouldn’t know nothing about
+<br /><code class="language-plaintext highlighter-rouge">10:11</code> the system how can i look for order in
+<br /><code class="language-plaintext highlighter-rouge">10:14</code> this system and how can i reduce
+<br /><code class="language-plaintext highlighter-rouge">10:15</code> dimension and one of these techniques is
+<br /><code class="language-plaintext highlighter-rouge">10:18</code> called principal components analysis and
+<br /><code class="language-plaintext highlighter-rouge">10:20</code> i’ll explain later what this actually is
+<br /><code class="language-plaintext highlighter-rouge">10:22</code> but if you do this you get a result like
+<br /><code class="language-plaintext highlighter-rouge">10:24</code> this the first principal component
+<br /><code class="language-plaintext highlighter-rouge">10:27</code> which is a one-dimensional
+<br /><code class="language-plaintext highlighter-rouge">10:28</code> representation of of this
+<br /><code class="language-plaintext highlighter-rouge">10:31</code> high-dimensional data matrix perfectly
+<br /><code class="language-plaintext highlighter-rouge">10:33</code> scales with the magnetization
+<br /><code class="language-plaintext highlighter-rouge">10:35</code> so in this way you would actually be
+<br /><code class="language-plaintext highlighter-rouge">10:37</code> able to kind of discover
+<br /><code class="language-plaintext highlighter-rouge">10:39</code> an order parameter without knowing
+<br /><code class="language-plaintext highlighter-rouge">10:42</code> anything about the system
+<br /><code class="language-plaintext highlighter-rouge">10:43</code> by having detailed microscopic data of
+<br /><code class="language-plaintext highlighter-rouge">10:45</code> the system
+<br /><code class="language-plaintext highlighter-rouge">10:47</code> so this is rather an artificial example
+<br /><code class="language-plaintext highlighter-rouge">10:50</code> right because we know very well but how
+<br /><code class="language-plaintext highlighter-rouge">10:52</code> how an ising model is behaved but what
+<br /><code class="language-plaintext highlighter-rouge">10:54</code> about
+<br /><code class="language-plaintext highlighter-rouge">10:55</code> systems where we don’t really know how
+<br /><code class="language-plaintext highlighter-rouge">10:57</code> they work for instance humans
+<br /><code class="language-plaintext highlighter-rouge">11:00</code> um so this is a paper from nature in
+<br /><code class="language-plaintext highlighter-rouge">11:02</code> 2008
+<br /><code class="language-plaintext highlighter-rouge">11:04</code> last authors bustamante and
+<br /><code class="language-plaintext highlighter-rouge">11:07</code> what they did was they quantified human
+<br /><code class="language-plaintext highlighter-rouge">11:09</code> dna
+<br /><code class="language-plaintext highlighter-rouge">11:10</code> so they took 3 000 european humans
+<br /><code class="language-plaintext highlighter-rouge">11:14</code> and now you can imagine that the dna is
+<br /><code class="language-plaintext highlighter-rouge">11:18</code> a long string of
+<br /><code class="language-plaintext highlighter-rouge">11:19</code> characters right and and to a large part
+<br /><code class="language-plaintext highlighter-rouge">11:22</code> these this is conserved from one human
+<br /><code class="language-plaintext highlighter-rouge">11:25</code> to
+<br /><code class="language-plaintext highlighter-rouge">11:25</code> an to another human so the dna will be
+<br /><code class="language-plaintext highlighter-rouge">11:28</code> pretty much the same
+<br /><code class="language-plaintext highlighter-rouge">11:29</code> but at some positions we have variations
+<br /><code class="language-plaintext highlighter-rouge">11:31</code> right the dna from one human to another
+<br /><code class="language-plaintext highlighter-rouge">11:33</code> is not exactly the same and at half a
+<br /><code class="language-plaintext highlighter-rouge">11:35</code> million positions
+<br /><code class="language-plaintext highlighter-rouge">11:37</code> the orthos quantified the dna state
+<br /><code class="language-plaintext highlighter-rouge">11:40</code> and so this gives you a a a data set
+<br /><code class="language-plaintext highlighter-rouge">11:43</code> with a dimension of half a million
+<br /><code class="language-plaintext highlighter-rouge">11:45</code> approximately for 3 000 humans and then
+<br /><code class="language-plaintext highlighter-rouge">11:48</code> they did the dimensionality reduction
+<br /><code class="language-plaintext highlighter-rouge">11:49</code> and again they did a
+<br /><code class="language-plaintext highlighter-rouge">11:51</code> principal component analysis and this is
+<br /><code class="language-plaintext highlighter-rouge">11:53</code> a two-dimensional representation of this
+<br /><code class="language-plaintext highlighter-rouge">11:55</code> high dimensional data set
+<br /><code class="language-plaintext highlighter-rouge">11:57</code> and what i want to ask you now is to
+<br /><code class="language-plaintext highlighter-rouge">12:00</code> look at the picture and you don’t
+<br /><code class="language-plaintext highlighter-rouge">12:01</code> yet have to understand what the
+<br /><code class="language-plaintext highlighter-rouge">12:03</code> principal components mean but i i want
+<br /><code class="language-plaintext highlighter-rouge">12:05</code> to ask you to type in the ted
+<br /><code class="language-plaintext highlighter-rouge">12:07</code> in the chat if you can what you see in
+<br /><code class="language-plaintext highlighter-rouge">12:10</code> this picture
+<br /><code class="language-plaintext highlighter-rouge">12:23</code> it’s a very difficult or very shy
+<br /><code class="language-plaintext highlighter-rouge">12:25</code> audience
+<br /><code class="language-plaintext highlighter-rouge">12:30</code> what does it look like it look
+<br /><code class="language-plaintext highlighter-rouge">12:33</code> if the meat looks like an elephant
+<br /><code class="language-plaintext highlighter-rouge">12:38</code> it is a scatter plot yes and uh we see
+<br /><code class="language-plaintext highlighter-rouge">12:41</code> some clusters yes
+<br /><code class="language-plaintext highlighter-rouge">12:43</code> there’s also uh some sensible answers
+<br /><code class="language-plaintext highlighter-rouge">12:47</code> yes and it’s actually um uh the uh
+<br /><code class="language-plaintext highlighter-rouge">12:53</code> now i don’t see my mouse anymore i think
+<br /><code class="language-plaintext highlighter-rouge">12:57</code> adolfo got it right
+<br /><code class="language-plaintext highlighter-rouge">12:58</code> yes i don’t forgot it right it’s already
+<br /><code class="language-plaintext highlighter-rouge">13:00</code> the second answer
+<br /><code class="language-plaintext highlighter-rouge">13:01</code> um it resembles a map of europe and
+<br /><code class="language-plaintext highlighter-rouge">13:09</code> that’s exactly what the title of the
+<br /><code class="language-plaintext highlighter-rouge">13:11</code> paper was uh jeans mirrored geography
+<br /><code class="language-plaintext highlighter-rouge">13:13</code> within europe right so
+<br /><code class="language-plaintext highlighter-rouge">13:15</code> this was uh i think it’s quite amazing
+<br /><code class="language-plaintext highlighter-rouge">13:17</code> so you just
+<br /><code class="language-plaintext highlighter-rouge">13:18</code> record the dna of humans right
+<br /><code class="language-plaintext highlighter-rouge">13:21</code> and basically this gives you a map of
+<br /><code class="language-plaintext highlighter-rouge">13:24</code> europe
+<br /><code class="language-plaintext highlighter-rouge">13:25</code> approximately it kind of makes sense
+<br /><code class="language-plaintext highlighter-rouge">13:26</code> right that the genes are
+<br /><code class="language-plaintext highlighter-rouge">13:28</code> like um uh like um
+<br /><code class="language-plaintext highlighter-rouge">13:31</code> well somewhat remain local
+<br /><code class="language-plaintext highlighter-rouge">13:36</code> um so here’s another example
+<br /><code class="language-plaintext highlighter-rouge">13:40</code> um there’s a very i’d say maybe
+<br /><code class="language-plaintext highlighter-rouge">13:42</code> unphysical example but i think it
+<br /><code class="language-plaintext highlighter-rouge">13:44</code> it works nicely these kind of examples
+<br /><code class="language-plaintext highlighter-rouge">13:47</code> using
+<br /><code class="language-plaintext highlighter-rouge">13:48</code> images work nicely to explain
+<br /><code class="language-plaintext highlighter-rouge">13:50</code> dimensionality reduction techniques
+<br /><code class="language-plaintext highlighter-rouge">13:52</code> so this is a fashion data set called
+<br /><code class="language-plaintext highlighter-rouge">13:55</code> fashion mnist
+<br /><code class="language-plaintext highlighter-rouge">13:56</code> provided by zalando research and
+<br /><code class="language-plaintext highlighter-rouge">14:01</code> again you can uh these these images are
+<br /><code class="language-plaintext highlighter-rouge">14:04</code> on a 28 by 28 letters
+<br /><code class="language-plaintext highlighter-rouge">14:06</code> uh in a gray scale so you can record the
+<br /><code class="language-plaintext highlighter-rouge">14:10</code> intensity of each pixel and you end up
+<br /><code class="language-plaintext highlighter-rouge">14:12</code> with having 784 pixels on
+<br /><code class="language-plaintext highlighter-rouge">14:14</code> of 60 000 pictures and there’s different
+<br /><code class="language-plaintext highlighter-rouge">14:17</code> kinds of pictures
+<br /><code class="language-plaintext highlighter-rouge">14:18</code> like there’s uh shirts and tops and
+<br /><code class="language-plaintext highlighter-rouge">14:21</code> trousers
+<br /><code class="language-plaintext highlighter-rouge">14:22</code> and there’s also shoes i think in there
+<br /><code class="language-plaintext highlighter-rouge">14:24</code> and then you can do a dimensionality
+<br /><code class="language-plaintext highlighter-rouge">14:26</code> reduction and here
+<br /><code class="language-plaintext highlighter-rouge">14:29</code> this is an example for a umap a uniform
+<br /><code class="language-plaintext highlighter-rouge">14:32</code> manifold approximation i’ll explain
+<br /><code class="language-plaintext highlighter-rouge">14:34</code> later what this is it’s a non-linear
+<br /><code class="language-plaintext highlighter-rouge">14:36</code> dimensionality reduction technique
+<br /><code class="language-plaintext highlighter-rouge">14:38</code> and again you can see a number of things
+<br /><code class="language-plaintext highlighter-rouge">14:41</code> um
+<br /><code class="language-plaintext highlighter-rouge">14:42</code> by just taking this as as vectors right
+<br /><code class="language-plaintext highlighter-rouge">14:45</code> and
+<br /><code class="language-plaintext highlighter-rouge">14:45</code> projecting them in two dimensions you
+<br /><code class="language-plaintext highlighter-rouge">14:47</code> see that uh for instance
+<br /><code class="language-plaintext highlighter-rouge">14:50</code> um i think this up here which is
+<br /><code class="language-plaintext highlighter-rouge">14:51</code> trousers forms one cluster
+<br /><code class="language-plaintext highlighter-rouge">14:54</code> which is very different for instance
+<br /><code class="language-plaintext highlighter-rouge">14:56</code> from a cluster which consists of
+<br /><code class="language-plaintext highlighter-rouge">14:59</code> sandals and sneakers and
+<br /><code class="language-plaintext highlighter-rouge">15:02</code> ankle boots so this is the kind of shoes
+<br /><code class="language-plaintext highlighter-rouge">15:04</code> cluster
+<br /><code class="language-plaintext highlighter-rouge">15:05</code> uh you have bags here which seem to have
+<br /><code class="language-plaintext highlighter-rouge">15:07</code> some similarity to
+<br /><code class="language-plaintext highlighter-rouge">15:09</code> tops at some point in a certain way
+<br /><code class="language-plaintext highlighter-rouge">15:13</code> so um this is a again dimensionality
+<br /><code class="language-plaintext highlighter-rouge">15:16</code> reduction right and
+<br /><code class="language-plaintext highlighter-rouge">15:18</code> you can see how you can how you can use
+<br /><code class="language-plaintext highlighter-rouge">15:20</code> it to group together different kinds of
+<br /><code class="language-plaintext highlighter-rouge">15:22</code> things in in this case just pictures uh
+<br /><code class="language-plaintext highlighter-rouge">15:25</code> what you also see
+<br /><code class="language-plaintext highlighter-rouge">15:26</code> here is that these things cluster so
+<br /><code class="language-plaintext highlighter-rouge">15:28</code> there’s a discrete kind of order
+<br /><code class="language-plaintext highlighter-rouge">15:32</code> and i’ll talk about clustering also
+<br /><code class="language-plaintext highlighter-rouge">15:35</code> again
+<br /><code class="language-plaintext highlighter-rouge">15:35</code> in the second part of the lecture
+<br /><code class="language-plaintext highlighter-rouge">15:38</code> um so the now i’ll go into
+<br /><code class="language-plaintext highlighter-rouge">15:42</code> dimensionality reduction
+<br /><code class="language-plaintext highlighter-rouge">15:44</code> and how it works and i’ll start with a
+<br /><code class="language-plaintext highlighter-rouge">15:46</code> linear dimensionality reduction
+<br /><code class="language-plaintext highlighter-rouge">15:48</code> there’s a number so so this is just the
+<br /><code class="language-plaintext highlighter-rouge">15:50</code> linear transformation of your data
+<br /><code class="language-plaintext highlighter-rouge">15:52</code> there’s a number of techniques around um
+<br /><code class="language-plaintext highlighter-rouge">15:55</code> for instance principle component
+<br /><code class="language-plaintext highlighter-rouge">15:57</code> analysis i’ll explain this and there’s
+<br /><code class="language-plaintext highlighter-rouge">15:59</code> other
+<br /><code class="language-plaintext highlighter-rouge">15:59</code> uh techniques like uh non-negative
+<br /><code class="language-plaintext highlighter-rouge">16:02</code> metrics factorization or independent
+<br /><code class="language-plaintext highlighter-rouge">16:04</code> component analysis
+<br /><code class="language-plaintext highlighter-rouge">16:06</code> or factor analysis they are they are
+<br /><code class="language-plaintext highlighter-rouge">16:09</code> kind of similar in that they are linear
+<br /><code class="language-plaintext highlighter-rouge">16:12</code> but i only have time to cover one of
+<br /><code class="language-plaintext highlighter-rouge">16:14</code> them which is the easiest one which is
+<br /><code class="language-plaintext highlighter-rouge">16:15</code> pca
+<br /><code class="language-plaintext highlighter-rouge">16:17</code> um for that i’ll again
+<br /><code class="language-plaintext highlighter-rouge">16:21</code> share my ipad
+<br /><code class="language-plaintext highlighter-rouge">16:41</code> all right what’s principal component
+<br /><code class="language-plaintext highlighter-rouge">16:42</code> analysis i’ll first sketch the idea
+<br /><code class="language-plaintext highlighter-rouge">16:47</code> um so for the i for forgetting the idea
+<br /><code class="language-plaintext highlighter-rouge">16:50</code> it’s sufficient to go into two
+<br /><code class="language-plaintext highlighter-rouge">16:51</code> dimensions and i’ll
+<br /><code class="language-plaintext highlighter-rouge">16:53</code> make a plot a scatter plot of
+<br /><code class="language-plaintext highlighter-rouge">16:56</code> two-dimensional data
+<br /><code class="language-plaintext highlighter-rouge">16:58</code> where let’s assume our data looks a bit
+<br /><code class="language-plaintext highlighter-rouge">17:02</code> like this
+<br /><code class="language-plaintext highlighter-rouge">17:06</code> all right it’s essentially very well
+<br /><code class="language-plaintext highlighter-rouge">17:08</code> correlated and
+<br /><code class="language-plaintext highlighter-rouge">17:09</code> from looking at this now if you would uh
+<br /><code class="language-plaintext highlighter-rouge">17:12</code> give me
+<br /><code class="language-plaintext highlighter-rouge">17:12</code> x1 right and i would know x1 i could
+<br /><code class="language-plaintext highlighter-rouge">17:16</code> very well predict x2 because i
+<br /><code class="language-plaintext highlighter-rouge">17:18</code> i see that these two observables are
+<br /><code class="language-plaintext highlighter-rouge">17:21</code> very well correlated and then
+<br /><code class="language-plaintext highlighter-rouge">17:23</code> pca is a way to formalize
+<br /><code class="language-plaintext highlighter-rouge">17:26</code> this and the first principle component
+<br /><code class="language-plaintext highlighter-rouge">17:28</code> is designed in a way that it points in
+<br /><code class="language-plaintext highlighter-rouge">17:30</code> the direction
+<br /><code class="language-plaintext highlighter-rouge">17:32</code> of highest variability of the data and
+<br /><code class="language-plaintext highlighter-rouge">17:35</code> in this example this would be this
+<br /><code class="language-plaintext highlighter-rouge">17:36</code> direction
+<br /><code class="language-plaintext highlighter-rouge">17:38</code> and this would be principal component
+<br /><code class="language-plaintext highlighter-rouge">17:40</code> one and then the next principal
+<br /><code class="language-plaintext highlighter-rouge">17:41</code> component
+<br /><code class="language-plaintext highlighter-rouge">17:42</code> has to be orthogonal to the uh to pc1
+<br /><code class="language-plaintext highlighter-rouge">17:46</code> and again point in the direction of uh
+<br /><code class="language-plaintext highlighter-rouge">17:48</code> maximum variability of the data and
+<br /><code class="language-plaintext highlighter-rouge">17:50</code> there’s only one direction left here
+<br /><code class="language-plaintext highlighter-rouge">17:52</code> which is
+<br /><code class="language-plaintext highlighter-rouge">17:53</code> uh the orthogonal direction here and
+<br /><code class="language-plaintext highlighter-rouge">17:54</code> that’s pc2 principle component two
+<br /><code class="language-plaintext highlighter-rouge">17:58</code> so then you just change the bases of
+<br /><code class="language-plaintext highlighter-rouge">18:00</code> your data
+<br /><code class="language-plaintext highlighter-rouge">18:03</code> through the directions of the principal
+<br /><code class="language-plaintext highlighter-rouge">18:05</code> components
+<br /><code class="language-plaintext highlighter-rouge">18:06</code> and then you end up with your
+<br /><code class="language-plaintext highlighter-rouge">18:08</code> representation of your data
+<br /><code class="language-plaintext highlighter-rouge">18:13</code> like this
+<br /><code class="language-plaintext highlighter-rouge">18:19</code> where now in this directions your data
+<br /><code class="language-plaintext highlighter-rouge">18:21</code> would be uncorrelated
+<br /><code class="language-plaintext highlighter-rouge">18:24</code> and you would have
+<br /><code class="language-plaintext highlighter-rouge">18:27</code> most of the variability in this
+<br /><code class="language-plaintext highlighter-rouge">18:29</code> direction right
+<br /><code class="language-plaintext highlighter-rouge">18:32</code> so the aim will be
+<br /><code class="language-plaintext highlighter-rouge">18:38</code> to find a transformation
+<br /><code class="language-plaintext highlighter-rouge">18:50</code> such that the components are
+<br /><code class="language-plaintext highlighter-rouge">18:54</code> uncorrelated
+<br /><code class="language-plaintext highlighter-rouge">19:03</code> and that and that they are ordered
+<br /><code class="language-plaintext highlighter-rouge">19:08</code> by the explained variability
+<br /><code class="language-plaintext highlighter-rouge">19:28</code> now how does the math of this look like
+<br /><code class="language-plaintext highlighter-rouge">19:36</code> sorry
+<br /><code class="language-plaintext highlighter-rouge">19:50</code> mathematically we would start with
+<br /><code class="language-plaintext highlighter-rouge">19:53</code> a cr with an eigen decomposition of the
+<br /><code class="language-plaintext highlighter-rouge">19:56</code> covariance matrix
+<br /><code class="language-plaintext highlighter-rouge">19:58</code> um the
+<br /><code class="language-plaintext highlighter-rouge">20:01</code> covariance matrix is an object which we
+<br /><code class="language-plaintext highlighter-rouge">20:03</code> get from
+<br /><code class="language-plaintext highlighter-rouge">20:04</code> or at least this is proportional to this
+<br /><code class="language-plaintext highlighter-rouge">20:07</code> object it’s the
+<br /><code class="language-plaintext highlighter-rouge">20:08</code> data matrix transformed times the data
+<br /><code class="language-plaintext highlighter-rouge">20:11</code> matrix itself
+<br /><code class="language-plaintext highlighter-rouge">20:13</code> and you will see that this is um
+<br /><code class="language-plaintext highlighter-rouge">20:16</code> a matrix of the shape m by m so it has
+<br /><code class="language-plaintext highlighter-rouge">20:19</code> the dimensionality of
+<br /><code class="language-plaintext highlighter-rouge">20:21</code> our data and
+<br /><code class="language-plaintext highlighter-rouge">20:24</code> if you if you do the computations you
+<br /><code class="language-plaintext highlighter-rouge">20:27</code> will see that the
+<br /><code class="language-plaintext highlighter-rouge">20:28</code> diagonal elements of these objects are
+<br /><code class="language-plaintext highlighter-rouge">20:31</code> proportional to the variability of our
+<br /><code class="language-plaintext highlighter-rouge">20:33</code> data in this direction and the
+<br /><code class="language-plaintext highlighter-rouge">20:35</code> off-diagonal elements
+<br /><code class="language-plaintext highlighter-rouge">20:37</code> are proportional to the covariance of
+<br /><code class="language-plaintext highlighter-rouge">20:39</code> components and then we do an item
+<br /><code class="language-plaintext highlighter-rouge">20:46</code> decomposition
+<br /><code class="language-plaintext highlighter-rouge">20:50</code> and from this we get m eigenvectors
+<br /><code class="language-plaintext highlighter-rouge">20:53</code> lambda
+<br /><code class="language-plaintext highlighter-rouge">20:53</code> i am eigenvalues lambda and a
+<br /><code class="language-plaintext highlighter-rouge">20:57</code> and m i vectors and i group them
+<br /><code class="language-plaintext highlighter-rouge">20:59</code> together in a matrix w
+<br /><code class="language-plaintext highlighter-rouge">21:02</code> so the columns
+<br /><code class="language-plaintext highlighter-rouge">21:07</code> of this matrix are eigenvectors
+<br /><code class="language-plaintext highlighter-rouge">21:14</code> of the covariance matrix and importantly
+<br /><code class="language-plaintext highlighter-rouge">21:18</code> what we do
+<br /><code class="language-plaintext highlighter-rouge">21:19</code> here and we can always do this is we
+<br /><code class="language-plaintext highlighter-rouge">21:21</code> sort them by the
+<br /><code class="language-plaintext highlighter-rouge">21:23</code> we sort them by the magnitude
+<br /><code class="language-plaintext highlighter-rouge">21:29</code> of the eigenvalues lambda i
+<br /><code class="language-plaintext highlighter-rouge">21:33</code> and this ensures that the first
+<br /><code class="language-plaintext highlighter-rouge">21:34</code> principal component points in the
+<br /><code class="language-plaintext highlighter-rouge">21:35</code> direction of highest variability
+<br /><code class="language-plaintext highlighter-rouge">21:38</code> now w is just the new uh
+<br /><code class="language-plaintext highlighter-rouge">21:42</code> basis for our data and then we can
+<br /><code class="language-plaintext highlighter-rouge">21:44</code> transform our data
+<br /><code class="language-plaintext highlighter-rouge">21:47</code> so like this the the transformed data
+<br /><code class="language-plaintext highlighter-rouge">21:51</code> will look like this we take the data
+<br /><code class="language-plaintext highlighter-rouge">21:52</code> matrix
+<br /><code class="language-plaintext highlighter-rouge">21:53</code> x times w
+<br /><code class="language-plaintext highlighter-rouge">21:56</code> um so in the language of principal
+<br /><code class="language-plaintext highlighter-rouge">21:58</code> components this is what’s called
+<br /><code class="language-plaintext highlighter-rouge">22:00</code> loadings
+<br /><code class="language-plaintext highlighter-rouge">22:04</code> or also the rotation
+<br /><code class="language-plaintext highlighter-rouge">22:09</code> and this the transformed data is called
+<br /><code class="language-plaintext highlighter-rouge">22:11</code> scores
+<br /><code class="language-plaintext highlighter-rouge">22:20</code> now i leave it to you as an exercise to
+<br /><code class="language-plaintext highlighter-rouge">22:22</code> show that
+<br /><code class="language-plaintext highlighter-rouge">22:24</code> the transformed data matrix
+<br /><code class="language-plaintext highlighter-rouge">22:28</code> is a dynamic is a diagonal matrix
+<br /><code class="language-plaintext highlighter-rouge">22:33</code> which basically means in this transform
+<br /><code class="language-plaintext highlighter-rouge">22:36</code> space the components are uncorrelated
+<br /><code class="language-plaintext highlighter-rouge">22:39</code> now the data matrix again here is of
+<br /><code class="language-plaintext highlighter-rouge">22:43</code> shape
+<br /><code class="language-plaintext highlighter-rouge">22:43</code> n by m
+<br /><code class="language-plaintext highlighter-rouge">22:47</code> so the dimensionality of this
+<br /><code class="language-plaintext highlighter-rouge">22:50</code> is just the same as the dimensionality
+<br /><code class="language-plaintext highlighter-rouge">22:53</code> of our original data so how does this
+<br /><code class="language-plaintext highlighter-rouge">22:56</code> help in reducing the dimensions
+<br /><code class="language-plaintext highlighter-rouge">22:58</code> well there the idea is because the
+<br /><code class="language-plaintext highlighter-rouge">23:00</code> eigenvectors are sorted
+<br /><code class="language-plaintext highlighter-rouge">23:03</code> by the magnitude of lambda i that we can
+<br /><code class="language-plaintext highlighter-rouge">23:05</code> truncate it
+<br /><code class="language-plaintext highlighter-rouge">23:07</code> and if we define wr
+<br /><code class="language-plaintext highlighter-rouge">23:11</code> which is an n by r matrix as the
+<br /><code class="language-plaintext highlighter-rouge">23:16</code> first r columns of w
+<br /><code class="language-plaintext highlighter-rouge">23:24</code> then we can get a a projection in lower
+<br /><code class="language-plaintext highlighter-rouge">23:28</code> dimensions of our data
+<br /><code class="language-plaintext highlighter-rouge">23:30</code> just by using rw
+<br /><code class="language-plaintext highlighter-rouge">23:34</code> at wr
+<br /><code class="language-plaintext highlighter-rouge">23:39</code> and this will this object will be of
+<br /><code class="language-plaintext highlighter-rouge">23:40</code> shape n by r
+<br /><code class="language-plaintext highlighter-rouge">23:42</code> and if we for instance select r equals
+<br /><code class="language-plaintext highlighter-rouge">23:44</code> two we have a two dimensional
+<br /><code class="language-plaintext highlighter-rouge">23:46</code> representation of our data of course
+<br /><code class="language-plaintext highlighter-rouge">23:47</code> this
+<br /><code class="language-plaintext highlighter-rouge">23:48</code> throws away some information but most of
+<br /><code class="language-plaintext highlighter-rouge">23:50</code> the variability of our data is captured
+<br /><code class="language-plaintext highlighter-rouge">23:59</code> um yes so so the take home is that that
+<br /><code class="language-plaintext highlighter-rouge">24:03</code> is that principle component
+<br /><code class="language-plaintext highlighter-rouge">24:07</code> analysis is a linear transformation of
+<br /><code class="language-plaintext highlighter-rouge">24:09</code> the data such that the components
+<br /><code class="language-plaintext highlighter-rouge">24:11</code> are uncorrelated and ordered by the
+<br /><code class="language-plaintext highlighter-rouge">24:13</code> amount of explained variability
+<br /><code class="language-plaintext highlighter-rouge">24:16</code> and what i want to do next is i want to
+<br /><code class="language-plaintext highlighter-rouge">24:20</code> show you how you can actually do this
+<br /><code class="language-plaintext highlighter-rouge">24:22</code> in r which is uh quite easy and you
+<br /><code class="language-plaintext highlighter-rouge">24:25</code> don’t actually need to know the math for
+<br /><code class="language-plaintext highlighter-rouge">24:26</code> this
+<br /><code class="language-plaintext highlighter-rouge">24:28</code> um so let me
+<br /><code class="language-plaintext highlighter-rouge">24:31</code> um excuse me yes uh could you
+<br /><code class="language-plaintext highlighter-rouge">24:34</code> repeat how do we decide uh at what
+<br /><code class="language-plaintext highlighter-rouge">24:39</code> at which point to truncate w and what
+<br /><code class="language-plaintext highlighter-rouge">24:42</code> exactly do we mean by sorting my
+<br /><code class="language-plaintext highlighter-rouge">24:43</code> magnitude of the eigenvalues lambda
+<br /><code class="language-plaintext highlighter-rouge">24:47</code> okay um if you
+<br /><code class="language-plaintext highlighter-rouge">24:54</code> uh this this is the
+<br /><code class="language-plaintext highlighter-rouge">24:58</code> covariance matrix right so essentially
+<br /><code class="language-plaintext highlighter-rouge">25:00</code> if i
+<br /><code class="language-plaintext highlighter-rouge">25:01</code> if i look at this um i saw you didn’t
+<br /><code class="language-plaintext highlighter-rouge">25:05</code> do you see my mouse yes yes
+<br /><code class="language-plaintext highlighter-rouge">25:08</code> um so lambda 1
+<br /><code class="language-plaintext highlighter-rouge">25:11</code> will be proportional to the variability
+<br /><code class="language-plaintext highlighter-rouge">25:13</code> in this direction
+<br /><code class="language-plaintext highlighter-rouge">25:14</code> okay yes and lambda 2 to the variability
+<br /><code class="language-plaintext highlighter-rouge">25:18</code> in this direction
+<br /><code class="language-plaintext highlighter-rouge">25:21</code> okay and and so this
+<br /><code class="language-plaintext highlighter-rouge">25:24</code> sorting by uh
+<br /><code class="language-plaintext highlighter-rouge">25:28</code> by the eigenvalues ensures that the
+<br /><code class="language-plaintext highlighter-rouge">25:31</code> first component
+<br /><code class="language-plaintext highlighter-rouge">25:32</code> of the first principal component will
+<br /><code class="language-plaintext highlighter-rouge">25:35</code> point in this direction of highest
+<br /><code class="language-plaintext highlighter-rouge">25:36</code> variability of the data
+<br /><code class="language-plaintext highlighter-rouge">25:38</code> right yes
+<br /><code class="language-plaintext highlighter-rouge">25:42</code> um so this is what the what the sorting
+<br /><code class="language-plaintext highlighter-rouge">25:45</code> means
+<br /><code class="language-plaintext highlighter-rouge">25:47</code> uh okay so in this case lambda 1 is
+<br /><code class="language-plaintext highlighter-rouge">25:51</code> that the reference that we sort through
+<br /><code class="language-plaintext highlighter-rouge">25:54</code> that we get w
+<br /><code class="language-plaintext highlighter-rouge">25:55</code> from because lambda 1 is proportional to
+<br /><code class="language-plaintext highlighter-rouge">25:57</code> the pc
+<br /><code class="language-plaintext highlighter-rouge">25:58</code> one direction um
+<br /><code class="language-plaintext highlighter-rouge">26:00</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">26:02</code> lambda lambda 1 is the eigenvalue right
+<br /><code class="language-plaintext highlighter-rouge">26:05</code> that corresponds to the
+<br /><code class="language-plaintext highlighter-rouge">26:06</code> to the eigenvector which is in this
+<br /><code class="language-plaintext highlighter-rouge">26:08</code> direction yes
+<br /><code class="language-plaintext highlighter-rouge">26:10</code> yes and it is actually and if you
+<br /><code class="language-plaintext highlighter-rouge">26:13</code> if you uh if you if you do kind of
+<br /><code class="language-plaintext highlighter-rouge">26:17</code> um
+<br /><code class="language-plaintext highlighter-rouge">26:17</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">26:20</code> if you look at this at the transformed
+<br /><code class="language-plaintext highlighter-rouge">26:22</code> cobra covariance matrix
+<br /><code class="language-plaintext highlighter-rouge">26:24</code> right you will see that in the diagonal
+<br /><code class="language-plaintext highlighter-rouge">26:26</code> elements of this you just have the uh
+<br /><code class="language-plaintext highlighter-rouge">26:29</code> lambdas right so it’s the that’s the the
+<br /><code class="language-plaintext highlighter-rouge">26:32</code> variable the variance in this direction
+<br /><code class="language-plaintext highlighter-rouge">26:35</code> okay
+<br /><code class="language-plaintext highlighter-rouge">26:36</code> yes thank you exactly so
+<br /><code class="language-plaintext highlighter-rouge">26:39</code> was this all i think i remember
+<br /><code class="language-plaintext highlighter-rouge">26:42</code> there was another question uh you also
+<br /><code class="language-plaintext highlighter-rouge">26:44</code> asked how to drink it how to decide
+<br /><code class="language-plaintext highlighter-rouge">26:46</code> uh uh where we trunk it
+<br /><code class="language-plaintext highlighter-rouge">26:50</code> um this is not
+<br /><code class="language-plaintext highlighter-rouge">26:53</code> this is up to us um you can kind of you
+<br /><code class="language-plaintext highlighter-rouge">26:57</code> you can
+<br /><code class="language-plaintext highlighter-rouge">26:57</code> uh what you can what i will show you in
+<br /><code class="language-plaintext highlighter-rouge">26:59</code> a moment is that you can decide that you
+<br /><code class="language-plaintext highlighter-rouge">27:01</code> wanna
+<br /><code class="language-plaintext highlighter-rouge">27:02</code> keep like uh ninety percent of the
+<br /><code class="language-plaintext highlighter-rouge">27:05</code> variability of your data and this would
+<br /><code class="language-plaintext highlighter-rouge">27:06</code> give you a threshold of where you
+<br /><code class="language-plaintext highlighter-rouge">27:08</code> where you stop for instance but
+<br /><code class="language-plaintext highlighter-rouge">27:11</code> uh this threshold again is arbitrary so
+<br /><code class="language-plaintext highlighter-rouge">27:13</code> you can also just
+<br /><code class="language-plaintext highlighter-rouge">27:15</code> i mean one usual decision that you do is
+<br /><code class="language-plaintext highlighter-rouge">27:17</code> if you want to visualize your data you
+<br /><code class="language-plaintext highlighter-rouge">27:18</code> truncate at two
+<br /><code class="language-plaintext highlighter-rouge">27:20</code> because that’s easy to visualize um
+<br /><code class="language-plaintext highlighter-rouge">27:23</code> you might also take this as an initial
+<br /><code class="language-plaintext highlighter-rouge">27:25</code> step
+<br /><code class="language-plaintext highlighter-rouge">27:26</code> of dimensionality reduction to maybe
+<br /><code class="language-plaintext highlighter-rouge">27:29</code> just like
+<br /><code class="language-plaintext highlighter-rouge">27:30</code> going from half a million to 50 or
+<br /><code class="language-plaintext highlighter-rouge">27:32</code> something and then do a non-linear
+<br /><code class="language-plaintext highlighter-rouge">27:33</code> transformation
+<br /><code class="language-plaintext highlighter-rouge">27:35</code> but essentially like in my everyday work
+<br /><code class="language-plaintext highlighter-rouge">27:37</code> this is a uh
+<br /><code class="language-plaintext highlighter-rouge">27:39</code> it’s an arbitrary it’s often an
+<br /><code class="language-plaintext highlighter-rouge">27:40</code> arbitrary choice and yeah in the end
+<br /><code class="language-plaintext highlighter-rouge">27:42</code> have to see whether it works or not
+<br /><code class="language-plaintext highlighter-rouge">27:44</code> whether it’s sensible
+<br /><code class="language-plaintext highlighter-rouge">27:45</code> so that’s a tough question and
+<br /><code class="language-plaintext highlighter-rouge">27:48</code> there’s also some research still on that
+<br /><code class="language-plaintext highlighter-rouge">27:51</code> okay um
+<br /><code class="language-plaintext highlighter-rouge">28:03</code> all right so i prepared a
+<br /><code class="language-plaintext highlighter-rouge">28:06</code> um a
+<br /><code class="language-plaintext highlighter-rouge">28:10</code> a document a markdown
+<br /><code class="language-plaintext highlighter-rouge">28:13</code> document a notebook in our studio and i
+<br /><code class="language-plaintext highlighter-rouge">28:15</code> think stefan briefly introduced our
+<br /><code class="language-plaintext highlighter-rouge">28:17</code> studio to do
+<br /><code class="language-plaintext highlighter-rouge">28:18</code> to you last week you can also
+<br /><code class="language-plaintext highlighter-rouge">28:22</code> get the code on from this url and it’s
+<br /><code class="language-plaintext highlighter-rouge">28:25</code> also
+<br /><code class="language-plaintext highlighter-rouge">28:26</code> by now on the on the course home
+<br /><code class="language-plaintext highlighter-rouge">28:28</code> homepage
+<br /><code class="language-plaintext highlighter-rouge">28:30</code> um also the code from the last lecture i
+<br /><code class="language-plaintext highlighter-rouge">28:33</code> forgot to mention that it’s also on
+<br /><code class="language-plaintext highlighter-rouge">28:34</code> github
+<br /><code class="language-plaintext highlighter-rouge">28:37</code> in the same folder yeah exactly
+<br /><code class="language-plaintext highlighter-rouge">28:40</code> and then um well i wanted to show you
+<br /><code class="language-plaintext highlighter-rouge">28:43</code> before is that like i i want to just
+<br /><code class="language-plaintext highlighter-rouge">28:45</code> show you as an example one of these uh
+<br /><code class="language-plaintext highlighter-rouge">28:47</code> famous uh uh data sets you you might
+<br /><code class="language-plaintext highlighter-rouge">28:51</code> have heard of the uh it’s it’s a data
+<br /><code class="language-plaintext highlighter-rouge">28:52</code> set where uh
+<br /><code class="language-plaintext highlighter-rouge">28:53</code> botanist and statistician fisher
+<br /><code class="language-plaintext highlighter-rouge">28:56</code> collected
+<br /><code class="language-plaintext highlighter-rouge">28:56</code> uh flowers from a flower called iris
+<br /><code class="language-plaintext highlighter-rouge">29:01</code> and there’s different species iris
+<br /><code class="language-plaintext highlighter-rouge">29:04</code> guinea car aristotoza iris versicolor
+<br /><code class="language-plaintext highlighter-rouge">29:07</code> and these have different leaves the
+<br /><code class="language-plaintext highlighter-rouge">29:10</code> petal and the sepal
+<br /><code class="language-plaintext highlighter-rouge">29:12</code> and he measured the the sample length
+<br /><code class="language-plaintext highlighter-rouge">29:14</code> and the sample width and the petal
+<br /><code class="language-plaintext highlighter-rouge">29:16</code> length and the petal with
+<br /><code class="language-plaintext highlighter-rouge">29:17</code> all these species
+<br /><code class="language-plaintext highlighter-rouge">29:21</code> and it’s a it’s a data set that you can
+<br /><code class="language-plaintext highlighter-rouge">29:23</code> easily load in in
+<br /><code class="language-plaintext highlighter-rouge">29:24</code> r that’s why i used it and you can it’s
+<br /><code class="language-plaintext highlighter-rouge">29:27</code> four dimensional so here you see the
+<br /><code class="language-plaintext highlighter-rouge">29:29</code> data it’s uh
+<br /><code class="language-plaintext highlighter-rouge">29:31</code> the length width and length and width
+<br /><code class="language-plaintext highlighter-rouge">29:33</code> for one species
+<br /><code class="language-plaintext highlighter-rouge">29:34</code> and then the other species follow
+<br /><code class="language-plaintext highlighter-rouge">29:36</code> somewhere in the data
+<br /><code class="language-plaintext highlighter-rouge">29:38</code> and you have this four numbers
+<br /><code class="language-plaintext highlighter-rouge">29:41</code> now you can try to visualize this uh in
+<br /><code class="language-plaintext highlighter-rouge">29:44</code> a
+<br /><code class="language-plaintext highlighter-rouge">29:44</code> for instance pair wise ghetto plots
+<br /><code class="language-plaintext highlighter-rouge">29:47</code> plotting the length
+<br /><code class="language-plaintext highlighter-rouge">29:48</code> of the sepal against the sample width
+<br /><code class="language-plaintext highlighter-rouge">29:50</code> and so on
+<br /><code class="language-plaintext highlighter-rouge">29:51</code> and here this is color coded by species
+<br /><code class="language-plaintext highlighter-rouge">29:54</code> and you already see some separation
+<br /><code class="language-plaintext highlighter-rouge">29:56</code> but it’s hard to choose like in this
+<br /><code class="language-plaintext highlighter-rouge">29:58</code> four-dimensional plot
+<br /><code class="language-plaintext highlighter-rouge">30:00</code> what you actually what to actually look
+<br /><code class="language-plaintext highlighter-rouge">30:02</code> at and so you can perform a principal
+<br /><code class="language-plaintext highlighter-rouge">30:04</code> component analysis on this
+<br /><code class="language-plaintext highlighter-rouge">30:06</code> four-dimensional data set and then r
+<br /><code class="language-plaintext highlighter-rouge">30:08</code> this is just a one-liner
+<br /><code class="language-plaintext highlighter-rouge">30:10</code> so the principal components analysis is
+<br /><code class="language-plaintext highlighter-rouge">30:12</code> done by p or comp
+<br /><code class="language-plaintext highlighter-rouge">30:14</code> and here i plug in the four-dimensional
+<br /><code class="language-plaintext highlighter-rouge">30:17</code> data set
+<br /><code class="language-plaintext highlighter-rouge">30:20</code> and then you get all the things out that
+<br /><code class="language-plaintext highlighter-rouge">30:23</code> we just talked about you get this uh
+<br /><code class="language-plaintext highlighter-rouge">30:25</code> transformation matrix w called rotation
+<br /><code class="language-plaintext highlighter-rouge">30:28</code> here
+<br /><code class="language-plaintext highlighter-rouge">30:29</code> um where now you see that the
+<br /><code class="language-plaintext highlighter-rouge">30:32</code> the principal the direction of principle
+<br /><code class="language-plaintext highlighter-rouge">30:34</code> component one in this four dimensional
+<br /><code class="language-plaintext highlighter-rouge">30:36</code> space
+<br /><code class="language-plaintext highlighter-rouge">30:37</code> right it’s it’s a vector um you see
+<br /><code class="language-plaintext highlighter-rouge">30:40</code> you can look at the transformed data
+<br /><code class="language-plaintext highlighter-rouge">30:43</code> um which is again four dimensional
+<br /><code class="language-plaintext highlighter-rouge">30:46</code> at first um here you can
+<br /><code class="language-plaintext highlighter-rouge">30:50</code> uh look at the explained uh uh
+<br /><code class="language-plaintext highlighter-rouge">30:53</code> variability or explain variance
+<br /><code class="language-plaintext highlighter-rouge">30:55</code> um and this is maybe for the question of
+<br /><code class="language-plaintext highlighter-rouge">30:59</code> where to
+<br /><code class="language-plaintext highlighter-rouge">31:00</code> cut off so that they explained
+<br /><code class="language-plaintext highlighter-rouge">31:03</code> variance here you can see the cumulative
+<br /><code class="language-plaintext highlighter-rouge">31:05</code> proportion of this
+<br /><code class="language-plaintext highlighter-rouge">31:07</code> and with the first two principal
+<br /><code class="language-plaintext highlighter-rouge">31:09</code> component you explain
+<br /><code class="language-plaintext highlighter-rouge">31:10</code> 95 96 of the variability of your data
+<br /><code class="language-plaintext highlighter-rouge">31:14</code> and you might say okay
+<br /><code class="language-plaintext highlighter-rouge">31:16</code> that’s enough with uh and in in pc4
+<br /><code class="language-plaintext highlighter-rouge">31:19</code> uh you from pc3 to pc4 you hardly add
+<br /><code class="language-plaintext highlighter-rouge">31:23</code> something so the fourth dimension of the
+<br /><code class="language-plaintext highlighter-rouge">31:24</code> data set is probably very
+<br /><code class="language-plaintext highlighter-rouge">31:26</code> it’s very correlated to the first three
+<br /><code class="language-plaintext highlighter-rouge">31:29</code> there’s not much information left and
+<br /><code class="language-plaintext highlighter-rouge">31:31</code> then this is how the data looks now
+<br /><code class="language-plaintext highlighter-rouge">31:34</code> in in the direction of principal
+<br /><code class="language-plaintext highlighter-rouge">31:35</code> components one and two and what you can
+<br /><code class="language-plaintext highlighter-rouge">31:37</code> observe is that
+<br /><code class="language-plaintext highlighter-rouge">31:39</code> uh cross principle component one that’s
+<br /><code class="language-plaintext highlighter-rouge">31:41</code> the main direction which kind of
+<br /><code class="language-plaintext highlighter-rouge">31:44</code> um discriminates between the species
+<br /><code class="language-plaintext highlighter-rouge">31:47</code> you can also see that the setoza is very
+<br /><code class="language-plaintext highlighter-rouge">31:50</code> different from
+<br /><code class="language-plaintext highlighter-rouge">31:51</code> versicolor and virginica and here it’s
+<br /><code class="language-plaintext highlighter-rouge">31:54</code> hard to actually draw a boundary
+<br /><code class="language-plaintext highlighter-rouge">31:56</code> but just based on the measurements
+<br /><code class="language-plaintext highlighter-rouge">32:01</code> this is what’s called a scree plot and
+<br /><code class="language-plaintext highlighter-rouge">32:03</code> this is just again a visualization of
+<br /><code class="language-plaintext highlighter-rouge">32:05</code> the variance
+<br /><code class="language-plaintext highlighter-rouge">32:06</code> explained by each principal component
+<br /><code class="language-plaintext highlighter-rouge">32:10</code> now i want to also show you an another
+<br /><code class="language-plaintext highlighter-rouge">32:13</code> data set
+<br /><code class="language-plaintext highlighter-rouge">32:14</code> where actually principal component
+<br /><code class="language-plaintext highlighter-rouge">32:16</code> analysis has a hard job
+<br /><code class="language-plaintext highlighter-rouge">32:18</code> to work so this is
+<br /><code class="language-plaintext highlighter-rouge">32:21</code> again an image data set where images
+<br /><code class="language-plaintext highlighter-rouge">32:24</code> were collected of different objects and
+<br /><code class="language-plaintext highlighter-rouge">32:25</code> they are rotated
+<br /><code class="language-plaintext highlighter-rouge">32:27</code> right
+<br /><code class="language-plaintext highlighter-rouge">32:31</code> and now you can again do a vector
+<br /><code class="language-plaintext highlighter-rouge">32:34</code> representation of these images to a
+<br /><code class="language-plaintext highlighter-rouge">32:35</code> principal component analysis and this is
+<br /><code class="language-plaintext highlighter-rouge">32:38</code> what the
+<br /><code class="language-plaintext highlighter-rouge">32:38</code> picture looks like and what the plot
+<br /><code class="language-plaintext highlighter-rouge">32:41</code> looks like now and
+<br /><code class="language-plaintext highlighter-rouge">32:42</code> and the colors now uh represent
+<br /><code class="language-plaintext highlighter-rouge">32:45</code> different objects
+<br /><code class="language-plaintext highlighter-rouge">32:46</code> and the dots of the same color are then
+<br /><code class="language-plaintext highlighter-rouge">32:52</code> pictures of the objects at different
+<br /><code class="language-plaintext highlighter-rouge">32:54</code> angles and you can see
+<br /><code class="language-plaintext highlighter-rouge">32:56</code> that if you do this dimensionality
+<br /><code class="language-plaintext highlighter-rouge">32:58</code> reduction you can see some structure
+<br /><code class="language-plaintext highlighter-rouge">33:00</code> right but it’s not really uh doesn’t
+<br /><code class="language-plaintext highlighter-rouge">33:03</code> really work good in discriminating the
+<br /><code class="language-plaintext highlighter-rouge">33:05</code> different
+<br /><code class="language-plaintext highlighter-rouge">33:06</code> objects and you would expect that maybe
+<br /><code class="language-plaintext highlighter-rouge">33:09</code> you can
+<br /><code class="language-plaintext highlighter-rouge">33:09</code> reveal this discrete kind of order
+<br /><code class="language-plaintext highlighter-rouge">33:11</code> different kinds of objects
+<br /><code class="language-plaintext highlighter-rouge">33:15</code> or that’s maybe what you want by doing a
+<br /><code class="language-plaintext highlighter-rouge">33:18</code> dimensionality reduction
+<br /><code class="language-plaintext highlighter-rouge">33:23</code> here’s another example that that i made
+<br /><code class="language-plaintext highlighter-rouge">33:26</code> up
+<br /><code class="language-plaintext highlighter-rouge">33:26</code> which is uh a dimensionality reduction
+<br /><code class="language-plaintext highlighter-rouge">33:29</code> of a swiss roll so what’s this with
+<br /><code class="language-plaintext highlighter-rouge">33:31</code> actually a swiss roll with a hole so
+<br /><code class="language-plaintext highlighter-rouge">33:33</code> what i did here was to say okay i
+<br /><code class="language-plaintext highlighter-rouge">33:36</code> um uh randomly place
+<br /><code class="language-plaintext highlighter-rouge">33:39</code> uh points on a on a two-dimensional
+<br /><code class="language-plaintext highlighter-rouge">33:43</code> surface
+<br /><code class="language-plaintext highlighter-rouge">33:43</code> but there’s a hole in the middle and
+<br /><code class="language-plaintext highlighter-rouge">33:45</code> then i wrap this up
+<br /><code class="language-plaintext highlighter-rouge">33:47</code> in 3d like this um
+<br /><code class="language-plaintext highlighter-rouge">33:50</code> i transform it like this okay it’s
+<br /><code class="language-plaintext highlighter-rouge">33:53</code> it’s this role and it’s it’s called it’s
+<br /><code class="language-plaintext highlighter-rouge">33:56</code> it’s a suite actually in in switzerland
+<br /><code class="language-plaintext highlighter-rouge">33:58</code> that’s why it’s called a swiss roll and
+<br /><code class="language-plaintext highlighter-rouge">34:00</code> desk you can still see this uh
+<br /><code class="language-plaintext highlighter-rouge">34:02</code> this uh hole in the middle now what will
+<br /><code class="language-plaintext highlighter-rouge">34:04</code> happen
+<br /><code class="language-plaintext highlighter-rouge">34:05</code> if you do a principal components
+<br /><code class="language-plaintext highlighter-rouge">34:07</code> analysis of this
+<br /><code class="language-plaintext highlighter-rouge">34:10</code> the example is shown here and this is
+<br /><code class="language-plaintext highlighter-rouge">34:13</code> the same
+<br /><code class="language-plaintext highlighter-rouge">34:14</code> data shown in principle component space
+<br /><code class="language-plaintext highlighter-rouge">34:21</code> actually in 3d and so
+<br /><code class="language-plaintext highlighter-rouge">34:24</code> what you can see is that
+<br /><code class="language-plaintext highlighter-rouge">34:28</code> not much happened right it’s pretty much
+<br /><code class="language-plaintext highlighter-rouge">34:30</code> the same as before
+<br /><code class="language-plaintext highlighter-rouge">34:31</code> just stay the principal component and
+<br /><code class="language-plaintext highlighter-rouge">34:34</code> the reason for this is
+<br /><code class="language-plaintext highlighter-rouge">34:35</code> that what we do is a linear
+<br /><code class="language-plaintext highlighter-rouge">34:38</code> transformation of the data right
+<br /><code class="language-plaintext highlighter-rouge">34:40</code> but what i did before was to take two
+<br /><code class="language-plaintext highlighter-rouge">34:42</code> dimensional data and
+<br /><code class="language-plaintext highlighter-rouge">34:43</code> non-linearly
+<br /><code class="language-plaintext highlighter-rouge">34:47</code> projected into 3d well use the
+<br /><code class="language-plaintext highlighter-rouge">34:50</code> non-linear function
+<br /><code class="language-plaintext highlighter-rouge">34:51</code> and so um projecting this back to 2d
+<br /><code class="language-plaintext highlighter-rouge">34:54</code> in a way cannot work with a linear
+<br /><code class="language-plaintext highlighter-rouge">34:58</code> dimensionality reduction technique and
+<br /><code class="language-plaintext highlighter-rouge">34:59</code> that’s why
+<br /><code class="language-plaintext highlighter-rouge">35:02</code> non-linear dimensionality reduction
+<br /><code class="language-plaintext highlighter-rouge">35:04</code> techniques are also very useful
+<br /><code class="language-plaintext highlighter-rouge">35:07</code> so this leads me to the second part of
+<br /><code class="language-plaintext highlighter-rouge">35:10</code> dimensionality reduction
+<br /><code class="language-plaintext highlighter-rouge">35:13</code> which is about nonlinear dimensionality
+<br /><code class="language-plaintext highlighter-rouge">35:15</code> reduction techniques and
+<br /><code class="language-plaintext highlighter-rouge">35:17</code> as it’s usually the case with non-linear
+<br /><code class="language-plaintext highlighter-rouge">35:20</code> things
+<br /><code class="language-plaintext highlighter-rouge">35:21</code> there’s many of them and then actually
+<br /><code class="language-plaintext highlighter-rouge">35:23</code> about one year ago
+<br /><code class="language-plaintext highlighter-rouge">35:24</code> i had a look at wikipedia at the
+<br /><code class="language-plaintext highlighter-rouge">35:28</code> like a list of some prominent algorithms
+<br /><code class="language-plaintext highlighter-rouge">35:32</code> for dimensionality reduction and there
+<br /><code class="language-plaintext highlighter-rouge">35:34</code> were 29 i’m sure now
+<br /><code class="language-plaintext highlighter-rouge">35:36</code> there’s more and this this doesn’t claim
+<br /><code class="language-plaintext highlighter-rouge">35:39</code> to be complete right so
+<br /><code class="language-plaintext highlighter-rouge">35:41</code> um this makes very clear that depending
+<br /><code class="language-plaintext highlighter-rouge">35:43</code> on what you want
+<br /><code class="language-plaintext highlighter-rouge">35:44</code> there’s different things that you can do
+<br /><code class="language-plaintext highlighter-rouge">35:47</code> today i will concentrate on uniform
+<br /><code class="language-plaintext highlighter-rouge">35:49</code> manifold approximation a rather
+<br /><code class="language-plaintext highlighter-rouge">35:51</code> recent one introduced i think in 2018 so
+<br /><code class="language-plaintext highlighter-rouge">35:54</code> three years ago
+<br /><code class="language-plaintext highlighter-rouge">35:58</code> and it’s used a lot in single cell
+<br /><code class="language-plaintext highlighter-rouge">36:00</code> sequencing data in single cell genomics
+<br /><code class="language-plaintext highlighter-rouge">36:03</code> nowadays
+<br /><code class="language-plaintext highlighter-rouge">36:05</code> um so what is this
+<br /><code class="language-plaintext highlighter-rouge">36:08</code> technique about so don’t be scared
+<br /><code class="language-plaintext highlighter-rouge">36:11</code> there’s a lot of mathematics on this
+<br /><code class="language-plaintext highlighter-rouge">36:13</code> page and you don’t have to understand
+<br /><code class="language-plaintext highlighter-rouge">36:15</code> all of that right away i won’t also i
+<br /><code class="language-plaintext highlighter-rouge">36:18</code> also won’t have the time to fully
+<br /><code class="language-plaintext highlighter-rouge">36:20</code> explain this in detail but i will give
+<br /><code class="language-plaintext highlighter-rouge">36:22</code> you an intuition
+<br /><code class="language-plaintext highlighter-rouge">36:23</code> of what this does uh
+<br /><code class="language-plaintext highlighter-rouge">36:26</code> the basic idea is
+<br /><code class="language-plaintext highlighter-rouge">36:30</code> that
+<br /><code class="language-plaintext highlighter-rouge">36:32</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">36:36</code> so the basic idea is that we have a
+<br /><code class="language-plaintext highlighter-rouge">36:39</code> higher dimensional data set
+<br /><code class="language-plaintext highlighter-rouge">36:41</code> but we hypothesize that there’s a low
+<br /><code class="language-plaintext highlighter-rouge">36:43</code> dimensional manifold so think of
+<br /><code class="language-plaintext highlighter-rouge">36:45</code> a for means for instance there could be
+<br /><code class="language-plaintext highlighter-rouge">36:47</code> a line in a two-dimensional manifold
+<br /><code class="language-plaintext highlighter-rouge">36:50</code> right and then we want to discover this
+<br /><code class="language-plaintext highlighter-rouge">36:53</code> dimensional
+<br /><code class="language-plaintext highlighter-rouge">36:54</code> manifold so this
+<br /><code class="language-plaintext highlighter-rouge">36:57</code> there’s a couple of assumptions that are
+<br /><code class="language-plaintext highlighter-rouge">36:59</code> made in new map one that the data is
+<br /><code class="language-plaintext highlighter-rouge">37:01</code> distributed uniformly on a romanian
+<br /><code class="language-plaintext highlighter-rouge">37:04</code> manifold
+<br /><code class="language-plaintext highlighter-rouge">37:05</code> that the romanian metric is locally
+<br /><code class="language-plaintext highlighter-rouge">37:07</code> constant and that the manifold is
+<br /><code class="language-plaintext highlighter-rouge">37:09</code> locally connected
+<br /><code class="language-plaintext highlighter-rouge">37:11</code> and what umap then gives you is
+<br /><code class="language-plaintext highlighter-rouge">37:14</code> it models this manifold with a fuzzy
+<br /><code class="language-plaintext highlighter-rouge">37:16</code> topological structure
+<br /><code class="language-plaintext highlighter-rouge">37:18</code> and it finds a low dimensional
+<br /><code class="language-plaintext highlighter-rouge">37:20</code> projection of the data
+<br /><code class="language-plaintext highlighter-rouge">37:22</code> that has a very similar fuzzy
+<br /><code class="language-plaintext highlighter-rouge">37:25</code> topological structure
+<br /><code class="language-plaintext highlighter-rouge">37:26</code> to your original data so what does all
+<br /><code class="language-plaintext highlighter-rouge">37:29</code> this mean</p>
+
+<h3 id="white-board-1">white board 1</h3>
+
+<p><br /><code class="language-plaintext highlighter-rouge">37:30</code> um let’s let’s start
+<br /><code class="language-plaintext highlighter-rouge">37:33</code> by i will start by by introducing
+<br /><code class="language-plaintext highlighter-rouge">37:36</code> briefly very briefly introducing an an
+<br /><code class="language-plaintext highlighter-rouge">37:40</code> important idea from topological data
+<br /><code class="language-plaintext highlighter-rouge">37:42</code> analysis because
+<br /><code class="language-plaintext highlighter-rouge">37:43</code> uh this algorithm is or this idea is
+<br /><code class="language-plaintext highlighter-rouge">37:47</code> heavily based on topological data
+<br /><code class="language-plaintext highlighter-rouge">37:50</code> analysis and this is simplices
+<br /><code class="language-plaintext highlighter-rouge">37:53</code> a zero simplex is a point one simplex is
+<br /><code class="language-plaintext highlighter-rouge">37:56</code> a connection of two zeros implices which
+<br /><code class="language-plaintext highlighter-rouge">37:58</code> is a line then there’s a two simplex
+<br /><code class="language-plaintext highlighter-rouge">38:00</code> which is a triangle
+<br /><code class="language-plaintext highlighter-rouge">38:02</code> a three simplex which is a tetrahedra
+<br /><code class="language-plaintext highlighter-rouge">38:05</code> and you can see that you can easily
+<br /><code class="language-plaintext highlighter-rouge">38:07</code> extend this contact
+<br /><code class="language-plaintext highlighter-rouge">38:09</code> con concept to higher dimensions so you
+<br /><code class="language-plaintext highlighter-rouge">38:12</code> can introduce a four simplex five
+<br /><code class="language-plaintext highlighter-rouge">38:13</code> simplex and so on
+<br /><code class="language-plaintext highlighter-rouge">38:16</code> and these objects are rather easy
+<br /><code class="language-plaintext highlighter-rouge">38:19</code> to construct and the nice thing that you
+<br /><code class="language-plaintext highlighter-rouge">38:22</code> can do is you can glue together such
+<br /><code class="language-plaintext highlighter-rouge">38:24</code> objects such simplices
+<br /><code class="language-plaintext highlighter-rouge">38:26</code> and by gluing them together
+<br /><code class="language-plaintext highlighter-rouge">38:30</code> you can basically approximate um
+<br /><code class="language-plaintext highlighter-rouge">38:33</code> money folds so um you might all have
+<br /><code class="language-plaintext highlighter-rouge">38:37</code> seen already some point where you
+<br /><code class="language-plaintext highlighter-rouge">38:39</code> uh triangulate the surface right and
+<br /><code class="language-plaintext highlighter-rouge">38:41</code> this is nothing
+<br /><code class="language-plaintext highlighter-rouge">38:42</code> then uh approximating this manifold with
+<br /><code class="language-plaintext highlighter-rouge">38:45</code> simplices
+<br /><code class="language-plaintext highlighter-rouge">38:51</code> now let’s look at this example which i
+<br /><code class="language-plaintext highlighter-rouge">38:54</code> took from the umap homepage actually
+<br /><code class="language-plaintext highlighter-rouge">38:56</code> where you can see points which are
+<br /><code class="language-plaintext highlighter-rouge">38:59</code> uniformly sampled actually equidistantly
+<br /><code class="language-plaintext highlighter-rouge">39:02</code> sampled i think
+<br /><code class="language-plaintext highlighter-rouge">39:03</code> on a not equidistant but uniformly
+<br /><code class="language-plaintext highlighter-rouge">39:06</code> sampled on a
+<br /><code class="language-plaintext highlighter-rouge">39:10</code> on a line
+<br /><code class="language-plaintext highlighter-rouge">39:14</code> in a two-dimensional space right so we
+<br /><code class="language-plaintext highlighter-rouge">39:16</code> have a one-dimensional manifold
+<br /><code class="language-plaintext highlighter-rouge">39:18</code> in a two-dimensional space and
+<br /><code class="language-plaintext highlighter-rouge">39:22</code> uh um so this would be could be our data
+<br /><code class="language-plaintext highlighter-rouge">39:25</code> points that were measured
+<br /><code class="language-plaintext highlighter-rouge">39:26</code> right and we would be interested in
+<br /><code class="language-plaintext highlighter-rouge">39:28</code> finding the topological
+<br /><code class="language-plaintext highlighter-rouge">39:30</code> structure of this manifold um so what
+<br /><code class="language-plaintext highlighter-rouge">39:33</code> has been done
+<br /><code class="language-plaintext highlighter-rouge">39:34</code> here is to draw some spheres around
+<br /><code class="language-plaintext highlighter-rouge">39:36</code> these dots
+<br /><code class="language-plaintext highlighter-rouge">39:38</code> and the union of all these spheres i
+<br /><code class="language-plaintext highlighter-rouge">39:40</code> mean all these spheres are sets
+<br /><code class="language-plaintext highlighter-rouge">39:42</code> and the union of all this is what’s
+<br /><code class="language-plaintext highlighter-rouge">39:44</code> called an open cover
+<br /><code class="language-plaintext highlighter-rouge">39:45</code> open cover is just the thing that uh is
+<br /><code class="language-plaintext highlighter-rouge">39:49</code> this is a um is a collection of sets
+<br /><code class="language-plaintext highlighter-rouge">39:52</code> that span the whole manifold right so
+<br /><code class="language-plaintext highlighter-rouge">39:54</code> the line
+<br /><code class="language-plaintext highlighter-rouge">39:55</code> that we see here is inside this open
+<br /><code class="language-plaintext highlighter-rouge">39:57</code> cover
+<br /><code class="language-plaintext highlighter-rouge">39:58</code> and now you can do some heavy
+<br /><code class="language-plaintext highlighter-rouge">40:00</code> topological and mathematics
+<br /><code class="language-plaintext highlighter-rouge">40:02</code> and you can then prove that if you now
+<br /><code class="language-plaintext highlighter-rouge">40:05</code> contract
+<br /><code class="language-plaintext highlighter-rouge">40:05</code> uh construct simplices by uh all
+<br /><code class="language-plaintext highlighter-rouge">40:09</code> groups of sets that in that that have a
+<br /><code class="language-plaintext highlighter-rouge">40:12</code> non empty intersection which in this
+<br /><code class="language-plaintext highlighter-rouge">40:14</code> case basically would mean
+<br /><code class="language-plaintext highlighter-rouge">40:15</code> you construct a one simplex here line
+<br /><code class="language-plaintext highlighter-rouge">40:18</code> here
+<br /><code class="language-plaintext highlighter-rouge">40:19</code> and one simplex here and so on you i
+<br /><code class="language-plaintext highlighter-rouge">40:21</code> think you get the picture
+<br /><code class="language-plaintext highlighter-rouge">40:23</code> then if you do this and this would look
+<br /><code class="language-plaintext highlighter-rouge">40:25</code> like
+<br /><code class="language-plaintext highlighter-rouge">40:26</code> no um then this
+<br /><code class="language-plaintext highlighter-rouge">40:29</code> structure this graph-like structure that
+<br /><code class="language-plaintext highlighter-rouge">40:32</code> you get out of
+<br /><code class="language-plaintext highlighter-rouge">40:33</code> this captures the topology of the
+<br /><code class="language-plaintext highlighter-rouge">40:35</code> manifold
+<br /><code class="language-plaintext highlighter-rouge">40:37</code> the information is encoded in there and
+<br /><code class="language-plaintext highlighter-rouge">40:38</code> i think in this uh
+<br /><code class="language-plaintext highlighter-rouge">40:40</code> two-dimensional example this this is uh
+<br /><code class="language-plaintext highlighter-rouge">40:44</code> quite intuitive that the connection of
+<br /><code class="language-plaintext highlighter-rouge">40:46</code> all these points
+<br /><code class="language-plaintext highlighter-rouge">40:51</code> tells you about uh tells you that this
+<br /><code class="language-plaintext highlighter-rouge">40:54</code> is a connected line
+<br /><code class="language-plaintext highlighter-rouge">40:56</code> and there’s no loops for instance
+<br /><code class="language-plaintext highlighter-rouge">41:01</code> um so that’s pretty cool and now we
+<br /><code class="language-plaintext highlighter-rouge">41:04</code> would like to use this concept to
+<br /><code class="language-plaintext highlighter-rouge">41:06</code> uh to learn something about our high
+<br /><code class="language-plaintext highlighter-rouge">41:09</code> dimensional data
+<br /><code class="language-plaintext highlighter-rouge">41:12</code> is the criterion for the connection
+<br /><code class="language-plaintext highlighter-rouge">41:14</code> always like the
+<br /><code class="language-plaintext highlighter-rouge">41:15</code> shortest distance between the points
+<br /><code class="language-plaintext highlighter-rouge">41:18</code> because i mean here i could
+<br /><code class="language-plaintext highlighter-rouge">41:20</code> see it but if i have more complex
+<br /><code class="language-plaintext highlighter-rouge">41:22</code> structure
+<br /><code class="language-plaintext highlighter-rouge">41:23</code> exactly exactly i’m actually coming to
+<br /><code class="language-plaintext highlighter-rouge">41:25</code> this point in a second in this case
+<br /><code class="language-plaintext highlighter-rouge">41:27</code> it was a bit like okay let’s just guess
+<br /><code class="language-plaintext highlighter-rouge">41:30</code> uh the size of the sphere
+<br /><code class="language-plaintext highlighter-rouge">41:31</code> make it a good guess such that it works
+<br /><code class="language-plaintext highlighter-rouge">41:33</code> right but if you have high dimensional
+<br /><code class="language-plaintext highlighter-rouge">41:35</code> data
+<br /><code class="language-plaintext highlighter-rouge">41:36</code> what would be the size of this sphere
+<br /><code class="language-plaintext highlighter-rouge">41:37</code> that would be super unclear
+<br /><code class="language-plaintext highlighter-rouge">41:39</code> so um i’ll come back to this question in
+<br /><code class="language-plaintext highlighter-rouge">41:42</code> a moment
+<br /><code class="language-plaintext highlighter-rouge">41:46</code> it’s also connected to a situation with
+<br /><code class="language-plaintext highlighter-rouge">41:48</code> like this
+<br /><code class="language-plaintext highlighter-rouge">41:49</code> right because um
+<br /><code class="language-plaintext highlighter-rouge">41:52</code> our points might not actually be
+<br /><code class="language-plaintext highlighter-rouge">41:54</code> uniformly distributed
+<br /><code class="language-plaintext highlighter-rouge">41:55</code> okay so um if we would do the same thing
+<br /><code class="language-plaintext highlighter-rouge">41:59</code> here
+<br /><code class="language-plaintext highlighter-rouge">42:00</code> drawing these circles and
+<br /><code class="language-plaintext highlighter-rouge">42:04</code> uh construct the simplices out of that
+<br /><code class="language-plaintext highlighter-rouge">42:07</code> we would actually get disconnected parts
+<br /><code class="language-plaintext highlighter-rouge">42:10</code> okay
+<br /><code class="language-plaintext highlighter-rouge">42:11</code> and this is not what we would
+<br /><code class="language-plaintext highlighter-rouge">42:13</code> intuitively like to get right
+<br /><code class="language-plaintext highlighter-rouge">42:15</code> because here we
+<br /><code class="language-plaintext highlighter-rouge">42:19</code> we saw this line um
+<br /><code class="language-plaintext highlighter-rouge">42:24</code> now and this is also this kind of breaks
+<br /><code class="language-plaintext highlighter-rouge">42:26</code> the assumption
+<br /><code class="language-plaintext highlighter-rouge">42:28</code> of umap which is the uniform
+<br /><code class="language-plaintext highlighter-rouge">42:30</code> distribution of uh
+<br /><code class="language-plaintext highlighter-rouge">42:32</code> of data points on the money fold so
+<br /><code class="language-plaintext highlighter-rouge">42:35</code> how can we circumvent this or how can we
+<br /><code class="language-plaintext highlighter-rouge">42:37</code> solve this problem we can
+<br /><code class="language-plaintext highlighter-rouge">42:38</code> kind of turn the problem upside down and
+<br /><code class="language-plaintext highlighter-rouge">42:41</code> say
+<br /><code class="language-plaintext highlighter-rouge">42:42</code> no these data points are uniformly
+<br /><code class="language-plaintext highlighter-rouge">42:46</code> distributed we see different distances
+<br /><code class="language-plaintext highlighter-rouge">42:50</code> if we apply a constant metric so this
+<br /><code class="language-plaintext highlighter-rouge">42:52</code> has to be wrong the
+<br /><code class="language-plaintext highlighter-rouge">42:53</code> metric is not constant actually we
+<br /><code class="language-plaintext highlighter-rouge">42:56</code> couldn’t
+<br /><code class="language-plaintext highlighter-rouge">42:57</code> try to construct the metric like this
+<br /><code class="language-plaintext highlighter-rouge">42:58</code> and this comes back to your question
+<br /><code class="language-plaintext highlighter-rouge">43:01</code> we might say that the distance in this
+<br /><code class="language-plaintext highlighter-rouge">43:02</code> case to the fifth
+<br /><code class="language-plaintext highlighter-rouge">43:04</code> neighbor should always on average give
+<br /><code class="language-plaintext highlighter-rouge">43:06</code> us a distance of five
+<br /><code class="language-plaintext highlighter-rouge">43:08</code> right such that we say um distances
+<br /><code class="language-plaintext highlighter-rouge">43:10</code> between neighboring data points should
+<br /><code class="language-plaintext highlighter-rouge">43:12</code> on average be one
+<br /><code class="language-plaintext highlighter-rouge">43:15</code> um and this would mean that that a
+<br /><code class="language-plaintext highlighter-rouge">43:18</code> distance of
+<br /><code class="language-plaintext highlighter-rouge">43:19</code> five for instance for this uh data point
+<br /><code class="language-plaintext highlighter-rouge">43:22</code> would be rather large
+<br /><code class="language-plaintext highlighter-rouge">43:23</code> and a distance of 5 for this standard
+<br /><code class="language-plaintext highlighter-rouge">43:26</code> point would be rather small
+<br /><code class="language-plaintext highlighter-rouge">43:28</code> so we define
+<br /><code class="language-plaintext highlighter-rouge">43:34</code> we now use nearest neighbors k nearest
+<br /><code class="language-plaintext highlighter-rouge">43:37</code> neighbors
+<br /><code class="language-plaintext highlighter-rouge">43:38</code> to define a local metric
+<br /><code class="language-plaintext highlighter-rouge">43:42</code> and we then turn this local metric
+<br /><code class="language-plaintext highlighter-rouge">43:47</code> again and i’m skipping a lot of details
+<br /><code class="language-plaintext highlighter-rouge">43:49</code> which are important here into a
+<br /><code class="language-plaintext highlighter-rouge">43:53</code> construction of simplices into a
+<br /><code class="language-plaintext highlighter-rouge">43:54</code> construction of graphs where the
+<br /><code class="language-plaintext highlighter-rouge">43:56</code> edges now are weighted and the reason
+<br /><code class="language-plaintext highlighter-rouge">44:00</code> that they are weighted now is that the
+<br /><code class="language-plaintext highlighter-rouge">44:02</code> uh the distances between
+<br /><code class="language-plaintext highlighter-rouge">44:04</code> uh points are different and also that uh
+<br /><code class="language-plaintext highlighter-rouge">44:06</code> we actually have two measures of
+<br /><code class="language-plaintext highlighter-rouge">44:09</code> um of distance one
+<br /><code class="language-plaintext highlighter-rouge">44:12</code> using the local metric from here to
+<br /><code class="language-plaintext highlighter-rouge">44:15</code> there and one using the local metric
+<br /><code class="language-plaintext highlighter-rouge">44:16</code> from here to there because they might
+<br /><code class="language-plaintext highlighter-rouge">44:18</code> not be the same
+<br /><code class="language-plaintext highlighter-rouge">44:22</code> um but if you properly do the math
+<br /><code class="language-plaintext highlighter-rouge">44:25</code> behind all that
+<br /><code class="language-plaintext highlighter-rouge">44:26</code> you can show that this construction now
+<br /><code class="language-plaintext highlighter-rouge">44:29</code> um captures essential parts of the
+<br /><code class="language-plaintext highlighter-rouge">44:32</code> what’s now called the fuzzy topology
+<br /><code class="language-plaintext highlighter-rouge">44:35</code> of this manifold okay so we have a graph
+<br /><code class="language-plaintext highlighter-rouge">44:39</code> representation now
+<br /><code class="language-plaintext highlighter-rouge">44:41</code> that captures a topological structure
+<br /><code class="language-plaintext highlighter-rouge">44:44</code> of our of the manifold we’re interested
+<br /><code class="language-plaintext highlighter-rouge">44:47</code> in
+<br /><code class="language-plaintext highlighter-rouge">44:49</code> um how can we do that how can we use
+<br /><code class="language-plaintext highlighter-rouge">44:50</code> this now to find low dimensional
+<br /><code class="language-plaintext highlighter-rouge">44:52</code> representation
+<br /><code class="language-plaintext highlighter-rouge">44:54</code> well the idea is that now you start
+<br /><code class="language-plaintext highlighter-rouge">44:57</code> um you have this this graph defined and
+<br /><code class="language-plaintext highlighter-rouge">45:01</code> now you start
+<br /><code class="language-plaintext highlighter-rouge">45:02</code> with a low dimensional representation
+<br /><code class="language-plaintext highlighter-rouge">45:05</code> you just place your points randomly
+<br /><code class="language-plaintext highlighter-rouge">45:07</code> basically
+<br /><code class="language-plaintext highlighter-rouge">45:08</code> and then you construct a similar
+<br /><code class="language-plaintext highlighter-rouge">45:12</code> graph representation of your low
+<br /><code class="language-plaintext highlighter-rouge">45:14</code> dimensional representation and then you
+<br /><code class="language-plaintext highlighter-rouge">45:15</code> shuffle your points around
+<br /><code class="language-plaintext highlighter-rouge">45:17</code> until the the topology the graph
+<br /><code class="language-plaintext highlighter-rouge">45:20</code> representations kind of match
+<br /><code class="language-plaintext highlighter-rouge">45:26</code> so yes you have a graph representation
+<br /><code class="language-plaintext highlighter-rouge">45:30</code> of your high dimensional
+<br /><code class="language-plaintext highlighter-rouge">45:31</code> data of your low dimensional data you
+<br /><code class="language-plaintext highlighter-rouge">45:33</code> interpret the edge weights
+<br /><code class="language-plaintext highlighter-rouge">45:35</code> as probabilities and then you minimize
+<br /><code class="language-plaintext highlighter-rouge">45:38</code> the cross
+<br /><code class="language-plaintext highlighter-rouge">45:39</code> entropy given here where basically
+<br /><code class="language-plaintext highlighter-rouge">45:42</code> the important thing is that you try to
+<br /><code class="language-plaintext highlighter-rouge">45:44</code> match the
+<br /><code class="language-plaintext highlighter-rouge">45:46</code> edge weights in your higher dimensional
+<br /><code class="language-plaintext highlighter-rouge">45:48</code> representation with the edge weights and
+<br /><code class="language-plaintext highlighter-rouge">45:50</code> the low dimensional representation like
+<br /><code class="language-plaintext highlighter-rouge">45:52</code> when this
+<br /><code class="language-plaintext highlighter-rouge">45:53</code> ratio gets one the term vanishes and the
+<br /><code class="language-plaintext highlighter-rouge">45:57</code> same happens over here
+<br /><code class="language-plaintext highlighter-rouge">46:01</code> now how does this work in practice like
+<br /><code class="language-plaintext highlighter-rouge">46:05</code> if you want to read more about this
+<br /><code class="language-plaintext highlighter-rouge">46:06</code> there’s a nice home page
+<br /><code class="language-plaintext highlighter-rouge">46:11</code> i just wanted to show an animation here
+<br /><code class="language-plaintext highlighter-rouge">46:15</code> which is called understanding umap there
+<br /><code class="language-plaintext highlighter-rouge">46:18</code> for instance here you have an example
+<br /><code class="language-plaintext highlighter-rouge">46:20</code> in 3d you have um dots
+<br /><code class="language-plaintext highlighter-rouge">46:23</code> which run out from a center in a star
+<br /><code class="language-plaintext highlighter-rouge">46:26</code> like fashion right and that’s a 3d
+<br /><code class="language-plaintext highlighter-rouge">46:28</code> represent this is a three-dimensional
+<br /><code class="language-plaintext highlighter-rouge">46:30</code> data
+<br /><code class="language-plaintext highlighter-rouge">46:31</code> and well actually it’s
+<br /><code class="language-plaintext highlighter-rouge">46:34</code> 10 dimensional data in this case i think
+<br /><code class="language-plaintext highlighter-rouge">46:37</code> and this is a three-dimensional
+<br /><code class="language-plaintext highlighter-rouge">46:38</code> projection maybe
+<br /><code class="language-plaintext highlighter-rouge">46:40</code> and now if you run umap
+<br /><code class="language-plaintext highlighter-rouge">46:44</code> these dots are shuffled around randomly
+<br /><code class="language-plaintext highlighter-rouge">46:47</code> and you stop
+<br /><code class="language-plaintext highlighter-rouge">46:48</code> when you have a topological
+<br /><code class="language-plaintext highlighter-rouge">46:50</code> representation which is very similar and
+<br /><code class="language-plaintext highlighter-rouge">46:51</code> in this case this is also
+<br /><code class="language-plaintext highlighter-rouge">46:53</code> this starship star-shaped pattern but
+<br /><code class="language-plaintext highlighter-rouge">46:56</code> now in two dimensions
+<br /><code class="language-plaintext highlighter-rouge">46:58</code> and if you want there’s many more
+<br /><code class="language-plaintext highlighter-rouge">47:00</code> examples here and you can
+<br /><code class="language-plaintext highlighter-rouge">47:02</code> play around with this
+<br /><code class="language-plaintext highlighter-rouge">47:09</code> um you can of course do the same thing
+<br /><code class="language-plaintext highlighter-rouge">47:12</code> in
+<br /><code class="language-plaintext highlighter-rouge">47:12</code> r um i i don’t know
+<br /><code class="language-plaintext highlighter-rouge">47:16</code> like i know this was a lot of
+<br /><code class="language-plaintext highlighter-rouge">47:18</code> information and i’ve
+<br /><code class="language-plaintext highlighter-rouge">47:19</code> i didn’t go into the details are there
+<br /><code class="language-plaintext highlighter-rouge">47:21</code> questions about umap at this point
+<br /><code class="language-plaintext highlighter-rouge">47:28</code> otherwise i just show you how to do this
+<br /><code class="language-plaintext highlighter-rouge">47:31</code> in r
+<br /><code class="language-plaintext highlighter-rouge">47:35</code> it’s essentially again a one-liner
+<br /><code class="language-plaintext highlighter-rouge">47:38</code> where you have a function umap and what
+<br /><code class="language-plaintext highlighter-rouge">47:41</code> i feed in here
+<br /><code class="language-plaintext highlighter-rouge">47:43</code> is the swiss roll that i created
+<br /><code class="language-plaintext highlighter-rouge">47:45</code> previously
+<br /><code class="language-plaintext highlighter-rouge">47:47</code> okay and then um
+<br /><code class="language-plaintext highlighter-rouge">47:50</code> i just i i do the um
+<br /><code class="language-plaintext highlighter-rouge">47:54</code> dimensionality reduction here with a one
+<br /><code class="language-plaintext highlighter-rouge">47:56</code> liner
+<br /><code class="language-plaintext highlighter-rouge">47:57</code> then i convert the whole thing in a data
+<br /><code class="language-plaintext highlighter-rouge">47:59</code> table object
+<br /><code class="language-plaintext highlighter-rouge">48:00</code> to uh to have a nice plotting
+<br /><code class="language-plaintext highlighter-rouge">48:03</code> and this is what the result looks like
+<br /><code class="language-plaintext highlighter-rouge">48:05</code> now a new map coordinate
+<br /><code class="language-plaintext highlighter-rouge">48:08</code> the the swiss role was kind of unrolled
+<br /><code class="language-plaintext highlighter-rouge">48:11</code> but it
+<br /><code class="language-plaintext highlighter-rouge">48:12</code> heavily lost its shape but what you can
+<br /><code class="language-plaintext highlighter-rouge">48:15</code> see is that the topology is preserved
+<br /><code class="language-plaintext highlighter-rouge">48:17</code> right
+<br /><code class="language-plaintext highlighter-rouge">48:18</code> um so so the hole in the center is still
+<br /><code class="language-plaintext highlighter-rouge">48:21</code> there
+<br /><code class="language-plaintext highlighter-rouge">48:25</code> um i also want to show you a review map
+<br /><code class="language-plaintext highlighter-rouge">48:29</code> representation of the coil 20 data that
+<br /><code class="language-plaintext highlighter-rouge">48:31</code> i showed you above so remember this was
+<br /><code class="language-plaintext highlighter-rouge">48:33</code> the data set
+<br /><code class="language-plaintext highlighter-rouge">48:36</code> where we had pictures which are rotated
+<br /><code class="language-plaintext highlighter-rouge">48:42</code> and where the the pca didn’t look very
+<br /><code class="language-plaintext highlighter-rouge">48:46</code> informative
+<br /><code class="language-plaintext highlighter-rouge">48:48</code> now if we do the same thing with a umap
+<br /><code class="language-plaintext highlighter-rouge">48:50</code> and we feed in these pictures this is
+<br /><code class="language-plaintext highlighter-rouge">48:52</code> what we get
+<br /><code class="language-plaintext highlighter-rouge">48:54</code> so most of the images nicely separate
+<br /><code class="language-plaintext highlighter-rouge">48:57</code> right different colors mean different
+<br /><code class="language-plaintext highlighter-rouge">48:59</code> objects
+<br /><code class="language-plaintext highlighter-rouge">49:01</code> they nicely separate and what the umab
+<br /><code class="language-plaintext highlighter-rouge">49:03</code> also gives us
+<br /><code class="language-plaintext highlighter-rouge">49:04</code> is this kind is is the topology of this
+<br /><code class="language-plaintext highlighter-rouge">49:07</code> data in the sense of that we can see
+<br /><code class="language-plaintext highlighter-rouge">49:09</code> that this is a rotation
+<br /><code class="language-plaintext highlighter-rouge">49:10</code> right so neighboring
+<br /><code class="language-plaintext highlighter-rouge">49:14</code> pictures are similar and you
+<br /><code class="language-plaintext highlighter-rouge">49:18</code> rotate the object until you come back to
+<br /><code class="language-plaintext highlighter-rouge">49:20</code> the other side
+<br /><code class="language-plaintext highlighter-rouge">49:27</code> okay i think yes that’s it for um
+<br /><code class="language-plaintext highlighter-rouge">49:30</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">49:31</code> dimensionality reduction just one
+<br /><code class="language-plaintext highlighter-rouge">49:35</code> example
+<br /><code class="language-plaintext highlighter-rouge">49:36</code> for linear dimensionality reduction
+<br /><code class="language-plaintext highlighter-rouge">49:37</code> which was printable components
+<br /><code class="language-plaintext highlighter-rouge">49:39</code> and one for non-linear topology
+<br /><code class="language-plaintext highlighter-rouge">49:42</code> preserving dimensionality reduction
+<br /><code class="language-plaintext highlighter-rouge">49:44</code> which was umap and i now wanted to talk
+<br /><code class="language-plaintext highlighter-rouge">49:47</code> a little bit about clustering
+<br /><code class="language-plaintext highlighter-rouge">49:50</code> um so
+<br /><code class="language-plaintext highlighter-rouge">49:53</code> you can as you already saw in some of
+<br /><code class="language-plaintext highlighter-rouge">49:56</code> the
+<br /><code class="language-plaintext highlighter-rouge">49:56</code> reduced dimensionality in in the some of
+<br /><code class="language-plaintext highlighter-rouge">49:59</code> the
+<br /><code class="language-plaintext highlighter-rouge">50:00</code> representations of the data and reduced
+<br /><code class="language-plaintext highlighter-rouge">50:01</code> dimensions uh clusters can appear in
+<br /><code class="language-plaintext highlighter-rouge">50:04</code> your data which
+<br /><code class="language-plaintext highlighter-rouge">50:05</code> essentially mean you have qualitatively
+<br /><code class="language-plaintext highlighter-rouge">50:08</code> different
+<br /><code class="language-plaintext highlighter-rouge">50:09</code> objects in your data different different
+<br /><code class="language-plaintext highlighter-rouge">50:11</code> samples and
+<br /><code class="language-plaintext highlighter-rouge">50:15</code> you sometimes you you
+<br /><code class="language-plaintext highlighter-rouge">50:18</code> and and it’s good to have a way to group
+<br /><code class="language-plaintext highlighter-rouge">50:22</code> different kinds of different classes of
+<br /><code class="language-plaintext highlighter-rouge">50:24</code> objects together
+<br /><code class="language-plaintext highlighter-rouge">50:26</code> and clustering is nothing
+<br /><code class="language-plaintext highlighter-rouge">50:29</code> which is um there is no one definition
+<br /><code class="language-plaintext highlighter-rouge">50:33</code> of clustering
+<br /><code class="language-plaintext highlighter-rouge">50:34</code> the idea is to find clusters such that
+<br /><code class="language-plaintext highlighter-rouge">50:37</code> the data within clusters are similar
+<br /><code class="language-plaintext highlighter-rouge">50:40</code> while data from different clusters are
+<br /><code class="language-plaintext highlighter-rouge">50:42</code> dissimilar
+<br /><code class="language-plaintext highlighter-rouge">50:43</code> but what you define a similarity or
+<br /><code class="language-plaintext highlighter-rouge">50:46</code> dissimilarity that’s
+<br /><code class="language-plaintext highlighter-rouge">50:48</code> basically up to you and so a lot of
+<br /><code class="language-plaintext highlighter-rouge">50:50</code> different clustering algorithms exist
+<br /><code class="language-plaintext highlighter-rouge">50:54</code> and i just wanted to introduce three of
+<br /><code class="language-plaintext highlighter-rouge">50:56</code> them today
+<br /><code class="language-plaintext highlighter-rouge">50:58</code> um and you use this a lot in or at least
+<br /><code class="language-plaintext highlighter-rouge">51:01</code> i use this a lot in trying to understand
+<br /><code class="language-plaintext highlighter-rouge">51:03</code> high dimensional data
+<br /><code class="language-plaintext highlighter-rouge">51:05</code> i’m just going to share my
+<br /><code class="language-plaintext highlighter-rouge">51:10</code> ipad again
+<br /><code class="language-plaintext highlighter-rouge">51:27</code> and i wanted to show you first i want to
+<br /><code class="language-plaintext highlighter-rouge">51:29</code> give you three examples and the first
+<br /><code class="language-plaintext highlighter-rouge">51:30</code> one would be hierarchical clustering
+<br /><code class="language-plaintext highlighter-rouge">51:32</code> which you
+<br /><code class="language-plaintext highlighter-rouge">51:33</code> which uh
+<br /><code class="language-plaintext highlighter-rouge">51:36</code> we’re here i just plotted some
+<br /><code class="language-plaintext highlighter-rouge">51:40</code> some data in two-dimensional space to
+<br /><code class="language-plaintext highlighter-rouge">51:42</code> illustrate the concept of clustering
+<br /><code class="language-plaintext highlighter-rouge">51:44</code> and what you need for hierarchical
+<br /><code class="language-plaintext highlighter-rouge">51:47</code> clustering
+<br /><code class="language-plaintext highlighter-rouge">51:48</code> is first of all a metric
+<br /><code class="language-plaintext highlighter-rouge">51:54</code> which defines distance between your
+<br /><code class="language-plaintext highlighter-rouge">51:57</code> objects
+<br /><code class="language-plaintext highlighter-rouge">51:57</code> that you have here and this could just
+<br /><code class="language-plaintext highlighter-rouge">52:00</code> be for instance the euclidean metric or
+<br /><code class="language-plaintext highlighter-rouge">52:02</code> manhattan metric or a correlation
+<br /><code class="language-plaintext highlighter-rouge">52:04</code> metric you’re basically free to choose
+<br /><code class="language-plaintext highlighter-rouge">52:06</code> and then what you do
+<br /><code class="language-plaintext highlighter-rouge">52:08</code> is you um you group together
+<br /><code class="language-plaintext highlighter-rouge">52:12</code> the two objects which are closest
+<br /><code class="language-plaintext highlighter-rouge">52:15</code> together biometrics so with the
+<br /><code class="language-plaintext highlighter-rouge">52:16</code> euclidean metric for this example
+<br /><code class="language-plaintext highlighter-rouge">52:18</code> this would be those two guys right
+<br /><code class="language-plaintext highlighter-rouge">52:30</code> so
+<br /><code class="language-plaintext highlighter-rouge">52:35</code> what you then create is a kind of tree
+<br /><code class="language-plaintext highlighter-rouge">52:37</code> where where um
+<br /><code class="language-plaintext highlighter-rouge">52:39</code> okay we say i said we grow group
+<br /><code class="language-plaintext highlighter-rouge">52:41</code> together those two guys so that’s the
+<br /><code class="language-plaintext highlighter-rouge">52:42</code> first thing to do
+<br /><code class="language-plaintext highlighter-rouge">52:48</code> um and now next we need another thing
+<br /><code class="language-plaintext highlighter-rouge">52:52</code> which is called the linkage criterion
+<br /><code class="language-plaintext highlighter-rouge">53:03</code> um and this tells you how to now treat
+<br /><code class="language-plaintext highlighter-rouge">53:06</code> these clusters because
+<br /><code class="language-plaintext highlighter-rouge">53:08</code> uh now you need a way to uh
+<br /><code class="language-plaintext highlighter-rouge">53:11</code> to give get the distance between the
+<br /><code class="language-plaintext highlighter-rouge">53:14</code> clusters
+<br /><code class="language-plaintext highlighter-rouge">53:21</code> and this could for instance be the
+<br /><code class="language-plaintext highlighter-rouge">53:23</code> minimum distance
+<br /><code class="language-plaintext highlighter-rouge">53:27</code> so this would mean if you want to now
+<br /><code class="language-plaintext highlighter-rouge">53:29</code> get the
+<br /><code class="language-plaintext highlighter-rouge">53:30</code> the distance between uh this cluster
+<br /><code class="language-plaintext highlighter-rouge">53:33</code> and uh this object you would
+<br /><code class="language-plaintext highlighter-rouge">53:36</code> take the distance between b and d and c
+<br /><code class="language-plaintext highlighter-rouge">53:39</code> and d
+<br /><code class="language-plaintext highlighter-rouge">53:39</code> and take the minimum distance or you
+<br /><code class="language-plaintext highlighter-rouge">53:43</code> could also
+<br /><code class="language-plaintext highlighter-rouge">53:44</code> for instance use the centroid there’s
+<br /><code class="language-plaintext highlighter-rouge">53:46</code> many of the clusters there’s many
+<br /><code class="language-plaintext highlighter-rouge">53:48</code> choices right
+<br /><code class="language-plaintext highlighter-rouge">53:51</code> um now if we kind of go on we maybe take
+<br /><code class="language-plaintext highlighter-rouge">53:54</code> the centroid here then the next cluster
+<br /><code class="language-plaintext highlighter-rouge">53:56</code> would probably be a grouping of d
+<br /><code class="language-plaintext highlighter-rouge">54:00</code> and e
+<br /><code class="language-plaintext highlighter-rouge">54:06</code> then i’d say i would add
+<br /><code class="language-plaintext highlighter-rouge">54:09</code> those three in one cluster
+<br /><code class="language-plaintext highlighter-rouge">54:18</code> then group all these b c d
+<br /><code class="language-plaintext highlighter-rouge">54:21</code> e and f until finally we arrive
+<br /><code class="language-plaintext highlighter-rouge">54:25</code> at one at an object which
+<br /><code class="language-plaintext highlighter-rouge">54:29</code> contains all the elements
+<br /><code class="language-plaintext highlighter-rouge">54:35</code> and now if we want to define clusters in
+<br /><code class="language-plaintext highlighter-rouge">54:38</code> our data we
+<br /><code class="language-plaintext highlighter-rouge">54:39</code> need to define a precision threshold
+<br /><code class="language-plaintext highlighter-rouge">54:42</code> along this axis
+<br /><code class="language-plaintext highlighter-rouge">54:46</code> and we could for instance put it here
+<br /><code class="language-plaintext highlighter-rouge">54:53</code> um and then
+<br /><code class="language-plaintext highlighter-rouge">55:01</code> this would cut the tree in this
+<br /><code class="language-plaintext highlighter-rouge">55:05</code> in in separate subtrees and we would
+<br /><code class="language-plaintext highlighter-rouge">55:08</code> have a
+<br /><code class="language-plaintext highlighter-rouge">55:08</code> subtree here that’s up three here and
+<br /><code class="language-plaintext highlighter-rouge">55:11</code> it’s up to here and then this would be
+<br /><code class="language-plaintext highlighter-rouge">55:12</code> our three different clusters so we would
+<br /><code class="language-plaintext highlighter-rouge">55:14</code> have a cluster one
+<br /><code class="language-plaintext highlighter-rouge">55:15</code> cluster two and a cluster three and if
+<br /><code class="language-plaintext highlighter-rouge">55:18</code> we uh
+<br /><code class="language-plaintext highlighter-rouge">55:20</code> increase the precision like up here then
+<br /><code class="language-plaintext highlighter-rouge">55:22</code> we would get more and more clusters
+<br /><code class="language-plaintext highlighter-rouge">55:28</code> and as this basically
+<br /><code class="language-plaintext highlighter-rouge">55:31</code> just needs some uh
+<br /><code class="language-plaintext highlighter-rouge">55:34</code> distance computations um it’s it’s this
+<br /><code class="language-plaintext highlighter-rouge">55:37</code> is rather easily done in in
+<br /><code class="language-plaintext highlighter-rouge">55:39</code> uh also in higher dimension i don’t know
+<br /><code class="language-plaintext highlighter-rouge">55:46</code> um
+<br /><code class="language-plaintext highlighter-rouge">55:48</code> next i wanted to show you
+<br /><code class="language-plaintext highlighter-rouge">55:58</code> um another important one which is a
+<br /><code class="language-plaintext highlighter-rouge">56:02</code> centroid-based clustering called k-means
+<br /><code class="language-plaintext highlighter-rouge">56:04</code> clustering and you
+<br /><code class="language-plaintext highlighter-rouge">56:07</code> one comes across this quite often as
+<br /><code class="language-plaintext highlighter-rouge">56:09</code> well when working with high-dimensional
+<br /><code class="language-plaintext highlighter-rouge">56:10</code> data
+<br /><code class="language-plaintext highlighter-rouge">56:11</code> so here in this case
+<br /><code class="language-plaintext highlighter-rouge">56:17</code> um you pre-specify the number of
+<br /><code class="language-plaintext highlighter-rouge">56:19</code> clusters k
+<br /><code class="language-plaintext highlighter-rouge">56:20</code> so that’s what you have to start with
+<br /><code class="language-plaintext highlighter-rouge">56:23</code> how many clusters do you want to get
+<br /><code class="language-plaintext highlighter-rouge">56:26</code> you might try out different case in
+<br /><code class="language-plaintext highlighter-rouge">56:28</code> practice
+<br /><code class="language-plaintext highlighter-rouge">56:29</code> and then you partition your data such
+<br /><code class="language-plaintext highlighter-rouge">56:31</code> that the square distance to the cluster
+<br /><code class="language-plaintext highlighter-rouge">56:34</code> mean position so that that would be the
+<br /><code class="language-plaintext highlighter-rouge">56:37</code> centroid is minimal
+<br /><code class="language-plaintext highlighter-rouge">56:41</code> um so how would this look like
+<br /><code class="language-plaintext highlighter-rouge">56:45</code> um actually maybe let’s look at the
+<br /><code class="language-plaintext highlighter-rouge">56:49</code> final result
+<br /><code class="language-plaintext highlighter-rouge">56:50</code> first we’re kind of uh here you see an
+<br /><code class="language-plaintext highlighter-rouge">56:53</code> algorithm converging but what you try to
+<br /><code class="language-plaintext highlighter-rouge">56:55</code> do is to
+<br /><code class="language-plaintext highlighter-rouge">56:55</code> talk to do a grouping of the data such
+<br /><code class="language-plaintext highlighter-rouge">56:59</code> that oh no it doesn’t stop there
+<br /><code class="language-plaintext highlighter-rouge">57:06</code> sorry so so how do you how do you get
+<br /><code class="language-plaintext highlighter-rouge">57:08</code> this partitioning of your data
+<br /><code class="language-plaintext highlighter-rouge">57:11</code> one way would be the lloyd algorithm you
+<br /><code class="language-plaintext highlighter-rouge">57:13</code> start with random centers that you place
+<br /><code class="language-plaintext highlighter-rouge">57:15</code> somewhere so in this case
+<br /><code class="language-plaintext highlighter-rouge">57:17</code> this is an example taking from wikipedia
+<br /><code class="language-plaintext highlighter-rouge">57:20</code> there’s a center here a center there in
+<br /><code class="language-plaintext highlighter-rouge">57:22</code> the center there and then
+<br /><code class="language-plaintext highlighter-rouge">57:23</code> for each of your data points you assign
+<br /><code class="language-plaintext highlighter-rouge">57:26</code> the data point to the cluster
+<br /><code class="language-plaintext highlighter-rouge">57:28</code> where the center is nearest right so the
+<br /><code class="language-plaintext highlighter-rouge">57:30</code> yellow center is here so everything here
+<br /><code class="language-plaintext highlighter-rouge">57:32</code> would be assigned to the yellow
+<br /><code class="language-plaintext highlighter-rouge">57:34</code> cluster now once you did this you
+<br /><code class="language-plaintext highlighter-rouge">57:39</code> update the centers of your clusters
+<br /><code class="language-plaintext highlighter-rouge">57:42</code> now you take the centroid of this yellow
+<br /><code class="language-plaintext highlighter-rouge">57:45</code> cluster for instance
+<br /><code class="language-plaintext highlighter-rouge">57:46</code> and the yellow center ends up here
+<br /><code class="language-plaintext highlighter-rouge">57:50</code> and now you do a new assignment of your
+<br /><code class="language-plaintext highlighter-rouge">57:54</code> data points to the nearest center in
+<br /><code class="language-plaintext highlighter-rouge">57:57</code> this case all the
+<br /><code class="language-plaintext highlighter-rouge">57:58</code> yellow ones up here would be assigned to
+<br /><code class="language-plaintext highlighter-rouge">58:01</code> the blue center actually
+<br /><code class="language-plaintext highlighter-rouge">58:03</code> so they are assigned to the blue and
+<br /><code class="language-plaintext highlighter-rouge">58:04</code> then you iteratively go on and do this
+<br /><code class="language-plaintext highlighter-rouge">58:07</code> go on and go and go on until this
+<br /><code class="language-plaintext highlighter-rouge">58:10</code> algorithm converges and you end up
+<br /><code class="language-plaintext highlighter-rouge">58:12</code> having three clusters defined by this
+<br /><code class="language-plaintext highlighter-rouge">58:16</code> criterion of course there’s other more
+<br /><code class="language-plaintext highlighter-rouge">58:17</code> complicated more sophisticated
+<br /><code class="language-plaintext highlighter-rouge">58:19</code> algorithms but this approximates the
+<br /><code class="language-plaintext highlighter-rouge">58:20</code> solution
+<br /><code class="language-plaintext highlighter-rouge">58:27</code> a third algorithm that i wanted to show
+<br /><code class="language-plaintext highlighter-rouge">58:29</code> you and i want to show you this because
+<br /><code class="language-plaintext highlighter-rouge">58:31</code> i
+<br /><code class="language-plaintext highlighter-rouge">58:31</code> work with it every day comes from social
+<br /><code class="language-plaintext highlighter-rouge">58:34</code> systems which is a graph based
+<br /><code class="language-plaintext highlighter-rouge">58:36</code> clustering
+<br /><code class="language-plaintext highlighter-rouge">58:38</code> when you start with your high
+<br /><code class="language-plaintext highlighter-rouge">58:39</code> dimensional data you first need a graph
+<br /><code class="language-plaintext highlighter-rouge">58:41</code> representation of your data and we
+<br /><code class="language-plaintext highlighter-rouge">58:43</code> already saw this in you
+<br /><code class="language-plaintext highlighter-rouge">58:44</code> in the u-map example you could for
+<br /><code class="language-plaintext highlighter-rouge">58:47</code> instance
+<br /><code class="language-plaintext highlighter-rouge">58:48</code> do a k-nearest neighbor network on your
+<br /><code class="language-plaintext highlighter-rouge">58:50</code> data and then
+<br /><code class="language-plaintext highlighter-rouge">58:51</code> you partition your data such that the
+<br /><code class="language-plaintext highlighter-rouge">58:53</code> modularity
+<br /><code class="language-plaintext highlighter-rouge">58:54</code> queue is optimized um
+<br /><code class="language-plaintext highlighter-rouge">58:59</code> modularity in this case is defined as
+<br /><code class="language-plaintext highlighter-rouge">59:02</code> this object where where e i j are the
+<br /><code class="language-plaintext highlighter-rouge">59:05</code> fraction of
+<br /><code class="language-plaintext highlighter-rouge">59:06</code> links between cluster i and j
+<br /><code class="language-plaintext highlighter-rouge">59:09</code> right and what you try to do then in
+<br /><code class="language-plaintext highlighter-rouge">59:12</code> this object is that
+<br /><code class="language-plaintext highlighter-rouge">59:14</code> the links between
+<br /><code class="language-plaintext highlighter-rouge">59:17</code> cluster i and i which is the internal
+<br /><code class="language-plaintext highlighter-rouge">59:19</code> links this
+<br /><code class="language-plaintext highlighter-rouge">59:20</code> it’s this eii right this is it’s the
+<br /><code class="language-plaintext highlighter-rouge">59:22</code> links inside the cluster
+<br /><code class="language-plaintext highlighter-rouge">59:24</code> you try to maximize this
+<br /><code class="language-plaintext highlighter-rouge">59:27</code> and uh you in in this ai term you have
+<br /><code class="language-plaintext highlighter-rouge">59:30</code> the
+<br /><code class="language-plaintext highlighter-rouge">59:30</code> ij from i to another cluster
+<br /><code class="language-plaintext highlighter-rouge">59:34</code> so this is links out out of the cluster
+<br /><code class="language-plaintext highlighter-rouge">59:36</code> you minimize this right so you have
+<br /><code class="language-plaintext highlighter-rouge">59:38</code> very
+<br /><code class="language-plaintext highlighter-rouge">59:42</code> clusters means a cluster in this case
+<br /><code class="language-plaintext highlighter-rouge">59:45</code> means that it’s
+<br /><code class="language-plaintext highlighter-rouge">59:46</code> it’s a
+<br /><code class="language-plaintext highlighter-rouge">59:49</code> parts of your graph which are densely
+<br /><code class="language-plaintext highlighter-rouge">59:51</code> connected inside but only sparsely
+<br /><code class="language-plaintext highlighter-rouge">59:53</code> connected to the outside
+<br /><code class="language-plaintext highlighter-rouge">59:56</code> there’s a particular algorithm which is
+<br /><code class="language-plaintext highlighter-rouge">59:59</code> used a lot nowadays which is the longer
+<br /><code class="language-plaintext highlighter-rouge">60:01</code> algorithm so how do you solve this
+<br /><code class="language-plaintext highlighter-rouge">60:03</code> because this is not
+<br /><code class="language-plaintext highlighter-rouge">60:05</code> uh you can’t so if this brute force
+<br /><code class="language-plaintext highlighter-rouge">60:08</code> um you start with a network like this
+<br /><code class="language-plaintext highlighter-rouge">60:12</code> for instance uh this would be your
+<br /><code class="language-plaintext highlighter-rouge">60:15</code> nearest neighbor graph that you created
+<br /><code class="language-plaintext highlighter-rouge">60:17</code> from your data and then you do copy
+<br /><code class="language-plaintext highlighter-rouge">60:18</code> attempts you
+<br /><code class="language-plaintext highlighter-rouge">60:19</code> start with node zero so all these now
+<br /><code class="language-plaintext highlighter-rouge">60:23</code> you start with all these being separate
+<br /><code class="language-plaintext highlighter-rouge">60:25</code> clusters
+<br /><code class="language-plaintext highlighter-rouge">60:26</code> and then you copy cluster identity zero
+<br /><code class="language-plaintext highlighter-rouge">60:29</code> to neighboring nodes
+<br /><code class="language-plaintext highlighter-rouge">60:30</code> and you again compute the modularity and
+<br /><code class="language-plaintext highlighter-rouge">60:32</code> if the modularity is increased you
+<br /><code class="language-plaintext highlighter-rouge">60:34</code> accept this copy step
+<br /><code class="language-plaintext highlighter-rouge">60:36</code> and if it’s decreased you uh you reject
+<br /><code class="language-plaintext highlighter-rouge">60:39</code> the copy step and you
+<br /><code class="language-plaintext highlighter-rouge">60:40</code> do so um until you arrive
+<br /><code class="language-plaintext highlighter-rouge">60:45</code> at a steady state like this where copy
+<br /><code class="language-plaintext highlighter-rouge">60:47</code> attempts
+<br /><code class="language-plaintext highlighter-rouge">60:49</code> don’t increase your modularity anymore
+<br /><code class="language-plaintext highlighter-rouge">60:52</code> would be in this case something like
+<br /><code class="language-plaintext highlighter-rouge">60:54</code> that where you end up with four clusters
+<br /><code class="language-plaintext highlighter-rouge">60:56</code> and then you do an aggregation and this
+<br /><code class="language-plaintext highlighter-rouge">60:59</code> means
+<br /><code class="language-plaintext highlighter-rouge">61:00</code> now that you
+<br /><code class="language-plaintext highlighter-rouge">61:03</code> define a new graph representation of
+<br /><code class="language-plaintext highlighter-rouge">61:05</code> your data where this
+<br /><code class="language-plaintext highlighter-rouge">61:07</code> cluster here the blue cluster is now a
+<br /><code class="language-plaintext highlighter-rouge">61:09</code> single node
+<br /><code class="language-plaintext highlighter-rouge">61:12</code> it gets four internal connections
+<br /><code class="language-plaintext highlighter-rouge">61:14</code> because there’s
+<br /><code class="language-plaintext highlighter-rouge">61:15</code> one two three four internal connections
+<br /><code class="language-plaintext highlighter-rouge">61:19</code> and there is
+<br /><code class="language-plaintext highlighter-rouge">61:20</code> four connections to cluster green
+<br /><code class="language-plaintext highlighter-rouge">61:24</code> one two three four
+<br /><code class="language-plaintext highlighter-rouge">61:28</code> and one connection to the light blue
+<br /><code class="language-plaintext highlighter-rouge">61:30</code> cluster
+<br /><code class="language-plaintext highlighter-rouge">61:31</code> and so you aggregate this you do the
+<br /><code class="language-plaintext highlighter-rouge">61:33</code> copy attempt again
+<br /><code class="language-plaintext highlighter-rouge">61:35</code> and so on and so on until you finally
+<br /><code class="language-plaintext highlighter-rouge">61:38</code> arrive at a picture where you
+<br /><code class="language-plaintext highlighter-rouge">61:40</code> where you um at a state where
+<br /><code class="language-plaintext highlighter-rouge">61:44</code> you can’t optimize modularity anymore
+<br /><code class="language-plaintext highlighter-rouge">61:46</code> and this is um
+<br /><code class="language-plaintext highlighter-rouge">61:48</code> how you this is how the algorithm works
+<br /><code class="language-plaintext highlighter-rouge">61:50</code> to solve the problem
+<br /><code class="language-plaintext highlighter-rouge">61:52</code> of modularity optimization and this
+<br /><code class="language-plaintext highlighter-rouge">61:54</code> algorithm
+<br /><code class="language-plaintext highlighter-rouge">61:56</code> works very well with many kinds of data
+<br /><code class="language-plaintext highlighter-rouge">61:58</code> again for instance it’s
+<br /><code class="language-plaintext highlighter-rouge">62:00</code> used a lot to identify
+<br /><code class="language-plaintext highlighter-rouge">62:03</code> cell types in a single cell genomics
+<br /><code class="language-plaintext highlighter-rouge">62:12</code> all right that’s it already i realize
+<br /><code class="language-plaintext highlighter-rouge">62:14</code> i’ve been
+<br /><code class="language-plaintext highlighter-rouge">62:15</code> quite fast we would have some time but
+<br /><code class="language-plaintext highlighter-rouge">62:19</code> i’m i’m sorry
+<br /><code class="language-plaintext highlighter-rouge">62:22</code> good timing one hour um
+<br /><code class="language-plaintext highlighter-rouge">62:27</code> so just as a summary um the question
+<br /><code class="language-plaintext highlighter-rouge">62:30</code> i wanted to talk about is how do you
+<br /><code class="language-plaintext highlighter-rouge">62:32</code> explore high dimensional data
+<br /><code class="language-plaintext highlighter-rouge">62:34</code> to identify order in this high
+<br /><code class="language-plaintext highlighter-rouge">62:36</code> dimensional data set and i showed you
+<br /><code class="language-plaintext highlighter-rouge">62:39</code> a couple of dimensionality reduction
+<br /><code class="language-plaintext highlighter-rouge">62:41</code> techniques to visualize your
+<br /><code class="language-plaintext highlighter-rouge">62:42</code> in-dimensional data
+<br /><code class="language-plaintext highlighter-rouge">62:44</code> and that allow you to identify a small
+<br /><code class="language-plaintext highlighter-rouge">62:46</code> set of
+<br /><code class="language-plaintext highlighter-rouge">62:47</code> observables to describe the data um
+<br /><code class="language-plaintext highlighter-rouge">62:51</code> i showed you a couple of approaches for
+<br /><code class="language-plaintext highlighter-rouge">62:53</code> clustering to this
+<br /><code class="language-plaintext highlighter-rouge">62:54</code> to identify discrete order in high
+<br /><code class="language-plaintext highlighter-rouge">62:56</code> dimensional data and
+<br /><code class="language-plaintext highlighter-rouge">62:58</code> i think one important point that i want
+<br /><code class="language-plaintext highlighter-rouge">63:00</code> to make is the methods to use to work
+<br /><code class="language-plaintext highlighter-rouge">63:03</code> with high dimensional data
+<br /><code class="language-plaintext highlighter-rouge">63:05</code> depend on the problem at hand so really
+<br /><code class="language-plaintext highlighter-rouge">63:08</code> depends on what you’re looking for and
+<br /><code class="language-plaintext highlighter-rouge">63:09</code> often it’s just
+<br /><code class="language-plaintext highlighter-rouge">63:10</code> trying out a lot of things to see what
+<br /><code class="language-plaintext highlighter-rouge">63:12</code> makes sense
+<br /><code class="language-plaintext highlighter-rouge">63:14</code> to understand your data and with this um
+<br /><code class="language-plaintext highlighter-rouge">63:17</code> i’m at the end and
+<br /><code class="language-plaintext highlighter-rouge">63:20</code> there’s some references in the back
+<br /><code class="language-plaintext highlighter-rouge">63:22</code> which i will upload uh
+<br /><code class="language-plaintext highlighter-rouge">63:24</code> with the slides and with this yes i’m
+<br /><code class="language-plaintext highlighter-rouge">63:26</code> i’m happy to take questions
+<br /><code class="language-plaintext highlighter-rouge">63:29</code> okay perfect uh thanks a lot fabian yeah
+<br /><code class="language-plaintext highlighter-rouge">63:32</code> thanks for taking the time and
+<br /><code class="language-plaintext highlighter-rouge">63:35</code> especially since
+<br /><code class="language-plaintext highlighter-rouge">63:36</code> uh data people like you are so in such
+<br /><code class="language-plaintext highlighter-rouge">63:39</code> high demand these days and very busy so
+<br /><code class="language-plaintext highlighter-rouge">63:41</code> it’s great that you took the time to
+<br /><code class="language-plaintext highlighter-rouge">63:43</code> to show us some of your stuff and
+<br /><code class="language-plaintext highlighter-rouge">63:46</code> so uh i think what we usually do is that
+<br /><code class="language-plaintext highlighter-rouge">63:49</code> we hang around a little bit
+<br /><code class="language-plaintext highlighter-rouge">63:51</code> yeah on zoom and then if you have any
+<br /><code class="language-plaintext highlighter-rouge">63:53</code> questions you just stay online
+<br /><code class="language-plaintext highlighter-rouge">63:56</code> and ask your questions
+<br /><code class="language-plaintext highlighter-rouge">63:59</code> yeah and uh other than uh that
+<br /><code class="language-plaintext highlighter-rouge">64:02</code> yeah so then see you all next week and
+<br /><code class="language-plaintext highlighter-rouge">64:05</code> there’s already a question in the chat
+<br /><code class="language-plaintext highlighter-rouge">64:13</code> there were questions in the chat during
+<br /><code class="language-plaintext highlighter-rouge">64:15</code> the year during the lecture and i didn’t
+<br /><code class="language-plaintext highlighter-rouge">64:16</code> see the chat so yes you can’t see that
+<br /><code class="language-plaintext highlighter-rouge">64:18</code> very well if you’re sharing the screen
+<br /><code class="language-plaintext highlighter-rouge">64:20</code> yes but i think they were answered
+<br /><code class="language-plaintext highlighter-rouge">64:22</code> already by other people
+<br /><code class="language-plaintext highlighter-rouge">64:24</code> so so now the latest question is how
+<br /><code class="language-plaintext highlighter-rouge">64:26</code> computationally intensive is um
+<br /><code class="language-plaintext highlighter-rouge">64:29</code> that’s that’s a good question and it’s
+<br /><code class="language-plaintext highlighter-rouge">64:31</code> actually that’s another uh
+<br /><code class="language-plaintext highlighter-rouge">64:33</code> advantage of umap it’s pretty fast
+<br /><code class="language-plaintext highlighter-rouge">64:38</code> um it’s
+<br /><code class="language-plaintext highlighter-rouge">64:40</code> it also it’s you don’t you don’t need a
+<br /><code class="language-plaintext highlighter-rouge">64:42</code> lot of memory
+<br /><code class="language-plaintext highlighter-rouge">64:43</code> um it scales very well with the
+<br /><code class="language-plaintext highlighter-rouge">64:46</code> dimension of your data and also the
+<br /><code class="language-plaintext highlighter-rouge">64:47</code> amount of data points so i think
+<br /><code class="language-plaintext highlighter-rouge">64:49</code> it’s it’s um i mean just like
+<br /><code class="language-plaintext highlighter-rouge">64:56</code> it’s one of the fastest things around at
+<br /><code class="language-plaintext highlighter-rouge">64:58</code> the moment um
+<br /><code class="language-plaintext highlighter-rouge">65:01</code> i mean if you look at the typical data
+<br /><code class="language-plaintext highlighter-rouge">65:02</code> sets uh that that you’re looking at
+<br /><code class="language-plaintext highlighter-rouge">65:05</code> where you have i mean 15 thousand
+<br /><code class="language-plaintext highlighter-rouge">65:07</code> dimensions
+<br /><code class="language-plaintext highlighter-rouge">65:08</code> and then maybe a few hundred thousand or
+<br /><code class="language-plaintext highlighter-rouge">65:11</code> ten thousands of uh samples yeah you you
+<br /><code class="language-plaintext highlighter-rouge">65:14</code> end up
+<br /><code class="language-plaintext highlighter-rouge">65:15</code> with a few seconds yes yes on my machine
+<br /><code class="language-plaintext highlighter-rouge">65:18</code> like the with the largest data sets i
+<br /><code class="language-plaintext highlighter-rouge">65:20</code> have which are
+<br /><code class="language-plaintext highlighter-rouge">65:21</code> of the order that you described um it
+<br /><code class="language-plaintext highlighter-rouge">65:24</code> takes about
+<br /><code class="language-plaintext highlighter-rouge">65:25</code> 30 seconds maybe to compute the uh
+<br /><code class="language-plaintext highlighter-rouge">65:29</code> compute the u map which is much faster
+<br /><code class="language-plaintext highlighter-rouge">65:32</code> for instance there’s
+<br /><code class="language-plaintext highlighter-rouge">65:33</code> this name i don’t know whether you know
+<br /><code class="language-plaintext highlighter-rouge">65:36</code> about it but this was used a lot before
+<br /><code class="language-plaintext highlighter-rouge">65:38</code> and
+<br /><code class="language-plaintext highlighter-rouge">65:38</code> this is much slower usually
+<br /><code class="language-plaintext highlighter-rouge">65:41</code> and actually there’s um i didn’t try
+<br /><code class="language-plaintext highlighter-rouge">65:44</code> this out but there’s also gpu
+<br /><code class="language-plaintext highlighter-rouge">65:46</code> of implementations of umap nowadays and
+<br /><code class="language-plaintext highlighter-rouge">65:48</code> this again
+<br /><code class="language-plaintext highlighter-rouge">65:50</code> you can easily you can nicely
+<br /><code class="language-plaintext highlighter-rouge">65:51</code> parallelize it and so this should be
+<br /><code class="language-plaintext highlighter-rouge">65:53</code> much faster again
+<br /><code class="language-plaintext highlighter-rouge">65:59</code> you’re welcome
+<br /><code class="language-plaintext highlighter-rouge">66:04</code> great thanks so are there any other
+<br /><code class="language-plaintext highlighter-rouge">66:07</code> questions
+<br /><code class="language-plaintext highlighter-rouge">66:08</code> um i have a question it’s from
+<br /><code class="language-plaintext highlighter-rouge">66:12</code> umap
+<br /><code class="language-plaintext highlighter-rouge">66:15</code> so when we uh in all the examples of
+<br /><code class="language-plaintext highlighter-rouge">66:18</code> umap we saw approximating a high
+<br /><code class="language-plaintext highlighter-rouge">66:20</code> dimensional data
+<br /><code class="language-plaintext highlighter-rouge">66:21</code> is there any isn’t there any parameter
+<br /><code class="language-plaintext highlighter-rouge">66:23</code> in the algorithm that quantifies
+<br /><code class="language-plaintext highlighter-rouge">66:25</code> the uh
+<br /><code class="language-plaintext highlighter-rouge">66:28</code> the acceptability of the approximation
+<br /><code class="language-plaintext highlighter-rouge">66:30</code> whether the approximation is cur
+<br /><code class="language-plaintext highlighter-rouge">66:32</code> how how much is it acceptable or not
+<br /><code class="language-plaintext highlighter-rouge">66:34</code> because
+<br /><code class="language-plaintext highlighter-rouge">66:35</code> or will it approximate any uh high
+<br /><code class="language-plaintext highlighter-rouge">66:37</code> dimensional data
+<br /><code class="language-plaintext highlighter-rouge">66:40</code> there didn’t seem to be any parameter
+<br /><code class="language-plaintext highlighter-rouge">66:41</code> that quantified or helped us to
+<br /><code class="language-plaintext highlighter-rouge">66:44</code> understand if the result of the umap
+<br /><code class="language-plaintext highlighter-rouge">66:47</code> approximation is
+<br /><code class="language-plaintext highlighter-rouge">66:48</code> good or not uh obviously concerning the
+<br /><code class="language-plaintext highlighter-rouge">66:51</code> problem at hand
+<br /><code class="language-plaintext highlighter-rouge">66:53</code> i’m not fully sure whether i completely
+<br /><code class="language-plaintext highlighter-rouge">66:56</code> understand the question but here are a
+<br /><code class="language-plaintext highlighter-rouge">66:57</code> few thoughts on this um
+<br /><code class="language-plaintext highlighter-rouge">67:02</code> so the approximation in umap is that you
+<br /><code class="language-plaintext highlighter-rouge">67:05</code> you approximate
+<br /><code class="language-plaintext highlighter-rouge">67:07</code> that um
+<br /><code class="language-plaintext highlighter-rouge">67:10</code> your your approximation is that the data
+<br /><code class="language-plaintext highlighter-rouge">67:12</code> is uniformly distributed
+<br /><code class="language-plaintext highlighter-rouge">67:14</code> on the manifold right and the question
+<br /><code class="language-plaintext highlighter-rouge">67:17</code> is
+<br /><code class="language-plaintext highlighter-rouge">67:18</code> and maybe the question is is this a good
+<br /><code class="language-plaintext highlighter-rouge">67:19</code> approximation or is it not a good
+<br /><code class="language-plaintext highlighter-rouge">67:21</code> approximation
+<br /><code class="language-plaintext highlighter-rouge">67:22</code> the problem is that we that we hardly
+<br /><code class="language-plaintext highlighter-rouge">67:25</code> know the real metric
+<br /><code class="language-plaintext highlighter-rouge">67:27</code> of the underlying space so
+<br /><code class="language-plaintext highlighter-rouge">67:30</code> if you for instance think of these
+<br /><code class="language-plaintext highlighter-rouge">67:33</code> examples with
+<br /><code class="language-plaintext highlighter-rouge">67:34</code> pictures right what is a distance
+<br /><code class="language-plaintext highlighter-rouge">67:36</code> between two pictures
+<br /><code class="language-plaintext highlighter-rouge">67:37</code> what is this metric um
+<br /><code class="language-plaintext highlighter-rouge">67:41</code> it’s it’s um i i think this is the you
+<br /><code class="language-plaintext highlighter-rouge">67:45</code> you can’t actually like
+<br /><code class="language-plaintext highlighter-rouge">67:46</code> unless you have a unless you have a good
+<br /><code class="language-plaintext highlighter-rouge">67:49</code> microscopic model
+<br /><code class="language-plaintext highlighter-rouge">67:50</code> which in this case we don’t have it’s uh
+<br /><code class="language-plaintext highlighter-rouge">67:53</code> not really possible to
+<br /><code class="language-plaintext highlighter-rouge">67:55</code> to define a good metric and therefore to
+<br /><code class="language-plaintext highlighter-rouge">67:58</code> judge whether whether the
+<br /><code class="language-plaintext highlighter-rouge">68:00</code> whether the approximation is a good one
+<br /><code class="language-plaintext highlighter-rouge">68:02</code> or not
+<br /><code class="language-plaintext highlighter-rouge">68:04</code> um it’s not
+<br /><code class="language-plaintext highlighter-rouge">68:08</code> um yes i mean the way here that you you
+<br /><code class="language-plaintext highlighter-rouge">68:12</code> do it is
+<br /><code class="language-plaintext highlighter-rouge">68:13</code> there’s no there’s no uh right rigorous
+<br /><code class="language-plaintext highlighter-rouge">68:16</code> way of doing that and that’s why people
+<br /><code class="language-plaintext highlighter-rouge">68:17</code> like fabian exist
+<br /><code class="language-plaintext highlighter-rouge">68:18</code> who have experience and have consistency
+<br /><code class="language-plaintext highlighter-rouge">68:21</code> checks
+<br /><code class="language-plaintext highlighter-rouge">68:23</code> that with some experience can check
+<br /><code class="language-plaintext highlighter-rouge">68:25</code> whether you map
+<br /><code class="language-plaintext highlighter-rouge">68:26</code> makes sense or not yeah or whether it’s
+<br /><code class="language-plaintext highlighter-rouge">68:29</code> so one of the standard problem is that a
+<br /><code class="language-plaintext highlighter-rouge">68:31</code> umap can be dominated by noise by
+<br /><code class="language-plaintext highlighter-rouge">68:33</code> technical artifacts for example
+<br /><code class="language-plaintext highlighter-rouge">68:35</code> yeah and then you need to have some
+<br /><code class="language-plaintext highlighter-rouge">68:37</code> insights into data and some experience
+<br /><code class="language-plaintext highlighter-rouge">68:40</code> that tell you whether uh whether uh
+<br /><code class="language-plaintext highlighter-rouge">68:43</code> uh what you see actually represents
+<br /><code class="language-plaintext highlighter-rouge">68:46</code> something that’s real in the data
+<br /><code class="language-plaintext highlighter-rouge">68:48</code> or whether that’s something just just an
+<br /><code class="language-plaintext highlighter-rouge">68:50</code> artifact you know so that’s
+<br /><code class="language-plaintext highlighter-rouge">68:52</code> uh that’s basically one of the the jobs
+<br /><code class="language-plaintext highlighter-rouge">68:55</code> that bioinformaticians or data science
+<br /><code class="language-plaintext highlighter-rouge">68:58</code> scientists do
+<br /><code class="language-plaintext highlighter-rouge">68:59</code> because there’s just no rigorous way
+<br /><code class="language-plaintext highlighter-rouge">69:02</code> where you just push a button and it
+<br /><code class="language-plaintext highlighter-rouge">69:03</code> tells you whether
+<br /><code class="language-plaintext highlighter-rouge">69:04</code> whether what you’ve done is is right or
+<br /><code class="language-plaintext highlighter-rouge">69:06</code> not so
+<br /><code class="language-plaintext highlighter-rouge">69:07</code> it needs some experience and some some
+<br /><code class="language-plaintext highlighter-rouge">69:09</code> insights and understanding
+<br /><code class="language-plaintext highlighter-rouge">69:11</code> of the data and the for example the ball
+<br /><code class="language-plaintext highlighter-rouge">69:14</code> biology
+<br /><code class="language-plaintext highlighter-rouge">69:15</code> uh that is underlying the the data
+<br /><code class="language-plaintext highlighter-rouge">69:18</code> so typically with the typical um
+<br /><code class="language-plaintext highlighter-rouge">69:22</code> method would be to use multiple
+<br /><code class="language-plaintext highlighter-rouge">69:24</code> reduction methods and see which one is
+<br /><code class="language-plaintext highlighter-rouge">69:26</code> giving us
+<br /><code class="language-plaintext highlighter-rouge">69:27</code> an order which is much more perceptible
+<br /><code class="language-plaintext highlighter-rouge">69:29</code> in our in our plots
+<br /><code class="language-plaintext highlighter-rouge">69:31</code> you know i guess mean you also have to
+<br /><code class="language-plaintext highlighter-rouge">69:34</code> to know the strengths and weaknesses of
+<br /><code class="language-plaintext highlighter-rouge">69:36</code> each method
+<br /><code class="language-plaintext highlighter-rouge">69:38</code> yeah for example what uh fabian told
+<br /><code class="language-plaintext highlighter-rouge">69:41</code> about
+<br /><code class="language-plaintext highlighter-rouge">69:41</code> previous uh before t-sne that had a
+<br /><code class="language-plaintext highlighter-rouge">69:45</code> tendency
+<br /><code class="language-plaintext highlighter-rouge">69:45</code> uh to perform to to give you clusters of
+<br /><code class="language-plaintext highlighter-rouge">69:49</code> data points
+<br /><code class="language-plaintext highlighter-rouge">69:50</code> yeah it was not very good at
+<br /><code class="language-plaintext highlighter-rouge">69:52</code> representing global structures of data
+<br /><code class="language-plaintext highlighter-rouge">69:54</code> sets
+<br /><code class="language-plaintext highlighter-rouge">69:55</code> yeah and once you know that you can
+<br /><code class="language-plaintext highlighter-rouge">69:57</code> interpret
+<br /><code class="language-plaintext highlighter-rouge">69:58</code> interpret what you see and then you can
+<br /><code class="language-plaintext highlighter-rouge">70:00</code> be careful
+<br /><code class="language-plaintext highlighter-rouge">70:01</code> in interpreting uh basically clusters as
+<br /><code class="language-plaintext highlighter-rouge">70:05</code> real physical or biological objects
+<br /><code class="language-plaintext highlighter-rouge">70:09</code> yeah you maps the you are what you what
+<br /><code class="language-plaintext highlighter-rouge">70:12</code> you’ve seen now
+<br /><code class="language-plaintext highlighter-rouge">70:12</code> that overcame this limitation that it’s
+<br /><code class="language-plaintext highlighter-rouge">70:15</code> basically
+<br /><code class="language-plaintext highlighter-rouge">70:16</code> also represented the global structure of
+<br /><code class="language-plaintext highlighter-rouge">70:18</code> data quite well
+<br /><code class="language-plaintext highlighter-rouge">70:20</code> but i guess also in umab you can have
+<br /><code class="language-plaintext highlighter-rouge">70:22</code> artifacts
+<br /><code class="language-plaintext highlighter-rouge">70:23</code> especially if your data has noise yeah
+<br /><code class="language-plaintext highlighter-rouge">70:25</code> technical noise
+<br /><code class="language-plaintext highlighter-rouge">70:27</code> you can have very weird artifacts so you
+<br /><code class="language-plaintext highlighter-rouge">70:30</code> need to treat the data
+<br /><code class="language-plaintext highlighter-rouge">70:32</code> before you can give it to youmap in in
+<br /><code class="language-plaintext highlighter-rouge">70:34</code> typical instances
+<br /><code class="language-plaintext highlighter-rouge">70:36</code> yeah so for example log you have to log
+<br /><code class="language-plaintext highlighter-rouge">70:38</code> transform data very often
+<br /><code class="language-plaintext highlighter-rouge">70:40</code> if your data is says spends huge orders
+<br /><code class="language-plaintext highlighter-rouge">70:44</code> of magnitude
+<br /><code class="language-plaintext highlighter-rouge">70:46</code> in quant in in in values yeah then then
+<br /><code class="language-plaintext highlighter-rouge">70:49</code> sometimes you have the log
+<br /><code class="language-plaintext highlighter-rouge">70:50</code> transformations for not the
+<br /><code class="language-plaintext highlighter-rouge">70:52</code> the very few very large data points to
+<br /><code class="language-plaintext highlighter-rouge">70:54</code> dominate everything
+<br /><code class="language-plaintext highlighter-rouge">70:57</code> and so you have to treat the data in a
+<br /><code class="language-plaintext highlighter-rouge">70:59</code> way to make it
+<br /><code class="language-plaintext highlighter-rouge">71:00</code> say digestible for these methods
+<br /><code class="language-plaintext highlighter-rouge">71:04</code> but then maybe i mean
+<br /><code class="language-plaintext highlighter-rouge">71:07</code> the the other part of the question was
+<br /><code class="language-plaintext highlighter-rouge">71:09</code> in in a way parameters and i didn’t talk
+<br /><code class="language-plaintext highlighter-rouge">71:10</code> about parameters at all and there are a
+<br /><code class="language-plaintext highlighter-rouge">71:12</code> couple of parameters in the algorithm
+<br /><code class="language-plaintext highlighter-rouge">71:14</code> um and i i skipped a lot of details but
+<br /><code class="language-plaintext highlighter-rouge">71:17</code> the most important parameter
+<br /><code class="language-plaintext highlighter-rouge">71:19</code> is the number of neighbors you look at
+<br /><code class="language-plaintext highlighter-rouge">71:22</code> in your
+<br /><code class="language-plaintext highlighter-rouge">71:24</code> when you construct the graph if you take
+<br /><code class="language-plaintext highlighter-rouge">71:26</code> the first neighbor right you you
+<br /><code class="language-plaintext highlighter-rouge">71:28</code> kind of um what you do is you
+<br /><code class="language-plaintext highlighter-rouge">71:32</code> um estimate your metric very locally
+<br /><code class="language-plaintext highlighter-rouge">71:36</code> um so so this is very this is very fine
+<br /><code class="language-plaintext highlighter-rouge">71:38</code> but it’s also very noisy so you often
+<br /><code class="language-plaintext highlighter-rouge">71:40</code> will estimate the wrong metric if you
+<br /><code class="language-plaintext highlighter-rouge">71:42</code> if you uh increase the number of
+<br /><code class="language-plaintext highlighter-rouge">71:45</code> neighbors in there
+<br /><code class="language-plaintext highlighter-rouge">71:46</code> um you will get a more robust estimate
+<br /><code class="language-plaintext highlighter-rouge">71:50</code> of the local metric but you will
+<br /><code class="language-plaintext highlighter-rouge">71:52</code> miss some fine structure of the data and
+<br /><code class="language-plaintext highlighter-rouge">71:54</code> maybe actually there’s a there’s one
+<br /><code class="language-plaintext highlighter-rouge">71:55</code> example that i can show
+<br /><code class="language-plaintext highlighter-rouge">71:57</code> uh from here where if you look at
+<br /><code class="language-plaintext highlighter-rouge">72:01</code> i don’t know whether you can see this
+<br /><code class="language-plaintext highlighter-rouge">72:02</code> here this is a
+<br /><code class="language-plaintext highlighter-rouge">72:04</code> um maybe you can can you see this or is
+<br /><code class="language-plaintext highlighter-rouge">72:07</code> this too small
+<br /><code class="language-plaintext highlighter-rouge">72:08</code> i’m sorry you’re not sharing the screen
+<br /><code class="language-plaintext highlighter-rouge">72:12</code> ah sorry i don’t share the screen so you
+<br /><code class="language-plaintext highlighter-rouge">72:14</code> can’t see anything
+<br /><code class="language-plaintext highlighter-rouge">72:16</code> um let me show
+<br /><code class="language-plaintext highlighter-rouge">72:18</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">72:20</code> let me show this example um
+<br /><code class="language-plaintext highlighter-rouge">72:22</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">72:27</code> kind of if you that’s maybe maybe a
+<br /><code class="language-plaintext highlighter-rouge">72:32</code> actually a good example for for your
+<br /><code class="language-plaintext highlighter-rouge">72:33</code> question where kind of okay here we have
+<br /><code class="language-plaintext highlighter-rouge">72:35</code> a circle
+<br /><code class="language-plaintext highlighter-rouge">72:37</code> with uh with dots and they on um
+<br /><code class="language-plaintext highlighter-rouge">72:41</code> and then like like the distance between
+<br /><code class="language-plaintext highlighter-rouge">72:43</code> the dots is not always the same right
+<br /><code class="language-plaintext highlighter-rouge">72:46</code> um and so actually if we
+<br /><code class="language-plaintext highlighter-rouge">72:49</code> take just this example and we say okay
+<br /><code class="language-plaintext highlighter-rouge">72:51</code> here we know the euclidean metric
+<br /><code class="language-plaintext highlighter-rouge">72:54</code> uh we can think of how how well does the
+<br /><code class="language-plaintext highlighter-rouge">72:56</code> approximation now
+<br /><code class="language-plaintext highlighter-rouge">72:58</code> or or how does umap behave if um
+<br /><code class="language-plaintext highlighter-rouge">73:03</code> uh in this case right and
+<br /><code class="language-plaintext highlighter-rouge">73:06</code> one thing that you can see here is that
+<br /><code class="language-plaintext highlighter-rouge">73:08</code> if i increase the number of neighbors
+<br /><code class="language-plaintext highlighter-rouge">73:13</code> that this will
+<br /><code class="language-plaintext highlighter-rouge">73:16</code> usually lead to a
+<br /><code class="language-plaintext highlighter-rouge">73:19</code> actually not
+<br /><code class="language-plaintext highlighter-rouge">73:25</code> so you can see that sometimes you manage
+<br /><code class="language-plaintext highlighter-rouge">73:28</code> to
+<br /><code class="language-plaintext highlighter-rouge">73:28</code> for for some uh there is kind of an
+<br /><code class="language-plaintext highlighter-rouge">73:31</code> optimum
+<br /><code class="language-plaintext highlighter-rouge">73:33</code> um for looking at the number of
+<br /><code class="language-plaintext highlighter-rouge">73:35</code> neighbors which allows you to actually
+<br /><code class="language-plaintext highlighter-rouge">73:37</code> capture
+<br /><code class="language-plaintext highlighter-rouge">73:39</code> um the the
+<br /><code class="language-plaintext highlighter-rouge">73:42</code> circular topology the hole in the middle
+<br /><code class="language-plaintext highlighter-rouge">73:44</code> right but
+<br /><code class="language-plaintext highlighter-rouge">73:46</code> if you if like if you go too big you’d
+<br /><code class="language-plaintext highlighter-rouge">73:48</code> kind of lose
+<br /><code class="language-plaintext highlighter-rouge">73:49</code> to start to lose the information about
+<br /><code class="language-plaintext highlighter-rouge">73:52</code> the order of these dots
+<br /><code class="language-plaintext highlighter-rouge">73:54</code> of these uh measurements right they
+<br /><code class="language-plaintext highlighter-rouge">73:57</code> start to get more and more noisy
+<br /><code class="language-plaintext highlighter-rouge">73:59</code> if you look at less neighbors
+<br /><code class="language-plaintext highlighter-rouge">74:03</code> you get nice ordered lines but you start
+<br /><code class="language-plaintext highlighter-rouge">74:06</code> to miss
+<br /><code class="language-plaintext highlighter-rouge">74:08</code> things where you have these gaps and you
+<br /><code class="language-plaintext highlighter-rouge">74:10</code> start to create clusters
+<br /><code class="language-plaintext highlighter-rouge">74:11</code> where there shouldn’t be clusters so
+<br /><code class="language-plaintext highlighter-rouge">74:14</code> this is the
+<br /><code class="language-plaintext highlighter-rouge">74:15</code> most important
+<br /><code class="language-plaintext highlighter-rouge">74:17</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">74:19</code> parameter of the of the method
+<br /><code class="language-plaintext highlighter-rouge">74:22</code> i’d say there is like if you if you uh
+<br /><code class="language-plaintext highlighter-rouge">74:27</code> the umap home page the like from the
+<br /><code class="language-plaintext highlighter-rouge">74:29</code> umap algorithm
+<br /><code class="language-plaintext highlighter-rouge">74:31</code> they uh feature a nice section of what
+<br /><code class="language-plaintext highlighter-rouge">74:33</code> parameters do you have for your map and
+<br /><code class="language-plaintext highlighter-rouge">74:36</code> and uh
+<br /><code class="language-plaintext highlighter-rouge">74:37</code> what influence do they have but it’s
+<br /><code class="language-plaintext highlighter-rouge">74:40</code> it is generally relatively robust also
+<br /><code class="language-plaintext highlighter-rouge">74:44</code> compared to other methods
+<br /><code class="language-plaintext highlighter-rouge">74:45</code> if you go for typical like
+<br /><code class="language-plaintext highlighter-rouge">74:49</code> it just but this is just empirical kind
+<br /><code class="language-plaintext highlighter-rouge">74:51</code> of if you go with
+<br /><code class="language-plaintext highlighter-rouge">74:52</code> about 15 to 30 neighbors
+<br /><code class="language-plaintext highlighter-rouge">74:56</code> or something you usually derive good
+<br /><code class="language-plaintext highlighter-rouge">74:59</code> representations
+<br /><code class="language-plaintext highlighter-rouge">75:00</code> of the topology of your data if you have
+<br /><code class="language-plaintext highlighter-rouge">75:02</code> enough data points
+<br /><code class="language-plaintext highlighter-rouge">75:04</code> um so it’s relatively robust uh to the
+<br /><code class="language-plaintext highlighter-rouge">75:08</code> choice of
+<br /><code class="language-plaintext highlighter-rouge">75:08</code> of parameters you don’t have to play
+<br /><code class="language-plaintext highlighter-rouge">75:10</code> around with it too much
+<br /><code class="language-plaintext highlighter-rouge">75:14</code> thank you
+<br /><code class="language-plaintext highlighter-rouge">75:19</code> okay perfect very nice do we have any
+<br /><code class="language-plaintext highlighter-rouge">75:21</code> other questions
+<br /><code class="language-plaintext highlighter-rouge">75:22</code> yeah there’s a question from kai muller
+<br /><code class="language-plaintext highlighter-rouge">75:25</code> from the chat which i will read
+<br /><code class="language-plaintext highlighter-rouge">75:26</code> which is uh he asked for high
+<br /><code class="language-plaintext highlighter-rouge">75:28</code> dimensional data how does human
+<br /><code class="language-plaintext highlighter-rouge">75:30</code> umap determine the manifold dimension
+<br /><code class="language-plaintext highlighter-rouge">75:36</code> um
+<br /><code class="language-plaintext highlighter-rouge">75:38</code> i don’t think that it does
+<br /><code class="language-plaintext highlighter-rouge">75:41</code> and
+<br /><code class="language-plaintext highlighter-rouge">75:47</code> i don’t think that it does and this
+<br /><code class="language-plaintext highlighter-rouge">75:51</code> might be related to that it only
+<br /><code class="language-plaintext highlighter-rouge">75:54</code> in the u-map algorithm what you do is
+<br /><code class="language-plaintext highlighter-rouge">75:56</code> when you when you construct
+<br /><code class="language-plaintext highlighter-rouge">75:59</code> this uh the graph representation
+<br /><code class="language-plaintext highlighter-rouge">76:02</code> um from the intersecting
+<br /><code class="language-plaintext highlighter-rouge">76:06</code> spheres you only look at the
+<br /><code class="language-plaintext highlighter-rouge">76:10</code> one simplicity so you only construct a
+<br /><code class="language-plaintext highlighter-rouge">76:12</code> graph and you don’t look at
+<br /><code class="language-plaintext highlighter-rouge">76:15</code> [Music]
+<br /><code class="language-plaintext highlighter-rouge">76:18</code> at higher order simplices i’m not sure
+<br /><code class="language-plaintext highlighter-rouge">76:20</code> what this could be used to
+<br /><code class="language-plaintext highlighter-rouge">76:22</code> to say something about the
+<br /><code class="language-plaintext highlighter-rouge">76:23</code> dimensionality
+<br /><code class="language-plaintext highlighter-rouge">76:26</code> um of your manifold i’m i’m unsure there
+<br /><code class="language-plaintext highlighter-rouge">76:31</code> but you might by default it doesn’t tell
+<br /><code class="language-plaintext highlighter-rouge">76:33</code> you the dimensionality
+<br /><code class="language-plaintext highlighter-rouge">76:40</code> okay um any other question a lot of
+<br /><code class="language-plaintext highlighter-rouge">76:44</code> questions today
+<br /><code class="language-plaintext highlighter-rouge">76:55</code> okay so if there are no more questions
+<br /><code class="language-plaintext highlighter-rouge">76:57</code> you know then uh
+<br /><code class="language-plaintext highlighter-rouge">76:58</code> let’s end the meeting you know thanks
+<br /><code class="language-plaintext highlighter-rouge">77:00</code> all for joining and thanks again for
+<br /><code class="language-plaintext highlighter-rouge">77:02</code> fabian thank you well thank you for
+<br /><code class="language-plaintext highlighter-rouge">77:05</code> having me
+<br /><code class="language-plaintext highlighter-rouge">77:06</code> yeah thank you okay perfect
+<br /><code class="language-plaintext highlighter-rouge">77:10</code> yeah see you all next week bye
+<br /><code class="language-plaintext highlighter-rouge">77:16</code> you</p>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = 39;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/39">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        .mpipks-transcript | 10. Dimension Reduction - May 14, 2021 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-Popular_GitHub"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/About"><span class="icon-CN_tencent_wechat"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.douban.com/people/Gravitus/"><span class="icon-CN_douban_B"></span></a>
+      </li>
+    
+      <li>
+        <a href="//space.bilibili.com/29132299"><span class="icon-CN_bilibili"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-Popular_RSS"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2021 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted on <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>
