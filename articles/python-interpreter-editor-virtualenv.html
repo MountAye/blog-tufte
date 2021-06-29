@@ -7,22 +7,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>.mpipks-note 10. Dimension Reduction | 阿掖山：一个博客</title>
+<title>.py 笔记：python 编辑器、解释器、虚拟环境 | 阿掖山：一个博客</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content=".mpipks-note 10. Dimension Reduction" />
+<meta property="og:title" content=".py 笔记：python 编辑器、解释器、虚拟环境" />
 <meta name="author" content="MountAye" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="对高维数据的降维打击" />
-<meta property="og:description" content="对高维数据的降维打击" />
-<link rel="canonical" href="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction" />
-<meta property="og:url" content="mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction" />
+<meta name="description" content="阿掖山：一个博客" />
+<meta property="og:description" content="阿掖山：一个博客" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/python-interpreter-editor-virtualenv" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/python-interpreter-editor-virtualenv" />
 <meta property="og:site_name" content="阿掖山：一个博客" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-15T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-06-29T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content=".mpipks-note 10. Dimension Reduction" />
+<meta property="twitter:title" content=".py 笔记：python 编辑器、解释器、虚拟环境" />
 <script type="application/ld+json">
-{"url":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction","author":{"@type":"Person","name":"MountAye"},"@type":"BlogPosting","headline":".mpipks-note 10. Dimension Reduction","dateModified":"2021-05-15T00:00:00+00:00","datePublished":"2021-05-15T00:00:00+00:00","description":"对高维数据的降维打击","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction"},"@context":"https://schema.org"}</script>
+{"url":"mountaye.github.io/blog/articles/python-interpreter-editor-virtualenv","author":{"@type":"Person","name":"MountAye"},"@type":"BlogPosting","headline":".py 笔记：python 编辑器、解释器、虚拟环境","dateModified":"2021-06-29T00:00:00+00:00","datePublished":"2021-06-29T00:00:00+00:00","description":"阿掖山：一个博客","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/python-interpreter-editor-virtualenv"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
@@ -42,7 +42,7 @@
   <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
   <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
   <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
-  <link rel="canonical" href="/blog/articles/mpipks-non-equilibrium-physics-note-10-dimension-reduction">
+  <link rel="canonical" href="/blog/articles/python-interpreter-editor-virtualenv">
   <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
   <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
 </head>
@@ -123,162 +123,72 @@
 
 
 <article class="group post">
-    <h1>.mpipks-note | 10. Dimension Reduction</h1>
+    <h1>.py | 笔记：python 编辑器、解释器、虚拟环境</h1>
         <p class="subtitle">
-            May 15, 2021
+            June 29, 2021
         </p>
     <div class="postContent">
-        <blockquote>
-  <p>第十讲是由校外邀请来的嘉宾来讲数据降维，所以课程网站上没有课件。时间轴和语音转录相对来说不那么有意义了。所以在听课的过程中做了如下笔记。</p>
-</blockquote>
-
-<h2 id="contents">Contents</h2>
-
+        <p>上一篇 《<a href="/blog/articles/python-installation-and-configuration">在 Windows 10 上配置 python 开发环境</a>》 很惭愧，只做了一点微小的工作，大概三件事：</p>
 <ul>
-  <li>High dimensinoal data</li>
-  <li>Dimensionality Reduction Methods</li>
-  <li>Clustering (a discrete form of reduction)</li>
+  <li>一个，安装了 python 的解释器；</li>
+  <li>第二个，把 vscode 安装进了电脑；</li>
+  <li>第三个，就是我们知道的 virtualenv 虚拟环境。</li>
 </ul>
 
-<h2 id="high-dimensional-data">High Dimensional Data</h2>
+<p>如果说还有一点什么要讲的，就是在 how 之外，讲一点 what。为了让文章更通顺一点，我打算调整一下顺序，先讲编辑器，再讲解释器，最后再说虚拟环境。虽然文章是立足于 python 来谈，但是这些知识适用于几乎所有通用编程语言。因为我也不是计算机专业出身，这篇文章只是我的学习笔记，如果有不对的地方欢迎大家指出。</p>
 
-<p>data matrix X:n*m.</p>
+<h2 id="编辑器">编辑器</h2>
 
-<p>n samples as rows, m columns as observables</p>
+<p>首先我们来做一个实验，把上次教程里创建的 python 文件 <code class="language-plaintext highlighter-rouge">hello.py</code> 重命名，把拓展名 <code class="language-plaintext highlighter-rouge">.py</code> 改成 <code class="language-plaintext highlighter-rouge">.txt</code>, 然后双击鼠标打开文件，会发生什么？在 Windows 系统里，会弹出最最普通的记事本窗口，窗口里是白底黑字的 python 语句，不像 vscode 里面不同语句有不同颜色，但是内容完全一样。</p>
 
-<p>How to visualize?</p>
+<p>甚至更进一步，你可以在命令行里直接让 python 编译器执行 <code class="language-plaintext highlighter-rouge">.txt</code> 文件的内容，（<code class="language-plaintext highlighter-rouge">py -m hello.txt</code>）效果和 <code class="language-plaintext highlighter-rouge">.py</code> 也是一样的。</p>
+
+<p><code class="language-plaintext highlighter-rouge">.py</code> 这个拓展名什么也没有做，和 <code class="language-plaintext highlighter-rouge">.txt</code> 文件一样，内容就是一串我们人类能够读懂的字符，这样的文件叫做<a href="https://zh.wikipedia.org/wiki/%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6">文本文件</a>。处理文本文件的程序，就叫做<a href="https://zh.wikipedia.org/wiki/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8">编辑器</a>。记事本就是一种编辑器，vscode 也是。</p>
+
+<p>既然记事本就可以编写 python 代码，那我还费劲安装 vscode 干嘛？确实有人真的只用记事本或其他操作系统自带的编辑器写 python 代码，（油管上还有一个视频是用 Microsoft Word 写代码；）然后用命令行调试程序，但是 vscode 毕竟是专为程序员而开发，提供了很多默认编辑器不具备的功能，比如前面提到将函数、变量、保留词显示成不同的颜色的语法高亮功能。</p>
+
+<h2 id="编译器--解释器">编译器 / 解释器</h2>
+
+<p>除了文本文件，这篇文章里涉及的第二种文件是<a href="https://en.wikipedia.org/wiki/Binary_file">二进制文件</a>。</p>
+
+<p>电脑并不能直接看懂人类认识的字符，在一切的最底层，经典计算机认识的是以不同方式表示的 0 和 1。虽然说所有文件在底层都是二进制的文件，但是“二进制文件”这个名词一般专门用来表示除了文本文件之外的文件，又因为图片文件、视频文件啥的都有自己的名字，所以这个词用来指代的文件，基本上都和软件程序，可以让计算机执行的文件有关。</p>
+
+<p>人类只认识字符，计算机只认识 0 和 1，那么最直觉的思路就是把文本文件翻译成二进制文件。这个翻译过程叫做<a href="https://en.wikipedia.org/wiki/Compiler">编译</a>，能够完成这一过程的软件就叫做编译器。编译器编译完成之后就退出了，要想执行程序，电脑直接执行编译之后的可执行文件就可以了。</p>
+
+<p>但是编译存在一个问题，就是整个软件需要在所有的源代码文本文件都写好的情况下才能被编译成软件，编译耗费的资源和时间随着软件规模的增长而扩大；一旦修改某处，整个项目又要重新编译。很多时候我们只想快速地知道某个大型项目中的某一句命令的效果是什么，编译这种方法就不适合这种场景了。</p>
+
+<p>于是就出现了<a href="https://en.wikipedia.org/wiki/Interpreter_(computing)">解释器</a>，这种程序比编译器复杂的多，在我们执行这种编程语言命令的时候始终运行，允许我们一句一句地输入命令，记得代码的上下文，还记得我们之前命令的结果，代价就是对于大型项目也需要一句一句地分析解释，计算资源的开销和速度都不如编译。</p>
+
+<p>python 就是一种（官方实现）使用解释器的编程语言，我们在官网下载的那个 <code class="language-plaintext highlighter-rouge">python-***.exe</code> 文件就是 python 的解释器。这也导致了 python 程序的性能往往不如同水平的 C/C++ 程序员写出来的程序，但是由于单句执行适合试错，所以在 <del>经常犯错的</del> 科研领域还挺流行的。</p>
+
+<p>当然了，python 的特点远不仅仅是解释型语言这么简单，它还是一种：</p>
 <ul>
-  <li>m=1: list</li>
-  <li>m=2: x-y plot</li>
+  <li><a href="https://program-think.blogspot.com/2009/08/why-choose-python-1-script.html">脚本语言</a></li>
+  <li><a href="https://program-think.blogspot.com/2009/08/why-choose-python-2-dynamic.html">动态语言</a></li>
+  <li><a href="https://program-think.blogspot.com/2010/08/why-choose-python-3-oop.html">面向对象语言</a></li>
+  <li><a href="https://program-think.blogspot.com/2010/08/why-choose-python-3-oop.html">函数式编程语言</a></li>
+  <li><a href="https://program-think.blogspot.com/2010/08/why-choose-python-3-oop.html">……</a></li>
 </ul>
 
-<p><strong>Aim of dimension reduction: reduce the number of observables, while keeping relevant information.</strong></p>
+<h2 id="虚拟环境">虚拟环境</h2>
 
-<h3 id="examples">Examples</h3>
+<p>有一次我问我女朋友，她写 python 用什么 IDE，她很自豪地回答，她的 Macbook 自带 python，直接在命令行就可以运行……答非所问还不是最大的问题（仔细想想好像也不是答非所问，不过只回答了问题的一部分），而是直接在命令行运行系统自带的 python，或者其他编程语言的解释器或者编译器，本身就是编程初学者常干的一种危险行为。</p>
 
-<p>Ferromagnetic Ising model of a 28*28 lattice, 50,000 samples. The 1st principal component scales with the magnetization.</p>
+<p>Windows 还好，毕竟这是一个面向广大家用消费者的操作系统，防呆设计还是挺多的，没有原装的 python。更加极客向的操作系统，比如 Linux 和 BSD 家族可就不一样了，这些操作系统（的发行版）往往预装了 python。这个 python 可不是给用户拿来开发自己的程序用的，而是用来让很多 python 语言写成的操作系统工具调用的。既然如此，这个 python 的版本一般由发行版的安装包管理者来控制，往往落后最新的 python 版本一段时间，为了避免新版本 python 有什么 bug，也为了让操作系统工具的开发者有时间更新自己的代码。所以如果直接用这个版本的 python 做开发，而且不小心自己升级了 python 的版本，很有可能导致系统的某些功能失常。</p>
 
-<p>500,000 DNA sites of 3,000 humans. Projections onto the first 2 principal components givees a rough map of Europe</p>
+<p>虚拟环境就是 python 对这个问题的解决方案。我们可以安装不同于原装 python 的版本，但是并不将这个解释器加入系统路径，操作系统也就不知道这个版本 python 的存在。创建虚拟环境的时候，我们指定使用这一特定版本的 python，这样在虚拟环境激活之后就是我们开发需要的 python，退出虚拟环境就是系统工具使用的 python。</p>
 
-<p>Fashion MNIST: 60,000 pictures of 784 (28*28) pixels. UMAP projections onto 2 dimensions</p>
+<p>另外，即便两个项目适用于同一个 python 版本，而且都是系统自带的这个版本，虚拟环境也有用武之地。绝大多数程序都需要依赖别人写好的工具代码，这些代码叫做库 (library)，不同的项目可能依赖不同的库代码，或者同一个库的不同版本。这个时候，可以创建不同的虚拟环境，并在其中安装各个项目对应的库，项目之间可以互不影响。</p>
 
-<h2 id="linear-dimension-reduction">Linear dimension reduction</h2>
+<h2 id="编辑器--解释器--编译器--虚拟环境管理----ide">编辑器 + 解释器 / 编译器 + 虚拟环境管理 + …… = IDE</h2>
 
-<ul>
-  <li>Principal component analysis</li>
-  <li>Non-negative matrix factorization</li>
-  <li>Independent component analysis</li>
-  <li>Factor analysis</li>
-</ul>
+<p>为了开发 python 程序要安装这么多不同的程序，太麻烦了，就不能一键安装全搞定吗？当然可以了，这种集成了开发过程中用到的各种工具的程序，就叫做<a href="https://zh.wikipedia.org/zh-cn/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">集成开发环境 (IDE)</a>。对于 python，最有名的 IDE 当属 <a href="https://www.anaconda.com/">Anaconda</a> 了。</p>
 
-<h3 id="principal-component-analysis">Principal component analysis</h3>
+<p>那我为什么不用呢？当然用过，但是听说了 vscode 的大名，而且尝鲜之后，就再也回不去了。写 python 需要编辑 <code class="language-plaintext highlighter-rouge">.py</code> 文件，写博客需要编辑 <code class="language-plaintext highlighter-rouge">.md</code> 文件，博客的一些功能需要 JavaScript 实现，这些事情本质上都是编辑文本文件这一件事，在 vscode 这样的编辑器里全搞定就再自然不过了，那么 Anaconda 里的 Spyder 和 Jupyter Lab 就显得多余了。</p>
 
-<p>change of basis</p>
+<p>“把一件事做好”，这也是 <a href="https://zh.wikipedia.org/wiki/Unix%E5%93%B2%E5%AD%A6">Unix 哲学</a>的一部分。但是问题在于，不同的人对于“一件事”的定义是不同的，有些人觉得做早饭是一件事，有些人觉得是热牛奶煎鸡蛋烤面包等等好几件事，谁是对的？</p>
 
-<p><strong>Aim:</strong> to find a transformation such that</p>
-<ul>
-  <li>the components are uncorrelated</li>
-  <li>ordered by the explained variability</li>
-</ul>
-
-<p><strong>Math</strong>:</p>
-
-<p>\(X^T X\) is a \(m \times m\) matrix. Eigen-decomposition gives \((\lambda,W)\) where \(W\)’s columns are eigen vectors sorted by \(\lambda\)</p>
-
-<p>\(T = X \cdot W\) where  \(T\) is the score onto principal components, and \(T^TT\) is diagonal</p>
-
-<p>\(T_r = X \cdot W_r\) where \(W_r\) is a n*r matrix of the first r components</p>
-
-<p><strong>Practice In <code class="language-plaintext highlighter-rouge">R</code></strong>:</p>
-
-<ul>
-  <li>Iris Dataset</li>
-  <li>Pitures of Objects at Different Angles:</li>
-  <li>Swiss Roll: the transformed data almost have the same structure as the original data. This shows the limit of PCA due to linearity</li>
-</ul>
-
-<p><a href="">wikipedia - Nonlinear_dimensionality_reduction</a></p>
-
-<h3 id="umap-uniform-manifold-approximation">UMAP: uniform manifold approximation</h3>
-
-<p><strong>Assumptions</strong>:</p>
-<ul>
-  <li>uniformed distributeed on Riemann manifold</li>
-  <li>Riemann metric is locally constant</li>
-  <li>The manifold is locally conncected</li>
-</ul>
-
-<p><strong>Results</strong>:</p>
-<ul>
-  <li>models the manifold with a fuzzy topological structure</li>
-  <li>finds low dimensional projection of the data that has the cloest possible equivalent fuzzy topological structure</li>
-</ul>
-
-<p><strong>Simplex</strong>
-0-simplex: dot
-1-simplex: line
-2-simplex: triangle
-3-simplex: 正四面体</p>
-
-<p><strong>Problem</strong>:</p>
-
-<p>When the uniform distribution is not met, the result may not be what we like. To circumvent this, we need to define the local metric with the nearest neighbours.</p>
-
-<p><strong>Finding a low dimensional representation</strong></p>
-<ul>
-  <li>derive similar fuzzy topological representation of a low dimensional representation</li>
-  <li>interpret edge weight s as proba</li>
-  <li>minimize cross entropy</li>
-  <li><a href="pair-code.github.com/understand_umap">pair-code.github.io/understand_umap</a></li>
-</ul>
-
-<p><strong>Practice in <code class="language-plaintext highlighter-rouge">R</code></strong></p>
-<ul>
-  <li>Swiss Roll becomes a 2-d ring</li>
-  <li>Pictures at different angles are well seperated</li>
-</ul>
-
-<h2 id="clustering">Clustering</h2>
-
-<h3 id="hierarchiral-clustering">hierarchiral clustering</h3>
-<ul>
-  <li>metric</li>
-  <li>linkage criterion / distance between clusters</li>
-</ul>
-
-<h3 id="centroid-base-clustering-k-means">centroid base clustering (k-means)</h3>
-<ul>
-  <li>pre-specify number of clusters, k</li>
-  <li>partition the data such that the squared distance to cluster mean position is minimal</li>
-  <li>Lloyd algorithm
-    <ul>
-      <li>start with random centers</li>
-      <li>assign data to neatest center</li>
-      <li>compute new centers</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="graph-based-clustering">graph based-clustering</h3>
-<ul>
-  <li>graph representation of data</li>
-  <li>partition the data such that modularity Q is optimized</li>
-  <li>\(Q = \sum_{i=1}^c e_{ii}-\gamma {a_i}^2, a_i = \sum_{j-1}^c e_{ij}\).
-    <ul>
-      <li>\(e_{ij}\): fraction of links between cluster i and j</li>
-      <li>\(\gamma\): resulution</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="summary">Summary</h2>
-
-<p>Question: How to identify order in high-dimensinoal data?</p>
-<ul>
-  <li>dimensionality reductuon to visualize high-dimensional data and to identify macroscopic observables</li>
-  <li>clustering to identify discrete order in high dimensional data</li>
-  <li>methods to se depending on the problem at hand</li>
-</ul>
+<p>也许都对，但是 编辑器 + 解释器 + …… 比起 IDE 就是处在鄙视链的上游。这一点可以不同意，但是应该要知道，不然别人抖包袱的时候你没捧上哏，挺尴尬的。</p>
 
     </div>
     <hr class="slender">
@@ -287,7 +197,7 @@
     <h2>读者评论</h2>
     <script type="text/javascript">
         // Global Variables
-        var milestoneID = 40;
+        var milestoneID = 43;
         var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
         var json; // OBJECT, get changed by side effects
         var iIssue = 0; // INTEGER
@@ -404,7 +314,7 @@
     <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
     
     <div id="commentIntro">
-        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/40">进行评论</a>。</p>
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/43">进行评论</a>。</p>
     </div>
     <div id="commentContent"></div>
 </section>
@@ -415,7 +325,7 @@
 
         <span class="print-footer">
     
-        .mpipks-note | 10. Dimension Reduction - May 15, 2021 - MountAye
+        .py | 笔记：python 编辑器、解释器、虚拟环境 - June 29, 2021 - MountAye
 </span>
     
         <footer>
