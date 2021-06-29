@@ -76,9 +76,9 @@ Hackathon 美东时间周六上午10点开始，周日上午10点结束。因为
 
 ### II.
 
-然后把女朋友叫醒，让她来讲一讲 Grover's 算法。听完之后我的理解是，对于一个 $f:(0,1)^N \rarr (0,1)$ 的函数，这个算法可以大概率地找到一个解 $S\in(0,1)^N$ 满足 $f(S)=1$. 
+然后把女朋友叫醒，让她来讲一讲 Grover's 算法。听完之后我的理解是，对于一个 $$f:(0,1)^N \rarr (0,1)$$ 的函数，这个算法可以大概率地找到一个解 $$S\in(0,1)^N$$ 满足 $$f(S)=1$$. 
 
-至于这个函数 $f$，之前每一道题都是这样一个函数，当时已经夜里两三点了，实在是没时间再想一个新函数了，于是我们直接就拿复杂度最高的第4题来换个皮。换个什么皮呢？为了这个活动翘掉了这周的[《文明6》联机游戏]({% post_url 2020-12-22-barrier-forward-keyboard-mouse-to-another-computer %})，然后之前看 YouTuber ["Potato McWhiskey"](https://www.youtube.com/user/PotatoMcWhiskey)介绍过[一个 Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1753346735&searchtext=diplomacy)，里面可以将文明之间的外交关系可视化为无向图，所以，诶嘿嘿嘿……
+至于这个函数 $$f$$，之前每一道题都是这样一个函数，当时已经夜里两三点了，实在是没时间再想一个新函数了，于是我们直接就拿复杂度最高的第4题来换个皮。换个什么皮呢？为了这个活动翘掉了这周的[《文明6》联机游戏]({% post_url 2020-12-22-barrier-forward-keyboard-mouse-to-another-computer %})，然后之前看 YouTuber ["PotatoMcWhiskey"](https://www.youtube.com/user/PotatoMcWhiskey)介绍过[一个 Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1753346735&searchtext=diplomacy)，里面可以将文明之间的外交关系可视化为无向图，所以，诶嘿嘿嘿……
 
 女朋友写完文稿就睡了，我把文稿改了改，然后和官方对 Grover's 算法的实现缝合了一下。提交的时候，距离截止时间大约还有一个小时。
 

@@ -5,7 +5,7 @@ keywords:   zip
 excerpt:    "前几天在微信公众号，有新关注的读者问我最近在进行什么项目，我说 python 教程还在写，结果这次的更新是……"
 date:        2021-05-26
 categories:  post
-milestoneID: 27
+milestoneID: 42
 ---
 
 > 前几天在微信公众号，有新关注的读者问我最近在进行什么项目，我说 python 教程还在写，结果这次的更新是……请大家相信我，python 教程第 2 篇真的在写了（新建 markdown 文档.gif），我打算聊一聊上篇实操指南背后究竟在干什么，什么是编程语言的解释器、编辑器、python 的虚拟环境等等……
