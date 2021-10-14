@@ -3,7 +3,7 @@ layout:      post
 title:      ".py | Fedora 上安装 CPU 版 pytorch"
 keywords:   "md"
 excerpt:    "import torch"
-date:        2021-09-23
+date:        2021-10-13
 categories:  post
 ---
 
