@@ -5,8 +5,8 @@
     <description>阿掖山：一个博客</description>
     <link>mountaye.github.io/blog/</link>
     <atom:link href="mountaye.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Oct 2021 04:43:55 +0000</pubDate>
-    <lastBuildDate>Thu, 14 Oct 2021 04:43:55 +0000</lastBuildDate>
+    <pubDate>Thu, 14 Oct 2021 04:46:17 +0000</pubDate>
+    <lastBuildDate>Thu, 14 Oct 2021 04:46:17 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -104,7 +104,7 @@ tf.Tensor&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&q
 
 &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/47068709/your-cpu-supports-instructions-that-this-tensorflow-binary-was-not-compiled-to-u&quot;&gt;stackoverflow 的这个回答&lt;/a&gt; 说，需要从源码编译 tensorflow，具体的方法在&lt;a href=&quot;https://www.tensorflow.org/install/source#linux&quot;&gt;官网也有&lt;/a&gt;，但是实在是太麻烦了，&lt;del&gt;（还是鸽了）&lt;/del&gt; 下次单独写成一篇吧。&lt;/p&gt;
 </description>
-        <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
         <link>mountaye.github.io/blog/articles/install-pytorch-cpu-on-fedora</link>
         <guid isPermaLink="true">mountaye.github.io/blog/articles/install-pytorch-cpu-on-fedora</guid>
         
