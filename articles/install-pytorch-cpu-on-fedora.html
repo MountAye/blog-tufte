@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html>
+  
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>.py Fedora 上安装 CPU 版 pytorch | 阿掖山：一个博客</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content=".py Fedora 上安装 CPU 版 pytorch" />
+<meta name="author" content="MountAye" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="import torch" />
+<meta property="og:description" content="import torch" />
+<link rel="canonical" href="mountaye.github.io/blog/articles/install-pytorch-cpu-on-fedora" />
+<meta property="og:url" content="mountaye.github.io/blog/articles/install-pytorch-cpu-on-fedora" />
+<meta property="og:site_name" content="阿掖山：一个博客" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content=".py Fedora 上安装 CPU 版 pytorch" />
+<script type="application/ld+json">
+{"headline":".py Fedora 上安装 CPU 版 pytorch","dateModified":"2021-09-23T00:00:00+00:00","datePublished":"2021-09-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"mountaye.github.io/blog/articles/install-pytorch-cpu-on-fedora"},"url":"mountaye.github.io/blog/articles/install-pytorch-cpu-on-fedora","author":{"@type":"Person","name":"MountAye"},"@type":"BlogPosting","description":"import torch","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+  
+  <link rel="stylesheet" type="text/css" href="/blog/css/NViconsLib-Silhouette.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/blog/css/print.css" media="print">
+  <link rel="canonical" href="/blog/articles/install-pytorch-cpu-on-fedora">
+  <link rel="alternate" type="application/rss+xml" title="阿掖山：一个博客" href="/blog/feed.xml" />
+  <link rel="shortcut icon" href="/blog/assets/img/favicon.ico" >
+</head>
+
+  
+    <body>
+    
+        <!--- Header and nav template site-wide -->
+<header>
+    <script type="text/javascript" src="/blog/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function changeQuote(){
+            var baseurl = "/blog";
+            var urlQuotes = baseurl + "/assets/data/quotes.json";
+            $.ajax({ 
+                url: urlQuotes,
+                type: "GET",
+                dataType: "json",
+                success: function(msg){
+                    var quotes = msg;
+                    var i = Math.floor( Math.random()*(quotes.length+1) );
+                    var quote = quotes[i];
+                    document.getElementById("quoteLine").innerHTML = quote.text;
+                    document.getElementById("quoteAuthor").innerHTML = quote.author;
+                    if (quote.link){ 
+                        document.getElementById("quoteLink").innerHTML = "<a id='quoteLinkA'>与格言相关的文章</a>"; 
+                        document.getElementById("quoteLinkA").setAttribute("href", baseurl + quote.link ); 
+                    };
+                },
+                error: function(msg){alert(msg);}
+            });
+        };
+        document.addEventListener("DOMContentLoaded", changeQuote);
+    </script>
+    <div>
+        <h1 class="sans">阿掖山：一个博客</h1>
+    </div>
+    <p style="font-size:100%">
+        <span id="quoteLine">If you enable JavaScript on this site, you'll see a random quotation here.</span><br>
+        ——<span id="quoteAuthor">Welcome to this blog</span><br>
+        <span id="quoteLink"></span>
+    </p>
+    <nav class="group">
+        <a href="/blog/">
+	    <img class="badge" src="/blog/assets/img/badgeMountAye.png" alt="阿掖山">
+        </a>
+	
+        
+            <a href="/blog/">Home</a>
+        
+  	
+        
+            <a href="/blog/History/">History</a>
+        
+  	
+        
+            <a href="/blog/Topics/">Topics</a>
+        
+  	
+        
+            <a href="/blog/Links/">Links</a>
+        
+  	
+        
+            <a href="/blog/Comments/">Comments</a>
+        
+  	
+        
+            <a href="/blog/About/">About</a>
+        
+  	
+    </nav>
+    <hr class="slender">
+</header>
+
+    
+        <!-- For Comments Loading -->
+
+
+<article class="group post">
+    <h1>.py | Fedora 上安装 CPU 版 pytorch</h1>
+        <p class="subtitle">
+            September 23, 2021
+        </p>
+    <div class="postContent">
+        <p>马上要参加一个暑期学校，关于深度学习在显微图像处理当中的应用。</p>
+
+<p>深度学习是机器学习的一个分支，机器学习中的绝大多数数据都可以抽象为向量（一阶张量），绝大多数的算法都可以分解为向量之间的运算，或者对向量的变换，表示为矩阵（二阶张量）。这就对张量计算相关算法的库函数产生了很大的需求。PyTorch 和 TensorFlow，还有其他的一些库，比如 Keras，Caffe 等等等等，都是为此而生。早期版本的 pytorch 和 tensorflow 有很大的区别，但是随着版本的迭代，两者逐渐兼并和挤掉了其他的竞争者，两者的相似之处也越来越多，“变成了自己曾经最讨厌的样子”。lol</p>
+
+<p>不知道课上究竟要使用哪种机器学习的框架，所以决定把 PyTorch 和 TensorFlow 全都安装了（摊手）。正好可以接着上一篇的 <a href="/blog/articles/python-interpreter-editor-virtualenv">python 教程</a> 往下写。</p>
+
+<p>先说一下自己的软硬件环境：Intel 家的 CPU 和集成显卡（玩不了《文明6》）。虽然不在官方支持 Linux 的名单上，但是自己安装了 Fedora，内核更新了几次之后已经没有了兼容性问题。python 版本 3.9.6，包管理器是 pip，编辑器是 vscode。</p>
+
+<h2 id="建立虚拟环境">建立虚拟环境</h2>
+
+<p>为什么要建立虚拟环境的问题本系列的前一篇已经回答过了，这次直接开干。我给两个虚拟环境分别取名为 <code class="language-plaintext highlighter-rouge">torch</code> 和<code class="language-plaintext highlighter-rouge">tf</code> 。关于命令行部分的代码，为了表示各个虚拟环境，特别加上了命令提示符<code class="language-plaintext highlighter-rouge">(env)[me@mycomputer]$</code>，抄代码的时候注意去掉。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">[</span>me@mycomputer]<span class="nv">$ </span>mkvirtualenv torch
+<span class="o">(</span>torch<span class="o">)[</span>me@mycomputer]<span class="err">$</span>
+</code></pre></div></div>
+
+<h2 id="安装">安装</h2>
+
+<p>在 PyTorch 官网，找到自己的硬件配制对应的安装命令：<a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>。比如我的就是 <code class="language-plaintext highlighter-rouge">Stable</code>&gt;<code class="language-plaintext highlighter-rouge">Linux</code>&gt;<code class="language-plaintext highlighter-rouge">Pip</code>&gt;<code class="language-plaintext highlighter-rouge">Python</code>&gt;<code class="language-plaintext highlighter-rouge">CPU</code>。把生成的命令复制到命令行：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">(</span>torch<span class="o">)[</span>me@mycomputer]<span class="nv">$ </span>pip3 <span class="nb">install </span><span class="nv">torch</span><span class="o">==</span>1.9.1+cpu <span class="nv">torchvision</span><span class="o">==</span>0.10.1+cpu <span class="nv">torchaudio</span><span class="o">==</span>0.9.1 <span class="nt">-f</span> https://download.pytorch.org/whl/torch_stable.html
+</code></pre></div></div>
+
+<p>等待各种提示信息显示安装完成。</p>
+
+<h2 id="验证和退出">验证和退出</h2>
+
+<p>按照 <a href="https://pytorch.org/get-started/locally/#linux-verification">官网给出的方法</a>，验证安装是否成功：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># tensor([[0.3799, 0.4494, 0.4296],
+#       [0.5800, 0.0180, 0.3110],
+#       [0.9847, 0.0125, 0.2648],
+#       [0.0296, 0.3142, 0.9266],
+#       [0.3192, 0.9645, 0.5545]])
+</span></code></pre></div></div>
+
+<p>为了下一步安装 tensorflow，先要退出到默认的虚拟环境：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">(</span>torch<span class="o">)[</span>me@mycomputer]<span class="nv">$ </span>deactivate
+<span class="o">[</span>me@mycomputer]<span class="err">$</span>
+</code></pre></div></div>
+
+<h2 id="说好的-tensorflow-呢">说好的 TensorFlow 呢</h2>
+
+<p>本来这篇文章是打算把  pytorch 和 tensorflow 一起写了，结果 tensorflow 实在是不给力。</p>
+
+<ul>
+  <li>直接安装</li>
+</ul>
+
+<p>在 <a href="https://www.tensorflow.org/install">TensorFlow 的官网</a>上方导航栏找到 install 按钮，然后在页面左侧找到 package/pip，<a href="https://www.tensorflow.org/install/pip#3.-install-the-tensorflow-pip-package">安装命令</a>也是只有一句话</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">tensorflow</span>
+</code></pre></div></div>
+
+<p>然而不行，虽然安装过程中没有报错，但是验证安装的时候报出一堆错误。</p>
+
+<p>报错信息里有一句 <code class="language-plaintext highlighter-rouge">Could not load dynamic library 'libcudart.so.11.0'</code>，怀疑上面命令安装的是 GPU 版本。</p>
+
+<ul>
+  <li>安装 CPU 版本</li>
+</ul>
+
+<p>在网页正文的“Package Location”一节找到了 CPU 版本的安装文件：<code class="language-plaintext highlighter-rouge">https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow_cpu-2.6.0-cp39-cp39-manylinux2010_x86_64.whl</code>，于是删除虚拟环境、重建虚拟环境、重新安装。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">(</span>tf<span class="o">)[</span>me@mycomputer]<span class="nv">$ </span>deactivate
+<span class="o">[</span>me@mycomputer]<span class="nv">$ </span>rmvirtualenv tf
+<span class="o">[</span>me@mycomputer]<span class="nv">$ </span>mkvirtualenv tf
+<span class="o">(</span>tf<span class="o">)[</span>me@mycomputer]<span class="nv">$ </span>pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+<span class="o">(</span>tf<span class="o">)[</span>me@mycomputer]<span class="nv">$ </span>pip <span class="nb">install </span>https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow_cpu-2.6.0-cp39-cp39-manylinux2010_x86_64.whl
+</code></pre></div></div>
+
+<p>运行官方提供的测试之后依然会有警告信息：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">(</span>tf<span class="o">)</span> <span class="o">[</span>shixing@yoga-laptop ~]<span class="nv">$ </span>python <span class="nt">-c</span> <span class="s2">"import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"</span>
+20XX-XX-XX XX:XX:XX.XXXXXX: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library <span class="o">(</span>oneDNN<span class="o">)</span> to use the following CPU instructions <span class="k">in </span>performance-critical operations:  AVX2 AVX512F FMA
+To <span class="nb">enable </span>them <span class="k">in </span>other operations, rebuild TensorFlow with the appropriate compiler flags.
+tf.Tensor<span class="o">(</span><span class="nt">-1338</span>.4773, <span class="nv">shape</span><span class="o">=()</span>, <span class="nv">dtype</span><span class="o">=</span>float32<span class="o">)</span>
+</code></pre></div></div>
+
+<p><a href="https://stackoverflow.com/questions/47068709/your-cpu-supports-instructions-that-this-tensorflow-binary-was-not-compiled-to-u">stackoverflow 的这个回答</a> 说，需要从源码编译 tensorflow，具体的方法在<a href="https://www.tensorflow.org/install/source#linux">官网也有</a>，但是实在是太麻烦了，<del>（还是鸽了）</del> 下次单独写成一篇吧。</p>
+
+    </div>
+    <hr class="slender">
+    <script type="text/javascript" src="/blog/assets/js/date.js"></script>
+<section id="comment">
+    <h2>读者评论</h2>
+    <script type="text/javascript">
+        // Global Variables
+        var milestoneID = ;
+        var html = "<div class='ghReaderZone'>"; // STRING, get changed by side effects of functions
+        var json; // OBJECT, get changed by side effects
+        var iIssue = 0; // INTEGER
+        var apiIssues = "https://api.github.com/repos/mountaye/blog/issues";
+        var dateOption =  { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit', second:'2-digit' };
+        var reaction_fa = { "+1": "赞同",
+                            "-1": "反对",
+                            "laugh": "笑",
+                            "hooray": "庆祝",
+                            "confused": "困惑",
+                            "heart": "比心",
+                            "rocket":"火箭",
+                            "eyes":"围观"};
+        // Functions 
+        function getReactionsStr(json){
+            var reactions='<span class="ghReact">&nbsp';
+            for (iReact in reaction_fa){
+                if (json[iReact] > 0){
+                    reactions += reaction_fa[iReact] + "(" + json[iReact] + ")&nbsp;&nbsp;";
+                };
+            };
+            reactions += "</span>";
+            return reactions
+        };
+        function printJson(){
+            for (var i = json.length - 1; i >= 0 ; i--){
+                var issueID = "is" + json[i].number;
+                var issueTitle = json[i].title;
+                var issueUrl = json[i].html_url;
+                var issueUser = json[i].user.login;
+                var issueUserUrl = json[i].user.html_url;
+                var issueLogoUrl = json[i].user.avatar_url;
+                var issueDate = new Date(json[i].created_at).toLocaleString("zh-Hans", dateOption);
+                var issueBody = json[i].body_html || json[i].body;
+                var issueReact = "";
+                if (json[i].reactions){issueReact = getReactionsStr(json[i].reactions);};
+                html += '<div class="ghIssue" id="' + issueID + '"><h3 class="ghIssueTitle">' + issueTitle + '</h3><div class="ghHeader"><div class="ghLogo"><a href="' + issueUserUrl + '"><img src="' + issueLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghIssueAuthor" href="' + issueUserUrl + '">' + issueUser + '</a></p><p><small class="ghCommentDate">' + issueDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + issueBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + issueReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + '">' + '定位到此' + '</a> | <a class="ghReply" href=" ' + issueUrl + ' ">' + '登录GitHub查看/回复' + '</a></span></div>';
+                if ( json[i].hasOwnProperty("commentsMountaye") ){
+                    for (var j = 0; j < json[i].commentsMountaye.length; j++){
+                        var commentID = "cm" + json[i].commentsMountaye[j].id;
+                        var commentUrl = json[i].commentsMountaye[j].html_url;
+                        var commentUser = json[i].commentsMountaye[j].user.login;
+                        var commentUserUrl = json[i].commentsMountaye[j].user.html_url;
+                        var commentLogoUrl = json[i].commentsMountaye[j].user.avatar_url;
+                        var commentDate = new Date(json[i].commentsMountaye[j].created_at).toLocaleString("zh-Hans", dateOption);
+                        var commentBody = json[i].commentsMountaye[j].body_html || json[i].commentsMountaye[j].body; // json[i].commentsMountaye[j].body
+                        var commentReact = ""; 
+                        if (json[i].commentsMountaye[j].reactions){commentReact = getReactionsStr(json[i].commentsMountaye[j].reactions);};
+                        html += '<div class="ghComment" id="' + issueID + commentID + '"><hr class="slender"><div class="ghHeader"><div class="ghLogo"><a href="' + commentUserUrl + '"><img src="' + commentLogoUrl + '" width="50"></a></div><div class="ghAuthor"><p><a class="ghCommentAuthor" href="' + commentUserUrl + '">' + commentUser + '</a></p><p><small class="ghCommentDate">' + commentDate + '</small></p></div></div><blockquote class="ghBody markdown-body">' + commentBody + '</blockquote><div class="ghFooter"><span class="ghFooterBottomLeft">' + commentReact + '</span><span class="ghFooterBottomRight"><a class="ghAnchor" href="#' + issueID + commentID + '">' + '定位到此' + '</a> | <a class="ghReply" href="' + commentUrl + '">' + '登录GitHub查看/回复' + '</a></span></div></div>';
+                    };
+                };
+                html += '<hr class="slender"></div>';
+            };
+            html += "</div>";
+            $("#commentContent").append(html);
+            $(".email-hidden-toggle > a").on("click", function (e){ e.preventDefault();
+                                                                    $(".email-hidden-reply", this.parent).toggle(); } );
+            $(document).trigger("DOMContentLoaded") // To load the quotes in the header.
+        };
+        function fetchCommentsFromOneIssue(msg){
+            if (json[iIssue].comments > 0){
+                $.ajax({ 
+                    url: json[iIssue].comments_url,
+                    type:"GET",
+                    headers:  {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                    dataType: "json",
+                    success: function(msg){ 
+                        json[iIssue].commentsMountaye = msg;
+                        iIssue += 1; // side effect
+                        $("#comment").trigger("oneCommentLoaded"); 
+                    } 
+                });    
+            }
+            else{
+                iIssue += 1; // side effect
+                $("#comment").trigger("oneCommentLoaded");
+            }
+        };
+        function fetchCommentsIf(){
+            if (iIssue==json.length){
+                iIssue = 0;
+                $("#comment").trigger("jsonReady");
+            }
+            else {$("#comment").trigger("fetchCommentsFromOneIssue");};
+        };
+        function issuesFetched(msg){
+            json = msg;
+            if ( json.length == 0 ){
+                html += "<p>本文目前尚无评论。</p>";
+                $("#comment").trigger("jsonReady");
+            }
+            else { $("#comment").trigger("hasIssues"); };
+        };
+        function errorIssues(){ html += "<p>网络异常，留言装填失败。</p>"; $("#comment").trigger("jsonReady"); };
+        function loadIssues(){
+            $.ajax({ 
+                url: apiIssues,
+                type: "GET",
+                data: {milestone: milestoneID},
+                headers: {Accept:"application/vnd.github.squirrel-girl-preview.full+json"},
+                dataType: "json",
+                success: function(msg){issuesFetched(msg);}, 
+                error: errorIssues 
+            });
+        };
+        // Async dependence
+        $("#comment").on("fetchCommentsFromOneIssue",fetchCommentsFromOneIssue);
+        $("#comment").on("oneCommentLoaded",fetchCommentsIf);
+        $("#comment").on("hasIssues",fetchCommentsFromOneIssue);
+        $("#comment").on("jsonReady",printJson);
+        // Real Working Code :-) 
+        document.addEventListener("DOMContentLoaded", loadIssues);
+    </script>
+    <noscript><p>查看留言，请启用 JavaScript。</p></noscript>
+    
+    <div id="commentIntro">
+        <p><strong>GitHub 用户</strong>可前往本页面对应的 Milestone <a href="https://github.com/MountAye/blog/milestone/">进行评论</a>。</p>
+    </div>
+    <div id="commentContent"></div>
+</section>
+
+</article>
+
+
+
+        <span class="print-footer">
+    
+        .py | Fedora 上安装 CPU 版 pytorch - September 23, 2021 - MountAye
+</span>
+    
+        <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+      <li>
+        <a href="//github.com/MountAye/blog"><span class="icon-Popular_GitHub"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/About"><span class="icon-CN_tencent_wechat"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.douban.com/people/Gravitus/"><span class="icon-CN_douban_B"></span></a>
+      </li>
+    
+      <li>
+        <a href="//space.bilibili.com/29132299"><span class="icon-CN_bilibili"></span></a>
+      </li>
+    
+      <li>
+        <a href="/blog/feed.xml"><span class="icon-Popular_RSS"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2021 &nbsp;&nbsp;MOUNTAYE</span></br> <br>
+<span><a href="/blog/">MountAye | A Blog</a> is hosted on <a href="https://pages.github.com/">GitHub Pages</a>, powered by <a href="//jekyllrb.com">Jekyll</a>, and decorated with a <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a>.</span> 
+</div>  
+</footer>
+
+  
+    </body>
+
+</html>
